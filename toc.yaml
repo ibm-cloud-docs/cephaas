@@ -1,0 +1,75 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: sdsaas
+    service-name: sdsaas #If your subcollection is not for a service, don't include this property.
+    category: storage
+    audience: service
+    href: /docs/sdsaas
+    console-page: /catalog/services/sdsaas
+    product-page: https://ibm.com/cloud/sdsaas
+    path: sdsaas
+    label: Software Defined Storage as a Service
+    release-level: beta
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation-design for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - about-sdsaas.md
+#  - navgroup:
+#      id: tutorial
+#      topics:
+#      - topic-1.md
+#      - topic-2.md
+#      - topic: topic-3.md
+#        navtitle: A shorter navtitle
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Provisioning Block Volume
+          topics:
+          - block_storage_volume_sds_about.md
+          - block_storage_volume_sds_create.md
+          - block_storage_volume_sds_view.md
+          - block_storage_volume_sds_manage.md
+          - block_storage_volume_sds_delete.md
+#      - topicgroup:
+#          label: Managing access
+#          topics:
+#           - topicgroup:
+#            - label: Service credentials
+#            - service_credential_create.md
+#            - service_credential_delete.md
+#            - service_credential_list.md
+#            - service_credential_update.md
+      - topicgroup:
+          label: Manage storage capacity
+          topics:
+            - block_storage_volume_sds_capacity_performance.md
+            - block_storage_volume_sds_manage_storage_limits.md
+#            - adding_capacity.md
+#            - view_capacity_details.md
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+          label: API reference
+          topics:
+            - block-volume-storage-api-reference.md
+#          links: https://test.cloud.ibm.com/docs/sdsaas/swagger.json
+      - topicgroup:
+          label: Command line reference
+          topics:
+           - block-volume-storage-cli-reference.md
+#          - /cli/cli-manage-catalogs-plugin
+#          - /cli/cli-ibmcloud_commands_services
+#          - /cli/cli-ibmcloud_commands_account
+#      - topic-6.md
