@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-07"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Creating SDS block volumes
 {: #creating-sds-block-volume}
 
-Create a SDSaaS volume by using the UI, CLI, or API. You can create a volume as part of instance provisioning, as a stand-alone volume that you can later attach to an instance, or by restoring from a snapshot.
+Create a SDSaaS volume by using the UI, CLI, or API.
 {: shortdesc}
 
 
@@ -35,7 +35,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
     <br>
     **Note:** Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is triggered. </br>
 5. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
-6. Click **Create**. The new volume is created and is the newly created volume details is shown with `Available` status.
+6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to Available or Failed based on the actual state of the volume.
 
 
 ## Creating SDSaaS block volumes from the CLI

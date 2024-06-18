@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-05-08"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 keywords: sdsaas service credential
 
@@ -26,5 +26,3 @@ Create a SDSaaS service credential by using the UI, CLI, or API.
 {: ui}
 
 Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS service credential.
-
-

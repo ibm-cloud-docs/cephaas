@@ -1,9 +1,8 @@
 ---
 
 copyright:
-
-  years: 2024
-lastupdated: "2024-05-09"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage

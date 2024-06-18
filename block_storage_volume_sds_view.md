@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-07"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 keywords: list all volumes, view volume details
 
@@ -12,17 +12,17 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Viewing block volumes
+# Viewing block storage volume
 {: #viewing-block-storage}
 
 View details about a block storage volume or summary information about all volumes.
 {: shortdesc}
 
-## Viewing information about block volumes in the UI
+## Viewing information about block storage volumes in the UI
 {: #viewvols}
 {: ui}
 
-List all block volumes and view details for a single volume. View attached SDSaaS block volume details in instance details.
+List all block storage volumes and view details for a single volume. View attached SDSaaS block volume details in instance details.
 
 ### Viewing information about all volumes in the UI
 {: #viewvols-ui}

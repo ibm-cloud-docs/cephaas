@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-07"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -18,9 +18,9 @@ subcollection: sdsaas
 Delete a volume from a service instance by using the UI, CLI, or API.
 {: shortdesc}
 
-When you delete a Block Storage volume, that data immediately becomes inaccessible. All pointers to the data on the physical disk are removed. If you later create a volume in the same or another account, a new set of pointers is assigned. The account can't access any data that was on the physical storage because those pointers are deleted. When new data is written to the disk, any inaccessible data from the deleted volume is overwritten.
+When you delete a Block Storage volume, that data immediately becomes inaccessible. All pointers to the data on the physical disk are removed. If you later create a volume in the same or another service instance, a new set of pointers is assigned. The account cannot access any data that was on the physical storage because those pointers are deleted. When new data is written to the disk, any inaccessible data from the deleted volume is overwritten.
 
-IBM guarantees that data deleted cannot be accessed and that deleted data is eventually overwritten and eradicated. Further, when you delete a Block Storage volume, those blocks must be overwritten before that Block Storage volume is made available again, either to you or to another customer.
+IBM guarantees that data deleted cannot be accessed and that deleted data is eventually overwritten and eradicated. Further, when you delete a Block Storage volume, those blocks must be overwritten before that Block Storage volume is made available again.
 
 Further, when IBM decommissions a physical drive, the drive is destroyed before disposal. Decommissioned drives are unusable and any data on them is inaccessible.
 
@@ -104,7 +104,7 @@ Sanitizing and deleting the volume means your data can't be restored.
 ## Next steps
 {: #next-step-deleting-block-storage-volume-sds}
 
-When you refresh the Volumes page, the new volume appears at the beginning of the list of volumes. If the volume was created successfully, it shows a status of Available.
+When you refresh the Volumes page, the new volume appears at the beginning of the volumes list. If the volume was created successfully, it shows a status as `Available`.
 
 You can continue creating more volumes or manage existing volumes.
 

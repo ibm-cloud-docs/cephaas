@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-06-07"
+ years: 2024, 2024
+lastupdated: "2024-06-18"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
