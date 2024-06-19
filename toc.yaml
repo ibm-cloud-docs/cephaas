@@ -40,20 +40,20 @@ toc:
           - block_storage_volume_sds_manage.md
           - block_storage_volume_sds_delete.md
       - topicgroup:
-          label: Manage access
-          topics:
-            - service_credential_sds_create.md
-            - service_credential_sds_delete.md
-            - service_credential_sds_view.md
-            - uploading_s3_cert_sds.md
-#            - service_credential_update.md
-      - topicgroup:
           label: Manage storage capacity
           topics:
             - block_storage_volume_sds_capacity_performance.md
             - block_storage_volume_sds_manage_storage_limits.md
 #            - adding_capacity.md
 #            - view_capacity_details.md
+      - topicgroup:
+          label: Manage object credentials and certificates
+          topics:
+            - service_credential_sds_create.md
+            - service_credential_sds_view.md
+            - service_credential_sds_delete.md
+            - uploading_s3_cert_sds.md
+#            - service_credential_update.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:

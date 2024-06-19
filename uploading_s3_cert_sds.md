@@ -31,7 +31,7 @@ To upload a S3 certificate, complete the following steps.
 
 2. Click **Upload certificate**. Add new certificate panel is displayed.
 
-NOTE: Make sure that the file includes the root certificate, server certificate and server key that allows virtual hosted buckets for your S3 endpoint. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
+Make sure that the file includes the root certificate, server certificate and server key that allows virtual hosted buckets for your S3 endpoint. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
 {: note}
 
 3. Click **Upload** to choose the certificate from your computer.
