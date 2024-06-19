@@ -12,8 +12,8 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-Create a service credential
-{: #create-service-credentail-sds}
+# Create a service credential
+{: #create-service-credential-sds}
 
 Create service credentials by using the UI, CLI, or API.
 {: shortdesc}
