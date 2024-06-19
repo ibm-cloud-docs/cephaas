@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-19"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -105,14 +105,14 @@ You can create SDSaaS volumes by directly calling the [Block Volume REST APIs](/
 ### Before you begin
 {: #block-storage-api-prereqs}
 
-Define variables for the IAM token, API endpoint, and API version.
+Define variables for the IAM token and API endpoint.
 
 ### Creating a volume as part of instance provisioning with the API
 {: #creating-volume-api}
 
 Make a `POST /volumes` request to create a volume, and define the volume by using the `name` parameter. Specify a volume name, capacity, and profile.
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is triggered.
+Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `volume name duplicate` error is triggered.
 {: important}
 
 

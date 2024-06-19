@@ -32,21 +32,19 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Provisioning Block Volume
+          label: Manage Block storage
           topics:
           - block_storage_volume_sds_about.md
           - block_storage_volume_sds_create.md
           - block_storage_volume_sds_view.md
           - block_storage_volume_sds_manage.md
           - block_storage_volume_sds_delete.md
-#      - topicgroup:
-#          label: Managing access
-#          topics:
-#           - topicgroup:
-#            - label: Service credentials
-#            - service_credential_create.md
-#            - service_credential_delete.md
-#            - service_credential_list.md
+      - topicgroup:
+          label: Manage Object storage
+          topics:
+            - service_credential_create.md
+            - service_credential_delete.md
+            - service_credential_list.md
 #            - service_credential_update.md
       - topicgroup:
           label: Manage storage capacity

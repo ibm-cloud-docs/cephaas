@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-19"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -18,11 +18,7 @@ subcollection: sdsaas
 Delete a volume from a service instance by using the UI, CLI, or API.
 {: shortdesc}
 
-When you delete a Block Storage volume, that data immediately becomes inaccessible. All pointers to the data on the physical disk are removed. If you later create a volume in the same or another service instance, a new set of pointers is assigned. The account cannot access any data that was on the physical storage because those pointers are deleted. When new data is written to the disk, any inaccessible data from the deleted volume is overwritten.
-
-IBM guarantees that data deleted cannot be accessed and that deleted data is eventually overwritten and eradicated. Further, when you delete a Block Storage volume, those blocks must be overwritten before that Block Storage volume is made available again.
-
-Further, when IBM decommissions a physical drive, the drive is destroyed before disposal. Decommissioned drives are unusable and any data on them is inaccessible.
+When you delete a Block Storage volume, that data immediately becomes inaccessible.
 
 
 ## Deleting SDSaaS block volumes in the UI
