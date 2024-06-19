@@ -40,11 +40,12 @@ toc:
           - block_storage_volume_sds_manage.md
           - block_storage_volume_sds_delete.md
       - topicgroup:
-          label: Manage Object storage
+          label: Manage access
           topics:
-            - service_credential_create.md
-            - service_credential_delete.md
-            - service_credential_list.md
+            - service_credential_sds_create.md
+            - service_credential_sds_delete.md
+            - service_credential_sds_view.md
+            - uploading_s3_cert_sds.md
 #            - service_credential_update.md
       - topicgroup:
           label: Manage storage capacity
