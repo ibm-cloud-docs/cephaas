@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-20"
 
-keywords: Block Storage, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
+keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
 subcollection: sdsaas
 
@@ -29,14 +29,14 @@ SDSaaS LUNs can be provisioned from 20 GB to 12 TB with two options:
 - Provision **Endurance** tiers that feature pre-defined performance levels and other features like snapshots and replication.
 - Build a high-powered **Performance** environment with allocated input/output operations per second (IOPS).
 
-For more information about the SDSaaS offering, see [What is SDSaaS](https://www.ibm.com/products/sdsaas){: external}.
+
 
 ## Provisioning considerations
 {: #provconsiderSDSBlockStorage}
 {: step}
 
-### Block size
-{: #sdsblockstoragesize}
+### Block storage volume size
+{: #sdsblockstoragevolumesize}
 
 IOPS for both Endurance and Performance is based on a 16-KB IO size with a 50/50 read and write, 50/50 random and sequential workload. A 16-KB block is the equivalent of one write operation to the volume.
 {: important}

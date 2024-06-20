@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-20"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -80,7 +80,12 @@ See the following example.
 
 ```bash
 
-waiting for an example
+ibmcloud software-defined-storage volume-update \
+    --instanceid exampleString \
+    --id exampleString \
+    --if-match exampleString \
+    --capacity 38 \
+    --name exampleString
 
 ```
 {: screen}
@@ -91,13 +96,15 @@ waiting for an example
 {: #managing-sds-block-volume-api}
 {: api}
 
-To manage your Block storage volume with the API, you can make use of the `PATCH /volumes/{volume_id}` request to modify the volume details.
+To manage your block storage volume with the API, you can make use of the `PATCH /volumes/{volume_id}` request to modify the volume details.
 
 With the API, you can complete the following actions.
 
 * Rename a Block Storage volume.
-* Map a volume to a host.
 * Expand volume to increase the current capacity.
+
+You can perform only one action at a time within the command.
+{: note}
 
 Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
 
@@ -108,10 +115,12 @@ Specify the values for the parameter that you want to modify for the existing vo
 Make a `PATCH /volumes/{volume_id}` request to update a volume.
 
 ```sh
-curl -X PATCH "$sds_api_endpoint/v1/volumes" -H "Authorization: $iam_token" -d '{
-    "capacity": 100,   // Capacity can only be increased and not reduced
-    "name": "my-volume
-    }'
+{{curl -X PATCH '$sds_api_endpoint/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' }}
+{{--header 'Authorization: Bearer $IAM_TOKEN' }}
+{{--header 'Content-Type: application/json' }}
+--data '{
+    "name": "sds-vol-updated"
+}'
 ```
 {: pre}
 
@@ -119,27 +128,23 @@ A successful response looks like this:
 
 ```json
 {
-    "bandwidth": 128,
-    "capacity": 100,
-    "created_at": "2019-03-28T23:16:53.000Z",
-
-    "adjustable_iops_supported": false,
-    "health_reasons": [],
-    "health_state": "ok", // One of these values -[ degraded, faulted, inapplicable, ok ]
-    "id": "2d1bb5a8-40a8-447a-acf7-0eadc8aeb054",
-    "iops": 100,
-    "name": "my-volume",
+    "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
+    "name": "sds-vol-updated",
+    "capacity": 10,
+    "iops": 3000,
+    "status": "available",
     "profile": {
-        "name": "sdp-general-purpose"
+        "name": "sds-general-purpose"
     },
-    "resource_type": "volume",
-    "status": "available", // one of these value- [ available, failed, pending, pending_deletion, unusable, updating ]
+    "created_at": "2024-06-19T06:22:51Z",
     "status_reasons": [],
-
-    "sdsaas_instance_id": "xxxx", // mandatory for SDSaaS.
-    "storage_workspace_id": "yyyy" // not required for MVP.
-
+    "bandwidth": 393,
+    "resource_type": "volume",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "host_mappings": []
 }
+
 ```
 {: screen}
 

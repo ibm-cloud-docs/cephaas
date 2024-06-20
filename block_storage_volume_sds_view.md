@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-20"
 
 keywords: list all volumes, view volume details
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Viewing block storage volume
-{: #viewing-block-storage}
+{: #viewing-block-storage-volume}
 
 View details about a block storage volume or summary information about all volumes.
 {: shortdesc}
@@ -143,10 +143,8 @@ By default, the first 25 volumes are displayed per page.
 The following example shows all volumes for all service instances in your availability zone.
 
 ```sh
-$ ibmcloud sds volumes
-
-<waiting for example>
-
+ibmcloud software-defined-storage volumes \
+    --instanceid exampleString
 ```
 {: screen}
 
@@ -166,16 +164,77 @@ Before you begin, make sure that you [set up your API environment].
 Make a `GET /volumes` call to list summary information about all volumes. See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes \
--H "Authorization: $iam_token"
+curl -X GET "$sds_api_endpoint/v1/volumes/ --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
 
-A successful response looks like the following example. This example shows three data volumes. The first in the list is attached to an instance.
+A successful response looks like the following example. This example shows the first three volumes are mapped to a host.
 
 ```json
 
-Waiting for example
+{
+    "volumes": [
+        {
+            "id": "r134-04f0e415-3c70-43a8-a98d-a0160e50cc88",
+            "name": "sds-vol3",
+            "capacity": 10,
+            "iops": 3000,
+            "status": "available",
+            "profile":
+{                 "name": "sds-general-purpose"             }
+,
+            "created_at": "2024-06-16T18:09:18Z",
+            "status_reasons": [],
+            "bandwidth": 393,
+            "resource_type": "volume",
+            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+            "storage_workspace_id": "default",
+            "host_mappings": [
+
+{                     "host_id": "r134-06947bdd-b7bd-471c-8fd3-ab13a3bf1336",                     "host_name": "sr-host3",                     "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-1"                 }
+            ]
+        },
+        {
+            "id": "r134-62ed92e7-afb6-4374-b9d6-e70d2e97ccb7",
+            "name": "sds-vol2",
+            "capacity": 10,
+            "iops": 3000,
+            "status": "available",
+            "profile":
+{                 "name": "sds-general-purpose"             }
+,
+            "created_at": "2024-06-16T17:44:00Z",
+            "status_reasons": [],
+            "bandwidth": 393,
+            "resource_type": "volume",
+            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+            "storage_workspace_id": "default",
+            "host_mappings": []
+        },
+        {
+            "id": "r134-456676d4-c82e-4d10-a64d-436cc3c39481",
+            "name": "sds-vol1",
+            "capacity": 10,
+            "iops": 3000,
+            "status": "available",
+            "profile":
+{                 "name": "sds-general-purpose"             }
+,
+            "created_at": "2024-06-16T17:43:54Z",
+            "status_reasons": [],
+            "bandwidth": 393,
+            "resource_type": "volume",
+            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+            "storage_workspace_id": "default",
+            "host_mappings": []
+        }
+    ],
+    "first":
+{         "href": "http://regional-storage-riaasstorage.blue-team-cloud-satellite-8ce82ab061950a7b6121a1b00b849d81-0000.us-south.containers.appdomain.cloud/volumes?limit=50"     }
+,
+    "limit": 50,
+    "total_count": 3
+}
 
 ```
 
@@ -230,5 +289,8 @@ A successful response provides details of the volume, including capacity and IOP
 
 Create more volumes or manage your existing SDSaaS volumes.
 
-* [Creating Block volumes]
-* [Managing volumes]
+* [Create a volume](/docs/sdsaas?topic=sdsaas-creating-sds-block-volume)
+
+* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)
+
+* [Delete a volume](/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume)

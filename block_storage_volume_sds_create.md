@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-06-20"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -19,8 +19,6 @@ Create a SDSaaS volume by using the UI, CLI, or API.
 {: shortdesc}
 
 
-{: important}
-
 ## Creating SDSaaS block volumes in the UI
 {: #creating-sds-block-volume-ui}
 {: ui}
@@ -35,7 +33,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
     <br>
     **Note:** Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is triggered. </br>
 5. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
-6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to Available or Failed based on the actual state of the volume.
+6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
 
 ## Creating SDSaaS block volumes from the CLI
@@ -90,7 +88,7 @@ Creating volume my-volume in service instance exampleString...
 ```
 {: screen}
 
-Capacity, indicated in megabytes, can range from 10 - 16,000 GBs. If not specified, the default capacity is 100 GBs. IOPS values can be 100 - 48,000 IOPS, depending on the profile and volume size. If not specified, the IOPS value defaults to the valid configuration per volume profile.
+Capacity, indicated in gigabytes, can range from minimumm 10 GBs to the maximum allocated capacity for block storage. If not specified, the default capacity is 100 GBs.
 
 The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique across the entire infrastructure.
 {: requirement}
@@ -100,12 +98,13 @@ The volume name can be up to 63 lowercase alpha-numeric characters and include t
 {: #creating-volume-api}
 {: api}
 
-You can create SDSaaS volumes by directly calling the [Block Volume REST APIs](/apidocs/sdsaas){: external}. For more information about the file shares SDS API, see the [SDSaaS API reference](/apidocs/sdsaas).
+You can create SDSaaS volumes by directly calling the Block Volume REST APIs. For more information about the file shares SDS API, see the SDSaaS API reference.
 
 ### Before you begin
-{: #block-storage-api-prereqs}
+{: #block-volume-api-prereqs}
 
 Define variables for the IAM token and API endpoint.
+
 
 ### Creating a volume as part of instance provisioning with the API
 {: #creating-volume-api}
@@ -117,18 +116,13 @@ Valid volume names can include a combination of lowercase alpha-numeric characte
 
 
 ```sh
-curl -X 'POST' \
-  '$sds_api_endpoint' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "capacity": 0,
-  "name": "string",
-  "profile": {
-    "name": "string"
-  },
-  "sdsaas_instance_id": "string"
-}'
+curl -X POST '$sds_api_endpoint/v1/volumes' \
+--header 'Authorization: Bearer $IAM_TOKEN' \
+--header 'Content-Type: application/json' \
+--data '
+
+{     "capacity": 10,     "name": "sds-vol" }
+'
 
 ```
 {: pre}
@@ -137,26 +131,22 @@ A successful response looks like this:
 
 ```json
 {
-    "bandwidth": 128,
-    "capacity": 50,
-    "created_at": "2019-03-28T23:16:53.000Z",
+    "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
+    "name": "sds-vol",
+    "capacity": 10,
+    "iops": 3000,
+    "status": "pending",
+    "profile":
 
-    "adjustable_iops_supported": false,
-    "health_reasons": [],
-    "health_state": "ok", // One of these values -[ degraded, faulted, inapplicable, ok ]
-    "id": "2d1bb5a8-40a8-447a-acf7-0eadc8aeb054",
-    "iops": 100,
-    "name": "my-volume-4",
-    "profile": {
-        "name": "sdp-general-purpose"
-    },
-    "resource_type": "volume",
-    "status": "available", // one of these value- [ available, failed, pending, pending_deletion, unusable, updating ]
+{         "name": "sds-general-purpose"     }
+,
+    "created_at": "2024-06-19T06:22:51Z",
     "status_reasons": [],
-
-    "sdsaas_instance_id": "xxxx", // mandatory for SDSaaS.
-    "storage_workspace_id": "yyyy" // not required for MVP.
-
+    "bandwidth": 393,
+    "resource_type": "volume",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "host_mappings": []
 }
 ```
 {: screen}
@@ -167,8 +157,14 @@ A successful response looks like this:
 ## Next steps
 {: #next-step-creating-volume-sds}
 
-When you refresh the Volumes page, the new volume appears at the beginning of the list of volumes. If the volume was created successfully, it shows a status of Available.
+When you refresh the Volumes page, the new volume appears at the beginning of the list of volumes. If the volume was created successfully, it shows status as `Available`.
+{: ui}
 
 You can continue creating more volumes or manage existing volumes.
 
 
+* [View volume details](/docs/sdsaas?topic=sdsaas-viewing-block-storage)
+
+* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)
+
+* [Delete a volume](/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume)

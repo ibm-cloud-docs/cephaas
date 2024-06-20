@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-20"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -27,13 +27,13 @@ subcollection: sdsaas
 {:support: data-reuse='support'}
 
 # IBM Software Defined Storage as a Service CLI
-{: #ic-sds-cli}
+{: #ic-sds-cli-reference}
 
 The Software defined storage as a service (SDSaaS) plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
 {: shortdesc}
 
 ## Installation and configuration
-{: #ic-installation}
+{: #ic-sds-installation}
 
 The plug-in is compatible with linux64, ppc64le, Windows&reg;, and macOS&reg; platforms that run on 64-bit processors.
 

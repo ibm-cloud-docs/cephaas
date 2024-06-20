@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-20"
 
 keywords:
 
@@ -58,7 +58,7 @@ Data volumes are encrypted by default with IBM-managed encryption. You can also 
 
 When you create a SDSaaS volume in your availability zone, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
 
-For more information, see [SDSaaS profiles](/docs/sdsaas?topic=sds-block-storage-profiles)
+
 
 ## SDSaaS encryption
 {: #sds-storage-encryption}

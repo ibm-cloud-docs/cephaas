@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-19"
+lastupdated: "2024-06-20"
 
-keywords: sdsaas service credential
+keywords: sdsaas , delete service credential
 
 subcollection: sdsaas
 
@@ -33,3 +33,23 @@ To delete a service credential, complete the following steps.
 
 All access granted to any resources using this credential will be lost once the credential is deleted.
 {: note}
+
+## Deleting a service credential from the CLI
+{: #deleting-sds-service-credential-cli}
+{: cli}
+
+Use the `cred-delete` command and provide the `INSTANCEID` of the specific credential for a storage account.
+
+Run the following command to delete a credential.
+
+```sh
+iibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
+```
+{: pre}
+
+See the following example.
+
+```bash
+$ ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString
+```
+{: screen}
