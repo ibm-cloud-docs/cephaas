@@ -244,40 +244,35 @@ A successful response looks like the following example. This example shows the f
 Make a `GET /volumes/{volume_id}` call to see details of a volume. See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes/ \
--H "Authorization: $iam_token"
+curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88 \
+--header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
 
 A successful response provides details of the volume, including capacity and IOPS, the volume status, and whether the volume is mapped to a host.
 
 ```json
-{
-    "active": true,
-    "bandwidth": 128,
-    "busy": false,
-    "capacity": 100,
-    "created_at": "2019-01-29T06:26:17Z",
-    "health_reasons": [],
-    "health_state": "ok", // One of these values -[ degraded, faulted, inapplicable, ok ]
-    "id": "ccbe6fe1-5680-4865-94d3-687076a38293",
-    "iops": 1000,
-    "name": "my-volume-1",
+{{{}}
+    "id": "r134-04f0e415-3c70-43a8-a98d-a0160e50cc88",
+    "name": "sds-vol3",
+    "capacity": 10,
+    "iops": 3000,
+    "status": "available",
     "profile": {
         "name": "sds-general-purpose"
     },
-    "resource_type": "volume",
-    "status": "available", // one of these value- [ available, failed, pending, pending_deletion, unusable, updating ]
+    "created_at": "2024-06-16T18:09:18Z",
     "status_reasons": [],
-
-    "service_instance_id": "xxxx",
-    "storage_workspace_id": "yyyy",
-
-   "host_mappings": [
-
-          "host_nqn": "<host_nqn1>",
-          "host_nqn": "<host_nqn2>"
-
+    "bandwidth": 393,
+    "resource_type": "volume",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "host_mappings": [
+        {
+            "host_id": "r134-06947bdd-b7bd-471c-8fd3-ab13a3bf1336",
+            "host_name": "sr-host3",
+            "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-1"
+{{        }}}
     ]
 }
 ```

@@ -72,7 +72,7 @@ ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-k
 See the following example.
 
 ```bash
-$ ibmcloud software-defined-storage cred-create --instanceid exampleString --access-key exampleString
+ibmcloud software-defined-storage cred-create --instanceid exampleString --access-key exampleString
 
 ```
 {: screen}

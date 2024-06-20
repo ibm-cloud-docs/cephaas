@@ -56,7 +56,7 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 See the following example.
 
 ```bash
-$ ibmcloud software-defined-storage volume-delete --instanceid exampleString --id exampleString --if-match exampleString
+ibmcloud software-defined-storage volume-delete --instanceid exampleString --id exampleString --if-match exampleString
 ```
 {: screen}
 

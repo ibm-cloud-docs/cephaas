@@ -30,8 +30,9 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
 3. Select **Service instance** where the volume will be located.
 4. Specify a unique, meaningful **Name** for your volume. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. You can later edit the name if you want.
 
-    <br>
-    **Note:** Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is triggered. </br>
+Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is triggered.
+{: note}
+
 5. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
 6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
@@ -80,7 +81,7 @@ ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NA
 See the following example.
 
 ```bash
-$ ibmcloud software-defined-storage volume-create --capacity 40 --name my-volume --sdsaas-instance-id exampleString --hostnqnstring exampleString
+ibmcloud software-defined-storage volume-create --capacity 40 --name my-volume --sdsaas-instance-id exampleString --hostnqnstring exampleString
 Creating volume my-volume in service instance exampleString...
 
 <Need example>

@@ -50,6 +50,6 @@ iibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-
 See the following example.
 
 ```bash
-$ ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString
+ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString
 ```
 {: screen}
