@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 keywords: list all volumes, view volume details
 
@@ -12,13 +12,13 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Viewing block storage volume
-{: #viewing-block-storage-volume}
+# View volumes
+{: #view-sds-volume}
 
 View details about a block storage volume or summary information about all volumes.
 {: shortdesc}
 
-## Viewing information about block storage volumes in the UI
+## Viewing information about volumes in the UI
 {: #viewvols}
 {: ui}
 
@@ -29,17 +29,17 @@ List all block storage volumes and view details for a single volume. View attach
 
 To view all the Block storage volumes, in the [console], navigate to **Block Storage > Volumes**.
 
-By default, SDSaaS block volumes display for all service instance in your region. In the list of all **Volumes**, you see the following information.
+By default, SDSaaS volumes display for all service instance across regions. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|
 | Name | Click the name of the volume to see individual volume details. |
-| Status | Status of the volume, which functions as the default filter for all rows. |
+| Status | Status of the volume |
 | Provisioned size | Size of the volume you specified, in GBs.|
-| Mapped hosts | |
+| Mapped hosts | Shows the count of number of hosts mapped to the volume |
 {: caption="Table 1. Details about all volumes" caption-side="bottom"}
 
-By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 20 or 50 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
+By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
 Actions menu on the Volume details page provides you with options to manage the volume information.
 
@@ -49,29 +49,29 @@ Table 2 describes the Actions menu options.
 |--------|-------------|
 | View volume details | Click to opens the detailed view of the Volume. |
 | Rename volume | Click to change the volume name. |
-| Map to host | Click to map the volume to a host. |
-| Expand volume | |
-| Delete | Delete the unattached volume. |
+| Map to host | Click to map the volume to one or more hosts. |
+| Expand volume | Allows you to increase the capacity of the volume. |
+| Delete | Delete the volume. |
 {: caption="Table 2. Actions menu options for volumes." caption-side="bottom"}
 
 ### Viewing details about a volume
 {: #view-vol-details-ui}
 
-To view details about a SDSaaS volume, go to the list of all SDSaaS volumes and click on the volume name whose details you want to view.
+To view details of a sdsaas volume, go to the list of all sdsaas volumes and click on the volume name.
 
 The Actions menu on the volume details page shows the actions that you can take.
 
-The SDSaaS volumes details page shows volume details, attached virtual server instances, and backup policies. Table 3 describes this information.
+The SDSaaS volumes details page shows volume details and mapped hosts. Table 3 describes this information.
 
 | Field | Description |
 |-------|-------------|
 | **Volume details** | |
-| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the account and for the region. |
+| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the region. |
 | Volume ID | System-generated volume ID. |
 | Created date | System-generated date when the volume was created.|
 | Service instance | Name of the instance in your region.|
 | IOPS | Current IOPS value for a predefined IOPS tier or the value you specified for custom IOPS. |
-| Throughput | The performance a disk can deliver, measured in Gigabits/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
+| Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
 {: caption="Table 3. Volume details" caption-side="bottom"}
 
 Table 4 shows Actions menu options from the volume details page.
@@ -79,7 +79,7 @@ Table 4 shows Actions menu options from the volume details page.
 | Action | Description |
 |--------|-------------|
 | Delete | Delete the volume. |
-{: caption="Table 4. Actions menu options one the volume details page." caption-side="bottom"}
+{: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}
 
 ## Viewing SDSaaS volumes from the CLI
 {: #viewing-block-storage-cli}

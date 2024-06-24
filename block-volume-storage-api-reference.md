@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-06-24"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -10,21 +10,7 @@ keywords: cli, command line reference, unified storage, sds, software-defined-st
 subcollection: sdsaas
 
 ---
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:download: .download}
-{:http: .ph data-hd-programlang='http'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Block volume API
 {: #sds-block-volume-ref-api}

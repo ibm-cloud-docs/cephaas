@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -10,21 +10,7 @@ keywords: cli, command line reference, unified storage, sds, software-defined-st
 subcollection: sdsaas
 
 ---
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:download: .download}
-{:http: .ph data-hd-programlang='http'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # IBM Software Defined Storage as a Service CLI
 {: #ic-sds-cli-reference}
@@ -61,7 +47,7 @@ Each operation has an explanation of what it does, how to use it, and any option
 The CLI plug-in doesn't yet support the full suite of features available in Software Defined Storage.
 {: note}
 
-## Retrieve a volume profile
+### Retrieve a volume profile
 {: #ic-sds-retrieve-volume-profile}
 
 * **Action:** Retrieves a single volume profile specified by ID.
@@ -72,11 +58,11 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 	    --instanceid exampleString \
 	    --id exampleString
 
-* **Command options:**
+* **Parameters to provide:**
 	* **--id**: Specify the volume profile id. Required.
 	* **--instanceid**: Specify the service instance id. Required.
 
-## Create a volume
+### Create a volume
 {: #ic-sds-create-volume}
 
 * **Action:** Create a new volume.
@@ -89,7 +75,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 	    --sdsaas-instance-id exampleString \
 	    --hostnqnstring exampleString
 
-* **Command options:**
+* **Parameters to provide:**
 	* **--capacity**: Specify the capacity of the volume (in gigabytes).
 	* **--hostnqnstring**: The host nqn.
 	* **--instanceid**: Specify the service instance id.
@@ -97,7 +83,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 	* **--sdsaas-instance-id**: The service instance ID where the volume will be created in.
 
 
-## Update a volume
+### Update a volume
 {: #ic-sds-update-volume}
 
 * **Action:** Update a volume with the information in provided volume patch.
@@ -111,7 +97,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 	  --capacity 38 \
 	  --name exampleString
 
-* **Command options:**
+* **Parameters to provide:**
 	* **--capacity**: The capacity of the volume (in gigabytes).
 	* **--id**: The volume profile id. Required.
 	* **--if-match**: If present, the request will fail if the specified ETag value does not match the resource's current ETag value.
@@ -120,19 +106,19 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 	* **--volume-patch**: JSON object containing volume information.
 
 
-## Delete a volume
+### Delete a volume
 {: #ic-sds-delete-volume}
 
 * **Action:** Deletes a single volume profile based on the name.
 * **Usage:** `ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH]`
 
-* **Command options:**
+* **Parameters to provide:**
 	* **--id**: The volume profile id. _**Required**_.
 	* **--if-match**: If present, the request will fail if the specified ETag value does not match the resource's current ETag value.
 	* **--instanceid**: The service instance id.
 
 
-## List all volumes
+### List all volumes
 {: #ic-sds-list-volumes}
 
 Volumes are network-connected block storage devices that may be attached to one or more service instances in the same region..
@@ -140,7 +126,7 @@ Volumes are network-connected block storage devices that may be attached to one 
 * **Action:** Run this command to list summary information about all volumes  .
 * **Usage:** `ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]`
 
-* **Command options:**
+* **Parameters to provide:**
 	* **--instanceid**: The service instance id. Required.
 
 * **Global options:**

@@ -2,14 +2,14 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
 subcollection: sdsaas
 
 ---
-
+{{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
 # Getting started with Software Defined Storage as a Service (SDSaaS)

@@ -47,7 +47,7 @@ toc:
 #            - adding_capacity.md
 #            - view_capacity_details.md
       - topicgroup:
-          label: Manage object credentials and certificates
+          label: Manage service credentials and certificates
           topics:
             - service_credential_sds_create.md
             - service_credential_sds_view.md
@@ -66,7 +66,7 @@ toc:
             - block-volume-storage-api-reference.md
 #          links: https://test.cloud.ibm.com/docs/sdsaas/swagger.json
       - topicgroup:
-          label: Command line reference
+          label: Use the command line
           topics:
            - block-volume-storage-cli-reference.md
 #          - /cli/cli-manage-catalogs-plugin

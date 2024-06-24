@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -22,17 +22,17 @@ You can manage your Block Storage volume in the UI, from the CLI, or with the AP
 {: #managing-sds-block-volume-ui}
 {: ui}
 
-Use the console to manage your Block Storage volumes. In the console, you can complete the following actions.
+Use the console to manage the volumes. In the console, you can complete the following actions.
 
-* Rename a Block Storage volume.
-* Map a volume to a host.
-* Expand volume to increase the current capacity.
-* Delete a Block Storage data volume.
-
-
+* Rename a Block Storage volume
+* Map a volume to a host
+* Expand volume to increase the capacity
+* Delete a volume
 
 
-### Renaming a block volume in the UI
+
+
+### Renaming a volume in the UI
 {: #renaming-sds-block-volume-ui}
 {: ui}
 
@@ -41,8 +41,15 @@ To rename a volume, complete the following steps.
 1. Navigate to the list fo all Block storage volumes.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire VPC infrastructure. For example, if you create two volumes with the same name in the same service instance, a volume name duplicate error is triggered.
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique. For example, if you create two volumes with the same name in the same service instance, a volume name duplicate error is triggered.
 5. Click **Rename** to confirm renaming of the volume.
+
+
+### Renaming a volume from details page in the UI
+{: #renaming-sds-volume-from-details-page-ui}
+{: ui}
+
+
 
 
 

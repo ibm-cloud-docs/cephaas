@@ -1,0 +1,201 @@
+{
+    "schemes": ["https"],
+    "swagger": "2.0",
+    "info": {
+        "description": "Provides Admin level Object Storage functionality for SDSaaS",
+        "title": "SDSaaS Object Storage External API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "",
+    "basePath": "/v1/object",
+    "paths": {
+        "/accounts/credentials": {
+            "get": {
+                "description": "Retrieves credentials for the \"default\" storage account.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "accounts"
+                ],
+                "summary": "List storage account credentials",
+                "responses": {
+                    "200": {
+                        "description": "List of storage account access keys",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates a credentials for \"default\" storage account, identified by an access key, and returns the created credential.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "accounts"
+                ],
+                "summary": "Create storage account credentials",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Access Key to create",
+                        "name": "access-key",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New access and secret key",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Deletes specific credentials for the \"default\" storage account using an access key.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "accounts"
+                ],
+                "summary": "Delete storage account credentials",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Access Key to identify credentials",
+                        "name": "access-key",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK - Storage account credentials were deleted successfully"
+                    }
+                }
+            }
+        },
+        "/s3tlscert": {
+            "post": {
+                "description": "Updates the S3 SSL Certificates for Secure Object I/O",
+                "consumes": [
+                    "text/plain"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "s3tlscert"
+                ],
+                "summary": "Updates the S3 SSL Certificates",
+                "parameters": [
+                    {
+                        "description": "PEM Formatted S3 TLS Certificates",
+                        "name": "s3tlscert",
+                        "in": "body",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "S3 SSL Cert/Key status",
+                        "schema": {
+                            "$ref": "#/definitions/utils.CertResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "S3 SSL Cert/Key status with errors",
+                        "schema": {
+                            "$ref": "#/definitions/utils.CertResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/s3tlscertstatus": {
+            "get": {
+                "description": "Retrieves S3 SSL certificate expiration date and status.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "s3tlscert"
+                ],
+                "summary": "Get S3 SSL Cert status",
+                "responses": {
+                    "200": {
+                        "description": "S3 SSL Cert expiration date and status",
+                        "schema": {
+                            "$ref": "#/definitions/utils.StatusResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "utils.CertResponse": {
+            "type": "object",
+            "properties": {
+                "Error": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ValidCertificate": {
+                    "type": "boolean"
+                },
+                "ValidKey": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "utils.StatusResponse": {
+            "type": "object",
+            "properties": {
+                "ExpirationDate": {
+                    "type": "string"
+                },
+                "Expired": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

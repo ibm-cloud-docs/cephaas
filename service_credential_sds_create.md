@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-06-24"
 
 keywords: service credential create
 
@@ -45,7 +45,6 @@ You can create a service credential by using the command-line interface (CLI).
 Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
 
 
-{: requirement}
 
 Log in to the IBM Cloud.
 
