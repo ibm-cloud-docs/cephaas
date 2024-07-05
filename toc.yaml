@@ -61,11 +61,11 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: API reference
+          label: SDSaaS Block Storage API reference
           topics:
              - sdsaas_block_spec.md
 #            - block-volume-storage-api-reference.md
-#          links: https://test.cloud.ibm.com/docs/sdsaas/swagger.json
+             - /sdsaas/sdsaas_block_spec.json
       - topicgroup:
           label: Use the command line
           topics:
