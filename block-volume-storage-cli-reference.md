@@ -24,9 +24,6 @@ The Software defined storage as a service (SDSaaS) plug-in extends the {{site.da
 
 Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
 
-
-{: requirement}
-
 Log in to the IBM Cloud.
 
 ```sh
@@ -76,13 +73,13 @@ Create a new volume.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING]
 ```
 
 **Example**
 
-```
+```sh
 ibmcloud software-defined-storage volume-create \
 	--capacity 40 \
 	--name my-volume \
@@ -104,12 +101,12 @@ Retrieves a single volume profile specified by ID.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID
 ```
 **Example**
 
-```
+```sh
 ibmcloud software-defined-storage volume \
 	--instanceid exampleString \
 	--id exampleString
@@ -127,13 +124,13 @@ Update a volume with the information in provided volume patch.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID [--volume-patch VOLUME-PATCH] [--if-match IF-MATCH]
 ```
 
 **Example**
 
-```
+```sh
 ibmcloud software-defined-storage volume-update \
 	--instanceid exampleString \
 	--id exampleString \
@@ -141,6 +138,7 @@ ibmcloud software-defined-storage volume-update \
 	--capacity 38 \
 	--name exampleString
 ```
+
 
 **Parameters to provide:**
 * **--capacity**: The capacity of the volume (in gigabytes).
@@ -158,7 +156,7 @@ Deletes a single volume profile based on the name.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH]
 ```
 
@@ -174,7 +172,7 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 Lists the summary information about all volumes.
 
 **Usage:**
-```
+```sh
 ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]
 ```
 
@@ -194,15 +192,14 @@ Updates credentials for a storage account or creates them if they do not exist.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY
 ```
 **Example**
-```
+```sh
 ibmcloud software-defined-storage cred-create \
 	--instanceid exampleString \
 	--access-key exampleString
-
 ```
 
 **Aliases:** cred-create, crc
@@ -221,7 +218,7 @@ Retrieves the S3 SSL certificate expiration date and status.
 
 **Usage:**
 
-```
+```sh
 ibmcloud software-defined-storage certificate --instanceid INSTANCEID
 ```
 
@@ -231,12 +228,6 @@ ibmcloud software-defined-storage certificate --instanceid INSTANCEID
 * **--instanceid**: The service instance id. Required.
 
 
-* **Global options:**
-	* **-h, --help** Show help
-	* **-j, --jmes-query** Provide a JMESPath query as a string to customize output.
-	* **--output** Choose an output format - can be 'json', 'yaml', 'tui', or 'table'. (default "table")
-	* **-q, --quiet** Suppresses verbose messages.
-	* **--url** API Endpoint
 
 ## Next Steps
 {: #cli-ref-next-steps}
