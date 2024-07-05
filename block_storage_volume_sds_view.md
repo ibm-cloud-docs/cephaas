@@ -118,7 +118,6 @@ Getting volume demo-volume-update...
 ID                                     r014-dee9736d-08ee-4992-ba8d-3b64a4f0baac
 Name                                   demo-volume-update
 
-<Waiting for example>
 ```
 {: screen}
 

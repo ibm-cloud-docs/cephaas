@@ -74,3 +74,17 @@ toc:
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
 #      - topic-6.md
+  - navgroup:
+      id: help
+      topics:
+      - sds_getting_help_and_support.md
+      - topicgroup:
+          label: Frequently asked questions
+          topics:
+             - sds_faq_general.md
+             - sds_faq_plans.md
+             - sds_faq_vol_mgmt.md
+      - topicgroup:
+          label: Use the command line
+          topics:
+           - block-volume-storage-cli-reference.md

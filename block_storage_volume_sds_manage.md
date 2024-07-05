@@ -50,7 +50,15 @@ To rename a volume, complete the following steps.
 {: ui}
 
 
+### Expanding a volume to increase the capacity
+{: #expanding-volume-size}
+{: ui}
 
+1. Navigate to the list fo all Block storage volumes.
+2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+3. From the options menu, click **Expand volume**.
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire VPC infrastructure. For example, if you create two volumes with the same name in the same service instance, a volume name duplicate error is triggered.
+5. Click **Rename** to confirm renaming of the volume.
 
 
 

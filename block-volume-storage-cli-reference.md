@@ -12,7 +12,7 @@ subcollection: sdsaas
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM Software Defined Storage as a Service CLI
+# IBM SDSaaS CLI reference
 {: #ic-sds-cli-reference}
 
 The Software defined storage as a service (SDSaaS) plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.

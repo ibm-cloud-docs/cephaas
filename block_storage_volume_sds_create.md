@@ -122,7 +122,6 @@ curl -X POST '$sds_api_endpoint/v1/volumes' \
 
 {     "capacity": 10,     "name": "sds-vol" }
 '
-
 ```
 {: pre}
 
