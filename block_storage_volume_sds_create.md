@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-05"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -12,14 +12,14 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating SDS block volumes
+# Creating block volumes
 {: #creating-sds-block-volume}
 
 Create a SDSaaS volume by using the UI, CLI, or API.
 {: shortdesc}
 
 
-## Creating SDSaaS block volumes in the UI
+## Creating block volumes in the UI
 {: #creating-sds-block-volume-ui}
 {: ui}
 
@@ -37,7 +37,7 @@ Volume names must be unique in the entire service instance. For example, if you 
 6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
 
-## Creating SDSaaS block volumes from the CLI
+## Creating block volumes from the CLI
 {: #creating-sds-block-volume-cli}
 {: cli}
 
@@ -61,7 +61,7 @@ ibmcloud login --sso -a cloud.ibm.com
 This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
 {: pre}
 
-### Creating a SDSaaS volume from the CLI
+### Creating a volume from the CLI
 {: #create-volume-cli}
 {: help}
 {: support}
@@ -95,7 +95,7 @@ The volume name can be up to 63 lowercase alpha-numeric characters and include t
 {: requirement}
 
 
-## Creating SDSaaS block volumes with the API
+## Creating block volumes with the API
 {: #creating-volume-api}
 {: api}
 

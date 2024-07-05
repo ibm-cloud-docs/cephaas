@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-05"
 
 keywords: list all volumes, view volume details
 
@@ -12,7 +12,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# View volumes
+# View block volumes
 {: #view-sds-volume}
 
 View details about a block storage volume or summary information about all volumes.

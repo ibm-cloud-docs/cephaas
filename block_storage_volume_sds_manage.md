@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-05"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -12,13 +12,13 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing a block storage volume
+# Managing a block volume
 {: #managing-sds-block-volume}
 
 You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can delete a volume from a service instance. You can rename a volume or modify the volume size.
 {: shortdesc}
 
-## Managing Block Storage volume in the UI
+## Managing block volume in the UI
 {: #managing-sds-block-volume-ui}
 {: ui}
 

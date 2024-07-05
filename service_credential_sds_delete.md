@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-05"
 
 keywords: sdsaas , delete service credential
 
@@ -25,7 +25,7 @@ Delete a service credential using the UI, CLI, or API.
 
 To delete a service credential, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Object Storage > Service credentails** tab.
+1. On the IBM Cloud console, navigate to **SDS as a Service > Object Storage > Service credentials** tab.
 
 2. Select the service credential that you wish to delete.
 

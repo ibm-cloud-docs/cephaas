@@ -63,7 +63,8 @@ toc:
       - topicgroup:
           label: API reference
           topics:
-            - block-volume-storage-api-reference.md
+             - sdsaas_block_spec.md
+#            - block-volume-storage-api-reference.md
 #          links: https://test.cloud.ibm.com/docs/sdsaas/swagger.json
       - topicgroup:
           label: Use the command line

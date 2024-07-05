@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-05"
 
 keywords:
 
@@ -13,10 +13,10 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About Block Volume storage
+# About Block storage volume
 {: #sds-block-volume-storage-about}
 
-Block volume storage provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, additional security and performance.
+Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, additional security and performance.
 {: shortdesc}
 
 ## Overview
@@ -24,9 +24,9 @@ Block volume storage provides hypervisor-mounted, high-performance data storage 
 
 SDSaaS volume data is stored redundantly across multiple physical disks in an Availability Zone to prevent data loss due to failure of any single component.
 
-SDSaaS provides primary boot volumes and secondary data volumes. Boot volumes are automatically created and attached during instance provisioning. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, you can use your own encryption keys or choose IBM-managed encryption.
+SDSaaS provides primary and secondary data volumes. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, you can use your own encryption keys or choose IBM-managed encryption.
 
-You pay for only the capacity that you need. SDSaaS capacity ranges from 10 GB up to 16,000 GB for all available [profiles](#block-storage-profiles-intro). For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity, depending on your volume profile.
+You pay for only the capacity that you need. SDSaaS capacity ranges from 10 GB up to 16,000 GB for all available [profiles](#block-storage-profiles-intro). For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
 
 
@@ -35,9 +35,11 @@ When you create, view, or update a SDSaaS volume, the volume health state is rep
 ## SDSaaS volume types
 {: #sds-block-storage-volumes}
 
-SDSaaS offers block-level volumes that are attached to an instance as a boot volume when the instance is created or attached as secondary data volumes. You can configure up to 300 SDSaaS volumes per account in a region. You can request to increase this quota by opening support case and specifying in which zone you need more volumes.
+SDSaaS offers block-level volumes that are attached to an instance when the instance is created or attached as secondary data volumes. You can configure up to 300 SDSaaS volumes per account in a region. You can request to increase this quota by opening support case and specifying in which zone you need more volumes.
 
-You can attach only one boot volume to a virtual server instance at a time, but you can attach up to 12 SDSaaS data volumes to a single instance. 
+Limitation:
+
+
 
 ### Data volumes
 {: #sds-secondary-data-volumes}
@@ -63,7 +65,7 @@ When you create a SDSaaS volume in your availability zone, you can use 3 differe
 ## SDSaaS encryption
 {: #sds-storage-encryption}
 
-{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a data volume, you can choose to protect your data by using your own root keys, or use the default IBM-managed encryption. Boot volumes that are created during instance provisioning are encrypted with IBM-managed encryption by default. You can edit the boot volume to use your root keys. After you set up encryption for a data volume, you can't change it.
+{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a volume, you can choose to protect the volume by using your own root keys, or use the default IBM-managed encryption. Volumes that are created during instance provisioning are encrypted with IBM-managed encryption by default. You can edit the volume to use your root keys. After you set up encryption for a volume, you can't change it.
 
 
 
@@ -75,7 +77,7 @@ If you no longer need a volume, you can cancel it at any time. IBM wipes all dat
 ## Next steps
 {: #sds-block-storage-about-next-steps}
 
-Create your SDSaaS volumes.
+Create your SDSaaS block volumes.
 
-* For more information about creating a volume during instance provisioning, see [Create and attach a SDSaaS volume when you create an instance].
-* For more information about creating a SDSaaS encrypted by your own encryption keys, see [Creating SDSaaS volumes with customer-managed encryption]
+* For more information about creating a volume during instance provisioning, see [Create and attach a SDSaaS block volume when you create an instance].
+* For more information about creating a SDSaaS encrypted by your own encryption keys, see [Creating SDSaaS block volumes with customer-managed encryption]
