@@ -48,9 +48,6 @@ You can create SDSaaS volumes by using the command-line interface (CLI).
 
 Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
 
-
-{: requirement}
-
 Log in to the IBM Cloud.
 
 ```sh
@@ -67,7 +64,6 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: support}
 
 Run the following command to create a SDSaaS volume. Provide a volume name, profile name, and the name of the availability zone in your region.
-
 
 
 Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is triggered.
