@@ -24,23 +24,6 @@
         "href": "/docs/sdsaas?topic=sdsaas-ic-sds-cli-reference"
       }
     ],
-    "section_videos": [
-      {
-        "title": "Title of video",
-        "href": "/docs/account?topic=account-enterprise-video",
-        "thumbnail": "/images/enterprise-video-thumbnail.png"
-      },
-      {
-        "title": "Title of video",
-        "href": "/docs/account?topic=account-enterprise-video",
-        "thumbnail": "/images/enterprise-video-thumbnail.png"
-      },
-      {
-        "title": "Title of video",
-        "href": "/docs/account?topic=account-enterprise-video",
-        "thumbnail": "/images/enterprise-video-thumbnail.png"
-      }
-    ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/cloud/",
       "architecture": "https://www.ibm.com/architectures/hybrid",
