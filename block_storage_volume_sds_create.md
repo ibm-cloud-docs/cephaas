@@ -84,8 +84,6 @@ See the following example.
 ibmcloud software-defined-storage volume-create --capacity 40 --name my-volume --sdsaas-instance-id exampleString --hostnqnstring exampleString
 Creating volume my-volume in service instance exampleString...
 
-<Need example>
-
 ```
 {: screen}
 

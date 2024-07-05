@@ -53,3 +53,25 @@ See the following example.
 ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString
 ```
 {: screen}
+
+## Deleting a service credential with the API
+{: #creating-service-credential-api}
+{: api}
+
+You can delete a specific credential for the "default" storage account using an access key.
+
+```sh
+curl -X 'DELETE' \
+  '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
+  -H 'accept: application/json'
+
+```
+{: pre}
+
+There is no response body for a successful delete operation. HTTP response code 200 is returned along with message "OK - Storage account credentials were deleted successfully".
+
+
+To verify that the credential is deleted, list the credential by making a `GET /account/credentials` call.
+
+## Next steps
+{: #next-step-delete-service-creds-sds}

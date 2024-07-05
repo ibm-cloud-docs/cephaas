@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-05"
 
 keywords: service credential create
 
@@ -82,7 +82,26 @@ ibmcloud software-defined-storage cred-create --instanceid exampleString --acces
 {: #creating-service-credential-api}
 {: api}
 
+You can create a service credential for "default" storage account which can be identified by an access key.
 
+```sh
+curl -X 'POST' \
+  '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
+  -H 'accept: application/json' \
+  -d ''
+
+```
+{: pre}
+
+A successful response looks like this:
+
+```json
+{
+  "access_key": "dsfdgdf2343435666",
+  "secret_key": "ZGAelVfLo7QAzWlIAsTPYVckXMl8gIcKzvdXaDtJ"
+}
+```
+{: screen}
 
 
 ## Next steps
