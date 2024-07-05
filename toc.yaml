@@ -65,7 +65,7 @@ toc:
           topics:
              - sdsaas_block_spec.md
 #            - block-volume-storage-api-reference.md
-             - /sdsaas/sdsaas_block_spec.json
+             - /sdsaas/sdsaas_block_spec.yaml
       - topicgroup:
           label: Use the command line
           topics:
