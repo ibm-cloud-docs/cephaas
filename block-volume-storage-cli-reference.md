@@ -48,7 +48,7 @@ ibmcloud plugin install software-defined-storage
 
 
 ### Update the SDS plugin
-{: #ic-update}
+{: #ic-sds-update}
 
 Update the plug-in by using the `plugin update` command.
 
@@ -64,9 +64,23 @@ Each operation has an explanation of what it does, how to use it, and any option
 The CLI plug-in doesn't yet support the full suite of features available in Software Defined Storage.
 {: note}
 
-## Block volume commands
+### software-defined-storage
+{: #ic-sds-plugin}
 
-### Create a volume
+`software-defined-storage` - OpenAPI definition for the SDSaaS CLI.
+
+**USAGE**:
+```sh
+ibmcloud software-defined-storage [command] [options]
+```
+
+**ALIASES**: software-defined-storage, sds
+
+
+### Block volume
+{: #sds-volume-cmds}
+
+#### Create volume
 {: #ic-sds-create-volume}
 
 Create a new volume.
@@ -94,7 +108,7 @@ ibmcloud software-defined-storage volume-create \
 * **--sdsaas-instance-id**: The service instance ID where the volume will be created in.
 
 
-### Retrieve a volume profile
+#### Retrieve a volume profile
 {: #ic-sds-retrieve-volume-profile}
 
 Retrieves a single volume profile specified by ID.
@@ -117,7 +131,7 @@ ibmcloud software-defined-storage volume \
 * **--instanceid**: Specify the service instance id. Required.
 
 
-### Update a volume
+#### Update a volume
 {: #ic-sds-update-volume}
 
 Update a volume with the information in provided volume patch.
@@ -149,7 +163,7 @@ ibmcloud software-defined-storage volume-update \
 * **--volume-patch**: JSON object containing volume information.
 
 
-### Delete a volume
+#### Delete a volume
 {: #ic-sds-delete-volume}
 
 Deletes a single volume profile based on the name.
@@ -166,7 +180,7 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 * **--instanceid**: The service instance id.
 
 
-### List all volumes
+#### List all volumes
 {: #ic-sds-list-volumes}
 
 Lists the summary information about all volumes.
@@ -181,11 +195,10 @@ ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]
 
 
 
-
-## Account management commands
+### Account management
 {: #sds-account-mgmt-cmd}
 
-### Create service credential
+#### Create service credential
 {: #ic-sds-create-service-cred}
 
 Updates credentials for a storage account or creates them if they do not exist.
@@ -196,6 +209,7 @@ Updates credentials for a storage account or creates them if they do not exist.
 ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY
 ```
 **Example**
+
 ```sh
 ibmcloud software-defined-storage cred-create \
 	--instanceid exampleString \
@@ -208,10 +222,77 @@ ibmcloud software-defined-storage cred-create \
 * **--instanceid**: The service instance id. Required.
 * **--access-key**: Access key to update or set. Required.
 
+#### Delete service credential
+{: #ic-sds-delete-service-cred}
+
+Deletes specific credentials for a storage account.
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
+```
+**Example**
+
+```sh
+ibmcloud software-defined-storage cred-create \
+	--instanceid exampleString \
+	--access-key exampleString
+```
+
+**Aliases:** cred-delete, crd
+
+**Parameters to provide:**
+* **--instanceid**: The service instance id. Required.
+* **--access-key**: Access key to update or set. Required.
+
+#### List service credential
+{: #ic-sds-list-service-cred}
+
+Retrieves credentials for a specific storage account.
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage credentials --instanceid INSTANCEID
+```
+**Example**
+
+```sh
+ibmcloud software-defined-storage credentials \
+    --instanceid exampleString
+```
+
+**Aliases:** credentials, crl
+
+**Parameters to provide:**
+* **--instanceid**: The service instance id. Required.
 
 
+#### Create or modify certificate
+{: #ic-sds-upload-cert}
 
-### Retrieve certificate details
+Updates the S3 SSL Certificates or creates them if they do not exist.
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage cert-upload --instanceid INSTANCEID --body BODY
+```
+**Example**
+
+```sh
+ibmcloud software-defined-storage cert-upload \
+	--instanceid exampleString \
+    --body exampleString
+```
+**Aliases:** cert-upload, crtu
+
+**Parameters to provide:**
+* **--instanceid**: The service instance id. Required.
+* **--body**: The request body containing the S3 TLS certificate. The body must be in string format with single quotes at the beginning and end of all cert data. Required.
+
+#### Retrieve certificate details
 {: #ic-sds-retrieve-cert-details}
 
 Retrieves the S3 SSL certificate expiration date and status.
