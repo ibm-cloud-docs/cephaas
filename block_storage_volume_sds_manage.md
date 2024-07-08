@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -41,7 +41,7 @@ To rename a volume, complete the following steps.
 1. Navigate to the list fo all Block storage volumes.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique. For example, if you create two volumes with the same name in the same service instance, a volume name duplicate error is triggered.
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, a name duplicate error is displayed.
 5. Click **Rename** to confirm renaming of the volume.
 
 
@@ -49,6 +49,10 @@ To rename a volume, complete the following steps.
 {: #renaming-sds-volume-from-details-page-ui}
 {: ui}
 
+1. In the **Volume** details page, click the `Actions` button.
+3. From the Actions menu, you can click **Rename** OR you can click the `pen` icon next to the **Name**.
+4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, a duplicate name error is displayed.
+5. Click **Rename** to confirm renaming of the volume.
 
 
 
@@ -101,23 +105,23 @@ ibmcloud software-defined-storage volume-update \
 {: #managing-sds-block-volume-api}
 {: api}
 
-To manage your block storage volume with the API, you can make use of the `PATCH /volumes/{volume_id}` request to modify the volume details.
+To manage your block storage volume with the API, you can make use of the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
 
 With the API, you can complete the following actions.
 
 * Rename a Block Storage volume.
 * Expand volume to increase the current capacity.
 
-You can perform only one action at a time within the command.
+PATCH operation to change more than one parameter value in the same command is not supported.
 {: note}
 
-Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
 
-### Updating volume details with the API
-{: #updating-block-volume-api}
+
+### Renaming volume with the API
+{: #updating-sds-volume-name-api}
 {: api}
 
-Make a `PATCH /volumes/{volume_id}` request to update a volume.
+Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
 
 ```sh
 {{curl -X PATCH '$sds_api_endpoint/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' }}
@@ -152,6 +156,47 @@ A successful response looks like this:
 
 ```
 {: screen}
+
+### Updating volume with the API
+{: #updating-sds-volume-api}
+{: api}
+
+Make a `PATCH /volumes/{volume_id}` request to update or expand the volume to increase the current capacity.
+
+```sh
+{{curl -X PATCH '$sds_api_endpoint/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' }}
+{{--header 'Authorization: Bearer $IAM_TOKEN' }}
+{{--header 'Content-Type: application/json' }}
+--data '{
+    "capacity": 100
+}'
+```
+{: pre}
+
+A successful response looks like this:
+
+```json
+{
+    "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
+    "name": "sds-vol-updated",
+    "capacity": 100,
+    "iops": 3000,
+    "status": "available",
+    "profile": {
+        "name": "sds-general-purpose"
+    },
+    "created_at": "2024-06-19T06:22:51Z",
+    "status_reasons": [],
+    "bandwidth": 393,
+    "resource_type": "volume",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "host_mappings": []
+}
+
+```
+{: screen}
+
 
 
 ## Next steps

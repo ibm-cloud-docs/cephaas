@@ -30,7 +30,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
 3. Select **Service instance** where the volume will be located.
 4. Specify a unique, meaningful **Name** for your volume. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. You can later edit the name if you want.
 
-Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is triggered.
+Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
 {: note}
 
 5. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
@@ -66,7 +66,7 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 Run the following command to create a SDSaaS volume. Provide a volume name, profile name, and the name of the availability zone in your region.
 
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is triggered.
+Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is displayed.
 {: important}
 
 ```sh
@@ -106,7 +106,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /volumes` request to create a volume, and define the volume by using the `name` parameter. Specify a volume name, capacity, and profile.
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `volume name duplicate` error is triggered.
+Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `volume name duplicate` error is displayed.
 {: important}
 
 
