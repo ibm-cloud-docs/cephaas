@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -310,7 +310,7 @@ ibmcloud software-defined-storage certificate --instanceid INSTANCEID
 
 
 
-## Next Steps
+## Next steps
 {: #cli-ref-next-steps}
 
 Run `ibmcloud sds --help` for more information about which commands you could run.

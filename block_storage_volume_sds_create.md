@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -159,6 +159,6 @@ You can continue creating more volumes or manage existing volumes.
 
 * [View volume details](/docs/sdsaas?topic=sdsaas-viewing-block-storage)
 
-* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)
+* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume#managing-sds-block-volume-ui)
 
 * [Delete a volume](/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume)

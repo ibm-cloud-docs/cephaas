@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-08"
 
 keywords:
 
@@ -23,4 +23,4 @@ IBM Software defined storage as a service (SDSaaS) is high performing, flexible 
 ## Next Steps
 {: #about-sds-next-steps}
 
-Documentation on the best way to [get started](/docs/sdsaas?topic=getting-started) provides support to provision unified storage, to create volumes and objects, and to use a reference of common operations through CLI and API interactions.
+Documentation on the best way to [get started](/docs/sdsaas?topic=sdsaas-getting-started) provides support to provision unified storage, to create volumes and objects, and to use a reference of common operations through CLI and API interactions.

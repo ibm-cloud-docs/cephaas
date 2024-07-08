@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 keywords: list all volumes, view volume details
 
@@ -134,7 +134,7 @@ ibmcloud software-defined-storage volumes \
 ```
 {: screen}
 
-For more information about available command options, see [`ibmcloud sds volumes`](/docs/cli?topic=cli-sds-reference#volumes-list).
+For more information about available command options, run `ibmcloud sds volumes --help`.
 
 ## View all volumes with the API
 {: #viewing-block-storage-api}

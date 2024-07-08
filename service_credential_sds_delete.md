@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-08"
 
 keywords: sdsaas , delete service credential
 
@@ -43,7 +43,7 @@ Use the `cred-delete` command and provide the `INSTANCEID` of the specific crede
 Run the following command to delete a credential.
 
 ```sh
-iibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
+ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
 ```
 {: pre}
 
