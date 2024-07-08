@@ -84,7 +84,3 @@ toc:
              - sds_faq_general.md
              - sds_faq_plans.md
              - sds_faq_vol_mgmt.md
-      - topicgroup:
-          label: Use the command line
-          topics:
-           - block-volume-storage-cli-reference.md
