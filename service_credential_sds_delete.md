@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-09"
 
 keywords: sdsaas , delete service credential
 
@@ -38,7 +38,7 @@ All access granted to any resources using this credential will be lost once the 
 {: #deleting-sds-service-credential-cli}
 {: cli}
 
-Use the `cred-delete` command and provide the `INSTANCEID` of the specific credential for a storage account.
+Use the `cred-delete` command and provide the `INSTANCEID` of the SDSaaS instance along with the `ACCESS-KEY` for the credential that you want to delete.
 
 Run the following command to delete a credential.
 

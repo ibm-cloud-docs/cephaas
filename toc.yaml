@@ -43,8 +43,7 @@ toc:
           label: Manage Hosts
           topics:
           - sds_create_host.md
-#          - sds_view_host.md
-          - sds_manage_host.md
+          - sds_manage_hosts.md
           - sds_delete_hosts.md
       - topicgroup:
           label: Manage storage capacity

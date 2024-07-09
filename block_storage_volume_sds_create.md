@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-09"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -63,8 +63,7 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command to create a SDSaaS volume. Provide a volume name, profile name, and the name of the availability zone in your region.
-
+Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the `SDSAAS-INSTANCE-ID` where the volume will be created.
 
 Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is displayed.
 {: important}
@@ -77,8 +76,17 @@ ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NA
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage volume-create --capacity 40 --name my-volume --sdsaas-instance-id exampleString --hostnqnstring exampleString
-Creating volume my-volume in service instance exampleString...
+ic sds volume-create --instanceid abc --capacity 10 --name example1 --url $rsos_api
+...
+
+ID             r134-d75e1aeb-4bcf-4d41-8926-517198d55448
+Name           example1
+Status         pending
+Mapped_Host    -
+Capacity_GB    10
+Created        2024-07-09T06:24:49Z
+Health_state   inapplicable
+Active         false
 
 ```
 {: screen}

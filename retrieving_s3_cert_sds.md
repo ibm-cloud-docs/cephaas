@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-09"
 
 keywords: sdsaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -13,15 +13,25 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Retrieving S3 certificate expiration date and status
-{: #retrieving-s3-certificate-details-sds}
+{: #retrieving-sds-s3-certificate-details-sds}
 
-Retrieve and view the expiration date and status of the S3 SSL certificate by using CLI. S3 certificates are required to secure the S3 endpoint.
+S3 certificates are required to secure the S3 endpoint.
+
+This section provides guidance on how to retrieve and view the expiration date and status of the S3 SSL certificate.
 {: shortdesc}
 
 
+## View S3 certificate details using the UI
+{: #view-sds-s3-certificate-using-ui}
+{: ui}
+
+To retrieve and view the expiration date and status of a S3 certificate, on the IBM Cloud console, navigate to **SDS as a Service > Settings**.
+
+Here, you can view the **S3 certificate** expiration date and status if it exists in the system.
+
 
 ## Retrieving S3 certificate expiration date and status from the CLI
-{: #retrieving-s3-certificate-details-cli}
+{: #retrieving-sds-s3-certificate-details-cli}
 {: cli}
 
 Use the `certificate` command to retrieve and view the S3 SSL Certificates expiration date and it's status.
@@ -41,6 +51,27 @@ ibmcloud software-defined-storage certificate
 ```
 {: screen}
 
+
+## Retrieve S3 certificate details with the API
+{: #retrieve-sds-s3-certificate-api}
+{: api}
+
+Make a `GET /s3tlscertstatus` to retrieve the S3 certficate expiration date and status.
+
+```sh
+curl -X 'GET' '$sds_api_endpoint/v1/object/s3tlscertstatus' -H 'accept: application/json'
+```
+{: pre}
+
+A successful response looks like this:
+
+```json
+{
+  "ExpirationDate": "string",
+  "Expired": true
+}
+```
+{: screen}
 
 
 
