@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-12"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -45,7 +45,7 @@ Install the plug-in by using the `plugin install` command.
 ```sh
 ibmcloud plugin install software-defined-storage
 ```
-
+{: pre}
 
 ### Update the SDS plugin
 {: #ic-sds-update}
@@ -55,6 +55,8 @@ Update the plug-in by using the `plugin update` command.
 ```sh
 ibmcloud plugin update software-defined-storage
 ```
+{:pre}
+
 
 ## Command index
 {: #ic-sds-command-index}
@@ -64,10 +66,10 @@ Each operation has an explanation of what it does, how to use it, and any option
 The CLI plug-in doesn't yet support the full suite of features available in Software Defined Storage.
 {: note}
 
-### software-defined-storage
+## software-defined-storage
 {: #ic-sds-plugin}
 
-`software-defined-storage` - OpenAPI definition for the SDSaaS CLI.
+`software-defined-storage` -  an OpenAPI definition for the SDSaaS CLI.
 
 **USAGE**:
 ```sh
@@ -77,19 +79,18 @@ ibmcloud software-defined-storage [command] [options]
 **ALIASES**: software-defined-storage, sds
 
 
-### Block volume
+## Block volume
 {: #sds-volume-cmds}
 
-#### Create volume
+### Create a new volume
 {: #ic-sds-create-volume}
-
-Create a new volume.
 
 **Usage:**
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING]
+ibmcloud software-defined-storage volume-create --instanceid INSTANCEID [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING]
 ```
+**Aliases**: volume-create, volc
 
 **Example**
 
@@ -101,23 +102,36 @@ ibmcloud software-defined-storage volume-create \
 	--hostnqnstring exampleString
 ```
 **Parameters to provide:**
-* **--capacity**: Specify the capacity of the volume (in gigabytes).
-* **--hostnqnstring**: The host nqn.
-* **--instanceid**: Specify the service instance id.
-* **--name**: Name of the volume.
-* **--sdsaas-instance-id**: The service instance ID where the volume will be created in.
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* [Optional] Specify the capacity of the volume (in gigabytes).
+	* Flag: `--capacity CAPACITY`
+
+* [Optional] Name of the volume.
+	* Flag: `--name NAME`
+
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
+	{: note}
+
+* [Optional] Sets the service instance ID where the volume will be created in.
+	* Flag: `--sdsaas-instance-id SDSAAS-INSTANCE-ID`
+
+* [Optional] The host NVMe Qualified Name
+	* Flag: `--hostnqnstring HOSTNQNSTRING`
 
 
-#### Retrieve a volume profile
+### Retrieve a single volume profile
 {: #ic-sds-retrieve-volume-profile}
-
-Retrieves a single volume profile specified by ID.
 
 **Usage:**
 
 ```sh
 ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID
 ```
+**Aliases**: volume, vol
+
 **Example**
 
 ```sh
@@ -127,11 +141,14 @@ ibmcloud software-defined-storage volume \
 ```
 
 **Parameters to provide:**
-* **--id**: Specify the volume profile id. Required.
-* **--instanceid**: Specify the service instance id. Required.
+* Specify the volume profile id.
+	* Flag: `--id ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
 
-#### Update a volume
+### Update a volume
 {: #ic-sds-update-volume}
 
 Update a volume with the information in provided volume patch.
@@ -141,6 +158,8 @@ Update a volume with the information in provided volume patch.
 ```sh
 ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID [--volume-patch VOLUME-PATCH] [--if-match IF-MATCH]
 ```
+
+**Aliases**: volume-update, volu
 
 **Example**
 
@@ -153,52 +172,116 @@ ibmcloud software-defined-storage volume-update \
 	--name exampleString
 ```
 
-
 **Parameters to provide:**
-* **--capacity**: The capacity of the volume (in gigabytes).
-* **--id**: The volume profile id. Required.
-* **--if-match**: If present, the request will fail if the specified ETag value does not match the resource's current ETag value.
-* **--instanceid**: The service instance id.
-* **--name**: The name of the volume.
-* **--volume-patch**: JSON object containing volume information.
+
+* The volume profile ID.
+	* Flag:`--id ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* [Optional] Specify the capacity of the volume (in gigabytes).
+	* Flag: `--capacity CAPACITY`
+
+* [Optional] Name of the volume.
+	* Flag: `--name NAME`
+
+* [Optional] JSON object containing volume information.
+	* Flag: `--volume-patch VOLUME-PATCH`
+
+* [Optional] A string value if provided then the query will fail when the specified ETag value does not match the resource's current ETag value.
+	* Flag: `--if-match IF-MATCH`
 
 
-#### Delete a volume
+### Delete a single volume
 {: #ic-sds-delete-volume}
-
-Deletes a single volume profile based on the name.
 
 **Usage:**
 
 ```sh
 ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH]
 ```
+**Aliases**: volume-delete, vold
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage volume-delete \
+	--instanceid exampleString \
+    --id exampleString \
+    --if-match exampleString
+```
 
 **Parameters to provide:**
-* **--id**: The volume profile id. _**Required**_.
-* **--if-match**: If present, the request will fail if the specified ETag value does not match the resource's current ETag value.
-* **--instanceid**: The service instance id.
+
+* The volume profile ID.
+	* Flag:`--id ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* [Optional] A string value if provided then the query will fail when the specified ETag value does not match the resource's current ETag value.
+	* Flag: `--if-match IF-MATCH`
 
 
-#### List all volumes
+### List all volumes
 {: #ic-sds-list-volumes}
-
-Lists the summary information about all volumes.
 
 **Usage:**
 ```sh
 ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]
 ```
 
+**Aliases**: volumes, vols
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage volumes \
+    --instanceid exampleString
+```
+
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+
+## Hosts
+{: #ic-sds-hosts}
+
+### Retrieve a single host
+{: #ic-sds-retrieve-host-profile}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
+```
+
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host \
+    --host-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
 
 
-### Account management
+
+## Account management
 {: #sds-account-mgmt-cmd}
 
-#### Create service credential
+### Create service credential
 {: #ic-sds-create-service-cred}
 
 Updates credentials for a storage account or creates them if they do not exist.
@@ -219,19 +302,22 @@ ibmcloud software-defined-storage cred-create \
 **Aliases:** cred-create, crc
 
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
-* **--access-key**: Access key to update or set. Required.
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
-#### Delete service credential
+* Sets the access key for the service instance.
+	* Flag: `--access-key ACCESS-KEY`
+
+### Delete a service credential
 {: #ic-sds-delete-service-cred}
-
-Deletes specific credentials for a storage account.
 
 **Usage:**
 
 ```sh
 ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
 ```
+**Aliases**: cred-delete, crd
+
 **Example**
 
 ```sh
@@ -243,10 +329,14 @@ ibmcloud software-defined-storage cred-create \
 **Aliases:** cred-delete, crd
 
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
-* **--access-key**: Access key to update or set. Required.
 
-#### List service credential
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Sets the access key for the service instance.
+	* Flag: `--access-key ACCESS-KEY`
+
+### List service credential
 {: #ic-sds-list-service-cred}
 
 Retrieves credentials for a specific storage account.
@@ -266,10 +356,11 @@ ibmcloud software-defined-storage credentials \
 **Aliases:** credentials, crl
 
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
 
-#### Create or modify certificate
+### Create or modify certificate
 {: #ic-sds-upload-cert}
 
 Updates the S3 SSL Certificates or creates them if they do not exist.
@@ -289,10 +380,14 @@ ibmcloud software-defined-storage cert-upload \
 **Aliases:** cert-upload, crtu
 
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
-* **--body**: The request body containing the S3 TLS certificate. The body must be in string format with single quotes at the beginning and end of all cert data. Required.
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
-#### Retrieve certificate details
+* The request body containing the S3 TLS certificate. The body must be in string format with single quotes at the beginning and end of all cert data.
+	* Flag: `--body BODY`
+
+
+### Retrieve certificate details
 {: #ic-sds-retrieve-cert-details}
 
 Retrieves the S3 SSL certificate expiration date and status.
@@ -306,7 +401,8 @@ ibmcloud software-defined-storage certificate --instanceid INSTANCEID
 **Aliases:** certificate, crts
 
 **Parameters to provide:**
-* **--instanceid**: The service instance id. Required.
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-12"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -65,7 +65,7 @@ ibmcloud software-defined-storage volume-delete --instanceid exampleString --id 
 {: #deleting-block-volume-api}
 {: api}
 
-Make a `DELETE /volumes/{volume_id}` request to delete a volume. This operation cannot be reversed. For this request to succeed, the volume must not be attached to any hosts.
+Make a `DELETE /volumes/{volume_id}` request to delete a volume. This operation cannot be reversed. For this request to succeed, the volume must not be mapped to any hosts.
 
 ```sh
 curl -X DELETE '$sds_api_endpoint/v1/volumes/{volume-id}' \

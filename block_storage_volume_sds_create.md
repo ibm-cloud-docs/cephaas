@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-09"
+lastupdated: "2024-07-12"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -26,15 +26,15 @@ Create a SDSaaS volume by using the UI, CLI, or API.
 Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storage volume for a service instance.
 
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Volumes**.
-2. Click **Create volume**.
-3. Select **Service instance** where the volume will be located.
-4. Specify a unique, meaningful **Name** for your volume. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. You can later edit the name if you want.
+1. Click **Create volume**.
+1. Select **Service instance** where the volume will be located.
+1. Specify a unique, meaningful **Name** for your volume. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. You can later edit the name if you want.
 
-Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
-{: note}
+    Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
+    {: note}
 
-5. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
-6. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
+1. Enter **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
+1. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
 
 ## Creating block volumes from the CLI
@@ -109,12 +109,12 @@ You can create SDSaaS volumes by directly calling the Block Volume REST APIs. Fo
 Define variables for the IAM token and API endpoint.
 
 
-### Creating a volume as part of instance provisioning with the API
+### Creating a new volume with the API
 {: #creating-volume-api}
 
-Make a `POST /volumes` request to create a volume, and define the volume by using the `name` parameter. Specify a volume name, capacity, and profile.
+Make a `POST /volumes` request to create a new block volume. Specify an optional volume name and capacity.
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `volume name duplicate` error is displayed.
+Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the service instance. For example, if you create two volumes with the same name in the same serice instance, an error `volume name already exists` is displayed.
 {: important}
 
 

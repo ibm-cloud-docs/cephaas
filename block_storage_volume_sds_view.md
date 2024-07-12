@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-12"
 
 keywords: list all volumes, view volume details
 
@@ -91,21 +91,26 @@ View details about a SDSaaS volume or summary information about all volumes from
 ### Viewing details about a SDSaaS volume from the CLI
 {: #viewvol-cli}
 
-Specify this command to show details about a volume.
+Run the following command to show volume details for a specific volume `ID` within the specific service `INSTANCEID`.
 
 ```sh
-ibmcloud sds volume VOLUME_ID [--json]
+ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID
 ```
 {: pre}
+
 
 The following example uses the volume ID to show volume details.
 
 ```sh
-$ ibmcloud sds volume demo-volume-update
+$ ibmcloud sds volume --instanceid abc --url $rsos_api2 --id r134-3a7a8360-be78-4723-a341-356be350e683
 Getting volume demo-volume-update...
 
-ID                                     r014-dee9736d-08ee-4992-ba8d-3b64a4f0baac
-Name                                   demo-volume-update
+ID             r134-3a7a8360-be78-4723-a341-356be350e683
+Name           saved-sandblast-calcium-heftiness
+Status         available
+Mapped_Host    -
+Capacity_GB    10
+Created        2024-05-08T16:42:08Z
 
 ```
 {: screen}
@@ -120,7 +125,7 @@ Name                                   demo-volume-update
 Run this command to list summary information about all volumes:
 
 ```sh
-ibmcloud sds volumes [--instanceid INSTANCEID]
+ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]
 ```
 {: pre}
 
@@ -129,8 +134,12 @@ Specifying the service instance ID is required since it is used to filter the li
 The following example shows all volumes for the service instance specified in your availability zone.
 
 ```sh
-ibmcloud software-defined-storage volumes \
-    --instanceid exampleString
+ibmcloud software-defined-storage volumes --instanceid abc --url $rsos_api
+
+ID                                          Name       Status      Capacity_GB   Mapped_Host
+r134-2613272e-ff23-461e-94a3-3d3f77c13aa1   example2   available   10            -
+r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10            -
+
 ```
 {: screen}
 
@@ -157,71 +166,36 @@ curl -X GET "$sds_api_endpoint/v1/volumes/ --header 'Authorization: Bearer $IAM_
 A successful response looks like the following example. This example shows the first three volumes are mapped to a host.
 
 ```json
-
 {
-    "volumes": [
+  "first": {
+    "href": "https://localhost:8000/hosts?limit=50"
+  },
+  "limit": 50,
+  "total_count": 1,
+  "volumes": [
+    {
+      "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
+      "name": "vol1",
+      "bandwidth": 300,
+      "capacity": 10,
+      "iops": 300,
+      "created_at": "2024-06-21T07:22:15Z",
+      "host_mappings": [
         {
-            "id": "r134-04f0e415-3c70-43a8-a98d-a0160e50cc88",
-            "name": "sds-vol3",
-            "capacity": 10,
-            "iops": 3000,
-            "status": "available",
-            "profile":
-{                 "name": "sds-general-purpose"             }
-,
-            "created_at": "2024-06-16T18:09:18Z",
-            "status_reasons": [],
-            "bandwidth": 393,
-            "resource_type": "volume",
-            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-            "storage_workspace_id": "default",
-            "host_mappings": [
-
-{                     "host_id": "r134-06947bdd-b7bd-471c-8fd3-ab13a3bf1336",                     "host_name": "sr-host3",                     "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-1"                 }
-            ]
-        },
-        {
-            "id": "r134-62ed92e7-afb6-4374-b9d6-e70d2e97ccb7",
-            "name": "sds-vol2",
-            "capacity": 10,
-            "iops": 3000,
-            "status": "available",
-            "profile":
-{                 "name": "sds-general-purpose"             }
-,
-            "created_at": "2024-06-16T17:44:00Z",
-            "status_reasons": [],
-            "bandwidth": 393,
-            "resource_type": "volume",
-            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-            "storage_workspace_id": "default",
-            "host_mappings": []
-        },
-        {
-            "id": "r134-456676d4-c82e-4d10-a64d-436cc3c39481",
-            "name": "sds-vol1",
-            "capacity": 10,
-            "iops": 3000,
-            "status": "available",
-            "profile":
-{                 "name": "sds-general-purpose"             }
-,
-            "created_at": "2024-06-16T17:43:54Z",
-            "status_reasons": [],
-            "bandwidth": 393,
-            "resource_type": "volume",
-            "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-            "storage_workspace_id": "default",
-            "host_mappings": []
+          "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
+          "host_name": "host1",
+          "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23"
         }
-    ],
-    "first":
-{         "href": "http://regional-storage-riaasstorage.blue-team-cloud-satellite-8ce82ab061950a7b6121a1b00b849d81-0000.us-south.containers.appdomain.cloud/volumes?limit=50"     }
-,
-    "limit": 50,
-    "total_count": 3
+      ],
+      "profile": {
+        "name": "sds-general-purpose"
+      },
+      "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+      "storage_workspace_id": "default"
+      "status": "available",
+    }
+  ]
 }
-
 ```
 
 ### Viewing volume details with the API
@@ -238,29 +212,27 @@ curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50c
 A successful response provides details of the volume, including capacity and IOPS, the volume status, and whether the volume is mapped to a host.
 
 ```json
-{{{}}
-    "id": "r134-04f0e415-3c70-43a8-a98d-a0160e50cc88",
-    "name": "sds-vol3",
-    "capacity": 10,
-    "iops": 3000,
-    "status": "available",
-    "profile": {
-        "name": "sds-general-purpose"
-    },
-    "created_at": "2024-06-16T18:09:18Z",
-    "status_reasons": [],
-    "bandwidth": 393,
-    "resource_type": "volume",
-    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-    "storage_workspace_id": "default",
-    "host_mappings": [
+    {
+      "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
+      "name": "vol1",
+      "bandwidth": 300,
+      "capacity": 10,
+      "iops": 300,
+      "created_at": "2024-06-21T07:22:15Z",
+      "host_mappings": [
         {
-            "host_id": "r134-06947bdd-b7bd-471c-8fd3-ab13a3bf1336",
-            "host_name": "sr-host3",
-            "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-1"
-{{        }}}
-    ]
-}
+          "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
+          "host_name": "host1",
+          "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23"
+        }
+      ],
+      "profile": {
+        "name": "sds-general-purpose"
+      },
+      "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+      "storage_workspace_id": "default"
+      "status": "available",
+    }
 ```
 {: codeblock}
 

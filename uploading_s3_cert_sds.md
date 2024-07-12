@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-07-12"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Uploading S3 certificate
 {: #uploading-s3-certificate-sds}
 
-S3 certificates are required to secure the S3 endpoint. Upload S3 SSL certificate by using the UI, CLI, or API.
+S3 certificates are required to secure the S3 endpoint. You can upload to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI, or API.
 {: shortdesc}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-12"
 
 keywords: sds, sdsaas host,
 
@@ -29,7 +29,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 2. Click **Create host**.
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
-    Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, a "Duplicate host name" error is displayed.
+    Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error "Host name already exists" is displayed.
     {: note}
 
 4. Select one or more volumes to map them to the host.
@@ -64,13 +64,14 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 
 Run the following command to create a new host from a host template object. Provide a unique host name and the name of the availability zone in your region.
 
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hypens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `Duplicae host name` error is displayed.
-{: important}
-
 ```sh
 ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS]
 ```
 {: pre}
+
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hypens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
+{: important}
+
 
 See the following example.
 
@@ -102,7 +103,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and `volume_id`.
 
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hypens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, a `Duplicae host name` error is displayed.
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hypens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name alaready exists` is displayed.
 {: important}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-12"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -30,18 +30,16 @@ Use the console to manage the volumes. In the console, you can complete the foll
 * Delete a volume
 
 
-
-
-### Renaming a volume in the UI
-{: #renaming-sds-block-volume-ui}
+### Renaming a volume from list view page
+{: #renaming-sds-block-volume-from-list-view-page-ui}
 {: ui}
 
 To rename a volume, complete the following steps.
 
-1. Navigate to the list fo all Block storage volumes.
+1. Navigate to the list of all Block storage volumes.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, a name duplicate error is displayed.
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name already exists" is displayed.
 5. Click **Rename** to confirm renaming of the volume.
 
 
@@ -50,9 +48,36 @@ To rename a volume, complete the following steps.
 {: ui}
 
 1. In the **Volume** details page, click the `Actions` button.
-3. From the Actions menu, you can click **Rename** OR you can click the `pen` icon next to the **Name**.
-4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, a duplicate name error is displayed.
+3. From the Actions menu, you can click **Rename** OR you can click the `edit` icon next to the **Name**.
+4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name already exists" is displayed.
 5. Click **Rename** to confirm renaming of the volume.
+
+
+### Expand block volume size from list view page
+{: #sds-expand-block-volume-size-from-list-view-page}
+{: ui}
+
+1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+3. Click **Expand volume**.
+2. Enter new **size**.
+
+    You can only increase the provisioned size and cannot reduce it.
+    {: note}
+
+3. Click **Expand** to confirm renaming of the volume.
+
+
+### Expand block volume size from details page
+{: #sds-expand-block-volume-size-from-details-page}
+{: ui}
+
+1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
+2. Enter new **size**.
+
+    You can only increase the provisioned size and cannot reduce it.
+    {: note}
+
+3. Click **Expand** to confirm renaming of the volume.
 
 
 
@@ -124,9 +149,9 @@ PATCH operation to change more than one parameter value in the same command is n
 Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
 
 ```sh
-{{curl -X PATCH '$sds_api_endpoint/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' }}
-{{--header 'Authorization: Bearer $IAM_TOKEN' }}
-{{--header 'Content-Type: application/json' }}
+curl -X PATCH '<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' \
+--header 'Authorization: Bearer $IAM_TOKEN' \
+--header 'Content-Type: application/json' \
 --data '{
     "name": "sds-vol-updated"
 }'
@@ -164,9 +189,9 @@ A successful response looks like this:
 Make a `PATCH /volumes/{volume_id}` request to update or expand the volume to increase the current capacity.
 
 ```sh
-{{curl -X PATCH '$sds_api_endpoint/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' }}
-{{--header 'Authorization: Bearer $IAM_TOKEN' }}
-{{--header 'Content-Type: application/json' }}
+curl -X PATCH '<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' \
+--header 'Authorization: Bearer $IAM_TOKEN' \
+--header 'Content-Type: application/json' \
 --data '{
     "capacity": 100
 }'
