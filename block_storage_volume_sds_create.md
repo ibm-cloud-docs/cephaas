@@ -101,7 +101,9 @@ The volume name can be up to 63 lowercase alpha-numeric characters and include t
 {: #creating-volume-api}
 {: api}
 
-You can create SDSaaS volumes by directly calling the Block Volume REST APIs. For more information about the file shares SDS API, see the SDSaaS API reference.
+You can create SDSaaS volumes by directly calling the Block Volume REST APIs.
+
+
 
 ### Before you begin
 {: #block-volume-api-prereqs}
@@ -122,10 +124,10 @@ Valid volume names can include a combination of lowercase alpha-numeric characte
 curl -X POST '$sds_api_endpoint/v1/volumes' \
 --header 'Authorization: Bearer $IAM_TOKEN' \
 --header 'Content-Type: application/json' \
---data '
-
-{     "capacity": 10,     "name": "sds-vol" }
-'
+--data '{
+     "capacity": 10,
+     "name": "sds-vol"
+}'
 ```
 {: pre}
 
@@ -138,14 +140,11 @@ A successful response looks like this:
     "capacity": 10,
     "iops": 3000,
     "status": "pending",
-    "profile":
-
-{         "name": "sds-general-purpose"     }
-,
+    "profile":{
+       "name": "sds-general-purpose"
+     },
     "created_at": "2024-06-19T06:22:51Z",
-    "status_reasons": [],
     "bandwidth": 393,
-    "resource_type": "volume",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
     "host_mappings": []
