@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-15"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: sdsaas
 # About Block storage volume
 {: #sds-block-volume-storage-about}
 
-Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, additional security and performance.
+Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, extra security, and performance.
 {: shortdesc}
 
 ## Overview
@@ -65,14 +65,14 @@ When you create a SDSaaS volume in your availability zone, you can use 3 differe
 ## SDSaaS encryption
 {: #sds-storage-encryption}
 
-{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a volume, you can choose to protect the volume by using your own root keys, or use the default IBM-managed encryption. Volumes that are created during instance provisioning are encrypted with IBM-managed encryption by default. You can edit the volume to use your root keys. After you set up encryption for a volume, you can't change it.
+{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a volume, you can choose to protect the volume by using your own root keys, or use the default IBM-managed encryption. Volumes that are created during instance provisioning are encrypted with IBM-managed encryption by default. You can edit the volume to using your root keys. After you set up encryption for a volume, you can't change it.
 
 
 
 ## Cancelling your SDSaaS storage service
 {: #sds-cancel-storage}
 
-If you no longer need a volume, you can cancel it at any time. IBM wipes all data before the storage is reused. If you have additional compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. 
+If you no longer need a volume, you can cancel it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. 
 
 ## Next steps
 {: #sds-block-storage-about-next-steps}

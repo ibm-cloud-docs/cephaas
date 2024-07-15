@@ -39,8 +39,8 @@ To rename a volume, complete the following steps.
 1. Navigate to the list of all Block storage volumes.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name already exists" is displayed.
-5. Click **Rename** to confirm renaming of the volume.
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.
+5. Click **Rename** to confirm the renaming of the volume.
 
 
 ### Renaming a volume from details page in the UI
@@ -49,8 +49,8 @@ To rename a volume, complete the following steps.
 
 1. In the **Volume** details page, click the `Actions` button.
 3. From the Actions menu, you can click **Rename** OR you can click the `edit` icon next to the **Name**.
-4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name already exists" is displayed.
-5. Click **Rename** to confirm renaming of the volume.
+4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.
+5. Click **Rename** to confirm the renaming of the volume.
 
 
 ### Expand block volume size from list view page
@@ -59,12 +59,12 @@ To rename a volume, complete the following steps.
 
 1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
-2. Enter new **size**.
+2. Enter a new **size**.
 
     You can only increase the provisioned size and cannot reduce it.
     {: note}
 
-3. Click **Expand** to confirm renaming of the volume.
+3. Click **Expand** to confirm the increase of the volume size.
 
 
 ### Expand block volume size from details page
@@ -72,12 +72,12 @@ To rename a volume, complete the following steps.
 {: ui}
 
 1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
-2. Enter new **size**.
+2. Enter a new **size**.
 
     You can only increase the provisioned size and cannot reduce it.
     {: note}
 
-3. Click **Expand** to confirm renaming of the volume.
+3. Click **Expand** to confirm the increase of the volume size.
 
 ### Delete a volume
 {: #delete-sds-managing-volume-ui}
@@ -99,7 +99,7 @@ Using CLI, you can complete the following actions.
 * Map a volume to a host.
 * Expand volume to increase the current capacity.
 
-Specify the information in volume patch option to modify the existing details of a volume and run the following command to update the volume details.
+Specify the information in the volume patch option to modify the existing details of a volume and run the following command to update the volume details.
 
 ### Updating block volume from CLI
 {: #updating-sds-volume-cli}
@@ -135,7 +135,7 @@ ibmcloud software-defined-storage volume-update \
 {: #managing-sds-block-volume-api}
 {: api}
 
-To manage your block storage volume with the API, you can make use of the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
+To manage your block storage volume with the API, you can use the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
 
 With the API, you can complete the following actions.
 
