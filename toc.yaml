@@ -67,7 +67,7 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: SDSaaS Block Storage API reference
+          label: Block Storage API reference
           topics:
              - sdsaas_block_spec.md
 #            - block-volume-storage-api-reference.md
