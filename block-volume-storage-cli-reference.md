@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-15"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -55,7 +55,7 @@ Update the plug-in by using the `plugin update` command.
 ```sh
 ibmcloud plugin update software-defined-storage
 ```
-{:pre}
+{: pre}
 
 
 ## Command index

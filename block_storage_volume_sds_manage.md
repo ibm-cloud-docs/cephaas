@@ -80,6 +80,8 @@ To rename a volume, complete the following steps.
 3. Click **Expand** to confirm renaming of the volume.
 
 ### Delete a volume
+{: #delete-sds-managing-volume-ui}
+{: ui}
 
 For instructions, see [Delete block volume in the UI](https://test.cloud.ibm.com/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume&interface=ui#deleting-sds-block-volume-ui).
 
