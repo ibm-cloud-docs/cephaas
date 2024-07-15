@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-15"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -28,7 +28,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Volumes**.
 1. Click **Create volume**.
 1. Select **Service instance** where the volume will be located.
-1. Specify a unique, meaningful **Name** for your volume. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. You can later edit the name if you want.
+1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
 
     Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
     {: note}
@@ -65,8 +65,8 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 
 Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the `SDSAAS-INSTANCE-ID` where the volume will be created.
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is displayed.
-{: important}
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is displayed.
+{: requirement}
 
 ```sh
 ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING]
@@ -93,8 +93,6 @@ Active         false
 
 Capacity, indicated in gigabytes, can range from minimumm 10 GBs to the maximum allocated capacity for block storage. If not specified, the default capacity is 100 GBs.
 
-The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique across the entire infrastructure.
-{: requirement}
 
 
 ## Creating block volumes with the API
@@ -116,7 +114,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /volumes` request to create a new block volume. Specify an optional volume name and capacity.
 
-Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. Volume names must be unique across the service instance. For example, if you create two volumes with the same name in the same serice instance, an error `volume name already exists` is displayed.
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same account and region, a `volume name duplicate` error is displayed.
 {: important}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-15"
 
 keywords: list all volumes, view volume details
 
@@ -15,14 +15,14 @@ subcollection: sdsaas
 # View block volumes
 {: #view-sds-volume}
 
-View details about a block storage volume or summary information about all volumes.
+View details about a block storage volume or summary information about all volumes for the chosen service instance.
 {: shortdesc}
 
 ## Viewing information about volumes in the UI
 {: #viewvols}
 {: ui}
 
-List all block storage volumes and view details for a single volume. View attached SDSaaS block volume details in instance details.
+List all volumes and view details for a single volume for the chosen service instance.
 
 ### Viewing information about all volumes in the UI
 {: #viewvols-ui}
@@ -36,7 +36,7 @@ By default, SDSaaS volumes display for all service instance across regions. In t
 | Name | Click the name of the volume to see individual volume details. |
 | Status | Status of the volume |
 | Provisioned size | Size of the volume you specified, in GBs.|
-| Mapped hosts | Shows the count of number of hosts mapped to the volume |
+| Mapped hosts | Shows the count of number of hosts mapped to the volume. |
 {: caption="Table 1. Details about all volumes" caption-side="bottom"}
 
 By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
@@ -68,16 +68,20 @@ The SDSaaS volumes details page shows volume details and mapped hosts. Table 3 d
 | **Volume details** | |
 | Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the region. |
 | Volume ID | System-generated volume ID. |
+| Provisioned size | |
 | Created date | System-generated date when the volume was created.|
-| Service instance | Name of the instance in your region.|
-| IOPS | Current IOPS value for a predefined IOPS tier or the value you specified for custom IOPS. |
+| Service instance | Name of the instance in the region.|
+| IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
 | Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
+| Mapped hosts | Displays a list of all hosts present in the system.|
 {: caption="Table 3. Volume details" caption-side="bottom"}
 
 Table 4 shows Actions menu options from the volume details page.
 
 | Action | Description |
 |--------|-------------|
+| Activity tracking | |
+| Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
 {: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}
 

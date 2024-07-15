@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-15"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -79,6 +79,9 @@ To rename a volume, complete the following steps.
 
 3. Click **Expand** to confirm renaming of the volume.
 
+### Delete a volume
+
+For instructions, see [Delete block volume in the UI](https://test.cloud.ibm.com/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume&interface=ui#deleting-sds-block-volume-ui).
 
 
 
