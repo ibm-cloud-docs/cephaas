@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-24"
+lastupdated: "2024-07-16"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-# Getting started with Software Defined Storage as a Service (SDSaaS)
+# Getting started with IBM Storage Ceph as a Service
 {: #getting-started}
 
 SDSaaS is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based SDSaaS LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.

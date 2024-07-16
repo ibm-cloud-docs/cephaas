@@ -1,4 +1,4 @@
-# Software Defined Storage as a Service (sdsaas)
+# IBM Storage Ceph as a Service
 Documentation repository for sdsaas
 
 

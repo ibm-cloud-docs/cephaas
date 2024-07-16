@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-16"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # IBM SDSaaS CLI reference
 {: #ic-sds-cli-reference}
 
-The Software defined storage as a service (SDSaaS) plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
+The IBM Storage Ceph as a Service plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
 {: shortdesc}
 
 

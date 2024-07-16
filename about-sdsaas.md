@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-16"
 
 keywords:
 
@@ -12,10 +12,10 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# What is Software Defined Storage as a Service?
+# What is IBM Storage Ceph as a Service?
 {: #about-sds}
 
-IBM Software defined storage as a service (SDSaaS) is high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
+IBM IBM Storage Ceph as a Service is high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
 {: shortdesc}
 
 
