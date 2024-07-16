@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-16"
 
 keywords: sdsaas block storage api
 
@@ -34,7 +34,7 @@ To learn about using IBM SDSaaS, see [ref link coming soon]
 ## Endpoint URLs
 {: #endpoint-url}
 
-IBM SDSaaS Block Storage API is available in all SDSaaS deployments. To get the endpoint URL to be used for a deployment - [TBD]
+IBM SDSaaS Block Storage API is available in all SDSaaS deployments. To get the endpoint URL that you can use for a deployment, contact your designated IBM Technical Advisor.
 
 
 ## Authentication
@@ -45,9 +45,6 @@ The IBM SDSaaS Block Storage API uses Identity and Access Management (IAM) to au
 Learn about obtaining an IAM token for an authenticated user or service ID in the IAM Identity Services API. If you first create an API key, you can use it to generate an IAM token.
 
 To use the API, add a valid IAM token to the HTTP Authorization request header. For example, `-H 'Authorization: Bearer {token}'`.
-
-Authorization section is not required for SDSaaS
-{: note}
 
 
 ## Auditing

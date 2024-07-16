@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-08"
+lastupdated: "2024-07-16"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -34,7 +34,6 @@ Use the console to manage the hosts. In the console, you can complete the follow
 {: #renaming-sds-hosts-ui}
 {: ui}
 
-
 To rename a host, complete the following steps.
 
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Hosts**.
@@ -52,6 +51,20 @@ To rename a host, complete the following steps.
 3. From the Actions menu, you can click **Rename** OR you can click the `pen` icon next to the host name to modify the host name.
 4. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. For example, if you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
 5. Click **Rename** to confirm renaming.
+
+
+### Mapping volumes to a host in the UI
+{: #mapping-volume-sds-hosts-ui}
+{: ui}
+
+
+To map a volume to a host, complete the following steps.
+
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Volumes**.
+2. Locate the Volume **Name** and click the `options` icon at the end of the Host row to open a list of options.
+3. From the options menu, click **Map to host**.
+4. Select an existing **Host** or you can **Create new host** to map to the volume. If you choose to create a new host, you would need the Host NQN
+5. Click **Map** to confirm mapping of the volume to the host. When mapping completes successfully, the number of hosts mapped to the volume will be displayed in the **Mapped Hosts** column.
 
 
 
