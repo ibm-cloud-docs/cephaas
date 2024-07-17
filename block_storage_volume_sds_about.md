@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 
 keywords:
 
@@ -26,7 +26,7 @@ SDSaaS volume data is stored redundantly across multiple physical disks in an Av
 
 SDSaaS provides primary and secondary data volumes. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, you can use your own encryption keys or choose IBM-managed encryption.
 
-You pay for only the capacity that you need. SDSaaS capacity ranges from 10 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
+You pay for only the capacity that you need. SDSaaS capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
 
 
@@ -44,7 +44,7 @@ Limitation:
 ### Data volumes
 {: #sds-secondary-data-volumes}
 
-SDSaaS data volumes are secondary volumes with total capacity range of 10 GB to 16,000 GB. Maximum IOPS for data volumes varies based on volume size.
+SDSaaS data volumes are secondary volumes with total capacity range of 1 GB to 16,000 GB. Maximum IOPS for data volumes varies based on volume size.
 
 
 You can create data volumes as stand-alone volumes or when you provision an instance. Stand-alone volumes exist in an unattached state until you attach the volume to an instance. When you create a data volume as part of instance provisioning, the volume is automatically attached to the instance.

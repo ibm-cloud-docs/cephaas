@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 
 keywords: list all volumes, view volume details
 
@@ -29,7 +29,7 @@ List all volumes and view details for a single volume for the chosen service ins
 
 To view all the Block storage volumes, in the [console], navigate to **Block Storage > Volumes**.
 
-By default, SDSaaS volumes display for all service instance across regions. In the list of all **Volumes**, you see the following information.
+By default, all SDSaaS volumes are displayed for the chosen service instance. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|
@@ -47,26 +47,26 @@ Table 2 describes the Actions menu options.
 
 | Action | Description |
 |--------|-------------|
-| View volume details | Click to opens the detailed view of the Volume. |
+| View volume details | Click to open the detailed view of the Volume. |
 | Rename volume | Click to change the volume name. |
 | Map to host | Click to map the volume to one or more hosts. |
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
 {: caption="Table 2. Actions menu options for volumes." caption-side="bottom"}
 
-### Viewing details about a volume
+### Viewing details of a volume
 {: #view-vol-details-ui}
 
-To view details of a sdsaas volume, go to the list of all sdsaas volumes and click on the volume name.
+To view details of a single volume, go to the list of all volumes and click on the volume name.
 
 The Actions menu on the volume details page shows the actions that you can take.
 
-The SDSaaS volumes details page shows volume details and mapped hosts. Table 3 describes this information.
+The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 3 describes this information.
 
 | Field | Description |
 |-------|-------------|
 | **Volume details** | |
-| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the region. |
+| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the service instance. |
 | Volume ID | System-generated volume ID. |
 | Provisioned size | |
 | Created date | System-generated date when the volume was created.|
@@ -80,7 +80,6 @@ Table 4 shows Actions menu options from the volume details page.
 
 | Action | Description |
 |--------|-------------|
-| Activity tracking | |
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
 {: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}

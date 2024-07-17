@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-07-17"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -33,7 +33,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
     Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
     {: note}
 
-1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 10 GB and 32 TBs.
+1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.
 1. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
 
@@ -91,7 +91,7 @@ Active         false
 ```
 {: screen}
 
-Capacity, indicated in gigabytes, can range from minimum 10 GBs to the maximum allocated capacity for block storage. If not specified, the default capacity is 100 GBs.
+Capacity, indicated in gigabytes, can range from minimum 1 GBs to the maximum allocated capacity for block storage. If not specified, the default capacity is 100 GBs.
 
 
 
