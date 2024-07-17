@@ -250,34 +250,7 @@ ibmcloud software-defined-storage volumes \
 ## Hosts
 {: #ic-sds-hosts}
 
-### Retrieve a single host
-{: #ic-sds-retrieve-host-profile}
-
-**Usage:**
-
-```sh
-ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
-```
-
-
-**Example**
-
-```sh
-ibmcloud software-defined-storage host \
-    --host-id exampleString \
-    --instanceid exampleString
-```
-
-**Parameters to provide:**
-
-* Specify the host id whose details you want to view
-	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-
-### Create new host from a host template object
+### Create new host
 {: #ic-sds-create-host-from-template}
 
 **Usage:**
@@ -316,86 +289,20 @@ ibmcloud software-defined-storage host-create \
 	* Flag: `--volume-mappings VOLUME-MAPPINGS`
 
 
-### Delete a host
-{: #ic-sds-delete-host}
+### Retrieve a single host
+{: #ic-sds-retrieve-host-profile}
 
 **Usage:**
 
 ```sh
-ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
 ```
 
-**Aliases**: host-delete, hstd
 
 **Example**
 
 ```sh
-ibmcloud software-defined-storage host-delete \
-	--host-id exampleString \
-    --instanceid exampleString
-```
-
-**Parameters to provide:**
-
-* Specify the host id whose details you want to view
-	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-
-### Update a host
-{: #ic-sds-update-host}
-
-**Usage:**
-
-```sh
-ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH]
-```
-
-**Aliases**: host-update, hstu
-
-**Example**
-
-```sh
-ibmcloud software-defined-storage host-update \
-    --host-id exampleString \
-    --instanceid exampleString \
-    --name my-host
-```
-
-**Parameters to provide:**
-
-* Specify the host id whose details you want to view
-	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-* [Optional] Specify the JSON Merge-Patch content for `host_update`.
-	* Flag: `--host-patch HOST-PATCH`
-
-* [Optional] Specify the name for the new host. Ensure that the new name is unique.
-	* Flag: `--name NAME`
-
-	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
-	{: note}
-
-### Delete all volume mappings associated with a host
-{: #ic-sds-delete-all-volume-mapped-to-host}
-
-**Usage:**
-
-```sh
-ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID
-```
-
-**Aliases**: host-vol-deleteall, hstvd
-
-**Example**
-
-```sh
-ibmcloud software-defined-storage host-vol-deleteall \
+ibmcloud software-defined-storage host \
     --host-id exampleString \
     --instanceid exampleString
 ```
@@ -409,71 +316,8 @@ ibmcloud software-defined-storage host-vol-deleteall \
 	* Flag: `--instanceid INSTANCEID`
 
 
-### Map volume to a host
-{: #ic-sds-map-volume-to-host}
 
-**Usage:**
-
-```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
-```
-
-**Aliases**: host-vol-update, hstvidu
-
-**Example**
-
-```sh
-ibmcloud software-defined-storage host-vol-update \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
-```
-
-**Parameters to provide:**
-
-* Specify the host id whose details you want to view
-	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-* Specify the unique volume identifier.
-	* Flag: `--volume-id VOLUME-ID`
-
-
-### Delete a single volume from a host
-{: #ic-sds-delete-single-volume-from-host}
-
-**Usage:**
-
-```sh
-ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
-```
-
-**Aliases**: host-volid-delete, hstvidd
-
-**Example**
-
-```sh
-ibmcloud software-defined-storage host-volid-delete \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
-```
-
-**Parameters to provide:**
-
-* Specify the host id whose details you want to view
-	* Flag: `--host-id HOST-ID`
-
-* Specify the service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-* Specify the unique volume identifier.
-	* Flag: `--volume-id VOLUME-ID`
-
-
-### List all hosts and host IDs
+### List all hosts
 {: #ic-sds-list-all-hosts}
 
 **Usage:**
@@ -510,6 +354,169 @@ ibmcloud software-defined-storage hosts \
 
 * Including this option will display all pages of the collection for hosts.
 	* Flag: `--all-pages`
+
+
+
+### Update a host
+{: #ic-sds-update-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH]
+```
+
+**Aliases**: host-update, hstu
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-update \
+    --host-id exampleString \
+    --instanceid exampleString \
+    --name my-host
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to update
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* [Optional] Specify the JSON Merge-Patch content for `host_update`.
+	* Flag: `--host-patch HOST-PATCH`
+
+* [Optional] Specify the name for the new host. Ensure that the new name is unique.
+	* Flag: `--name NAME`
+
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
+	{: note}
+
+
+### Map volume to a host
+{: #ic-sds-map-volume-to-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-vol-update, hstvidu
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-vol-update \
+    --host-id exampleString \
+    --volume-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Specify the unique volume identifier.
+	* Flag: `--volume-id VOLUME-ID`
+
+
+### Delete a host
+{: #ic-sds-delete-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-delete, hstd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-delete \
+	--host-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+
+### Delete a single volume from a host
+{: #ic-sds-delete-single-volume-from-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-volid-delete, hstvidd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-volid-delete \
+    --host-id exampleString \
+    --volume-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* Specify the service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Specify the unique volume identifier.
+	* Flag: `--volume-id VOLUME-ID`
+
+
+### Delete all volume mappings associated with a host
+{: #ic-sds-delete-all-volume-mapped-to-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-vol-deleteall, hstvd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-vol-deleteall \
+    --host-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+
+
+
 
 
 

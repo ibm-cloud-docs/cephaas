@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-17"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -77,6 +77,27 @@ Using CLI, you can complete the following actions.
 * Rename a host.
 * Map a volume to a host.
 
+
+### Rename a host
+{: #ic-sds-rename-host}
+
+Use the `host-update` command to rename a specific host.
+
+Run the following command to update the details of a specific host in a service instance.
+
+```sh
+ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH]
+```
+{: pre}
+
+See the following example.
+
+```sh
+ibmcloud software-defined-storage host-update \
+    --host-id exampleString \
+    --instanceid exampleString \
+    --name my-host
+```
 
 ### Mapping volume to a host from CLI
 {: #mapping-sds-hosts-cli}
