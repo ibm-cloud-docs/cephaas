@@ -68,7 +68,7 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | **Volume details** | |
 | Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the service instance. |
 | Volume ID | System-generated volume ID. |
-| Provisioned size | |
+| Provisioned size | Amount of storage space allocated for block volume |
 | Created date | System-generated date when the volume was created.|
 | Service instance | Name of the instance in the region.|
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
