@@ -49,7 +49,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 
 |  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Scaling| Scale the customer infrastructure as requested and to meet the capacity that you selected.  | Choose the capacity for your service instances. |
+|Scaling| Scale the storage infrastructure as requested and to meet the capacity that you selected.  | Choose the capacity for your service instances. |
 |Updates, fixes, and new features| Provide regular updates, bug fixes, and new features, following a continuous delivery model in a way that is transparent to you for all infrastructure tools, VMware components, IBM deployed cloud services and IBM management, monitoring, and automation tools. Post notifications for changes that impact you.  | Set preferences to receive email notifications. Monitor the IBM Cloud status page for general announcements. Use best practices and keep application operating systems and workload applications patched and secure with the most recent security patches. |
 {: row-headers}
 {: caption="Table 2. Responsibilites for change management" caption-side="bottom"}
@@ -65,7 +65,7 @@ Identity and access management includes tasks such as authentication, authorizat
 |  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IAM (Identity and Access Management). Manage access to the on-premise environment. |
-|Observability| Allow integration of IBM Cloud Activity Tracker with your on-premise environment to audit the actions that users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
+|Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premise environment that audits the actions the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
 {: row-headers}
 {: caption="Table 3. Responsibilites for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -78,9 +78,8 @@ Security and regulation compliance includes tasks such as security controls impl
 
 |  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Task 1| Apply PSIRTS and Security Patches |   |
-|Task 2| Notify product patch/upgrade schedule.  | Update IAM policies and rules using IBM Cloud console to suit to customer requirements |
-| | Continuous monitoring of resources to check for vulnerabilities and security breaches. | |
+| Compliance | Maintain controls commensurate with the compliance certifications/attestations as stated in official data sheets. | Ensure and seek appropriate legal guidance in order to validate its compliance with pertinent industry compliance certifications and regulations. |
+| Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | Update IAM policies and rules using IBM Cloud console to suit to your requirement. Also, ensure that the use of Storage resources are inline with the terms and conditions set forth in the IBM Cloud Service description and any other associated transaction documents. |
 {: row-headers}
 {: caption="Table 4. Responsibilites for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

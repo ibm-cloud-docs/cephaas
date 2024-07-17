@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-17"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -269,12 +269,247 @@ ibmcloud software-defined-storage host \
 ```
 
 **Parameters to provide:**
+
 * Specify the host id whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * The service instance identifier.
 	* Flag: `--instanceid INSTANCEID`
 
+
+### Create new host from a host template object
+{: #ic-sds-create-host-from-template}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS]
+```
+
+**Aliases**: host-create, hstc
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-create \
+    --instanceid exampleString \
+    --nqn nqn.abc.1234 \
+    --name my-host \
+    --volume-mappings '[{"volume_id": "exampleString"}]'
+```
+
+**Parameters to provide:**
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Provide the NVME Qualifier Name (NQN) of the host configured in customer's environment. The maximum length is 64 characters.
+	* Flag: `--nqn NQN`
+
+* [Optional] Specify the name for the new host. Ensure that the new name is unique.
+	* Flag: `--name NAME`
+
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
+	{: note}
+
+* Specify the unique identifier of the volume to be mapped to this host.  Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
+	* Flag: `--volume-mappings VOLUME-MAPPINGS`
+
+
+### Delete a host
+{: #ic-sds-delete-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-delete, hstd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-delete \
+	--host-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+
+### Update a host
+{: #ic-sds-update-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH]
+```
+
+**Aliases**: host-update, hstu
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-update \
+    --host-id exampleString \
+    --instanceid exampleString \
+    --name my-host
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* [Optional] Specify the JSON Merge-Patch content for `host_update`.
+	* Flag: `--host-patch HOST-PATCH`
+
+* [Optional] Specify the name for the new host. Ensure that the new name is unique.
+	* Flag: `--name NAME`
+
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
+	{: note}
+
+### Delete all volume mappings associated with a host
+{: #ic-sds-delete-all-volume-mapped-to-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-vol-deleteall, hstvd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-vol-deleteall \
+    --host-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+
+### Map volume to a host
+{: #ic-sds-map-volume-to-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-vol-update, hstvidu
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-vol-update \
+    --host-id exampleString \
+    --volume-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* The service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Specify the unique volume identifier.
+	* Flag: `--volume-id VOLUME-ID`
+
+
+### Delete a single volume from a host
+{: #ic-sds-delete-single-volume-from-host}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+```
+
+**Aliases**: host-volid-delete, hstvidd
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage host-volid-delete \
+    --host-id exampleString \
+    --volume-id exampleString \
+    --instanceid exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the host id whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* Specify the service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Specify the unique volume identifier.
+	* Flag: `--volume-id VOLUME-ID`
+
+
+### List all hosts and host IDs
+{: #ic-sds-list-all-hosts}
+
+**Usage:**
+
+```sh
+ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME]
+```
+
+**Aliases**: hosts, hsts
+
+**Example**
+
+```sh
+ibmcloud software-defined-storage hosts \
+    --instanceid exampleString \
+    --start exampleString \
+    --limit 10 \
+    --name exampleString
+```
+
+**Parameters to provide:**
+
+* Specify the service instance identifier.
+	* Flag: `--instanceid INSTANCEID`
+
+* Specify the server-provided token for determining what resource to start the page on.
+	* Flag: `--start START`
+
+* Specify the number of resources to return on a page.
+	* Flag: `--limit LIMIT`
+
+* Including this option will filter the collection of resources by name.
+	* Flag: `--name NAME`
+
+* Including this option will display all pages of the collection for hosts.
+	* Flag: `--all-pages`
 
 
 
