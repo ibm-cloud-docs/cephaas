@@ -48,8 +48,6 @@ By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this 
 
 To view details of a single volume, go to the list of all volumes and click on the volume name.
 
-The Actions menu on the volume details page shows the actions that you can take.
-
 The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 2 describes this information.
 
 | Field | Description |
@@ -65,6 +63,8 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | Mapped hosts | Displays a list of all hosts present in the system.|
 {: caption="Table 2. Volume details" caption-side="bottom"}
 
+
+The Actions menu on the volume details page shows the actions that you can take.
 Table 3 shows Actions menu options from the volume details page.
 
 | Action | Description |

@@ -51,8 +51,6 @@ By default, 10 hosts are shown from the list of all hosts. Change this default b
 
 To view details of a single host, go to the list of all hosts and click on the hostname link.
 
-The Actions menu on the Host details page shows the actions that you can take.
-
 The Host details page shows the details of the chosen hostname and all its mapped volumes. Table 2 describes this information.
 
 
@@ -64,9 +62,9 @@ The Host details page shows the details of the chosen hostname and all its mappe
 | Added date | System-generated date when the host was added.|
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Service instance | Name of the instance in the region.|
-{: caption="Table 2. Volume details" caption-side="bottom"}
+{: caption="Table 2. Host details" caption-side="bottom"}
 
-
+The Actions menu on the Host details page shows the actions that you can take.
 
 Table 3 describes the Actions menu options.
 
