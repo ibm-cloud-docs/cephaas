@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-07-18"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -110,7 +110,7 @@ Define variables for the IAM token and API endpoint.
 
 
 ### Creating a new volume with the API
-{: #creating-volume-api}
+{: #creating-new-volume-api}
 
 Make a `POST /volumes` request to create a new block volume. Specify an optional volume name and capacity.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-18"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -21,15 +21,16 @@ Delete a volume from a service instance by using the UI, CLI, or API.
 When you delete a Block Storage volume, that data immediately becomes inaccessible.
 
 
-## Deleting SDSaaS block volumes in the UI
+## Deleting block volumes in the UI
 {: #deleting-sds-block-volume-ui}
 {: ui}
 
 Deleting a Block Storage volume completely removes its data. The volume cannot be restored.
 
 You cannot delete an active Block Storage volume. To delete a volume, first unmap it from the host.
+{: note}
 
-To delete a volume, complete the following steps.
+To delete a single volume, complete the following steps.
 
 1. On the IBM Cloud console, navigate to **SDS as a Service > Block Storage > Volumes**.
 
@@ -37,7 +38,23 @@ To delete a volume, complete the following steps.
 
 3. From the options menu, click **Delete**.
 
-4. Confirm the deletion.
+
+## Deleting multiple block volumes in the UI
+{: #deleting-sds-multiple-volumes-ui}
+{: ui}
+
+Deleting a Block Storage volume completely removes its data. The volume cannot be restored.
+
+You cannot delete an active Block Storage volume. To delete a volume, first unmap it from the host.
+{: note}
+
+To delete multiple volumes together, complete the following steps.
+
+1. On the IBM Cloud console, navigate to **SDS as a Service > Block Storage > Volumes**.
+
+2. Select the volumes that you want to delete.
+
+3. Click **Delete**.
 
 
 ## Deleting a block volume from the CLI

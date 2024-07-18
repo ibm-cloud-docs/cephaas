@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-07-18"
 
 keywords: sds, sdsaas host,
 
@@ -32,8 +32,9 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
     Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error "Host name already exists" is displayed.
     {: note}
 
-4. Select one or more volumes to map them to the host.
-5. Click **Create**.
+4. Click **Next**.
+5. [Optional] Select one or more volumes to map them to the host.
+6. Click **Create**.
 
 
 ## Creating hosts from the CLI

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-07-18"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -40,7 +40,7 @@ To rename a volume, complete the following steps.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
 4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.
-5. Click **Rename** to confirm the renaming of the volume.
+5. Click **Rename**.
 
 
 ### Renaming a volume from details page in the UI
@@ -50,7 +50,21 @@ To rename a volume, complete the following steps.
 1. In the **Volume** details page, click the `Actions` button.
 3. From the Actions menu, you can click **Rename** OR you can click the `edit` icon next to the **Name**.
 4. Provide a new valid **Name**. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.
-5. Click **Rename** to confirm the renaming of the volume.
+5. Click **Rename**.
+
+### Mapping volumes to a host in the UI
+{: #mapping-volume-sds-hosts-ui}
+{: ui}
+
+To map a volume to a host from Volumes page, complete the following steps.
+
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Volumes**.
+2. Locate the Volume **Name** and click the `options` icon at the end of the Host row to open a list of options.
+3. From the options menu, click **Map to host**.
+4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
+    1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.
+    1. Select the newly created **Host** from the list.
+5. Click **Map**. When mapping completes successfully, the number of hosts mapped to the volume will be displayed in the **Mapped Hosts** column.
 
 
 ### Expand block volume size from list view page
@@ -64,7 +78,7 @@ To rename a volume, complete the following steps.
     You can only increase the provisioned size and cannot reduce it.
     {: note}
 
-3. Click **Expand** to confirm the increase of the volume size.
+3. Click **Expand**.
 
 
 ### Expand block volume size from details page
@@ -77,7 +91,7 @@ To rename a volume, complete the following steps.
     You can only increase the provisioned size and cannot reduce it.
     {: note}
 
-3. Click **Expand** to confirm the increase of the volume size.
+3. Click **Expand**.
 
 ### Delete a volume
 {: #delete-sds-managing-volume-ui}
