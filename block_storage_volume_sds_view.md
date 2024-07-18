@@ -18,13 +18,13 @@ subcollection: sdsaas
 View details about a block storage volume or summary information about all volumes for the chosen service instance.
 {: shortdesc}
 
-## Viewing information about volumes in the UI
+## Viewing volume details in the UI
 {: #viewvols}
 {: ui}
 
-List all volumes and view details for a single volume for the chosen service instance.
+You can view a summary of all volumes and view details for a single volume for the chosen deployment.
 
-### Viewing information about all volumes in the UI
+### Viewing summay information of all volumes in the UI
 {: #viewvols-ui}
 
 To view all the Block storage volumes, in the [console], navigate to **Block Storage > Volumes**.
@@ -41,18 +41,7 @@ By default, all SDSaaS volumes are displayed for the chosen service instance. In
 
 By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
-Actions menu on the Volume details page provides you with options to manage the volume information.
 
-Table 2 describes the Actions menu options.
-
-| Action | Description |
-|--------|-------------|
-| View volume details | Click to open the detailed view of the Volume. |
-| Rename volume | Click to change the volume name. |
-| Map to host | Click to map the volume to one or more hosts. |
-| Expand volume | Allows you to increase the capacity of the volume. |
-| Delete | Delete the volume. |
-{: caption="Table 2. Actions menu options for volumes." caption-side="bottom"}
 
 ### Viewing details of a volume
 {: #view-vol-details-ui}
@@ -61,7 +50,7 @@ To view details of a single volume, go to the list of all volumes and click on t
 
 The Actions menu on the volume details page shows the actions that you can take.
 
-The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 3 describes this information.
+The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 2 describes this information.
 
 | Field | Description |
 |-------|-------------|
@@ -74,24 +63,24 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
 | Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
 | Mapped hosts | Displays a list of all hosts present in the system.|
-{: caption="Table 3. Volume details" caption-side="bottom"}
+{: caption="Table 2. Volume details" caption-side="bottom"}
 
-Table 4 shows Actions menu options from the volume details page.
+Table 3 shows Actions menu options from the volume details page.
 
 | Action | Description |
 |--------|-------------|
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
-{: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}
+{: caption="Table 3. Actions menu options from the volume details page." caption-side="bottom"}
 
-## Viewing SDSaaS volumes from the CLI
+## Viewing volumes details from the CLI
 {: #viewing-block-storage-cli}
 {: cli}
 
 View details about a SDSaaS volume or summary information about all volumes from the CLI.
 
 
-### Viewing details about a SDSaaS volume from the CLI
+### Viewing details of a single volume from the CLI
 {: #viewvol-cli}
 
 Run the following command to show volume details for a specific volume `ID` within the specific service `INSTANCEID`.
@@ -122,7 +111,7 @@ Created        2024-05-08T16:42:08Z
 
 
 
-### Viewing all SDSaaS volumes from the CLI
+### Viewing list of all volumes from the CLI
 {: #viewall-vol-cli}
 
 Run this command to list summary information about all volumes:

@@ -1,0 +1,243 @@
+---
+
+copyright:
+ years: 2024, 2024
+lastupdated: "2024-07-18"
+
+keywords: sds, host, view host details, host summary list
+
+subcollection: sdsaas
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+
+# View host details
+{: #sds-view-host-details}
+
+View details of a host or summary information about all hosts for the chosen deployment.
+{: shortdesc}
+
+## Viewing host details in the UI
+{: #sds-view-host-details-ui}
+{: ui}
+
+You can view a summary of all host and view details for a single volume for the chosen deployment on the user interface.
+
+### Viewing all host in the UI
+{: #sds-view-all-hosts-ui}
+{: ui}
+
+List all hosts and all mapped volumes.
+
+To view all the hosts, in the [console], navigate to **Block Storage > Hosts**.
+
+By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
+
+| Field | Description |
+|-------|-------------|
+| Name | Click the name of the host to see individual host details. |
+| Volumes mapped | Shows the count of number of volumes mapped to the host. |
+| Storage identifier | unique storage identification number |
+{: caption="Table 1. Details about all hosts" caption-side="bottom"}
+
+By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
+
+
+### Viewing single host details in the UI
+{: #sds-view-single-host-details-ui}
+{: ui}
+
+To view details of a single host, go to the list of all hosts and click on the hostname link.
+
+The Actions menu on the Host details page shows the actions that you can take.
+
+The Host details page shows the details of the chosen hostname and all its mapped volumes. Table 2 describes this information.
+
+
+| Field | Description |
+|-------|-------------|
+| **Host details** | |
+| Name  | Name of the host you specified when you created the host. Click the pencil icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
+| Total volumes mapped | Shows the total number of volumes mapped to the host. |
+| Added date | System-generated date when the host was added.|
+| Host NQN | The NVMe Qualified Name (NQN) of the configured host |
+| Service instance | Name of the instance in the region.|
+{: caption="Table 2. Volume details" caption-side="bottom"}
+
+
+
+Table 3 describes the Actions menu options.
+
+| Action | Description |
+|--------|-------------|
+| Activity tracking |  |
+| Delete | Delete the host |
+{: caption="Table 3. Actions menu options for Hosts." caption-side="bottom"}
+
+
+## Viewing Hosts from the CLI
+{: #viewing-sds-hosts-cli}
+{: cli}
+
+View details of a single host or summary information about all hosts from the CLI.
+
+
+### Viewing details of a single host from the CLI
+{: #sds-view-single-host-detail-cli}
+
+Run the following command to show host details for a specific host `ID` within the specific service `INSTANCEID`.
+
+```sh
+ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
+```
+{: pre}
+
+
+The following example uses the volume ID to show volume details.
+
+```sh
+$ ibmcloud software-defined-storage host \
+    --host-id exampleString \
+    --instanceid exampleString
+```
+{: screen}
+
+
+
+
+
+### Viewing a list of all hosts from the CLI
+{: #viewall-vol-cli}
+
+Run this command to view the list summary information about all hosts:
+
+```sh
+ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME]
+```
+{: pre}
+
+Specifying the service instance ID is required since it is used to filter the list of volumes that belong to the specified service instance.
+
+The following example shows all volumes for the service instance specified in your availability zone.
+
+```sh
+ibmcloud software-defined-storage hosts \
+    --instanceid exampleString \
+    --start exampleString \
+    --limit 10 \
+    --name exampleString
+```
+{: screen}
+
+For more information about available command options, run `ibmcloud sds hosts --help`.
+
+## View all hosts with the API
+{: #viewing-hosts-api}
+{: api}
+
+You can list all hosts and view details for a specific host within all deployments that you have access to.
+
+Before you begin, make sure that you [set up your API environment].
+
+### Viewing list of all hosts with the API
+{: #viewall-vol-api}
+
+Make a `GET /hosts` call to list summary information about all hosts. See the following example.
+
+```sh
+curl -X 'GET' '$sds_api_endpoint/v1/hosts -H 'accept: application/json'
+```
+{: pre}
+
+A successful response looks like the following example.
+
+```json
+{
+  "first": {
+    "href": "string"
+  },
+  "hosts": [
+    {
+      "created_at": "string",
+      "id": "string",
+      "name": "string",
+      "nqn": "string",
+      "service_instance_id": "string",
+      "storage_workspace_id": "string",
+      "volume_mappings": [
+        {
+          "status": "string",
+          "storage_identifiers": {
+            "id": "string",
+            "namespace_id": 0,
+            "network_info": [
+              {
+                "gateway_ip": "string",
+                "port": 0
+              }
+            ]
+          },
+          "volume_id": "string",
+          "volume_name": "string"
+        }
+      ]
+    }
+  ],
+  "limit": 0,
+  "next": {
+    "href": "string"
+  },
+  "total_count": 0
+}
+```
+
+### Viewing single host details with the API
+{: #sds-view-single-host-details-api}
+
+Make a `GET /hosts/{id}` call to see details of a host. See the following example.
+
+```sh
+curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921' -H 'accept: application/json'
+```
+{: pre}
+
+A successful response provides details of the host, such as the host id, host name, nqn, service instance id and also includes mapped volume details if it mapped to a volume.
+
+```json
+{
+     "id" : "host_id",
+    "name": "my-host",
+    "nqn": "nqn-xxxxx-xxxxx",
+    "created_at": "date-time",
+     "service_instance_id": "xxxx",
+     "storage_workspace_id": "yyyy",
+       volume_mappings" : [
+        {
+           "volume_name": "<volume_name>",
+           "volume_id": "<volume_id1>",
+            "status": "mapped"
+           "storage_identifiers": {
+                   "id": "<subsystem_nqn>",
+                  "network_info": [
+                        {
+                       "gateway_ip": <gateway_ip>,
+                      "port": "<port_id>",
+                       },
+                  ],
+                  "namespace_id" : "<volume_namespace_id>"",
+             }
+        },
+   ]
+
+}
+
+```
+{: codeblock}
+
+
+## Next steps
+{: #next-step-view-hosts}
+
+Add hosts or manage your existing hosts.
