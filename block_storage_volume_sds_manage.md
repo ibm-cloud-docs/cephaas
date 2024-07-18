@@ -71,6 +71,8 @@ To map a volume to a host from Volumes page, complete the following steps.
 {: #sds-expand-block-volume-size-from-list-view-page}
 {: ui}
 
+To increase the block volume provisioned size from the list view page, complete the following steps.
+
 1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
 2. Enter a new **size**.
@@ -84,6 +86,8 @@ To map a volume to a host from Volumes page, complete the following steps.
 ### Expand block volume size from details page
 {: #sds-expand-block-volume-size-from-details-page}
 {: ui}
+
+To increase the block volume provisioned size from the Volume details page, complete the following steps.
 
 1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
 2. Enter a new **size**.
