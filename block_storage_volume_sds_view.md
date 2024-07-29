@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-29"
 
 keywords: list all volumes, view volume details
 
@@ -151,11 +151,11 @@ Before you begin, make sure that you [set up your API environment].
 Make a `GET /volumes` call to list summary information about all volumes. See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes/ --header 'Authorization: Bearer $IAM_TOKEN'
+curl -X GET "$sds_api_endpoint/v1/volumes --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
 
-A successful response looks like the following example. This example shows the first three volumes are mapped to a host.
+A successful response looks like the following example. This example shows the first volume mapped to a host.
 
 ```json
 {
@@ -170,7 +170,7 @@ A successful response looks like the following example. This example shows the f
       "name": "vol1",
       "bandwidth": 300,
       "capacity": 10,
-      "iops": 300,
+      "iops": 150,
       "created_at": "2024-06-21T07:22:15Z",
       "host_mappings": [
         {
@@ -201,7 +201,7 @@ curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50c
 ```
 {: pre}
 
-A successful response provides details of the volume, including capacity and IOPS, the volume status, and whether the volume is mapped to a host.
+A successful response provides details of the volume, including capacity and IOPS, the volume status, and the host mapped to which the volume is mapped.
 
 ```json
     {
@@ -209,7 +209,7 @@ A successful response provides details of the volume, including capacity and IOP
       "name": "vol1",
       "bandwidth": 300,
       "capacity": 10,
-      "iops": 300,
+      "iops": 150,
       "created_at": "2024-06-21T07:22:15Z",
       "host_mappings": [
         {
