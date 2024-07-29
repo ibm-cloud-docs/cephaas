@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-29"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Managing a block volume
 {: #managing-sds-block-volume}
 
-You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map volume to a host or increase the volume size. You can also delete a volume from a service instance.
+You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map volume to a host or increase the volume size.
 {: shortdesc}
 
 ## Managing block volume in the UI
@@ -27,7 +27,6 @@ Use the console to manage the volumes. In the console, you can complete the foll
 * Rename a Block Storage volume
 * Map a volume to a host
 * Expand volume to increase the capacity
-* Delete a volume
 
 
 ### Renaming a volume from list view page
@@ -96,12 +95,6 @@ To increase the block volume provisioned size from the Volume details page, comp
     {: note}
 
 3. Click **Expand**.
-
-### Delete a volume
-{: #delete-sds-managing-volume-ui}
-{: ui}
-
-For instructions, see [Delete block volume in the UI](https://test.cloud.ibm.com/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume&interface=ui#deleting-sds-block-volume-ui).
 
 
 
@@ -188,14 +181,14 @@ A successful response looks like this:
     "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
     "name": "sds-vol-updated",
     "capacity": 10,
-    "iops": 3000,
+    "iops": 150,
     "status": "available",
     "profile": {
         "name": "sds-general-purpose"
     },
     "created_at": "2024-06-19T06:22:51Z",
     "status_reasons": [],
-    "bandwidth": 393,
+    "bandwidth": 2.4,
     "resource_type": "volume",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
@@ -228,14 +221,14 @@ A successful response looks like this:
     "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
     "name": "sds-vol-updated",
     "capacity": 100,
-    "iops": 3000,
+    "iops": 150,
     "status": "available",
     "profile": {
         "name": "sds-general-purpose"
     },
     "created_at": "2024-06-19T06:22:51Z",
     "status_reasons": [],
-    "bandwidth": 393,
+    "bandwidth": 4.8,
     "resource_type": "volume",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
