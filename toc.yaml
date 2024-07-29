@@ -63,6 +63,10 @@ toc:
             - uploading_s3_cert_sds.md
             - retrieving_s3_cert_sds.md
 #            - service_credential_update.md
+      - topicgroup:
+          label: Managing access
+          topics:
+            - sds_manage_iam_access.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
