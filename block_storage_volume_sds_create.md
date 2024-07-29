@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-29"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -112,7 +112,7 @@ Define variables for the IAM token and API endpoint.
 ### Creating a new volume with the API
 {: #creating-new-volume-api}
 
-Make a `POST /volumes` request to create a new block volume. Specify an optional volume name and capacity.
+Make a `POST /volumes` request to create a new block volume. Specify capacity and volume name. Volume name is optional.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: important}
@@ -136,13 +136,13 @@ A successful response looks like this:
     "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
     "name": "sds-vol",
     "capacity": 10,
-    "iops": 3000,
+    "iops": 150,
     "status": "pending",
     "profile":{
        "name": "sds-general-purpose"
      },
     "created_at": "2024-06-19T06:22:51Z",
-    "bandwidth": 393,
+    "bandwidth": 19,
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
     "host_mappings": []
