@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-29"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -91,7 +91,7 @@ curl -X DELETE '$sds_api_endpoint/v1/volumes/{volume-id}' \
 ```
 {: pre}
 
-There is no response body for a successful delete operation. HTTP response code 204 is returned.
+There is no response body for a successful delete operation. HTTP response code 202 is returned.
 
 
 To verify that the volume is deleted, list the volumes by making a `GET /volumes` call.
