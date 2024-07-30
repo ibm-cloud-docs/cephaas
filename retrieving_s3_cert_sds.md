@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-30"
 
 keywords: sdsaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -25,7 +25,7 @@ This section provides guidance on how to view the expiration date and status of 
 {: #view-sds-s3-certificate-using-ui}
 {: ui}
 
-To view the expiration date and status of a S3 certificate, on the IBM Cloud console, navigate to **SDS as a Service > Settings**.
+To view the expiration date and status of the S3 certificate, on the IBM Cloud console, navigate to **SDS as a Service > Settings**.
 
 Here, you can view the **S3 certificate** expiration date and status if it exists in the system.
 

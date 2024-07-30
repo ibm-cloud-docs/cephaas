@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-12"
+lastupdated: "2024-07-30"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Uploading S3 certificate
 {: #uploading-s3-certificate-sds}
 
-S3 certificates are required to secure the S3 endpoint. You can upload to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI, or API.
+S3 certificates are required to secure the S3 endpoint. You can upload to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
 {: shortdesc}
 
 
@@ -29,8 +29,8 @@ To upload a S3 certificate, complete the following steps.
 
 2. Click **Upload certificate**. Add new certificate panel is displayed.
 
-Make sure that the file includes the root certificate, server certificate and server key that allows virtual hosted buckets for your S3 endpoint. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
-{: note}
+    Make sure that the file includes the root certificate, server certificate and server key that allows virtual hosted buckets for your S3 endpoint. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
+    {: note}
 
 3. Click **Upload** to choose the certificate from your computer.
 
@@ -64,19 +64,22 @@ ibmcloud software-defined-storage cert-upload --body exampleString
 
 Make a `POST /s3tlscert` call to update the S3 SSL Certificates for securing I/O objects or upload a new one if it does not exist.
 
+Ensure that the file you are uploading has included the server-side certificate and key.
+{: requirement}
+
 ```sh
 curl -X 'POST' \
   '$sds_api_enpoint/v1/object/s3tlscert' \
   -H 'accept: application/json' \
   -H 'Content-Type: text/plain' \
-  -d 'string'
+  --data-binary "@<filename>"
 ```
 {: pre}
 
 A successful response looks like this:
 
 ```json
-example required
+{ "ValidCertificate": true, "ValidKey": true, "Error": null }
 
 ```
 {: screen}
