@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-30"
 
 keywords: list all volumes, view volume details
 
@@ -94,7 +94,7 @@ ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID
 The following example uses the volume ID to show volume details.
 
 ```sh
-$ ibmcloud sds volume --instanceid abc --url $rsos_api2 --id r134-3a7a8360-be78-4723-a341-356be350e683
+$ ibmcloud sds volume --instanceid abc --url $sds_endpoint --id r134-3a7a8360-be78-4723-a341-356be350e683
 Getting volume demo-volume-update...
 
 ID             r134-3a7a8360-be78-4723-a341-356be350e683
@@ -126,7 +126,7 @@ Specifying the service instance ID is required since it is used to filter the li
 The following example shows all volumes for the service instance specified in your availability zone.
 
 ```sh
-ibmcloud software-defined-storage volumes --instanceid abc --url $rsos_api
+ibmcloud software-defined-storage volumes --instanceid abc --url $sds_endpoint
 
 ID                                          Name       Status      Capacity_GB   Mapped_Host
 r134-2613272e-ff23-461e-94a3-3d3f77c13aa1   example2   available   10            -

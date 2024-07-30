@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-30"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Creating block volumes
 {: #creating-sds-block-volume}
 
-Create a SDSaaS volume by using the UI, CLI, or API.
+Create a SDSaaS volume by using the UI, CLI or API.
 {: shortdesc}
 
 
@@ -162,7 +162,7 @@ When you refresh the Volumes page, the new volume appears at the beginning of th
 You can continue creating more volumes or manage existing volumes.
 
 
-* [View volume details](/docs/sdsaas?topic=sdsaas-viewing-block-storage)
+* [View volume details](/docs/sdsaas?topic=sdsaas-view-sds-volume&interface=ui#viewvols)
 
 * [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume#managing-sds-block-volume-ui)
 
