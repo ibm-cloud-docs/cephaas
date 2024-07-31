@@ -56,7 +56,7 @@ ibmcloud login --sso -a cloud.ibm.com
 {: pre}
 
 This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
-{: pre}
+
 
 ### Creating hosts from the CLI
 {: #create-host-sds-cli}

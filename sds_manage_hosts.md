@@ -102,7 +102,7 @@ ibmcloud software-defined-storage host-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 ### Mapping volume to a host from CLI
@@ -129,7 +129,7 @@ ibmcloud software-defined-storage host-vol-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 ## Managing host with the API

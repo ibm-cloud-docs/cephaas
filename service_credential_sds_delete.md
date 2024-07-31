@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-07-31"
 
 keywords: sdsaas , delete service credential
 
@@ -50,7 +50,7 @@ ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-k
 ```
 {: pre}
 
-See the following example where `sds_endpoint` is an environment variable that points to the endpoint that is provided to the user when `software-defined-storage (aliase: sds)` was configured and is in the for of a URL. For example, `https://<on-prem>.endpoint.com:<port number>/v1`.
+See the following example where `sds_endpoint` is an environment variable that points to the endpoint that is provided to the user when `software-defined-storage (aliase: sds)` was configured and is in the for of a URL. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 
 ```bash
 ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString --url $sds_endpoint
