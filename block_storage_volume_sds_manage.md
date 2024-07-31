@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -104,31 +104,51 @@ Using CLI, you can complete the following actions.
 
 Specify the information in the volume patch option to modify the existing details of a volume and run the following command to update the volume details.
 
-### Updating block volume from CLI
-{: #updating-sds-volume-cli}
+
+### Updating block volume capacity from CLI
+{: #updating-sds-volume-capacity-cli}
 {: cli}
 
-Use the `volume-update` command and specify the information in volume patch to modify the existing details of a volume.
-
-Run the following command to update the volume details.
-
+Use the `volume-update` command and specify the capacity and enpoint url in the volume patch to update the capacity of a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID [--volume-patch VOLUME-PATCH] [--if-match IF-MATCH]
+ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID [--volume-patch VOLUME-PATCH]
 ```
 {: pre}
 
-See the following example.
+See the following example for updating the capacity of a volume.
 
 ```bash
 
-ibmcloud software-defined-storage volume-update \
-    --instanceid exampleString \
-    --id exampleString \
-    --if-match exampleString \
-    --capacity 38 \
-    --name exampleString
+ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --capacity 15 --url $sds_endpoint
+...
 
+ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
+Name          demo3
+Status        updating
+Mapped_Host   -
+Capacity_GB   15
+Created       2024-06-21T21:08:51Z
+```
+
+### Renaming block volume from CLI
+{: #renaming-sds-volume-cli}
+{: cli}
+
+Use the `volume-update` command and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
+
+Run the following command for updating the name of a volume.
+
+```bash
+ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
+...
+
+ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
+Name          new-demo3
+Status        available
+Mapped_Host   -
+Capacity_GB   15
+Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -76,7 +76,7 @@ ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NA
 See the following example.
 
 ```bash
-ic sds volume-create --instanceid abc --capacity 10 --name example1 --url $rsos_api
+ic sds volume-create --instanceid abc --capacity 10 --name example1 --url $sds_endpoint
 ...
 
 ID             r134-d75e1aeb-4bcf-4d41-8926-517198d55448
@@ -91,7 +91,7 @@ Active         false
 ```
 {: screen}
 
-Capacity, indicated in gigabytes, can range from minimum 1 GBs to the maximum allocated capacity for block storage. If not specified, the default capacity is 100 GBs.
+Capacity, indicated in gigabytes, can range from minimum 1 GBs to the maximum allocated capacity for block storage.
 
 
 

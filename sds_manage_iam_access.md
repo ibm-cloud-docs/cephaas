@@ -13,10 +13,10 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing IAM access for CephaaS
+# Managing IAM access for IBM Storage Ceph as a Service
 {: #iam-cephaas-docs}
 
-Access to CephaaS service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the CephaaS service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to CephaaS.
+Access to IBM Storage Ceph as a Service (CephaaS) service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the CephaaS service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to CephaaS.
 {: shortdesc}
 
 The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the CephaaS as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.

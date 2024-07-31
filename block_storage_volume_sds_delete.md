@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -61,7 +61,7 @@ To delete multiple volumes together, complete the following steps.
 {: #deleting-sds-block-volume-cli}
 {: cli}
 
-Use the `volume-delete` command and specify the `INSTANCEID` to delete a single volume based on the instance id.
+Use the `volume-delete` command to delete a single volume. Specify the `--id ID` parameter of the volume and `--instanceid INSTANCEID` parameters of the service instance.
 
 Run the following command to delete a volume.
 
@@ -73,7 +73,7 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage volume-delete --instanceid exampleString --id exampleString --if-match exampleString
+ibmcloud software-defined-storage volume-delete --instanceid exampleString --id exampleString --if-match exampleString --url $sds_endpoint
 ```
 {: screen}
 
