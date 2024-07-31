@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -87,7 +87,7 @@ Use the `host-update` command to rename a specific host.
 Run the following command to update the details of a specific host in a service instance.
 
 ```sh
-ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH]
+ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH] --url string
 ```
 {: pre}
 
@@ -98,7 +98,12 @@ ibmcloud software-defined-storage host-update \
     --host-id exampleString \
     --instanceid exampleString \
     --name my-host
+    --url $sds_endpoint
 ```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
 
 ### Mapping volume to a host from CLI
 {: #mapping-sds-hosts-cli}
@@ -109,7 +114,7 @@ Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` and `IN
 Run the following command to map the volume to the given host.
 
 ```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -120,11 +125,12 @@ ibmcloud software-defined-storage host-vol-update \
     --host-id exampleString \
     --volume-id exampleString \
     --instanceid exampleString
-
+    --url $sds_endpoint
 ```
 {: screen}
 
-
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
 
 ## Managing host with the API
 {: #managing-sds-hosts-api}

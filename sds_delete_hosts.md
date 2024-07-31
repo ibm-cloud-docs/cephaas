@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
@@ -66,12 +66,12 @@ To delete all volumes that are mapped to a host, complete the following steps.
 {: #deleting-sds-hosts-cli}
 {: cli}
 
-Use the `host-delete` command and specify the `INSTANCEID` to delete the host based on the instance id.
+Use the `host-delete` command and specify the `INSTANCEID` and endpoint url `--url` along with the `HOST-ID` to delete the host based on the host id specified by the parameter `--host-id`
 
-Run the following command to delete a volume.
+Run the following command to delete a host.
 
 ```sh
-ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -80,21 +80,28 @@ See the following example.
 ```bash
   ibmcloud software-defined-storage host-delete \
     --host-id exampleString \
-    --instanceid exampleString
+    --instanceid exampleString \
+    --url $sds_endpoint
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
 
 
 ## Deleting a single volume mapping for a host from the CLI
 {: #deleting-sds-single-volume-mapping-hosts-cli}
 {: cli}
 
-Use the `host-volid-delete` command and specify the `HOST-ID`, `INSTANCEID` and `VOLUME-ID` to delete a particular volume mapped from the host.
+Use the `host-volid-delete` command and specify the `HOST-ID`, `INSTANCEID`, `VOLUME-ID` and `$sds_endpoint` to delete a particular volume mapped from the host.
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
 
 Run the following command to delete a volume.
 
 ```sh
-ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -105,6 +112,7 @@ ibmcloud software-defined-storage host-volid-delete \
   --host-id exampleString \
   --volume-id exampleString \
   --instanceid exampleString
+  --url $sds_endpoint
 ```
 {: screen}
 
@@ -115,10 +123,13 @@ ibmcloud software-defined-storage host-volid-delete \
 
 Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to delete all volumes associated with the given host id based on the instance id.
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
+
 Run the following command to delete a volume.
 
 ```sh
-ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -128,6 +139,7 @@ See the following example.
 ibmcloud software-defined-storage host-vol-deleteall \
   --host-id exampleString \
   --instanceid exampleString
+  --url $sds_endpoint
 ```
 {: screen}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-31"
 
 keywords: sds, sdsaas host,
 
@@ -63,10 +63,10 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command to create a new host from a host template object. Provide a unique host name and the name of the availability zone in your region.
+Run the following command to create a new host from a host template object.
 
 ```sh
-ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS]
+ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
 ```
 {: pre}
 
@@ -81,8 +81,8 @@ See the following example.
     --instanceid exampleString \
     --nqn nqn.abc.1234 \
     --name my-host \
-    --volume-mappings '[{"volume_id": "exampleString"}]'
-
+    --volume-mappings '[{"volume_id": "exampleString"}]' \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -91,7 +91,7 @@ See the following example.
 {: #creating-sds-host-api}
 {: api}
 
-You can create hosts by directly calling the Volume REST APIs. For more information about the file shares SDS API, see the SDSaaS API reference.
+You can create hosts by directly calling the Volume REST APIs. For more information about the file shares CephaaS API, see the IBM Storage Ceph as a Service API reference.
 
 ### Before you begin
 {: #sds-host-api-prereqs}

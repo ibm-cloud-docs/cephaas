@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-18"
+lastupdated: "2024-07-31"
 
 keywords: sds, host, view host details, host summary list
 
@@ -88,7 +88,7 @@ View details of a single host or summary information about all hosts from the CL
 Run the following command to show host details for a specific host `ID` within the specific service `INSTANCEID`.
 
 ```sh
-ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
+ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -99,9 +99,12 @@ The following example uses the volume ID to show volume details.
 $ ibmcloud software-defined-storage host \
     --host-id exampleString \
     --instanceid exampleString
+    --url $sds_endpoint
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
 
 
 
@@ -112,7 +115,7 @@ $ ibmcloud software-defined-storage host \
 Run this command to view the list summary information about all hosts:
 
 ```sh
-ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME]
+ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -126,10 +129,15 @@ ibmcloud software-defined-storage hosts \
     --start exampleString \
     --limit 10 \
     --name exampleString
+    --url $sds_endpoint
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://<on-prem>.endpoint.com:<port number>/v1
+{: note}
+
 For more information about available command options, run `ibmcloud sds hosts --help`.
+
 
 ## View all hosts with the API
 {: #viewing-hosts-api}
