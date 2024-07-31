@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-29"
+lastupdated: "2024-07-31"
 
 keywords:
 
@@ -12,15 +12,14 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-_Include this file in the **How to** nav group of your toc.yaml file_
 
-# Managing IAM access for _servicename_
-{: #iam-docs-template}
+# Managing IAM access for CephaaS
+{: #iam-cephaas-docs}
 
-Access to <service_name> service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the <service_name> service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to <service_name>.
+Access to CephaaS service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the CephaaS service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to CephaaS.
 {: shortdesc}
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the <service_name> as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
+The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the CephaaS as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
 If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
 {: tip}
@@ -31,7 +30,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to an individual service instance in your account
 * Access to a specific resource within an instance, _such as resource type `bucket`_
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the <service_name> service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to <service_name> and the ability to call the <service_name>'s API. For information about the exact actions that are mapped to each role, see [<service_name>](_YourSubHeadingLink_).
+Review the following tables that outline what types of tasks each role allows for when you're working with the CephaaS service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to CephaaS and the ability to call the CephaaS's API. For information about the exact actions that are mapped to each role, see [CephaaS](_YourSubHeadingLink_).
 
 
 
@@ -64,7 +63,7 @@ Review the following tables that outline what types of tasks each role allows fo
 {: tab-title="Service roles"}
 {: tab-group="IAM"}
 
-## Assigning access to <service_name> in the console
+## Assigning access to CephaaS in the console
 {: #assign-access-console}
 {: ui}
 
@@ -74,7 +73,7 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to <service_name> in the CLI
+## Assigning access to CephaaS in the CLI
 {: #assign-access-cli}
 {: cli}
 
@@ -87,11 +86,11 @@ Use `<programmatic_service_name>` for the service name. Also, use quotations aro
 
 
 ```bash
-ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name cloud-object-storage --roles "Object Writer"
+ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined-storage --roles "Object Writer"
 ```
 {: pre}
 
-## Assigning access to <service_name> by using the API
+## Assigning access to CephaaS by using the API
 {: #assign-access-api}
 {: api}
 
@@ -100,14 +99,14 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 | Role name | Role CRN |
 |---------------|-----------------|
-| Viewer                 | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Viewer`        |
-| Operator               | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Operator`      |
-| Editor                 | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Editor`        |
-| Administrator          | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Administrator` |
-| Reader         | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Reader`        |
-| Writer         | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Writer`        |
-| Manager        | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:Manager`       |
-| Object Writer | `crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter` |
+| Viewer                 | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Viewer`        |
+| Operator               | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Operator`      |
+| Editor                 | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Editor`        |
+| Administrator          | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Administrator` |
+| Reader         | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Reader`        |
+| Writer         | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Writer`        |
+| Manager        | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Manager`       |
+| Object Writer | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter` |
 {: caption="Table 2. Role ID values for API use" caption-side="bottom"}
 
 
@@ -134,7 +133,7 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
   ],
   "roles":[
     {
-      "role_id": "crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter"
+      "role_id": "crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter"
     }
   ],
   "resources":[
@@ -146,7 +145,7 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
         },
         {
           "name": "serviceName",
-          "value": "cloud-object-storage"
+          "value": "software-defined-storage"
         }
       ]
     }
@@ -167,7 +166,7 @@ PolicySubject policySubjects = new PolicySubject.Builder()
       .build();
 
 PolicyRole policyRoles = new PolicyRole.Builder()
-      .roleId("crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter")
+      .roleId("crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter")
       .build();
 
 ResourceAttribute accountIdResourceAttribute = new ResourceAttribute.Builder()
@@ -178,7 +177,7 @@ ResourceAttribute accountIdResourceAttribute = new ResourceAttribute.Builder()
 
 ResourceAttribute serviceNameResourceAttribute = new ResourceAttribute.Builder()
       .name("serviceName")
-      .value("cloud-object-storage")
+      .value("software-defined-storage")
       .operator("stringEquals")
       .build();
 
@@ -215,7 +214,7 @@ const policySubjects = [
 ];
 const policyRoles = [
   {
-    role_id: 'crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter',
+    role_id: 'crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter',
   },
 ];
 const accountIdResourceAttribute = {
@@ -225,7 +224,7 @@ const accountIdResourceAttribute = {
 };
 const serviceNameResourceAttribute = {
   name: 'serviceName',
-  value: 'cloud-object-storage',
+  value: 'software-defined-storage',
   operator: 'stringEquals',
 };
 const policyResources = [
@@ -256,11 +255,11 @@ iamPolicyManagementService.createPolicy(params)
 policy_subjects = PolicySubject(
   attributes=[SubjectAttribute(name='iam_id', value='IBMid-123453user')])
 policy_roles = PolicyRole(
-  role_id='crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter')
+  role_id='crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter')
 account_id_resource_attribute = ResourceAttribute(
   name='accountId', value='ACCOUNT_ID')
 service_name_resource_attribute = ResourceAttribute(
-  name='serviceName', value='cloud-object-storage')
+  name='serviceName', value='software-defined-storage')
 policy_resources = PolicyResource(
   attributes=[account_id_resource_attribute,
         service_name_resource_attribute])
@@ -286,7 +285,7 @@ policySubjects := &iampolicymanagementv1.PolicySubject{
   Attributes: []iampolicymanagementv1.SubjectAttribute{*subjectAttribute},
 }
 policyRoles := &iampolicymanagementv1.PolicyRole{
-  RoleID: core.StringPtr("crn:v1:bluemix:public:cloud-object-storage::::serviceRole:ObjectWriter"),
+  RoleID: core.StringPtr("crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter"),
 }
 accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
   Name:     core.StringPtr("accountId"),
@@ -295,7 +294,7 @@ accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
 }
 serviceNameResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
   Name:     core.StringPtr("serviceName"),
-  Value:    core.StringPtr("cloud-object-storage"),
+  Value:    core.StringPtr("software-defined-storage"),
   Operator: core.StringPtr("stringEquals"),
 }
 policyResources := &iampolicymanagementv1.PolicyResource{
@@ -320,28 +319,4 @@ fmt.Println(string(b))
 {: go}
 {: codeblock}
 
-## Assigning access to <service_name> by using Terraform
-{: #assign-access-terraform}
-{: terraform}
 
-
-
-The following example is for assigning the `<Object Writer>` role for `<Cloud Object Storage>`:
-
-Use `<programmatic_service_name>` for the service name.
-{: tip}
-
-
-```terraform
-resource "ibm_iam_user_policy" "policy" {
-  ibm_id = "test@example.com"
-  roles  = ["Object Writer"]
-
-  resources {
-    service = "cloud-object-storage"
-  }
-}
-```
-{: codeblock}
-
-For more information, see [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external}.
