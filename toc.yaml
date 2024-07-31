@@ -73,11 +73,14 @@ toc:
       id: reference
       topics:
       - topicgroup:
-          label: Block Storage API reference
-          topics:
-             - sdsaas_block_spec.md
-#            - block-volume-storage-api-reference.md
-             - sdsaas_block_spec.yaml
+          label: API & SDK reference
+          links:
+            - link:
+                label: Block storage API
+                href: https://{DomainName}/docs/api-docs/software-defined-storage/sds-block-storage
+#            - link:
+#                label: Accounts API
+#                href: https://{DomainName}/docs/api-docs/software-defined-storage/accounts
       - topicgroup:
           label: Use the command line
           topics:
