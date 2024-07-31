@@ -100,10 +100,30 @@ Using CLI, you can complete the following actions.
 
 * Rename a Block Storage volume.
 * Map a volume to a host.
-* Expand volume to increase the current capacity.
+* Update capacity to increase the current volume capacity.
 
 Specify the information in the volume patch option to modify the existing details of a volume and run the following command to update the volume details.
 
+### Renaming block volume from CLI
+{: #renaming-sds-volume-cli}
+{: cli}
+
+Use the `volume-update` command and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
+
+Run the following command for updating the name of a volume.
+
+```bash
+ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
+...
+
+ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
+Name          new-demo3
+Status        available
+Mapped_Host   -
+Capacity_GB   15
+Created       2024-06-21T21:08:51Z
+```
+{: screen}
 
 ### Updating block volume capacity from CLI
 {: #updating-sds-volume-capacity-cli}
@@ -130,28 +150,6 @@ Mapped_Host   -
 Capacity_GB   15
 Created       2024-06-21T21:08:51Z
 ```
-
-### Renaming block volume from CLI
-{: #renaming-sds-volume-cli}
-{: cli}
-
-Use the `volume-update` command and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
-
-Run the following command for updating the name of a volume.
-
-```bash
-ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
-...
-
-ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
-Name          new-demo3
-Status        available
-Mapped_Host   -
-Capacity_GB   15
-Created       2024-06-21T21:08:51Z
-```
-{: screen}
-
 
 
 ## Managing block volume with the API
