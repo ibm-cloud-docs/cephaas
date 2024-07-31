@@ -70,7 +70,7 @@ ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN 
 ```
 {: pre}
 
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 {: important}
 
 
@@ -86,6 +86,8 @@ See the following example.
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 ## Creating hosts with the API
 {: #creating-sds-host-api}

@@ -103,7 +103,7 @@ $ ibmcloud software-defined-storage host \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 
@@ -133,7 +133,7 @@ ibmcloud software-defined-storage hosts \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 For more information about available command options, run `ibmcloud sds hosts --help`.

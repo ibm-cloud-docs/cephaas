@@ -1,5 +1,17 @@
-# IBM Storage Ceph as a Service
-Documentation repository for sdsaas
+---
+
+copyright:
+ years: 2024, 2024
+lastupdated: "2024-07-31"
+
+keywords:
+
+subcollection: sdsaas
+
+---
+
+# IBM Storage Ceph as a Service (CephaaS)
+{: #sds-cephaas-title}
 
 
 

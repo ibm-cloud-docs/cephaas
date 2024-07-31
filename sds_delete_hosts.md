@@ -31,6 +31,7 @@ To delete a host, complete the following steps.
 
 3. From the options menu, click **Delete**.
 
+
 ## Deleting multiple host from the UI
 {: #deleting-sds-multiple-hosts-ui}
 {: ui}
@@ -66,7 +67,7 @@ To delete all volumes that are mapped to a host, complete the following steps.
 {: #deleting-sds-hosts-cli}
 {: cli}
 
-Use the `host-delete` command and specify the `INSTANCEID` and endpoint url `--url` along with the `HOST-ID` to delete the host based on the host id specified by the parameter `--host-id`
+Use the `host-delete` command and specify the `INSTANCEID` and endpoint url along with the `HOST-ID` to delete the host based on the host id.
 
 Run the following command to delete a host.
 
@@ -85,7 +86,7 @@ See the following example.
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 
@@ -95,7 +96,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 Use the `host-volid-delete` command and specify the `HOST-ID`, `INSTANCEID`, `VOLUME-ID` and `$sds_endpoint` to delete a particular volume mapped from the host.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 Run the following command to delete a volume.
@@ -123,7 +124,7 @@ ibmcloud software-defined-storage host-volid-delete \
 
 Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to delete all volumes associated with the given host id based on the instance id.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to the user when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
 Run the following command to delete a volume.
