@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-07-31"
 
 keywords: list all volumes, view volume details
 
@@ -168,7 +168,7 @@ A successful response looks like the following example. This example shows the f
     {
       "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
       "name": "vol1",
-      "bandwidth": 300,
+      "bandwidth": 19,
       "capacity": 10,
       "iops": 150,
       "created_at": "2024-06-21T07:22:15Z",
@@ -201,13 +201,13 @@ curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50c
 ```
 {: pre}
 
-A successful response provides details of the volume, including capacity and IOPS, the volume status, and the host mapped to which the volume is mapped.
+A successful response provides details of the volume, including capacity and IOPS, the volume status, and the host to which the volume is mapped.
 
 ```json
     {
       "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
       "name": "vol1",
-      "bandwidth": 300,
+      "bandwidth": 19,
       "capacity": 10,
       "iops": 150,
       "created_at": "2024-06-21T07:22:15Z",
