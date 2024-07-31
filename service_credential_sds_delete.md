@@ -38,7 +38,7 @@ All access granted to any resources using this credential will be lost once the 
 {: #deleting-sds-service-credential-cli}
 {: cli}
 
-Use the `cred-delete` command and provide the `INSTANCEID` of the SDSaaS instance along with the `ACCESS-KEY` for the credential that you want to delete.
+Use the `cred-delete` command and provide the `INSTANCEID` of the deployment (service instance) along with the `ACCESS-KEY` for the credential that you want to delete and the endpoint url.
 
 You will not be able to perform any s3 operations using the credentials after the delete process completes.
 {: note}
@@ -46,7 +46,7 @@ You will not be able to perform any s3 operations using the credentials after th
 Run the following command to delete a credential.
 
 ```sh
-ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY
+ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
