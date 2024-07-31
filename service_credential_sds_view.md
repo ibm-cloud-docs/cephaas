@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-20"
+lastupdated: "2024-07-31"
 
 keywords: sdsaas service credential view, list
 
@@ -41,7 +41,7 @@ To view details of a service credentials,
 {: #retrieving-service-credential-details-cli}
 {: cli}
 
-Use the `credentials` command to retrieve and view the service credential details for a specific storage accound.
+Use the `credentials` command to view the list of access keys created for a given service instance (deployment).
 
 Run the following command and ensure you have provided `INSTANCEID` of the credential whose details you want to view..
 
