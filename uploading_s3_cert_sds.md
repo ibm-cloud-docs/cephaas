@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-01"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -27,7 +27,7 @@ To upload a S3 certificate, complete the following steps.
 
 1. On the IBM Cloud console, navigate to **SDS as a Service > Settings**.
 
-2. Click **Upload certificate**. Add new certificate panel is displayed.
+2. Click **Upload certificate**.
 
     Make sure that the file includes the root certificate, server certificate and server key that allows virtual hosted buckets for your S3 endpoint. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
     {: note}

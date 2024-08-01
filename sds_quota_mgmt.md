@@ -22,16 +22,23 @@ Since the provisioned capacity and quota is at service instance level setting, t
 ## Managing quota from the UI
 {: #managing-sds-block-quota-ui}
 
+1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and expand **Storage**.
 
-1. On the IBM web conole, go to **Settings** and select the **Deployment** whose quota you want to manage.
-2. Click **Edit preferences**.
-3. Review the capacity limit. Select **Include burst capacity** if you want to expand your total available capacity.
+2. Click **Deployment name** link and go to **Settings**.
+
+3. Click **Edit preferences**.
+
+    If you want to manage quota for a different Deployment, then click **Deployments** drop down to choose the one whose quota you want to manage and click **Edit preferences**.
+    {: note}
+
+4. Review the capacity limit. Select **Include burst capacity** if you want to expand your total available capacity.
 
     Including burst capacity may incur overage fees for the amount of burst capacity userd.
     {: note}
 
 4. Click **Next** and review the storage capacity allocations.
-5. Use the **+** & **-** controls to increase the allocated capacity.
+
+5. Use the plus & minus controls to modify the allocated capacity.
 
     The allocated capacity cannot be reduced or set below the current amount of used or provisionied capacity.
     {: note}
@@ -39,72 +46,21 @@ Since the provisioned capacity and quota is at service instance level setting, t
 6. Click **Save** to set the new storage capacity allocations.
 
 
-## Managing block quota with the API
-{: #managing-sds-block-quota-api}
+## Managing block quota using the CLI
+{: #managing-sds-block-quota-cli}
 
+Use the following command to modify the block and object storage quota.
 
-### Get total provisioned capacity
-{: #sds-get-total-providioned-capacity}
+```sh
+ibmcloud resource service-instance-update ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [--allow-cleanup true|false] [-f, --force] [-q, --quiet]
+```
+In the `--parameters` specify the capacity amounts as `JSON_STRING`. See the following example.
 
-Make a `GET /internal/v1/block/total_provisioned` request to get the total provisioned capacity for block volumes.
+```bash
+ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": "60", "object": "40"}, "allocate_burst_capacity":"false"}`
 
-A successful response looks like this:
-
-```json
-{
-
-    "total_provisioned_bytes": 200000,  // provisioned capacity in bytes
-
-    "total_provisioned_count": 35,  // number of provisioned volumes
-
-    "service_instance_id": "xxxx" // a valid service instance ID
-
-}
+Updating service instance cephaas-unified-2 with ID
 ```
 
 
-### Set block quota
-{:# sds-set-block-quota}
 
-Make a `PUT /internal/v1/block_quota` request to set the block quota for a given deployment (service instance).
-
-Request Body:
-
-{
-
-    "quota": 50  // quota in TB
-}
-
-A successful response looks like this:
-
-```json
-{
-
-    "quota": 50,  // quota in TB
-    "service_instance_id": "xxxx" // a valid service instance ID
-
-}
-```
-
-
-HTTP Response Codes:
-
-200: Request was successful
-
-
-### Get block quota
-{: #sds-get-block-quota}
-
-Make a `GET /internal/v1/block_quota` request to get the block quota details of a deployment (Service instance)
-
-Request Body: None
-
-Response:
-
-{
-
-    "quota": 200000,  // quota in TB
-
-    "service_instance_id": "xxxx" // a valid service instance ID
-
-}

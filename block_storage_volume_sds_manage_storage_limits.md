@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-06-18"
+lastupdated: "2024-08-01"
 
 keywords: volume, capacity, Block Storage
 
@@ -21,9 +21,9 @@ SDSaaS offers block-level data storage volumes that can be attached to an instan
 ## Overview
 {: #manage-storage-limit-overview}
 
-With SDSaaS, you can create up to 750 boot and data Block Storage volumes per account in a region. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
+With CephaaS, you can create up to 750 data Block Storage volumes per account in a deployment. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
 
-Capacity for secondary volumes ranges 10 - 16,000 GB. You can also expand volume capacity within its IOPS tier profile or custom band.
+Capacity for secondary volumes ranges from 1 - 16,000 GB. You can also expand volume capacity within its IOPS tier profile or custom band.
 
 
 ## Volume count and storage limits checklist
@@ -34,7 +34,7 @@ Review the following checklist items and record your answers. Provide this infor
 - **Ticket Subject**:
     >"*Request to Increase Block Storage Volume Count Limit*".
 
-- **How many extra volumes do you need? Provide your account, region, and the zone where you want more volumes.**
+- **How many extra volumes do you need? Provide your account, and deployment details where you want more volumes.**
     >*"200 volumes in US South-2"*.
 
 - **Of the secondary volumes, how many secondary volumes do you need and of what capacity?**
