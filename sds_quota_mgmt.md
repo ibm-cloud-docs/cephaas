@@ -57,10 +57,11 @@ ibmcloud resource service-instance-update ( NAME | ID ) [-n, --name NEW_NAME] [-
 In the `--parameters` specify the capacity amounts as `JSON_STRING`. See the following example.
 
 ```bash
-ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": "60", "object": "40"}, "allocate_burst_capacity":"false"}`
+ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": "60", "object": "40"}, "allocate_burst_capacity":"true"}`
 
-Updating service instance cephaas-unified-2 with ID
+Updating service instance cephaas-unified-2 with ID crn:vi:staging:public:software-defined-storage:us-south:a/7a30fdf....:: is updated successfully
 ```
+{: screen}
 
 
 

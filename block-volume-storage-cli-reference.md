@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-17"
+lastupdated: "2024-08-01"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -22,7 +22,7 @@ The IBM Storage Ceph as a Service plug-in extends the {{site.data.keyword.cloud_
 ## Before you begin
 {: #before-creating-block-volume-cli}
 
-Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
+Before you can use the SDS CLI plug-in, you must first install the IBM Cloud CLI, login to the CLI and then install the SDS CLI plug-in. For instruction on how to install IBM Cloud CLI, see [Getting started with the IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
 
 Log in to the IBM Cloud.
 
@@ -32,13 +32,13 @@ ibmcloud login --sso -a cloud.ibm.com
 {: pre}
 
 This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
-{: pre}
+
 
 
 ### Installation and configuration
 {: #ic-sds-installation}
 
-The plug-in is compatible with linux64, ppc64le, Windows&reg;, and macOS&reg; platforms that run on 64-bit processors.
+The plug-in is compatible with linux64, Windows&reg;, and macOS&reg; platforms that run on 64-bit processors.
 
 Install the plug-in by using the `plugin install` command.
 

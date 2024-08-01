@@ -80,7 +80,7 @@ toc:
           links:
             - link:
                 label: Block storage API
-                href: https://{DomainName}/docs/api-docs/software-defined-storage/sds-block-storage
+                href: https://{DomainName}/apidocs/sds-block-storage
 #            - link:
 #                label: Accounts API
 #                href: https://{DomainName}/docs/api-docs/software-defined-storage/accounts
