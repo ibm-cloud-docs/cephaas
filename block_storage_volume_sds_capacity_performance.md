@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-15"
+lastupdated: "2024-08-01"
 
 keywords: block volume capacity, performance
 
@@ -21,4 +21,4 @@ Choosing the optimal Block Storage volume and performance level for your workloa
 ## Capacity
 {: #block-storage-sds-capacity}
 
-Block storage for SDSaaS offers a range of storage capacities to meet your requirements.
+Block storage for CephaaS offers a range of storage capacities to meet your requirements.

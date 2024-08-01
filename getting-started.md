@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-16"
+lastupdated: "2024-08-01"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -15,9 +15,9 @@ subcollection: sdsaas
 # Getting started with IBM Storage Ceph as a Service
 {: #getting-started}
 
-SDSaaS is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based SDSaaS LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
+CephaaS is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based CephaaS LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
 
-SDSaaS brings best-in-class levels of durability and availability with an unmatched feature set. It is built by using industry standards and best practices. SDSaaS is designed to protect the integrity of the data and maintain availability through maintenance events and unplanned failures, and provide a consistent performance baseline.
+CephaaS brings best-in-class levels of durability and availability with an unmatched feature set. It is built by using industry standards and best practices. CephaaS is designed to protect the integrity of the data and maintain availability through maintenance events and unplanned failures, and provide a consistent performance baseline.
 {: shortdesc}
 
 
@@ -25,7 +25,7 @@ SDSaaS brings best-in-class levels of durability and availability with an unmatc
 {: #prereqs}
 {: step}
 
-SDSaaS LUNs can be provisioned from 20 GB to 12 TB with two options:
+CephaaS LUNs can be provisioned from 20 GB to 12 TB with two options:
 - Provision **Endurance** tiers that feature pre-defined performance levels and other features like snapshots and replication.
 - Build a high-powered **Performance** environment with allocated input/output operations per second (IOPS).
 
@@ -62,7 +62,7 @@ Another factor to consider is the number of hosts that are using your volume. IO
 
 The maximum IOPS for a block storage volume is 48,000 IOPS. If your workload requires high throughput, it's best to configure at least a couple servers to access your volume to avoid a single-server bottleneck.
 
-The default limit for the number of authorizations per block volume is eight. That means that up to eight hosts can be authorized to access the SDSaaS LUN. For more information about authorization and increasing the limit of 8, see the [FAQs].
+The default limit for the number of authorizations per block volume is eight. That means that up to eight hosts can be authorized to access the CephaaS LUN. For more information about authorization and increasing the limit of 8, see the [FAQs].
 
 ### Network connection
 {: #networkconnectivity}
@@ -89,6 +89,6 @@ When you're ready to submit your order, you can place it in the [console].
 {: #managingnewstorage}
 {: step}
 
-In the console, from the CLI, with the API, or Terraform, you can manage various aspects of your SDSaaS such as host authorizations and cancellations. For more information, see [Managing SDSaaS].
+In the console, from the CLI, with the API, or Terraform, you can manage various aspects of your CephaaS such as host authorizations and cancellations. For more information, see [Managing CephaaS].
 
 You can keep your data in sync in two different locations by using replication. Replication uses one of your snapshot schedules to automatically copy snapshots to a destination volume in a remote data center. The copies can be recovered in the remote site if a catastrophic event occurs or your data becomes corrupted. For more information, see [Replication and Disaster Recovery – Replicating Data].
