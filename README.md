@@ -3,7 +3,6 @@
 Documentation source repository for CephaaS deployment and configuration. Published at https://test.cloud.ibm.com/docs/sdsaas.
 
 ## Creating content
-{: #sds-create-content}
 
 Follow these steps to add to the SDSaaS deployment guide docs.
 
@@ -81,5 +80,9 @@ You can monitor the content quality on the Content Quality Dashboard (CQD): http
 
 - Learn about the suggested content for each type of solution docs at https://test.cloud.ibm.com/docs-internal/writing?topic=writing-writing-solution.
 
-
 **Tip:** If you want to give feedback about the documentation, create an [issue](https://github.ibm.com/cloud-docs/sdsaas/issues).
+
+
+## Documentation contacts
+
+* Olive Lakra
