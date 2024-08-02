@@ -30,7 +30,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
 1. Select **Service instance** where the volume will be created.
 1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
 
-    Volume names must be unique in the entire service instance. For example, if you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
+    Volume names must be unique in the entire service instance. If you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
     {: note}
 
 1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.

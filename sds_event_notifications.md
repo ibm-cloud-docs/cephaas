@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-02"
 
 keywords:
 
@@ -11,9 +11,8 @@ subcollection: sdsaas
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-_Include your file in the How to nav group in your toc.yaml file._
 
-# Enabling event notifications for _service-name_
+# Enabling event notifications for software-defined-storage
 {: #event-notifications-events}
 
 
@@ -102,7 +101,7 @@ curl -X POST "https://{instance_id}.{region}.secrets-manager.appdomain.cloud/api
 {: codeblock}
 {: curl}
 
-A successful response returns the CRN value of your connected {{site.data.keyword.en_short}} service instance. For more information about the required and optional request parameters, see the [API docs](/apidocs/<service-api-docs-reponame>).
+A successful response returns the CRN value of your connected {{site.data.keyword.en_short}} service instance. For more information about the required and optional request parameters, see the [API docs](/apidocs/software-defined-storage).
 
 ## Delivering notifications to select destinations
 {: #event-notifications-destinations}
