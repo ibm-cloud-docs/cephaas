@@ -65,11 +65,11 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 
 Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment id `SDSAAS-INSTANCE-ID` where the volume will be created.
 
-The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] --url string
 ```
 {: pre}
 
@@ -92,7 +92,7 @@ Active         false
 ```
 {: screen}
 
-Capacity, indicated in gigabytes, can range from minimum 1 GBs to the maximum allocated capacity for block storage.
+Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
 
 
@@ -115,7 +115,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /volumes` request to create a new block volume. Specify capacity and volume name. Volume name is optional.
 
-The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: important}
 
 

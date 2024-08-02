@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-02"
 
 keywords:
 
@@ -21,6 +21,7 @@ Since the provisioned capacity and quota is at service instance level setting, t
 
 ## Managing quota from the UI
 {: #managing-sds-block-quota-ui}
+{: ui}
 
 1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and expand **Storage**.
 
@@ -48,6 +49,7 @@ Since the provisioned capacity and quota is at service instance level setting, t
 
 ## Managing block quota using the CLI
 {: #managing-sds-block-quota-cli}
+{: cli}
 
 Use the following command to modify the block and object storage quota.
 
@@ -62,6 +64,20 @@ ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quot
 Updating service instance cephaas-unified-2 with ID crn:vi:staging:public:software-defined-storage:us-south:a/7a30fdf....:: is updated successfully
 ```
 {: screen}
+
+
+
+## Managing block quota with the API
+{: #managing-sds-block-quota-api}
+{: api}
+
+Make a PATCH request to modify the quota for provisioned and object capacity.
+
+```sh
+curl --location --request PATCH '$sds_ednpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":"true", quota":{"block":"70","object":"50"}}}
+
+```
+{: pre}
 
 
 

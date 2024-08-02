@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
@@ -60,7 +60,7 @@ To delete all volumes that are mapped to a host, complete the following steps.
 
 4. Click **Unmap**. Confirmation popup is displayed.
 
-5. Click **Unmap** to confirm the unmapping of select volume from the host.
+5. Click **Unmap** to confirm the unmapping of selected volume from the host.
 
 
 ## Deleting host from the CLI
@@ -199,12 +199,6 @@ To verify that all volumes mappings for a given host is deleted, list the hosts 
 
 
 
-## Sanitizing your data before you delete a volume
-{: #sanitizing-your-data-before-you-delete-a-volume}
-
-When you delete a Block Storage volume, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
-
-Sanitizing and deleting the volume means your data can't be restored.
 
 
 

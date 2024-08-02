@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords: sds, host, view host details, host summary list
 
@@ -39,10 +39,23 @@ By default, all Hosts are displayed for the chosen Deployment. In the list of al
 |-------|-------------|
 | Name | Click the name of the host to see individual host details. |
 | Volumes mapped | Shows the count of number of volumes mapped to the host. |
-| Storage identifier | unique storage identification number |
+| Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 {: caption="Table 1. Details about all hosts" caption-side="bottom"}
 
-By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
+By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
+
+Row actions menu on the Hosts list page provides you with options to manage the single host information.
+
+Table 2 describes the Row actions menu options.
+
+| Action | Description |
+|--------|-------------|
+| View host details | Click to open the detailed view of the host. |
+| Rename | Click to change the host name. |
+| Map to volumes | Click to map the host to a volume. |
+| Delete | Remove the mapping between the volume and host. |
+{: caption="Table 2. Row actions menu options for Hosts." caption-side="bottom"}
+
 
 
 ### Viewing single host details in the UI
@@ -51,7 +64,7 @@ By default, 10 hosts are shown from the list of all hosts. Change this default b
 
 To view details of a single host, go to the list of all hosts and click on the hostname link.
 
-The Host details page shows the details of the chosen hostname and all its mapped volumes. Table 2 describes this information.
+The Host details page shows the details of the chosen hostname and all its mapped volumes. Table 3 describes this information.
 
 
 | Field | Description |
@@ -61,18 +74,18 @@ The Host details page shows the details of the chosen hostname and all its mappe
 | Total volumes mapped | Shows the total number of volumes mapped to the host. |
 | Added date | System-generated date when the host was added.|
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host |
-| Service instance | Name of the instance in the region.|
-{: caption="Table 2. Host details" caption-side="bottom"}
+| Deployment | Name of the instance |
+{: caption="Table 3. Host details" caption-side="bottom"}
 
 The Actions menu on the Host details page shows the actions that you can take.
 
-Table 3 describes the Actions menu options.
+Table 4 describes the Actions menu options.
 
 | Action | Description |
 |--------|-------------|
-| Activity tracking |  |
-| Delete | Delete the host |
-{: caption="Table 3. Actions menu options for Hosts." caption-side="bottom"}
+| Rename | Rename the host name |
+| Delete | Remove the mapping between the volume and host |
+{: caption="Table 4. Actions menu options for Hosts." caption-side="bottom"}
 
 
 ## Viewing Hosts from the CLI
