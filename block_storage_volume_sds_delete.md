@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-02"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -81,6 +81,8 @@ ibmcloud software-defined-storage volume-delete --instanceid exampleString --id 
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 ## Deleting a block volume with the API
 {: #deleting-block-volume-api}

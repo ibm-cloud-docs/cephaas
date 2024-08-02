@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-05"
+lastupdated: "2024-08-02"
 
 keywords: service credential create
 
@@ -61,21 +61,23 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command with the `INSTANCEID` and `ACCESS-KEY` to create a new storage account credential or update an existing credential for the storage deployment.
+Run the following command with the `INSTANCEID`, `ACCESS-KEY` and API endpoint to create a new storage account credential or update an existing credential for the storage deployment.
 
 ```sh
-ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY
+ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage cred-create --instanceid exampleString --access-key exampleString
+ibmcloud software-defined-storage cred-create --instanceid exampleString --access-key exampleString --url $sds_endpoint
 
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 
 ## Creating a service credential with the API

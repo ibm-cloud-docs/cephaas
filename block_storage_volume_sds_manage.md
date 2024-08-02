@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -108,9 +108,14 @@ Specify the information in the volume patch option to modify the existing detail
 {: #renaming-sds-volume-cli}
 {: cli}
 
-Use the `volume-update` command and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
+Use the `volume-update` command and specify the deployment id, volume id and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
 
 Run the following command for updating the name of a volume.
+
+```sh
+ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID --name NAME --url string
+```
+{: pre}
 
 ```bash
 ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
@@ -125,14 +130,18 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
+
+
 ### Updating block volume capacity from CLI
 {: #updating-sds-volume-capacity-cli}
 {: cli}
 
-Use the `volume-update` command and specify the capacity and enpoint url in the volume patch to update the capacity of a volume.
+Use the `volume-update` command and specify the deployment id, volume id, capacity and enpoint url to update the capacity of a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID [--volume-patch VOLUME-PATCH]
+ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID --capacity CAPACITY --url string
 ```
 {: pre}
 
@@ -150,6 +159,10 @@ Mapped_Host   -
 Capacity_GB   15
 Created       2024-06-21T21:08:51Z
 ```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 
 ## Managing block volume with the API

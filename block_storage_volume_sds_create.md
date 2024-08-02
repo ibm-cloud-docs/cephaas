@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-02"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -56,24 +56,25 @@ ibmcloud login --sso -a cloud.ibm.com
 {: pre}
 
 This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
-{: pre}
+
 
 ### Creating a volume from the CLI
 {: #create-volume-cli}
 {: help}
 {: support}
 
-Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the `SDSAAS-INSTANCE-ID` where the volume will be created.
+Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment id `SDSAAS-INSTANCE-ID` where the volume will be created.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. For example, if you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING]
+ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
 {: pre}
 
-See the following example.
+See the following example where the `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+
 
 ```bash
 ic sds volume-create --instanceid abc --capacity 10 --name example1 --url $sds_endpoint

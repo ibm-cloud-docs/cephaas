@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords: list all volumes, view volume details
 
@@ -41,6 +41,18 @@ By default, all SDSaaS volumes are displayed for the chosen service instance. In
 
 By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
+Row actions menu on the Volume list page provides you with options to manage the volume information.
+
+Table 2 describes the Actions menu options.
+
+| Action | Description |
+|--------|-------------|
+| View volume details | Click to open the detailed view of the Volume. |
+| Rename volume | Click to change the volume name. |
+| Map to host | Click to map the volume to one or more hosts. |
+| Expand volume | Allows you to increase the capacity of the volume. |
+| Delete | Delete the volume. |
+{: caption="Table 2. Row actions menu options for volumes." caption-side="bottom"}
 
 
 ### Viewing details of a volume
@@ -48,7 +60,7 @@ By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this 
 
 To view details of a single volume, go to the list of all volumes and click on the volume name.
 
-The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 2 describes this information.
+The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 3 describes this information.
 
 | Field | Description |
 |-------|-------------|
@@ -61,17 +73,17 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
 | Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
 | Mapped hosts | Displays a list of all hosts present in the system.|
-{: caption="Table 2. Volume details" caption-side="bottom"}
+{: caption="Table 3. Volume details" caption-side="bottom"}
 
 
 The Actions menu on the volume details page shows the actions that you can take.
-Table 3 shows Actions menu options from the volume details page.
+Table 4 shows Actions menu options from the volume details page.
 
 | Action | Description |
 |--------|-------------|
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
-{: caption="Table 3. Actions menu options from the volume details page." caption-side="bottom"}
+{: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}
 
 ## Viewing volumes details from the CLI
 {: #viewing-block-storage-cli}
@@ -86,7 +98,7 @@ View details about a SDSaaS volume or summary information about all volumes from
 Run the following command to show volume details for a specific volume `ID` within the specific service `INSTANCEID`.
 
 ```sh
-ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID
+ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url string
 ```
 {: pre}
 
@@ -107,6 +119,8 @@ Created        2024-05-08T16:42:08Z
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 
 
@@ -117,7 +131,7 @@ Created        2024-05-08T16:42:08Z
 Run this command to list summary information about all volumes:
 
 ```sh
-ibmcloud software-defined-storage volumes [--instanceid INSTANCEID]
+ibmcloud software-defined-storage volumes [--instanceid INSTANCEID] --url string
 ```
 {: pre}
 
@@ -134,6 +148,9 @@ r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10           
 
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
 
 For more information about available command options, run `ibmcloud sds volumes --help`.
 

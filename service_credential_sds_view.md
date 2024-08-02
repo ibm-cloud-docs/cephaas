@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-02"
 
 keywords: sdsaas service credential view, list
 
@@ -43,17 +43,20 @@ To view details of a service credentials,
 
 Use the `credentials` command to view the list of access keys created for a given service instance (deployment).
 
-Run the following command and ensure you have provided `INSTANCEID` of the credential whose details you want to view..
+Run the following command and ensure you have provided `INSTANCEID` of the credential whose details you want to view and the API endpoint.
 
 
 ```sh
-ibmcloud software-defined-storage credentials --instanceid INSTANCEID
+ibmcloud software-defined-storage credentials --instanceid INSTANCEID --url string
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage credentials --instanceid exampleString
+ibmcloud software-defined-storage credentials --instanceid exampleString --url $sds_endpoint
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+{: note}
