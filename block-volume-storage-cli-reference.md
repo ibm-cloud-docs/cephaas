@@ -52,6 +52,8 @@ Once the plug-in is installed, you can verify the installation by running the `h
 ```sh
 ibmcloud software-defined-storage help
 ```
+{: pre}
+
 The output lists the usage instructions, the current version, and the supported commands.
 
 
@@ -91,6 +93,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 ```sh
 ibmcloud software-defined-storage [command] [options]
 ```
+{: pre}
 
 **ALIASES**: software-defined-storage, sds
 
@@ -106,6 +109,8 @@ ibmcloud software-defined-storage [command] [options]
 ```sh
 ibmcloud software-defined-storage volume-create --instanceid INSTANCEID [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
+{: pre}
+
 **Aliases**: volume-create, volc
 
 **Example**
@@ -118,6 +123,8 @@ ibmcloud software-defined-storage volume-create \
 	--hostnqnstring exampleString
 	--url $sds_endpoint
 ```
+{: screen}
+
 **Parameters to provide:**
 
 * The service instance identifier.
@@ -149,6 +156,8 @@ ibmcloud software-defined-storage volume-create \
 ```sh
 ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url string
 ```
+{: pre}
+
 **Aliases**: volume, vol
 
 **Example**
@@ -159,6 +168,7 @@ ibmcloud software-defined-storage volume \
 	--id exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 * The volume profile id.
@@ -181,6 +191,7 @@ Update a volume with the information in provided volume patch.
 ```sh
 ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID  --capacity CAPACITY [--if-match IF-MATCH] --url string
 ```
+{: pre}
 
 **Aliases**: volume-update, volu
 
@@ -195,6 +206,7 @@ ibmcloud software-defined-storage volume-update \
 	--name exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -228,6 +240,8 @@ ibmcloud software-defined-storage volume-update \
 ```sh
 ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH] --url string
 ```
+{: pre}
+
 **Aliases**: volume-delete, vold
 
 **Example**
@@ -239,6 +253,7 @@ ibmcloud software-defined-storage volume-delete \
     --if-match exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -262,6 +277,7 @@ ibmcloud software-defined-storage volume-delete \
 ```sh
 ibmcloud software-defined-storage volumes [--instanceid INSTANCEID] --url string
 ```
+{: pre}
 
 **Aliases**: volumes, vols
 
@@ -272,6 +288,7 @@ ibmcloud software-defined-storage volumes \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -292,6 +309,7 @@ ibmcloud software-defined-storage volumes \
 ```sh
 ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
 ```
+{: pre}
 
 **Aliases**: host-create, hstc
 
@@ -305,6 +323,7 @@ ibmcloud software-defined-storage host-create \
     --volume-mappings '[{"volume_id": "exampleString"}]'
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -334,6 +353,7 @@ ibmcloud software-defined-storage host-create \
 ```sh
 ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 
 **Example**
@@ -344,6 +364,7 @@ ibmcloud software-defined-storage host \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -364,6 +385,7 @@ ibmcloud software-defined-storage host \
 ```sh
 ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME] --url string
 ```
+{: pre}
 
 **Aliases**: hosts, hsts
 
@@ -377,6 +399,7 @@ ibmcloud software-defined-storage hosts \
     --name exampleString
 	--url $endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -406,6 +429,7 @@ ibmcloud software-defined-storage hosts \
 ```sh
 ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH] --url string
 ```
+{: pre}
 
 **Aliases**: host-update, hstu
 
@@ -418,6 +442,7 @@ ibmcloud software-defined-storage host-update \
     --name my-host
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -447,6 +472,7 @@ ibmcloud software-defined-storage host-update \
 ```sh
 ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 **Aliases**: host-vol-update, hstvidu
 
@@ -459,6 +485,7 @@ ibmcloud software-defined-storage host-vol-update \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -474,6 +501,7 @@ ibmcloud software-defined-storage host-vol-update \
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
 ### Delete a host
 {: #ic-sds-delete-host}
 
@@ -482,6 +510,7 @@ ibmcloud software-defined-storage host-vol-update \
 ```sh
 ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 **Aliases**: host-delete, hstd
 
@@ -493,6 +522,7 @@ ibmcloud software-defined-storage host-delete \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -513,6 +543,7 @@ ibmcloud software-defined-storage host-delete \
 ```sh
 ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 **Aliases**: host-volid-delete, hstvidd
 
@@ -525,6 +556,7 @@ ibmcloud software-defined-storage host-volid-delete \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -548,6 +580,7 @@ ibmcloud software-defined-storage host-volid-delete \
 ```sh
 ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 **Aliases**: host-vol-deleteall, hstvd
 
@@ -559,6 +592,7 @@ ibmcloud software-defined-storage host-vol-deleteall \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Parameters to provide:**
 
@@ -587,6 +621,8 @@ Updates credentials for a storage account or creates them if they do not exist.
 ```sh
 ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY --url string
 ```
+{: pre}
+
 **Example**
 
 ```sh
@@ -595,6 +631,7 @@ ibmcloud software-defined-storage cred-create \
 	--access-key exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Aliases:** cred-create, crc
 
@@ -616,6 +653,8 @@ ibmcloud software-defined-storage cred-create \
 ```sh
 ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY --url string
 ```
+{: pre}
+
 **Aliases**: cred-delete, crd
 
 **Example**
@@ -626,6 +665,7 @@ ibmcloud software-defined-storage cred-create \
 	--access-key exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Aliases:** cred-delete, crd
 
@@ -650,6 +690,8 @@ Retrieves credentials for a specific storage account.
 ```sh
 ibmcloud software-defined-storage credentials --instanceid INSTANCEID --url string
 ```
+{: pre}
+
 **Example**
 
 ```sh
@@ -657,6 +699,7 @@ ibmcloud software-defined-storage credentials \
     --instanceid exampleString
 	--url $sds_endpoint
 ```
+{: screen}
 
 **Aliases:** credentials, crl
 
@@ -678,6 +721,8 @@ Updates the S3 SSL Certificates or creates them if they do not exist.
 ```sh
 ibmcloud software-defined-storage cert-upload --instanceid INSTANCEID --body BODY --url string
 ```
+{: pre}
+
 **Example**
 
 ```sh
@@ -686,6 +731,8 @@ ibmcloud software-defined-storage cert-upload \
     --body exampleString
 	--url $sds_endpoint
 ```
+{: screen}
+
 **Aliases:** cert-upload, crtu
 
 **Parameters to provide:**
@@ -708,6 +755,7 @@ Retrieves the S3 SSL certificate expiration date and status.
 ```sh
 ibmcloud software-defined-storage certificate --instanceid INSTANCEID --url string
 ```
+{: pre}
 
 **Aliases:** certificate, crts
 

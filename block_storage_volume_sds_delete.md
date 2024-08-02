@@ -65,12 +65,12 @@ To delete multiple volumes together, complete the following steps.
 {: #deleting-sds-block-volume-cli}
 {: cli}
 
-Use the `volume-delete` command to delete a single volume. Specify the `--id ID` parameter of the volume and `--instanceid INSTANCEID` parameters of the service instance.
+Use the `volume-delete` command to delete a single volume. Specify the volume id with `--id ID`, deployment instance id `--instanceid INSTANCEID` and API endpoint url.
 
 Run the following command to delete a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH]
+ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH] --url string
 ```
 {: pre}
 
