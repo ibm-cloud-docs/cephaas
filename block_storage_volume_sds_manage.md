@@ -130,11 +130,11 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
 {: note}
 
 
-{{_include-segments/sds_mapping_vol_host_cli.md}}
+{{_include-segments/sds_mapping_vol_host_cli.md#mapping-sds-hosts-cli}}
 
 
 
@@ -165,7 +165,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
 {: note}
 
 
