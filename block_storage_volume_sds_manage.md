@@ -102,7 +102,7 @@ Using CLI, you can complete the following actions.
 * Map a volume to a host.
 * Update capacity to increase the current volume capacity.
 
-Specify the information in the volume patch option to modify the existing details of a volume and run the following command to update the volume details.
+Specify the information to modify the existing details of a volume and run the following command to update the volume details.
 
 ### Renaming block volume from CLI
 {: #renaming-sds-volume-cli}
@@ -132,6 +132,10 @@ Created       2024-06-21T21:08:51Z
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
+
+
+{{_include-segments/sds_mapping_vol_host_cli.md}}
+
 
 
 ### Updating block volume capacity from CLI

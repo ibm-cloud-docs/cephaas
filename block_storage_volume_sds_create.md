@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-05"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -77,7 +77,7 @@ See the following example where the `$sds_endpoint` is an environment variable t
 
 
 ```bash
-ic sds volume-create --instanceid abc --capacity 10 --name example1 --url $sds_endpoint
+ibmcloud sds volume-create --instanceid abc --capacity 10 --name example1 --url $sds_endpoint
 ...
 
 ID             r134-d75e1aeb-4bcf-4d41-8926-517198d55448
@@ -86,8 +86,6 @@ Status         pending
 Mapped_Host    -
 Capacity_GB    10
 Created        2024-07-09T06:24:49Z
-Health_state   inapplicable
-Active         false
 
 ```
 {: screen}
@@ -164,6 +162,7 @@ You can continue creating more volumes or manage existing volumes.
 
 
 * [View volume details](/docs/sdsaas?topic=sdsaas-view-sds-volume&interface=ui#viewvols)
+{: ui}
 
 * [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume#managing-sds-block-volume-ui)
 
