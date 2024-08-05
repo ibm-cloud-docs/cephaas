@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords: sds, sdsaas host,
 
@@ -90,7 +90,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 ## Creating hosts with the API
-{: #creating-sds-host-api}
+{: #sds-creating-host-with-api}
 {: api}
 
 You can create hosts by directly calling the Volume REST APIs. For more information about the file shares CephaaS API, see the IBM Storage Ceph as a Service API reference.
@@ -102,7 +102,7 @@ Define variables for the IAM token and API endpoint.
 
 
 ### Creating a host as part of instance provisioning with the API
-{: #creating-sds-host-api}
+{: #creating-sds-host-instance-provisioning-api}
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and `volume_id`.
 

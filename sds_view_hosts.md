@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-05"
 
 keywords: sds, host, view host details, host summary list
 
@@ -123,7 +123,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ### Viewing a list of all hosts from the CLI
-{: #viewall-vol-cli}
+{: #view-all-host-cli}
 
 Run this command to view the list summary information about all hosts:
 
@@ -161,7 +161,7 @@ You can list all hosts and view details for a specific host within all deploymen
 Before you begin, make sure that you [set up your API environment].
 
 ### Viewing list of all hosts with the API
-{: #viewall-vol-api}
+{: #view-all-host-api}
 
 Make a `GET /hosts` call to list summary information about all hosts. See the following example.
 

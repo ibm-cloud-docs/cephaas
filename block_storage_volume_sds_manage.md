@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-05"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -108,7 +108,7 @@ Specify the information in the volume patch option to modify the existing detail
 {: #renaming-sds-volume-cli}
 {: cli}
 
-Use the `volume-update` command and specify the deployment id, volume id and new name of the volume in the volume along with the endpoint url to rename or update the volume name.
+Use the `volume-update` command and specify the deployment id, volume id and new name of the volume along with the endpoint url to rename or update the volume name.
 
 Run the following command for updating the name of a volume.
 
@@ -149,14 +149,14 @@ See the following example for updating the capacity of a volume.
 
 ```bash
 
-ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --capacity 15 --url $sds_endpoint
+ibmcloud sds volume-update --instanceid abc --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --capacity 20 --url $sds_endpoint
 ...
 
 ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
-Name          demo3
+Name          new-demo3
 Status        updating
 Mapped_Host   -
-Capacity_GB   15
+Capacity_GB   20
 Created       2024-06-21T21:08:51Z
 ```
 {: screen}

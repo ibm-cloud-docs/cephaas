@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords:
 
@@ -31,9 +31,6 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to a specific resource within an instance, _such as resource type `bucket`_
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the CephaaS service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to CephaaS and the ability to call the CephaaS's API. For information about the exact actions that are mapped to each role, see [CephaaS](_YourSubHeadingLink_).
-
-
-
 
 
 

@@ -46,6 +46,7 @@ toc:
       - topicgroup:
           label: Manage Hosts
           topics:
+          - sds_about_volume_host_mappings.md
           - sds_create_host.md
           - sds_view_hosts.md
           - sds_manage_hosts.md
@@ -62,6 +63,7 @@ toc:
           label: Managing access
           topics:
             - sds_manage_iam_access.md
+            - service_credential_overview_sds.md
             - service_credential_sds_create.md
             - service_credential_sds_view.md
             - service_credential_sds_delete.md
@@ -82,9 +84,9 @@ toc:
             - link:
                 label: Block storage API
                 href: https://{DomainName}/apidocs/sds-block-storage
-#            - link:
-#                label: Accounts API
-#                href: https://{DomainName}/docs/api-docs/software-defined-storage/accounts
+            - link:
+                label: Accounts API
+                href: https://{DomainName}/apidocs/accounts
       - topicgroup:
           label: Use the command line
           topics:

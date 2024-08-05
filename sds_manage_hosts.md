@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -54,7 +54,7 @@ To rename a host, complete the following steps.
 
 
 ### Mapping volumes to a host in the UI
-{: #mapping-volume-sds-hosts-ui}
+{: #sds-mapping-volume-to-host-ui}
 {: ui}
 
 
@@ -80,7 +80,7 @@ Using CLI, you can complete the following actions.
 
 
 ### Rename a host
-{: #ic-sds-rename-host}
+{: #sds-rename-host-cli}
 
 Use the `host-update` command to rename a specific host.
 
@@ -205,6 +205,6 @@ A successful response looks like this:
 
 
 ## Next steps
-{: #next-step-updating-volume-sds}
+{: #next-step-updating-hosts-sds}
 
 You can continue with renaming or mapping hosts.

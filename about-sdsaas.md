@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-05"
 
 keywords:
 
@@ -27,7 +27,7 @@ The [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: externa
 ## CephaaS on IBM Cloud Satellite
 {: #sds-satellite}
 
-Workloads that require unified storage on-premise, or in a geographic location not supported by IBM Cloud data centers, can make use of IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite).
+Workloads that require unified storage on-premise, or in a geographic location not supported by IBM Cloud data centers, can make use of IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite){: external}.
 
 ## Next Steps
 {: #about-sds-next-steps}

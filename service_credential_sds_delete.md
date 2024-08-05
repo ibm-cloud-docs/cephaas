@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-31"
+lastupdated: "2024-08-05"
 
 keywords: sdsaas , delete service credential
 
@@ -59,7 +59,7 @@ ibmcloud software-defined-storage cred-delete --instanceid exampleString --acces
 
 
 ## Deleting a service credential with the API
-{: #creating-service-credential-api}
+{: #deleting-service-credential-api}
 {: api}
 
 You can delete a specific credential for the "default" storage account using an access key.
