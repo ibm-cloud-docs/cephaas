@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-06"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -12,23 +12,21 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing hosts
-{: #managing-sds-hosts}
+# Updating hosts
+{: #Updating-sds-hosts}
 
-You can manage hosts in the UI, from the CLI, or with the API.
+You can update hosts in the UI, from the CLI, or with the API.
 {: shortdesc}
 
-## Managing hosts in the UI
-{: #managing-sds-host-name-ui}
+## Updating hosts in the UI
+{: #updating-sds-host-name-ui}
 {: ui}
 
-Use the console to manage the hosts. In the console, you can complete the following actions.
+Use the console to update the hosts. In the console, you can complete the following actions.
 
 * Rename a host
 * Map volumes to a host
 * Unmap volumes for a host
-* Delete a host
-
 
 ### Renaming a host in the UI
 {: #renaming-sds-hosts-ui}
@@ -69,8 +67,8 @@ To map a volume to a host from Hosts page, complete the following steps.
 
 
 
-## Managing hosts from the CLI
-{: #managing-sds-hosts-cli}
+## Updating hosts from the CLI
+{: #updating-sds-hosts-cli}
 {: cli}
 
 Using CLI, you can complete the following actions.
@@ -132,11 +130,11 @@ ibmcloud software-defined-storage host-vol-update \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
-## Managing host with the API
-{: #managing-sds-hosts-api}
+## Updating host with the API
+{: #updating-sds-hosts-api}
 {: api}
 
-To manage your hosts with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
+To update your hosts with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
 
 
 PATCH operation to change more than one parameter value in the same command is not supported.
@@ -207,4 +205,4 @@ A successful response looks like this:
 ## Next steps
 {: #next-step-updating-hosts-sds}
 
-You can continue with renaming or mapping hosts.
+You can continue with renaming, mapping and unmapping hosts.

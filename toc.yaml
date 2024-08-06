@@ -35,8 +35,9 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - sds_setup_environment.md
       - topicgroup:
-          label: Manage Block storage
+          label: Managing Block storage
           topics:
           - block_storage_volume_sds_about.md
           - block_storage_volume_sds_create.md
@@ -44,7 +45,7 @@ toc:
           - block_storage_volume_sds_manage.md
           - block_storage_volume_sds_delete.md
       - topicgroup:
-          label: Manage Hosts
+          label: Managing Hosts
           topics:
           - sds_about_volume_host_mappings.md
           - sds_create_host.md
@@ -52,11 +53,11 @@ toc:
           - sds_manage_hosts.md
           - sds_delete_hosts.md
       - topicgroup:
-          label: Manage storage capacity
+          label: Managing storage limits
           topics:
             - sds_quota_mgmt.md
-            - block_storage_volume_sds_capacity_performance.md
-            - block_storage_volume_sds_manage_storage_limits.md
+            - sds_capacity_performance.md
+            - sds_manage_storage_limits.md
 #            - adding_capacity.md
 #            - view_capacity_details.md
       - topicgroup:
@@ -105,4 +106,7 @@ toc:
           topics:
              - sds_faq_general.md
              - sds_faq_plans.md
-             - sds_faq_vol_mgmt.md
+      - topicgroup:
+          label: Troubleshooting Storage
+          topics:
+            - sds_troubleshooting_storage.md

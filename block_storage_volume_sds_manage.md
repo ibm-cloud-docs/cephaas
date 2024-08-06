@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-06"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -49,7 +49,7 @@ To rename a volume, complete the following steps.
 
 To map a volume to a host from Volumes page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **Resource list > Storage > Deployment > Block Storage > Volumes**.
 2. Locate the Volume **Name** and click the `options` icon at the end of the row to open a list of options.
 3. From the options menu, click **Map to host**.
 4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
