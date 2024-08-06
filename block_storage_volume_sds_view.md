@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-06"
 
 keywords: list all volumes, view volume details
 
@@ -107,7 +107,7 @@ The following example uses the volume ID to show volume details.
 
 ```sh
 $ ibmcloud sds volume --instanceid abc --url $sds_endpoint --id r134-3a7a8360-be78-4723-a341-356be350e683
-Getting volume demo-volume-update...
+...
 
 ID             r134-3a7a8360-be78-4723-a341-356be350e683
 Name           saved-sandblast-calcium-heftiness
@@ -252,6 +252,7 @@ A successful response provides details of the volume, including capacity and IOP
 Create more volumes or manage your existing SDSaaS volumes.
 
 * [Create a volume](/docs/sdsaas?topic=sdsaas-creating-sds-block-volume)
+
 
 * [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)
 
