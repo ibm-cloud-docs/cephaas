@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-06"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -115,9 +115,3 @@ Sanitizing and deleting the volume means your data can't be restored.
 {: #next-step-deleting-block-storage-volume-sds}
 
 You can continue creating more volumes or manage existing volumes.
-
-* [Create a volume](/docs/sdsaas?topic=sdsaas-creating-sds-block-volume)
-
-* [View volume details](/docs/sdsaas?topic=sdsaas-view-sds-volume)
-
-* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)

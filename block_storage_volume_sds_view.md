@@ -249,11 +249,4 @@ A successful response provides details of the volume, including capacity and IOP
 ## Next steps
 {: #next-step-viewing-block-storage-volumes}
 
-Create more volumes or manage your existing SDSaaS volumes.
-
-* [Create a volume](/docs/sdsaas?topic=sdsaas-creating-sds-block-volume)
-
-
-* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume)
-
-* [Delete a volume](/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume)
+Create more volumes, map volume to hosts or manage your existing volumes.

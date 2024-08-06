@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-06"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -158,12 +158,4 @@ A successful response looks like this:
 When you refresh the Volumes page, the new volume appears at the beginning of the list of volumes. If the volume was created successfully, it shows status as `Available`.
 {: ui}
 
-You can continue creating more volumes or manage existing volumes.
-
-
-* [View volume details](/docs/sdsaas?topic=sdsaas-view-sds-volume&interface=ui#viewvols)
-{: ui}
-
-* [Manage volume](/docs/sdsaas?topic=sdsaas-managing-sds-block-volume#managing-sds-block-volume-ui)
-
-* [Delete a volume](/docs/sdsaas?topic=sdsaas-deleting-sds-block-volume)
+You can continue creating more volumes, map volume to hosts or manage existing volumes.
