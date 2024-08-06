@@ -150,7 +150,7 @@ To verify that this variable was saved, run ``echo $api_version`` and make sure 
 ### Step 5: Verify that you have API access
 {: #verify-api-access}
 
-If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. For more information about commonly encountered errors, see [Troubleshooting](/docs/sdsaas?topic=sds-troubleshooting-storage).
+If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. For more information about commonly encountered errors, see [Troubleshooting](/docs/sdsaas?topic=sds-troubleshooting-block-storage).
 {: tip}
 
 

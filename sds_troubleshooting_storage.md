@@ -14,10 +14,10 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting {{site.data.keyword.block_storage_is_short}}
+# Troubleshooting CephaaS
 {: #troubleshooting-block-storage}
 
-When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_short}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
+When you create or manage Block and Object Storage for CephaaS, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
 {: shortdesc}
 
 ## Cannot retrieve a volume in a specified deployment
