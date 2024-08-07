@@ -40,7 +40,7 @@ To delete a host, complete the following steps.
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
-2. Select one or more Host **Name** that you want to delete
+2. Select one or more Host **Name** that you want to delete.
 
 3. Click **Delete**.
 
@@ -56,11 +56,14 @@ To delete all volumes that are mapped to a host, complete the following steps.
 
 2. Click the Host **Name** from which you want to delete the mapped volume.
 
-3. From the Mapped volumes list, locate the volume **Name** and click the **Options** menu at the end of the row.
+3. On the Host details page, in the Mapped volumes list, locate the volume **Name** and click the **Options** menu at the end of the row.
 
 4. Click **Unmap**. Confirmation popup is displayed.
 
 5. Click **Unmap** to confirm the unmapping of selected volume from the host.
+
+
+
 
 
 ## Deleting host from the CLI
