@@ -37,7 +37,7 @@ To rename a host, complete the following steps.
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Hosts**.
 2. Locate the Host **Name** and click the `options` icon at the end of the Host row to open a list of options.
 3. From the options menu, click **Rename**.
-4. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. For example, if you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
+4. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. If you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
 5. Click **Rename**.
 
 
@@ -45,23 +45,25 @@ To rename a host, complete the following steps.
 {: #renaming-sds-hosts-from-details-page-ui}
 {: ui}
 
-1. In the **Host** details page, click the `Actions` button.
-3. From the Actions menu, you can click **Rename** OR you can click the `pen` icon next to the host name to modify the host name.
-4. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. For example, if you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
-5. Click **Rename**.
+1. In the **Host** details page, click the `pen` icon next to the host name to modify the host name.
+2. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. If you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
+3. Click **Rename**.
 
 
 ### Mapping volumes to a host in the UI
 {: #sds-mapping-volume-to-host-ui}
 {: ui}
 
-
 To map a volume to a host from Hosts page, complete the following steps.
 
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Hosts**.
 2. Locate the host **Name** and click the `options` icon at the end of the row to open a list of options.
 3. From the options menu, click **Map volumes**.
-4. Select one or more volumes that you would like to map to the host.
+4. Select one or more volumes that you want to map to the host.
+
+    Volumes in pending state and already mapped volumes will not be listed in the table.
+    {: note}
+
 5. Click **Map**.
 
 

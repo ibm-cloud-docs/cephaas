@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-07"
 
 keywords: sds, host, view host details, host summary list
 

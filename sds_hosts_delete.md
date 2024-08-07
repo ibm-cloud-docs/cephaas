@@ -202,7 +202,3 @@ To verify that all volumes mappings for a given host is deleted, list the hosts 
 
 
 
-## Next steps
-{: #next-step-deleting-hosts-sds}
-
-
