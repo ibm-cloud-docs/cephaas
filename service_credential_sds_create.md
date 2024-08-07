@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-07"
 
-keywords: service credential create
+keywords: how to create cephaas S3 credential for object storage
 
 subcollection: sdsaas
 
@@ -12,35 +12,35 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Create a service credential
-{: #create-service-credential-sds}
+# Creating S3 credential
+{: #creating-s3-credential-sds}
 
-Create service credentials by using the UI, CLI, or API.
+Create S3 credentials for object storage by using the UI, CLI, or API.
 {: shortdesc}
 
 
 
-## Creating a service credential using the UI
-{: #creating-service-credential-using-ui}
+## Creating S3 credential using the UI
+{: #creating-s3-credential-using-ui}
 {: ui}
 
-To create a service credential, complete the following steps.
+To create s3 credential, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Object Storage > Service credentails** tab.
+1. On the IBM Cloud console, navigate to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentails** tab.
 
 2. Click **New credential**.
 
-3. Enter service credential **Name** and click **Add**.
+3. Enter S3 credential **Name** and click **Add**.
 
 
-## Creating service credential from the CLI
-{: #creating-object-service-credential-cli}
+## Creating S3 credential from the CLI
+{: #creating-object-s3-credential-cli}
 {: cli}
 
-You can create a service credential by using the command-line interface (CLI).
+You can create S3 credential by using the command-line interface (CLI).
 
 ### Before you begin
-{: #before-creating-service-credential-cli}
+{: #before-creating-s3-credential-cli}
 
 Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
 
@@ -56,12 +56,12 @@ ibmcloud login --sso -a cloud.ibm.com
 This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
 {: pre}
 
-### Creating a service credential from the CLI
-{: #creating-service-credential-cli}
+### Creating S3 credential from the CLI
+{: #creating-s3-credential-cli}
 {: help}
 {: support}
 
-Run the following command with the `INSTANCEID`, `ACCESS-KEY` and API endpoint to create a new storage account credential or update an existing credential for the storage deployment.
+Run the following command with the `INSTANCEID`, `ACCESS-KEY` and API endpoint to create a new object storage S3 credential or update an existing credential for the storage deployment.
 
 ```sh
 ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY --url string
@@ -80,11 +80,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-## Creating a service credential with the API
-{: #creating-service-credential-api}
+## Creating S3 credential with the API
+{: #creating-s3-credential-api}
 {: api}
 
-You can create a service credential for "default" storage account which can be identified by an access key.
+You can create a S3 credential for object storage identifying the access key.
 
 ```sh
 curl -X 'POST' \
@@ -107,4 +107,4 @@ A successful response looks like this:
 
 
 ## Next steps
-{: #next-step-creating-service-credential-sds}
+{: #next-step-creating-s3-credential-sds}
