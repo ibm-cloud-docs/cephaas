@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-01"
+lastupdated: "2024-08-07"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -25,7 +25,7 @@ S3 certificates are required to secure the S3 endpoint. You can upload to add a 
 
 To upload a S3 certificate, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Settings**.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Settings**.
 
 2. Click **Upload certificate**.
 
@@ -85,5 +85,3 @@ A successful response looks like this:
 {: screen}
 
 
-## Next steps
-{: #next-step-uploading-s3-certificate-sds}

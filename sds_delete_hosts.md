@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-07"
 
 keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
@@ -25,7 +25,7 @@ Delete a host from a service instance by using the UI, CLI, or API.
 
 To delete a host, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Block Storage > Hosts**.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
 2. Locate the Host **Name** that you want to delete and then click the **Options** menu at the end of the row to open a list of options.
 
@@ -38,7 +38,7 @@ To delete a host, complete the following steps.
 
 To delete a host, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Block Storage > Hosts**.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
 2. Select one or more Host **Name** that you want to delete
 
@@ -52,7 +52,7 @@ To delete a host, complete the following steps.
 
 To delete all volumes that are mapped to a host, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **SDS as a Service > Block Storage > Hosts**.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
 2. Click the Host **Name** from which you want to delete the mapped volume.
 

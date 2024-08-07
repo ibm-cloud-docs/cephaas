@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-07"
 
 keywords: sds, sdsaas host,
 
@@ -25,7 +25,7 @@ Create a host by using the UI, CLI, or API.
 
 Use the {{site.data.keyword.cloud_notm}} console to create a host for a service instance.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **SDS as a Service > Block storage > Hosts**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Hosts**.
 2. Click **Create host**.
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 

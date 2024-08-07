@@ -23,7 +23,7 @@ View object storage S3 credential using the UI, CLI, or API.
 {: #view-all-sds-s3-credential-ui}
 {: ui}
 
-To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentails** tab.
+To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
 
 
 ## View credential detail in the UI
@@ -32,7 +32,7 @@ To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} 
 
 To view S3 credential details,
 
-1. Go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentails** tab.
+1. Go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
 
 2. Click on the credential name. The row expands downwards to display the details.
 

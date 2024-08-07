@@ -26,7 +26,7 @@ Create S3 credentials for object storage by using the UI, CLI, or API.
 
 To create s3 credential, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentails** tab.
+1. On the IBM Cloud console, navigate to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
 
 2. Click **New credential**.
 
