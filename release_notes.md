@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-07"
 
 keywords: CephaaS release notes
 
@@ -20,7 +20,7 @@ content-type: release-note
 
 
 # Release notes for IBM Storage Ceph as a Service
-{: #my-service-relnotes}
+{: #sds-relnotes}
 
 
 

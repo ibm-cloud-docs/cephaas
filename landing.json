@@ -10,17 +10,17 @@
       {
         "title": "Getting started",
         "description": "Get up and running quickly by completing this short tutorial to set up a CephaaS service.",
-        "href": "/docs/sdsaas?topic=sdsaas-getting-started"
+        "href": "/docs/sdsaas?topic=getting-started"
       },
       {
         "title": "Create a block volume",
         "description": "Description of topic.",
-        "href": "/docs/sdsaas?topic=sdsaas-creating-sds-block-volume"
+        "href": "/docs/sdsaas?topic=creating-sds-block-volume"
       },
       {
         "title": "IBM Software Defined Storage as a Service CLI",
         "description": "The Software defined storage as a service (SDSaaS) plug-in extends the IBM Cloud command line interface (CLI) with an API wrapper for working with unified storage resources.",
-        "href": "/docs/sdsaas?topic=sdsaas-ic-sds-cli-reference"
+        "href": "/docs/sdsaas?topic=ic-sds-cli-reference"
       }
     ],
     "section_learn": {
@@ -29,7 +29,7 @@
       "training": "https://www.ibm.com/training/cloud",
     },
     "section_updates": {
-      "view_more": "/docs/sdsaas?topic=sdsaas-release-notes",
+      "view_more": "/docs/sdsaas?topic=sds-relnotes",
       "tiles": [
         {
           "date": "1 November 2024",
