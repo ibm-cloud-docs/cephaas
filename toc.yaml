@@ -83,11 +83,11 @@ toc:
           label: API & SDK reference
           links:
             - link:
-                label: Block storage API
+                label: IBM CephaaS Block storage API
                 href: https://{DomainName}/apidocs/sds-block-storage
             - link:
-                label: Accounts API
-                href: https://{DomainName}/apidocs/accounts
+                label: IBM CephaaS Object Storage API
+                href: https://{DomainName}/apidocs/sds-object-storage
       - topicgroup:
           label: Use the command line
           topics:
