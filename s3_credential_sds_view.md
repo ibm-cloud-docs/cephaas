@@ -15,7 +15,7 @@ subcollection: sdsaas
 # View S3 credential details
 {: #view-s3-credential-sds}
 
-View object storage S3 credential using the UI, CLI, or API.
+View object storage S3 credential using the UI and CLI.
 {: shortdesc}
 
 
