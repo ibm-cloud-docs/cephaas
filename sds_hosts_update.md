@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Updating hosts
-{: #Updating-sds-hosts}
+{: #updating-sds-hosts}
 
 You can update hosts in the UI, from the CLI, or with the API.
 {: shortdesc}
@@ -204,7 +204,3 @@ A successful response looks like this:
 
 
 
-## Next steps
-{: #next-step-updating-hosts-sds}
-
-You can continue with renaming, mapping and unmapping hosts.

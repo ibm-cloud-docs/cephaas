@@ -31,7 +31,7 @@ You can view a summary of all host and view details for a single volume for the 
 
 List all hosts and all mapped volumes.
 
-To view all the hosts, in the [console], navigate to **Block Storage > Hosts**.
+To view all the hosts, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Block Storage > Hosts**.
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 
@@ -256,7 +256,3 @@ A successful response provides details of the host, such as the host id, host na
 {: codeblock}
 
 
-## Next steps
-{: #next-step-view-hosts}
-
-Add hosts or manage your existing hosts.
