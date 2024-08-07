@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-07"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -151,11 +151,17 @@ ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage host-vol-update \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
-    --url $sds_endpoint
+ibmcloud sds hstvidu --instanceid "abc123" --url "$sds_endpoint/v1" --host-id "r134-0bb14043-73a1-47e0-b46c-a147fdacba25" --volume-id "r134-3bc5068a-2936-4f30-b277-968fad03da2d"
+...
+
+Created_At    2024-07-23T04:53:29Z
+ID        r134-0bb14043-73a1-47e0-b46c-a147fdacba25
+Name       host1
+NQN        nqn.2014-08.org.nvmexpress:uuid:54821642-dc4b-47bd-9b54-02699cebac79
+Volume_Mappings
+         Status    pending
+         Volume_ID   r134-3bc5068a-2936-4f30-b277-968fad03da2d
+         Volume_Name  volume1
 ```
 {: screen}
 

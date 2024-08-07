@@ -91,7 +91,7 @@ toc:
       - topicgroup:
           label: Use the command line
           topics:
-           - block-volume-storage-cli-reference.md
+           - sds-cli-reference.md
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
