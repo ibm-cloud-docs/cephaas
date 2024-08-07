@@ -151,7 +151,7 @@ ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id 
 See the following example.
 
 ```bash
-ibmcloud sds hstvidu --instanceid "abc123" --url "$sds_endpoint/v1" --host-id "r134-0bb14043-73a1-47e0-b46c-a147fdacba25" --volume-id "r134-3bc5068a-2936-4f30-b277-968fad03da2d"
+ibmcloud sds hstvidu --instanceid "abc123" --url "$sds_endpoint" --host-id "r134-0bb14043-73a1-47e0-b46c-a147fdacba25" --volume-id "r134-3bc5068a-2936-4f30-b277-968fad03da2d"
 ...
 
 Created_At    2024-07-23T04:53:29Z
