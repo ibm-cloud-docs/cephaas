@@ -48,10 +48,10 @@ toc:
           label: Managing Hosts
           topics:
           - sds_about_volume_host_mappings.md
-          - sds_create_host.md
-          - sds_view_hosts.md
-          - sds_manage_hosts.md
-          - sds_delete_hosts.md
+          - sds_host_create.md
+          - sds_hosts_view.md
+          - sds_hosts_update.md
+          - sds_hosts_delete.md
       - topicgroup:
           label: Managing storage limits
           topics:
