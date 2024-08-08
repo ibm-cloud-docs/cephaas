@@ -28,8 +28,6 @@ Use these release notes to learn about the latest updates to IBM Storage Ceph as
 {: shortdesc}
 
 
-For information about changes to the IBM Storage Ceph as a Service API, see [Change log for IBM Storage Ceph as a Service API](/docs/link-to-change-log).
-{: tip}
 
 
 

@@ -12,8 +12,6 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-_Include your activity tracking events file in an Observability topic group in the How to nav group in your toc.yaml file._
-
 
 
 # Activity tracking events for {{site.data.keyword.cephaas_short}}
@@ -21,7 +19,7 @@ _Include your activity tracking events file in an Observability topic group in t
 
 
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_short}} , generate activity tracking events.
+{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_short}}, generate activity tracking events.
 {: shortdesc}
 
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
@@ -49,7 +47,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #at-table-1}
 {: tab-title="Americas"}

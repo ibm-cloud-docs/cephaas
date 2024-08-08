@@ -71,7 +71,7 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
+### Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
 {: #lr-locations}
 
 
