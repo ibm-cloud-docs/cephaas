@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-08"
 
 keywords:
 
@@ -20,14 +20,14 @@ IBM Storage Ceph as a Service is high performing, flexible, and predictable unif
 
 
 
-Developers use APIs to interact with their unified storage. IBM Storage Ceph as a Service supports a subset of the S3 API for reading and writing data, as well as accounts configuration. Additionally, there is a Resource Configuration API for reading and configuring bucket metadata. Software development kits (SDKs) are available for the Python, Java, Go, and the Node.js framework. A plug-in is available for the [{{site.data.keyword.cloud_notm}} Command Line Interface](/docs/cli?topic=cli-getting-started).
+Developers use APIs to interact with their unified storage. IBM Storage Ceph as a Service supports a subset of the S3 API for reading and writing data, as well as accounts configuration. Additionally, there is a Resource Configuration API for reading and configuring bucket metadata. Software development kits (SDKs) are available for the Python, Java, Go, and the Node.js framework. A plug-in is available for the [{{site.data.keyword.cloud_notm}} Command-Line Interface](/docs/cli?topic=cli-getting-started).
 
 The [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external} provides a user interface for most operations and configuration as well.
 
 ## CephaaS on IBM Cloud Satellite
 {: #sds-satellite}
 
-Workloads that require unified storage on-premise, or in a geographic location not supported by IBM Cloud data centers, can make use of IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite){: external}.
+Workloads that require unified storage on-premises, or in a geographic location that is not supported by IBM Cloud data centers, can use IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite){: external}.
 
 ## Next Steps
 {: #about-sds-next-steps}

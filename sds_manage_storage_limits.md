@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-08"
 
 keywords: cephaas, volume, capacity, Block Storage
 
@@ -46,7 +46,7 @@ Review the following checklist items and record your answers. Provide this infor
 - **Provide an estimate of when you expect or plan to provision all of the requested volumes.**
     >*"I expect to create these volumes within 90 days".*
 
-- **Provide a 90-day forecast of expected average capacity usage of these volumes.**
+- **Provide a 90-day forecast of expected average capacity USAGE of these volumes.**
     >*"I expect 25% of the volumes to be used in 30 days, 50 percent to be used in 60 days and 75% to be used in 90 days".*
     >"*For secondary volumes, I expect to create 50% of the secondary volumes at less than 250 GB within 30 days and secondary volumes greater than 250 (if possible, estimate volume size) within 60 days."*
 

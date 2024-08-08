@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-08"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -63,7 +63,7 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment id `SDSAAS-INSTANCE-ID` where the volume will be created.
+Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `SDSAAS-INSTANCE-ID` where the volume will be created.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}

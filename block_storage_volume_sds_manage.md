@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-08"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Managing a block volume
 {: #managing-sds-block-volume}
 
-You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map volume to a host or increase the volume size.
+You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map a volume to a host or increase the volume size.
 {: shortdesc}
 
 ## Managing block volume in the UI
@@ -55,14 +55,14 @@ To map a volume to a host from Volumes page, complete the following steps.
 4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
     1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.
     1. Select the newly created **Host** from the list.
-5. Click **Map**. When mapping completes successfully, the number of hosts mapped to the volume will be displayed in the **Mapped Hosts** column.
+5. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
 
 
 ### Expand block volume size from list view page
 {: #sds-expand-block-volume-size-from-list-view-page}
 {: ui}
 
-To increase the block volume provisioned size from the list view page, complete the following steps.
+To increase the block volume-provisioned size from the list view page, complete the following steps.
 
 1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
@@ -78,7 +78,7 @@ To increase the block volume provisioned size from the list view page, complete 
 {: #sds-expand-block-volume-size-from-details-page}
 {: ui}
 
-To increase the block volume provisioned size from the Volume details page, complete the following steps.
+To increase the block volume-provisioned size from the Volume details page, complete the following steps.
 
 1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
 2. Enter a new **size**.
@@ -108,7 +108,7 @@ Specify the information to modify the existing details of a volume and run the f
 {: #renaming-sds-volume-cli}
 {: cli}
 
-Use the `volume-update` command and specify the deployment id, volume id and new name of the volume along with the endpoint url to rename or update the volume name.
+Use the `volume-update` command and specify the deployment ID, volume ID, and new name of the volume along with the endpoint to rename or update the volume name.
 
 Run the following command for updating the name of a volume.
 
@@ -130,7 +130,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -139,9 +139,9 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #mapping-sds-volume-hosts-cli}
 {: cli}
 
-Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` and `INSTANCEID` to create a volume mapping to the given host ID.
+Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID`, and `INSTANCEID` to create a volume mapping to the host ID.
 
-Run the following command to map the volume to the given host.
+Run the following command to map the volume to the host.
 
 ```sh
 ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
@@ -165,7 +165,7 @@ Volume_Mappings
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -173,7 +173,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #updating-sds-volume-capacity-cli}
 {: cli}
 
-Use the `volume-update` command and specify the deployment id, volume id, capacity and enpoint url to update the capacity of a volume.
+Use the `volume-update` command and specify the deployment ID, volume ID, capacity, and enpoint to update the capacity of a volume.
 
 ```sh
 ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID --capacity CAPACITY --url string
@@ -196,7 +196,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 

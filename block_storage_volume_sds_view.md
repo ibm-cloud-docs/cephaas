@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-08"
 
 keywords: list all volumes, view volume details
 
@@ -66,7 +66,7 @@ The volumes details page shows the details of the chosen volume and all its mapp
 |-------|-------------|
 | **Volume details** | |
 | Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the service instance. |
-| Volume ID | System-generated volume ID. |
+| volume ID | System-generated volume ID. |
 | Provisioned size | Size of the volume you specified, in GBs. |
 | Created date | System-generated date when the volume was created.|
 | Service instance | Name of the instance in the region.|

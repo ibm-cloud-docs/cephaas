@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-08"
 
 keywords: sds, responsibilities matrix
 
@@ -64,8 +64,8 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IAM (Identity and Access Management). Manage access to the on-premise environment. |
-|Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premise environment that audits the actions the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
+|Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IAM (Identity and Access Management). Manage access to the on-premises environment. |
+|Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premises environment that audits the actions the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
 {: row-headers}
 {: caption="Table 3. Responsibilites for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-08"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -65,7 +65,7 @@ To delete multiple volumes together, complete the following steps.
 {: #deleting-sds-block-volume-cli}
 {: cli}
 
-Use the `volume-delete` command to delete a single volume. Specify the volume id with `--id ID`, deployment instance id `--instanceid INSTANCEID` and API endpoint url.
+Use the `volume-delete` command to delete a single volume. Specify the volume ID with `--id ID`, deployment instance id `--instanceid INSTANCEID` and API endpoint url.
 
 Run the following command to delete a volume.
 
