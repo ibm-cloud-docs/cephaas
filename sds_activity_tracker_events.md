@@ -19,7 +19,7 @@ Use {{site.data.keyword.cloud_notm}} Activity Tracker service to track events pe
 The Activity Tracker service records user-initiated activities that change the state of a service in IBM Cloud. To get started monitoring your user's actions, see [Getting started with Activity Tracker](docs/activity-tracker?topic=activity-tracker-getting-started).
 
 ## List of management events
-{: #sds-list-events}
+{: #sds-list-management-events}
 
 The following table lists the actions that generate an event:
 
@@ -37,7 +37,7 @@ The following table lists the actions that generate an event:
 {: caption="Table 1. List of events: Managment" caption-side="top"}
 
 ## List of instance events
-{: #sds-list-events}
+{: #sds-list-instance-events}
 
 The following table lists the actions that generate an event:
 
@@ -51,7 +51,7 @@ The following table lists the actions that generate an event:
 
 
 ## List of object events
-{: #sds-list-events}
+{: #sds-list-object-events}
 
 The following table lists the actions that generate an event:
 
