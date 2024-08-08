@@ -97,8 +97,6 @@ toc:
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
-#      - topic-6.md
-      - sds_activity_tracker_events.md
   - navgroup:
       id: help
       topics:

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-08"
 
 keywords: CephaaS release notes
 
@@ -33,7 +33,7 @@ For information about changes to the IBM Storage Ceph as a Service API, see [Cha
 
 
 
-## 1 November 2024
+## 12 November 2024
 {: #subcollection-nov0124}
 {: release-note}
 

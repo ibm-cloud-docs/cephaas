@@ -40,7 +40,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 
 
 
-## Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
+### Locations where activity tracking events are sent to {{site.data.keyword.at_full_notm}} hosted event search
 {: #at-legacy-locations}
 
 
@@ -77,7 +77,7 @@ As of 28 March 2024, the {{site.data.keyword.at_full_notm}} service is deprecate
 {: class="simple-tab-table"}
 {: row-headers}
 
-## Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
+### Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
 {: #atracker-locations}
 
 
@@ -134,6 +134,8 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 {: #log-launch-integrated}
 
 
+
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.at_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
 {: #log-launch-standalone}
@@ -259,6 +261,7 @@ The following table lists the actions that generate an event for managing servic
 {: tab-group="componentY"}
 {: class="simple-tab-table"}
 {: row-headers}
+
 
 
 ## Analyzing {{site.data.keyword.cephaas_short}} activity tracking events

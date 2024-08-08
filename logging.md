@@ -12,8 +12,6 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-_Include your logging topic in an Observability topic group in the How to nav group in your toc.yaml file._
-
 
 
 # Logging for {{site.data.keyword.cephaas_short}}
