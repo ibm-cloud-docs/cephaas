@@ -26,7 +26,7 @@
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/cloud/",
       "architecture": "https://www.ibm.com/architectures/hybrid",
-      "training": "https://www.ibm.com/training/cloud",
+      "training": "https://www.ibm.com/training/cloud"
     },
     "section_updates": {
       "view_more": "/docs/sdsaas?topic=sds-relnotes",
@@ -35,7 +35,7 @@
           "date": "1 November 2024",
           "title": "Introducing IBM Storage Ceph as a Service",
           "description": "IBM Storage Ceph as a Service is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity."
-        },
+        }
 
       ]
     }
