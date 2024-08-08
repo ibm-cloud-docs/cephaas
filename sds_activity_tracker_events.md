@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-08"
 
-keywords: activity tracker events
+keywords: cephaas activity tracker events
 
 subcollection: sdsaas
 
@@ -18,6 +18,23 @@ Use {{site.data.keyword.cloud_notm}} Activity Tracker service to track events pe
 
 The Activity Tracker service records user-initiated activities that change the state of a service in IBM Cloud. To get started monitoring your user's actions, see [Getting started with Activity Tracker](docs/activity-tracker?topic=activity-tracker-getting-started).
 
+## List of management events
+{: #sds-list-events}
+
+The following table lists the actions that generate an event:
+
+| Action   | Description                                      |
+|:---------|:-------------------------------------------------|
+| software-defined-storage.volume.create | |
+| software-defined-storage.volume.read | |
+| software-defined-storage.volume.update | |
+| software-defined-storage.volume.delete | |
+| software-defined-storage.host.create | |
+| software-defined-storage.host.read | |
+| software-defined-storage.host.delete | |
+| software-defined-storage.volumemap.create | |
+| software-defined-storage.volumemap.delete | |
+{: caption="Table 1. List of events: Managment" caption-side="top"}
 
 ## List of instance events
 {: #sds-list-events}
@@ -26,15 +43,33 @@ The following table lists the actions that generate an event:
 
 | Action   | Description                                      |
 |:---------|:-------------------------------------------------|
-| software-defined-storage.instance.create  |   |
-|   |   |
+| software-defined-storage.instance.create |   |
+| software-defined-storage.instance.update |   |
+| software-defined-storage.instance.delete |   |
+| software-defined-storage.instance.last_operation_get | |
 {: caption="Table 1. List of events: Instance" caption-side="top"}
+
+
+## List of object events
+{: #sds-list-events}
+
+The following table lists the actions that generate an event:
+
+| Action   | Description                                      |
+|:---------|:-------------------------------------------------|
+| software-defined-storage.account.create | |
+| software-defined-storage.account.delete | |
+| software-defined-storage.account.get | |
+| software-defined-storage.instance.get | |
+| software-defined-storage.instance.create | |
+{: caption="Table 1. List of events: Objects" caption-side="top"}
+
 
 
 ## Enabling events
 {: #sds-enabling-events}
 
-Some services requore a paid plan or additional configuration to enable events. Add any information on how to allow the customer to enable collection of events.
+Some services require a paid plan or additional configuration to enable events. Add any information on how to allow the customer to enable collection of events.
 
 ### Enabling events through the UI
 {: #sds-enabling-events-ui}
@@ -54,15 +89,20 @@ Some services requore a paid plan or additional configuration to enable events. 
 ### Enabling events by using an API call
 {: #sds-enabling-events-api}
 
-add example of cURL command including any headers like authorization headers that might be required.
+Add example of cURL command including any headers like authorization headers that might be required.
 
 
 ## Viewing events
 {: #sds-view-events}
 
-Add link to the section where your service is listed in the topic [Cloud services by location](/docs/activity-tracker?topic=activity-tracker-cloud_services_locations).
+You can view the Activity Tracker events that are associated with your Storage deployment by using [IBM Cloud Activity Tracker](/docs/activity-tracker?topic=activity-tracker-getting-started).
+
+To view events, you must identify the location where events are collected and available for monitoring. Then, you must access the web UI of the IBM Cloud Activity Tracker instance in that location. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/activity-tracker?topic=activity-tracker-observe).
+
+
+
 
 ## Analyzing events
 {: #sds-analyze-events}
 
-Add information on custom fields that are included in requestData and responseData fields and that can help users understand your events.
+[TO DO] Add information on custom fields that are included in `requestData` and `responseData` fields and that can help users understand your events.
