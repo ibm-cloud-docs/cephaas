@@ -73,7 +73,6 @@ Some services require a paid plan or additional configuration to enable events. 
 
 ### Enabling events through the UI
 {: #sds-enabling-events-ui}
-{: ui}
 
 1.	From the IBM Cloud console [resource list](https://cloud.ibm.com/resources), select the service instance you are interested in adding for event tracking. This takes you to the CephaaS Storage Console.
 2.	Choose the Deployment for which you want to enable event tracking.
