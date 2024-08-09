@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-08-09"
 
-keywords:
+keywords: IAM access cephaas
 
 subcollection: sdsaas
 
@@ -30,7 +30,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to an individual service instance in your account
 * Access to a specific resource within an instance, _such as resource type `bucket`_
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_shor}} and the ability to call the {{site.data.keyword.cephaas_shor}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](_YourSubHeadingLink_).
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](_YourSubHeadingLink_).
 
 
 
@@ -70,7 +70,7 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to {{site.data.keyword.cephaas_shor}} in the CLI
+## Assigning access to {{site.data.keyword.cephaas_short}} in the CLI
 {: #assign-access-cli}
 {: cli}
 

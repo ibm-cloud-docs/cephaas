@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-09"
 
 keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
@@ -31,6 +31,8 @@ To delete a host, complete the following steps.
 
 3. From the options menu, click **Delete**.
 
+A host cannot be deleted if it has one or more volumes mapped to it. Unmap all associated volumes first to delete the host.
+{: note}
 
 ## Deleting multiple host from the UI
 {: #deleting-sds-multiple-hosts-ui}
@@ -44,7 +46,8 @@ To delete a host, complete the following steps.
 
 3. Click **Delete**.
 
-
+A host cannot be deleted if it has one or more volumes mapped to it. Unmap all associated volumes first to delete the host.
+{: note}
 
 ## Deleting volume mapping from a host from the UI
 {: #deleting-sds-volume-mapping-from-host-ui}
@@ -71,6 +74,9 @@ To delete all volumes that are mapped to a host, complete the following steps.
 {: cli}
 
 Use the `host-delete` command and specify the `INSTANCEID` and endpoint url along with the `HOST-ID` to delete the host based on the host id.
+
+A host cannot be deleted if it has one or more volumes mapped to it. Unmap all associated volumes first to delete the host.
+{: note}
 
 Run the following command to delete a host.
 
@@ -153,6 +159,9 @@ ibmcloud software-defined-storage host-vol-deleteall \
 {: api}
 
 Make a `DELETE /hosts/{id}` request to delete a specific host.
+
+A host cannot be deleted if it has one or more volumes mapped to it. Unmap all associated volumes first to delete the host.
+{: note}
 
 ```sh
 curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}' \
