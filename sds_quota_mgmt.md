@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-09"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Block quota and capacity management
 {: #sds-quota-capacity-mgmt}
 
-CephaaS supports service instance level quotas for both the unified (block & object )and low cost object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit. Object storage quota can be set by allocating the quota value to the default STANDARD for the unified storage plan and the default storage class STANDARD-IA for the low cost object storage plan.
+{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and low cost object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit. Object storage quota can be set by allocating the quota value to the default STANDARD for the unified storage plan and the default storage class STANDARD-IA for the low cost object storage plan.
 
 Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage pool as well as object storage pool.
 

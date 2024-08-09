@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-06"
+lastupdated: "2024-08-09"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -21,7 +21,7 @@ Before you can create an {{site.data.keyword.cephaas_full}} (CephaaS) by using t
 ## General prerequisites
 {: #general-prerequisites}
 
-1. Set up your account to access CephaaS. Make sure that your account is [upgraded to a paid account](/docs/account?topic=account-accountfaqs#changeacct){: external}.
+1. Set up your account to access {{site.data.keyword.cephaas_full_notm}}. Make sure that your account is [upgraded to a paid account](/docs/account?topic=account-accountfaqs#changeacct){: external}.
 2. Make sure that you have a public SSH key, which will be used to connect to the service instance. For example, generate an SSH key on your Linux server by running the following command:
 
     ```sh
@@ -37,20 +37,20 @@ Before you can create an {{site.data.keyword.cephaas_full}} (CephaaS) by using t
 {: #cli-prerequisites-setup}
 {: cli}
 
-Before you can use the CLI, you must install the IBM Cloud CLI and the CephaaS CLI plug-in.
+Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.data.keyword.cephaas_short}} CLI plug-in.
 
 {{site.data.keyword.cloud_notm}} CLI is not supported on LinuxONE (s390x processor architecture). However, you can install the CLI on another supported platform and use it with LinuxONE (s390x processor architecture) virtual server instances.
 {: note}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
-1. Install the CephaaS CLI plug-in.
+1. Install the {{site.data.keyword.cephaas_short}} CLI plug-in `software-defined-storage`.
 
    ```sh
    ibmcloud plugin install software-defined-storage
    ```
    {: pre}
 
-   The CephaaS CLI actions use the extension `sds`. To learn how to use the CLI commands, you can run:
+   The {{site.data.keyword.cephaas_short}} CLI actions also use the aliase `sds`. To learn how to use the CLI commands, you can run:
 
    ```sh
    ibmcloud sds help
@@ -61,12 +61,38 @@ Before you can use the CLI, you must install the IBM Cloud CLI and the CephaaS C
 
 
 
+### Accessing CLI through the  API private endpoint
+{: #access_cli_through_api_private_endpoints}
+
+To set the CLI to use the API private endpoint, follow these steps:
+
+If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated plug-ins, you must be able to access the public repository where they are located.
+{: note}
+
+1. Ensure that the core {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.cephaas_short}} service plug-in are updated to the latest version:
+
+   ```sh
+   ibmcloud update
+   ibmcloud plugin update software-defined-storage
+   ```
+   {: pre}
+
+1. To switch to API private endpoint mode, enter the following command:
+
+   ```sh
+   ibmcloud login -a private.cloud.ibm.com
+   ```
+   {: pre}
+
+   Currently, API private endpoint mode supports only `us-south` and `us-east` regions.
+   {: important}
+
 
 ## API prerequisites
 {: #api-prerequisites-setup}
 {: api}
 
-Before you can use the API to create your CephaaS, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
+Before you can use the API to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
 
 The following examples use the `us-south` regional endpoint. To view additional API endpoints, see [Virtual Private Cloud API](/apidocs/vpc/latest#endpoint-url).
 {: note}

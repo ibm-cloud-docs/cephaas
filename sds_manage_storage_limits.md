@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-09"
 
 keywords: cephaas, volume, capacity, Block Storage
 
@@ -15,13 +15,13 @@ subcollection: sdsaas
 # Managing volume count and capacity limits
 {: #manage-storage-limit}
 
-CephaaS offers block-level data storage volumes that can be attached to an instance as either a boot volume or as a data volume. Answer the following questions when you're ordering Block Storage volumes or requesting an increase in your volume or capacity limits.
+{{site.data.keyword.cephaas_full}} offers block-level data storage volumes that can be attached to an instance as either a boot volume or as a data volume. Answer the following questions when you're ordering Block Storage volumes or requesting an increase in your volume or capacity limits.
 {: shortdesc}
 
 ## Overview
 {: #manage-storage-limit-overview}
 
-With CephaaS, you can create up to 750 data Block Storage volumes per account in a deployment. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
+With {{site.data.keyword.cephaas_short}}, you can create up to 750 data Block Storage volumes per account in a deployment. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
 
 Capacity for secondary volumes ranges from 1 - 16,000 GB. You can also expand volume capacity within its IOPS tier profile or custom band.
 

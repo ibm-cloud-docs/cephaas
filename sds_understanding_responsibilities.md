@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-09"
 
 keywords: sds, responsibilities matrix
 
@@ -12,14 +12,14 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding your responsibilities when using IBM Storage Ceph as a Service
+# Understanding your responsibilities when using {{site.data.keyword.cephaas_short}}
 {: #sdsaas-responsibility-matrix}
 
 
-Learn about the management responsibilities and terms and conditions that you have when you use IBM Storage Ceph as a Service. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
+Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cephaas_short}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {: shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use _yourproduct-full-notm-keyref_. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cephaas_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
 
 
 
@@ -76,7 +76,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
-|  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
+| Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Compliance | Maintain controls commensurate with the compliance certifications/attestations as stated in official data sheets. | Ensure and seek appropriate legal guidance in order to validate its compliance with pertinent industry compliance certifications and regulations. |
 | Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | Update IAM policies and rules using IBM Cloud console to suit to your requirement. Also, ensure that the use of Storage resources are inline with the terms and conditions set forth in the IBM Cloud Service description and any other associated transaction documents. |
