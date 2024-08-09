@@ -13,13 +13,13 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing IAM access for {{site.data.keyword.cephaas_full_notm}}
+# Managing IAM access for {{site.data.keyword.cephaas_short}}
 {: #iam-cephaas-docs}
 
-Access to {{site.data.keyword.cephaas_full_notm}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_shor}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_shor}}.
+Access to {{site.data.keyword.cephaas_full_notm}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_short}}.
 {: shortdesc}
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.cephaas_shor}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
+The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.cephaas_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
 If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
 {: tip}
@@ -30,7 +30,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to an individual service instance in your account
 * Access to a specific resource within an instance, _such as resource type `bucket`_
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_shor}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_shor}} and the ability to call the {{site.data.keyword.cephaas_shor}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_shor}}](_YourSubHeadingLink_).
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_shor}} and the ability to call the {{site.data.keyword.cephaas_shor}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](_YourSubHeadingLink_).
 
 
 
@@ -60,7 +60,7 @@ Review the following tables that outline what types of tasks each role allows fo
 {: tab-title="Service roles"}
 {: tab-group="IAM"}
 
-## Assigning access to CephaaS in the console
+## Assigning access to {{site.data.keyword.cephaas_short}} in the console
 {: #assign-access-console}
 {: ui}
 
@@ -87,7 +87,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 ```
 {: pre}
 
-## Assigning access to CephaaS by using the API
+## Assigning access to {{site.data.keyword.cephaas_short}} by using the API
 {: #assign-access-api}
 {: api}
 
