@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-09"
 
 keywords:
 
@@ -13,13 +13,13 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing IAM access for IBM Storage Ceph as a Service
+# Managing IAM access for {{site.data.keyword.cephaas_full_notm}}
 {: #iam-cephaas-docs}
 
-Access to IBM Storage Ceph as a Service (CephaaS) service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the CephaaS service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to CephaaS.
+Access to {{site.data.keyword.cephaas_full_notm}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_shor}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_shor}}.
 {: shortdesc}
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the CephaaS as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
+The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.cephaas_shor}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
 If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles) and pick the actions to include.
 {: tip}
@@ -30,7 +30,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to an individual service instance in your account
 * Access to a specific resource within an instance, _such as resource type `bucket`_
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the CephaaS service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to CephaaS and the ability to call the CephaaS's API. For information about the exact actions that are mapped to each role, see [CephaaS](_YourSubHeadingLink_).
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_shor}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_shor}} and the ability to call the {{site.data.keyword.cephaas_shor}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_shor}}](_YourSubHeadingLink_).
 
 
 
@@ -70,7 +70,7 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to CephaaS in the CLI
+## Assigning access to {{site.data.keyword.cephaas_shor}} in the CLI
 {: #assign-access-cli}
 {: cli}
 
