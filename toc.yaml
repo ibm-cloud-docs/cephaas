@@ -64,12 +64,18 @@ toc:
           label: Managing access
           topics:
             - sds_manage_iam_access.md
-#            - s3_credential_overview_sds.md
-            - s3_credential_sds_create.md
-            - s3_credential_sds_view.md
-            - s3_credential_sds_delete.md
-            - uploading_s3_cert_sds.md
-            - retrieving_s3_cert_sds.md
+            - topicgroup:
+                label: Service credentials
+                topics:
+                  - s3_credential_overview_sds.md
+                  - s3_credential_sds_create.md
+                  - s3_credential_sds_view.md
+                  - s3_credential_sds_delete.md
+            - topicgroup:
+                label: S3 Certificates
+                topics:
+                  - uploading_s3_cert_sds.md
+                  - retrieving_s3_cert_sds.md
 #            - service_credential_update.md
       - topicgroup:
           label: Observability
