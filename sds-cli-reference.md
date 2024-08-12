@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-12"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -107,7 +107,7 @@ ibmcloud software-defined-storage [command] [options]
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume-create --instanceid INSTANCEID [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud software-defined-storage volume-create --instanceid INSTANCEID --capacity CAPACITY --name NAME --url string
 ```
 {: pre}
 
@@ -117,10 +117,9 @@ ibmcloud software-defined-storage volume-create --instanceid INSTANCEID [--capac
 
 ```sh
 ibmcloud software-defined-storage volume-create \
+	--instanceid sds-instance-1
 	--capacity 40 \
 	--name my-volume \
-	--sdsaas-instance-id exampleString \
-	--hostnqnstring exampleString
 	--url $sds_endpoint
 ```
 {: screen}
@@ -139,17 +138,13 @@ ibmcloud software-defined-storage volume-create \
 	If you do not specify a name for the new volume, the system generates a name that is a hyphenated list of randomly-selected words.
 	{: note}
 
-* Service instance ID where the volume is created.
-	* Flag: `--sdsaas-instance-id SDSAAS-INSTANCE-ID`
 
-* The host NVMe Qualified Name
-	* Flag: `--hostnqnstring HOSTNQNSTRING`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### Retrieve a single volume profile
-{: #ic-sds-retrieve-volume-profile}
+### Retrieve a single volume details
+{: #ic-sds-retrieve-volume-details}
 
 **USAGE:**
 
@@ -171,7 +166,7 @@ ibmcloud software-defined-storage volume \
 {: screen}
 
 **Parameters to provide:**
-* The volume profile id.
+* The volume identifier.
 	* Flag: `--id ID`
 
 * Service instance identifier.
@@ -210,7 +205,7 @@ ibmcloud software-defined-storage volume-update \
 
 **Parameters to provide:**
 
-* The volume profile ID.
+* The volume identifier.
 	* Flag:`--id ID`
 
 * The service instance identifier.
@@ -238,7 +233,7 @@ ibmcloud software-defined-storage volume-update \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID [--if-match IF-MATCH] --url string
+ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID --url string
 ```
 {: pre}
 
@@ -250,14 +245,13 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 ibmcloud software-defined-storage volume-delete \
 	--instanceid exampleString \
     --id exampleString \
-    --if-match exampleString
 	--url $sds_endpoint
 ```
 {: screen}
 
 **Parameters to provide:**
 
-* The volume profile ID.
+* The volume identifier.
 	* Flag:`--id ID`
 
 * The service instance identifier.
@@ -297,6 +291,9 @@ ibmcloud software-defined-storage volumes \
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
+
+
 
 ## Hosts
 {: #ic-sds-hosts}

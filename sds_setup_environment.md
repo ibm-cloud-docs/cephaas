@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-12"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -153,7 +153,7 @@ sds_api_endpoint="https://us-south.private.iaas.cloud.ibm.com"
 ```
 {: pre}
 
-To verify that this variable was saved, run ``echo $vpc_api_endpoint`` and make sure that the response is not empty.
+To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make sure that the response is not empty.
 
 For supported endpoint regions, see [Endpoints available](/docs/sdsaas?topic=sds-service-endpoints).
 {: note}

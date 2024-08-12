@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-12"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -90,7 +90,6 @@ You can create a S3 credential for object storage by specifying the access key.
 curl -X 'POST' \
   '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
   -H 'accept: application/json' \
-  -d ''
 
 ```
 {: pre}

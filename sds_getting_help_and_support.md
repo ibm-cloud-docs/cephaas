@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-07-30"
+lastupdated: "2024-08-12"
 
 keywords: sds getting help, getting sdsaas support
 
@@ -14,10 +14,10 @@ subcollection: sdsaas
 
 
 
-# Getting help and support for SDSaaS
+# Getting help and support for {{site.data.keyword.cephaas_short}}
 {: #sds-help-and-support}
 
-If you experience an issue or have questions when using the IBM Storage Ceph as a Service, you can use the following resources before you open a support case.
+If you experience an issue or have questions when using the {{site.data.keyword.cephaas_full}}, you can use the following resources before you open a support case.
 {: shortdesc}
 
 * Review the [FAQs](/docs/linktoyourfaqtopic) in the product documentation.
