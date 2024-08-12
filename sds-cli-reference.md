@@ -327,13 +327,13 @@ ibmcloud software-defined-storage host-create \
 * The service instance identifier.
 	* Flag: `--instanceid INSTANCEID`
 
-* NVME Qualifier Name (NQN) of the host configured in customer's environment. The maximum length is 64 characters.
+* NVMe Qualified Name (NQN) of the host configured in customer's environment. The maximum supported length is 223 bytes.
 	* Flag: `--nqn NQN`
 
 * Name for the new host. Ensure that the new name is unique.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new volume, the system generates a name that is a hyphenated list of randomly-selected words.
+	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly-selected words.
 	{: note}
 
 * The unique identifier of the volume to be mapped to this host.  Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
@@ -455,7 +455,7 @@ ibmcloud software-defined-storage host-update \
 * Name for the new host. Ensure that the new name is unique.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new volume, the system generates a name that is a hyphenated list of randomly-selected words.
+	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly-selected words.
 	{: note}
 
 * API Endpoint in the URL form.
@@ -492,7 +492,7 @@ ibmcloud software-defined-storage host-vol-update \
 * The service instance identifier.
 	* Flag: `--instanceid INSTANCEID`
 
-* Specify the unique volume IDentifier.
+* Specify the unique volume identifier.
 	* Flag: `--volume-id VOLUME-ID`
 
 * API Endpoint in the URL form.
@@ -563,7 +563,7 @@ ibmcloud software-defined-storage host-volid-delete \
 * The service instance identifier.
 	* Flag: `--instanceid INSTANCEID`
 
-* Unique volume IDentifier.
+* Unique volume identifier.
 	* Flag: `--volume-id VOLUME-ID`
 
 * API Endpoint in the URL form.
