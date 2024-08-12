@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-12"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -12,12 +12,12 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-# Getting started with IBM Storage Ceph as a Service
+# Getting started with {{site.data.keyword.cephaas_full}}
 {: #getting-started}
 
-CephaaS is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based CephaaS LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
+{{site.data.keyword.cephaas_short}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based {{site.data.keyword.cephaas_short}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
 
-CephaaS brings best-in-class levels of durability and availability with an unmatched feature set. It is built by using industry standards and best practices. CephaaS is designed to protect the integrity of the data and maintain availability through maintenance events and unplanned failures, and provide a consistent performance baseline.
+{{site.data.keyword.cephaas_short}} brings best-in-class levels of durability and availability with an unmatched feature set. It is built by using industry standards and best practices. CephaaS is designed to protect the integrity of the data and maintain availability through maintenance events and unplanned failures, and provide a consistent performance baseline.
 {: shortdesc}
 
 
@@ -25,7 +25,7 @@ CephaaS brings best-in-class levels of durability and availability with an unmat
 {: #prereqs}
 {: step}
 
-CephaaS LUNs can be provisioned from 20 GB to 12 TB with two options:
+{{site.data.keyword.cephaas_short}} LUNs can be provisioned from 20 GB to 12 TB with two options:
 - Provision **Endurance** tiers that feature pre-defined performance levels and other features like snapshots and replication.
 - Build a high-powered **Performance** environment with allocated input/output operations per second (IOPS).
 
@@ -89,6 +89,6 @@ When you're ready to submit your order, you can place it in the [console].
 {: #managingnewstorage}
 {: step}
 
-In the console, from the CLI, with the API, or Terraform, you can manage various aspects of your CephaaS such as host authorizations and cancellations. For more information, see [Managing CephaaS].
+In the console, from the CLI, with the API, or Terraform, you can manage various aspects of your {{site.data.keyword.cephaas_short}} such as host authorizations and cancellations. For more information, see [Managing {{site.data.keyword.cephaas_short}}].
 
 You can keep your data in sync in two different locations by using replication. Replication uses one of your snapshot schedules to automatically copy snapshots to a destination volume in a remote data center. The copies can be recovered in the remote site if a catastrophic event occurs or your data becomes corrupted. For more information, see [Replication and Disaster Recovery – Replicating Data].

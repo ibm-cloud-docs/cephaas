@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# What is {{site.data.keyword.cephass_full}}?
+# What is {{site.data.keyword.cephaas_full}}?
 {: #about-sds}
 
 {{site.data.keyword.cephaas_full_notm}} is high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
