@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-12"
 
 keywords: sds, sdsaas host,
 
@@ -86,14 +86,17 @@ See the following example.
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+Maximum supported NQN length is 223 bytes.
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
+
 
 ## Creating hosts with the API
 {: #sds-creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Volume REST APIs. For more information about the file shares CephaaS API, see the IBM Storage Ceph as a Service API reference.
+You can create hosts by directly calling the Volume REST APIs. For more information about the file shares {{site.data.keyword.cephaas_short}} API, see the {{site.data.keyword.cephaas_full_notm}} API reference.
 
 ### Before you begin
 {: #sds-host-api-prereqs}
@@ -131,7 +134,19 @@ A successful response looks like this:
 
 ```json
 
-COMING SOON
+curl -X 'POST' \
+  '$sds_api_endpoint/v1/hosts' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "abce123",
+  "nqn": "nqn.2014-08.org.nvmexpress:uuid:0f2f1642-79d0-ae96-9888-abe29c991235",
+  "volume_mappings": [
+    {
+      "volume_id": "r134-d75e1aeb-4bcf-4d41-8926-517198d55448"
+    }
+  ]
+}'
 
 ```
 {: screen}
