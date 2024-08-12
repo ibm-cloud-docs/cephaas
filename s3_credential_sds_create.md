@@ -42,7 +42,7 @@ You can create S3 credential by using the command-line interface (CLI).
 ### Before you begin
 {: #before-creating-s3-credential-cli}
 
-Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
+Before you can use the CLI, you must install the IBM Cloud CLI and the `SDS` CLI plug-in.
 
 
 
@@ -76,7 +76,7 @@ ibmcloud software-defined-storage cred-create --instanceid exampleString --acces
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 

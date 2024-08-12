@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-12"
 
 keywords: CephaaS release notes
 
@@ -19,12 +19,12 @@ content-type: release-note
 
 
 
-# Release notes for IBM Storage Ceph as a Service
+# Release notes for {{site.data.keyword.cephaas_full}}
 {: #sds-relnotes}
 
 
 
-Use these release notes to learn about the latest updates to IBM Storage Ceph as a Service that are grouped by _date.
+Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full_notm}} that are grouped by _date.
 {: shortdesc}
 
 
@@ -35,8 +35,8 @@ Use these release notes to learn about the latest updates to IBM Storage Ceph as
 {: #subcollection-nov0124}
 {: release-note}
 
-Introducing IBM Storage Ceph as a Service
-:   IBM Storage Ceph as a Service is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
+Introducing {{site.data.keyword.cephaas_full}}
+:   {{site.data.keyword.cephaas_full_notm}} is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-12"
 
 keywords:
 
@@ -12,19 +12,19 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# What is IBM Storage Ceph as a Service?
+# What is {{site.data.keyword.cephass_full}}?
 {: #about-sds}
 
-IBM Storage Ceph as a Service is high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
+{{site.data.keyword.cephaas_full_notm}} is high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
 {: shortdesc}
 
 
 
-Developers use APIs to interact with their unified storage. IBM Storage Ceph as a Service supports a subset of the S3 API for reading and writing data, as well as accounts configuration. Additionally, there is a Resource Configuration API for reading and configuring bucket metadata. Software development kits (SDKs) are available for the Python, Java, Go, and the Node.js framework. A plug-in is available for the [{{site.data.keyword.cloud_notm}} Command-Line Interface](/docs/cli?topic=cli-getting-started).
+Developers use APIs to interact with their unified storage. {{site.data.keyword.cephaas_full_notm}} supports a subset of the S3 API for reading and writing data, as well as accounts configuration. Additionally, there is a Resource Configuration API for reading and configuring bucket metadata. Software development kits (SDKs) are available for the Python, Java, Go, and the Node.js framework. A plug-in is available for the [{{site.data.keyword.cloud_notm}} Command-Line Interface](/docs/cli?topic=cli-getting-started).
 
 The [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external} provides a user interface for most operations and configuration as well.
 
-## CephaaS on IBM Cloud Satellite
+## {{site.data.keyword.cephaas_short}} on IBM Cloud Satellite
 {: #sds-satellite}
 
 Workloads that require unified storage on-premises, or in a geographic location that is not supported by IBM Cloud data centers, can use IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite){: external}.

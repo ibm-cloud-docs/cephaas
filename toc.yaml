@@ -64,6 +64,7 @@ toc:
           label: Managing access
           topics:
             - sds_manage_iam_access.md
+            - sds_service_endpoints.md
             - topicgroup:
                 label: Service credentials
                 topics:

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-12"
 
 keywords: cephaas activity tracker events
 
@@ -236,7 +236,7 @@ The following table lists the actions that generate an event for managing servic
 {: row-headers}
 
 ## Events for component Y
-{: #at_actions_x}
+{: #at_actions_Y}
 
 
 

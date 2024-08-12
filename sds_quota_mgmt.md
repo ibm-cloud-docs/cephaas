@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-12"
 
 keywords:
 
@@ -51,19 +51,30 @@ Since the provisioned capacity and quota is at service instance level setting, t
 {: #managing-sds-block-quota-cli}
 {: cli}
 
-Use the following command to modify the block and object storage quota.
+Use the following command to modify the block and object storage capacity quota in terms of percentages.
 
 ```sh
-ibmcloud resource service-instance-update ( NAME | ID ) [-n, --name NEW_NAME] [--service-plan-id SERVICE_PLAN_ID] [-p, --parameters @JSON_FILE | JSON_STRING ] [-g RESOURCE_GROUP] [--service-endpoints SERVICE_ENDPOINTS_TYPE] [--allow-cleanup true|false] [-f, --force] [-q, --quiet]
+ibmcloud resource service-instance-update <Service_Instance_ID>  --parameters '{"quota": {"block": <n>, "object": <n>}, "allocate_burst_capacity": <bool>}'
 ```
-In the `--parameters` specify the capacity amounts as `JSON_STRING`. See the following example.
+{:pre}
+
+In the `--parameters` specify the capacity amounts as `JSON_STRING`. See the following example where the Service_Instance_ID is `cephaas-unified-2` and the quota to be updated are specified as parameters.
 
 ```bash
-ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": "60", "object": "40"}, "allocate_burst_capacity":"true"}`
+ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": 60, "object": 40}, "allocate_burst_capacity":"true"}`
 
 Updating service instance cephaas-unified-2 with ID crn:vi:staging:public:software-defined-storage:us-south:a/7a30fdf....:: is updated successfully
 ```
 {: screen}
+
+To verify that the capacity quota was updated, run the following command
+
+```sh
+ibmcloud resource service-instance <instancename> --output json
+```
+{: pre}
+
+
 
 
 
