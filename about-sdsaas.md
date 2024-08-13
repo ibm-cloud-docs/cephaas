@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-13"
 
 keywords:
 
@@ -24,10 +24,7 @@ Developers use APIs to interact with their unified storage. {{site.data.keyword.
 
 The [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: external} provides a user interface for most operations and configuration as well.
 
-## {{site.data.keyword.cephaas_short}} on IBM Cloud Satellite
-{: #sds-satellite}
 
-Workloads that require unified storage on-premises, or in a geographic location that is not supported by IBM Cloud data centers, can use IBM Cloud Satellite.  For more information, see [the documentation](/docs/satellite){: external}.
 
 ## Next Steps
 {: #about-sds-next-steps}

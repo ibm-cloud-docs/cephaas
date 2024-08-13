@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-13"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -12,17 +12,17 @@ subcollection: sdsaas
 ---
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM Storage Ceph as a Service CLI
+# {{site.data.keyword.cephaas_short}} CLI
 {: #ic-sds-cli-reference}
 
-The IBM Storage Ceph as a Service plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
+The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
 {: shortdesc}
 
 
 ## Before you begin
 {: #before-you-begin-using-sds-cli}
 
-Before you can use the CephaaS CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the SDS CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
+Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the SDS CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
 
 Log in to the IBM Cloud.
 
@@ -101,7 +101,7 @@ ibmcloud software-defined-storage [command] [options]
 ## Block volume
 {: #sds-volume-cmds}
 
-### Create a new volume
+### Create volume
 {: #ic-sds-create-volume}
 
 **USAGE:**
@@ -135,7 +135,7 @@ ibmcloud software-defined-storage volume-create \
 * Name of the volume.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new volume, the system generates a name that is a hyphenated list of randomly-selected words.
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
 	{: note}
 
 

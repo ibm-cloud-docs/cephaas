@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-13"
 
 keywords: sdsaas service credential view, list
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # View S3 credential details
 {: #view-s3-credential-sds}
 
-View object storage S3 credential using the UI and CLI.
+View object storage S3 credential by using the UI and CLI.
 {: shortdesc}
 
 
@@ -34,16 +34,16 @@ To view S3 credential details,
 
 1. Go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
 
-2. Click on the credential name. The row expands downwards to display the details.
+2. Click the credential name. The row expands downwards to display the details.
 
 
 ## View credential details from the CLI
 {: #retrieving-s3-credential-details-cli}
 {: cli}
 
-Use the `credentials` command to view the list of access keys created for a given service instance (deployment).
+Use the `credentials` command to view the list of access keys that are created for a service instance (deployment).
 
-Run the following command and ensure you have provided `INSTANCEID` of the credential whose details you want to view and the API endpoint.
+Run the following command and make sure that you have provided `INSTANCEID` of the credential whose details you want to view and the API endpoint.
 
 
 ```sh

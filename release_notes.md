@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-13"
 
 keywords: CephaaS release notes
 
@@ -19,12 +19,12 @@ content-type: release-note
 
 
 
-# Release notes for {{site.data.keyword.cephaas_full}}
+# Release notes for {{site.data.keyword.cephaas_short}}
 {: #sds-relnotes}
 
 
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full_notm}} that are grouped by _date.
+Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full}} that are grouped by _date.
 {: shortdesc}
 
 

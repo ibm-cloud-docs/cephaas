@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-13"
 
 keywords: cephaas activity tracker events
 
@@ -24,7 +24,7 @@ subcollection: sdsaas
 
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use {{site.data.keyword.atracker_full_notm}}, a platform service, to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
@@ -179,20 +179,20 @@ The following table lists the actions that generate an event for managing servic
 | software-defined-storage.instance.update | Service instance was updated  |
 | software-defined-storage.instance.delete | Service instance was deleted  |
 | software-defined-storage.instance.last_operation_get | |
-| software-defined-storage.account.create | Storage account credentials was created |
-| software-defined-storage.account.delete | Storage account credentials was deleted |
+| software-defined-storage.account.create | Storage account credential was created |
+| software-defined-storage.account.delete | Storage account credential was deleted |
 | software-defined-storage.account.get | One or more storage account credentials were retrieved |
 | software-defined-storage.instance.get | S3 Cert status was retrieved |
 | software-defined-storage.instance.create | S3 TLS certificate was created |
-| software-defined-storage.volume.create | Volume was created |
+| software-defined-storage.volume.create | The volume was created |
 | software-defined-storage.volume.read | One or more volumes were retrieved |
-| software-defined-storage.volume.update | Volume was updated |
-| software-defined-storage.volume.delete | Volume was deleted |
-| software-defined-storage.host.create | Host was created |
-| software-defined-storage.host.read | One or more host were retrieved |
-| software-defined-storage.host.delete | Host was deleted |
-| software-defined-storage.volumemap.create | Volume was mapped |
-| software-defined-storage.volumemap.delete | Volume was un-mapped |
+| software-defined-storage.volume.update | The volume was updated |
+| software-defined-storage.volume.delete | The volume was deleted |
+| software-defined-storage.host.create | The host was created |
+| software-defined-storage.host.read | One or more hosts were retrieved |
+| software-defined-storage.host.delete | The host was deleted |
+| software-defined-storage.volumemap.create | The volume was mapped |
+| software-defined-storage.volumemap.delete | The volume was unmapped |
 {: caption="Actions that generate management events" caption-side="bottom"}
 
 ## List of data events
