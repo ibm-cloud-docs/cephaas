@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-14"
 
 keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
 

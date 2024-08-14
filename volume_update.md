@@ -12,17 +12,17 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing a block volume
-{: #managing-sds-block-volume}
+# Updating a block volume
+{: #updating-block-volume}
 
 You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map a volume to a host or increase the volume size.
 {: shortdesc}
 
-## Managing block volume in the UI
-{: #managing-sds-block-volume-ui}
+## Updating block volume in the UI
+{: #updating-block-volume-ui}
 {: ui}
 
-Use the console to manage the volumes. In the console, you can complete the following actions.
+Use the console to update the volume details. In the console, you can complete the following actions.
 
 * Rename a Block Storage volume
 * Map a volume to a host
@@ -30,7 +30,7 @@ Use the console to manage the volumes. In the console, you can complete the foll
 
 
 ### Renaming a volume from list view page
-{: #renaming-sds-block-volume-from-list-view-page-ui}
+{: #renaming-block-volume-from-list-view-page-ui}
 {: ui}
 
 To rename a volume, complete the following steps.
@@ -44,7 +44,7 @@ To rename a volume, complete the following steps.
 
 
 ### Mapping volumes to a host in the UI
-{: #mapping-volume-sds-hosts-ui}
+{: #mapping-volume-hosts-ui}
 {: ui}
 
 To map a volume to a host from Volumes page, complete the following steps.
@@ -58,8 +58,8 @@ To map a volume to a host from Volumes page, complete the following steps.
 5. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
 
 
-### Expand block volume size from list view page
-{: #sds-expand-block-volume-size-from-list-view-page}
+### Expanding block volume size from list view page
+{: #expand-block-volume-size-from-list-view-page}
 {: ui}
 
 To increase the block volume-provisioned size from the list view page, complete the following steps.
@@ -74,8 +74,8 @@ To increase the block volume-provisioned size from the list view page, complete 
 3. Click **Expand**.
 
 
-### Expand block volume size from details page
-{: #sds-expand-block-volume-size-from-details-page}
+### Expanding block volume size from details page
+{: #expand-block-volume-size-from-details-page}
 {: ui}
 
 To increase the block volume-provisioned size from the Volume details page, complete the following steps.
@@ -90,8 +90,8 @@ To increase the block volume-provisioned size from the Volume details page, comp
 
 
 
-## Managing block volume from the CLI
-{: #managing-sds-block-volume-cli}
+## Updating block volume from the CLI
+{: #updating-block-volume-cli}
 {: cli}
 
 To manage your Block storage volume, you can use the `volume-update` command to modify the volume details.
@@ -105,7 +105,7 @@ Using CLI, you can complete the following actions.
 Specify the information to modify the existing details of a volume and run the following command to update the volume details.
 
 ### Renaming block volume from CLI
-{: #renaming-sds-volume-cli}
+{: #renaming-volume-cli}
 {: cli}
 
 Use the `volume-update` command and specify the deployment ID, volume ID, and new name of the volume along with the endpoint to rename or update the volume name.
@@ -136,7 +136,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ### Mapping volume to a host from CLI
-{: #mapping-sds-volume-hosts-cli}
+{: #mapping-volume-hosts-cli}
 {: cli}
 
 Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID`, and `INSTANCEID` to create a volume mapping to the host ID.
@@ -170,7 +170,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ### Updating block volume capacity from CLI
-{: #updating-sds-volume-capacity-cli}
+{: #updating-volume-capacity-cli}
 {: cli}
 
 Use the `volume-update` command and specify the deployment ID, volume ID, capacity, and enpoint to update the capacity of a volume.
@@ -200,11 +200,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-## Managing block volume with the API
-{: #managing-sds-block-volume-api}
+## Updating block volume with the API
+{: #updating-block-volume-api}
 {: api}
 
-To manage your block storage volume with the API, you can use the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
+To update your block storage volume with the API, you can use the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
 
 With the API, you can complete the following actions.
 
@@ -217,7 +217,7 @@ PATCH operation to change more than one parameter value in the same command is n
 
 
 ### Renaming volume with the API
-{: #updating-sds-volume-name-api}
+{: #renaming-volume-api}
 {: api}
 
 Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
@@ -257,7 +257,7 @@ A successful response looks like this:
 {: screen}
 
 ### Updating volume with the API
-{: #updating-sds-volume-api}
+{: #updating-volume-capacity-api}
 {: api}
 
 Make a `PATCH /volumes/{volume_id}` request to update or expand the volume to increase the current capacity.
@@ -299,6 +299,6 @@ A successful response looks like this:
 
 
 ## Next steps
-{: #next-step-updating-volume-sds}
+{: #next-step-updating-volume}
 
 You can continue creating more volumes or manage existing volumes.

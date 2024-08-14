@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-14"
 
 keywords: sds, responsibilities matrix
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Understanding your responsibilities when using {{site.data.keyword.cephaas_short}}
-{: #sdsaas-responsibility-matrix}
+{: #responsibility-matrix}
 
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cephaas_short}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
@@ -24,7 +24,7 @@ Review the following sections for the specific responsibilities for you and for 
 
 
 ## Incident and operations management
-{: #sdsaas-incident-and-ops}
+{: #incident-and-ops}
 
 
 Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, recovery, and full state backup and recovery.
@@ -41,7 +41,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 
 
 ## Change management
-{: #sdsaas-change-management}
+{: #change-management}
 
 Change management includes tasks such as deployment, configuration, upgrades, patching, configuration changes, and deletion.
 
@@ -57,7 +57,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 
 
 ## Identity and access management
-{: #sdsaas-iam-responsibilities}
+{: #iam-responsibilities}
 
 
 Identity and access management includes tasks such as authentication, authorization, access control policies, and approving, granting, and revoking access.
@@ -71,7 +71,7 @@ Identity and access management includes tasks such as authentication, authorizat
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Security and regulation compliance
-{: #sdsaas-security-compliance}
+{: #security-compliance}
 
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
