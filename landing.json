@@ -1,7 +1,7 @@
 {
-    "title": "IBM Storage Ceph as a Service docs",
-    "lastupdated": "2024-08-12",
-    "introduction": "IBM Storage Ceph as a Service is a high performing, flexible and predictable unified storage (block and object) on-premises which is IBM managed with cloud-like provisioning capabilities and on-demand capacity. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
+    "title": "{{site.data.keyword.cephaas_full}} docs",
+    "lastupdated": "2024-08-14",
+    "introduction": "{{site.data.keyword.cephaas_full_notm}} is a high performing, flexible and predictable unified storage (block and object) on-premises which is IBM managed with cloud-like provisioning capabilities and on-demand capacity. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
     "section_devtools": {
       "api": "/apidocs/software-defined-storage",
       "cli": "/docs/sdsaas"
@@ -9,18 +9,18 @@
     "section_recommended": [
       {
         "title": "Getting started",
-        "description": "Get up and running quickly by completing this short tutorial to set up a CephaaS service.",
-        "href": "/docs/sdsaas?topic=getting-started"
+        "description": "Get up and running quickly by completing this short tutorial to set up a {{site.data.keyword.cephaas_short}} service.",
+        "href": "/docs/sdsaas?topic=sdsaas-getting-started"
       },
       {
         "title": "Create a block volume",
         "description": "Description of topic.",
-        "href": "/docs/sdsaas?topic=creating-sds-block-volume"
+        "href": "/docs/sdsaas?topic=sdsaas-creating-sds-block-volume"
       },
       {
-        "title": "IBM Software Defined Storage as a Service CLI",
-        "description": "The Software defined storage as a service (SDSaaS) plug-in extends the IBM Cloud command line interface (CLI) with an API wrapper for working with unified storage resources.",
-        "href": "/docs/sdsaas?topic=ic-sds-cli-reference"
+        "title": "{{site.data.keyword.cephaas_full}} CLI",
+        "description": "The {{site.data.keyword.cephaas_short}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.",
+        "href": "/docs/sdsaas?topic=sdsaas-ic-sds-cli-reference"
       }
     ],
     "section_learn": {
@@ -29,12 +29,12 @@
       "training": "https://www.ibm.com/training/cloud"
     },
     "section_updates": {
-      "view_more": "/docs/sdsaas?topic=sds-relnotes",
+      "view_more": "/docs/sdsaas?topic=sdsaas-sds-relnotes",
       "tiles": [
         {
           "date": "1 November 2024",
-          "title": "Introducing IBM Storage Ceph as a Service",
-          "description": "IBM Storage Ceph as a Service is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity."
+          "title": "Introducing {{site.data.keyword.cephaas_full}}",
+          "description": "{{site.data.keyword.cephaas_full_notm}} is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity."
         }
 
       ]

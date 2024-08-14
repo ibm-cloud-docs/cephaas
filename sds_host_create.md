@@ -96,7 +96,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #sds-creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the {{site.data.keyword.cephaas_full_notm}} API reference.
+You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/sds-block-storage).
 
 ### Before you begin
 {: #sds-host-api-prereqs}

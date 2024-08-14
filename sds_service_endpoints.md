@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-14"
 
 keywords: cephaas, service endpoints
 
@@ -27,4 +27,4 @@ IBM Cloud® services are connected to a three-tiered network, segmenting public,
 
 * **Public endpoints** can accept requests from anywhere and charges are assessed on outgoing bandwidth. Incoming bandwidth is free. Public endpoints should be used for access not originating from an IBM Cloud cloud computing resource.
 
-* **Direct endpoints** are used for requests originating from resources within {{site.data.keyword.cphaas_short}}. Like Private endpoints, Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers.
+* **Direct endpoints** are used for requests originating from resources within {{site.data.keyword.cephaas_short}}. Like Private endpoints, Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers.
