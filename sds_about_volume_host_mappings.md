@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-14"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -29,8 +29,11 @@ The NVMe-oF gateway initiator can be configured on either of the following platf
 For more information, see [link coming soon]
 
 
-## Limitation with RHEL
-{: #sds-limitations-with-rhel}
+
+
+
+## Limitation
+{: #sds-host-mapping-limitations}
 
 
 * Mapping of the same volume to multiple RHEL hosts is not supported.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-07"
+lastupdated: "2024-08-14"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -139,34 +139,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 To update your hosts with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
 
 
-PATCH operation to change more than one parameter value in the same command is not supported.
+Only host name can be updated using the PATCH operation.
 {: note}
 
 
 
-### Renaming a host with the API
-{: #renaming-sds-host-api}
-{: api}
-
-Make a `PATCH /hosts/{id}` request to update or rename a host.
-
-```sh
-{{curl -X PATCH '$sds_api_endpoint/v1/hosts/{host-name-1}' }}
-{{--header 'Authorization: Bearer $IAM_TOKEN' }}
-{{--header 'Content-Type: application/json' }}
---data '{
-    "name": "sds-host-name-updated"
-}'
-```
-{: pre}
-
-A successful response looks like this:
-
-```json
-COMING SOON
-
-```
-{: screen}
 
 ### Mapping volume to a host with the API
 {: #mapping-sds-hosts-api}

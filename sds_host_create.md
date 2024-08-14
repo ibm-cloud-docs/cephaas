@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-14"
 
 keywords: sds, sdsaas host,
 
@@ -96,7 +96,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #sds-creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Volume REST APIs. For more information about the file shares {{site.data.keyword.cephaas_short}} API, see the {{site.data.keyword.cephaas_full_notm}} API reference.
+You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the {{site.data.keyword.cephaas_full_notm}} API reference.
 
 ### Before you begin
 {: #sds-host-api-prereqs}
@@ -104,26 +104,25 @@ You can create hosts by directly calling the Volume REST APIs. For more informat
 Define variables for the IAM token and API endpoint.
 
 
-### Creating a host as part of instance provisioning with the API
-{: #creating-sds-host-instance-provisioning-api}
+### Creating a host with the API
+{: #creating-sds-host-api}
 
-Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and `volume_id`.
+Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
+
+The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/sdsaas?topic=sdsaas-sds-about-volume-host-mappings)
+{: note}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name alaready exists` is displayed.
 {: important}
 
 
 ```sh
-curl -X 'POST' \
-  '$sds_api_endpoint/v1/hosts' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "name": "string",
-  "nqn": "string",
+curl -X 'POST'   '$sds_api_endpoint/v1/hosts'   -H 'accept: application/json'   -H 'Content-Type: application/json'   -d '{
+  "name": "host1",
+  "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
   "volume_mappings": [
     {
-      "volume_id": "string"
+      "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
     }
   ]
 }'
@@ -133,20 +132,21 @@ curl -X 'POST' \
 A successful response looks like this:
 
 ```json
-
-curl -X 'POST' \
-  '$sds_api_endpoint/v1/hosts' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "name": "abce123",
-  "nqn": "nqn.2014-08.org.nvmexpress:uuid:0f2f1642-79d0-ae96-9888-abe29c991235",
-  "volume_mappings": [
-    {
-      "volume_id": "r134-d75e1aeb-4bcf-4d41-8926-517198d55448"
-    }
-  ]
-}'
+{
+    "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
+    "name": "host1",
+    "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
+    "created_at": "2024-06-21T07:22:15Z",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "volume_mappings": [
+         {
+             "volume_name": "vol1",
+             "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
+             "status": "pending"
+         }
+     ]
+}
 
 ```
 {: screen}
