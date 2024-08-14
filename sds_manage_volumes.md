@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-14"
 
-keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
+keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
 subcollection: sdsaas
 
@@ -49,7 +49,7 @@ To rename a volume, complete the following steps.
 
 To map a volume to a host from Volumes page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), navigate to **Resource list > Storage > Deployment > Block Storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Resource list > Storage > Deployment > Block Storage > Volumes**.
 2. Locate the Volume **Name** and click the `options` icon at the end of the row to open a list of options.
 3. From the options menu, click **Map to host**.
 4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
@@ -98,7 +98,7 @@ To manage your Block storage volume, you can use the `volume-update` command to 
 
 Using CLI, you can complete the following actions.
 
-* Rename a Block Storage volume.
+* Rename a volume.
 * Map a volume to a host.
 * Update capacity to increase the current volume capacity.
 
@@ -130,7 +130,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -165,7 +165,7 @@ Volume_Mappings
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -196,7 +196,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -208,7 +208,7 @@ To manage your block storage volume with the API, you can use the `PATCH /volume
 
 With the API, you can complete the following actions.
 
-* Rename a Block Storage volume.
+* Rename a volume.
 * Expand volume to increase the current capacity.
 
 PATCH operation to change more than one parameter value in the same command is not supported.

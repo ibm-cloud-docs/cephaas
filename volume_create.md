@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-14"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Creating block volumes
 {: #creating-sds-block-volume}
 
-Create a SDSaaS volume by using the UI, CLI or API.
+Create a block storage volume by using the UI, CLI or API.
 {: shortdesc}
 
 
@@ -23,7 +23,7 @@ Create a SDSaaS volume by using the UI, CLI or API.
 {: #creating-sds-block-volume-ui}
 {: ui}
 
-Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storage volume for a service instance.
+Use the {{site.data.keyword.cloud_notm}} console to create a volume for a service instance.
 
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **{{site.data.keyword.cephaas_full_notm}}** **> Block storage > Volumes**.
 1. Click **Create volume**.
@@ -41,7 +41,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a SDSaaS block storag
 {: #creating-sds-block-volume-cli}
 {: cli}
 
-You can create SDSaaS volumes by using the command-line interface (CLI).
+You can create volumes by using the command-line interface (CLI).
 
 ### Before you begin
 {: #before-creating-block-volume-cli}
@@ -63,7 +63,7 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command to create a SDSaaS volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `SDSAAS-INSTANCE-ID` where the volume will be created.
+Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `SDSAAS-INSTANCE-ID` where the volume will be created.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}
@@ -98,7 +98,7 @@ Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum all
 {: #creating-volume-api}
 {: api}
 
-You can create SDSaaS volumes by directly calling the Block Volume REST APIs.
+You can create volumes by directly calling the Block Volume REST APIs.
 
 
 

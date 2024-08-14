@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-14"
 
 keywords: list all volumes, view volume details
 
@@ -29,7 +29,7 @@ You can view a summary of all volumes and view details for a single volume for t
 
 To view all the Block storage volumes, in the [console], navigate to **Block Storage > Volumes**.
 
-By default, all SDSaaS volumes are displayed for the chosen service instance. In the list of all **Volumes**, you see the following information.
+By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen service instance are displayed. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|
@@ -39,7 +39,7 @@ By default, all SDSaaS volumes are displayed for the chosen service instance. In
 | Mapped hosts | Shows the count of number of hosts mapped to the volume. |
 {: caption="Table 1. Details about all volumes" caption-side="bottom"}
 
-By default, 10 volumes are shown in the list of all SDSaaS volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
+By default, 10 volumes are shown in the list of all volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
 Row actions menu on the Volume list page provides you with options to manage the volume information.
 
@@ -89,7 +89,7 @@ Table 4 shows Actions menu options from the volume details page.
 {: #viewing-block-storage-cli}
 {: cli}
 
-View details about a SDSaaS volume or summary information about all volumes from the CLI.
+View details about a volume or summary information about all volumes from the CLI.
 
 
 ### Viewing details of a single volume from the CLI
@@ -119,7 +119,7 @@ Created        2024-05-08T16:42:08Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -149,7 +149,7 @@ r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10           
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 For more information about available command options, run `ibmcloud sds volumes --help`.

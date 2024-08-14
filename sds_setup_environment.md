@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-14"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -31,7 +31,7 @@ Before you can create an {{site.data.keyword.cephaas_full}} (CephaaS) by using t
 
    This command generates two files. The generated public key is in the `id_rsa.pub` file under an ``.ssh`` directory in your home directory, for example, ``.../.ssh/id_rsa.pub``.
 
-   For more information, see [SSH keys](/docs/sdsaas?topic=sdsaas-ssh-keys).
+   
 
 ## CLI prerequisites
 {: #cli-prerequisites-setup}
@@ -94,7 +94,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 
 Before you can use the API to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
 
-The following examples use the `us-south` regional endpoint. To view additional API endpoints, see [Virtual Private Cloud API](/apidocs/vpc/latest#endpoint-url).
+The following examples use the `us-south` regional endpoint. 
 {: note}
 
 ### Step 1: Store your API key as a variable
@@ -155,8 +155,7 @@ sds_api_endpoint="https://us-south.private.iaas.cloud.ibm.com"
 
 To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make sure that the response is not empty.
 
-For supported endpoint regions, see [Endpoints available](/docs/sdsaas?topic=sds-service-endpoints).
-{: note}
+
 
 ### Step 4: Store the API version as a variable
 {: #store-api-version-variable}
@@ -176,7 +175,7 @@ To verify that this variable was saved, run ``echo $api_version`` and make sure 
 ### Step 5: Verify that you have API access
 {: #verify-api-access}
 
-If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. For more information about commonly encountered errors, see [Troubleshooting](/docs/sdsaas?topic=sds-troubleshooting-block-storage).
+If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. 
 {: tip}
 
 

@@ -39,11 +39,11 @@ toc:
       - topicgroup:
           label: Managing Block storage
           topics:
-          - block_storage_volume_sds_about.md
-          - block_storage_volume_sds_create.md
-          - block_storage_volume_sds_view.md
-          - block_storage_volume_sds_manage.md
-          - block_storage_volume_sds_delete.md
+          - volume_about.md
+          - volume_create.md
+          - volume_view.md
+          - volume_manage.md
+          - volume_delete.md
       - topicgroup:
           label: Managing Hosts
           topics:
@@ -68,15 +68,15 @@ toc:
             - topicgroup:
                 label: Service credentials
                 topics:
-                  - s3_credential_overview_sds.md
-                  - s3_credential_sds_create.md
-                  - s3_credential_sds_view.md
-                  - s3_credential_sds_delete.md
+                  - s3_cred_overview.md
+                  - s3_cred_create.md
+                  - s3_cred_view.md
+                  - s3_cred_delete.md
             - topicgroup:
                 label: S3 Certificates
                 topics:
-                  - uploading_s3_cert_sds.md
-                  - retrieving_s3_cert_sds.md
+                  - s3_cert_upload.md
+                  - s3_cert_view.md
 #            - service_credential_update.md
       - topicgroup:
           label: Observability
