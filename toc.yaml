@@ -21,7 +21,7 @@ toc:
       topics:
       - getting-started.md
       - about-sdsaas.md
-      - sds_understanding_responsibilities.md
+      - responsibility_matrix.md
       - sds_event_notifications.md
 #      - sds_activity_tracker_events.md
       - release_notes.md
