@@ -29,7 +29,7 @@ To delete an object storage S3 credential, complete the following steps.
 
 2. Select one service credential that you want to delete.
 
-3. Click **Delete** > **Confirm**.
+3. Click **Delete**.
 
 All access granted to any resources using this credential will be lost once the credential is deleted.
 {: note}
@@ -44,7 +44,7 @@ To delete multiple object storage S3 credential, complete the following steps.
 
 2. Select one or more service credentials that you want to delete.
 
-3. Click **Delete selected credentials** > **Confirm**.
+3. Click **Delete selected credentials** > **Delete**.
 
 All access granted to any resources using these credentials will be lost once the credentials are deleted.
 {: note}
