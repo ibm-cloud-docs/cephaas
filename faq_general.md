@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-09"
+lastupdated: "2024-08-19"
 
 keywords: frequently asked questions, faqs
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # General FAQs
-{: #sds-faq-gen}
+{: #faq-gen}
 
 ## How can I add more capacity to my order?
 {: #faq-add-more-capacity}

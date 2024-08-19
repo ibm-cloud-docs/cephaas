@@ -22,7 +22,7 @@ toc:
       - getting-started.md
       - about-sdsaas.md
       - responsibility_matrix.md
-      - sds_event_notifications.md
+      - event_notifications.md
 #      - sds_activity_tracker_events.md
       - release_notes.md
 #  - navgroup:
@@ -35,7 +35,7 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - sds_setup_environment.md
+      - setup_cli_api_environment.md
       - topicgroup:
           label: Managing Block storage
           topics:
@@ -59,14 +59,16 @@ toc:
           topics:
             - sds_quota_mgmt.md
             - sds_capacity_performance.md
-            - sds_manage_storage_limits.md
+            - manage_storage_limits.md
 #            - adding_capacity.md
 #            - view_capacity_details.md
       - topicgroup:
           label: Managing access
           topics:
-            - sds_manage_iam_access.md
-            - sds_service_endpoints.md
+            - iam_access.md
+            - service_endpoints.md
+            - setup_traffic_encryption.md
+            - setup_dns_server.md
             - topicgroup:
                 label: Service credentials
                 topics:
@@ -114,9 +116,9 @@ toc:
       - topicgroup:
           label: Frequently asked questions
           topics:
-             - sds_faq_general.md
-             - sds_faq_plans.md
+             - faq_general.md
+             - faq_plans.md
       - topicgroup:
           label: Troubleshooting Storage
           topics:
-            - sds_troubleshooting_storage.md
+            - troubleshooting_storage.md

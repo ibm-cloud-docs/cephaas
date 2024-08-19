@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-19"
 
 keywords: cephaas activity tracker events
 
@@ -195,74 +195,9 @@ The following table lists the actions that generate an event for managing servic
 | software-defined-storage.volumemap.delete | The volume was unmapped |
 {: caption="Actions that generate management events" caption-side="bottom"}
 
-## List of data events
-{: #at_actions_data}
 
-
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-|                                  |                                    |
-{: caption="Actions that generate data events" caption-side="bottom"}
-
-
-
-
-
-
-## Events for component X
-{: #at_actions_x}
-
-
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-|                                  |                                    |
-{: caption="Lists of management events" caption-side="bottom"}
-{: #componentX-table-1}
-{: tab-title="Management events"}
-{: tab-group="componentX"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-|                                  |                                    |
-{: caption="Lists of data events" caption-side="bottom"}
-{: #componentX-table-2}
-{: tab-title="Data events"}
-{: tab-group="componentX"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-## Events for component Y
-{: #at_actions_Y}
-
-
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-|                                  |                                    |
-{: caption="Lists of management events" caption-side="bottom"}
-{: #componentY-table-1}
-{: tab-title="Management events"}
-{: tab-group="componentY"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Action                           | Description                        |
-|----------------------------------|------------------------------------|
-|                                  |                                    |
-{: caption="Lists of data events" caption-side="bottom"}
-{: #componentY-table-2}
-{: tab-title="Data events"}
-{: tab-group="componentY"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 
 
 ## Analyzing {{site.data.keyword.cephaas_short}} activity tracking events
 {: #at_events_iam_analyze}
-
-
