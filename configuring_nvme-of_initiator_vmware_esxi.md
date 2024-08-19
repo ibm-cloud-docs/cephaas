@@ -16,45 +16,45 @@ subcollection: sdsaas
 # Configuring the NVMe-oF initiator for VMware ESXi
 {: #configuring-nvmeof-initiator-vmware-esxi}
 
-Use this procedure to configure the NMVe fabrics for RHEL.
+Use this procedure to configure the NMVe fabrics for VMware ESXi.
 
 1. Make sure that the VMware ESXi host is running VMware vSphere Hypervisor (ESXi) 7.0U3 version or later.
 
-1. Configure NVMe/TCP adapter.
+2. Configure NVMe/TCP adapter.
 
-1. Enable NVMe/TCP on a physical network interface controller (NIC).
+3. Enable NVMe/TCP on a physical network interface controller (NIC).
 
-```sh
-esxcli nvme fabrics enable --protocol TCP --device vmnicN
-```
-{: pre}
+    ```sh
+    esxcli nvme fabrics enable --protocol TCP --device vmnicN
+    ```
+    {: pre}
 
-Replace N with the number of NIC.
+    Replace N with the number of NIC.
 
-1. Tag a VMkernel NIC to permit NVMe/TCP traffic..
+4. Tag a VMkernel NIC to permit NVMe/TCP traffic.
 
-```sh
-esxcli network ip interface tag add --interface-name vmkN --tagname NVMeTCP
-```
-{: pre}
+    ```sh
+    esxcli network ip interface tag add --interface-name vmkN --tagname NVMeTCP
+    ```
+    {: pre}
 
-Replace N with the ID of the VMkernel.
+    Replace N with the ID of the VMkernel.
 
-1. Get the host NVMe Qualified Name (NQN) for each host.
+5. Get the host NVMe Qualified Name (NQN) for each host.
 
-```sh
-esxcli nvme info get
-```
-{: pre}
+    ```sh
+    esxcli nvme info get
+    ```
+    {: pre}
 
-For example,
+    For example,
 
-```json
-# esxcli nvme info get
+    ```json
+    # esxcli nvme info get
 
-Host NQN: nqn.2014-08.com.ibm.ceph:nvme:host01
-```
-{: screen}
+    Host NQN: nqn.2014-08.com.ibm.ceph:nvme:host01
+    ```
+    {: screen}
 
 Once the initaitor is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/sdsaas?topic=sdsaas-creating-hosts).
 

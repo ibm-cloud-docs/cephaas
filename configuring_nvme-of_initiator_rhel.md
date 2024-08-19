@@ -20,32 +20,32 @@ Use this procedure to configure the NMVe fabrics for RHEL.
 
 1. Install the nvme-cli.
 
-```sh
-yum install nvme-cli
-```
-{: pre}
+    ```sh
+    yum install nvme-cli
+    ```
+    {: pre}
 
 
 1. Install the necessary NVMe packages.
 
-```sh
-modprobe nvme-fabrics
-```
-{: pre}
+    ```sh
+    modprobe nvme-fabrics
+    ```
+    {: pre}
 
 
 1. Get the host NVMe Qualified Name (NQN) for each host.
 
-```sh
-cat /etc/nvme/hostnqn
-```
-{: pre}
+    ```sh
+    cat /etc/nvme/hostnqn
+    ```
+    {: pre}
 
-For example,
+    For example,
 
-```json
-# cat /etc/nvme/hostnqn
+    ```json
+    # cat /etc/nvme/hostnqn
 
-nqn.2014-08.org.nvmexpress:uuid:950ddadf-f995-47b7-9416-b9bb233f66e3
-```
-{: screen}
+    nqn.2014-08.org.nvmexpress:uuid:950ddadf-f995-47b7-9416-b9bb233f66e3
+    ```
+    {: screen}
