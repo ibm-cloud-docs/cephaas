@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-19"
 
 keywords: sds, host, view host details, host summary list
 
@@ -14,19 +14,19 @@ subcollection: sdsaas
 
 
 # View host details
-{: #sds-view-host-details}
+{: #view-host-details}
 
 View details of a host or summary information about all hosts for the chosen deployment.
 {: shortdesc}
 
 ## Viewing host details in the UI
-{: #sds-view-host-details-ui}
+{: #view-host-details-ui}
 {: ui}
 
 You can view a summary of all host and view details for a single volume for the chosen deployment on the user interface.
 
 ### Viewing all host in the UI
-{: #sds-view-all-hosts-ui}
+{: #view-all-hosts-ui}
 {: ui}
 
 List all hosts and all mapped volumes.
@@ -59,7 +59,7 @@ Table 2 describes the Row actions menu options.
 
 
 ### Viewing single host details in the UI
-{: #sds-view-single-host-details-ui}
+{: #view-single-host-details-ui}
 {: ui}
 
 To view details of a single host, go to the list of all hosts and click on the hostname link.
@@ -89,14 +89,14 @@ Table 4 describes the Actions menu options.
 
 
 ## Viewing Hosts from the CLI
-{: #viewing-sds-hosts-cli}
+{: #viewing-hosts-cli}
 {: cli}
 
 View details of a single host or summary information about all hosts from the CLI.
 
 
 ### Viewing details of a single host from the CLI
-{: #sds-view-single-host-detail-cli}
+{: #view-single-host-detail-cli}
 
 Run the following command to show host details for a specific host `ID` within the specific service `INSTANCEID`.
 
@@ -213,7 +213,7 @@ A successful response looks like the following example.
 ```
 
 ### Viewing single host details with the API
-{: #sds-view-single-host-details-api}
+{: #view-single-host-details-api}
 
 Make a `GET /hosts/{id}` call to see details of a host. See the following example.
 

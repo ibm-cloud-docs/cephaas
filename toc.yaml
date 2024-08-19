@@ -52,6 +52,8 @@ toc:
           - host_view.md
           - host_update.md
           - host_delete.md
+          - configuring_nvme-of_initiator_rhel.md
+          - configuring_nvme-of_initiator_vmware_esxi.md
       - topicgroup:
           label: Managing storage limits
           topics:

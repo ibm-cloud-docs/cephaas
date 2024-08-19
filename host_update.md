@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-19"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -13,13 +13,13 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Updating hosts
-{: #updating-sds-hosts}
+{: #updating-hosts}
 
 You can update hosts in the UI, from the CLI, or with the API.
 {: shortdesc}
 
 ## Updating hosts in the UI
-{: #updating-sds-host-name-ui}
+{: #updating-host-name-ui}
 {: ui}
 
 Use the console to update the hosts. In the console, you can complete the following actions.
@@ -29,7 +29,7 @@ Use the console to update the hosts. In the console, you can complete the follow
 * Unmap volumes for a host
 
 ### Renaming a host in the UI
-{: #renaming-sds-hosts-ui}
+{: #renaming-hosts-ui}
 {: ui}
 
 To rename a host, complete the following steps.
@@ -51,7 +51,7 @@ To rename a host, complete the following steps.
 
 
 ### Mapping volumes to a host in the UI
-{: #sds-mapping-volume-to-host-ui}
+{: #mapping-volume-to-host-ui}
 {: ui}
 
 To map a volume to a host from Hosts page, complete the following steps.
@@ -70,7 +70,7 @@ To map a volume to a host from Hosts page, complete the following steps.
 
 
 ## Updating hosts from the CLI
-{: #updating-sds-hosts-cli}
+{: #updating-hosts-cli}
 {: cli}
 
 Using CLI, you can complete the following actions.
@@ -106,7 +106,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 ### Mapping volume to a host from CLI
-{: #mapping-sds-hosts-cli}
+{: #mapping-hosts-cli}
 {: cli}
 
 Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` and `INSTANCEID` to create a volume mapping to the given host ID.
@@ -133,7 +133,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 ## Updating host with the API
-{: #updating-sds-hosts-api}
+{: #updating-hosts-api}
 {: api}
 
 To update your hosts with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
@@ -146,7 +146,7 @@ Only host name can be updated using the PATCH operation.
 
 
 ### Mapping volume to a host with the API
-{: #mapping-sds-hosts-api}
+{: #mapping-hosts-api}
 {: api}
 
 Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a given host.

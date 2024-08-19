@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-19"
 
-keywords: sds, sdsaas host delete, delete all host volume mapping, delete volume mapping for a host,
+keywords: sds, cephaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
 subcollection: sdsaas
 
@@ -13,14 +13,14 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Deleting hosts
-{: #deleting-sds-hosts}
+{: #deleting-hosts}
 
 Delete a host from a service instance by using the UI, CLI, or API.
 {: shortdesc}
 
 
 ## Deleting host from the UI
-{: #deleting-sds-single-host-ui}
+{: #deleting-single-host-ui}
 {: ui}
 
 To delete a host, complete the following steps.
@@ -35,7 +35,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: note}
 
 ## Deleting multiple host from the UI
-{: #deleting-sds-multiple-hosts-ui}
+{: #deleting-multiple-hosts-ui}
 {: ui}
 
 To delete a host, complete the following steps.
@@ -50,7 +50,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: note}
 
 ## Deleting volume mapping from a host from the UI
-{: #deleting-sds-volume-mapping-from-host-ui}
+{: #deleting-volume-mapping-from-host-ui}
 {: ui}
 
 To delete all volumes that are mapped to a host, complete the following steps.
@@ -70,7 +70,7 @@ To delete all volumes that are mapped to a host, complete the following steps.
 
 
 ## Deleting host from the CLI
-{: #deleting-sds-hosts-cli}
+{: #deleting-hosts-cli}
 {: cli}
 
 Use the `host-delete` command and specify the `INSTANCEID` and endpoint url along with the `HOST-ID` to delete the host based on the host id.
@@ -100,7 +100,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ## Deleting a single volume mapping for a host from the CLI
-{: #deleting-sds-single-volume-mapping-hosts-cli}
+{: #deleting-single-volume-mapping-hosts-cli}
 {: cli}
 
 Use the `host-volid-delete` command and specify the `HOST-ID`, `INSTANCEID`, `VOLUME-ID` and `$sds_endpoint` to delete a particular volume mapped from the host.
@@ -128,7 +128,7 @@ ibmcloud software-defined-storage host-volid-delete \
 
 
 ## Deleting all volume mapping for a host from the CLI
-{: #deleting-sds-all-volume-mapping-hosts-cli}
+{: #deleting-all-volume-mapping-hosts-cli}
 {: cli}
 
 Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to delete all volumes that are associated with the given host id based on the instance id.
@@ -155,7 +155,7 @@ ibmcloud software-defined-storage host-vol-deleteall \
 
 
 ## Deleting a host with the API
-{: #deleting-sds-host-api}
+{: #deleting-host-api}
 {: api}
 
 Make a `DELETE /hosts/{id}` request to delete a specific host.
@@ -174,7 +174,7 @@ There is no response body for a successful delete operation. HTTP response code 
 To verify that the host is deleted, list the hosts by making a `GET /hosts` call.
 
 ## Deleting a volume mapping for a host with the API
-{: #deleting-sds-single-volume-mapping-host-api}
+{: #deleting-single-volume-mapping-host-api}
 {: api}
 
 Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a given host.
@@ -193,7 +193,7 @@ To verify that the volume mapping for a host is deleted, list the host details b
 
 
 ## Deleting all volume mapping for a host with the API
-{: #deleting-sds-all-volume-mapping-host-api}
+{: #deleting-all-volume-mapping-host-api}
 {: api}
 
 Make a `DELETE /hosts/{id}/volumes` request to delete all volumes mapped for a given host.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-19"
 
 keywords: sds, sdsaas host,
 
@@ -13,14 +13,14 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating hosts
-{: #creating-hosts-sds}
+{: #creating-hosts}
 
 Create a host by using the UI, CLI, or API.
 {: shortdesc}
 
 
 ## Creating host in the UI
-{: #creating-host-sds-ui}
+{: #creating-host-ui}
 {: ui}
 
 Use the {{site.data.keyword.cloud_notm}} console to create a host for a service instance.
@@ -38,13 +38,13 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 
 
 ## Creating hosts from the CLI
-{: #creating-sds-hosts-from-cli}
+{: #creating-hosts-from-cli}
 {: cli}
 
 You can create hosts by using the command-line interface (CLI).
 
 ### Before you begin
-{: #before-creating-hosts-sds-cli}
+{: #before-creating-hosts-cli}
 
 Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
 
@@ -59,7 +59,7 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 
 
 ### Creating hosts from the CLI
-{: #create-host-sds-cli}
+{: #create-host-cli}
 {: help}
 {: support}
 
@@ -93,19 +93,19 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ## Creating hosts with the API
-{: #sds-creating-host-with-api}
+{: #creating-host-with-api}
 {: api}
 
 You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/sds-block-storage).
 
 ### Before you begin
-{: #sds-host-api-prereqs}
+{: #host-api-prereqs}
 
 Define variables for the IAM token and API endpoint.
 
 
 ### Creating a host with the API
-{: #creating-sds-host-api}
+{: #creating-host-api}
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
@@ -155,7 +155,7 @@ A successful response looks like this:
 
 
 ## Next steps
-{: #next-step-creating-hosts-sds}
+{: #next-step-creating-hosts}
 
 When you refresh the Hosts page, the new host appears at the beginning of the list of hosts.
 {: ui}

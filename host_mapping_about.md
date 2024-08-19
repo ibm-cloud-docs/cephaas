@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-19"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 
 
 # About volume host mappings
-{: #sds-about-volume-host-mappings}
+{: #about-volume-host-mappings}
 
 With {{site.data.keyword.cephaas_full}}, block-level access to the Ceph storage cluster can take advantage of the NVMe-oF standard to provide data storage. The NVMe TCP protocol allows clients, which are known as initiators, to send NVMe-oF commands to storage devices, which are known as targets, over an Internet Protocol network. Initiators can be either Linux client or VMWare clients or both. For VMWare clients, the NVMe TCP volumes are shown as VMFS Data store and for Linux clients, the NVMe TCP volumes are shown as block devices.
 
@@ -33,7 +33,7 @@ For more information, see [link coming soon]
 
 
 ## Limitation
-{: #sds-host-mapping-limitations}
+{: #host-mapping-limitations}
 
 
 * Mapping of the same volume to multiple RHEL hosts is not supported.

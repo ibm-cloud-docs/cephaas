@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-19"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -32,7 +32,7 @@ subcollection: sdsaas
 
 
 ## Provisioning considerations
-{: #provconsiderSDSBlockStorage}
+{: #provconsiderationsBlockStorage}
 {: step}
 
 ### Block storage volume size
