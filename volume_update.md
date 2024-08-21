@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-21"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # Updating a block volume
 {: #updating-block-volume}
 
-You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume, map a volume to a host or increase the volume size.
+You can manage your Block Storage volume in the UI, from the CLI, or with the API. You can rename a volume or increase the volume size.
 {: shortdesc}
 
 ## Updating block volume in the UI
@@ -25,7 +25,6 @@ You can manage your Block Storage volume in the UI, from the CLI, or with the AP
 Use the console to update the volume details. In the console, you can complete the following actions.
 
 * Rename a Block Storage volume
-* Map a volume to a host
 * Expand volume to increase the capacity
 
 
@@ -41,21 +40,6 @@ To rename a volume, complete the following steps.
 4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.
 5. Click **Rename**.
 
-
-
-### Mapping volumes to a host in the UI
-{: #mapping-volume-hosts-ui}
-{: ui}
-
-To map a volume to a host from Volumes page, complete the following steps.
-
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Resource list > Storage > Deployment > Block Storage > Volumes**.
-2. Locate the Volume **Name** and click the `options` icon at the end of the row to open a list of options.
-3. From the options menu, click **Map to host**.
-4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
-    1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.
-    1. Select the newly created **Host** from the list.
-5. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
 
 
 ### Expanding block volume size from list view page
@@ -134,39 +118,6 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-
-### Mapping volume to a host from CLI
-{: #mapping-volume-hosts-cli}
-{: cli}
-
-Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID`, and `INSTANCEID` to create a volume mapping to the host ID.
-
-Run the following command to map the volume to the host.
-
-```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
-```
-{: pre}
-
-See the following example.
-
-```bash
-ibmcloud sds hstvidu --instanceid "abc123" --url "$sds_endpoint" --host-id "r134-0bb14043-73a1-47e0-b46c-a147fdacba25" --volume-id "r134-3bc5068a-2936-4f30-b277-968fad03da2d"
-...
-
-Created_At    2024-07-23T04:53:29Z
-ID        r134-0bb14043-73a1-47e0-b46c-a147fdacba25
-Name       host1
-NQN        nqn.2014-08.org.nvmexpress:uuid:54821642-dc4b-47bd-9b54-02699cebac79
-Volume_Mappings
-         Status    pending
-         Volume_ID   r134-3bc5068a-2936-4f30-b277-968fad03da2d
-         Volume_Name  volume1
-```
-{: screen}
-
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
-{: note}
 
 
 ### Updating block volume capacity from CLI

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-21"
 
 keywords: sds, sdsaas host,
 
@@ -96,7 +96,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/sds-block-storage).
+You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/sds-block-storage){: external}.
 
 ### Before you begin
 {: #host-api-prereqs}
@@ -109,7 +109,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
-The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/sdsaas?topic=sdsaas-sds-about-volume-host-mappings)
+The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings).
 {: note}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name alaready exists` is displayed.
@@ -160,6 +160,8 @@ A successful response looks like this:
 When you refresh the Hosts page, the new host appears at the beginning of the list of hosts.
 {: ui}
 
-You can continue creating more hosts or manage existing hosts.
+* You can continue creating more hosts or manage existing hosts.
+
+* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-from-nvme-of-initiators)
 
 

@@ -41,6 +41,7 @@ toc:
           topics:
           - volume_about.md
           - volume_create.md
+          - volume_mapping.md
           - volume_view.md
           - volume_update.md
           - volume_delete.md
@@ -49,11 +50,10 @@ toc:
           topics:
           - host_mapping_about.md
           - host_create.md
+          - host_mapping.md
           - host_view.md
           - host_update.md
           - host_delete.md
-          - configuring_nvme-of_initiator_rhel.md
-          - configuring_nvme-of_initiator_vmware_esxi.md
       - topicgroup:
           label: Managing storage limits
           topics:
@@ -98,10 +98,10 @@ toc:
           links:
             - link:
                 label: IBM CephaaS Block storage API
-                href: https://{DomainName}/apidocs/sds-block-storage
+                href: https://{DomainName}/apidocs/block-storage
             - link:
                 label: IBM CephaaS Object Storage API
-                href: https://{DomainName}/apidocs/sds-object-storage
+                href: https://{DomainName}/apidocs/object-storage
       - topicgroup:
           label: Use the command line
           topics:
