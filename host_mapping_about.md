@@ -91,11 +91,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: pre}
 
-    See following example.
-    ```bash
-    [root@host01 ~]# nvme discover -t tcp -a 10.172.19.01 -s 4420
-    ```
-    {: screen}
 
 1. Connect to the NVMe-oF target.
 
@@ -106,12 +101,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: pre}
 
-
-    See following example.
-    ```sh
-    [root@host01 ~]# nvme connect -t tcp -a 10.172.19.01 -n nqn.2016-06.io.spdk:cnode1
-    ```
-    {: screen}
 
 ### Verify that the initiator is set up correctly.
 {: #connection-verification}
@@ -126,7 +115,7 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     See following example.
 
     ```sh
-    [root@host01 ~]# nvme list
+    # nvme list
 
     Node                    Generic           SN                   Model                   Namespace Usage                      Format           FW Rev
 
@@ -149,18 +138,13 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     For example,
 
     ```sh
-    [root@host01 ~]# mkfs /home/nvme01_node01
-
+    # mkfs /home/nvme01_node01
     mke2fs 1.46.5 (20-Dec-2023)
-
     Discarding device blocks: done
-
     Creating filesystem with 2560 4k blocks and 2560 inodes
 
     Allocating group tables: done
-
     Writing inode tables: done
-
     Writing superblocks and filesystem accounting information: done
     ```
     {: screen}
@@ -168,41 +152,32 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
 3. Mount the NVMe node on the NVMe-oF directory.
 
     ```sh
-    Mount NVMe-oF.
-    mkdir /mnt/nvmeof
+    # mkdir /mnt/nvmeof
+    ```
+    {: pre}
+
+    ```sh
+    # mount NVME_NODE_PATH /mnt/nvmeof
     ```
     {: pre}
 
     For example,
 
     ```sh
-    [root@host01 ~]# mkdir /mnt/nvmeof
+    # mount /home/nvme01_node01 /mnt/nvmeof
     ```
-    {: pre}
-
-    Mount the node on within the NVMe-oF directory.
-
-    ```sh
-    mount NVME_NODE_PATH /mnt/nvmeof
-    ```
-    {: pre}
-
-    For example,
-
-    ```sh
-    [root@host01 ~]# mount /home/nvme01_node01 /mnt/nvmeof
-    ```
-    {: pre}
+    {: screen}
 
 4. Using sudo commands, list mounted NVMe-oF files.
 
     ```sh
-    ls /mnt/nvmeof
+    $ ls /mnt/nvmeof
     ```
     {: pre}
 
     For example,
     ```sh
+    $ ls /mnt/nvmeof
     lost+found
     ```
     {: screen}
@@ -210,23 +185,17 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
 5. Create a text file within the mnt/nvmeof directory.
 
     ```sh
-    sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
-
+    $ sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
     ```
     {:pre}
 
 6. Verify that the text file can now be reached.
 
     ```sh
-    cat /mnt/nvmeof/hello.txt
-    ```
-    {: pre}
-
-    ```sh
+    $ cat /mnt/nvmeof/hello.txt
     Hello NVMe-oF
-
     ```
-    {:screen}
+    {: screen}
 
 
 ## Configuring the NVMe-oF initiator for VMware ESXi
