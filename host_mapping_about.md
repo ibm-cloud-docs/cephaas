@@ -128,7 +128,7 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: screen}
 
-2. Create a filesystem on the desired target, found in step 1.
+1. Create a filesystem on the desired target, found in step 1.
 
     ```sh
     mkfs NVME_NODE_PATH
@@ -138,7 +138,7 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     For example,
 
     ```sh
-    # mkfs /home/nvme01_node01
+    $ mkfs /home/nvme01_node01
     mke2fs 1.46.5 (20-Dec-2023)
     Discarding device blocks: done
     Creating filesystem with 2560 4k blocks and 2560 inodes
@@ -149,29 +149,29 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: screen}
 
-3. Mount the NVMe node on the NVMe-oF directory.
+1. Mount the NVMe node on the NVMe-oF directory.
 
     ```sh
-    # mkdir /mnt/nvmeof
+    mkdir /mnt/nvmeof
     ```
     {: pre}
 
     ```sh
-    # mount NVME_NODE_PATH /mnt/nvmeof
+    mount NVME_NODE_PATH /mnt/nvmeof
     ```
     {: pre}
 
     For example,
 
     ```sh
-    # mount /home/nvme01_node01 /mnt/nvmeof
+    mount /home/nvme01_node01 /mnt/nvmeof
     ```
     {: screen}
 
-4. Using sudo commands, list mounted NVMe-oF files.
+1. Using sudo commands, list mounted NVMe-oF files.
 
     ```sh
-    $ ls /mnt/nvmeof
+    ls /mnt/nvmeof
     ```
     {: pre}
 
@@ -182,14 +182,14 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: screen}
 
-5. Create a text file within the mnt/nvmeof directory.
+1. Create a text file within the mnt/nvmeof directory.
 
     ```sh
-    $ sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
+    sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
     ```
     {:pre}
 
-6. Verify that the text file can now be reached.
+1. Verify that the text file can now be reached.
 
     ```sh
     $ cat /mnt/nvmeof/hello.txt
