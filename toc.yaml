@@ -55,12 +55,12 @@ toc:
           - host_update.md
           - host_delete.md
       - topicgroup:
-          label: Managing storage limits
+          label: Capacity and Performance
           topics:
             - sds_quota_mgmt.md
             - sds_capacity_performance.md
             - manage_storage_limits.md
-#            - adding_capacity.md
+            - capacity_add.md
 #            - view_capacity_details.md
       - topicgroup:
           label: Managing access
@@ -113,6 +113,7 @@ toc:
       id: help
       topics:
       - sds_getting_help_and_support.md
+      - billing_view.md
       - topicgroup:
           label: Frequently asked questions
           topics:
