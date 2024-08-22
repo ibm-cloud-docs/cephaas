@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-22"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -315,7 +315,7 @@ ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN 
 ```sh
 ibmcloud software-defined-storage host-create \
     --instanceid exampleString \
-    --nqn nqn.abc.1234 \
+    --nqn nqn.2014-08.org.nvmexpress:uuid:abcd1234-1234-1234-1234-abcd1234abcd \
     --name my-host \
     --volume-mappings '[{"volume_id": "exampleString"}]'
 	--url $sds_endpoint

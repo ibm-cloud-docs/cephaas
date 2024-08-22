@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: sds, sdsaas host,
 
@@ -79,7 +79,7 @@ See the following example.
 ```bash
   ibmcloud software-defined-storage host-create \
     --instanceid abcd123 \
-    --nqn nqn.2014-08.org.nvmexpress:uuid:0f2f1642-79d0-ae96-9888-abe29c991235 \
+    --nqn nqn.2014-08.org.nvmexpress:uuid:abcd1234-1234-1234-1234-abcd1234abcd \
     --name my-host-1 \
     --volume-mappings '[{"volume_id": "r134-d75e1aeb-4bcf-4d41-8926-517198d55448"}]' \
     --url $sds_endpoint

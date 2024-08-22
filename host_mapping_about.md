@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -185,13 +185,14 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```sh
     mount NVME_NODE_PATH /mnt/nvmeof
     ```
+    {: pre}
 
     For example,
 
     ```sh
     [root@host01 ~]# mount /home/nvme01_node01 /mnt/nvmeof
     ```
-    {: screen}
+    {: pre}
 
 4. Using sudo commands, list mounted NVMe-oF files.
 
@@ -202,8 +203,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
 
     For example,
     ```sh
-    $ ls /mnt/nvmeof
-
     lost+found
     ```
     {: screen}
