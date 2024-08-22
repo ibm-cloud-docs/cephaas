@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
 
@@ -78,19 +78,19 @@ A successful response looks like this:
 
 ```json
 {
-  "created_at": "string",
-  "id": "string",
-  "name": "string",
-  "nqn": "string",
-  "service_instance_id": "string",
-  "storage_workspace_id": "string",
-  "volume_mappings": [
-    {
-      "status": "string",
-      "volume_id": "string",
-      "volume_name": "string"
-    }
-  ]
+    "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
+    "name": "host1",
+    "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
+    "created_at": "2024-06-21T07:22:15Z",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "volume_mappings": [
+        {
+            "volume_name": "vol1",
+            "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
+            "status": "pending"
+        }
+    ]
 }
 
 ```

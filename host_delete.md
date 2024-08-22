@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-22"
 
 keywords: sds, cephaas host delete, delete all host volume mapping, delete volume mapping for a host,
 
@@ -180,12 +180,14 @@ To verify that the host is deleted, list the hosts by making a `GET /hosts` call
 Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a given host.
 
 ```sh
-curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}/volumes{vol_id}' \
+curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
 
-There is no response body for a successful delete operation. HTTP response code 204 is returned.
+Unmap a volume from a host response.
+
+There is no response returned if the request is successful
 
 
 To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` call.
@@ -199,12 +201,13 @@ To verify that the volume mapping for a host is deleted, list the host details b
 Make a `DELETE /hosts/{id}/volumes` request to delete all volumes mapped for a given host.
 
 ```sh
-curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}/volumes' \
+curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes'
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
 
-There is no response body for a successful delete operation. HTTP response code 204 is returned.
+Unmap all volumes from a host response.
+There is no response returned if the request is successful.
 
 
 To verify that all volumes mappings for a given host is deleted, list the hosts by making a `GET /hosts/{id}` call.

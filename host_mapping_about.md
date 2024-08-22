@@ -210,19 +210,21 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
 5. Create a text file within the mnt/nvmeof directory.
 
     ```sh
-    $ sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
+    sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"
+
     ```
     {:pre}
 
 6. Verify that the text file can now be reached.
 
     ```sh
-    $ cat /mnt/nvmeof/hello.txt
+    cat /mnt/nvmeof/hello.txt
     ```
     {: pre}
 
     ```sh
     Hello NVMe-oF
+
     ```
     {:screen}
 
