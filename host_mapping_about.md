@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-23"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -115,8 +115,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     See following example.
 
     ```sh
-    # nvme list
-
     Node                    Generic           SN                   Model                   Namespace Usage                      Format           FW Rev
 
     ---------------------   ----------------  -------------------  ----------------------- --------- -------------------------- ---------------- --------
@@ -124,7 +122,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     /home/nvme01_node01     /home/ng1n1       SPDK00000000000001   SPDK bdev Controller    1          10,49  MB /  10,49  MB      4 KiB +  0 B   23.01
 
     ...
-
     ```
     {: screen}
 
@@ -181,6 +178,7 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     lost+found
     ```
     {: screen}
+
 
 1. Create a text file within the mnt/nvmeof directory.
 
