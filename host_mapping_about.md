@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-26"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -180,7 +180,7 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     {: screen}
 
 
-1. Create a text file within the mnt/nvmeof directory.
+1. Create a text file within the `mnt/nvmeof` directory.
 
     ```sh
     sudo bash -c "echo Hello NVMe-oF > /mnt/nvmeof/hello.txt"

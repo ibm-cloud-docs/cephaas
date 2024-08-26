@@ -13,7 +13,6 @@ toc:
     product-page: https://ibm.com/cloud/sdsaas
     path: sdsaas
     label: IBM Storage Ceph as a Service
-    release-level: beta
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation-design for more details on the toc design.
   entries:
   - navgroup:
@@ -21,8 +20,6 @@ toc:
       topics:
       - getting-started.md
       - about-sdsaas.md
-      - responsibility_matrix.md
-      - event_notifications.md
 #      - sds_activity_tracker_events.md
       - release_notes.md
 #  - navgroup:
@@ -86,6 +83,7 @@ toc:
           label: Observability
           topics:
             - at-events.md
+            - event_notifications.md
             - logging.md
             - monitoring.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
@@ -93,6 +91,7 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - responsibility_matrix.md
       - topicgroup:
           label: API & SDK reference
           links:
@@ -119,7 +118,4 @@ toc:
           topics:
              - faq_general.md
              - faq_plans.md
-      - topicgroup:
-          label: Troubleshooting Storage
-          topics:
-            - troubleshooting_storage.md
+      - troubleshooting_storage.md
