@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-27"
 
 keywords:
 
@@ -15,9 +15,9 @@ subcollection: sdsaas
 # Block quota and capacity management
 {: #sds-quota-capacity-mgmt}
 
-{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and low cost object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit. Object storage quota can be set by allocating the quota value to the default STANDARD for the unified storage plan and the default storage class STANDARD-IA for the low cost object storage plan.
+{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and low cost object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit.
 
-Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage pool as well as object storage pool.
+Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage as well as object storage.
 
 ## Managing quota from the UI
 {: #managing-sds-block-quota-ui}
@@ -34,7 +34,7 @@ Since the provisioned capacity and quota is at service instance level setting, t
 
 4. Review the capacity limit. Select **Include burst capacity** if you want to expand your total available capacity.
 
-    Including burst capacity may incur overage fees for the amount of burst capacity userd.
+    Including burst capacity may incur overage fees for the amount of burst capacity used.
     {: note}
 
 4. Click **Next** and review the storage capacity allocations.
@@ -51,14 +51,14 @@ Since the provisioned capacity and quota is at service instance level setting, t
 {: #managing-sds-block-quota-cli}
 {: cli}
 
-Use the following command to modify the block and object storage capacity quota in terms of percentages.
+Use the following command to modify the block and object storage capacity quota.
 
 ```sh
 ibmcloud resource service-instance-update <Service_Instance_ID>  --parameters '{"quota": {"block": <n>, "object": <n>}, "allocate_burst_capacity": <bool>}'
 ```
 {:pre}
 
-In the `--parameters` specify the capacity amounts as `JSON_STRING`. See the following example where the Service_Instance_ID is `cephaas-unified-2` and the quota to be updated are specified as parameters.
+In the `--parameters` specify the capacity amounts. See the following example where the Service_Instance_ID is `cephaas-unified-2` and the quota to be updated are specified as parameters.
 
 ```bash
 ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": 60, "object": 40}, "allocate_burst_capacity":"true"}`
@@ -89,6 +89,3 @@ curl --location --request PATCH '$sds_ednpoint' -H "Authorization: $token" -d '{
 
 ```
 {: pre}
-
-
-

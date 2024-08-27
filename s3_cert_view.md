@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-27"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -72,11 +72,8 @@ A successful response looks like this:
 
 ```json
 {
-  "ExpirationDate": "string",
-  "Expired": true
+  "ExpirationDate": "2024-08-13T05:23:42Z",
+  "Expired": false
 }
 ```
 {: screen}
-
-
-
