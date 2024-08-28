@@ -104,6 +104,7 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
+
       - topicgroup:
           label: Use the command line
           topics:
@@ -111,7 +112,11 @@ toc:
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
-
+      - topicgroup:
+          label: Security and compliance
+          topics:
+            - data_security.md
+            - compliance.md
   - navgroup:
       id: help
       topics:
