@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-08-28"
 
 keywords: sdsaas , delete service credential
 
@@ -83,8 +83,7 @@ You can delete a specific S3 credential using an access key.
 ```sh
 curl -X 'DELETE' \
   '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
-  -H 'accept: application/json'
-
+  -H 'accept: application/json' -H "Authorization: $token"
 ```
 {: pre}
 
@@ -92,5 +91,3 @@ There is no response body for a successful delete operation. HTTP response code 
 
 
 To verify that the credential is deleted, list the credential by making a `GET /account/credentials` call.
-
-

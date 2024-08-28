@@ -33,8 +33,9 @@ toc:
       id: howto
       topics:
       - setup_cli_api_environment.md
+      - endpoints.md
       - topicgroup:
-          label: Managing Block storage
+          label: Managing block storage
           topics:
           - volume_about.md
           - volume_create.md
@@ -42,43 +43,45 @@ toc:
           - volume_view.md
           - volume_update.md
           - volume_delete.md
+          - topicgroup:
+              label: Managing Hosts
+              topics:
+              - host_mapping_about.md
+              - host_create.md
+              - host_mapping.md
+              - host_view.md
+              - host_update.md
+              - host_delete.md
+          - topicgroup:
+              label: Capacity and Performance
+              topics:
+                - sds_quota_mgmt.md
+                - sds_capacity_performance.md
+                - manage_storage_limits.md
+                - capacity_add.md
+    #            - view_capacity_details.md
       - topicgroup:
-          label: Managing Hosts
+          label: Managing object storage
           topics:
-          - host_mapping_about.md
-          - host_create.md
-          - host_mapping.md
-          - host_view.md
-          - host_update.md
-          - host_delete.md
-      - topicgroup:
-          label: Capacity and Performance
-          topics:
-            - sds_quota_mgmt.md
-            - sds_capacity_performance.md
-            - manage_storage_limits.md
-            - capacity_add.md
-#            - view_capacity_details.md
+          - setup_dns_server.md
+          - topicgroup:
+              label: Managing S3 certificates
+              topics:
+                - s3_cert_upload.md
+                - s3_cert_view.md
+          - topicgroup:
+              label: Managing S3 endpoint access
+              topics:
+                - s3_cred_overview.md
+                - s3_cred_create.md
+                - s3_cred_view.md
+                - s3_cred_delete.md
+#               - service_credential_update.md
       - topicgroup:
           label: Managing access
           topics:
             - iam_access.md
-            - service_endpoints.md
             - setup_traffic_encryption.md
-            - setup_dns_server.md
-            - topicgroup:
-                label: Service credentials
-                topics:
-                  - s3_cred_overview.md
-                  - s3_cred_create.md
-                  - s3_cred_view.md
-                  - s3_cred_delete.md
-            - topicgroup:
-                label: S3 Certificates
-                topics:
-                  - s3_cert_upload.md
-                  - s3_cert_view.md
-#            - service_credential_update.md
       - topicgroup:
           label: Observability
           topics:
@@ -96,10 +99,10 @@ toc:
           label: API & SDK reference
           links:
             - link:
-                label: IBM CephaaS Block storage API
+                label: Block storage management API
                 href: https://{DomainName}/apidocs/block-storage
             - link:
-                label: IBM CephaaS Object Storage API
+                label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
       - topicgroup:
           label: Use the command line
@@ -108,6 +111,7 @@ toc:
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
+
   - navgroup:
       id: help
       topics:
