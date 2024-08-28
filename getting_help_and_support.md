@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-28"
 
 keywords: sds getting help, getting sdsaas support
 
@@ -21,7 +21,7 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 {: shortdesc}
 
 * Review the [FAQs](/docs/linktoyourfaqtopic) in the product documentation.
-* Review the [troubleshooting documentation](/docs/linktoyourfirsttroubleshootingtopic) to troubleshoot and resolve common issues.
+* Review the [troubleshooting documentation](/docs/sdsaas?topic=sdsaas-troubleshooting) to troubleshoot and resolve common issues.
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 * Review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users experienced the same problem. When you ask a question, tag the question with `ibm-cloud` and `service-Name` so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-28"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot
 
@@ -15,7 +15,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting {{site.data.keyword.cephaas_short}}
-{: #troubleshooting-block-storage}
+{: #troubleshooting}
 
 When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_short}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
 {: shortdesc}

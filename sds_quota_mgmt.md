@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-28"
 
 keywords:
 
@@ -15,9 +15,9 @@ subcollection: sdsaas
 # Block quota and capacity management
 {: #sds-quota-capacity-mgmt}
 
-{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and low cost object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit.
+{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit.
 
-Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage as well as object storage.
+Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created.
 
 ## Managing quota from the UI
 {: #managing-sds-block-quota-ui}
@@ -85,7 +85,10 @@ ibmcloud resource service-instance <instancename> --output json
 Make a PATCH request to modify the quota for provisioned and object capacity.
 
 ```sh
-curl --location --request PATCH '$sds_ednpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":"true", quota":{"block":"70","object":"50"}}}
+curl --location --request PATCH '$rc_endpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":"true", quota":{"block":"70","object":"50"}}}
 
 ```
 {: pre}
+
+`$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
+{: note}
