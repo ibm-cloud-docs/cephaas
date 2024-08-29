@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-29"
 
 keywords: IAM access cephaas
 
@@ -36,10 +36,10 @@ Review the following tables that outline what types of tasks each role allows fo
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer                 |  Description of what users can accomplish; think tasks. |
-| Operator               |  Description            |
-| Editor                 |  Description            |
-| Administrator          |  Description            |
+| Viewer                 |  As a viewer, you can view service instances, but you can't modify them.. |
+| Operator               |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard.            |
+| Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
+| Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="Table 1. IAM platform roles" caption-side="bottom"}
@@ -315,5 +315,3 @@ fmt.Println(string(b))
 ```
 {: go}
 {: codeblock}
-
-
