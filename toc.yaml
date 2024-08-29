@@ -20,6 +20,11 @@ toc:
       topics:
       - getting-started.md
       - about-sdsaas.md
+      - topicgroup:
+          label: Getting organized
+          topics:
+            - administrators.md
+            - developers.md
 #      - sds_activity_tracker_events.md
       - release_notes.md
 #  - navgroup:
@@ -81,6 +86,7 @@ toc:
           label: Managing access
           topics:
             - iam_access.md
+            - iam_overview.md
             - setup_traffic_encryption.md
       - topicgroup:
           label: Observability
@@ -106,9 +112,11 @@ toc:
                 href: https://{DomainName}/apidocs/object-storage
 
       - topicgroup:
-          label: Use the command line
+          label: Using the command line
           topics:
            - sds-cli-reference.md
+           - curl.md
+           - aws_cli.md
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
@@ -117,6 +125,8 @@ toc:
           topics:
             - data_security.md
             - compliance.md
+            - eu.md
+# links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
       topics:

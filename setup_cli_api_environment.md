@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-08-29"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -15,23 +15,20 @@ subcollection: sdsaas
 # Setting up your API and CLI environment
 {: #set-up-environment}
 
-Before you can create an {{site.data.keyword.cephaas_full}} (CephaaS) by using the API or CLI, set up your environment.
+Before you can create an {{site.data.keyword.cephaas_full}} by using the API or CLI, set up your environment.
 {: shortdesc}
 
 ## General prerequisites
 {: #general-prerequisites}
 
 1. Set up your account to access {{site.data.keyword.cephaas_full_notm}}. Make sure that your account is [upgraded to a paid account](/docs/account?topic=account-accountfaqs#changeacct){: external}.
-2. Make sure that you have a public SSH key, which will be used to connect to the service instance. For example, generate an SSH key on your Linux server by running the following command:
 
-    ```sh
-    ssh-keygen -t rsa
-    ```
-    {: pre}
+2. Make sure that you have the list of on-prem endpoints that were provided for deployment handy.
 
-   This command generates two files. The generated public key is in the `id_rsa.pub` file under an ``.ssh`` directory in your home directory, for example, ``.../.ssh/id_rsa.pub``.
+   You can set the endpoints as environment variables.
+   {: tip}
 
-   
+
 
 ## CLI prerequisites
 {: #cli-prerequisites-setup}
@@ -177,5 +174,3 @@ To verify that this variable was saved, run ``echo $api_version`` and make sure 
 
 If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. 
 {: tip}
-
-
