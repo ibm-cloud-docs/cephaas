@@ -136,17 +136,24 @@ An IAM token is valid for up to 60 minutes, and it is subject to change. When a 
 
 Run the following command to store the API endpoint in a variable so it can be reused later in your session.
 
-Public endpoint:
+Cloud endpoint:
 
 ```sh
-sds_api_endpoint="https://us-south.iaas.cloud.ibm.com"
- ```
+sds_api_endpoint="https://us-south.sds.cloud.ibm.com"
+```
 {: pre}
 
-Virtual private endpoint:
+On-premise block storage endpoint:
 
 ```sh
-sds_api_endpoint="https://us-south.private.iaas.cloud.ibm.com"
+sds_api_endpoint="https://block-storage.936481b2-379d-4ca6-94ed-4dc1911d749f.software-defined-storage.appdomain.cloud"
+```
+{: pre}
+
+On-premise object storage endpoint:
+
+```sh
+sds_api_endpoint="https://object-storage.936481b2-379d-4ca6-94ed-4dc1911d749f.software-defined-storage.appdomain.cloud"
 ```
 {: pre}
 
@@ -154,22 +161,7 @@ To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make 
 
 
 
-### Step 4: Store the API version as a variable
-{: #store-api-version-variable}
-
-
-Every API request must include the `version` parameter, in the format `YYYY-MM-DD`. Run the following command to store the version date in a variable so it can be reused in your session.
-
-
-
-```sh
-api_version="2019-09-30"
- ```
-{: pre}
-
-To verify that this variable was saved, run ``echo $api_version`` and make sure that the response is not empty.
-
-### Step 5: Verify that you have API access
+### Step 4: Verify that you have API access
 {: #verify-api-access}
 
 If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. 
