@@ -153,7 +153,7 @@ During host creation, NQN from the initiator must be used.
 
 
 ### Verify that the initiator is set up correctly.
-{: #connection-verification}
+{: #connection-verification-rhel}
 
 1. List the NVMe-oF block devices.
 
@@ -182,7 +182,7 @@ During host creation, NQN from the initiator must be used.
     ```
     {: pre}
 
-    For example,
+    See following example.
 
     ```sh
     $ mkfs /home/nvme01_node01
@@ -208,7 +208,7 @@ During host creation, NQN from the initiator must be used.
     ```
     {: pre}
 
-    For example,
+    See following example.
 
     ```sh
     mount /home/nvme01_node01 /mnt/nvmeof
@@ -258,16 +258,15 @@ During host creation, NQN from the initiator must be used.
     ```sh
     esxcli nvme adapter list
     ```
-    {:pre}
+    {: pre}
 
-    For example,
+    See following example.
+
     ```sh
     [root@host01:~] esxcli nvme adapter list
 
     Adapter  Adapter Qualified Name           Transport Type  Driver     Associated Devices
-
     -------  -------------------------------- --------------  ---------  ------------------
-
     vmhba64  aqn:nvmetcp:ac-1f-6b-0a-18-74-T  TCP             nvmetcp    vmnic0
     ```
     {: screen}
@@ -279,7 +278,8 @@ During host creation, NQN from the initiator must be used.
     ```
     {: pre}
 
-    For example,
+    See following example.
+
     ```sh
     [root@host01:~] esxcli nvme fabrics discover -a vmhba64 -i 10.0.211.196 -p 4420
 
@@ -296,7 +296,7 @@ During host creation, NQN from the initiator must be used.
     ```sh
     esxcli nvme fabrics connect -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 4420 -s SUBSYSTEM_NQN
     ```
-    {:pre}
+    {: pre}
 
     See following example.
 
@@ -312,13 +312,13 @@ During host creation, NQN from the initiator must be used.
     ```
     {: pre}
 
+    See following example.
+
     ```sh
     [root@host01:~] esxcli nvme controller list
 
     Name                                                                                        Controller Number  Adapter  Transport Type  Is Online
-
     ------------------------------------------------------------------------------------------  -----------------  -------  --------------  ---------
-
     nqn.2016-06.io.spdk:cnode1#vmhba64#10.0.211.196:4420                                                      301  vmhba64  TCP                  true
     ```
     {: screen}
@@ -330,13 +330,12 @@ During host creation, NQN from the initiator must be used.
     ```
     {: pre}
 
-    For example,
+    See following example.
 
     ```sh
     [root@host01:~] esxcli nvme namespace list
 
     Name                                Controller Number  Namespace ID  Block Size  Capacity in MB
-
     ------------------                  -----------------  ------------  ----------  --------------
 
     eui.0100000001000000e4d25c00001ae214               256             1         512          953869
@@ -350,10 +349,10 @@ During host creation, NQN from the initiator must be used.
     {: screen}
 
 
-# Next steps
-{: #next-steps-post-connecting-nvme-of-initiators}
 
-Verify that the initiator is set up correctly.
+
+### Verify that the initiator is set up correctly.
+{: #connection-verification-vmware}
 
 1. From the vSphere Client, go to the **ESXi host**.
 
