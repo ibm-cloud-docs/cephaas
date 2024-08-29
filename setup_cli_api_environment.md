@@ -58,7 +58,7 @@ Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.da
 
 
 
-### Accessing CLI through the  API private endpoint
+### Accessing CLI through the API private endpoint
 {: #access_cli_through_api_private_endpoints}
 
 To set the CLI to use the API private endpoint, follow these steps:
@@ -128,7 +128,7 @@ Bearer <your token>
 
 The Authorization header expects the token to begin with "Bearer". If the result doesn't include "Bearer", update the `iam_token` variable to include it. These examples assume that "Bearer" is included in the `iam_token`.
 
-You must repeat the preceding step to refresh your IAM token every hour because the token expires.
+An IAM token is valid for up to 60 minutes, and it is subject to change. When a token expires, you must generate a new one. Use the property expires_in for the expiration of the IAM token that you have just created.
 {: important}
 
 ### Step 3: Store the API endpoint as a variable

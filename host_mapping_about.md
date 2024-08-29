@@ -26,7 +26,7 @@ The NVMe-oF gateway initiator can be configured on either of the following platf
 * VMware vSphere Hypervisor (ESXi) 7.0U3 or later
 
 
-For more information, see [Connecting from NVME-oF initiators]
+For more information, see [Connecting from NVME-oF initiators](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#prereq-nvme-initiators)
 
 
 

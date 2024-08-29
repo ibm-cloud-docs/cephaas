@@ -43,21 +43,24 @@ toc:
       - topicgroup:
           label: Managing block storage
           topics:
-          - volume_about.md
-          - volume_create.md
-          - volume_mapping.md
-          - volume_view.md
-          - volume_update.md
-          - volume_delete.md
+          - topicgroup:
+              label: Managing volumes
+              topics:
+                - volume_about.md
+                - volume_create.md
+                - volume_mapping.md
+                - volume_view.md
+                - volume_update.md
+                - volume_delete.md
           - topicgroup:
               label: Managing Hosts
               topics:
-              - host_mapping_about.md
-              - host_create.md
-              - host_mapping.md
-              - host_view.md
-              - host_update.md
-              - host_delete.md
+                - host_mapping_about.md
+                - host_create.md
+                - host_mapping.md
+                - host_view.md
+                - host_update.md
+                - host_delete.md
           - topicgroup:
               label: Capacity and Performance
               topics:
@@ -65,7 +68,7 @@ toc:
                 - sds_capacity_performance.md
                 - manage_storage_limits.md
                 - capacity_add.md
-    #            - view_capacity_details.md
+      #         - view_capacity_details.md
       - topicgroup:
           label: Managing object storage
           topics:
@@ -114,7 +117,6 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
-
       - topicgroup:
           label: Using the command line
           topics:
@@ -124,6 +126,7 @@ toc:
 #          - /cli/cli-manage-catalogs-plugin
 #          - /cli/cli-ibmcloud_commands_services
 #          - /cli/cli-ibmcloud_commands_account
+      - iam_at.md
       - topicgroup:
           label: Security and compliance
           topics:
@@ -134,11 +137,11 @@ toc:
   - navgroup:
       id: help
       topics:
-      - sds_getting_help_and_support.md
+      - getting_help_and_support.md
       - billing_view.md
       - topicgroup:
           label: Frequently asked questions
           topics:
-             - faq_general.md
+             - faq_bs.md
              - faq_plans.md
       - troubleshooting.md

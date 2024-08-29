@@ -6,7 +6,7 @@ lastupdated: "2024-08-29"
 
 keywords: object storage, go, sdk
 
-subcollection: cloud-object-storage
+subcollection: sdsaas
 
 ---
 {:new_window: target="_blank"}
