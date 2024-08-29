@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-29"
 
 keywords:
 
@@ -19,7 +19,7 @@ Here are the commanly used acroynms and terms that is used in {{site.data.keywor
 
 * **Block quota**: Endpoint to manage quota settings for block on-prem
 
-* **Boss-man**: SRE service to manage deployments on-prem
+
 
 * **Object storage**: Endpoint to manage object storage accounts on-prem
 

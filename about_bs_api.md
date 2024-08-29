@@ -14,7 +14,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About the {{site.data.keyword.cephaas_full_notm}} S3 API
+# About the {{site.data.keyword.cephaas_full_notm}} block storage management API
 {: #compatibility-api}
 
 The {{site.data.keyword.cephaas_full}} API is a REST-based API for reading and writing objects.
