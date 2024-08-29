@@ -102,7 +102,10 @@ toc:
       topics:
       - responsibility_matrix.md
       - topicgroup:
-          label: API & SDK reference
+          label: API reference
+          topics:
+            - about_api.md
+            - common_headers_errors.md
           links:
             - link:
                 label: Block storage management API
