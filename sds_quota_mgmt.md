@@ -15,9 +15,9 @@ subcollection: sdsaas
 # Managing block quota
 {: #sds-quota-capacity-mgmt}
 
-{{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit.
+{{site.data.keyword.cephaas_full_notm}} supports deployment level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity usage limit.
 
-Since the provisioned capacity and quota is at service instance level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created.
+Since the provisioned capacity and quota is at deployment level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created that also includes the maximum burst capacity usage limit.
 
 ## Managing quota from the UI
 {: #managing-sds-block-quota-ui}
@@ -32,7 +32,7 @@ Since the provisioned capacity and quota is at service instance level setting, t
     If you want to manage quota for a different Deployment, then click **Deployments** drop down to choose the one whose quota you want to manage and click **Edit preferences**.
     {: note}
 
-4. Review the capacity limit. Select **Include burst capacity** if you want to expand your total available capacity.
+4. Review the capacity limit. Select **Include burst capacity** if you want to include the burst capacity to expand your total available capacity.
 
     Including burst capacity may incur overage fees for the amount of burst capacity used.
     {: note}
