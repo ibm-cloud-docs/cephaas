@@ -62,7 +62,7 @@ toc:
                 - host_update.md
                 - host_delete.md
           - topicgroup:
-              label: Capacity and Performance
+              label: Managing capacity allocations
               topics:
                 - sds_quota_mgmt.md
                 - sds_capacity_performance.md
@@ -108,7 +108,7 @@ toc:
       - topicgroup:
           label: API reference
           topics:
-            - about_api.md
+            - about_bs_api.md
             - common_headers_errors.md
           links:
             - link:
@@ -118,7 +118,7 @@ toc:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
       - topicgroup:
-          label: Using the command line
+          label: CLI reference
           topics:
            - sds-cli-reference.md
            - curl.md
