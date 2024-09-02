@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-02"
 
-keywords:
+keywords: cephaas, quota, capacity, manage
 
 subcollection: sdsaas
 
@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Block quota and capacity management
+# Managing block quota
 {: #sds-quota-capacity-mgmt}
 
 {{site.data.keyword.cephaas_full_notm}} supports service instance level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity USAGE limit.

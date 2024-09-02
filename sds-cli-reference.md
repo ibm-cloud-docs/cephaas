@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-02"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -716,16 +716,15 @@ Updates the S3 SSL Certificates or creates them if they do not exist.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cert-upload --instanceid INSTANCEID --body BODY --url string
+ibmcloud software-defined-storage cert-upload --body BODY
 ```
 {: pre}
 
 **Example**
 
 ```sh
-ibmcloud software-defined-storage cert-upload \
-	--instanceid exampleString \
-    --body exampleString
+  ibmcloud software-defined-storage cert-upload \
+    --body tempdir/certificate-file.pem \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -733,10 +732,8 @@ ibmcloud software-defined-storage cert-upload \
 **ALIASES:** cert-upload, crtu
 
 **Parameters to provide:**
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
-* The request body that contains the S3 TLS certificate. The body must be in string format with single quotes at the beginning and end of all cert data.
+* The request body that contains the S3 TLS certificate. The CLI accepts certificate file in `.pem` format.
 	* Flag: `--body BODY`
 
 * API Endpoint in the URL form.
@@ -750,11 +747,17 @@ Retrieves the S3 SSL certificate expiration date and status.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage certificate --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage cert
 ```
 {: pre}
 
-**ALIASES:** certificate, crts
+**Example**
+
+```sh
+ibmcloud software-defined-storage cert \
+	--url $sds_endpoint
+```
+{: screen}
 
 **Parameters to provide:**
 * The service instance identifier.

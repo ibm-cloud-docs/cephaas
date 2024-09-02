@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-02"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -64,6 +64,12 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     ```
     {: pre}
 
+    Make the boot setting persistent by loading the module on boot with this setting:
+
+    ```sh
+    echo nvme_tcp > /etc/modules-load.d/nvme_tcp.conf
+    ```
+    {: pre}
 
 1. Get the host NVMe Qualified Name (NQN) for each host.
 
