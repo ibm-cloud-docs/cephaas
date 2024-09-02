@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing block quota
+# Managing quota
 {: #sds-quota-capacity-mgmt}
 
 {{site.data.keyword.cephaas_full_notm}} supports deployment level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity usage limit.
