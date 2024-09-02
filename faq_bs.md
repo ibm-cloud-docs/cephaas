@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-02"
 
 keywords: frequently asked questions, faqs
 
@@ -12,7 +12,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs
+# FAQs - Block storage
 {: #block-storage-faq}
 
 ## How are volumes created and attached to an instance?
