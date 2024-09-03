@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-03"
 
 keywords: IAM access cephaas
 
@@ -36,8 +36,8 @@ Review the following tables that outline what types of tasks each role allows fo
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer                 |  As a viewer, you can view service instances, but you can't modify them.. |
-| Operator               |  As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard.            |
+| Viewer                 |  As a viewer, you can view deployments, but you can't modify them. |
+| Operator               |  As an operator, you can perform platform actions required to configure and operate deployments, such as viewing a deployment's dashboard.            |
 | Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
 | Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
 {: row-headers}
@@ -74,7 +74,7 @@ There are two common ways to assign access in the console:
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `<Object Writer>` role for `<Cloud Object Storage>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `<Object Writer>` role for `<Object Storage>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -108,7 +108,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 
 
-The following example is for assigning the `<Object Writer>` role for `<Cloud Object Storage>`:
+The following example is for assigning the `<Object Writer>` role for `<Object Storage>`:
 
 Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
@@ -117,7 +117,7 @@ Use `<programmatic_service_name>` for the service name, and refer to the Role ID
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
   "type": "access",
-  "description": "Object Writer role for Cloud Object Storage",
+  "description": "Object Writer role for Object Storage",
   "subjects": [
     {
       "attributes": [
@@ -152,126 +152,7 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 {: curl}
 {: codeblock}
 
-```java
-SubjectAttribute subjectAttribute = new SubjectAttribute.Builder()
-      .name("iam_id")
-      .value("IBMid-123453user")
-      .build();
 
-PolicySubject policySubjects = new PolicySubject.Builder()
-      .addAttributes(subjectAttribute)
-      .build();
-
-PolicyRole policyRoles = new PolicyRole.Builder()
-      .roleId("crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter")
-      .build();
-
-ResourceAttribute accountIdResourceAttribute = new ResourceAttribute.Builder()
-      .name("accountId")
-      .value("ACCOUNT_ID")
-      .operator("stringEquals")
-      .build();
-
-ResourceAttribute serviceNameResourceAttribute = new ResourceAttribute.Builder()
-      .name("serviceName")
-      .value("software-defined-storage")
-      .operator("stringEquals")
-      .build();
-
-PolicyResource policyResources = new PolicyResource.Builder()
-      .addAttributes(accountIdResourceAttribute)
-      .addAttributes(serviceNameResourceAttribute)
-      .build();
-
-CreatePolicyOptions options = new CreatePolicyOptions.Builder()
-      .type("access")
-      .subjects(Arrays.asList(policySubjects))
-      .roles(Arrays.asList(policyRoles))
-      .resources(Arrays.asList(policyResources))
-      .build();
-
-Response<Policy> response = service.createPolicy(options).execute();
-Policy policy = response.getResult();
-
-System.out.println(policy);
-```
-{: java}
-{: codeblock}
-
-```javascript
-const policySubjects = [
-  {
-    attributes: [
-      {
-        name: 'iam_id',
-        value: 'IBMid-123453user',
-      },
-    ],
-  },
-];
-const policyRoles = [
-  {
-    role_id: 'crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter',
-  },
-];
-const accountIdResourceAttribute = {
-  name: 'accountId',
-  value: 'ACCOUNT_ID',
-  operator: 'stringEquals',
-};
-const serviceNameResourceAttribute = {
-  name: 'serviceName',
-  value: 'software-defined-storage',
-  operator: 'stringEquals',
-};
-const policyResources = [
-  {
-    attributes: [accountIdResourceAttribute, serviceNameResourceAttribute]
-  },
-];
-const params = {
-  type: 'access',
-  subjects: policySubjects,
-  roles: policyRoles,
-  resources: policyResources,
-};
-
-iamPolicyManagementService.createPolicy(params)
-  .then(res => {
-    examplePolicyId = res.result.id;
-    console.log(JSON.stringify(res.result, null, 2));
-  })
-  .catch(err => {
-    console.warn(err)
-  });
-```
-{: javascript}
-{: codeblock}
-
-```python
-policy_subjects = PolicySubject(
-  attributes=[SubjectAttribute(name='iam_id', value='IBMid-123453user')])
-policy_roles = PolicyRole(
-  role_id='crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter')
-account_id_resource_attribute = ResourceAttribute(
-  name='accountId', value='ACCOUNT_ID')
-service_name_resource_attribute = ResourceAttribute(
-  name='serviceName', value='software-defined-storage')
-policy_resources = PolicyResource(
-  attributes=[account_id_resource_attribute,
-        service_name_resource_attribute])
-
-policy = iam_policy_management_service.create_policy(
-  type='access',
-  subjects=[policy_subjects],
-  roles=[policy_roles],
-  resources=[policy_resources]
-).get_result()
-
-print(json.dumps(policy, indent=2))
-```
-{: python}
-{: codeblock}
 
 ```go
 subjectAttribute := &iampolicymanagementv1.SubjectAttribute{
