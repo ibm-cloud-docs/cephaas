@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -77,7 +77,7 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 
 
 ## Command index
-{: #ic-sds-command-index}
+{: #ic-command-index}
 
 Each operation has an explanation of what it does, how to use it, and any optional or required parameters. Unless specified as optional, any listed parameters are mandatory.
 
@@ -98,11 +98,11 @@ ibmcloud software-defined-storage [command] [options]
 **ALIASES**: software-defined-storage, sds
 
 
-## Block volume
-{: #sds-volume-cmds}
+## Block storage
+{: #block-storage-cmds}
 
 ### Create volume
-{: #ic-sds-create-volume}
+{: #ic-create-volume}
 
 **USAGE:**
 
@@ -144,7 +144,7 @@ ibmcloud software-defined-storage volume-create \
 	* Flag: `--url string`
 
 ### Retrieve a single volume details
-{: #ic-sds-retrieve-volume-details}
+{: #ic-retrieve-volume-details}
 
 **USAGE:**
 
@@ -177,7 +177,7 @@ ibmcloud software-defined-storage volume \
 
 
 ### Update a volume
-{: #ic-sds-update-volume}
+{: #ic-update-volume}
 
 Update a volume with the information in provided volume patch.
 
@@ -228,7 +228,7 @@ ibmcloud software-defined-storage volume-update \
 
 
 ### Delete a single volume
-{: #ic-sds-delete-volume}
+{: #ic-delete-volume}
 
 **USAGE:**
 
@@ -265,7 +265,7 @@ ibmcloud software-defined-storage volume-delete \
 
 
 ### List all volumes
-{: #ic-sds-list-volumes}
+{: #ic-list-volumes}
 
 **USAGE:**
 ```sh
@@ -299,7 +299,7 @@ ibmcloud software-defined-storage volumes \
 {: #ic-sds-hosts}
 
 ### Create new host
-{: #ic-sds-create-host-from-template}
+{: #ic-create-host-from-template}
 
 **USAGE:**
 
@@ -343,7 +343,7 @@ ibmcloud software-defined-storage host-create \
 	* Flag: `--url string`
 
 ### Retrieve a single host
-{: #ic-sds-retrieve-host-profile}
+{: #ic-retrieve-host-profile}
 
 **USAGE:**
 
@@ -462,7 +462,7 @@ ibmcloud software-defined-storage host-update \
 	* Flag: `--url string`
 
 ### Map volume to a host
-{: #ic-sds-map-volume-to-host}
+{: #ic-map-volume-to-host}
 
 **USAGE:**
 
@@ -500,7 +500,7 @@ ibmcloud software-defined-storage host-vol-update \
 
 
 ### Delete a host
-{: #ic-sds-delete-host}
+{: #ic-delete-host}
 
 **USAGE:**
 
@@ -533,7 +533,7 @@ ibmcloud software-defined-storage host-delete \
 	* Flag: `--url string`
 
 ### Delete a single volume from a host
-{: #ic-sds-delete-single-volume-from-host}
+{: #ic-delete-single-volume-from-host}
 
 **USAGE:**
 
@@ -570,7 +570,7 @@ ibmcloud software-defined-storage host-volid-delete \
 	* Flag: `--url string`
 
 ### Delete all volume mappings associated with a host
-{: #ic-sds-delete-all-volume-mapped-to-host}
+{: #ic-delete-all-volume-mapped-to-host}
 
 **USAGE:**
 
@@ -605,18 +605,18 @@ ibmcloud software-defined-storage host-vol-deleteall \
 
 
 
-## Account management
-{: #sds-account-mgmt-cmd}
+## Object storage
+{: #object-storage-cmds}
 
 ### Create service credential
-{: #ic-sds-create-service-cred}
+{: #ic-create-service-cred}
 
 Updates credentials for a storage account or creates them if they do not exist.
 
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY --url string
+ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
@@ -624,8 +624,7 @@ ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-k
 
 ```sh
 ibmcloud software-defined-storage cred-create \
-	--instanceid exampleString \
-	--access-key exampleString
+	--access-key mytestkey
 	--url $sds_endpoint
 ```
 {: screen}
@@ -643,23 +642,20 @@ ibmcloud software-defined-storage cred-create \
 	* Flag: `--url string`
 
 ### Delete a service credential
-{: #ic-sds-delete-service-cred}
+{: #ic-delete-service-cred}
 
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY --url string
+ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
-
-**ALIASES**: cred-delete, crd
 
 **Example**
 
 ```sh
-ibmcloud software-defined-storage cred-create \
-	--instanceid exampleString \
-	--access-key exampleString
+ibmcloud software-defined-storage cred-delete \
+	--access-key mytestkey
 	--url $sds_endpoint
 ```
 {: screen}
@@ -678,14 +674,14 @@ ibmcloud software-defined-storage cred-create \
 	* Flag: `--url string`
 
 ### List service credential
-{: #ic-sds-list-service-cred}
+{: #ic-list-service-cred}
 
 Retrieves credentials for a specific storage account.
 
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage credentials --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage creds --url string
 ```
 {: pre}
 
@@ -693,12 +689,11 @@ ibmcloud software-defined-storage credentials --instanceid INSTANCEID --url stri
 
 ```sh
 ibmcloud software-defined-storage credentials \
-    --instanceid exampleString
 	--url $sds_endpoint
 ```
 {: screen}
 
-**ALIASES:** credentials, crl
+**ALIASES:** creds, crl
 
 **Parameters to provide:**
 * The service instance identifier.
@@ -709,14 +704,14 @@ ibmcloud software-defined-storage credentials \
 
 
 ### Create or modify certificate
-{: #ic-sds-upload-cert}
+{: #ic-upload-cert}
 
 Updates the S3 SSL Certificates or creates them if they do not exist.
 
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cert-upload --body BODY
+ibmcloud software-defined-storage cert-upload --body BODY --url string
 ```
 {: pre}
 
@@ -740,14 +735,14 @@ ibmcloud software-defined-storage cert-upload --body BODY
 	* Flag: `--url string`
 
 ### Retrieve certificate details
-{: #ic-sds-retrieve-cert-details}
+{: #ic-retrieve-cert-details}
 
 Retrieves the S3 SSL certificate expiration date and status.
 
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cert
+ibmcloud software-defined-storage cert --url string
 ```
 {: pre}
 
