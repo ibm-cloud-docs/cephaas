@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-09-03"
 
-keywords: sds, cephaas host delete, delete all host volume mapping, delete volume mapping for a host,
+keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
 subcollection: sdsaas
 
@@ -103,7 +103,3 @@ There is no response returned if the request is successful.
 
 
 To verify that all volumes mappings for a given host is deleted, list the hosts by making a `GET /hosts/{id}` call.
-
-
-
-

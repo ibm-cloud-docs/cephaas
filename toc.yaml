@@ -44,7 +44,7 @@ toc:
           label: Managing block storage
           topics:
           - topicgroup:
-              label: Managing volumes
+              label: Volume operations
               topics:
                 - volume_about.md
                 - volume_create.md
@@ -52,7 +52,7 @@ toc:
                 - volume_update.md
                 - volume_delete.md
           - topicgroup:
-              label: Managing Hosts
+              label: Host operations
               topics:
                 - host_mapping_about.md
                 - host_create.md
