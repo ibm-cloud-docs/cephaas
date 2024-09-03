@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 keywords: sdsaas cephaas about volume host mappings
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # About volume host mappings
 {: #about-volume-host-mappings}
 
-With {{site.data.keyword.cephaas_full}}, block-level access to the Ceph storage cluster can take advantage of the NVMe-oF standard to provide data storage. The NVMe TCP protocol allows clients, which are known as initiators, to send NVMe-oF commands to storage devices, which are known as targets, over an Internet Protocol network. Initiators can be either Linux client or VMWare clients or both. For VMWare clients, the NVMe TCP volumes are shown as VMFS Data store and for Linux clients, the NVMe TCP volumes are shown as block devices.
+With {{site.data.keyword.cephaas_full}}, block-level access to the Ceph storage cluster can take advantage of the NVMe over Fabrics (NVMe-oF) standard to provide data storage. The NVMe TCP protocol allows clients, which are known as initiators, to send NVMe-oF commands to storage devices, which are known as targets, over an Internet Protocol network. Initiators can be either Linux client or VMWare clients or both. For VMWare clients, the NVMe TCP volumes are shown as VMFS Data store and for Linux clients, the NVMe TCP volumes are shown as block devices.
 
 Initiators are configured to allow the NVMe TCP protocol to send NVMe-oF commands to targets over an Internet Protocol network.
 
@@ -26,7 +26,7 @@ The NVMe-oF gateway initiator can be configured on either of the following platf
 * VMware vSphere Hypervisor (ESXi) 7.0U3 or later
 
 
-For more information, see [Connecting from NVME-oF initiators](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#prereq-nvme-initiators)
+For more information, see [Connecting from NVME-oF initiators](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#connecting-nvme-initiators)
 
 
 
@@ -39,9 +39,14 @@ For more information, see [Connecting from NVME-oF initiators](/docs/sdsaas?topi
 * In order for multiple ESXi hosts to be able to access the same volume, they must be part of the same VMWare cluster.
 
 
-## Before you begin connecting from NVMe-oF initiators
-{: #prereq-nvme-initiators}
+## Connecting from NVMe-oF initiators
+{: #connecting-nvme-initiators}
 
+Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command line interface.
+
+* [Configuring the NVMe-oF initiator for Red Hat Enterprise Linux](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#prereq-config-nvmeof-initiator-rhel)
+
+* [Configuring the NVMe-oF initiator for VMware ESXi](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#configuring-nvmeof-initiator-vmware-esxi)
 
 
 ### Configuring NVMe-oF initiator for RHEL
@@ -86,6 +91,8 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     nqn.2014-08.org.nvmexpress:uuid:950ddadf-f995-47b7-9416-b9bb233f66e3
     ```
     {: screen}
+
+1. Next steps: [Connecting initiators from RHEL](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#connect-from-rhel)
 
 
 ### Configuring the NVMe-oF initiator for VMware ESXi
@@ -135,6 +142,7 @@ Once the initaitor is configured, a corresponding “host” must be created in 
 
 During host creation, NQN from the initiator must be used.
 {: note}
+
 
 
 ## Connecting from Red Hat Enterprise Linux
@@ -250,8 +258,6 @@ During host creation, NQN from the initiator must be used.
     Hello NVMe-oF
     ```
     {: screen}
-
-
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-03"
 
 keywords: sds, sdsaas host,
 
@@ -96,7 +96,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/sds-block-storage){: external}.
+You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/block-storage){: external}.
 
 ### Before you begin
 {: #host-api-prereqs}
@@ -112,12 +112,12 @@ Make a `POST /hosts` request to create a host, and define the host by using the 
 The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings).
 {: note}
 
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name alaready exists` is displayed.
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
 {: important}
 
 
 ```sh
-curl -X 'POST'   '$sds_api_endpoint/v1/hosts'   -H 'accept: application/json'   -H 'Content-Type: application/json'   -d '{
+curl -X 'POST' '$sds_api_endpoint/v1/hosts' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
   "name": "host1",
   "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
   "volume_mappings": [
@@ -163,5 +163,3 @@ When you refresh the Hosts page, the new host appears at the beginning of the li
 * You can continue creating more hosts or manage existing hosts.
 
 * [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-from-nvme-of-initiators)
-
-

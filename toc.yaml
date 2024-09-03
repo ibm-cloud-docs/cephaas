@@ -87,7 +87,7 @@ toc:
                 - s3_cred_delete.md
 #               - service_credential_update.md
       - topicgroup:
-          label: Managing access
+          label: Identity and access management
           topics:
             - iam_access.md
             - iam_overview.md
