@@ -33,6 +33,7 @@ The following table describes supported common request headers. {{site.data.keyw
 | `Expect`                  | The value `100-continue` waits for acknowledgment from the system that the headers are appropriate before sending the payload. |
 | `host`                    | Either the endpoint or the 'virtual host' syntax of `{bucket-name}.{endpoint}`. Typically, this header is automatically added. For more information about endpoints, see [Endpoints and storage locations](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints)    |
 | `Cache-Control` | Can be used to specify caching behavior along the request/reply chain. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9 |
+{: caption="Table 1. Supported common request headers" caption-side="top"}
 
 ### Custom metadata
 {: #compatibility-headers-metadata}
@@ -52,6 +53,7 @@ The following table describes common response headers.
 | `ETag`             | MD5 hash value of the request.                     |
 | `Server`           | Name of the responding server.                     |
 | `X-Clv-Request-Id` | Unique identifier generated per request.           |
+{: caption="Table 2. Common response headers" caption-side="top"}
 
 ### Lifecycle Response Headers
 {: #compatibility-lifecycle-headers}
@@ -65,6 +67,7 @@ The following table describes response headers for archived objects
 |`x-ibm-archive-transition-time`|Returns the date and time when the object is scheduled to transition to the archive tier.|
 |`x-ibm-transition`|Included if the object has transition metadata and returns the tier and original time of transition.|
 |`x-ibm-restored-copy-storage-class`|Included if an object is in the `RestoreInProgress` or `Restored` states and returns the storage class of the bucket.|
+{: caption="Table 3. Response headers for archived objects" caption-side="top"}
 
 ## Error Codes
 {: #compatibility-errors}
@@ -121,3 +124,4 @@ The following table describes response headers for archived objects
 | TooManyBuckets                      | You have attempted to create more buckets than allowed.                                                                                                                | 400 Bad Request                     |
 | UnexpectedContent                   | This request does not support content.                                                                                                                                 | 400 Bad Request                     |
 | UserKeyMustBeSpecified              | The bucket POST must contain the specified field name. If it is specified, check the order of the fields.                                                              | 400 Bad Request                     |
+{: caption="Table 4. Error code and its descriptions" caption-side="top"}

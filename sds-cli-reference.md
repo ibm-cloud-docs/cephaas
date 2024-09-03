@@ -20,7 +20,7 @@ The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyw
 
 
 ## Before you begin
-{: #before-you-begin-using-sds-cli}
+{: #before-you-begin-using-cli}
 
 Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the SDS CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
 

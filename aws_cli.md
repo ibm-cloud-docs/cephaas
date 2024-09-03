@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-03"
 
 keywords: cli, command line interface, object storage, s3
 
@@ -42,7 +42,7 @@ This creates two files:
 
  `~/.aws/credentials`:
 
-```
+```sh
 [default]
 aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
@@ -51,7 +51,7 @@ aws_secret_access_key = {Secret Access Key}
 
 `~/.aws/config`:
 
-```
+```sh
 [default]
 region = {Provisioning Code}
 output = json
@@ -61,7 +61,7 @@ output = json
 
 You can also use environment variables to set HMAC credentials:
 
-```
+```sh
 export AWS_ACCESS_KEY_ID="{Access Key ID}"
 export AWS_SECRET_ACCESS_KEY="{Secret Access Key}"
 ```
@@ -100,7 +100,7 @@ aws --endpoint-url {endpoint} s3 ls s3://bucket-1
 {: #aws-cli-high-level-new-bucket}
 
 **Note**: Personally Identifiable Information (PII): When _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
-{:tip}
+{: tip}
 
 If the default region in the `~/.aws/config` file corresponds the same location as the chosen endpoint, then bucket creation is straightforward.
 
@@ -156,13 +156,13 @@ remove_bucket: s3://bucket-1/
 The CLI can create pre-signed URLs. These URLs allow for temporary public access to objects without changing any existing access controls.
 
 ```sh
-$ aws --endpoint-url {endpoint} s3 presign s3://bucket-1/new-file
+aws --endpoint-url {endpoint} s3 presign s3://bucket-1/new-file
 ```
 
 It's also possible to set a time-to-live for the URL in seconds (default is 3600):
 
 ```sh
-$ aws --endpoint-url {endpoint} s3 presign s3://bucket-1/new-file --expires-in 600
+aws --endpoint-url {endpoint} s3 presign s3://bucket-1/new-file --expires-in 600
 ```
 
 ## Low-level syntax commands
@@ -174,7 +174,7 @@ The AWS CLI also allows direct API calls that provide the same responses as dire
 {: #aws-cli-low-level-list-buckets}
 
 ```sh
-$ aws --endpoint-url {endpoint} s3api list-buckets
+aws --endpoint-url {endpoint} s3api list-buckets
 {
     "Owner": {
         "DisplayName": "{storage-account-uuid}",
@@ -197,7 +197,7 @@ $ aws --endpoint-url {endpoint} s3api list-buckets
 {: #aws-cli-low-level-list-objects}
 
 ```sh
-$ aws --endpoint-url {endpoint} s3api list-objects --bucket bucket-1
+aws --endpoint-url {endpoint} s3api list-objects --bucket bucket-1
 ```
 
 ```json
