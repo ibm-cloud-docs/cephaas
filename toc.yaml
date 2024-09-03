@@ -48,7 +48,6 @@ toc:
               topics:
                 - volume_about.md
                 - volume_create.md
-                - volume_mapping.md
                 - volume_view.md
                 - volume_update.md
                 - volume_delete.md
@@ -57,11 +56,11 @@ toc:
               topics:
                 - host_mapping_about.md
                 - host_create.md
-                - host_mapping.md
-                - host_unmap.md
                 - host_view.md
                 - host_rename.md
                 - host_delete.md
+                - host_unmap.md
+          - host_mapping.md
           - topicgroup:
               label: Managing capacity allocations
               topics:

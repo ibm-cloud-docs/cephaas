@@ -162,4 +162,4 @@ When you refresh the Hosts page, the new host appears at the beginning of the li
 
 * You can continue creating more hosts or manage existing hosts.
 
-* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-from-nvme-of-initiators)
+* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#connecting-nvme-initiators)

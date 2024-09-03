@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-09-03"
 
-keywords: sds, sdsaas Block Storage Volume, update volume for sdsaas, manage volume
+keywords: cephaas, block storage, rename host
 
 subcollection: sdsaas
 
@@ -18,7 +18,7 @@ subcollection: sdsaas
 You can update host name (rename) from the UI, CLI, or by using the API.
 {: shortdesc}
 
-## renaming hosts in the UI
+## Renaming hosts in the UI
 {: #renaming-host-name-ui}
 {: ui}
 
@@ -33,7 +33,7 @@ To rename a host, complete the following steps.
 5. Click **Rename**.
 
 
-### Renaming a host from details page in the UI
+## Renaming a host from details page in the UI
 {: #renaming-sds-hosts-from-details-page-ui}
 {: ui}
 
@@ -67,11 +67,11 @@ ibmcloud software-defined-storage host-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
 {: note}
 
 
-## renaming host with the API
+## Renaming host with the API
 {: #renaming-hosts-api}
 {: api}
 
@@ -99,6 +99,3 @@ COMING SOON
 
 ```
 {: screen}
-
-
-

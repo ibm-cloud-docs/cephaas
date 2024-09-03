@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-09-03"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -17,7 +17,7 @@ subcollection: sdsaas
 
 You can map one or more volume to a host by using UI, CLI and APIs.
 
-## Mapping volumes to a host in the UI
+## Mapping volumes to a host from Volumes page in the UI
 {: #mapping-volume-to-host-ui}
 {: ui}
 
