@@ -12,7 +12,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs - Block storage
+# FAQs about block storage
 {: #block-storage-faq}
 
 ## How am I charged for usage?
@@ -98,7 +98,8 @@ Yes, a volume can be mapped to up to 32 hosts.
 
 Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the bandwidth are dependent on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
 
-
+| Setting name                          |   Values                              |
+|---------------------------------------|---------------------------------------|
 | IOPS                                  |	3 IOPS/GB                           |
 | Min Volume Size                       |	1 GB                                |
 | Max Volume Size                       |	32 TB                               |

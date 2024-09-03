@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-03"
 
 keywords: cephaas, volume, capacity, Block Storage
 
@@ -12,18 +12,18 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing volume count and capacity limits
+# Managing storage limits
 {: #manage-storage-limit}
 
-{{site.data.keyword.cephaas_full}} offers block-level data storage volumes that can be attached to an instance as either a boot volume or as a data volume. Answer the following questions when you're ordering Block Storage volumes or requesting an increase in your volume or capacity limits.
+{{site.data.keyword.cephaas_full}} offers block storage volumes that can be mapped to a host for a deployment. Answer the following questions when you're requesting an increase in your volume or capacity limits.
 {: shortdesc}
 
 ## Overview
 {: #manage-storage-limit-overview}
 
-With {{site.data.keyword.cephaas_short}}, you can create up to 750 data Block Storage volumes per account in a deployment. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
+With {{site.data.keyword.cephaas_short}}, you can create up to 1000 block storage volumes per deployment. You can request an increase of this quota by contacting [IBM Support](/unifiedsupport/cases/add){: external} and submitting a support case.
 
-Capacity for secondary volumes ranges from 1 - 16,000 GB. You can also expand volume capacity within its IOPS tier profile or custom band.
+You can also expand the volume capacity within its IOPS tier profile or custom band.
 
 
 ## Volume count and storage limits checklist
@@ -32,13 +32,10 @@ Capacity for secondary volumes ranges from 1 - 16,000 GB. You can also expand vo
 Review the following checklist items and record your answers. Provide this information when you create a support case.
 
 - **Ticket Subject**:
-    >"*Request to Increase Block Storage Volume Count Limit*".
+    >"*Request to increase block storage capacity limit*".
 
 - **How many extra volumes do you need? Provide your account, and deployment details where you want more volumes.**
     >*"200 volumes in US South-2"*.
-
-- **Of the secondary volumes, how many secondary volumes do you need and of what capacity?**
-    >*"75% of the secondary volumes are under 250 GB and 25% are up to 16,000 GB."*
 
 - **How many total volumes use customer-managed encryption?**
     >*"100 volumes (or 50%) are to use customer-managed encryption".*
