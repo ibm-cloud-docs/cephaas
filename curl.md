@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 keywords: cli, command line interface, object storage, curl
 
@@ -61,4 +61,4 @@ For use with curl APIs, you need only the UUID that starts after the last single
 ## Next Steps
 {: #curl-next-steps}
 
-The detailed description of the RESTful API for {{site.data.keyword.cephaas_full_notm}} can be found in the [{{site.data.keyword.cephaas.short}} Object Storage API Documentation](https://cloud.ibm.com/apidocs/object-storage){: external}.
+The detailed description of the RESTful API for {{site.data.keyword.cephaas_full_notm}} can be found in the [{{site.data.keyword.cephaas_short}} Object Storage API Documentation](https://cloud.ibm.com/apidocs/object-storage){: external}.

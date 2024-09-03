@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-09-03"
 
 keywords: cephaas, logging for IBM CephaaS, observability
 
@@ -34,79 +34,13 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 
 
-### Locations where logs are sent to {{site.data.keyword.la_full_notm}}
-{: #la-legacy-locations}
-
-
-
-{{site.data.keyword.cephaas_short}} sends platform logs to {{site.data.keyword.la_full_notm}} in the regions indicated in the following table.
-
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #la-table-1}
-{: tab-title="Americas"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
-{: #la-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #la-table-3}
-{: tab-title="Europe"}
-{: tab-group="la"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 ### Locations where logs are sent by {{site.data.keyword.logs_routing_full_notm}}
 {: #lr-locations}
 
 
 
-{{site.data.keyword.cephaas_short}} sends logs by {{site.data.keyword.logs_routing_full_notm}} in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Americas locations" caption-side="top"}
-{: #lr-table-1}
-{: tab-title="Americas"}
-{: tab-group="lr"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Asia Pacific locations" caption-side="top"}
-{: #lr-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="lr"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where platform logs are sent in Europe locations" caption-side="top"}
-{: #lr-table-3}
-{: tab-title="Europe"}
-{: tab-group="lr"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 ## Platform logs that are generated
 {: #log-platform}
@@ -171,9 +105,3 @@ The following tables list the message IDs that are generated and additional info
 |------------|------|------------|
 | `is.flow-log-collector.00001E` | error | Failed to write a Flow log file for the past 24 hours. Dropping flow log for Virtual Server _ServerName_ |
 {: caption="Additional information about message IDs" caption-side="top"}
-
-
-## Analyzing {{site.data.keyword.cephaas_short}} logs
-{: #cloud-logs}
-
-
