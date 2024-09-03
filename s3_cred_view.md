@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-03"
 
 keywords: sdsaas service credential view, list
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # View object storage S3 credential details
 {: #view-s3-credential-sds}
 
-View object storage S3 credential by using the UI and CLI.
+View object storage S3 credential by using the UI, CLI and API.
 {: shortdesc}
 
 
