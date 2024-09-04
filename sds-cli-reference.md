@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -681,7 +681,7 @@ Retrieves credentials for a specific storage account.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage creds --url string
+ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -689,6 +689,7 @@ ibmcloud software-defined-storage creds --url string
 
 ```sh
 ibmcloud software-defined-storage credentials \
+	--instanceid examplestring \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -742,7 +743,7 @@ Retrieves the S3 SSL certificate expiration date and status.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cert --url string
+ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
 ```
 {: pre}
 
@@ -750,6 +751,7 @@ ibmcloud software-defined-storage cert --url string
 
 ```sh
 ibmcloud software-defined-storage cert \
+	--instanceid examplestring \
 	--url $sds_endpoint
 ```
 {: screen}

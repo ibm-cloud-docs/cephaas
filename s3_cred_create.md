@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-04"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -66,17 +66,17 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 {: help}
 {: support}
 
-Run the following command with the `INSTANCEID`, `ACCESS-KEY` and API endpoint to create a new object storage S3 credential or update an existing credential for the storage deployment.
+Run the `cred-create` command with the `ACCESS-KEY` and API endpoint to create a new object storage S3 credential or update an existing credential for the storage deployment.
 
 ```sh
-ibmcloud software-defined-storage cred-create --instanceid INSTANCEID --access-key ACCESS-KEY --url string
+ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage cred-create --instanceid exampleString --access-key exampleString --url $sds_endpoint
+ibmcloud software-defined-storage cred-create --access-key exampleString --url $sds_endpoint
 
 ```
 {: screen}

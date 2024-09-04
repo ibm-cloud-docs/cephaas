@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 keywords: sdsaas service credential view, list
 
@@ -37,7 +37,7 @@ Run the following command and make sure that you have provided `INSTANCEID` of t
 
 
 ```sh
-ibmcloud software-defined-storage credentials --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
 ```
 {: pre}
 

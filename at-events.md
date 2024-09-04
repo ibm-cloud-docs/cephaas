@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 keywords: cephaas activity tracker events
 
@@ -77,7 +77,6 @@ The following table lists the activity tracking event actions that the {{site.da
 | software-defined-storage.instance.create | Service instance was created   |
 | software-defined-storage.instance.update | Service instance was updated  |
 | software-defined-storage.instance.delete | Service instance was deleted  |
-| software-defined-storage.instance.last_operation_get | |
 | software-defined-storage.account.create | Storage account credential was created |
 | software-defined-storage.account.delete | Storage account credential was deleted |
 | software-defined-storage.account.get | One or more storage account credentials were retrieved |

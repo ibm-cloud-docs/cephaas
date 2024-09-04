@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-04"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -41,19 +41,22 @@ To upload a S3 certificate, complete the following steps.
 {: #uploading-s3-certificate-cli}
 {: cli}
 
-Use the `cert-upload` command to update the S3 SSL Certificates or create them if they do not exist. Include the parameters `--body BODY` to provide the request containing the S3 TLS certificate in the command to update the certificate. The body must be in `string` format with single quotes at the beginning and end of all certificate data. Escape characters are allowed.
+Use the `cert-upload` command to update the S3 SSL Certificates or create them if they do not exist. Include the parameters `--body BODY` to specify the file name with extension `.pem` that contains the S3 TLS certificate.
 
 Run the following command to upload the certificate.
 
 ```sh
-ibmcloud software-defined-storage cert-upload --body BODY
+ibmcloud software-defined-storage cert-upload --body BODY --url string
 ```
 {: pre}
 
+
 See the following example.
 
-```bash
-ibmcloud software-defined-storage cert-upload --body '-----BEGIN CERTIFICATE-----...'
+```sh
+ibmcloud software-defined-storage cert-upload \
+    --body tempdir/cert-file.pem \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -83,5 +86,3 @@ A successful response looks like this:
 
 ```
 {: screen}
-
-

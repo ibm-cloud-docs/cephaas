@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-04"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -40,7 +40,7 @@ Run the following command and ensure you have provided the `INSTANTID` and endpo
 
 
 ```sh
-ibmcloud software-defined-storage certificate --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
 ```
 {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-09-04"
 
 keywords: IBM Cloud, observability
 
@@ -33,39 +33,6 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Locations where metrics are generated
 {: #mon-locations}
 
-
-
-{{site.data.keyword.cephaas_short}} sends metrics in the regions that are indicated in the following table.
-
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where metrics are sent in Americas locations" caption-side="top"}
-{: #mon-table-1}
-{: tab-title="Americas"}
-{: tab-group="mon"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
-| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where metrics are sent in Asia Pacific locations" caption-side="top"}
-{: #mon-table-2}
-{: tab-title="Asia Pacific"}
-{: tab-group="mon"}
-{: class="simple-tab-table"}
-{: row-headers}
-
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
-{: caption="Regions where metrics are sent in Europe locations" caption-side="top"}
-{: #mon-table-3}
-{: tab-title="Europe"}
-{: tab-group="mon"}
-{: class="simple-tab-table"}
-{: row-headers}
 
 
 ## Enabling platform metrics for {{site.data.keyword.cephaas_short}}
@@ -129,5 +96,3 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 ### Additional attributes
 {: #monitoring-attributes-add}
-
-
