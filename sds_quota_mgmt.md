@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-04"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -85,10 +85,24 @@ ibmcloud resource service-instance <instancename> --output json
 Make a PATCH request to modify the quota for provisioned and object capacity.
 
 ```sh
-curl --location --request PATCH '$rc_endpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":"true", quota":{"block":"70","object":"50"}}}
+curl --location --request PATCH '$rc_endpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":true, "quota":{"block":70,"object":50}}}
 
 ```
 {: pre}
 
 `$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
 {: note}
+
+To verify that object and block quota was set correctly, run the following requests.
+
+```sh
+curl -X GET $sds_endpoint/v1/block_quota
+```
+{: pre}
+
+
+
+```sh
+curl -X GET $sds_endpoint/v1/object/storageclass/standard
+```
+{: pre}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -112,6 +112,8 @@ A successful response looks like this:
 ```
 {: screen}
 
+You can map only one volume at a time using API command.
+{: note}
 
 ## Next steps
 {: #next-step-mapping-hosts}

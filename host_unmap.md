@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -77,9 +77,9 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
 ```
 {: pre}
 
-This unmaps a volume from a host response.
+This unmaps a volume from a host.
 
-There is no response returned if the request is successful
+There is no response returned if the request is successful. HTTP response code 204 is returned.
 
 
 To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` call.
@@ -98,8 +98,8 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes'
 ```
 {: pre}
 
-Unmap all volumes from a host response.
-There is no response returned if the request is successful.
+Unmap all volumes from a host.
+There is no response returned if the request is successful. HTTP response code 204 is returned.
 
 
 To verify that all volumes mappings for a given host is deleted, list the hosts by making a `GET /hosts/{id}` call.

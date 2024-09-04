@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-04"
 
 keywords: cephaas, block storage, rename host
 
@@ -77,9 +77,6 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 To update your host name with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
 
-Only host name can be updated using the PATCH operation.
-{: note}
-
 Make a `PATCH /hosts/{id}` request to update or rename a host.
 
 ```sh
@@ -95,7 +92,14 @@ Make a `PATCH /hosts/{id}` request to update or rename a host.
 A successful response looks like this:
 
 ```json
-COMING SOON
+{
+  "id": "r134-69d40d27-bb86-4f52-83f9-6d3acb8d74eb",
+  "name": "sds-host-name-updated",
+  "nqn": "nqn.2014-08.com.vmware:nvme:vm2-esx-host",
+  "created_at": "2024-09-03T05:22:56Z",
+  "service_instance_id": "9f158770-66a4-4746-a2aa-245a8e06f451",
+  "storage_workspace_id": "default"
+}
 
 ```
 {: screen}

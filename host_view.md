@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-04"
 
 keywords: sds, host, view host details, host summary list
 
@@ -146,7 +146,7 @@ ibmcloud software-defined-storage hosts \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 For more information about available command options, run `ibmcloud sds hosts --help`.
@@ -158,7 +158,7 @@ For more information about available command options, run `ibmcloud sds hosts --
 
 You can list all hosts and view details for a specific host within all deployments that you have access to.
 
-Before you begin, make sure that you [set up your API environment].
+Before you begin, make sure that you [set up your API environment](/docs/sdsaas?topic=sdsaas-set-up-environment&interface=api).
 
 ### Viewing list of all hosts with the API
 {: #view-all-host-api}
@@ -180,11 +180,11 @@ A successful response looks like the following example.
   "hosts": [
     {
       "created_at": "string",
-      "id": "string",
-      "name": "string",
-      "nqn": "string",
-      "service_instance_id": "string",
-      "storage_workspace_id": "string",
+      "id": "r134-69d40d27-bb86-4f52-83f9-6d3acb8d74eb",
+      "name": "sds-host-name-updated",
+      "nqn": "nqn.2014-08.com.vmware:nvme:vm2-esx-host",
+      "service_instance_id": "9f158770-66a4-4746-a2aa-245a8e06f451",
+      "storage_workspace_id": "default",
       "volume_mappings": [
         {
           "status": "string",
@@ -198,8 +198,8 @@ A successful response looks like the following example.
               }
             ]
           },
-          "volume_id": "string",
-          "volume_name": "string"
+          "volume_name": "vol1",
+          "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
         }
       ]
     }
@@ -226,13 +226,13 @@ A successful response provides details of the host, such as the host id, host na
 
 ```json
 {
-     "id" : "host_id",
+    "id" : "host_id",
     "name": "my-host",
     "nqn": "nqn-xxxxx-xxxxx",
     "created_at": "date-time",
-     "service_instance_id": "xxxx",
-     "storage_workspace_id": "yyyy",
-       volume_mappings" : [
+    "service_instance_id": "xxxx",
+    "storage_workspace_id": "yyyy",
+      volume_mappings" : [
         {
            "volume_name": "<volume_name>",
            "volume_id": "<volume_id1>",
@@ -254,5 +254,3 @@ A successful response provides details of the host, such as the host id, host na
 
 ```
 {: codeblock}
-
-
