@@ -61,7 +61,7 @@ The following table lists the activity tracking event actions that the {{site.da
 | `software-defined-storage.instance.create` | An event is generated when you provision a service instance. |
 | `software-defined-storage.instance.update` | An event is generated when you rename a service instance or when you change the service plan. |
 | `software-defined-storage.instance.delete` | An event is generated when a service instance is deleted. |
-{: caption="Actions that generate platform events" caption-side="bottom"}
+{: caption="Table 1. Actions that generate platform events" caption-side="bottom"}
 
 
 ## List of management events
@@ -89,4 +89,4 @@ The following table lists the {{site.data.keyword.cephaas_short}} actions that g
 | software-defined-storage.host.delete | The host was deleted |
 | software-defined-storage.volumemap.create | The volume was mapped |
 | software-defined-storage.volumemap.delete | The volume was unmapped |
-{: caption="Actions that generate management events" caption-side="bottom"}
+{: caption=" Table 2. Actions that generate management events" caption-side="bottom"}

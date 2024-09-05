@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -36,8 +36,7 @@ Here, you can view the **S3 certificate** expiration date and status if it exist
 
 Use the `certificate` command to retrieve and view the S3 SSL Certificates expiration date and it's status.
 
-Run the following command and ensure you have provided the `INSTANTID` and endpoint url `--url string` to view the certificate details.
-
+Run the following command and ensure you have provided the `INSTANCEID` and endpoint url.
 
 ```sh
 ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
@@ -55,6 +54,9 @@ Expired          false
 
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+{: note}
 
 
 ## Retrieve S3 certificate details with the API
