@@ -49,7 +49,7 @@ See the following example.
 ibmcloud software-defined-storage certificate --instanceid abc --url $sds_endpoint
 ...
 
-ExpirationDate
+ExpirationDate  "2024-08-13T05:23:42Z"
 Expired          false
 
 ```
