@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-05"
 
 keywords: IBM CephaaS event notifications
 
@@ -27,7 +27,7 @@ To send information to {{site.data.keyword.en_short}}, you must connect your {{s
 
 When an event of interest takes place in your {{site.data.keyword.cephaas_short}} instance, {{site.data.keyword.cephaas_short}} communicates with a connected {{site.data.keyword.en_short}} instance to forward a notification to a [supported destination](/docs/event-notifications?topic=event-notifications-en-destination).
 
-_List any additional detail about how your service collects events, the timing for checking for events, etc. that is specific to your service. Add a couple of example event types here to help the user know what to expect before they dive into the table below. See this example from Secrets Manager: https://test.cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-event-notifications&interface=ui#event-notifications-how_
+
 
 ## Events for {{site.data.keyword.cephaas_short}}
 {: #event-notifications-list}
@@ -36,10 +36,21 @@ The following table lists the {{site.data.keyword.cephaas_short}} events.
 
 
 
-| Event type                                  | Description |
-|------------------------------------------|---------|
-| `software-defined-storage.instance.create`           | An event is generated when you provision a service instance. |
-| `software-defined-storage.instance.update`           | An event is generated when you rename a service instance or when you change the service plan. |
+| Event name | Event type                                       | Description |
+|------------|--------------------------------------------------|---------|
+|  | `software-defined-storage.instance.create`       | An event is generated when you provision a service instance. |
+|  | `software-defined-storage.instance.update`       | An event is generated when you rename a service instance or when you change the service plan. |
+|  | `software-defined-storage.instance.delete`       | An event is generated when a service instance is deleted. |
+|  | `software-defined-storage.account.create`        | An event is generated when a credential is created. |
+|  | `software-defined-storage.account.delete`        | An event is generated when a credential is deleted. |
+|  | `software-defined-storage.instance.create`       | An event is generated when a S3 TLS certificate is created. |
+|  | `software-defined-storage.volume.create`         | An event is generated when a volume is created. |
+|  | `software-defined-storage.volume.update`         | An event is generated when a volume is updated. |
+|  | `software-defined-storage.volume.delete`         | An event is generated when a volume is deleted. |
+|  | `software-defined-storage.host.create`           | An event is generated when a host is created. |
+|  | `software-defined-storage.host.delete`           | An event is generated when a host is deleted. |
+|  | `software-defined-storage.volumemap.create`      | An event is generated when a volume is mapped. |
+|  | `software-defined-storage.volumemap.delete`      | An event is generated when a volume is unmapped. |
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications

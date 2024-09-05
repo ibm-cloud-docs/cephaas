@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -74,6 +74,7 @@ Ensure that the file you are uploading has included the server-side certificate 
 curl -X 'POST' \
   '$sds_api_enpoint/v1/object/s3tlscert' \
   -H 'accept: application/json' \
+  -H "Authorization: $token"
   -H 'Content-Type: text/plain' \
   --data-binary "@<filename>"
 ```

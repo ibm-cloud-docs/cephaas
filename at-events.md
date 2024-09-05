@@ -49,19 +49,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 
-## List of platform events
-{: #at_actions_platform}
 
-
-
-The following table lists the activity tracking event actions that the {{site.data.keyword.cloud_notm}} platform generates when {{site.data.keyword.cephaas_short}} instances are processed.
-
-| Action                                     | Description |
-|--------------------------------------------|---------|
-| `software-defined-storage.instance.create` | An event is generated when you provision a service instance. |
-| `software-defined-storage.instance.update` | An event is generated when you rename a service instance or when you change the service plan. |
-| `software-defined-storage.instance.delete` | An event is generated when a service instance is deleted. |
-{: caption="Table 1. Actions that generate platform events" caption-side="bottom"}
 
 
 ## List of management events
