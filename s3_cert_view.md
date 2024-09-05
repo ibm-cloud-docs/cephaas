@@ -46,7 +46,7 @@ ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage certificate --instanceid abc --url $sds_endpoint
+ibmcloud software-defined-storage cert --instanceid abc --url $sds_endpoint
 ...
 
 ExpirationDate  "2024-08-13T05:23:42Z"

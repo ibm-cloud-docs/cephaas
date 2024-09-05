@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: sdsaas service credential view, list
 
@@ -31,7 +31,7 @@ To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} 
 {: #retrieving-s3-credential-details-cli}
 {: cli}
 
-Use the `credentials` command to view the list of access keys that are created for a service instance (deployment).
+Use the `creds` command to view the list of access keys that are created for a service instance (deployment).
 
 Run the following command and make sure that you have provided `INSTANCEID` of the credential whose details you want to view and the API endpoint.
 
@@ -44,7 +44,7 @@ ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage credentials --instanceid exampleString --url $sds_endpoint
+ibmcloud software-defined-storage creds --instanceid exampleString --url $sds_endpoint
 ```
 {: screen}
 
