@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-05"
 
 keywords: cephaas activity tracker events
 
@@ -25,9 +25,6 @@ subcollection: sdsaas
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
 You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
-
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
-
 
 
 ## Viewing activity tracking events for {{site.data.keyword.cephaas_short}}
@@ -57,7 +54,7 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 
 
 
-The following table lists the activity tracking event actions that the {{site.data.keyword.cloud_notm}} platform generates {{site.data.keyword.cephaas_short}} instances are processed.
+The following table lists the activity tracking event actions that the {{site.data.keyword.cloud_notm}} platform generates when {{site.data.keyword.cephaas_short}} instances are processed.
 
 | Action                                     | Description |
 |--------------------------------------------|---------|
@@ -70,6 +67,7 @@ The following table lists the activity tracking event actions that the {{site.da
 ## List of management events
 {: #at_actions}
 
+The following table lists the {{site.data.keyword.cephaas_short}} actions that generates an event.
 
 
 | Action             | Description      |
