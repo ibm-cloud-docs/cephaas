@@ -99,6 +99,10 @@ toc:
             - event_notifications.md
             - logging.md
             - monitoring.md
+      - topicgroup: 
+          label: vSphere
+          topics: 
+            - connect_vmware.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
   - navgroup:
@@ -124,6 +128,7 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
+
       - topicgroup:
           label: CLI reference
           topics:
