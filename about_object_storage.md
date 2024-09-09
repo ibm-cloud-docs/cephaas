@@ -16,7 +16,7 @@ subcollection: sdsaas
 # About Object Storage
 {: #about-os}
 
-{{site.data.keyword.cephaass_full}} is a logical progression from block and file storage, and was invented to overcome a number of issues.
+{{site.data.keyword.cephaas_full}} is a logical progression from block and file storage, and was invented to overcome a number of issues.
 {: shortdesc}
 
 ## What is Object Storage?

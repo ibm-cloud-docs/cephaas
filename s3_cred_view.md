@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-09"
 
 keywords: sdsaas service credential view, list
 
@@ -66,7 +66,7 @@ curl -X 'GET /accounts/credentials' '$sds_api_endpoint/v1/object/accounts/creden
 
 
 ## Viewing all object storage credentials with the API
-{: #retrieving-s3-credential-api}
+{: #retrieving-all-credentials-api}
 {: api}
 
 You can retrieve and list all the available S3 credential using an access key.

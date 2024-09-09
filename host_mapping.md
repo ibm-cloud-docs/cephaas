@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-09"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -18,7 +18,7 @@ subcollection: sdsaas
 You can map one or more volume to a host by using UI, CLI and APIs.
 
 ## Mapping volumes to a host from Volumes page in the UI
-{: #mapping-volume-to-host-ui}
+{: #mapping-volume-to-host-from-volume-ui}
 {: ui}
 
 To map a volume to a host from Volumes page, complete the following steps.
@@ -33,7 +33,7 @@ To map a volume to a host from Volumes page, complete the following steps.
 
 
 ## Mapping volumes to a host from Hosts page in the UI
-{: #mapping-volume-to-host-ui}
+{: #mapping-volume-to-host-from-host-ui}
 {: ui}
 
 To map a volume to a host from Hosts page, complete the following steps.
