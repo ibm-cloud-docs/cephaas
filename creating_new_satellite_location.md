@@ -1,3 +1,4 @@
+---
 copyright:
  years: 2024, 2024
 lastupdated: "2024-09-09"
@@ -6,7 +7,7 @@ keywords: cephaas, Creating a new satellite location
 
 subcollection: sdsaas
 
-
+---
 
 {{site.data.keyword.attribute-definition-list}}
 
@@ -29,4 +30,3 @@ Perform the following steps for creating a new satellite location.
 Selecting this option will not make any additions in your bill, howerver, if you add storage volumes to it, it will be added in your bill. 
     {: note}
 10. Click **Create**. 
-
