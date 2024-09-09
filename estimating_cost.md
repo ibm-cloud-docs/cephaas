@@ -1,3 +1,4 @@
+---
 copyright:
  years: 2024, 2024
 lastupdated: "2024-09-09"
@@ -5,7 +6,6 @@ lastupdated: "2024-09-09"
 keywords: cephaas, Estimating Cost
 
 subcollection: sdsaas
-
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -33,5 +33,3 @@ Here are the steps for estimating cost of your IBM Ceph as a Service order.
 11. Your **Estimated cost per month** is displayed along with your selected product summary. 
 12. Click **View estimate** to display the IBM Cloud Estimates screen which shows all your estimated products from IBM Cloud. 
 13. You'll receive a system-generated e-mail from **IBM Cloud**. 
-
-

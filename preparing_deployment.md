@@ -1,3 +1,4 @@
+---
 copyright:
  years: 2024, 2024
 lastupdated: "2024-09-09"
@@ -32,8 +33,3 @@ After cost estimation and the subsequent communication with the IBM seller, your
 
 9. Enter your **Deployment name.** 
 10. Click **Create.** 
-
-
-
-
-
