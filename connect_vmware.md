@@ -13,5 +13,4 @@ subcollection: sdsaas
 # Connect to VMware environment
 {: #connecting-to-environment}
 
-Coming soon.
-
+Coming soon here. 
