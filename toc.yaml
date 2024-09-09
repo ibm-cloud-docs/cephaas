@@ -105,6 +105,13 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
+      - topicgroup: 
+          label: Billing
+          topics: 
+            - placing_order.md
+            - preparing_deployment.md
+            - creating_new_satellite_location.md
+            - estimating_cost.md
       - topicgroup:
           label: API reference
           topics:
