@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-11"
 
 keywords: cephaas, developer, getting started, command line interface, cli
 
@@ -48,7 +48,7 @@ Learn more about using the {{site.data.keyword.cloud_notm}} CLI to create applic
 ## Using the API
 {: #gs-dev-api}
 
-For managing data stored in {{site.data.keyword.cephaas_short}}, you can use S3 API compatible tools like the [AWS CLI](/docs/sdsaas?topic=sdsaas-aws-cli) with [HMAC credentials](/docs/sdsaas?topic=sdsaas-hmac-credentials-main) for compatibility. As IAM tokens are relatively easy to work with, `curl` is a good choice for basic testing and interaction with your storage. More information can be found in the [`curl`](/docs/sdsaas?topic=sdsaas-curl) and the [API](/docs/sdsaas?topic=sdsaas-compatibility-api) documentation.
+For managing data stored in {{site.data.keyword.cephaas_short}}, you can use S3 API compatible tools like the [AWS CLI](/docs/sdsaas?topic=sdsaas-aws-cli) with HMAC credentials for compatibility.
 
 ## Using libraries and SDKs
 {: #gs-dev-sdk}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-11"
 
 keywords: cli, command line interface, object storage, s3
 
@@ -16,7 +16,7 @@ subcollection: sdsaas
 # Using the AWS CLI
 {: #aws-cli}
 
-The official command-line interface for AWS is compatible with the {{site.data.keyword.cos_full}} S3 API.
+The official command-line interface for AWS is compatible with the {{site.data.keyword.cephaas_full}} S3 API.
 {: shortdesc}
 
 Written in Python, it can be installed from the Python Package Index via `pip install awscli`. By default, access keys are sourced from `~/.aws/credentials`, but can also be set as environment variables.

@@ -61,13 +61,13 @@ toc:
                 - host_delete.md
                 - host_unmap.md
           - host_mapping.md
-          - topicgroup:
-              label: Managing capacity allocations
-              topics:
-                - sds_quota_mgmt.md
-                - sds_capacity_performance.md
-                - manage_storage_limits.md
-                - capacity_add.md
+      - topicgroup:
+          label: Managing capacity allocations
+          topics:
+            - sds_quota_mgmt.md
+            - sds_capacity_performance.md
+            - manage_storage_limits.md
+            - capacity_add.md
       #         - view_capacity_details.md
       - topicgroup:
           label: Managing object storage
@@ -79,7 +79,7 @@ toc:
                 - s3_cert_upload.md
                 - s3_cert_view.md
           - topicgroup:
-              label: Managing S3 endpoint access
+              label: Managing authentication
               topics:
                 - s3_cred_overview.md
                 - s3_cred_create.md
@@ -91,7 +91,6 @@ toc:
           topics:
             - iam_access.md
             - iam_overview.md
-            - setup_traffic_encryption.md
       - topicgroup:
           label: Observability
           topics:
@@ -99,9 +98,9 @@ toc:
             - event_notifications.md
             - logging.md
             - monitoring.md
-      - topicgroup: 
+      - topicgroup:
           label: vSphere
-          topics: 
+          topics:
             - connect_vmware.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group.
@@ -109,9 +108,9 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-      - topicgroup: 
+      - topicgroup:
           label: Billing
-          topics: 
+          topics:
             - placing_order.md
             - preparing_deployment.md
             - creating_new_satellite_location.md
@@ -135,10 +134,7 @@ toc:
            - sds-cli-reference.md
            - curl.md
            - aws_cli.md
-#          - /cli/cli-manage-catalogs-plugin
-#          - /cli/cli-ibmcloud_commands_services
-#          - /cli/cli-ibmcloud_commands_account
-      - iam_at.md
+           - config_controls.md
       - topicgroup:
           label: Security and compliance
           topics:

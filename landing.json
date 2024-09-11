@@ -1,6 +1,6 @@
 {
     "title": "IBM Storage Ceph as a Service docs",
-    "lastupdated": "2024-09-09",
+    "lastupdated": "2024-09-11",
     "introduction": "IBM Storage Ceph as a Service is a high performing, flexible and predictable unified storage (block and object) on-premises which is IBM managed with cloud-like provisioning capabilities and on-demand capacity. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
     "section_devtools": {
       "api": "/apidocs/software-defined-storage",
