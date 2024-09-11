@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-11"
 
 keywords: cephaas, data security
 

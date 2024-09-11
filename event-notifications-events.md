@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-11"
 
-keywords: IBM CephaaS event notifications
+keywords: CephaaS event notifications
 
 subcollection: sdsaas
 

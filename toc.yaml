@@ -85,7 +85,15 @@ toc:
                 - s3_cred_create.md
                 - s3_cred_view.md
                 - s3_cred_delete.md
-#               - service_credential_update.md
+      - topicgroup:
+          label: Enhancing Security
+          topics:
+            - architecture-workload-isolation.md
+            - service-endpoints.md
+            - data-security.md
+            - cbr.md
+            - compliance.md
+            - eu.md
       - topicgroup:
           label: Identity and access management
           topics:
@@ -95,9 +103,9 @@ toc:
           label: Observability
           topics:
             - at-events.md
-            - event_notifications.md
             - logging.md
             - monitoring.md
+      - event_notifications.md
       - topicgroup:
           label: vSphere
           topics:
@@ -127,7 +135,6 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
-
       - topicgroup:
           label: CLI reference
           topics:
@@ -135,12 +142,7 @@ toc:
            - curl.md
            - aws_cli.md
            - config_controls.md
-      - topicgroup:
-          label: Security and compliance
-          topics:
-            - data_security.md
-            - compliance.md
-            - eu.md
+
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
