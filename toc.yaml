@@ -40,7 +40,6 @@ toc:
       topics:
       - setup_cli_api_environment.md
       - endpoints.md
-      - event_notifications.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -106,6 +105,7 @@ toc:
             - at-events.md
             - logging.md
             - monitoring.md
+      - event_notifications-events.md
       - topicgroup:
           label: vSphere
           topics:
@@ -135,7 +135,6 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
-
       - topicgroup:
           label: CLI reference
           topics:
