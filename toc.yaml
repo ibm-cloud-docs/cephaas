@@ -39,7 +39,6 @@ toc:
       id: howto
       topics:
       - setup_cli_api_environment.md
-      - endpoints.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -89,23 +88,19 @@ toc:
           label: Enhancing Security
           topics:
             - architecture-workload-isolation.md
-            - service-endpoints.md
+            - endpoints.md
             - data-security.md
-            - cbr.md
             - compliance.md
             - eu.md
-      - topicgroup:
-          label: Identity and access management
-          topics:
-            - iam_access.md
-            - iam_overview.md
+      - iam_access.md
+#            - iam_overview.md
+      - event-notifications-events.md
       - topicgroup:
           label: Observability
           topics:
             - at-events.md
             - logging.md
             - monitoring.md
-      - event_notifications-events.md
       - topicgroup:
           label: vSphere
           topics:
@@ -141,7 +136,7 @@ toc:
            - sds-cli-reference.md
            - curl.md
            - aws_cli.md
-           - config_controls.md
+#           - config_controls.md
 
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:

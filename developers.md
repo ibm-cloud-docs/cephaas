@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-12"
 
 keywords: cephaas, developer, getting started, command line interface, cli
 
@@ -41,7 +41,7 @@ First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](https
 When trying to create a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}
 
-The [Getting Started guide](/docs/sdsaas?topic=sdsaas-getting-started) walks through the basic steps of creating buckets and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/sdsaas?topic=sdsaas-curl).
+The [Getting Started guide](/docs/sdsaas?topic=sdsaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/sdsaas?topic=sdsaas-curl).
 
 Learn more about using the {{site.data.keyword.cloud_notm}} CLI to create applications, manage Kubernetes clusters, and more [in the documentation](/docs/cli?topic=cli-ibmcloud_cli).
 
@@ -53,7 +53,7 @@ For managing data stored in {{site.data.keyword.cephaas_short}}, you can use S3 
 ## Using libraries and SDKs
 {: #gs-dev-sdk}
 
-{{site.data.keyword.cephaas_short}} SDKs are available for [Python](/docs/sdsaas?topic=sdsaas-python), [Java](/docs/sdsaas?topic=sdsaas-java), [Go](/docs/sdsaas?topic=sdsaas-using-go), and [Node.js](/docs/sdsaas?topic=sdsaas-node). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/sdsaas?topic=sdsaas-iam-overview), as well as support for [Key Protect](/docs/sdsaas?topic=sdsaas-encryption).
+{{site.data.keyword.cephaas_short}} SDKs are currently available only for [Go](/docs/sdsaas?topic=sdsaas-using-go). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/sdsaas?topic=sdsaas-iam-overview), as well as support for [Key Protect](/docs/sdsaas?topic=sdsaas-encryption).
 
 ## Building applications on IBM Cloud
 {: #gs-dev-apps}

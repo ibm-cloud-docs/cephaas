@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -763,6 +763,142 @@ ibmcloud software-defined-storage cert \
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
+
+
+## Config commands
+{: #ic-config-commands}
+
+`Config` Command can be used for controlling or viewing persistent configuration of global options.
+
+To control or view persistant configurations, you can run `ibmcloud sds config` command along with the global options to list, set and unset the config values.
+
+You can set the `url` variable such that they do not need to use the `--url` flag when using with the `sds` command.
+
+
+**USAGE:**
+
+```sh
+ibmcloud software-defined-storage config
+```
+{: pre}
+
+
+This is an example for setting the url option.
+
+```sh
+ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+OK
+```
+{: screen}
+
+
+**COMMAND OPTIONS**
+{: #ic-config-command-options}
+
+* `get` - Retrieves the currently set configured value of an option.
+
+* `list` - Retrieves all the currently set configured values.
+
+* `set` - Set a config value for an option.
+
+* `unset` - Unset the config value of an option.
+
+
+
+### Retrieve configuration values
+{: #ic-get-config-values}
+
+Using `get` with `config` command allows you to retrieve the currently set value for a specific option.
+
+When `Get` command is used together with `url` option, the currently set value for the 'url' option is retrieved.
+
+**USAGE**
+
+```sh
+ibmcloud software-defined-storage config get url
+```
+{: pre}
+
+See example.
+
+```sh
+pc@mac ~ % ibmcloud sds config get url
+http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+```
+{: screen}
+
+### List all configuration values
+{: #ic-list-config-values}
+
+Using `List` with `config` command allows you to retrieve and view all of the currently set configured values.
+
+**USAGE**
+
+```sh
+ibmcloud software-defined-storage config list
+```
+{: pre}
+
+See example.
+
+```sh
+pc@mac ~ % ibmcloud sds config list url
+url
+http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+```
+{: screen}
+
+
+### Set new config values
+{: #ic-set-config-values}
+
+Using `set` with `config` command allows you to configure new values for a specific option.
+
+**USAGE**
+
+```sh
+ibmcloud software-defined-storage config set [option]
+```
+{: pre}
+
+When `set` command is used together with `url` option, the value for the 'url' option is set.
+
+See example on with `url` option.
+
+```sh
+pc@mac ~ % ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+OK
+```
+{: pre}
+
+
+### Reset config values
+{: #ic-unset-config-values}
+
+Using `unset` with `config` command allows you to reset the current configured values for a specific option.
+
+**USAGE**
+
+```sh
+ibmcloud software-defined-storage config set [option]
+```
+{: pre}
+
+When `unset` command is used together with `url` option, the currently configured value for the 'url' option is reset.
+
+See example on with `url` option.
+
+```sh
+ibmcloud software-defined-storage config unset url
+```
+{: pre}
+
+```sh
+pc@mac ~ % ibmcloud sds config unset url
+OK
+```
+{: screen}
 
 
 ## Next steps

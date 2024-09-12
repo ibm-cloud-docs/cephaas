@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-12"
 
 keywords:
 
@@ -93,7 +93,7 @@ _Include information about whether deleting the service fully erases all data. I
 
 _Information about how long services keep data after instances are deleted is covered in the service description. Include the following reference for users to find their data retention period._
 
-The _servicename_ data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the _service-name_ service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
+The {{site.data.keyword.cephaas_short}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
 
 ### Restoring deleted data for {{site.data.keyword.cephaas_short}}
 {: #data-restore}
