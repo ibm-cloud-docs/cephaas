@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-12"
 
 keywords: CephaaS event notifications
 
@@ -36,22 +36,26 @@ The following table lists the {{site.data.keyword.cephaas_short}} events.
 
 
 
-| Event name | Event type                                       | Description |
-|------------|--------------------------------------------------|---------|
-|  | `software-defined-storage.instance.create`       | An event is generated when you provision a service instance. |
-|  | `software-defined-storage.instance.update`       | An event is generated when you rename a service instance or when you change the service plan. |
-|  | `software-defined-storage.instance.delete`       | An event is generated when a service instance is deleted. |
-|  | `software-defined-storage.account.create`        | An event is generated when a credential is created. |
-|  | `software-defined-storage.account.delete`        | An event is generated when a credential is deleted. |
-|  | `software-defined-storage.instance.create`       | An event is generated when a S3 TLS certificate is created. |
-|  | `software-defined-storage.volume.create`         | An event is generated when a volume is created. |
-|  | `software-defined-storage.volume.update`         | An event is generated when a volume is updated. |
-|  | `software-defined-storage.volume.delete`         | An event is generated when a volume is deleted. |
-|  | `software-defined-storage.host.create`           | An event is generated when a host is created. |
-|  | `software-defined-storage.host.delete`           | An event is generated when a host is deleted. |
-|  | `software-defined-storage.volumemap.create`      | An event is generated when a volume is mapped. |
-|  | `software-defined-storage.volumemap.delete`      | An event is generated when a volume is unmapped. |
+| Event type                                       | Description |
+|--------------------------------------------------|-------------|
+| `software-defined-storage.instance.create`       | Provision a service instance. |
+| `software-defined-storage.instance.update`       | Rename a service instance or change the service plan. |
+| `software-defined-storage.instance.delete`       | Service instance is deleted. |
+| `software-defined-storage.account.create`        | Credential is created. |
+| `software-defined-storage.account.delete`        | Credential is deleted. |
+| `software-defined-storage.instance.create`       | S3 TLS certificate is created. |
+| `software-defined-storage.volume.create`         | Volume is created. |
+| `software-defined-storage.volume.update`         | Volume is updated. |
+| `software-defined-storage.volume.delete`         | Volume is deleted. |
+| `software-defined-storage.host.create`           | Host is created. |
+| `software-defined-storage.host.delete`           | Host is deleted. |
+| `software-defined-storage.volumemap.create`      | Volume is mapped. |
+| `software-defined-storage.volumemap.delete`      | Volume is unmapped. |
 {: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
+
+
+
+
 
 ## Enabling notifications
 {: #event-notifications-enable}
