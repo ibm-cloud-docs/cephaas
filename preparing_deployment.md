@@ -15,7 +15,7 @@ subcollection: sdsaas
 {: #preparing-deployment}
 After cost estimation and the subsequent communication with the IBM seller, your order processing is initiated. After your order is processed, you will receive a link from your IBM sales parter through e-mail, which will enable you to prepare for deployment.  
 
-A Prepare deployment screen will be displayed. 
+A Prepare deployment screen will be displayed. This screen will list your orders in-progress with a link to create Satellite Locations for each order. 
 
 1. If you already have IBM Cloud Satellite, you will be able to enter data in **Satellite Location** and **Deployment Name** fields. 
 2. Click **Create**. 

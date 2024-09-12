@@ -112,7 +112,7 @@ toc:
       topics:
       - responsibility_matrix.md
       - topicgroup:
-          label: Billing
+          label: Ordering and Onboarding
           topics:
             - placing_order.md
             - preparing_deployment.md

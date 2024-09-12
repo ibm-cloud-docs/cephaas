@@ -20,17 +20,11 @@ Prerequisite: A COS instance must already exist in your account before creating 
 
 Perform the following steps for creating a new satellite location. 
 
-1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and expand **Storage**.
-2. Click **Deployments** link. 
-3. In Progress order screen is displayed which includes links for your reference. 
-4. Click **Prepare deployment** link. 
-5. Select **Create IBM Cloud Satellite location**. 
-6. Enter **Satellite name**. 
-7. Select **Managed from** location, which is IBM Cloud region closest your your physical infrastructure. 
-8. Select your **Resource group**. 
-9. You can check the option for Automatically create an instance for me. 
-Selecting this option will not make any additions in your bill, howerver, if you add storage volumes to it, it will be added in your bill. 
-    {: note}
-10. Click **Create**. 
+1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu** > **Satellite** and select **Overview**.
+2. You can see various information about Satellites such as Pricing, Tutorials, Locations, Connectors, Config, etc. 
+3. Click **Create location** > **On-premises & edge**. 
+4. Satellite location creation screen is displayed which allows you to fill your geographical details. 
+5. Click **Add to estimate** to see the cost of your satellite. 
+Depending on your IBM cloud billing, you may need to upgrade your balance to create a new satellite. 
 
 Once a satellite location is created, it may take 30-45 minutes to become available. 
