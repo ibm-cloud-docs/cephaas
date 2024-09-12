@@ -787,7 +787,7 @@ ibmcloud software-defined-storage config
 This is an example for setting the url option.
 
 ```sh
-ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+pc@mac ~ % ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
 OK
 ```
 {: screen}
@@ -870,7 +870,7 @@ See example on with `url` option.
 pc@mac ~ % ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
 OK
 ```
-{: pre}
+{: screen}
 
 
 ### Reset config values
