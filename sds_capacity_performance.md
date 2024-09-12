@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-11"
+lastupdated: "2024-09-12"
 
 keywords: cephaas, capacity management, performance management
 
@@ -41,7 +41,7 @@ The upper section of the deployment dashboard displays the current usage informa
 | Object capacity | Current usage and a link to update capacity |
 {: caption="Table 1. Details about deployment capacity" caption-side="bottom"}
 
-The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. When the Overall Capacity is fully utilized, the bar turns yellow. If the burst capacity is also exhausted, the bar turns red. 
+The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. Till the capacity is not fully utilized, the bar displays blue color. When the Overall Capacity is fully utilized, the bar turns yellow. If the burst capacity is also exhausted, the bar turns red. 
 
 ## Viewing Performance of your deployments
 {: #view-performance}

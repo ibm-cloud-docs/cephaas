@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-12"
 
 keywords: cephaas, Place Order
 
@@ -26,6 +26,7 @@ To place an order for your IBM Ceph as a Service deployment, you need to estimat
 7. Click **Send**. 
 8. A confirmation screen will be displayed which includes your **Confirmation ID**, **Cost Estimation** and, **Contact Information**. 
 
+An email will be sent to the IBM CephaaS team, containing your estimate and contact details, enabling them to get in touch with you at the earliest opportunity. 
 
 
 

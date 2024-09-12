@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-12"
 
 keywords: cephaas, Creating a new satellite location
 
@@ -15,6 +15,8 @@ subcollection: sdsaas
 {: #creating-anew-satellite-location}
 
 Creating a satellite location is a mandatory step for preparing a new deployment. 
+
+Prerequisite: A COS instance must already exist in your account before creating a new satellite. 
 
 Perform the following steps for creating a new satellite location. 
 
@@ -30,3 +32,5 @@ Perform the following steps for creating a new satellite location.
 Selecting this option will not make any additions in your bill, howerver, if you add storage volumes to it, it will be added in your bill. 
     {: note}
 10. Click **Create**. 
+
+Once a satellite location is created, it may take 30-45 minutes to become available. 
