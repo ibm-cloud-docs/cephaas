@@ -31,3 +31,5 @@ Here are the steps for estimating cost of your IBM Ceph as a Service order.
 8. Confirmation screen is displayed which includes Confirmation ID, selected product, estimated cost and your contact information.
 9. Click **View estimate** to display the IBM Cloud Estimates screen which shows all your estimated products from IBM Cloud. 
 10. You'll receive a system-generated e-mail from **IBM Cloud**. 
+
+You can also download your estimation by clicking **Download** in the **Estimated total** section. 
