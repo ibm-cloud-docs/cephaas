@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-12"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -23,7 +23,7 @@ Unmap a volume from host by using the UI, CLI, or API.
 {: #unmap-volume-from-host-ui}
 {: ui}
 
-To remove all mapping of a volume that are mapped to a host, complete the following steps.
+To remove all mapping of a volume that is mapped to a host, complete the following steps.
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
@@ -31,13 +31,13 @@ To remove all mapping of a volume that are mapped to a host, complete the follow
 
 3. On the Host details page, in the Mapped volumes list, locate the volume **Name** and click the **Options** menu at the end of the row.
 
-4. Click **Unmap**. Confirmation popup is displayed.
+4. Click **Unmap**. A confirmation popup is displayed.
 
-5. Click **Unmap** to confirm the unmapping of selected volume from the host.
+5. Click **Unmap** to confirm the unmapping of the selected volume from the host.
 
 
 
-## Unmap all volume for a host from the CLI
+## Unmap all volumes for a host from the CLI
 {: #unmap-all-volume-for-hosts-cli}
 {: cli}
 
@@ -69,7 +69,7 @@ ibmcloud software-defined-storage host-vol-deleteall \
 {: #unmap-single-volume-for-host-api}
 {: api}
 
-Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a given host.
+Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a host.
 
 ```sh
 curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
@@ -77,20 +77,20 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
 ```
 {: pre}
 
-This unmaps a volume from a host.
+The command unmaps a volume from a host.
 
-There is no response returned if the request is successful. HTTP response code 204 is returned.
+There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
 
 To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` call.
 
 
 
-## Unmap all volume for a host with the API
+## Unmap all volumes for a host with the API
 {: #unmap-all-volume-for-host-api}
 {: api}
 
-Make a `DELETE /hosts/{id}/volumes` request to delete all volumes mapped for a given host.
+Make a `DELETE /hosts/{id}/volumes` request to delete all volumes that are mapped for a host.
 
 ```sh
 curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes'
@@ -98,8 +98,8 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes'
 ```
 {: pre}
 
-Unmap all volumes from a host.
-There is no response returned if the request is successful. HTTP response code 204 is returned.
+The command unmaps all volumes from a host.
+There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
 
-To verify that all volumes mappings for a given host is deleted, list the hosts by making a `GET /hosts/{id}` call.
+To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` call.

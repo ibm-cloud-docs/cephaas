@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-12"
 
 keywords: object storage, go, sdk
 
@@ -33,7 +33,7 @@ subcollection: sdsaas
 The {{site.data.keyword.cephaas_full}} SDK for Go provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
-The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of this guide. For detailed class and method documentation [see the Go API documentation](https://ibm.github.io/ibm-cos-sdk-go/){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/ibm-cos-sdk-go){: external}.
+The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/ibm-cos-sdk-go/){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/ibm-cos-sdk-go){: external}.
 
 ## Getting the SDK
 {: #go-get-sdk}
@@ -55,7 +55,7 @@ go get -u github.com/IBM/ibm-cos-sdk-go
 ### Import packages
 {: #go-import-packages}
 
-After you have installed the SDK, you will need to import the packages that you require into your Go applications to use the SDK, as shown in the following example:
+After installing the SDK, import the packages that is required for the Go applications to use the SDK, as shown in the following example:
 ```sh
 import (
     "github.com/IBM/ibm-cos-sdk-go/aws/credentials/ibmiam"
@@ -167,7 +167,7 @@ For more information about endpoints, see [Endpoints and storage locations](/doc
 ### Creating a new bucket
 {: #go-new-bucket}
 
-A list of valid provisioning codes for `LocationConstraint` can be referenced in [the Storage Classes guide](/docs/cloud-object-storage?topic=cloud-object-storage-classes#classes). Please note that the sample uses the appropriate location constraint for the Cold Vault storage based on the sample configuration. Your locations and configuration may vary.
+A list of valid provisioning codes for `LocationConstraint` can be referenced in [the Storage Classes guide](/docs/cloud-object-storage?topic=cloud-object-storage-classes#classes). Please note that the sample uses the appropriate location constraint for the Cold Vault storage based on the sample configuration. Your locations and configuration can vary.
 
 ```Go
 func main() {

@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-12"
 
-keywords: IAM access cephaas
+keywords: IBM CephaaS, IAM access, cephaas
 
 subcollection: sdsaas
 
@@ -28,7 +28,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 
 * Access across all instances of the service in your account
 * Access to an individual service instance in your account
-* Access to a specific resource within an instance, _such as resource type `bucket`_
+* Access to a specific resource within an instance, _such as resource type `volume`_
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](_YourSubHeadingLink_).
 
@@ -45,20 +45,7 @@ Review the following tables that outline what types of tasks each role allows fo
 {: caption="Table 1. IAM platform roles" caption-side="bottom"}
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
-{: tab-group="IAM"}
 
-| Service role |  Description of actions |
-|--------------|------------------------|
-| Reader         | Description of what users can accomplish; think tasks.   |
-| Writer         | Description            |
-| Manager        | Description            |
-| Content Reader | Description            |
-{: row-headers}
-{: class="simple-tab-table"}
-{: caption="Table 1. IAM service access roles" caption-side="bottom"}
-{: #iamrolesservice}
-{: tab-title="Service roles"}
-{: tab-group="IAM"}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
 {: #assign-access-console}
@@ -74,7 +61,7 @@ There are two common ways to assign access in the console:
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `<Object Writer>` role for `<Object Storage>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli). The following example shows a command for assigning the `<Viewer>` role for `<IBM CephaaS Storage>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -83,7 +70,7 @@ Use `<programmatic_service_name>` for the service name. Also, use quotations aro
 
 
 ```bash
-ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined-storage --roles "Object Writer"
+ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined-storage --roles "Viewer"
 ```
 {: pre}
 
@@ -100,15 +87,11 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Operator               | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Operator`      |
 | Editor                 | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Editor`        |
 | Administrator          | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Administrator` |
-| Reader         | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Reader`        |
-| Writer         | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Writer`        |
-| Manager        | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Manager`       |
-| Object Writer | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter` |
 {: caption="Table 2. Role ID values for API use" caption-side="bottom"}
 
 
 
-The following example is for assigning the `<Object Writer>` role for `<Object Storage>`:
+The following example is for assigning the `<Viewer>` role for `<IBM CephaaS Storage>`:
 
 Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
@@ -117,7 +100,7 @@ Use `<programmatic_service_name>` for the service name, and refer to the Role ID
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
   "type": "access",
-  "description": "Object Writer role for Object Storage",
+  "description": "Viewer role for IBM CephaaS Storage",
   "subjects": [
     {
       "attributes": [
@@ -130,7 +113,7 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
   ],
   "roles":[
     {
-      "role_id": "crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter"
+      "role_id": "crn:v1:bluemix:public:software-defined-storage::::serviceRole:Viewer"
     }
   ],
   "resources":[
@@ -163,7 +146,7 @@ policySubjects := &iampolicymanagementv1.PolicySubject{
   Attributes: []iampolicymanagementv1.SubjectAttribute{*subjectAttribute},
 }
 policyRoles := &iampolicymanagementv1.PolicyRole{
-  RoleID: core.StringPtr("crn:v1:bluemix:public:software-defined-storage::::serviceRole:ObjectWriter"),
+  RoleID: core.StringPtr("crn:v1:bluemix:public:software-defined-storage::::serviceRole:Viewer"),
 }
 accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
   Name:     core.StringPtr("accountId"),

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-12"
 
 keywords: sds, cephaas host, nvme-of initiator rhel
 
@@ -20,7 +20,7 @@ Use this procedure to configure the NMVe fabrics for VMware ESXi.
 
 1. Make sure that the VMware ESXi host is running VMware vSphere Hypervisor (ESXi) 7.0U3 version or later.
 
-2. Configure NVMe/TCP adapter.
+2. Configure an NVMe/TCP adapter.
 
 3. Enable NVMe/TCP on a physical network interface controller (NIC).
 
@@ -56,7 +56,7 @@ Use this procedure to configure the NMVe fabrics for VMware ESXi.
     ```
     {: screen}
 
-Once the initaitor is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/sdsaas?topic=sdsaas-creating-hosts).
+Once the initiator is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/sdsaas?topic=sdsaas-creating-hosts).
 
 During host creation, NQN from the initiator must be used.
 {: note}
