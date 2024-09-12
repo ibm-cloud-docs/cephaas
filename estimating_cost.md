@@ -26,8 +26,8 @@ Here are the steps for estimating cost of your IBM Ceph as a Service order.
 - **Subscription term**: Select the subscription term from from 1 to 5 years. Longer subscription term can reduce the cost. 
 - **Storage details**: Select the storage tier from **Performance** and **Capacity**. Performace tier offers both - Block and Object storage. The Capacity tier offers Object storage only. 
 
-9. Enter **Total storage** in TB. The Total storage value needs to be in increments of 100. 
-10. In the right-hand pane, click **Add to estimate**. 
-11. Confirmation screen is displayed which includes Confirmation ID, selected product, estimated cost and your contact information.
-12. Click **View estimate** to display the IBM Cloud Estimates screen which shows all your estimated products from IBM Cloud. 
-13. You'll receive a system-generated e-mail from **IBM Cloud**. 
+6. Enter **Total storage** in TB. The Total storage value needs to be in increments of 100. 
+7. In the right-hand pane, click **Add to estimate**. 
+8. Confirmation screen is displayed which includes Confirmation ID, selected product, estimated cost and your contact information.
+9. Click **View estimate** to display the IBM Cloud Estimates screen which shows all your estimated products from IBM Cloud. 
+10. You'll receive a system-generated e-mail from **IBM Cloud**. 
