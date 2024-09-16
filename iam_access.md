@@ -147,7 +147,6 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 {: codeblock}
 
 
-
 ```go
 subjectAttribute := &iampolicymanagementv1.SubjectAttribute{
   Name:  core.StringPtr("iam_id"),

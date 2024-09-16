@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-16"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -137,7 +137,6 @@ ibmcloud software-defined-storage volume-create \
 
 	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
 	{: note}
-
 
 
 * API Endpoint in the URL form.

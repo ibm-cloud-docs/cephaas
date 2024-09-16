@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-16"
 
 keywords: frequently asked questions, faqs
 
@@ -17,22 +17,26 @@ subcollection: sdsaas
 
 ## How am I charged for usage?
 {: faq}
+{: #faq-usage-cost}
 
 Block Storage is calculated hourly. The calculation is based on the total number of hours that the block storage volume exists on the account. It exists on the account until you delete the volume or you reach the end of a billing cycle, whichever comes first.
 
 ## Are there quota limits?
 {: faq}
+{: #faq-quota-limit}
 
 There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/sdsaas?topic=sdsaas-sdsaas-manage-storage-limit).
 
 
 ## After creating a volume with specific capacity, can the capacity later be increased?
 {: faq}
+{: #faq-increase-capacity}
 
 Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more informaton, see [Managing volume count and capacity limits](/docs/sdsaas?topic=sdsaas-manage-storage-limit).
 
 ## What rules apply to volume names and can I rename a volume later on?
 {: faq}
+{: #faq-rename-rules}
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
@@ -40,17 +44,20 @@ You can change the name of an existing volume using the UI. See [this informatio
 
 ## How many volumes can be provisioned per deployment?
 {: faq}
+{: #faq-count-vol-provision}
 
 You can provision up to 1000 block storage volumes per deployment. You can request your quota to be increased by opening a [support case](https://cloud.ibm.com/unifiedsupport/cases/form){: external}.
 
 ## When can I delete a block storage volume?
 {: faq}
+{: #faq-how-del-vol}
 
 You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/sdsaas?topic=sdsaas-deleting-hosts&interface=ui#deleting-volume-mapping-from-host-ui) before deleting it.
 
 
 ## What happens to the data when I delete a block storage volume?
 {: faq}
+{: #faq-data-post-vol-delete}
 
 When you delete a block storage volume, all pointers to the data on that volume are removed and the data becomes inaccessible. If you later reprovision the physical storage to another deployment, a new set of pointers is assigned. The new deployment cannot access any data that was on the physical storage because the pointers have been deleted. When new data is written to the volume, any inaccessible data is overwritten.
 
@@ -86,15 +93,19 @@ The storage system uses base-2 units for volume allocation. So if your volume is
 
 ## How many hosts can be provisioned per instance?
 {: faq}
+{: #faq-host-per-instance}
+
 Total number of hosts that can be provisioned in an instance is 32.
 
 ## Can a volume be mapped to multiple hosts?
 {: faq}
+{: #faq-vol-map-multi-hosts}
 
 Yes, a volume can be mapped to up to 32 hosts.
 
 ## How to create a volume for increased performance?
 {: faq}
+{: #faq-vol-increase-performance}
 
 Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the bandwidth are dependent on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
 
@@ -114,10 +125,12 @@ Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the
 
 ## How to create volume for a workload that requires 10,000 IOPS?
 {: faq}
+{: #faq-create-vol-10k-iops}
 
 To ensure a throttling of 10000 IOPS, the volume capacity should be at least 10000/3 = 3334GB. So, you must create a volume with capacity ~3500GB.
 
 ## How to create volume for a workload that requires a throughput of 1000MBps?
 {: faq}
+{: #faq-create-vol-thruput-1kmbps}
 
 To ensure a throttling of 1000 * 1000KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21TB.
