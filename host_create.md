@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-16"
 
 keywords: sds, sdsaas host,
 
@@ -12,11 +12,14 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating hosts
-{: #creating-hosts}
+# Creating a host
+{: #creating-host}
 
 Create a host by using the UI, CLI, or API.
 {: shortdesc}
+
+Make sure that before creating a host, you have configured the NVME-oF initiator which is required for mapping volume to a host.
+{: prereq}
 
 
 ## Creating host in the UI
@@ -160,6 +163,6 @@ A successful response looks like this:
 When you refresh the Hosts page, the new host appears at the beginning of the list of hosts.
 {: ui}
 
-* You can continue creating more hosts or manage existing hosts.
+* [Connect NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-nvme-initiators)
 
-* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#connecting-nvme-initiators)
+* Continue creating more host resources and then connect them to NVME-oF initiators.

@@ -93,7 +93,6 @@ Use this procedure to configure the NMVe fabrics for Red Hat Enterprise Linux (R
     {: screen}
 
 
-
 ### Configuring the NVMe-oF initiator for VMware ESXi
 {: #config-nvmeof-initiator-vmware-esxi}
 
