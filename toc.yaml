@@ -39,7 +39,7 @@ toc:
       id: howto
       topics:
       - topicgroup:
-          label: Ordering and Onboarding
+          label: Ordering and onboarding
           topics:
             - placing_order.md
             - preparing_deployment.md

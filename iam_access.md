@@ -49,16 +49,16 @@ Review the following tables that outline what types of tasks each role allows fo
 {: tab-title="Platform roles"}
 
 
-## Identity and Access Management actions mapped to roles
+## Identity and access management actions mapped to roles
 {: #iam-actions}
 
 
 | Action id                               | Roles                                         | Descriptions                     |
 | ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View a CephaaS Instance, List CephaaS Instances |
-| `resource-controller.instance.create`   | Administrator, Editor | Create a CephaaS Instance from CephaaS Deployments page. create, list, delete Object Credentials and create, list, update, delete block volumes and hosts within the service instance.  |
-| `resource-controller.instance.update` | Administrator, Editor, Operator | Update a CephaaS Instance such as name, quota settings and S3 Certificate for object. |
-{: caption="Table 3. Granular IAM action descriptions"}
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. Allowed to create, list, delete object credentials and create, list, update, delete block volumes and hosts within the service instance. |
+| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Create, list, delete object credentials and create, list, update, delete block volumes and hosts within the service instance.  |
+| `resource-controller.instance.update` | Administrator, Editor, Operator | Update a deployment name, quota settings and S3 Certificate for object. |
+{: caption="Table 3. IAM action descriptions"}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
 {: #assign-access-console}
