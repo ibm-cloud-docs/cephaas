@@ -18,7 +18,7 @@ subcollection: sdsaas
 You can map one or more volumes to a host by using UI, CLI and APIs.
 
 Make sure that there is one or more volumes available for mapping to a host.
-{: prereq}
+{: requirement}
 
 ## Mapping volumes to a host from Volumes page in the UI
 {: #mapping-volume-to-host-from-volume-ui}

@@ -19,7 +19,7 @@ Create a host by using the UI, CLI, or API.
 {: shortdesc}
 
 Make sure that before creating a host, you have configured the NVME-oF initiator which is required for mapping volume to a host.
-{: prereq}
+{: requirement}
 
 
 ## Creating host in the UI
