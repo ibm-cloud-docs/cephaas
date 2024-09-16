@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-## Connecting from NVMe-oF initiators
+# Connecting from NVMe-oF initiators
 {: #connecting-nvme-initiators}
 
 Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command line interface.
@@ -43,7 +43,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     {: pre}
 
 
-### Verify that the initiator is set up correctly.
+### Verify that the initiator is set up correctly for RHEL
 {: #connection-verification-rhel}
 
 1. List the NVMe-oF block devices.
@@ -240,7 +240,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
 
 
 
-### Verify that the initiator is set up correctly.
+### Verify that the initiator is set up correctly for VMware ESXi
 {: #connection-verification-vmware}
 
 1. From the vSphere Client, go to the **ESXi host**.
@@ -248,5 +248,3 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
 2. On the Storage page, go to the **Devices** tab.
 
 3. Verify that the `NVMe/TCP` disks are listed in the table.
-
-

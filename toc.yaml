@@ -38,6 +38,14 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - topicgroup:
+          label: Ordering and Onboarding
+          topics:
+            - placing_order.md
+            - preparing_deployment.md
+            - creating_new_satellite_location.md
+            - estimating_cost.md
+      - iam_access.md
       - setup_cli_api_environment.md
       - topicgroup:
           label: Managing block storage
@@ -93,7 +101,6 @@ toc:
             - data-security.md
             - compliance.md
             - eu.md
-      - iam_access.md
 #            - iam_overview.md
       - event-notifications-events.md
       - topicgroup:
@@ -103,7 +110,7 @@ toc:
             - logging.md
             - monitoring.md
       - topicgroup:
-          label: vSphere
+          label: VMWare vSphere plug-in
           topics:
             - connect_vmware.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
@@ -112,13 +119,6 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-      - topicgroup:
-          label: Ordering and Onboarding
-          topics:
-            - placing_order.md
-            - preparing_deployment.md
-            - creating_new_satellite_location.md
-            - estimating_cost.md
       - topicgroup:
           label: API reference
           topics:
@@ -131,6 +131,7 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
+
       - topicgroup:
           label: CLI reference
           topics:
