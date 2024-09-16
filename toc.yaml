@@ -55,11 +55,12 @@ toc:
               topics:
                 - host_mapping_about.md
                 - host_create.md
+                - host_mapping.md
                 - host_view.md
                 - host_rename.md
                 - host_delete.md
                 - host_unmap.md
-          - host_mapping.md
+                - connect-from-nvme-of-initiators.md
       - topicgroup:
           label: Managing capacity allocations
           topics:

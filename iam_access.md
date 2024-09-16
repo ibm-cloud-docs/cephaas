@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-16"
 
 keywords: IBM CephaaS, IAM access, cephaas
 
@@ -14,7 +14,7 @@ subcollection: sdsaas
 
 
 # Managing IAM access for {{site.data.keyword.cephaas_short}}
-{: #iam-cephaas-docs}
+{: #managing-iam}
 
 Access to {{site.data.keyword.cephaas_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_short}}.
 {: shortdesc}
@@ -30,22 +30,35 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access to an individual service instance in your account
 * Access to a specific resource within an instance, _such as resource type `volume`_
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. Service access roles enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](_YourSubHeadingLink_).
+After defining the sope of the access policy, assgn a role.
+
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [{{site.data.keyword.cephaas_short}}](/docs/sdsaas?topic=sdssas-managing-iam#iam-actions).
 
 
 
-| Platform role |  Description of actions |
-|---------------|-------------------------|
-| Viewer                 |  As a viewer, you can view deployments, but you can't modify them. |
-| Operator               |  As an operator, you can perform platform actions required to configure and operate deployments, such as viewing a deployment's dashboard.            |
-| Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
-| Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
+| Platform role |  Description of actions | Example action  |
+|---------------|-------------------------|-----------------|
+| Viewer                 |  As a viewer, you can view deployments, but you can't modify them. | |
+| Operator               |  As an operator, you can perform platform actions required to configure and operate deployments, such as viewing a deployment's dashboard.            |  |
+| Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |  |
+| Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            | |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="Table 1. IAM platform roles" caption-side="bottom"}
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
+
+## Identity and Access Management actions mapped to roles
+{: #iam-actions}
+
+
+| Action id                               | Roles                                         | Descriptions                     |
+| ----------------------------------------|-----------------------------------------------------|---------------------------|
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View a CephaaS Instance, List CephaaS Instances |
+| `resource-controller.instance.create`   | Administrator, Editor | Create a CephaaS Instance from CephaaS Deployments page. create, list, delete Object Credentials and create, list, update, delete block volumes and hosts within the service instance.  |
+| `resource-controller.instance.update` | Administrator, Editor, Operator | Update a CephaaS Instance such as name, quota settings and S3 Certificate for object. |
+{: caption="Table 3. Granular IAM action descriptions"}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
 {: #assign-access-console}
