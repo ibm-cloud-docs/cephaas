@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-17"
 
 keywords: sdsaas service credential view, list
 
@@ -23,7 +23,7 @@ View object storage S3 credential by using the UI, CLI and API.
 {: #view-all-sds-s3-credential-ui}
 {: ui}
 
-To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
+To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
 
 

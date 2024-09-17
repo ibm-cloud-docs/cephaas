@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-17"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # View S3 certificate expiration date and status
 {: #viewing-sds-s3-certificate-details-sds}
 
-S3 certificates are required to secure the S3 endpoint.
+S3 TLS certificates are required to encrypt the S3 endpoint using TLS and prevent Man in the Middle (MITM) attacks.
 
 This section provides guidance on how to view the expiration date and status of the S3 SSL certificate.
 {: shortdesc}
@@ -27,7 +27,7 @@ This section provides guidance on how to view the expiration date and status of 
 
 To view the expiration date and status of the S3 certificate, on the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Settings**.
 
-Here, you can view the **S3 certificate** expiration date and status if it exists in the system.
+Here, you can view the **S3 certificate** expiration date and status.
 
 
 ## Retrieving S3 certificate expiration date and status from the CLI

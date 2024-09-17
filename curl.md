@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-17"
 
 keywords: cli, command line interface, object storage, curl
 
@@ -51,7 +51,7 @@ curl -X "POST" "https://iam.cloud.ibm.com/oidc/token" \
 ## Get your resource instance ID
 {: #curl-instance-id}
 
-Some of the following commands require an `ibm-service-instance-id` parameter. To find this value, go to the **Service credentials** tab of your Object Storage instance in the cloud console. Create a credential if needed, then use the _View credentials_ menu to see the JSON format. Use the value of `resource_instance_id`.
+Some of the following commands require an `ibm-service-instance-id` parameter. To find this value, go to the **Credentials** tab of your Object Storage instance in the cloud console. Create a credential if needed, then use the _View credentials_ menu to see the JSON format. Use the value of `resource_instance_id`.
 
 For use with curl APIs, you need only the UUID that starts after the last single colon and ends before the final double colon. For example, the ID `crn:v1:bluemix:public:cloud-object-storage:global:a/81caa0254631ce5f9330ae427618f209:39d8d161-22c4-4b77-a856-f11db5130d7d::` can be abbreviated to `39d8d161-22c4-4b77-a856-f11db5130d7d`.
 {: tip}

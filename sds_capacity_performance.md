@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-17"
 
 keywords: cephaas, capacity management, performance management
 
@@ -12,27 +12,27 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Storage capacity and performance
+# View storage capacity and performance
 {: #storage-capacity-performance}
 
-IBM Storage Ceph as a Service enables you to view the capacity and performance details of your deployments in real-time. 
+IBM Storage Ceph as a Service enables you to view the capacity and performance details of your deployments in real-time.
+{: shortdesc}
 
-To view capacity details of your IBM CephaaS deployments, complete the following steps. 
+To view capacity details of your IBM CephaaS deployments, complete the following steps.
 
 1. On the **IBM Cloud console**, click the hamburger menu > **Resource list** and expand **Storage**.
 2. Click Deployment name link.
-3. Click **Deployments link** from the left- hand pane. 
-Your deployments are listed on the dashboard. 
+3. Click **Deployments link** from the left- hand pane. Your deployments are listed on the dashboard.
 
 
-{: shortdesc}
 
-## Viewing Capacity of your deployments
+
+## Viewing capacity of your deployments
 {: #view-capacity}
 
-Click on each deployment to display the capacity and performance details. 
+Click on each deployment to display the capacity and performance details.
 
-The upper section of the deployment dashboard displays the current usage information about the following. 
+The upper section of the deployment dashboard displays the current usage information about the following.
 
 | Usage Information | Description |
 |-------|-------------|
@@ -41,7 +41,7 @@ The upper section of the deployment dashboard displays the current usage informa
 | Object capacity | Current usage and a link to update capacity |
 {: caption="Table 1. Details about deployment capacity" caption-side="bottom"}
 
-The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. Till the capacity is not fully utilized, the bar displays blue color. When the Overall Capacity is fully utilized, the bar turns yellow. If the burst capacity is also exhausted, the bar turns red. 
+The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. Till the capacity is not fully utilized, the bar displays blue color. When the Overall Capacity is fully utilized, the bar turns yellow. If the burst capacity is also exhausted, the bar turns red.
 
 ## Viewing Performance of your deployments
 {: #view-performance}
@@ -53,20 +53,21 @@ The lower section of the deployment dashboard provides graphical insights into v
 | IOPS | Current IOPS (Input/Output Operations Per Second) value for a predefined IOPS tier |
 | Latency | Response time delay measured in milliseconds |
 | Throughput| The performance a disk can deliver, measured in Gigabytes/second (Gbps)|
-
 {: caption="Table 2. Details about deployment performance" caption-side="bottom"}
 
 ## Renaming your deployments
 {: #rename-deployment}
 
-1. To rename a deployment, navigate to **Actions** menu on your deployment dashboard. 
-2. Enter a new name in the **Rename deployment** screen. 
-3. Click **Save**. 
+1. To rename a deployment, navigate to **Actions** menu on your deployment dashboard.
+2. Enter a new name in the **Rename deployment** screen.
+3. Click **Save**.
 
 ## Adding capacity
+{: #add-capacity}
 
-Select **Actions** > **Add capacity**. **Purchase additional capacity** screen is displayed which guides you to contact your IBM seller for further process. 
+Select **Actions** > **Add capacity**. **Purchase additional capacity** screen is displayed which guides you to contact your IBM seller for further process.
 
 ## Next Steps
+{: #view-capacity-nextsteps}
 
-You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard. 
+You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard.

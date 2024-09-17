@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-17"
 
 keywords: cephaas, administrator, object storage, access, iam
 
@@ -44,6 +44,6 @@ There are two basic types of subjects: a _user_ and a _service ID_.
 
 There is another concept, a _service credential_. A service credential is a collection of important information that is needed to connect to an instance of {{site.data.keyword.cos_full}}. It gives a user an identifier for the instance of {{site.data.keyword.cos_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID). When you create the service credential you have the option of either associating it with an existing service ID, or creating a new service ID.
 
-You might want your development team to be able to use the console to view Object Storage instances and Kubernetes clusters. They would need `Viewer` roles on the Object Storage resources and `Administrator` roles on the Container Service. The `Viewer` role allows for the user to only see that the instance exists, and to view existing credentials, but **not** to view buckets and objects. When the service credentials were created, they were associated with a service ID. This service ID would need to have the `Manager` or `Writer` role on the instance to be able to create and delete buckets and objects.
+You might want your development team to be able to use the console to view Object Storage instances and Kubernetes clusters. They would need `Viewer` roles on the Object Storage resources and `Administrator` roles on the Container Service. The `Viewer` role allows for the user to only see that the instance exists, and to view existing credentials, but **not** to view buckets and objects. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Manager` or `Writer` role on the instance to be able to create and delete buckets and objects.
 
 For more information on IAM roles and permissions, see [the IAM overview](/docs/sdsaas?topic=sdsaas-iam-overview).

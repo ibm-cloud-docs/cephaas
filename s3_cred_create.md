@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-17"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -26,7 +26,7 @@ Create S3 credentials for object storage by using the UI, CLI, or API.
 
 To create s3 credential, complete the following steps.
 
-1. On the IBM Cloud console, navigate to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
+1. On the IBM Cloud console, navigate to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
 2. Click **New credential**.
 
@@ -37,36 +37,12 @@ To create s3 credential, complete the following steps.
 You will not be able to see the credentials again after you close this message. Make sure to save the credentials.
 {: note}
 
+
 ## Creating S3 credential from the CLI
-{: #creating-object-s3-credential-cli}
+{: #creating-s3-credential-cli}
 {: cli}
 
-You can create S3 credential by using the command-line interface (CLI).
-
-### Before you begin
-{: #before-creating-s3-credential-cli}
-
-Before you can use the CLI, you must install the IBM Cloud CLI and the `SDS` CLI plug-in.
-
-For more information, see the [CLI prerequisites](/docs/sdsaas?topic=sdsaas-set-up-environment).
-{: requirement}
-
-Log in to the IBM Cloud.
-
-```sh
-ibmcloud login --sso -a cloud.ibm.com
-```
-{: pre}
-
-This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
-
-
-### Creating S3 credential from the CLI
-{: #creating-s3-credential-cli}
-{: help}
-{: support}
-
-Run the `cred-create` command with the `ACCESS-KEY` and API endpoint to create a new object storage S3 credential or update an existing credential for the storage deployment.
+Run the `cred-create` command with the `ACCESS-KEY` and API endpoint to create a new object storage S3 credential for the storage deployment.
 
 ```sh
 ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url string

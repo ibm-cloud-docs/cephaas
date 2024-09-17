@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-17"
 
 keywords: sdsaas , delete service credential
 
@@ -25,7 +25,7 @@ Delete an object storage S3 credential using the UI, CLI, or API.
 
 To delete an object storage S3 credential, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
 2. Select one service credential that you want to delete.
 
@@ -40,9 +40,9 @@ All access granted to any resources using this credential will be lost once the 
 
 To delete multiple object storage S3 credential, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Service credentials** tab.
+1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
-2. Select one or more service credentials that you want to delete.
+2. Select one or more credentials that you want to delete.
 
 3. Click **Delete selected credentials** > **Delete**.
 

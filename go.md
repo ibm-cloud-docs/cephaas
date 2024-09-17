@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-17"
 
 keywords: object storage, go, sdk
 
@@ -66,7 +66,7 @@ import (
 ```
 {: codeblock}
 
-## Creating a client and sourcing Service credentials
+## Creating a client and sourcing credentials
 {: #go-client-service-credentials}
 
 To connect to {{site.data.keyword.cephaas_full_notm}}, a client is created and configured by providing credential information (API key and service instance ID). These values can also be automatically sourced from a credentials file or from environment variables.
@@ -116,7 +116,7 @@ conf := aws.NewConfig().
 ## Creating a client and sourcing Trusted Profile credentials
 {: #go-client-trusted-profile-credentials}
 
-A client can be created by provding service credentials or trusted profile credentials. This section provides information to
+A client can be created by provding credentials or trusted profile credentials. This section provides information to
 create a client using trusted profile credentials.
 
 To connect to {{site.data.keyword.cos_full_notm}}, a client is created and can also be configured by providing trusted profile credential information (Trusted Profile Id and CR Token file path). These values can also be automatically sourced from environment variables.
