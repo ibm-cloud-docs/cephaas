@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-17"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -36,7 +36,9 @@ Before you can create an {{site.data.keyword.cephaas_full}} by using the API or 
 
 Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.data.keyword.cephaas_short}} CLI plug-in.
 
-{{site.data.keyword.cloud_notm}} CLI is not supported on LinuxONE (s390x processor architecture). However, you can install the CLI on another supported platform and use it with LinuxONE (s390x processor architecture) virtual server instances.
+
+
+Make sure that your deployment is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-prem deployment of cephaas.
 {: note}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
