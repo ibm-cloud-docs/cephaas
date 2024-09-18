@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-18"
 
 keywords: IBM CephaaS, IAM access, cephaas
 
@@ -21,18 +21,15 @@ Access to {{site.data.keyword.cephaas_full}} service instances for users in your
 
 The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.cephaas_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
-If a specific role and its actions don't fit the use case that you're looking to address, you can [create a custom role](/docs/account?topic=account-custom-roles#custom-access-roles){: external} and pick the actions to include.
-{: tip}
 
 IAM access policies enable access to be granted at different levels. Some of the options include the following:
 
 * Access across all instances of the service in your account
 * Access to an individual service instance in your account
-* Access to a specific resource within an instance, _such as resource type `volume`_
 
 After defining the sope of the access policy, assgn a role.
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service, create or delete instances, and bind instances to applications. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](/docs/sdsaas?topic=sdsaas-managing-iam&interface=ui#iam-actions).
+Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](/docs/sdsaas?topic=sdsaas-managing-iam&interface=ui#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -53,7 +50,15 @@ Review the following tables that outline what types of tasks each role allows fo
 
 | Action id                               | Roles                                         | Descriptions                     |
 | ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. Allowed to create, list, delete object credentials and create, list, update, delete block volumes and hosts within the service instance. |
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer |
+
+* View and list deployments but cannot modify the instance properties.
+
+* Allowed to create, list and delete object credentials within the service instance.
+
+* Allowed to create, view, list, update and delete block volumes and hosts within the service instance.
+
+|
 | `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Create, list, delete object credentials and create, list, update, delete block volumes and hosts within the service instance.  |
 | `resource-controller.instance.update` | Administrator, Editor, Operator | Update a deployment name, quota settings and S3 Certificate for object. |
 {: caption="Table 3. IAM action descriptions"}
