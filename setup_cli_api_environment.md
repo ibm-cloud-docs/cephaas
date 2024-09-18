@@ -38,7 +38,7 @@ Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.da
 
 
 
-Make sure that your deployment is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-prem deployment of cephaas.
+Make sure that your deployment is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_short}}.
 {: requirement}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
