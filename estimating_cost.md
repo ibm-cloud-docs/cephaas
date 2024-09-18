@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-18"
 
 keywords: cephaas, Estimating Cost
 
@@ -23,7 +23,7 @@ Here are the steps for estimating cost of your IBM Ceph as a Service order.
 5. **Create** tab is displayed by default which displays the following sections.
 
 - **Location**: Enter your Geography, Country, and State. 
-- **Subscription term**: Select the subscription term from from 1 to 5 years. Longer subscription term can reduce the cost. 
+- **Subscription term**: Select the subscription term from from 1 to 5 years. Longer subscription term can reduce your cost. 
 - **Storage details**: Select the storage tier from **Performance** and **Capacity**. Performace tier offers both - Block and Object storage. The Capacity tier offers Object storage only. 
 
 6. Enter **Total storage** in TB. The Total storage value needs to be in increments of 100. 
