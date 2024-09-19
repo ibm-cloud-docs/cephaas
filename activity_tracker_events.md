@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-09-19"
 
 keywords: cephaas activity tracker events
 
@@ -76,7 +76,7 @@ Some services require a paid plan or more configuration to enable events. Add an
 
 1.	From the IBM Cloud console [resource list](https://cloud.ibm.com/resources), select the service instance that you are interested in adding for event tracking. This takes you to the CephaaS Storage Console.
 2.	Choose the Deployment for which you want to enable event tracking.
-3.	Navigate to the configuration tab.
+3.	Go to the configuration tab.
 4.	Scroll down to the advanced configuration section and toggle the events you want to track for this bucket.
 5.	After a few minutes, any activity will be visible in the Activity Tracker web UI.
 

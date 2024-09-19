@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-19"
 
 keywords: frequently asked questions, faqs
 
@@ -12,14 +12,14 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# FAQs about block storage
+# FAQs about block and object storage
 {: #block-storage-faq}
 
 ## How am I charged for usage?
 {: faq}
 {: #faq-usage-cost}
 
-Block Storage is calculated hourly. The calculation is based on the total number of hours that the block storage volume exists on the account. It exists on the account until you delete the volume or you reach the end of a billing cycle, whichever comes first.
+Both block and object storage are calculated hourly. The calculation is based on the total number of hours that the block storage volume exists on the account. It exists on the account until you delete the volume or you reach the end of a billing cycle, whichever comes first.
 
 ## Are there quota limits?
 {: faq}

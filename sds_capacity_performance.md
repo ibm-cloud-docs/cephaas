@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-19"
 
 keywords: cephaas, capacity management, performance management
 
@@ -58,7 +58,7 @@ The lower section of the deployment dashboard provides graphical insights into v
 ## Renaming your deployments
 {: #rename-deployment}
 
-1. To rename a deployment, navigate to **Actions** menu on your deployment dashboard.
+1. To rename a deployment, go to **Actions** menu on your deployment dashboard.
 2. Enter a new name in the **Rename deployment** screen.
 3. Click **Save**.
 

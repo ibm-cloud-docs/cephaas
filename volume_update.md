@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-09-19"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -22,7 +22,7 @@ You can manage your Block Storage volume in the UI, from the CLI, or with the AP
 {: #updating-block-volume-ui}
 {: ui}
 
-Use the console to update the volume details. In the console, you can complete the following actions.
+Use the console to update the volume details. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), you can complete the following actions.
 
 * Rename a Block Storage volume
 * Expand volume to increase the capacity
@@ -34,7 +34,7 @@ Use the console to update the volume details. In the console, you can complete t
 
 To rename a volume, complete the following steps.
 
-1. Navigate to the list of all Block storage volumes.
+1. Go to the list of all Block storage volumes.
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
 3. From the options menu, click **Rename volume**.
 4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error "volume name exists" is displayed.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-19"
 
 keywords: cephaas, developer, getting started, command line interface, cli
 
@@ -20,7 +20,7 @@ The powerful features of {{site.data.keyword.cephaas_full}} are available to a d
 
 First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](https://cloud.ibm.com/docs/cli/index.html) and [IBM Developer Tools](https://cloud.ibm.com/docs/cloudnative/idt/index.html) installed.
 
-## Create an instance of {{site.data.keyword.cephaas_full_notm}}
+## Create an {{site.data.keyword.cephaas_full_notm}} deployment
 {: #gs-dev-provision}
 
 1. First, make sure that you have an API key. Get it from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/iam/apikeys).
@@ -31,10 +31,10 @@ First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](https
     ```
     {: pre}
 
-3. Next, create an instance of {{site.data.keyword.cephaas_full_notm}} specifying the name for the instance and the Standard plan (see [Choosing a plan and creating an instance](/docs/sdsaas?topic=sdsaas-provision)). Now you have a CRN for the instance.
+3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment and the Standard plan (see [Choosing a plan and creating an instance](/docs/sdsaas?topic=sdsaas-provision)). Now you have a CRN for the instance.
 
     ```sh
-    ibmcloud resource service-instance-create <instance-name> cloud-object-storage <plan> global
+    ibmcloud resource service-instance-create <instance-name> software-defined-storage <plan> global
     ```
     {: pre}
 
@@ -65,9 +65,4 @@ The [Cloud Native Computing Foundation](https://www.cncf.io) fostered [Kubernete
  * [Choosing a storage solution](/docs/containers?topic=containers-storage-plan)
  * [Comparison table for persistent storage options](/docs/containers?topic=containers-storage-plan)
  * [Main IBM Cephaas page](/docs/sdsaas?topic=sdsaas-getting-started)
- * [Installing IBM Cephaas]
- * [Creating IBM Cephaas service instance]
- * [Decide on the configuration](/docs/containers?topic=containers-storage_cos_install#configure_cos)
- * [Creating an IBM Cephaas Kubernetes secret]
- * [Kubernetes back up and restore information](/docs/containers?topic=containers-storage_br)
- * [Kubernetes Storage Class reference](/docs/containers?topic=containers-storage_cos_reference)
+ * [Creating IBM Cephaas deployment]

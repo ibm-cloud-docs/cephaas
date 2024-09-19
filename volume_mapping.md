@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-19"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -23,8 +23,8 @@ You can map one or more volume to a host by using UI, CLI and APIs.
 
 To map a volume to a host from Volumes page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Resource list > Storage > Deployment > Block Storage > Volumes**.
-2. Locate the Volume **Name** and click the `options` icon at the end of the row to open a list of options.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
+2. Locate the Volume **Name** and click the kebab menu at the end of the row to open a list of options.
 3. From the options menu, click **Map to host**.
 4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
     1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.

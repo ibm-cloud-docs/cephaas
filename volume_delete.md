@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-19"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -25,18 +25,16 @@ When you delete a Block Storage volume, that data immediately becomes inaccessib
 {: #deleting-sds-block-volume-ui}
 {: ui}
 
-Deleting a Block Storage volume completely removes its data. The volume cannot be restored.
+Deleting a block storage volume completely removes its data. The volume cannot be restored.
 
 You cannot delete an active Block Storage volume. To delete a volume, first unmap it from the host.
 {: note}
 
-To delete a single volume, complete the following steps.
+To delete a single volume, follow these steps:
 
-1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu** > **Resource list** and then expand **Storage**.
+1. On the {{site.data.keyword.cloud_notm}} console, go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Volumes**.
 
-2. Click **Deployment name** link and go to **Block Storage > Volumes**.
-
-3. Locate the volume that you want to delete and then click the **Options** menu at the end of the row to open a list of options.
+2. Locate the volume that you want to delete and then click the kebab menu at the end of the row to open a list of options.
 
 3. From the options menu, click **Delete**.
 
@@ -50,11 +48,9 @@ Deleting a Block Storage volume completely removes its data. The volume cannot b
 You cannot delete an active Block Storage volume. To delete a volume, first unmap it from the host.
 {: note}
 
-To delete multiple volumes together, complete the following steps.
+To delete multiple volumes together, follow these steps:
 
-1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and then expand **Storage**.
-
-2. Click **Deployment name** link and go to **Block Storage > Volumes**.
+1. On the {{site.data.keyword.cloud_notm}} console, go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Volumes**.
 
 2. Select the volumes that you want to delete.
 

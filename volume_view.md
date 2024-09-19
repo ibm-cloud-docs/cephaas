@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-19"
 
 keywords: list all volumes, view volume details
 
@@ -27,7 +27,7 @@ You can view a summary of all volumes and view details for a single volume for t
 ### Viewing summay information of all volumes in the UI
 {: #viewvols-ui}
 
-To view all the Block storage volumes, in the [console], navigate to **Block Storage > Volumes**.
+To view all the Block storage volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 
 By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen service instance are displayed. In the list of all **Volumes**, you see the following information.
 

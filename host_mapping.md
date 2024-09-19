@@ -26,7 +26,7 @@ Make sure that there is one or more volumes available for mapping to a host.
 
 To map a volume to a host from Volumes page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 2. Locate the Volume **Name** and click the kebab menu at the end of the row to open a list of options.
 3. From the options menu, click **Map to host**.
 4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.

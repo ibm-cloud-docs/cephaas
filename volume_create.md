@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-19"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -23,11 +23,11 @@ Create a block storage volume by using the UI, CLI or API.
 {: #creating-sds-block-volume-ui}
 {: ui}
 
-Use the {{site.data.keyword.cloud_notm}} console to create a volume for a service instance.
+Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deployment.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **{{site.data.keyword.cephaas_full_notm}}** **> Block storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Volumes**.
 1. Click **Create volume**.
-1. Select **Service instance** where the volume will be created.
+1. Select **Deployment** where the volume will be created.
 1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
 
     Volume names must be unique in the entire service instance. If you create two volumes that are in the same service instance, and have the same name, a "volume name duplicate" error is displayed.
@@ -42,26 +42,6 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a servic
 {: cli}
 
 You can create volumes by using the command-line interface (CLI).
-
-### Before you begin
-{: #before-creating-block-volume-cli}
-
-Before you can use the CLI, you must install the IBM Cloud CLI and the SDS CLI plug-in.
-
-Log in to the IBM Cloud.
-
-```sh
-ibmcloud login --sso -a cloud.ibm.com
-```
-{: pre}
-
-This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
-
-
-### Creating a volume from the CLI
-{: #create-volume-cli}
-{: help}
-{: support}
 
 Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `SDSAAS-INSTANCE-ID` where the volume will be created.
 

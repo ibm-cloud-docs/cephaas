@@ -29,7 +29,7 @@ You can view a summary of all host and view details for a single volume for the 
 {: #view-all-hosts-ui}
 {: ui}
 
-To view all hosts and all mapped volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+To view all hosts and all mapped volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 

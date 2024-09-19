@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-19"
 
 keywords: IBM Cloud, observability
 
@@ -19,7 +19,7 @@ subcollection: observability-ibm
 
 
 # Monitoring metrics for {{site.data.keyword.cephaas_short}}
-{: #monitoring}
+{: #monitoringß} 
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_short}}, generate platform metrics that you can use to gain operational visibility into the performance and health of the service in your account.
 {: shortdesc}
@@ -66,8 +66,11 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 
 
-## serviceName predefined dashboards
+## {{site.data.keyword.cephaas_short}} predefined dashboards
 {: #monitoring-dashboards}
+
+
+
 
 
 
