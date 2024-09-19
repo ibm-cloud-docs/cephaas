@@ -66,9 +66,6 @@ As of 28 March 2024, the {{site.data.keyword.la_full_notm}} service is deprecate
 
 
 
-### Launching {{site.data.keyword.logs_full_notm}} from the {{site.data.keyword.cephaas_short}} dashboard
-{: #log-launch-integrated}
-
 
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page

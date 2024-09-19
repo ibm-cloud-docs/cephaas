@@ -151,5 +151,5 @@ toc:
           label: Frequently asked questions
           topics:
              - faq_bs.md
-             - faq_plans.md
+             - faq_lco.md
       - troubleshooting.md
