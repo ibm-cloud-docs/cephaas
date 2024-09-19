@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-19"
 
 keywords: cephaas, logging for IBM CephaaS, observability
 
@@ -87,6 +87,18 @@ For information about fields included in every platform log, see [Fields for pla
 
 
 
+
+
+| Field             | Type       | Description             |
+|-------------------|------------|-------------------------|
+| `logSourceCRN`    | Required   | Defines the account and flow log instance where the log is published. |
+| `saveServiceCopy` | Required   | Defines whether IBM saves a copy of the record for operational purposes. |
+| `message`         | Required   | Description of the log that is generated. |
+| `messageID`       | Required   | ID of the log that is generated. |
+| `msg_timestamp`   | Required   | The timestamps when the log is generated. |
+| `resolution`      | Optional   | Guidance on how to proceed if you receive this log record. |
+| `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
+{: caption="Log record fields" caption-side="bottom"}
 
 
 
