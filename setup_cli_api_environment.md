@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-09-19"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -38,7 +38,7 @@ Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.da
 
 
 
-Make sure that your deployment is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_short}}.
+Make sure that your environment from which the CLI will be run is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_short}}.
 {: requirement}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-19"
 
 keywords: sds, host, view host details, host summary list
 
@@ -29,9 +29,7 @@ You can view a summary of all host and view details for a single volume for the 
 {: #view-all-hosts-ui}
 {: ui}
 
-List all hosts and all mapped volumes.
-
-To view all the hosts, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Block Storage > Hosts**.
+To view all hosts and all mapped volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), navigate to **Block Storage > Hosts**.
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 
@@ -39,7 +37,7 @@ By default, all Hosts are displayed for the chosen Deployment. In the list of al
 |-------|-------------|
 | Name | Click the name of the host to see individual host details. |
 | Volumes mapped | Shows the count of number of volumes mapped to the host. |
-| Host NQN | The NVMe Qualified Name (NQN) of the configured host |
+| Host NQN | The NVMe Qualified Name (NQN) of the configured host. |
 {: caption="Table 1. Details about all hosts" caption-side="bottom"}
 
 By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
