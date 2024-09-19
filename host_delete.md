@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-19"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -27,7 +27,7 @@ To delete a host, complete the following steps.
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
-2. Locate the Host **Name** that you want to delete and then click the **Options** menu at the end of the row to open a list of options.
+2. Locate the Host **Name** that you want to delete and then click the kebab menu at the end of the row to open a list of options.
 
 3. From the options menu, click **Delete**.
 
