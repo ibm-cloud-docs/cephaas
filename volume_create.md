@@ -13,14 +13,14 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating block volumes
-{: #creating-sds-block-volume}
+{: #creating-block-volume}
 
 Create a block storage volume by using the UI, CLI or API.
 {: shortdesc}
 
 
 ## Creating block volumes in the UI
-{: #creating-sds-block-volume-ui}
+{: #creating-block-volume-ui}
 {: ui}
 
 Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deployment.
@@ -38,7 +38,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 
 
 ## Creating block volumes from the CLI
-{: #creating-sds-block-volume-cli}
+{: #creating-block-volume-cli}
 {: cli}
 
 You can create volumes by using the command-line interface (CLI).
