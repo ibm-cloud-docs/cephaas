@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-19"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -27,9 +27,9 @@ To remove all mapping of a volume that is mapped to a host, complete the followi
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
-2. Click the Host **Name** from which you want to delete the mapped volume.
+2. Click the Host **Name** from which you want to unmap the volume.
 
-3. On the Host details page, in the Mapped volumes list, locate the volume **Name** and click the **Options** menu at the end of the row.
+3. On the Host details page, in the Mapped volumes list, locate the volume **Name** and click the kebab menu at the end of the row.
 
 4. Click **Unmap**. A confirmation popup is displayed.
 
@@ -41,7 +41,7 @@ To remove all mapping of a volume that is mapped to a host, complete the followi
 {: #unmap-all-volume-for-hosts-cli}
 {: cli}
 
-Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to delete all volumes that are associated with the given host id based on the instance id.
+Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to unmap all volumes that are associated with the given host id based on the instance id.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
