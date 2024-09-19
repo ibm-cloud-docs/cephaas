@@ -18,10 +18,10 @@ subcollection: observability-ibm
 
 
 
-# Monitoring metrics for {{site.data.keyword.cephaas_short}}
+# Monitoring metrics for {{site.data.keyword.cephaas_full_notm}}
 {: #monitoringß}
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_short}}, generate platform metrics that you can use to gain operational visibility into the performance and health of the service in your account.
+{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full_notm}}, generate platform metrics that you can use to gain operational visibility into the performance and health of the service in your account.
 {: shortdesc}
 
 {{site.data.keyword.mon_full_notm}} is a third-party cloud-native, and container-intelligence management system that can be included as part of your {{site.data.keyword.cloud_notm}} architecture. It offers administrators, DevOps teams, and developers full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [Monitoring in IBM Cloud](/docs/monitoring?topic=monitoring-about-monitor).
@@ -33,7 +33,13 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Viewing metrics
 {: #monitoring-view}
 
-To monitor {{site.data.keyword.cephaas_short}} metrics, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
+To view the metrics dashboards, access the user interface in the following ways:
+
+* Access the IBM Cloud monitoring user interface from your {{site.data.keyword.cephaas_full_notm}} user interface.
+
+* Access the IBM Cloud monitoring user interface from the Observability page.
+
+To view metrics in your {{site.data.keyword.cephaas_short}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
 {: important}
 
 
@@ -78,10 +84,10 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 
 
-### {{site.data.keyword.cephaas_full_notm}} provisioned block storage
+### Provisioned block storage
 {: #ibm_software_defined_storage_block_provisioned_volumes}
 
-Number of storage blocks provisioned by the {{site.data.keyword.cephaas_full_notm}} deployment
+The number of storage block volumes provisioned by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
 | Metadata | Description |
 |----------|-------------|
@@ -91,10 +97,10 @@ Number of storage blocks provisioned by the {{site.data.keyword.cephaas_full_not
 | `Segment By` | `Service instance` |
 {: caption="Table 2: Provisioned block storage metric metadata" caption-side="top"}
 
-### {{site.data.keyword.cephaas_full_notm}} provisioned bytes of block storage
+### Provisioned bytes of block storage
 {: #ibm_software_defined_storage_block_provisioned_bytes}
 
-Bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_notm}} deployment
+The bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
 | Metadata | Description |
 |----------|-------------|
@@ -104,10 +110,10 @@ Bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_notm}
 | `Segment By` | `Service instance` |
 {: caption="Table 3: Provisioned bytes of block storage metric metadata" caption-side="top"}
 
-### {{site.data.keyword.cephaas_full_notm}} used bytes of object storage
+### Used bytes of object storage
 {: #ibm_software_defined_storage_object_used_bytes}
 
-Bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} deployment
+The bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
 | Metadata | Description |
 |----------|-------------|
@@ -120,10 +126,12 @@ Bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} depl
 ## Attributes for Segmentation
 {: attributes}
 
+See the global and additional attributes that are available for segmentation.
+
 ### Global attributes
 {: global-attributes}
 
-The following attributes are available for segmenting all of the metrics listed above
+The following global attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 
 | Attribute | Attribute Name | Attribute Description |
 |-----------|----------------|-----------------------|
@@ -140,7 +148,7 @@ The following attributes are available for segmenting all of the metrics listed 
 ### Additional attributes
 {: additional-attributes}
 
-The following attributes are available for segmenting one or more attributes as described in the reference above. Please see the individual metrics for segmentation options.
+The following additional attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 
 | Attribute | Attribute Name | Attribute Description |
 |-----------|----------------|-----------------------|
