@@ -55,7 +55,7 @@ Review the following tables that outline what types of tasks each role allows fo
 | `resource-controller.instance.update` | Administrator, Editor, Operator | Update a {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings and S3 Certificate for object. Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance. |
 {: caption="Table 3. IAM action descriptions"}
 
-All the roles including the `Viewer` role provide some service actions using plaform services within the deployments. Use caution when assiging these roles to users.
+All the roles including the `Viewer` role provide some service actions using plaform level roles within the deployments. Use caution when assiging these roles to users.
 {: attention}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
