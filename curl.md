@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-19"
 
 keywords: cli, command line interface, object storage, curl
 
@@ -23,7 +23,7 @@ Here's a 'cheat sheet' of basic `curl` commands for the {{site.data.keyword.ceph
 
 
 
-Using `curl` assumes a certain amount of familiarity with the command line and Object Storage, and have the necessary information from a [service credential](/docs/sdsaas?topic=sdsaas-service-credentials), the [endpoints reference](/docs/sdsaas?topic=sdsaas-endpoints), or the [console](/docs/sdsaas?topic=sdsaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
+Using `curl` assumes a certain amount of familiarity with the command line and Object Storage, and have the necessary information from a [credential](/docs/sdsaas?topic=sdsaas-credentials-overview), the [endpoints reference](/docs/sdsaas?topic=sdsaas-endpoints), or the [console](/docs/sdsaas?topic=sdsaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
 
 **Note**: Personally Identifiable Information (PII): When _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
 {: tip}

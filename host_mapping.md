@@ -121,6 +121,7 @@ You can map only one volume at a time using API command.
 ## Next steps
 {: #next-step-mapping-hosts}
 
-* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-from-nvme-of-initiators)
+* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-nvme-initiators)
+
 
 * You can continue with mapping and unmapping hosts.

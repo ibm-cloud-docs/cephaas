@@ -46,6 +46,7 @@ toc:
             - creating_new_satellite_location.md
             - estimating_cost.md
       - iam_access.md
+      - iam_overview.md
       - setup_cli_api_environment.md
       - topicgroup:
           label: Managing block storage
