@@ -90,7 +90,6 @@ toc:
           - topicgroup:
               label: Managing authentication
               topics:
-                - s3_cred_overview.md
                 - s3_cred_create.md
                 - s3_cred_view.md
                 - s3_cred_delete.md
