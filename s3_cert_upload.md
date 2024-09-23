@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-23"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -15,12 +15,12 @@ subcollection: sdsaas
 # Uploading S3 certificate
 {: #uploading-s3-certificate-sds}
 
-S3 TLS certificates are required to encrypt the S3 endpoint and prevent Man in the Middle (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in the Middle (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
 {: shortdesc}
 
 Before you can upload the certificate file, you must create a server-side certificate with Subject Alternative Name (SAN) which includes the S3 DNS endpoint and then upload the server-side certificate along with the Key using the UI, CLI or API .
 
-Use the CA Certificate when sending S3 traffic to the S3 endpoint.
+For secure traffic, S3 Clients must utilize the associated CA certificate.
 {: note}
 
 

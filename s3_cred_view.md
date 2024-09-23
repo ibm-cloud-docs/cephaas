@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-23"
 
 keywords: sdsaas service credential view, list
 
@@ -57,19 +57,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #retrieving-s3-credential-api}
 {: api}
 
-You can retrieve and view single S3 credential using an access key.
-
-```sh
-curl -X 'GET /accounts/credentials' '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' -H 'accept: application/json' -H "Authorization: $token"
-```
-{: pre}
-
-
-## Viewing all object storage credentials with the API
-{: #retrieving-all-credentials-api}
-{: api}
-
-You can retrieve and list all the available S3 credential using an access key.
+Make the 'GET /accounts/credentials' request to retrieve and view one or all S3 credentials.
 
 ```sh
 curl -X 'GET /accounts/credentials' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: $token"

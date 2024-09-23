@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-23"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -15,7 +15,7 @@ subcollection: sdsaas
 # View S3 certificate expiration date and status
 {: #viewing-sds-s3-certificate-details-sds}
 
-S3 TLS certificates are required to encrypt the S3 endpoint using TLS and prevent Man in the Middle (MITM) attacks.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in the Middle (MITM) attacks.
 
 This section provides guidance on how to view the expiration date and status of the S3 SSL certificate.
 {: shortdesc}
