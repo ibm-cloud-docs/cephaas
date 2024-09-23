@@ -1,10 +1,9 @@
 {
-  "version": 2,
   "title": "IBM Storage Ceph as a Service docs",
   "introduction": "IBM Storage Ceph as a Service is a high performing, flexible and predictable unified storage (block and object) on-premises which is IBM managed with cloud-like provisioning capabilities and on-demand capacity. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
 
   "product_page": "https://www.ibm.com/products/product-value",
-  "console_page": "/relative/console/path",
+  "console_page": "/catalog/storage/service/software-defined-storage",
   "section_topics": {
     "links": [
       {
@@ -18,7 +17,7 @@
       {
         "title": "IBM CephaaS CLI",
         "href": "/docs/sdsaas?topic=sdsaas-ic-sds-cli-reference"
-      },
+      }
     ]
   },
   "section_highlights": [
@@ -38,19 +37,9 @@
   ],
   "section_devtools": {
     "api": "/apidocs/software-defined-storage",
-    "cli": "/docs/sdsaas",
+    "cli": "/docs/sdsaas"
   },
   "section_updates": {
-    "view_more": "/docs/overview?topic=overview-whatsnew",
-    "tiles": [
-      {
-        "date": "1 November 2024",
-        "title": "Introducing IBM Storage Ceph as a Service",
-      },
-      {
-        "date": "07 August 2024",
-        "title": "View counts for all resources in the resource summary widget"
-      },
-    ]
+    "view_more": "/docs/sdsaas?topic=sdsaas-relnotes"
   }
 }
