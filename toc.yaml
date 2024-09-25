@@ -119,6 +119,8 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
+      - ha.md
+      - bc-dr.md
       - topicgroup:
           label: API reference
           topics:

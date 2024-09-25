@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-09-25"
 
 keywords: IBM Cloud, observability
 
@@ -50,11 +50,6 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 ## Monitoring {{site.data.keyword.cephaas_short}}
 {: #monitoring-monitor}
-
-
-
-### _Add entries per recommendation to monitor your service_
-{: #monitoring-monitor-1}
 
 
 
