@@ -30,7 +30,7 @@ subcollection: sdsaas
 To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and the customer, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
 
 
-See [Your responsibilities with using {{site.data.keyword.cephaas_notm}}](/docs/sdsaas?topic=sdsaas-responsibility-matrix).
+See [Your responsibilities with using {{site.data.keyword.cephaas_full_notm}}](/docs/sdsaas?topic=sdsaas-responsibility-matrix).
 
 ## What level of availability do I need?
 {: #ha-level}

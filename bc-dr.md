@@ -32,7 +32,7 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 
 
-For more information about your responsibilities when using {{site.data.keyword.cephaas_full_notm}}, see [Shared responsibilities for {{site.data.keyword.cephaas_full_notm}}](/docs/_service-name_?topic=yourproduct-full-keyref-responsibilities).
+For more information about your responsibilities when using {{site.data.keyword.cephaas_full_notm}}, see [Shared responsibilities for {{site.data.keyword.cephaas_full_notm}}](/docs/_service-name_?topic=sdsaas-responsibility-matrix).
 
 ## Disaster recovery strategy
 {: #bc-dr-strategy}
