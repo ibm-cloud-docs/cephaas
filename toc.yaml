@@ -73,7 +73,7 @@ toc:
       - topicgroup:
           label: Managing capacity allocations
           topics:
-    #        - sds_quota_mgmt.md
+            - sds_quota_mgmt.md
             - sds_capacity_performance.md
      #       - manage_storage_limits.md
             - capacity_add.md
