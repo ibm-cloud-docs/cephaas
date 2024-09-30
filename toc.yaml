@@ -148,10 +148,10 @@ toc:
       topics:
       - getting_help_and_support.md
       - billing_view.md
-      - topicgroup:
-          label: Frequently asked questions
-          topics:
-              - faq.md
+      - faq.md
+#      - topicgroup:
+#          label: Frequently asked questions
+#          topics:
 #             - faq_bs.md
 #             - faq_lco.md
       - troubleshooting.md
