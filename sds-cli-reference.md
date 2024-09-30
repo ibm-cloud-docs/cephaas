@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-30"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -268,7 +268,7 @@ ibmcloud software-defined-storage volume-delete \
 
 **USAGE:**
 ```sh
-ibmcloud software-defined-storage volumes [--instanceid INSTANCEID] --url string
+ibmcloud software-defined-storage volumes [--limit LIMIT] [--name NAME]
 ```
 {: pre}
 
@@ -278,18 +278,19 @@ ibmcloud software-defined-storage volumes [--instanceid INSTANCEID] --url string
 
 ```sh
 ibmcloud software-defined-storage volumes \
-    --instanceid exampleString
+    --limit 10 \
+    --name myhost1 \
 	--url $sds_endpoint
 ```
 {: screen}
 
 **Parameters to provide:**
 
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
+* The number of resources to return on a page. The default value is 1. Maximum limit value is 1000.
+	* Flag: `--limit int`
 
-* API Endpoint in the URL form.
-	* Flag: `--url string`
+* Filter by name from the resource collection. You can specify 0 to 200 characters in string length.
+	* Flag: `--name string`
 
 
 
@@ -772,7 +773,7 @@ ibmcloud software-defined-storage cert \
 
 To control or view persistant configurations, you can run `ibmcloud sds config` command along with the global options to list, set and unset the config values.
 
-You can set the `url` variable such that they do not need to use the `--url` flag when using with the `sds` command.
+You can set the `url` variable such that you do not need to use the `--url` flag when using with the `sds` command.
 
 
 **USAGE:**
@@ -791,6 +792,21 @@ OK
 ```
 {: screen}
 
+
+This example shows how to use the command without the config set.
+
+```sh
+ibmcloud sds volumes --url $endpoint
+```
+{: pre}
+
+
+This example shows how to use the command with the `url` configured.
+
+```sh
+ibmcloud sds volumes
+```
+{: pre}
 
 **COMMAND OPTIONS**
 {: #ic-config-command-options}

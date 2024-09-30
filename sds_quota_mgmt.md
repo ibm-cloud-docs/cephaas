@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-30"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -20,7 +20,7 @@ subcollection: sdsaas
 Since the provisioned capacity and quota is at deployment level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created that also includes the maximum burst capacity usage limit.
 
 ## Managing quota from the UI
-{: #managing-sds-block-quota-ui}
+{: #managing-quota-ui}
 {: ui}
 
 1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and expand **Storage**.
@@ -47,8 +47,8 @@ Since the provisioned capacity and quota is at deployment level setting, the quo
 6. Click **Save** to set the new storage capacity allocations.
 
 
-## Managing block quota using the CLI
-{: #managing-sds-block-quota-cli}
+## Managing quota using the CLI
+{: #managing-quota-cli}
 {: cli}
 
 Use the following command to modify the block and object storage capacity quota.
@@ -78,20 +78,25 @@ ibmcloud resource service-instance <instancename> --output json
 
 
 
-## Managing block quota with the API
-{: #managing-sds-block-quota-api}
+## Managing quota with the API
+{: #managing-quota-api}
 {: api}
 
-Make a PATCH request to modify the quota for provisioned and object capacity.
+Make a `PATCH` request to modify the block and object quota.
 
 ```sh
-curl --location --request PATCH '$rc_endpoint' -H "Authorization: $token" -d '{"parameters":{"allocate_burst_capacity":true, "quota":{"block":70,"object":50}}}
-
+curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: $token" -H 'Content-Type: application/json' -d '{
+"parameters": {
+       "quota":{"block":55,"object":75},
+       "allocate_burst_capacity":true
+   }
+}'
 ```
 {: pre}
 
-`$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
-{: note}
+In the example, `$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
+
+When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota. When the value is set to `false`, the  quota cannot exceed the total of the current set value..
 
 To verify that object and block quota was set correctly, run the following requests.
 
