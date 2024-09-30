@@ -41,7 +41,7 @@ Since the provisioned capacity and quota is at deployment level setting, the quo
 
 5. Use the plus & minus controls to modify the allocated capacity.
 
-    The allocated capacity cannot be reduced or set below the current amount of used or provisionied capacity.
+    The allocated capacity cannot be reduced or set below the current amount of used or provisioned capacity.
     {: note}
 
 6. Click **Save** to set the new storage capacity allocations.
