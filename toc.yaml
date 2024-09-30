@@ -151,6 +151,7 @@ toc:
       - topicgroup:
           label: Frequently asked questions
           topics:
-             - faq_bs.md
-             - faq_lco.md
+              - faq.md
+#             - faq_bs.md
+#             - faq_lco.md
       - troubleshooting.md

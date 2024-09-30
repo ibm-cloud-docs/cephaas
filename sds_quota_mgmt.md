@@ -96,7 +96,9 @@ curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: $token
 
 In the example, `$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
 
-When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota. When the value is set to `false`, the  quota cannot exceed the total of the current set value..
+When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the bust capacity is also included in this total quota leading to increase in the overages and pricing fees.
+
+When the `allocate burst capacity` value is set to `false`, the bust capacity is disabled and the quota does not exceed the total of the current set value.
 
 To verify that object and block quota was set correctly, run the following requests.
 

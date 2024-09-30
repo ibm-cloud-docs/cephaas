@@ -14,7 +14,7 @@ subcollection: sdsaas
 
 
 
-# Securing your data in {{site.data.keyword.cephaas_short}}
+# Securing your data in {{site.data.keyword.cephaas_full_notm}}
 {: #mng-data}
 
 
@@ -24,14 +24,17 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 
 
-## How your data is stored and encrypted in {{site.data.keyword.cephaas_short}}
+## How your data is stored and encrypted in {{site.data.keyword.cephaas_full_notm}}
 {: #data-storage}
 
-_Document how your offering stores and encrypts user data as it relates to user activities. What data is encrypted and what is not? How is data encrypted?_
 
-_If you are using separate keys to encrypt each customer, provide that information here._
 
-_Do not include any details that would give malicious persons an advantage to compromising your offering environment._
+Each {{site.data.keyword.cephaas_short}} instance is assigned a unique, randomly generated key by IBM when built at the factory.
+
+All the data that is stored using the {{site.data.keyword.cephaas_short}} data access APIs (S3 and NVMe/TCP), is stored locally only within the {{site.data.keyword.cephaas_short}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
+
+Currently, {{site.data.keyword.cephaas_short}} does not support BYOK or KYOK.
+{: note}
 
 
 
