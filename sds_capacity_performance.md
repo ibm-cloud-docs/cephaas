@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-01"
 
 keywords: cephaas, capacity management, performance management
 
@@ -21,10 +21,9 @@ IBM Storage Ceph as a Service enables you to view the capacity and performance d
 To view capacity details of your IBM CephaaS deployments, complete the following steps.
 
 1. On the **IBM Cloud console**, click the hamburger menu > **Resource list** and expand **Storage**.
-2. Click Deployment name link.
-3. Click **Deployments link** from the left- hand pane. Your deployments are listed on the dashboard.
-
-
+2. Click Deployment name.
+3. Click **Deployments** option from the left - hand panel. Your deployments are listed on the dashboard.
+4. Click your deployment.
 
 
 ## Viewing capacity of your deployments
@@ -37,22 +36,25 @@ The upper section of the deployment dashboard displays the current usage informa
 | Usage Information | Description |
 |-------|-------------|
 | Overall Capacity | Used block and object capacity, along with the remaining available capacity, including the burst capacity|
-| Block capacity | Current usage and a link to update capacity|
-| Object capacity | Current usage and a link to update capacity |
+| Block capacity | Current usage and a link **Go to Block storage** link to update capacity|
+| Object capacity | Current usage and a link **Go to Object storage** link to update capacity |
 {: caption="Table 1. Details about deployment capacity" caption-side="bottom"}
 
-The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. Till the capacity is not fully utilized, the bar displays blue color. When the Overall Capacity is fully utilized, the bar turns yellow. If the burst capacity is also exhausted, the bar turns red.
+The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of nn used of nn TB reflects used capacity from your Overall capacity.
+
+Till the capacity is not fully utilized, the bar displays blue color. When the Overall capacity is fully utilized, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to utilize. 
+If the burst capacity is also exhausted, the bar turns red.
 
 ## Viewing Performance of your deployments
 {: #view-performance}
 
-The lower section of the deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6 to 48 hours.
+The lower section of the deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6, 12, 24, 2 days, past week and past 2 weeks.
 
 | Performance Criteria | Description |
 |-------|-------------|
 | IOPS | Current IOPS (Input/Output Operations Per Second) value for a predefined IOPS tier |
 | Latency | Response time delay measured in milliseconds |
-| Throughput| The performance a disk can deliver, measured in Gigabytes/second (Gbps)|
+| Throughput| The performance a disk can deliver, measured in MB/S|
 {: caption="Table 2. Details about deployment performance" caption-side="bottom"}
 
 ## Renaming your deployments
@@ -70,4 +72,4 @@ Select **Actions** > **Add capacity**. **Purchase additional capacity** screen i
 ## Next Steps
 {: #view-capacity-nextsteps}
 
-You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard.
+You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard. 
