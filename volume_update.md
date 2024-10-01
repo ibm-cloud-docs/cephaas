@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-01"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -83,7 +83,6 @@ To manage your Block storage volume, you can use the `volume-update` command to 
 Using CLI, you can complete the following actions.
 
 * Rename a volume.
-* Map a volume to a host.
 * Update capacity to increase the current volume capacity.
 
 Specify the information to modify the existing details of a volume and run the following command to update the volume details.
