@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-04"
 
 keywords: Connect VMware environment
 
@@ -35,18 +35,17 @@ These instructions are for a quick installation overview of the IBM Storage Ceph
 
     a. Log in to the vSphere Plugin appliance as root.
     b. Register the vSphere Plugin with the vCenter instance or instances.
-
-        The registration command displays the thumbprint of the vSphere instance for verification.
+    The registration command displays the thumbprint of the vSphere instance for verification.
 
         ```sh
         ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
         ```
         {: pre}
 
-        To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
-        {:note}
+    To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
+    {:note}
 
-        Enter the vCenter password when prompted.
+    Enter the vCenter password when prompted.
 
     c. To complete the plug-in activation, refresh the vSphere Client browser.
 
@@ -58,5 +57,5 @@ These instructions are for a quick installation overview of the IBM Storage Ceph
     {: pre}
 
     The ibm-plugin status command can be run at any time.
-    
+
     If the plug-in is not registered to any vCenter, the Plugin Registered output displays as False. 
