@@ -11,7 +11,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing Datastores in vSphere plug-in
+# Managing datastores in vSphere plug-in
 
 ## Adding a datastore
 
@@ -50,9 +50,3 @@ For deleting a Datastore, perform the following procedure.
 3. Review the summary panel and click Delete.
 
  
-
-
-
-
-
-
