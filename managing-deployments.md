@@ -33,7 +33,7 @@ For editing deployment details such as name and API keys, use the following prod
 
 1. From the deployment dashboard of the vSphere Client, select the deployment you need to edit. 
 2. **Edit Deployment Details** screen is desplayed. 
-3. Enter the valid API key to either create a new key or new name and click **UPDATE**. 
+3. Enter the valid API key to either create a new key or new name and click **Update**. 
 
 ## Deleting a deployment
 
@@ -41,12 +41,6 @@ For deleting a deployment, perform the following procedure.
 
 1. From the deployment dashboard of the vSphere Client, select the deployment you need to delete. 
 2. A pop-up is displayed which asks about confirming the delete process.
-3. Click DELETE. 
+3. Click **Delete**. 
 
  
-
-
-
-
-
-
