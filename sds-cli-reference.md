@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-07"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
@@ -243,7 +243,7 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 ```sh
 ibmcloud software-defined-storage volume-delete \
 	--instanceid exampleString \
-    --id exampleString \
+	--id exampleString \
 	--url $sds_endpoint
 ```
 {: screen}
