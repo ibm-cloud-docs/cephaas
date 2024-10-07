@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-04"
+lastupdated: "2024-10-07"
 
 keywords: Connect VMware environment
 
@@ -40,7 +40,7 @@ These instructions are for a quick installation overview of the IBM Storage Ceph
         ```sh
         ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
         ```
-        {: pre}
+        {: codeblock}
 
     To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
     {:note}
