@@ -34,13 +34,14 @@ These instructions are for a quick installation overview of the IBM Storage Ceph
 4. Register the vSphere Plugin into vCenter.
 
     a. Log in to the vSphere Plugin appliance as root.
+
     b. Register the vSphere Plugin with the vCenter instance or instances.
     The registration command displays the thumbprint of the vSphere instance for verification.
 
         ```sh
         ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
         ```
-        {: codeblock}
+        {: pre}
 
     To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
     {:note}
