@@ -16,6 +16,8 @@ subcollection: sdsaas
 # Billing
 {: #billing}
 
+## View billing information
+
 For viewing your billing details, perform the following procedure. 
 
 1. Log in to your IBM Cloud account where your service instance is created. 
