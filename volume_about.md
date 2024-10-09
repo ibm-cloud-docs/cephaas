@@ -77,6 +77,6 @@ If you no longer need a volume, you can delete it at any time. IBM wipes all dat
 ## Next steps
 {: #block-storage-about-nextsteps}
 
-Create your {{site.data.keyword.cephaas_short}} block volumes.
+Create block volumes.
 
-For more information about creating a volume, see [Create and attach a block volume when you create a deployment](/docs/sdsaas?topic=sdsaas-creating-block-volume&interface=ui).
+For instructions, see [Creating block volumes](/docs/sdsaas?topic=sdsaas-creating-block-volume&interface=ui).
