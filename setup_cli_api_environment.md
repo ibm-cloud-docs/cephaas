@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: sds, sdsaas, cephaas, set up environment, api, cli
 
@@ -34,11 +34,11 @@ Before you can create an {{site.data.keyword.cephaas_full}} by using the API or 
 {: #cli-prerequisites-setup}
 {: cli}
 
-Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.data.keyword.cephaas_short}} CLI plug-in.
+Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.data.keyword.cephaas_full_notm}} CLI plug-in.
 
 
 
-Make sure that your environment from which the CLI will be run is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_short}}.
+Make sure that your environment from which the CLI will be run is connected to the on-premise network using virtual private network (VPN) before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_full_notm}}.
 {: requirement}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
@@ -49,7 +49,7 @@ Make sure that your environment from which the CLI will be run is connected to t
    ```
    {: pre}
 
-   The {{site.data.keyword.cephaas_short}} CLI actions also use the aliase `sds`. To learn how to use the CLI commands, you can run:
+   The {{site.data.keyword.cephaas_full_notm}} CLI actions also use the aliase `sds`. To learn how to use the CLI commands, you can run:
 
    ```sh
    ibmcloud sds help

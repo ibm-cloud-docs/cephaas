@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-09"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -148,6 +148,9 @@ Created       2024-06-21T21:08:51Z
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
+
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 
 ## Updating block volume with the API

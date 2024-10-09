@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: sds, host, view host details, host summary list
 
@@ -117,6 +117,8 @@ $ ibmcloud software-defined-storage host \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 
 
@@ -146,6 +148,9 @@ ibmcloud software-defined-storage hosts \
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
+
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 For more information about available command options, run `ibmcloud sds hosts --help`.
 

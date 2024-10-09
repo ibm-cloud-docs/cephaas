@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -79,6 +79,9 @@ ibmcloud software-defined-storage host-vol-update \
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
+
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 
 ## Mapping volume to a host with the API

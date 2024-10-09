@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -72,7 +72,8 @@ Created        2024-07-09T06:24:49Z
 
 Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
-
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 ## Creating block volumes with the API
 {: #creating-volume-api}

@@ -82,6 +82,9 @@ ibmcloud software-defined-storage volume-delete \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
 {: note}
 
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
+
 ## Deleting a block volume with the API
 {: #deleting-block-volume-api}
 {: api}

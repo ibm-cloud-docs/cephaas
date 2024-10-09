@@ -12,7 +12,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding your responsibilities when using {{site.data.keyword.cephaas_short}}
+# Understanding your responsibilities when using {{site.data.keyword.cephaas_full_notm}}
 {: #responsibility-matrix}
 
 

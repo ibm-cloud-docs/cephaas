@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -63,7 +63,8 @@ ibmcloud software-defined-storage host-vol-deleteall \
 ```
 {: screen}
 
-
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 ## Unmap a volume for a host with the API
 {: #unmap-single-volume-for-host-api}

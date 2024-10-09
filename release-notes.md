@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-09"
 
 keywords: CephaaS release notes
 
@@ -19,7 +19,7 @@ content-type: release-note
 
 
 
-# Release notes for {{site.data.keyword.cephaas_short}}
+# Release notes
 {: #relnotes}
 
 
@@ -37,7 +37,3 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Introducing {{site.data.keyword.cephaas_full}}
 :   {{site.data.keyword.cephaas_full_notm}} is a high performing, flexible, and predictable unified storage (block and object) on-premises, that is IBM managed with cloud-like provisioning capabilities and on-demand capacity.
-
-
-
-

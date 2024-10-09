@@ -14,10 +14,7 @@ subcollection: sdsaas
 # Connect to VMware environment
 {: #connecting-to-environment}
 
-These instructions are for a quick installation overview of the IBM Storage Ceph as a Service Plugin for vSphere.
-
-
-
+These instructions are for a quick installation overview of the {{site.data.keyword.cephaas_full}} plugin for VMWare vSphere.
 
 
 ## Before you begin
@@ -31,16 +28,16 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 {: #deploy-app}
 {: step}
 
-From the vSphere Client, deploy the OVF template within a VMware cluster.
+1. From the vSphere Client,  deploy the OVF template within a VMware cluster.
 
-In the Select networks step, select a network that allows communication between vCenter and the management interfaces for IBM Storage Systems.
-{: note}
+2. In the Select networks step, select a **network** that allows communication between vCenter and the management interfaces for IBM Storage Systems.
 
-Power on the appliance after the OVA is successfully deployed.
+3. Power on the appliance after the OVA is successfully deployed.
 
-- By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
+    - By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
 
-- Initial login has a default password of IBMplugin and requires the user to change the password before continuing.
+    - Initial login has a default password of IBMplugin and requires the user to change the password before continuing.
+
 
 ## Register the vSphere plugin into vCenter.
 {: #register-plugin}

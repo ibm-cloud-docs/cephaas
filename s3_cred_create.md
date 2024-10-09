@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-09"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -68,6 +68,8 @@ ibmcloud software-defined-storage cred-create --access-key exampleString --url $
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
 
 ## Creating S3 credential with the API
 {: #creating-s3-credential-api}

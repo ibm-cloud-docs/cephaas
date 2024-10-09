@@ -58,7 +58,7 @@ Expired          false
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the abbreviated version `sds`, an aliase for `software-defined-software` command.
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
 {: tip}
 
 ## Retrieve S3 certificate details with the API

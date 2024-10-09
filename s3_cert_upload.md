@@ -65,7 +65,7 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
-You can also use the abbreviated version `sds`, an aliase for `software-defined-software` command.
+You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API
