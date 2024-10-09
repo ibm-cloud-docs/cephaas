@@ -81,7 +81,7 @@ toc:
       - topicgroup:
           label: Managing object storage
           topics:
-          - setup_dns_server.md
+          - about_object_storage.md
           - topicgroup:
               label: Managing S3 certificates
               topics:
@@ -101,8 +101,7 @@ toc:
             - data-security.md
             - compliance.md
             - eu.md
-#            - iam_overview.md
-      - event-notifications-events.md
+#      - event-notifications-events.md
       - topicgroup:
           label: Observability
           topics:
@@ -128,7 +127,7 @@ toc:
           label: API reference
           topics:
             - about_bs_api.md
-#           - common_headers_errors.md
+            - about_s3_api.md
           links:
             - link:
                 label: Block storage management API
@@ -136,7 +135,6 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
-
       - topicgroup:
           label: CLI reference
           topics:

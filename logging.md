@@ -80,16 +80,3 @@ For information about fields included in every platform log, see [Fields for pla
 
 
 Section 3: If your service sends audit events (activity tracking events) as platform logs, document your events using the activity tracking event guidance (https://test.cloud.ibm.com/docs/observability-ibm?topic=observability-ibm-documentation-at) and reference that topic in a section here.
-
-
-## Log messages
-{: #log_messages}
-
-
-
-The following tables list the message IDs that are generated and additional information available about these messages.
-
-| Message ID | Type | Learn More |
-|------------|------|------------|
-| `is.flow-log-collector.00001E` | error | Failed to write a Flow log file for the past 24 hours. Dropping flow log for Virtual Server _ServerName_ |
-{: caption="Additional information about message IDs" caption-side="top"}
