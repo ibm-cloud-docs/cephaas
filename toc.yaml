@@ -41,7 +41,7 @@ toc:
       - topicgroup:
           label: Ordering and onboarding
           topics:
-            - estimating_cost.md 
+            - estimating_cost.md
             - placing_order.md
             - creating_new_satellite_location.md
             - preparing_deployment.md
@@ -128,7 +128,7 @@ toc:
           label: API reference
           topics:
             - about_bs_api.md
-            - common_headers_errors.md
+#           - common_headers_errors.md
           links:
             - link:
                 label: Block storage management API
