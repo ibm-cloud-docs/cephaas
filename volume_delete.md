@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-09"
 
 keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Deleting a block volume
-{: #deleting-sds-block-volume}
+{: #deleting-block-volume}
 
 Delete a volume from a service instance by using the UI, CLI, or API.
 {: shortdesc}
@@ -22,7 +22,7 @@ When you delete a Block Storage volume, that data immediately becomes inaccessib
 
 
 ## Deleting block volumes in the UI
-{: #deleting-sds-block-volume-ui}
+{: #deleting-block-volume-ui}
 {: ui}
 
 Deleting a block storage volume completely removes its data. The volume cannot be restored.
@@ -40,7 +40,7 @@ To delete a single volume, follow these steps:
 
 
 ## Deleting multiple block volumes in the UI
-{: #deleting-sds-multiple-volumes-ui}
+{: #deleting-multiple-volumes-ui}
 {: ui}
 
 Deleting a Block Storage volume completely removes its data. The volume cannot be restored.
@@ -58,7 +58,7 @@ To delete multiple volumes together, follow these steps:
 
 
 ## Deleting a block volume from the CLI
-{: #deleting-sds-block-volume-cli}
+{: #deleting-block-volume-cli}
 {: cli}
 
 Use the `volume-delete` command to delete a single volume. Specify the volume ID with `--id ID`, deployment instance id `--instanceid INSTANCEID` and API endpoint url.

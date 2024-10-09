@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: sdsaas
 
 
 # About Block storage volume
-{: #block-volume-storage-about}
+{: #block-storage-volume-about}
 
 Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, extra security, and performance.
 {: shortdesc}
@@ -28,12 +28,20 @@ Block storage volume provides hypervisor-mounted, high-performance data storage 
 
 You pay for only the capacity that you need. {{site.data.keyword.cephaas_short}} capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
-
-
 When you create, view, or update a volume, the volume health state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_short}} volume health states].
 
-## {{site.data.keyword.cephaas_short}} volume
-{: #block-storage-volumes}
+
+## IAM roles for creating and managing volumes
+{: #block-storage-iam}
+
+Block Storage requires IAM permissions for role-based access control. Depending on your assigned role, you can create and manage volumes. For more information, see [IAM roles and actions](/docs/sdsaas?topic=sdsaas-managing-iam).
+
+For more information, see the [best practices for assigning access](/docs/account?topic=account-account_setup#account_setup). For the complete IAM process, which includes inviting users to your account and assigning Cloud IAM access, see the [IAM getting started tutorial](/docs/account?topic=account-iamoverview).
+{: tip}
+
+
+## Block storage volume type
+{: #block-storage-volumes-type}
 
 {{site.data.keyword.cephaas_full_notm}} offers block-level volumes that are attached to a deployment when the deployment is created or attached as secondary data volumes. You can configure up to 300 CephaaS volumes per account in a region. You can request to increase this quota by opening support case and specifying the amount you need for more volumes.
 
@@ -48,28 +56,27 @@ Detached volumes can be attached to an available, running deployments without re
 
 Data volumes are encrypted by default with IBM-managed encryption. You can also encrypt data volumes by using your own root keys.
 
-### {{site.data.keyword.cephaas_short}} IOPS profiles
-{: #block-storage-profiles-intro}
+### Volume profiles
+{: #volume-profiles-intro}
 
-When you create a {{site.data.keyword.cephaas_short}} volume in your availability zone, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
+Volume profiles are a way to determine the IOPS performance of a volume. When you create a {{site.data.keyword.cephaas_short}} volume in your deployment, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
 
 
-## {{site.data.keyword.cephaas_short}} encryption
+## Block storage volume encryption
 {: #storage-encryption}
 
 {{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a volume, you can choose to protect the volume by using your own root keys, or use the default IBM-managed encryption. Volumes that are created during storage provisioning are encrypted with IBM-managed encryption by default. You can edit the volume to using your root keys. After you set up encryption for a volume, you can't change it.
 
 
 
-## Cancelling your {{site.data.keyword.cephaas_full}}
-{: #cancel-storage}
+## Deleting your block storage volume
+{: #delete-storage-volume}
 
-If you no longer need a volume, you can cancel it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. 
+If you no longer need a volume, you can delete it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see [Sanitize your data before you delete a volume](/docs/sdsaas?topic=sdsaas-deleting-block-volume#sanitizing-your-data-before-you-delete-a-volume).
 
 ## Next steps
 {: #block-storage-about-nextsteps}
 
 Create your {{site.data.keyword.cephaas_short}} block volumes.
 
-* For more information about creating a volume during instance provisioning, see [Create and attach a block volume when you create an instance].
-* For more information about creating a CephaaS encrypted by your own encryption keys, see [Creating block volumes with customer-managed encryption]
+For more information about creating a volume, see [Create and attach a block volume when you create a deployment](/docs/sdsaas?topic=sdsaas-creating-block-volume&interface=ui).

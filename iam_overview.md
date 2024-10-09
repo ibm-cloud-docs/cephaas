@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-10-09"
 
 keywords: sds, cephaas, authorization, iam, basics
 
@@ -18,7 +18,7 @@ subcollection: sdsaas
 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service securely authenticates users and controls access to all resources consistently in the {{site.data.keyword.cloud_notm}} Platform.
 {: shortdesc}
 
-For more information, see the [IAM account overview](/docs/account?topic=account-overview).
+For more information, see the [{{site.data.keyword.cloud_notm}} IAM account overview](/docs/account?topic=account-overview).
 
 ## Identity Management
 {: #iam-overview-identity}
@@ -27,7 +27,7 @@ Identity  Management includes the interaction of users, services, and resources.
 
 The {{site.data.keyword.cloud_notm}} IAM Token Service is used to create, update, delete, and use API keys for users and services. Those API keys are created either with API calls or the Identity & Access section of the {{site.data.keyword.cloud}} Platform Console. The same key can be used across services. Each user has any number of API keys to support key rotation scenarios, as well as scenarios by using different keys for different purposes to limit the exposure of a single key.
 
-For more information, see [the IAM documentation](/docs/account?topic=account-iamoverview#iamoverview).
+For more information, see [the {{site.data.keyword.cloud_notm}} IAM documentation](/docs/account?topic=account-iamoverview#iamoverview).
 
 ### Users and API keys
 {: #iam-overview-user-api-keys}
