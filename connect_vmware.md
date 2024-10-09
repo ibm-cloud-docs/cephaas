@@ -16,46 +16,65 @@ subcollection: sdsaas
 
 These instructions are for a quick installation overview of the IBM Storage Ceph as a Service Plugin for vSphere.
 
-1. Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Central](https://www.ibm.com/support/fixcentral){: external}
 
-2. Deploy the appliance.
 
-    From the vSphere Client, deploy the OVF template within a VMware cluster.
 
-    In the Select networks step, select a network that allows communication between vCenter and the management interfaces for IBM Storage Systems.
-    {: note}
 
-3. Power on the appliance after the OVA is successfully deployed.
+## Before you begin
+{: #vm-connect-prereq}
+{: step}
 
-    - By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
-    - Initial login has a default password of IBMplugin and requires the user to change the password before continuing.
+Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Central](https://www.ibm.com/support/fixcentral){: external}
 
-4. Register the vSphere Plugin into vCenter.
 
-    a. Log in to the vSphere Plugin appliance as root.
+## Deploy the appliance
+{: #deploy-app}
+{: step}
 
-    b. Register the vSphere Plugin with the vCenter instance or instances.
+From the vSphere Client, deploy the OVF template within a VMware cluster.
 
-        The registration command displays the thumbprint of the vSphere instance for verification.
+In the Select networks step, select a network that allows communication between vCenter and the management interfaces for IBM Storage Systems.
+{: note}
 
-        ```sh
-        ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
-        ```
-        {: pre}
+Power on the appliance after the OVA is successfully deployed.
 
-        To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
+- By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
 
-        Enter the vCenter password when prompted.
+- Initial login has a default password of IBMplugin and requires the user to change the password before continuing.
 
-    c. To complete the plug-in activation, refresh the vSphere Client browser.
+## Register the vSphere plugin into vCenter.
+{: #register-plugin}
+{: step}
 
-5. Check the plug-in status to see which vCenters are registered to the appliance.
+1. Log in to the vSphere Plugin appliance as root.
+
+2. Register the vSphere Plugin with the vCenter instance or instances.
+
+    The registration command displays the thumbprint of the vSphere instance for verification.
 
     ```sh
-    ibm-plugin status
+    ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
     ```
     {: pre}
 
-    The ibm-plugin status command can be run at any time.
+    To link multiple linked-mode vCenters to a single plug-in appliance, register each vCenter independently.
 
-    If the plug-in is not registered to any vCenter, the Plugin Registered output displays as False.
+3. Enter the vCenter password when prompted.
+
+4. To complete the plug-in activation, refresh the vSphere Client browser.
+
+
+## Verify registration status
+{: #verify-connect}
+{: step}
+
+Check the plug-in status to see which vCenters are registered to the appliance.
+
+```sh
+ibm-plugin status
+```
+{: pre}
+
+The `ibm-plugin` status command can be run at any time.
+
+If the plug-in is not registered to any vCenter, the Plugin Registered output displays as `False`.

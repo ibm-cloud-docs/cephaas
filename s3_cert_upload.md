@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-09"
 
 keywords: sdsaas settings, uploading S3 Certificate
 
@@ -56,7 +56,6 @@ ibmcloud software-defined-storage cert-upload --body BODY --url string
 ```
 {: pre}
 
-
 See the following example.
 
 ```sh
@@ -66,6 +65,8 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
+You can also use the abbreviated version `sds` instead of `software-defined-software`.
+{: tip}
 
 ## Uploading S3 certificate with the API
 {: #uploading-s3-certificate-api}

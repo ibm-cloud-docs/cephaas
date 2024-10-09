@@ -26,9 +26,9 @@ Block storage volume provides hypervisor-mounted, high-performance data storage 
 
 {{site.data.keyword.cephaas_short}} provides primary and secondary data volumes. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, you can use your own encryption keys or choose IBM-managed encryption.
 
-You pay for only the capacity that you need. {{site.data.keyword.cephaas_short}} capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
+You pay for only the capacity that you need. The capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
-When you create, view, or update a volume, the volume health state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_short}} volume health states].
+When you create, view, or update a volume, the volume state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/sdsaas?topic=sdsaas-view-sds-volume&interface=ui#viewvols-ui).
 
 
 ## IAM roles for creating and managing volumes
