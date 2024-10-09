@@ -75,8 +75,3 @@ For information about fields included in every platform log, see [Fields for pla
 | `resolution`      | Optional   | Guidance on how to proceed if you receive this log record. |
 | `documentsURL`    | Optional   | More information on how to proceed if you receive this log record. |
 {: caption="Log record fields" caption-side="bottom"}
-
-
-
-
-Section 3: If your service sends audit events (activity tracking events) as platform logs, document your events using the activity tracking event guidance (https://test.cloud.ibm.com/docs/observability-ibm?topic=observability-ibm-documentation-at) and reference that topic in a section here.

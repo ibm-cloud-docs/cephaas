@@ -156,7 +156,7 @@ For Low Cost Object, new S3 accounts will have STANDARD_IA as the default storag
 
 
 
-## Monitoring
+## FAQs on monitoring
 {: #faq-monitoring}
 
 
