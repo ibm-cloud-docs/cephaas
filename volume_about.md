@@ -59,7 +59,7 @@ Data volumes are encrypted by default with IBM-managed encryption. You can also 
 ### Volume profiles
 {: #volume-profiles-intro}
 
-Volume profiles are a way to determine the IOPS performance of a volume. When you create a {{site.data.keyword.cephaas_short}} volume in your deployment, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
+Volume profiles are a way to determine the IOPS performance of a volume. When you create a volume in your deployment, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
 
 
 ## Block storage volume encryption

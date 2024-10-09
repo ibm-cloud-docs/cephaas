@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -93,9 +93,9 @@ Disaster recovery includes tasks such as providing dependencies on disaster reco
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Task 1| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
-|Task 2| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
-|Task 3| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
+| `Service` |  |  |
+|Task 2|   |  |
+|Task 3|   |  |
 {: row-headers}
 {: caption="Table 5. Responsibilites for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

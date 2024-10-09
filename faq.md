@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-09"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -142,5 +142,20 @@ To ensure a throttling of 1000 * 1000KBps, max IOPS should be 1000000/16 = 62500
 ## FAQs on low cost objects
 {: #faq-low-cost-objects}
 
+### What is the defaul storage class for low cost objects?
+{: faq}
+{: #faq-default-sc}
 
 For Low Cost Object, new S3 accounts will have STANDARD_IA as the default storage class.
+
+
+
+## Monitoring
+{: #faq-monitoring}
+
+
+### How can i access the IBM Cloud monitoring user interface from the IBM Storage Ceph as a Service user interface?
+{: faq}
+{: #faq-access-ic-mon-ui}
+
+At present, there is no link available from {{site.data.keyword.cephaas_full_notm}} user interface to {{site.data.keyword.mon_full_notm}} user interface.

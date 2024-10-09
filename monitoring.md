@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-09"
 
 keywords: IBM Cloud, observability
 
@@ -33,18 +33,35 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Viewing metrics
 {: #monitoring-view}
 
-To view the metrics dashboards, access the user interface in the following ways:
-
-* Access the IBM Cloud monitoring user interface from your {{site.data.keyword.cephaas_full_notm}} user interface.
-
-* Access the IBM Cloud monitoring user interface from the Observability page.
+To view the metrics dashboards, access the [IBM Cloud monitoring user interface from the Observability page](/docs/sdsaas?topic=sdsaas-monitoring#ob-dash-view).
 
 To view metrics in your {{site.data.keyword.cephaas_short}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
 {: important}
 
 
-### Launching {{site.data.keyword.mon_full}} from the Observability page
-{: #monitoring-view-ob}
+### Accessing {{site.data.keyword.mon_full}} from the Observability page
+{: #ob-dash-view}
+
+To access the dashboard, complete the following steps:
+
+1. Log in to [IBM Cloud](https://cloud.ibm.com/login){: external} console.
+
+    After you log in with your user ID and password, the IBM Cloud Dashboard opens.
+
+2. Expand the left navigation window.
+
+3. Click **Resource list**.
+
+4. Click **Observability > Monitoring**.
+
+    The list of instances that are available on IBM Cloud is displayed.
+
+5. Click the instance.
+
+6. Click **Open dashboard**. The IBM Cloud Monitoring dashboard opens.
+
+7. Click **Dashboards > Dashboard Library > IBM** and select your dashboard to view.
+
 
 For more information about launching the {{site.data.keyword.mon_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.mon_full_notm}} documentation.](/docs/monitoring?topic=monitoring-launch)
 
@@ -80,7 +97,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 
 ### Provisioned block storage
-{: #ibm_software_defined_storage_block_provisioned_volumes}
+{: #ibm_sds_block_provisioned_volumes}
 
 The number of storage block volumes provisioned by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
@@ -93,7 +110,7 @@ The number of storage block volumes provisioned by the {{site.data.keyword.cepha
 {: caption="Table 2: Provisioned block storage metric metadata" caption-side="top"}
 
 ### Provisioned bytes of block storage
-{: #ibm_software_defined_storage_block_provisioned_bytes}
+{: #ibm_sds_block_provisioned_bytes}
 
 The bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
@@ -106,7 +123,7 @@ The bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_n
 {: caption="Table 3: Provisioned bytes of block storage metric metadata" caption-side="top"}
 
 ### Used bytes of object storage
-{: #ibm_software_defined_storage_object_used_bytes}
+{: #ibm_sds_object_used_bytes}
 
 The bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} deployment.
 
@@ -119,12 +136,12 @@ The bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} 
 {: caption="Table 4: Used bytes of object storage metric metadata" caption-side="top"}
 
 ## Attributes for Segmentation
-{: attributes}
+{: #attributes}
 
 See the global and additional attributes that are available for segmentation.
 
 ### Global attributes
-{: global-attributes}
+{: #global-attributes}
 
 The following global attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 
@@ -141,7 +158,7 @@ The following global attributes are available for segmenting all the metrics tha
 
 
 ### Additional attributes
-{: additional-attributes}
+{: #additional-attributes}
 
 The following additional attributes are available for segmenting all the metrics that are listed in the metrics dictionary:
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-19"
+lastupdated: "2024-10-09"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -15,10 +15,10 @@ subcollection: sdsaas
 # Getting started with {{site.data.keyword.cephaas_full}}
 {: #getting-started}
 
-{{site.data.keyword.cephaas_short}} is a persistent, high-performance iSCSI storage that is provisioned and managed independently of Compute instances. iSCSI-based {{site.data.keyword.cephaas_short}} LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections.
-
-{{site.data.keyword.cephaas_short}} brings best-in-class levels of durability and availability with an unmatched feature set. It is built by using industry standards and best practices. CephaaS is designed to protect the integrity of the data and maintain availability through maintenance events and unplanned failures, and provide a consistent performance baseline.
+{{site.data.keyword.cephaas_full_notm}} is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated storage systems.
 {: shortdesc}
+
+By eliminating over-provisioning and right-sizing your infrastructure, you can ensure optimal resource utilization and cost-efficiency. Based on the benefits of IBM Storage Ceph, it breaks down the silos of dedicated, proprietary storage infrastructure and software, offering unified support for multiple protocols across a single platform. With a seamless, single point of management, it simplifies operations, giving you control over your entire storage environment from one interface.
 
 
 ## Before you begin
