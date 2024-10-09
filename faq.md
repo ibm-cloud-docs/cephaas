@@ -15,6 +15,12 @@ subcollection: sdsaas
 # Freqently asked questions
 {: #faq}
 
+Frequently asked questions provides you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
+
+* [Block and Object storage](/docs/sdsaas?topic=sdsaas-faq#block-storage-faq)
+* [Low cost objects](/docs/sdsaas?topic=sdsaas-faq#faq-low-cost-objects)
+* [Monitoring](/docs/sdsaas?topic=sdsaas-faq#faq-monitoring)
+
 ## FAQs about block and object storage
 {: #block-storage-faq}
 

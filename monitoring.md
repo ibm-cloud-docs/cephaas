@@ -65,12 +65,12 @@ To access the dashboard, complete the following steps:
 
 For more information about launching the {{site.data.keyword.mon_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.mon_full_notm}} documentation.](/docs/monitoring?topic=monitoring-launch)
 
-## Monitoring {{site.data.keyword.cephaas_short}}
+## Monitoring {{site.data.keyword.cephaas_full_notm}}
 {: #monitoring-monitor}
 
 
 
-## {{site.data.keyword.cephaas_short}} predefined dashboards
+## {{site.data.keyword.cephaas_full_notm}} predefined dashboards
 {: #monitoring-dashboards}
 
 
@@ -90,7 +90,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 
 
-## {{site.data.keyword.cephaas_short}} metrics dictionary
+## {{site.data.keyword.cephaas_full_notm}} metrics dictionary
 {: #monitoring-metrics-dictionary}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-09"
 
 keywords: cephaas, developer, getting started, command line interface, cli
 
@@ -48,21 +48,9 @@ Learn more about using the {{site.data.keyword.cloud_notm}} CLI to create applic
 ## Using the API
 {: #gs-dev-api}
 
-For managing data stored in {{site.data.keyword.cephaas_short}}, you can use S3 API compatible tools like the [AWS CLI](/docs/sdsaas?topic=sdsaas-aws-cli) with HMAC credentials for compatibility.
+For managing data stored in {{site.data.keyword.cephaas_full_notm}}, you can use S3 API compatible tools like the [AWS CLI](/docs/sdsaas?topic=sdsaas-aws-cli) with HMAC credentials for compatibility.
 
 ## Using libraries and SDKs
 {: #gs-dev-sdk}
 
 {{site.data.keyword.cephaas_short}} SDKs are currently available only for [Go](/docs/sdsaas?topic=sdsaas-using-go). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/sdsaas?topic=sdsaas-iam-overview), as well as support for [Key Protect](/docs/sdsaas?topic=sdsaas-encryption).
-
-## Building applications on IBM Cloud
-{: #gs-dev-apps}
-
-{{site.data.keyword.cloud}} provides flexibility to developers in choosing the right architectural and deployment options for a given application. Run your code on [bare metal](https://cloud.ibm.com/catalog/infrastructure/bare-metal), in [virtual machines](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group), in [containers](https://cloud.ibm.com/kubernetes/catalog/cluster), or by using a [serverless framework](/docs/solution-tutorials?topic=solution-tutorials-serverless-webapp).
-
-The [Cloud Native Computing Foundation](https://www.cncf.io) fostered [Kubernetes](https://kubernetes.io) container orchestration framework, which forms the foundation for the {{site.data.keyword.cloud}} Kubernetes Service. Developers who want to use Object Storage for persistent storage in their Kubernetes applications can learn more at the following links:
-
- * [Choosing a storage solution](/docs/containers?topic=containers-storage-plan)
- * [Comparison table for persistent storage options](/docs/containers?topic=containers-storage-plan)
- * [Main IBM Cephaas page](/docs/sdsaas?topic=sdsaas-getting-started)
- * [Creating IBM Cephaas deployment]
