@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: IBM Cloud, observability
 
@@ -11,11 +11,6 @@ subcollection: observability-ibm
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
-
-
-
 
 
 # Monitoring metrics for {{site.data.keyword.cephaas_full_notm}}
@@ -65,20 +60,10 @@ To access the dashboard, complete the following steps:
 
 For more information about launching the {{site.data.keyword.mon_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.mon_full_notm}} documentation.](/docs/monitoring?topic=monitoring-launch)
 
-## Monitoring {{site.data.keyword.cephaas_full_notm}}
-{: #monitoring-monitor}
-
-
-
-## {{site.data.keyword.cephaas_full_notm}} predefined dashboards
-{: #monitoring-dashboards}
-
-
 
 
 ## Metrics available by service plan
 {: #monitoring-metrics-by-plan}
-
 
 
 | Metric Name |
@@ -92,8 +77,6 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 
 ## {{site.data.keyword.cephaas_full_notm}} metrics dictionary
 {: #monitoring-metrics-dictionary}
-
-
 
 
 ### Provisioned block storage
