@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-10"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -56,7 +56,7 @@ Use the following command to modify the block and object storage capacity quota.
 ```sh
 ibmcloud resource service-instance-update <Service_Instance_ID>  --parameters '{"quota": {"block": <n>, "object": <n>}, "allocate_burst_capacity": <bool>}'
 ```
-{:pre}
+{: pre}
 
 In the `--parameters` specify the capacity amounts. See the following example where the Service_Instance_ID is `cephaas-unified-2` and the quota to be updated are specified as parameters.
 

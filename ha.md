@@ -4,7 +4,7 @@ copyright:
   years: 2024
 lastupdated: "2024-10-10"
 
-keywords: Ceph as a service, cephaas
+keywords: Ceph as a service, cephaas, high availability
 
 subcollection: sdsaas
 
@@ -13,13 +13,8 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-# Understanding high availability for {{site.data.keyword.cephaas_short}}
+# High availability
 {: #ha}
-
-
-
-
 
 [High availability](#x2284708){: term} (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure.
 {: shortdesc}

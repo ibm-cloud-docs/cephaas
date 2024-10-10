@@ -35,8 +35,7 @@ Currently, {{site.data.keyword.cephaas_full_notm}} does not support BYOK or KYOK
 ## Deleting your data
 {: #data-delete}
 
-If you no longer need a specific volume, host, S3 object credential or encryption keys, you can delete it any time as long as it is not mapped to any other data.
-For example, you can delete a block storage volume only when it is not mapped to a host and vice versa.
+If you no longer need a specific resource such as volume, host, S3 object credential or encryption keys, you can delete it any time as long as it is not mapped to any other data. For example, you can delete a block storage volume only when it is not mapped to a host and vice versa.
 
 To delete the data, see the following documentation.
 
@@ -48,13 +47,15 @@ To delete the data, see the following documentation.
 
 When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 
-Sanitizing and deleting the volume means your data can't be restored.
+Sanitizing and deleting the resources means your data cannot be restored.
 
 
 ### Deleting {{site.data.keyword.cephaas_full_notm}} instances
 {: #service-delete}
 
-If you no longer need a specific deployment, you can delete it at any time. After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
+If you no longer need a specific deployment, you can delete it at any time. Deleting the deployment from the IBM Cloud resource list removes it from all connected applications and deletes access to all the resources provisioned under the service instance such as volumes/hosts/buckets from spaces that are using it. In addition, all of its data is permanently deleted.
+
+After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
 
 Customers with special requirements for compliance such as NIST 800-88 Guidelines for Media Sanitization can perform the data sanitization procedure before they delete their storage.
 
