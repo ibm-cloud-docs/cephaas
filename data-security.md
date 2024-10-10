@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-10"
 
-keywords: securing your data, data security, cephaas
+keywords: securing your data, data security, cephaas, ceph as a service
 
 subcollection: sdsaas
 
@@ -13,66 +13,50 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-# Securing your data in {{site.data.keyword.cephaas_full_notm}}
+# Securing your data
 {: #mng-data}
 
-
-
-To ensure that you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data. 
+To ensure that you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
 {: shortdesc}
 
 
 
-## How your data is stored and encrypted in {{site.data.keyword.cephaas_full_notm}}
+## How your data is stored and encrypted?
 {: #data-storage}
 
+Each deployment instance is assigned a unique, randomly generated key by IBM when built at the factory.
 
+All the data that is stored using the data access APIs (S3 and NVMe/TCP), is stored locally only within the {{site.data.keyword.cephaas_full_notm}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
 
-Each {{site.data.keyword.cephaas_short}} instance is assigned a unique, randomly generated key by IBM when built at the factory.
-
-All the data that is stored using the {{site.data.keyword.cephaas_short}} data access APIs (S3 and NVMe/TCP), is stored locally only within the {{site.data.keyword.cephaas_short}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
-
-Currently, {{site.data.keyword.cephaas_short}} does not support BYOK or KYOK.
+Currently, {{site.data.keyword.cephaas_full_notm}} does not support BYOK or KYOK.
 {: note}
 
 
-
-
-
-## Deleting your data in {{site.data.keyword.cephaas_short}}
+## Deleting your data
 {: #data-delete}
 
-_Document how users can delete their data within the service._
+If you no longer need a specific volume, host, S3 object credential or encryption keys, you can delete it any time as long as it is not mapped to any other data.
+For example, you can delete a block storage volume only when it is not mapped to a host and vice versa.
 
-_If applicable, add H3s in this section to tailor the information to particular types of data. For example, you might have a "Deleting keys" section and a "Deleting a database" section._
+To delete the data, see the following documentation.
 
-### Deleting a Volume
+* [Deleting block storage volumes](/docs/sdsaas?topic=sdsaas-deleting-block-volume)
 
-TODO
+* [Deleting hosts](/docs/sdsaas?topic=sdsaas-deleting-hosts)
 
-### Deleting a Host
+* [Deleting object storage S3 credential](/docs/sdsaas?topic=sdsaas-deleting-sds-s3-credential)
 
-TODO
+When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 
-### Deleting a S3 Bucket
-
-TODO
-
-### Deleting a S3 Object
-
-TODO
-
-### Deleting a S3 Credential
-
-TODO
+Sanitizing and deleting the volume means your data can't be restored.
 
 
-### Deleting {{site.data.keyword.cephaas_short}} instances
+### Deleting {{site.data.keyword.cephaas_full_notm}} instances
 {: #service-delete}
 
-_Include information about whether deleting the service fully erases all data. If deleting the service doesn't remove all personal data, include information about how users can completely delete their data._
+If you no longer need a specific deployment, you can delete it at any time. After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
 
-_Information about how long services keep data after instances are deleted is covered in the service description. Include the following reference for users to find their data retention period._
+Customers with special requirements for compliance such as NIST 800-88 Guidelines for Media Sanitization can perform the data sanitization procedure before they delete their storage.
 
-The {{site.data.keyword.cephaas_short}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
+
+The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).

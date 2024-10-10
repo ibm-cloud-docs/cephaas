@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-10"
 
 keywords: administration, billing, platform
 
@@ -17,15 +17,16 @@ subcollection: sdsaas
 {: #billing}
 
 ## View billing information
+{: #view-billing-info}
 
-For viewing your billing details, perform the following procedure. 
+For viewing your billing details, perform the following procedure.
 
-1. Log in to your IBM Cloud account where your service instance is created. 
-2. From the top menu bar, select **Manage** > **Billing and usage**. 
+1. Log in to your IBM Cloud account where your service instance is created.
+2. From the top menu bar, select **Manage** > **Billing and usage**.
 3. Click **Usage** in the left navigation panel.
-4. Scroll down and find the row that is Ceph as a Service and click **View Plans**. 
-5. Select **View details** in the **Performance** row. 
-6. You can view all the service instances for the selected Performance Plan and the corresponding usage data along with the incurred costs. 
+4. Scroll down and find the row that is Ceph as a Service and click **View Plans**.
+5. Select **View details** in the **Performance** row.
+6. You can view all the service instances for the selected Performance Plan and the corresponding usage data along with the incurred costs.
 
 
 ## {{site.data.keyword.cephaas_full_notm}} Pricing
@@ -39,6 +40,7 @@ The Service is an infrastructure as a service (IaaS) offering where the operatin
 {: #billing-request-classes}
 
 ### Performance tier
+{: #performance-tier}
 
 The Performance Tier of IBM Storage Ceph as a Service is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment.
 
@@ -58,6 +60,7 @@ This Tier is offered in the following capacity options:
 - 800 TB
 
 ### Capacity tier
+{: #capacity-tier}
 
 The Capacity tier of IBM Storage Ceph as a Service offers cost-effective online storage of less frequently used data.
 
@@ -73,6 +76,7 @@ This tier is offered in the following capacity options:
 - 3200 TB
 
 ## Understanding your overall capacity
+{: #overall-capacity}
 
 For each deployment, the hardware setup includes the committed monthly capacity along with an additional 30% burst capacity. Burst capacity allows you to temporarily expand your overall available capacity, if needed.
 
