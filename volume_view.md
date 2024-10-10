@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: list all volumes, view volume details
 
@@ -37,7 +37,7 @@ By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen servi
 | Status | Status of the volume |
 | Provisioned size | Size of the volume you specified, in GBs.|
 | Mapped hosts | Shows the count of number of hosts mapped to the volume. |
-{: caption="Table 1. Details about all volumes" caption-side="bottom"}
+{: caption="Details about all volumes" caption-side="bottom"}
 
 By default, 10 volumes are shown in the list of all volumes. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 volumes. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
@@ -52,7 +52,7 @@ Table 2 describes the Actions menu options.
 | Map to host | Click to map the volume to one or more hosts. |
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
-{: caption="Table 2. Row actions menu options for volumes." caption-side="bottom"}
+{: caption="Row actions menu options for volumes." caption-side="bottom"}
 
 
 ### Viewing details of a volume
@@ -73,7 +73,7 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
 | Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of IOPS * 16 K block size.|
 | Mapped hosts | Displays a list of all hosts present in the system.|
-{: caption="Table 3. Volume details" caption-side="bottom"}
+{: caption="Volume details" caption-side="bottom"}
 
 
 The Actions menu on the volume details page shows the actions that you can take.
@@ -83,7 +83,7 @@ Table 4 shows Actions menu options from the volume details page.
 |--------|-------------|
 | Expand volume | Allows you to increase the capacity of the volume. |
 | Delete | Delete the volume. |
-{: caption="Table 4. Actions menu options from the volume details page." caption-side="bottom"}
+{: caption="Actions menu options from the volume details page." caption-side="bottom"}
 
 ## Viewing volumes details from the CLI
 {: #viewing-block-storage-cli}

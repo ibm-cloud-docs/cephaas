@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: rest, s3, compatibility, api, error
 
@@ -42,7 +42,7 @@ These operations create, delete, get information about, and control behavior of 
 | `PATCH` /volumes        | Updates a volume.                                                               |
 | `DELETE` /host          | Deletes a host                                                                  |
 | `GET` hosts             | Lists hosts in a deployment.                                                    |
-{: caption="Table 1. Block storage operation" caption-side="top"}
+{: caption="Block storage operation" caption-side="top"}
 
 
 More information about {{site.data.keyword.cephaas_full_notm}} features and use-cases can be found at [ibm.com](https://www.ibm.com/products/software-defined-storage).

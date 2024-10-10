@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: cephaas activity tracker events
 
@@ -77,4 +77,4 @@ The following table lists the {{site.data.keyword.cephaas_short}} actions that g
 | software-defined-storage.host.delete | The host was deleted |
 | software-defined-storage.volumemap.create | The volume was mapped |
 | software-defined-storage.volumemap.delete | The volume was unmapped |
-{: caption=" Table 2. Actions that generate management events" caption-side="bottom"}
+{: caption="Actions that generate management events" caption-side="bottom"}

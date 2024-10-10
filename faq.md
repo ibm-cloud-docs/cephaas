@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -94,7 +94,7 @@ The following table shows the same number of bytes expressed in decimal and bina
 |         2,000,000 MB |         1,907,348 MiB |
 |             2,000 GB |             1,862 GiB |
 |                 2 TB |              1.81 TiB |
-{: caption="Table 1. Decimal vs Binary units" caption-side="bottom"}
+{: caption="Decimal vs Binary units" caption-side="bottom"}
 
 The storage system uses base-2 units for volume allocation. So if your volume is provisioned as 4,000 GB, that's really 4,000 GiB or 4,294,967,296,000 bytes of storage space. The provisioned volume size is larger than 4 TB. However, your operating system might display the storage size as 3.9 T because it uses base-2 conversion and the T stands for TiB, not TB.
 
@@ -128,7 +128,7 @@ Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the
 | Blocksize / Throughput Multiplier     |	16 K                                |
 | Min Throughput (Blocksize * Min IOPS) |	1.6 MBps                            |
 | Max Throughput (Blocksize * Max IOPS) |   1536 MBps                           |
-{: caption="Table 2. volume settings" caption-side="bottom"}
+{: caption="volume settings" caption-side="bottom"}
 
 
 

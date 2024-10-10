@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: IBM CephaaS, IAM access, cephaas
 
@@ -39,7 +39,7 @@ Review the following tables that outline what types of tasks each role allows fo
 | Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
 {: row-headers}
 {: class="simple-tab-table"}
-{: caption="Table 1. IAM platform roles" caption-side="bottom"}
+{: caption="IAM platform roles" caption-side="bottom"}
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
@@ -53,7 +53,7 @@ Review the following tables that outline what types of tasks each role allows fo
 | `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties.  Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance. |
 | `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance.  |
 | `resource-controller.instance.update` | Administrator, Editor, Operator | Update a {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings and S3 Certificate for object. Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance. |
-{: caption="Table 3. IAM action descriptions"}
+{: caption="IAM action descriptions"}
 
 All the roles including the `Viewer` role provide some service actions using plaform level roles within the deployments. Use caution when assiging these roles to users.
 {: attention}
@@ -96,7 +96,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Operator               | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Operator`      |
 | Editor                 | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Editor`        |
 | Administrator          | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Administrator` |
-{: caption="Table 2. Role ID values for API use" caption-side="bottom"}
+{: caption="Role ID values for API use" caption-side="bottom"}
 
 
 

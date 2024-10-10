@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-01"
+lastupdated: "2024-10-10"
 
 keywords: cephaas, capacity management, performance management
 
@@ -38,7 +38,7 @@ The upper section of the deployment dashboard displays the current usage informa
 | Overall Capacity | Used block and object capacity, along with the remaining available capacity, including the burst capacity|
 | Block capacity | Current usage and a link **Go to Block storage** link to update capacity|
 | Object capacity | Current usage and a link **Go to Object storage** link to update capacity |
-{: caption="Table 1. Details about deployment capacity" caption-side="bottom"}
+{: caption="Details about deployment capacity" caption-side="bottom"}
 
 The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of nn used of nn TB reflects used capacity from your Overall capacity.
 
@@ -55,7 +55,7 @@ The lower section of the deployment dashboard provides graphical insights into v
 | IOPS | Current IOPS (Input/Output Operations Per Second) value for a predefined IOPS tier |
 | Latency | Response time delay measured in milliseconds |
 | Throughput| The performance a disk can deliver, measured in MB/S|
-{: caption="Table 2. Details about deployment performance" caption-side="bottom"}
+{: caption="Details about deployment performance" caption-side="bottom"}
 
 ## Renaming your deployments
 {: #rename-deployment}

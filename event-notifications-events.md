@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: CephaaS event notifications, ceph as a service
 
@@ -52,7 +52,7 @@ The following table lists the {{site.data.keyword.cephaas_full_notm}} events.
 | `software-defined-storage.host.delete`           | An event is generated when a host is deleted. |
 | `software-defined-storage.volumemap.create`      | An event is generated when a volume is mapped. |
 | `software-defined-storage.volumemap.delete`      | An event is generated when a volume is unmapped. |
-{: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
+{: caption="Actions that generate event notifications" caption-side="bottom"}
 
 
 
@@ -157,4 +157,4 @@ Review following table for more information about event notification properties.
 | `source_instance_crn` | The Cloud Resource Name (CRN) that uniquely identifies your {{site.data.keyword.cephaas_short}} service instance. |
 | `source_instance_dashboard_url` | The URL to your {{site.data.keyword.cephaas_short}} service dashboard in the console. |
 | `source_service` | The display name of the service that sent the event notification. |
-{: caption="Table 2. Properties in an event notification payload" caption-side="bottom"}
+{: caption="Properties in an event notification payload" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: sds, host, view host details, host summary list
 
@@ -38,7 +38,7 @@ By default, all Hosts are displayed for the chosen Deployment. In the list of al
 | Name | Click the name of the host to see individual host details. |
 | Volumes mapped | Shows the count of number of volumes mapped to the host. |
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host. |
-{: caption="Table 1. Details about all hosts" caption-side="bottom"}
+{: caption="Details about all hosts" caption-side="bottom"}
 
 By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
@@ -52,7 +52,7 @@ Table 2 describes the Row actions menu options.
 | Rename | Click to change the host name. |
 | Map to volumes | Click to map the host to a volume. |
 | Delete | Remove the mapping between the volume and host. |
-{: caption="Table 2. Row actions menu options for Hosts." caption-side="bottom"}
+{: caption="Row actions menu options for Hosts." caption-side="bottom"}
 
 
 
@@ -73,7 +73,7 @@ The Host details page shows the details of the chosen hostname and all its mappe
 | Added date | System-generated date when the host was added.|
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Deployment | Name of the instance |
-{: caption="Table 3. Host details" caption-side="bottom"}
+{: caption="Host details" caption-side="bottom"}
 
 The Actions menu on the Host details page shows the actions that you can take.
 
@@ -83,7 +83,7 @@ Table 4 describes the Actions menu options.
 |--------|-------------|
 | Rename | Rename the host name |
 | Delete | Remove the mapping between the volume and host |
-{: caption="Table 4. Actions menu options for Hosts." caption-side="bottom"}
+{: caption="Actions menu options for Hosts." caption-side="bottom"}
 
 
 ## Viewing Hosts from the CLI

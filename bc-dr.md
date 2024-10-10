@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: ceph as a service, cephaas, business continuity, disaster recovery
 
@@ -41,7 +41,7 @@ For more information about your responsibilities when using {{site.data.keyword.
 |---|---|
 |  RPO |   |
 |  RTO |   |
-{: caption="Table 1. RPO and RTO for {{site.data.keyword.cephaas_full_notm}}" caption-side="bottom"}
+{: caption="RPO and RTO for {{site.data.keyword.cephaas_full_notm}}" caption-side="bottom"}
 
 ## Locations
 {: #ha-locations}
