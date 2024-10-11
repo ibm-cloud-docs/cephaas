@@ -4,14 +4,14 @@
 ---
 toc:
   properties:
-    subcollection: sdsaas
+    subcollection: cephaas
     service-name: sdsaas #If your subcollection is not for a service, don't include this property.
     category: storage
     audience: service
-    href: /docs/sdsaas
+    href: /docs/cephaas
     console-page: /catalog/services/sdsaas
     product-page: https://ibm.com/cloud/sdsaas
-    path: sdsaas
+    path: cephaas
     label: IBM Storage Ceph as a Service
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation-design for more details on the toc design.
   entries:
