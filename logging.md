@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
 keywords: cephaas, logging for IBM CephaaS, observability
 
@@ -27,9 +27,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on platf
 ## Viewing logs
 {: #log-viewing}
 
-{{site.data.keyword.cephaas_full_notm}} generate platform logs in the same region where they are available. You can view, monitor, and manage Planning Analytics as a Service logs through the IBM Log Analysis instance that is marked as platform logs in the region.
-
-To launch the Log Analysis web UI to view these logs, see [Navigating to the web UI](/docs/log-analysis?topic=log-analysis-launch).
+{{site.data.keyword.cephaas_full_notm}} generate platform logs in the same region where they are available. You can view, monitor, and manage {{site.data.keyword.cephaas_full_notm}} logs through the {{site.data.keyword.logs_full_notm}} instance.
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
 {: #log-launch-standalone}
