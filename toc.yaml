@@ -57,7 +57,8 @@ toc:
                 - volume_about.md
                 - volume_create.md
                 - volume_view.md
-                - volume_update.md
+                - volume_rename.md
+                - volume_expand.md
                 - volume_delete.md
           - topicgroup:
               label: Host operations

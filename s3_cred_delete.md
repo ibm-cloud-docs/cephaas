@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: sdsaas , delete service credential
 
@@ -13,14 +13,14 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Deleting object storage S3 credential
-{: #deleting-sds-s3-credential}
+{: #deleting-s3-credential}
 
 Delete an object storage S3 credential using the UI, CLI, or API.
 {: shortdesc}
 
 
 ## Deleting an object storage credential in the UI
-{: #deleting-sds-s3-credential-ui}
+{: #deleting-s3-credential-ui}
 {: ui}
 
 To delete an object storage S3 credential, complete the following steps.
@@ -35,7 +35,7 @@ All access granted to any resources using this credential will be lost once the 
 {: note}
 
 ## Deleting multiple object storage credential in the UI
-{: #deleting-mulitple-sds-s3-credential-ui}
+{: #deleting-mulitple-s3-credential-ui}
 {: ui}
 
 To delete multiple object storage S3 credential, complete the following steps.
@@ -51,7 +51,7 @@ All access granted to any resources using these credentials will be lost once th
 
 
 ## Deleting an objects storage credential from the CLI
-{: #deleting-sds-s3-credential-cli}
+{: #deleting-s3-credential-cli}
 {: cli}
 
 Use the `cred-delete` command and provide the `INSTANCEID` of the deployment (service instance) along with the `ACCESS-KEY` for the credential that you want to delete and the endpoint url.
