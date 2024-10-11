@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -25,7 +25,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #prereqs}
 {: step}
 
-{{site.data.keyword.cephaas_short}} LUNs can be provisioned from 20 GB to 12 TB with two options:
+{{site.data.keyword.cephaas_full_notm}} can be provisioned from 10 GB to 12 TB with two options:
 - Provision **Endurance** tiers that feature pre-defined performance levels and other features like snapshots and replication.
 - Build a high-powered **Performance** environment with allocated input/output operations per second (IOPS).
 
@@ -43,17 +43,6 @@ IOPS for both Endurance and Performance is based on a 16-KB IO size with a 50/50
 
 The IO size that is used by your application directly impacts the storage performance. If the IO size that is used by your application is smaller than 16 KB, the IOPS limit is realized before the throughput limit. Conversely, if the IO size that is used by your application is larger than 16 KB, the throughput limit is realized before the IOPS limit.
 
-| IO Size (KB) | IOPS | Throughput (MB/s) |
-|-----|-----|-----|
-| 4 | 1,000 | 4 |
-| 8 | 1,000 | 8 |
-| 16 | 1,000 | 16 |
-| 32 | 500 | 16 |
-| 64 | 250 | 16 |
-| 128 | 128 | 16 |
-| 512 | 32 | 16 |
-| 1024 | 16 | 16 |
-{: caption="Table 1 shows examples of how block size and IOPS affect the throughput. Average IO size x IOPS = Throughput in MB/s." caption-side="top"}
 
 ### Authorized hosts
 {: #numberofhosts}
@@ -81,7 +70,6 @@ Storage traffic is included in the total network USAGE of Public virtual servers
 {: step}
 
 When you're ready to submit your order, you can place it in the [console].
-
 
 
 

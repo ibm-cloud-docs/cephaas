@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-09-12"
+lastupdated: "2024-10-11"
 
 keywords: cephaas, architecture, workload isolation levels
 
@@ -13,23 +13,24 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-
-# Learning about {{site.data.keyword.cephaas_short}} architecture and workload isolation
+# Architecture and workload isolation of {{site.data.keyword.cephaas_full_notm}}
 {: #compute-isolation}
 
+{{site.data.keyword.cephaas_full}} is a hardware appliance hosted in your datacenter and remotely managed for you by IBM.
 
-
-_The short description should be a single, concise paragraph that contains one or two sentences and no more than 50 words. Summarize your offering's architecture and support for isolating one tenants' workload from another._
-
-Review the following sample architecture for {{site.data.keyword.cephaas_short}}, and learn more about different isolation levels so that you can choose the solution that best meets the requirements of the workloads that you want to run in the cloud.
+Review the following sample architecture for {{site.data.keyword.cephaas_full_notm}}, and learn more about the different isolation levels, so that you can choose the solution that best meets the requirements of the workloads that you want to run in the cloud.
 {: shortdesc}
 
-## {{site.data.keyword.cephaas_short}} architecture
+## {{site.data.keyword.cephaas_full_notm}} architecture
 {: #architecture}
 
-_Review the following example: https://cloud.ibm.com/docs/containers?topic=containers-service-arch. Review the System Architecture Guide: https://pages.github.ibm.com/CloudEngineering/system_architecture/services/multitenancy.html. Provide an architectural overview diagram identifying what runs within the IBM Service Account and what runs in the customer's account._
+The following diagram and table describe the default components that are set up in an {{site.data.keyword.cephaas_full}} architecture.
+
+![Architecture of IBM Storage Ceph as a Service](images/architecture-cephaas.svg "Title text that shows on hover here"){: caption="A description that prints on the page" caption-side="bottom"}
 
 ## {{site.data.keyword.cephaas_short}} workload isolation
 {: #workload-isolation}
 
 _Document how customer workloads are isolated from each other by plan. Do customer workloads run within the customer account?  Are customer workloads isolated within Kubernetes namespaces? Do customer workloads run on dedicated compute? Check out the example from Kubernetes: https://cloud.ibm.com/docs/containers?topic=containers-service-arch#worker-components_
+
+Each {{site.data.keyword.cephaas_full_notm}} instance manages one appliance which is located within your datacenter. The service lifecycle and access operations and APIs are managed within your {site.data.keyword.cloud_notm} account and is not accessible to any other {site.data.keyword.cloud_notm} account. All data management and access APIs are accessible within your datacenter and are not remotely accessible.

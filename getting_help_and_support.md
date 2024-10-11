@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-11"
 
 keywords: sds getting help, getting sdsaas support
 
@@ -24,10 +24,10 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 
    * [FAQs about block and object storage](/docs/sdsaas?topic=sdsaas-faq#block-storage-faq)
 
-   * [FAQs about low cost objects](/docs/sdsaas?topic=sdsaas-faq#faq-low-cost-objects)
+   * [FAQs about low-cost objects](/docs/sdsaas?topic=sdsaas-faq#faq-low-cost-objects)
 
    * [FAQs about monitoring](/docs/sdsaas?topic=sdsaas-faq#faq-monitoring)
-   
+
 
 * Review the [troubleshooting documentation](/docs/sdsaas?topic=sdsaas-troubleshooting) to troubleshoot and resolve common issues.
 
