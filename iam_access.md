@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
-keywords: IBM CephaaS, IAM access, cephaas
+keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
 
 subcollection: sdsaas
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing IAM access for {{site.data.keyword.cephaas_full_notm}}
+# Managing IAM access
 {: #managing-iam}
 
 Access to {{site.data.keyword.cephaas_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_short}}.

@@ -12,7 +12,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-# Getting started with {{site.data.keyword.cephaas_full}}
+# Getting started with {{site.data.keyword.cephaas_full_notm}}
 {: #getting-started}
 
 {{site.data.keyword.cephaas_full_notm}} is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated storage systems.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
 keywords: administration, billing, platform
 
@@ -15,19 +15,6 @@ subcollection: sdsaas
 
 # Billing
 {: #billing}
-
-## View billing information
-{: #view-billing-info}
-
-For viewing your billing details, perform the following procedure.
-
-1. Log in to your IBM Cloud account where your service instance is created.
-2. From the top menu bar, select **Manage** > **Billing and usage**.
-3. Click **Usage** in the left navigation panel.
-4. Scroll down and find the row that is Ceph as a Service and click **View Plans**.
-5. Select **View details** in the **Performance** row.
-6. You can view all the service instances for the selected Performance Plan and the corresponding usage data along with the incurred costs.
-
 
 ## {{site.data.keyword.cephaas_full_notm}} Pricing
 {: #billing-pricing}

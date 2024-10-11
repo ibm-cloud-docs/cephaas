@@ -14,7 +14,7 @@ subcollection: sdsaas
 
 
 
-# Getting help and support for {{site.data.keyword.cephaas_short}}
+# Getting help and support
 {: #sds-help-and-support}
 
 If you experience an issue or have questions when using the {{site.data.keyword.cephaas_full}}, you can use the following resources before you open a support case.
@@ -33,7 +33,6 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 
-* Review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users experienced the same problem. When you ask a question, tag the question with `ibm-cloud` and `service-Name` so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
 
 

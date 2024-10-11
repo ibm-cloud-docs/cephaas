@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: sdsaas
 # Securing your data
 {: #mng-data}
 
-To ensure that you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
+To help ensure that, you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
 {: shortdesc}
 
 
@@ -26,7 +26,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 Each deployment instance is assigned a unique, randomly generated key by IBM when built at the factory.
 
-All the data that is stored using the data access APIs (S3 and NVMe/TCP), is stored locally only within the {{site.data.keyword.cephaas_full_notm}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
+All the data that is stored by using the data access APIs (S3 and NVMe/TCP), is stored locally within the {{site.data.keyword.cephaas_full_notm}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
 
 Currently, {{site.data.keyword.cephaas_full_notm}} does not support BYOK or KYOK.
 {: note}

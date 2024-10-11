@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-10-11"
 
-keywords: cephaas, logging for IBM CephaaS, observability
+keywords: cephaas, logging for IBM CephaaS, observability, platform logs, ceph as a service
 
 subcollection: sdsaas
 
@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Logging for {{site.data.keyword.cephaas_short}}
+# Logging
 {: #logging}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate platform logs that you can use to investigate abnormal activity and critical actions in your account, and troubleshoot problems.

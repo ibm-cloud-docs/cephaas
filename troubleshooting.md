@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-10-11"
 
-keywords: Block volume, data storage, troubleshooting, troubleshoot
+keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service
 
 subcollection: sdsaas
 
@@ -14,10 +14,10 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Troubleshooting {{site.data.keyword.cephaas_short}}
+# Troubleshooting
 {: #troubleshooting}
 
-When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_short}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
+When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_full_notm}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
 {: shortdesc}
 
 ## Cannot retrieve a volume in a specified deployment
@@ -85,5 +85,3 @@ The volume name and ID are not accepted.
 
 Verify that the volume name or identifier is correct and that the volume is not mapped to a host. Also, verify that the volume is not in a _pending_ state.
 {: tsResolve}
-
-

@@ -13,7 +13,7 @@ subcollection: sdsaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Monitoring metrics for {{site.data.keyword.cephaas_full_notm}}
+# Monitoring metrics
 {: #monitoringß}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full_notm}}, generate platform metrics that you can use to gain operational visibility into the performance and health of the service in your account.
@@ -28,7 +28,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Viewing metrics
 {: #monitoring-view}
 
-To view the metrics dashboards, access the [IBM Cloud monitoring user interface from the Observability page](/docs/sdsaas?topic=sdsaas-monitoring#ob-dash-view).
+To view the metrics dashboards, see [Accessing the IBM Cloud monitoring user interface from the Observability page](/docs/sdsaas?topic=sdsaas-monitoringß#ob-dash-view).
 
 To view metrics in your {{site.data.keyword.cephaas_short}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
 {: important}
