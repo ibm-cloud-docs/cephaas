@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-11"
 
 keywords: cephaas activity tracker events
 
@@ -33,7 +33,7 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 ### Launching {{site.data.keyword.logs_full_notm}} from the {{site.data.keyword.cephaas_full_notm}} dashboard
 {: #log-launch-integrated}
 
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.at_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
 ### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
 {: #log-launch-standalone}
