@@ -39,7 +39,7 @@ The Block storage management api allows you to programmatically provision and ma
 
 
 
-## Block operations
+### Block operations
 {: #api-block-ops}
 
 These operations create, delete, get information about, and control the behavior of block storage.
@@ -67,7 +67,7 @@ This {{site.data.keyword.cephaas_full_notm}} API uses {{site.data.keyword.iamlon
 
 
 
-## Object operations
+### Object operations
 {: #api-object-ops}
 
 These operations create, delete, get information about, and control behavior of objects.
@@ -90,7 +90,7 @@ These operations create, delete, get information about, and control behavior of 
 {: caption="Object operation" caption-side="top"}
 
 
-## Bucket operations
+### Bucket operations
 {: #api-bucket-ops}
 
 These operations create, delete, get information about, and control behavior of buckets.
