@@ -1,11 +1,11 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, Estimating Cost
 
-subcollection: sdsaas
+subcollection: cephaas
 ---
 
 {{site.data.keyword.attribute-definition-list}}

@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, cli, command line interface, object storage, s3
 
-subcollection: sdsaas
+subcollection: cephaas
 
 
 ---
@@ -73,7 +73,7 @@ The {{site.data.keyword.cephaas_short}} endpoint must be sourced by using the `-
 ## High-level syntax commands
 {: #aws-cli-high-level}
 
-Simple use cases can be accomplished by using `aws --endpoint-url {endpoint} s3 <command>`. For more information about endpoints, see [Endpoints and storage locations](/docs/sdsaas?topic=sdsaas-endpoints). Objects are managed by using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`. Buckets can be created by using `mb` and deleted by using `rb`.
+Simple use cases can be accomplished by using `aws --endpoint-url {endpoint} s3 <command>`. For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints). Objects are managed by using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`. Buckets can be created by using `mb` and deleted by using `rb`.
 
 ### List all buckets within a service instance
 {: #aws-cli-high-level-list-buckets}

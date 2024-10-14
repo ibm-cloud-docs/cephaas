@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
-keywords: sdsaas service credential view, list
+keywords: cephaas service credential view, list
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: rest, s3, compatibility, api, error
 
-subcollection: sdsaas
+subcollection: cephaas
 
 
 ---
@@ -24,9 +24,9 @@ It uses {{site.data.keyword.iamlong}} for authentication and authorization, and 
 
 This reference documentation is being continuously improved. If you have technical questions about using the API in your application, post them on [StackOverflow](https://stackoverflow.com/). Add both `ibm-cloud-platform` and `cephaas` tags to your post. This will help us to improve this documentation with your feedback. Thanking you in advance for you feedback.
 
-As {{site.data.keyword.iamshort}} tokens are relatively easy to work with, `curl` is a good choice for basic testing and interaction with your storage. More information can be found in [the `curl` reference](/docs/sdsaas?topic=sdsaas-curl).
+As {{site.data.keyword.iamshort}} tokens are relatively easy to work with, `curl` is a good choice for basic testing and interaction with your storage. More information can be found in [the `curl` reference](/docs/cephaas?topic=cephaas-curl).
 
-The following tables describe the complete set of operations of the {{site.data.keyword.cephaas_full_notm}} API. For more information, see [the API reference page for block storage](/docs/sdsaas?topic=sdsaas-block-storage-api) or [object storage](/docs/sdsaas?topic=sdsaas-object-storage-api).
+The following tables describe the complete set of operations of the {{site.data.keyword.cephaas_full_notm}} API. For more information, see [the API reference page for block storage](/docs/cephaas?topic=cephaas-block-storage-api) or [object storage](/docs/cephaas?topic=cephaas-object-storage-api).
 
 
 ## Bucket operations

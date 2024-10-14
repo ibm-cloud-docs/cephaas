@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

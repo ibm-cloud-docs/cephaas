@@ -2,11 +2,11 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -39,11 +39,11 @@ If you no longer need a specific resource such as volume, host, S3 object creden
 
 To delete the data, see the following documentation.
 
-* [Deleting block storage volumes](/docs/sdsaas?topic=sdsaas-deleting-block-volume)
+* [Deleting block storage volumes](/docs/cephaas?topic=cephaas-deleting-block-volume)
 
-* [Deleting hosts](/docs/sdsaas?topic=sdsaas-deleting-hosts)
+* [Deleting hosts](/docs/cephaas?topic=cephaas-deleting-hosts)
 
-* [Deleting object storage S3 credential](/docs/sdsaas?topic=sdsaas-deleting-sds-s3-credential)
+* [Deleting object storage S3 credential](/docs/cephaas?topic=cephaas-deleting-sds-s3-credential)
 
 When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 

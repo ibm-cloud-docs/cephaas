@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -57,14 +57,7 @@ To increase the block volume-provisioned size from the Volume details page, comp
 
 
 
-## Increasing block volume from the CLI
-{: #expand-block-volume-cli}
-{: cli}
-
-To manage your Block storage volume capacity, you can use the `volume-update` command to modify the volume size.
-
-
-### Increasing block volume capacity from CLI
+## Increasing block volume capacity from CLI
 {: #expanding-volume-capacity-cli}
 {: cli}
 
@@ -98,21 +91,17 @@ You can also use the aliase `sds` an alternative to `software-defined-storage` f
 {: tip}
 
 
-## Updating block volume with the API
-{: #updating-block-volume-api}
-{: api}
-
-To increase your block storage volume size with the API, you can use the `PATCH /volumes/{volume_id}` request to modify the volume details. Specify the capacity parameter with the new value that you want to modify for the existing volume in the request to update the volume details.
-
-PATCH operation to change more than one parameter value in the same command is not supported.
-{: note}
-
-
-### Increasing volume with the API
+## Increasing volume with the API
 {: #expanding-volume-capacity-api}
 {: api}
 
 Make a `PATCH /volumes/{volume_id}` request to update or expand the volume size to increase the current capacity.
+
+Specify the capacity parameter with the new value that you want to modify for the existing volume in the request to update the volume details.
+
+PATCH operation to change more than one parameter value in the same command is not supported.
+{: note}
+
 
 ```sh
 curl -X PATCH '<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' \

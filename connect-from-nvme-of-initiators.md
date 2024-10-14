@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-10-14"
 
-keywords: sdsaas cephaas about volume host mappings
+keywords: cephaas cephaas about volume host mappings
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
@@ -17,9 +17,9 @@ subcollection: sdsaas
 
 Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command line interface.
 
-* [Configuring the NVMe-oF initiator for Red Hat Enterprise Linux](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#config-nvmeof-initiator-rhel)
+* [Configuring the NVMe-oF initiator for Red Hat Enterprise Linux](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvmeof-initiator-rhel)
 
-* [Configuring the NVMe-oF initiator for VMware ESXi](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings#config-nvmeof-initiator-vmware-esxi)
+* [Configuring the NVMe-oF initiator for VMware ESXi](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvmeof-initiator-vmware-esxi)
 
 
 ## Connecting from Red Hat Enterprise Linux

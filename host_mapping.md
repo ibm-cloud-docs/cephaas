@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -102,7 +102,7 @@ A successful response looks like this:
 {
     "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
     "name": "host1",
-    "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
+    "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
     "created_at": "2024-06-21T07:22:15Z",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
@@ -124,7 +124,7 @@ You can map only one volume at a time using API command.
 ## Next steps
 {: #next-step-mapping-hosts}
 
-* [Configure NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-nvme-initiators)
+* [Configure NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators)
 
 
 * You can continue with mapping and unmapping hosts.

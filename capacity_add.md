@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-10-14"
 
 keywords: Add capacity
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

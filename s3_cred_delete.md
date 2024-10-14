@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
-keywords: sdsaas , delete service credential
+keywords: cephaas , delete service credential
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

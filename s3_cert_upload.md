@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
-keywords: sdsaas settings, uploading S3 Certificate
+keywords: cephaas settings, uploading S3 Certificate
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

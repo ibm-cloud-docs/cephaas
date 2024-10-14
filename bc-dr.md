@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: ceph as a service, cephaas, business continuity, disaster recovery
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -28,7 +28,7 @@ To find out more about responsibility ownership for using {{site.data.keyword.cl
 
 
 
-For more information about your responsibilities when using {{site.data.keyword.cephaas_full_notm}}, see [Shared responsibilities for {{site.data.keyword.cephaas_full_notm}}](/docs/_service-name_?topic=sdsaas-responsibility-matrix).
+For more information about your responsibilities when using {{site.data.keyword.cephaas_full_notm}}, see [Shared responsibilities for {{site.data.keyword.cephaas_full_notm}}](/docs/_service-name_?topic=cephaas-responsibility-matrix).
 
 ## Disaster recovery strategy
 {: #bc-dr-strategy}

@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords: how to create cephaas S3 credential for object storage
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -22,7 +22,7 @@ The credentials are always associated with a Service ID, and new Service IDs can
 
 Create S3 credentials for object storage by using the UI, CLI, or API.
 
-To create a credential, you must be granted the Administrator platform role or a custom role. For more information, see the [IAM access documentation](/docs/sdsaas?topic=sdsaas-managing-iam).
+To create a credential, you must be granted the Administrator platform role or a custom role. For more information, see the [IAM access documentation](/docs/cephaas?topic=cephaas-managing-iam).
 {: requirement}
 
 The secret key cannot be viewed after you create the credential. So you must save or download the key in a place from where you can retrieve when needed.

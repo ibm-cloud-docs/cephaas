@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: list all volumes, view volume details
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -167,7 +167,7 @@ You can list all volumes and view details for a specific volume within all stora
 
 Before you begin, make sure that you [set up your API environment].
 
-### Viewing all SDSaaS volumes with the API
+### Viewing all cephaas volumes with the API
 {: #viewall-vol-api}
 
 Make a `GET /volumes` call to list summary information about all volumes. See the following example.
@@ -198,7 +198,7 @@ A successful response looks like the following example. This example shows the f
         {
           "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
           "host_name": "host1",
-          "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23"
+          "host_nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23"
         }
       ],
       "profile": {
@@ -237,7 +237,7 @@ A successful response provides details of the volume, including capacity and IOP
         {
           "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
           "host_name": "host1",
-          "host_nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23"
+          "host_nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23"
         }
       ],
       "profile": {

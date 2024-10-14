@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
-keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
+keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

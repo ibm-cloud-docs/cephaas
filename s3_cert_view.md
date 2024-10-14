@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, capacity management, performance management
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -42,7 +42,7 @@ The upper section of the deployment dashboard displays the current usage informa
 
 The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of nn used of nn TB reflects used capacity from your Overall capacity.
 
-Till the capacity is not fully utilized, the bar displays blue color. When the Overall capacity is fully utilized, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to utilize. 
+Till the capacity is not fully utilized, the bar displays blue color. When the Overall capacity is fully utilized, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to utilize.
 If the burst capacity is also exhausted, the bar turns red.
 
 ## Viewing Performance of your deployments
@@ -72,4 +72,4 @@ Select **Actions** > **Add capacity**. **Purchase additional capacity** screen i
 ## Next Steps
 {: #view-capacity-nextsteps}
 
-You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard. 
+You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard.

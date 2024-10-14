@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, volume, capacity, Block Storage
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

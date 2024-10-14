@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
-keywords: sds, sdsaas, cephaas, set up environment, api, cli
+keywords: sds, cephaas, cephaas, set up environment, api, cli
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

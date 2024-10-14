@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: sds, host, view host details, host summary list
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -161,7 +161,7 @@ For more information about available command options, run `ibmcloud sds hosts --
 
 You can list all hosts and view details for a specific host within all deployments that you have access to.
 
-Before you begin, make sure that you [set up your API environment](/docs/sdsaas?topic=sdsaas-set-up-environment&interface=api).
+Before you begin, make sure that you [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
 
 ### Viewing list of all hosts with the API
 {: #view-all-host-api}

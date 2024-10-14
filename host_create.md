@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
-keywords: sds, sdsaas host,
+keywords: sds, cephaas host,
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -97,7 +97,7 @@ Define variables for the IAM token and API endpoint.
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
-The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/sdsaas?topic=sdsaas-about-volume-host-mappings).
+The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
 {: note}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
@@ -107,7 +107,7 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 ```sh
 curl -X 'POST' '$sds_api_endpoint/v1/hosts' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
   "name": "host1",
-  "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
+  "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
   "volume_mappings": [
     {
       "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
@@ -123,7 +123,7 @@ A successful response looks like this:
 {
     "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
     "name": "host1",
-    "nqn": "nqn.2014-08.cloud.appdomain.sdsaas:nvme:esx-dev-1-23",
+    "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
     "created_at": "2024-06-21T07:22:15Z",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
@@ -148,6 +148,6 @@ A successful response looks like this:
 When you refresh the Hosts page, the new host appears at the beginning of the list of hosts.
 {: ui}
 
-* [Connect NVME-oF initiators](/docs/sdsaas?topic=sdsaas-connecting-nvme-initiators)
+* [Connect NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators)
 
 * Continue creating more host resources and then connect them to NVME-oF initiators.

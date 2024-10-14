@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: Ceph as a service, cephaas, high availability
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -25,7 +25,7 @@ subcollection: sdsaas
 To find out more about responsibility ownership for using {{site.data.keyword.cloud}} products between {{site.data.keyword.IBM_notm}} and the customer, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities).
 
 
-See [Your responsibilities with using {{site.data.keyword.cephaas_full_notm}}](/docs/sdsaas?topic=sdsaas-responsibility-matrix).
+See [Your responsibilities with using {{site.data.keyword.cephaas_full_notm}}](/docs/cephaas?topic=cephaas-responsibility-matrix).
 
 ## What level of availability do I need?
 {: #ha-level}

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, observability, monitoring metrics, ceph as a service
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -28,7 +28,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Viewing metrics
 {: #monitoring-view}
 
-To view the metrics dashboards, see [Accessing the IBM Cloud monitoring user interface from the Observability page](/docs/sdsaas?topic=sdsaas-monitoringß#ob-dash-view).
+To view the metrics dashboards, see [Accessing the IBM Cloud monitoring user interface from the Observability page](/docs/cephaas?topic=cephaas-monitoringß#ob-dash-view).
 
 To view metrics in your {{site.data.keyword.cephaas_short}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
 {: important}

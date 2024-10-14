@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords:
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -28,13 +28,13 @@ Block storage volume provides hypervisor-mounted, high-performance data storage 
 
 You pay for only the capacity that you need. The capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
-When you create, view, or update a volume, the volume state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/sdsaas?topic=sdsaas-view-sds-volume&interface=ui#viewvols-ui).
+When you create, view, or update a volume, the volume state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/cephaas?topic=cephaas-view-sds-volume&interface=ui#viewvols-ui).
 
 
 ## IAM roles for creating and managing volumes
 {: #block-storage-iam}
 
-Block Storage requires IAM permissions for role-based access control. Depending on your assigned role, you can create and manage volumes. For more information, see [IAM roles and actions](/docs/sdsaas?topic=sdsaas-managing-iam).
+Block Storage requires IAM permissions for role-based access control. Depending on your assigned role, you can create and manage volumes. For more information, see [IAM roles and actions](/docs/cephaas?topic=cephaas-managing-iam).
 
 For more information, see the [best practices for assigning access](/docs/account?topic=account-account_setup#account_setup). For the complete IAM process, which includes inviting users to your account and assigning Cloud IAM access, see the [IAM getting started tutorial](/docs/account?topic=account-iamoverview).
 {: tip}
@@ -72,11 +72,11 @@ Volume profiles are a way to determine the IOPS performance of a volume. When yo
 ## Deleting your block storage volume
 {: #delete-storage-volume}
 
-If you no longer need a volume, you can delete it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see [Sanitize your data before you delete a volume](/docs/sdsaas?topic=sdsaas-deleting-block-volume#sanitizing-your-data-before-you-delete-a-volume).
+If you no longer need a volume, you can delete it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see [Sanitize your data before you delete a volume](/docs/cephaas?topic=cephaas-deleting-block-volume#sanitizing-your-data-before-you-delete-a-volume).
 
 ## Next steps
 {: #block-storage-about-nextsteps}
 
 Create block volumes.
 
-For instructions, see [Creating block volumes](/docs/sdsaas?topic=sdsaas-creating-block-volume&interface=ui).
+For instructions, see [Creating block volumes](/docs/cephaas?topic=cephaas-creating-block-volume&interface=ui).

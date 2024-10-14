@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
-keywords: sds getting help, getting sdsaas support
+keywords: sds getting help, getting cephaas support
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -22,14 +22,14 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 
 * Review the Freqently asked questions (FAQs) in the product documentation.
 
-   * [FAQs about block and object storage](/docs/sdsaas?topic=sdsaas-faq#block-storage-faq)
+   * [FAQs about block and object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
 
-   * [FAQs about low-cost objects](/docs/sdsaas?topic=sdsaas-faq#faq-low-cost-objects)
+   * [FAQs about low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
 
-   * [FAQs about monitoring](/docs/sdsaas?topic=sdsaas-faq#faq-monitoring)
+   * [FAQs about monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
 
 
-* Review the [troubleshooting documentation](/docs/sdsaas?topic=sdsaas-troubleshooting) to troubleshoot and resolve common issues.
+* Review the [troubleshooting documentation](/docs/cephaas?topic=cephaas-troubleshooting) to troubleshoot and resolve common issues.
 
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 

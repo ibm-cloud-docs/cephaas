@@ -2,12 +2,12 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-14"
 
 
 keywords: cli, command line reference, unified storage, sds, software-defined-storage
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
@@ -87,7 +87,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 ## software-defined-storage
 {: #ic-sds-plugin}
 
-`software-defined-storage` -  an OpenAPI definition for the SDSaaS CLI.
+`software-defined-storage` -  an OpenAPI definition for the cephaas CLI.
 
 **USAGE:**
 ```sh

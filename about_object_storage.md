@@ -6,7 +6,7 @@ lastupdated: "2019-11-11"
 
 keywords: about, basics, cephaas object storage
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

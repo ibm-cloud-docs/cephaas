@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}

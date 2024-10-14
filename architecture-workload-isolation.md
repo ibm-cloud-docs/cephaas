@@ -2,11 +2,11 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, architecture, workload isolation levels
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

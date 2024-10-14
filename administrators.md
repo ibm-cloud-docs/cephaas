@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -19,7 +19,7 @@ subcollection: sdsaas
 Storage and system administrators familiar with {{site.data.keyword.cephaas_full}} can easily manage users, create API keys, and grant roles to users and services.
 {: shortdesc}
 
-If you haven't already, go ahead and read through the [getting started tutorial](/docs/sdsaas?topic=sdsaas-getting-started) to familiarize yourself with the core concepts of buckets, objects, and users.
+If you haven't already, go ahead and read through the [getting started tutorial](/docs/cephaas?topic=cephaas-getting-started) to familiarize yourself with the core concepts of buckets, objects, and users.
 
 ## Setting up your storage
 {: #administrators-setup}
@@ -46,7 +46,7 @@ There is another concept, a _service credential_. A service credential is a coll
 
 You might want your development team to be able to use the console to view Object Storage instances and Kubernetes clusters. They would need `Viewer` roles on the Object Storage resources and `Administrator` roles on the Container Service. The `Viewer` role allows for the user to see that the deployment exists, and to view existing credentials, but **not** to modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Operator` or `Editor` role on the deployment to be able to create and delete volumes and hosts.
 
-For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/sdsaas?topic=sdsaas-iam-overview).
+For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
 
 ## Creating deployments
@@ -82,7 +82,7 @@ You must have 'Administrator' and 'Editor' role to create the service instance.
 When trying to create a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}
 
-The [Getting Started guide](/docs/sdsaas?topic=sdsaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/sdsaas?topic=sdsaas-curl).
+The [Getting Started guide](/docs/cephaas?topic=cephaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/cephaas?topic=cephaas-curl).
 
 Learn more about using the {{site.data.keyword.cloud_notm}} CLI to create applications, manage Kubernetes clusters, and more [in the documentation](/docs/cli?topic=cli-ibmcloud_cli).
 

@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
-keywords: sds, sdsaas Block Storage Volume, provision Block Storage Volume for sdsaas,
+keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -43,13 +43,13 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 
 You can create volumes by using the command-line interface (CLI).
 
-Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `SDSAAS-INSTANCE-ID` where the volume will be created.
+Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `cephaas-INSTANCE-ID` where the volume will be created.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--sdsaas-instance-id SDSAAS-INSTANCE-ID] --url string
+ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--cephaas-instance-id cephaas-INSTANCE-ID] --url string
 ```
 {: pre}
 

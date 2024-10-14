@@ -1,11 +1,11 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-14"
 
 keywords: Connect VMware environment
 
-subcollection: sdsaas
+subcollection: cephaas
 ---
 
 

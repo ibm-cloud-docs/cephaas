@@ -1,12 +1,12 @@
 # IBM Storage Ceph as a Service (CephaaS)
 
-Documentation source repository for CephaaS deployment and configuration. Published at https://test.cloud.ibm.com/docs/sdsaas.
+Documentation source repository for CephaaS deployment and configuration. Published at https://test.cloud.ibm.com/docs/cephaas.
 
 ## Creating content
 
-Follow these steps to add to the SDSaaS deployment guide docs.
+Follow these steps to add to the cephaas deployment guide docs.
 
-:information_source: **Tip:** If you'd rather give feedback about the documentation, create an [issue](https://github.ibm.com/cloud-docs/sdsaas/issues).
+:information_source: **Tip:** If you'd rather give feedback about the documentation, create an [issue](https://github.ibm.com/cloud-docs/cephaas/issues).
 
 ### Before you begin
 
@@ -30,7 +30,7 @@ All content starts from the `source` branch.
 1.  Create a pull request from your branch or fork to `source`.
 
     1.  A Jenkins job runs that commits content to the `draft` and `review` branches and opens a pull request to the `publish` branch.
-    1.  After a few minutes, you can see your changes in the IBM Cloud docs framework. Changes to `draft` are available at the internal `/docs-draft/` location (https://test.cloud.ibm.com/docs-draft/sdsaas). Changes to `review` are available at the pre-production `/docs/` location (https://test.cloud.ibm.com/docs/sdsaas).
+    1.  After a few minutes, you can see your changes in the IBM Cloud docs framework. Changes to `draft` are available at the internal `/docs-draft/` location (https://test.cloud.ibm.com/docs-draft/cephaas). Changes to `review` are available at the pre-production `/docs/` location (https://test.cloud.ibm.com/docs/cephaas).
 
 :information_source: **Tip:** Content that is tagged with <code>&lt;draft&gt;</code>, <code>&lt;review&gt;</code>, <code>&lt;staging&gt;</code>, or feature tags are built and promoted only to the internal location and is not included in the pull request to the `publish` branch for production.
 
@@ -44,7 +44,7 @@ The documentation team reviews your PR and might request changes.
 
 - If the changes are more extensive, such as a significant rewrite or entirely new content, the documentation team might need to make revisions for editorial or style reasons.⁠ In this case, we might open a new PR against your branch with our proposed revisions.⁠ You can then review these revisions and incorporate the changes into your branch.⁠ After the documentation team is satisfied with the proposed changes, we merge your PR.⁠
 
-When changes are merged to the `production` branch, they are built and published to production at https://cloud.ibm.com/docs/sdsaas.
+When changes are merged to the `production` branch, they are built and published to production at https://cloud.ibm.com/docs/cephaas.
 
 
 ### Guidelines for merging a PR
@@ -68,7 +68,7 @@ After a build is triggered by a commit or merge, you can monitor progress.
 
 ### Monitoring builds
 
-The Slack channel [#docs-sdsaas](https://ibm.enterprise.slack.com/archives/C071G4UPNA1) displays information about builds.
+The Slack channel [#docs-cephaas](https://ibm.enterprise.slack.com/archives/C071G4UPNA1) displays information about builds.
 
 
 ### Monitoring content quality
@@ -80,7 +80,7 @@ You can monitor the content quality on the Content Quality Dashboard (CQD): http
 
 - Learn about the suggested content for each type of solution docs at https://test.cloud.ibm.com/docs-internal/writing?topic=writing-writing-solution.
 
-**Tip:** If you want to give feedback about the documentation, create an [issue](https://github.ibm.com/cloud-docs/sdsaas/issues).
+**Tip:** If you want to give feedback about the documentation, create an [issue](https://github.ibm.com/cloud-docs/cephaas/issues).
 
 
 ## Documentation contacts

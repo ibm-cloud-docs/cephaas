@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: cephaas, logging for IBM CephaaS, observability, platform logs, ceph as a service
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

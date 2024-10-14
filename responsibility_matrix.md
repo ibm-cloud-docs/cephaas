@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: sds, cephaas, responsibilities matrix
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

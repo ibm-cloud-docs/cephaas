@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -17,9 +17,9 @@ subcollection: sdsaas
 
 Frequently asked questions provides you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
 
-* [Block and Object storage](/docs/sdsaas?topic=sdsaas-faq#block-storage-faq)
-* [Low cost objects](/docs/sdsaas?topic=sdsaas-faq#faq-low-cost-objects)
-* [Monitoring](/docs/sdsaas?topic=sdsaas-faq#faq-monitoring)
+* [Block and Object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
+* [Low cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
+* [Monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
 
 ## FAQs about block and object storage
 {: #block-storage-faq}
@@ -34,14 +34,14 @@ Both block and object storage are calculated hourly. The calculation is based on
 {: faq}
 {: #faq-quota-limit}
 
-There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/sdsaas?topic=sdsaas-sdsaas-manage-storage-limit).
+There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-cephaas-manage-storage-limit).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?
 {: faq}
 {: #faq-increase-capacity}
 
-Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more informaton, see [Managing volume count and capacity limits](/docs/sdsaas?topic=sdsaas-manage-storage-limit).
+Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more informaton, see [Managing volume count and capacity limits](/docs/cephaas?topic=cephaas-manage-storage-limit).
 
 ### What rules apply to volume names and can I rename a volume later on?
 {: faq}
@@ -49,7 +49,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume using the UI. See [this information](/docs/sdsaas?topic=sdsaas-updating-block-volume&interface=ui#renaming-block-volume-from-list-view-page-ui) for details.
+You can change the name of an existing volume using the UI. See [this information](/docs/cephaas?topic=cephaas-updating-block-volume&interface=ui#renaming-block-volume-from-list-view-page-ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -61,7 +61,7 @@ You can provision up to 1000 block storage volumes per deployment. You can reque
 {: faq}
 {: #faq-how-del-vol}
 
-You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/sdsaas?topic=sdsaas-deleting-hosts&interface=ui#deleting-volume-mapping-from-host-ui) before deleting it.
+You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/cephaas?topic=cephaas-deleting-hosts&interface=ui#deleting-volume-mapping-from-host-ui) before deleting it.
 
 
 ### What happens to the data when I delete a block storage volume?

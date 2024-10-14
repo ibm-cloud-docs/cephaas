@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-10-14"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -45,15 +45,7 @@ To rename a volume, complete the following steps.
 
 To manage your Block storage volumes, you can use the `volume-update` command to rename the volumes.
 
-Specify the information to modify the existing details of a volume and run the following command to update the volume details.
-
-### Renaming block volume from CLI
-{: #renaming-volume-cli}
-{: cli}
-
-Use the `volume-update` command and specify the deployment ID, volume ID, and new name of the volume along with the endpoint to rename or update the volume name.
-
-Run the following command for updating the name of a volume.
+Specify the deployment ID, volume ID, and new name of the volume along with the endpoint when runing the following command for updating the name of a volume.
 
 ```sh
 ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID --name NAME --url string
@@ -81,23 +73,17 @@ You can also use the aliase `sds` an alternative to `software-defined-storage` f
 {: tip}
 
 
-## Updating block volume with the API
+## Renaming block volume with the API
 {: #renaming-block-volume-api}
 {: api}
 
-To rename your block storage volume with the API, use the `PATCH /volumes/{volume_id}` request. Specify the values for the parameter that you want to modify for the existing volume in the request to update the volume details.
+Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
 
 
 PATCH operation to change more than one parameter value in the same command is not supported.
 {: note}
 
 
-
-### Renaming volume with the API
-{: #renaming-volume-api}
-{: api}
-
-Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
 
 ```sh
 curl -X PATCH '<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' \
