@@ -12,8 +12,10 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing deployments in vSphere plug-in
+{: #managing-deployments-vsphere-plugin}
 
 ## Adding a deployment
+{: #add-deployment}
 
 Use the following procedure to add an IBM Ceph as a Service deployment to the vSphere Plugin.
 
@@ -28,6 +30,7 @@ Use the following procedure to add an IBM Ceph as a Service deployment to the vS
 9. The newly added deployment details will be reflected on the deployment dashboard.
 
 ## Editing deployment details
+{: #edit-deployment-details}
 
 For editing deployment details such as name and API keys, use the following prodedure.
 
@@ -36,6 +39,7 @@ For editing deployment details such as name and API keys, use the following prod
 3. Enter the valid API key to either create a new key or new name and click **Update**.
 
 ## Deleting a deployment
+{: #delete-deployment}
 
 For deleting a deployment, perform the following procedure.
 

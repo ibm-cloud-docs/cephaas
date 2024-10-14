@@ -12,8 +12,10 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing hosts in vSphere plug-in
+{: #managing-hosts-vsphere-plugin}
 
 ## Viewing host connections
+{: #view-host-connection}
 
 For viewing existing host connections, perform the following procedure.
 
@@ -23,6 +25,7 @@ For viewing existing host connections, perform the following procedure.
 
 
 ## Adding a host
+{: #add-host}
 
 Use the following procedure to add a host to your deployment.
 
@@ -35,6 +38,7 @@ Use the following procedure to add a host to your deployment.
 
 
 ## Editing host details
+{: #edit-host-details}
 
 For editing host details of a deployment, use the following procedure.
 
@@ -44,6 +48,7 @@ For editing host details of a deployment, use the following procedure.
 3. Enter a new host name and click **Update**.
 
 ## Deleting a host
+{: #delete-host}
 
 For deleting a host from a deployment, perform the following procedure.
 

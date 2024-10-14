@@ -12,8 +12,10 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing datastores in vSphere plug-in
+{: #managing-datastores-vsphere-plugin}
 
 ## Adding a datastore
+{: #add-datastore}
 
 Use the following procedure to add an IBM Ceph as a Service datastore to the vSphere Plugin.
 
@@ -31,6 +33,7 @@ Use the following procedure to add an IBM Ceph as a Service datastore to the vSp
 
 
 ## Expanding datastore
+{: #expand-datastore}
 
 This task initiates a workflow that increases the available capacity of the selected VMFS datastore.
 
@@ -42,6 +45,7 @@ This task initiates a workflow that increases the available capacity of the sele
 
 
 ## Deleting a datastore
+{: #delete-datastore}
 
 For deleting a Datastore, perform the following procedure.
 

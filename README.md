@@ -85,4 +85,5 @@ You can monitor the content quality on the Content Quality Dashboard (CQD): http
 
 ## Documentation contacts
 
-* Olive Lakra
+* Olive Lakra, Lead Content Designer & Document Release Manager
+* Vaibhavi Joshi, Content Designer
