@@ -127,8 +127,7 @@ toc:
       - topicgroup:
           label: API reference
           topics:
-            - about_bs_api.md
-            - about_s3_api.md
+            - about_api.md
           links:
             - link:
                 label: Block storage management API
