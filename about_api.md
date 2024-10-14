@@ -14,7 +14,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About {{site.data.keyword.cephaas_full_notm APIs}}
+# About {{site.data.keyword.cephaas_full_notm}} APIs
 {: #about-api}
 
 
