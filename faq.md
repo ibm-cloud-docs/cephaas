@@ -34,7 +34,7 @@ Both block and object storage are calculated hourly. The calculation is based on
 {: faq}
 {: #faq-quota-limit}
 
-There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-cephaas-manage-storage-limit).
+There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-manage-storage-limit).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?

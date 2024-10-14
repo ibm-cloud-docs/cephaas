@@ -13,7 +13,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # View block volumes
-{: #view-sds-volume}
+{: #view-volume}
 
 View details about a block storage volume or summary information about all volumes for the chosen service instance.
 {: shortdesc}

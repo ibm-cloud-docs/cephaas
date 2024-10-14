@@ -43,7 +43,7 @@ To delete the data, see the following documentation.
 
 * [Deleting hosts](/docs/cephaas?topic=cephaas-deleting-hosts)
 
-* [Deleting object storage S3 credential](/docs/cephaas?topic=cephaas-deleting-sds-s3-credential)
+* [Deleting object storage S3 credential](/docs/cephaas?topic=cephaas-deleting-s3-credential)
 
 When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 

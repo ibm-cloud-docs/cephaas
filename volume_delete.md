@@ -113,6 +113,6 @@ Sanitizing and deleting the volume means your data can't be restored.
 
 
 ## Next steps
-{: #next-step-deleting-block-storage-volume-sds}
+{: #next-step-deleting-block-storage-volume}
 
 You can continue creating more volumes or manage existing volumes.

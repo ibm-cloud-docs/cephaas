@@ -134,7 +134,7 @@ A successful response looks like this:
 
 
 ## Next steps
-{: #next-step-creating-volume-sds}
+{: #next-step-creating-volume}
 
 When you refresh the Volumes page, the new volume appears at the beginning of the list of volumes. If the volume was created successfully, it shows status as `Available`.
 {: ui}
