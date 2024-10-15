@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -24,16 +24,16 @@ If you haven't already, go ahead and read through the [getting started tutorial]
 ## Setting up your storage
 {: #administrators-setup}
 
-First, you need to have at least one {{site.data.keyword.cephaas_full_notm}} resource instance, and some volumes to store the data in. How do you want to segment access to your data? Where do you want your data to physically reside? How often will the data be accessed?
+First, you need to have at least one {{site.data.keyword.cephaas_full_notm}} resource instance, and some volumes to store the data in. How do you want to segment access to your data? Where do you want your data to physically reside? How often is the data accessed?
 
 ### Segmenting access
 {: #administrators-access}
 
-You can segment access at two levels: at the resource instance level and at the bucket level.
+You can segment access at two levels: at the resource instance level, and at the bucket level.
 
-Perhaps you want to make sure that your developers can only access a particular storage volume. Or, if you want to ensure that only the application your team is making can edit the data that is stored. You might want your developers with access to the cloud platform to only be able to read data for troubleshooting reasons, but not change anything. These are examples of service-level policies.
+Perhaps you want to make sure that your developers can only access a particular storage volume. Or, if you want to ensure that only the application your team is making can edit the data that is stored. You might want your developers with access to the cloud platform to only be able to read data for troubleshooting reasons, but not change anything. These access levels are examples of service-level policies.
 
-Now what if the development team, or any individual user, who has viewer access to a storage instance, but should be able to directly edit data in one or more buckets? You can use bucket level policies to elevate the level of access that is granted to users within your account. For instance, a user might not be able to create new buckets, but can create and delete objects within existing buckets.
+Now what if the development team, or any individual user, who has viewer access to a storage instance, and is expected to directly edit data in one or more buckets? You can use bucket level policies to elevate the level of access that is granted to users within your account. For instance, a user might not be able to create new buckets, but can create and delete objects within existing buckets.
 
 ### Managing access
 {: #administrators-manage-access}
@@ -52,14 +52,14 @@ For more information on IAM roles and permissions, see [the {{site.data.keyword.
 ## Creating deployments
 {: #provision-deployment}
 
-You can create a deployment (also called as service instance) by resource controller through the custom catalogue UI, RC CLIs and API.
+You can create a deployment (also called as service instance) by resource controller through the custom catalog UI, RC CLIs, and API.
 
-The Resource Controller (RC) API and CLI allows you to set and manage the service specific attributes using the '–parameters' flag for inputs which is a volatile attribute.
+With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
-You must have 'Administrator' and 'Editor' role to create the service instance.
+You must have an 'Administrator' and 'Editor' role to create the service instance.
 {: note}
 
-### Creating deployments using CLI
+### Creating deployments by using CLI
 {: #creating-deployment-cli}
 {: cli}
 
@@ -79,7 +79,7 @@ You must have 'Administrator' and 'Editor' role to create the service instance.
     ```
     {: pre}
 
-When trying to create a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
+When creating a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found by using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}
 
 The [Getting Started guide](/docs/cephaas?topic=cephaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/cephaas?topic=cephaas-curl).

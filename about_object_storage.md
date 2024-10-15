@@ -24,7 +24,7 @@ All data stored in {{site.data.keyword.cephaas_short}} Object Storage is encrypt
 
 All requests and responses are made over `HTTPS`. All `GET` and `HEAD` requests made to objects return an Etag value with the MD5 hash of the object to ensure integrity on the client side.
 
-Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for Go framework. A plug-in is available for the IBM Cloud Command Line Interface (TODO: Need to update this link).
+Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for Go framework. A plug-in is available for the IBM Cloud command-line Interface (TODO: Need to update this link).
 
 ## Next Steps
 {: #next-steps}

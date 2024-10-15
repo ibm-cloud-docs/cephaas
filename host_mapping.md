@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Mapping volume to a host
 {: #mapping-vol-to-host}
 
-You can map one or more volumes to a host by using UI, CLI and APIs.
+You can map one or more volumes to a host by using UI, CLI, and APIs.
 
 Make sure that there is one or more volumes available for mapping to a host.
 {: requirement}
@@ -46,7 +46,7 @@ To map a volume to a host from Hosts page, complete the following steps.
 3. From the options menu, click **Map volumes**.
 4. Select one or more volumes that you want to map to the host.
 
-    Volumes in pending state and already mapped volumes will not be listed in the table.
+    Volumes in pending state and already mapped volumes are not listed in the table.
     {: note}
 
 5. Click **Map**.
@@ -57,9 +57,9 @@ To map a volume to a host from Hosts page, complete the following steps.
 {: #mapping-hosts-cli}
 {: cli}
 
-Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` and `INSTANCEID` to create a volume mapping to the given host ID.
+Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID`, and `INSTANCEID` to create a volume mapping to the host ID.
 
-Run the following command to map the volume to the given host.
+Run the following command to map the volume to the host.
 
 ```sh
 ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
@@ -77,10 +77,10 @@ ibmcloud software-defined-storage host-vol-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, https://{on-prem}.endpoint.com:{port number}/v1
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
 {: tip}
 
 
@@ -118,7 +118,7 @@ A successful response looks like this:
 ```
 {: screen}
 
-You can map only one volume at a time using API command.
+You can map only one volume at a time by using API command.
 {: note}
 
 ## Next steps

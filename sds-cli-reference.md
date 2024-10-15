@@ -2,10 +2,10 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 
-keywords: cli, command line reference, unified storage, sds, software-defined-storage
+keywords: cli, command-line reference, unified storage, sds, software-defined-storage
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # {{site.data.keyword.cephaas_short}} CLI
 {: #ic-sds-cli-reference}
 
-The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command line interface (CLI) with an API wrapper for working with unified storage resources.
+The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) with an API wrapper for working with unified storage resources.
 {: shortdesc}
 
 
@@ -40,10 +40,10 @@ This command returns a URL and prompts for a passcode. Go to that URL in your br
 
 The plug-in is compatible with linux64, Windows&reg;, and macOS&reg; platforms that run on 64-bit processors.
 
-Install the plug-in by using the `plugin install` command.
+Install the plug-in by using the `plug-in install` command.
 
 ```sh
-ibmcloud plugin install software-defined-storage
+ibmcloud plug-in install software-defined-storage
 ```
 {: pre}
 
@@ -59,19 +59,19 @@ The output lists the USAGE instructions and the supported commands.
 
 
 
-### Updating the plugin
+### Updating the plug-in
 {: #ic-sds-update}
 
-Update the plug-in by using the `plugin update` command.
+Update the plug-in by using the `plug-in update` command.
 
 ```sh
-ibmcloud plugin update software-defined-storage
+ibmcloud plug-in update software-defined-storage
 ```
 {: pre}
 
-The latest plug-in version is downloaded and replaces your current plugin service commands. If there are no updates available, the message `No updates are available` is displayed.
+The latest plug-in version is downloaded and replaces your current plug-in service commands. If there are no updates available, the message `No updates are available` is displayed.
 
-You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+You're notified on the command-line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plug-in list`.
 {: tip}
 
 
@@ -85,7 +85,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 {: note}
 
 ## software-defined-storage
-{: #ic-sds-plugin}
+{: #ic-sds-plug-in}
 
 `software-defined-storage` -  an OpenAPI definition for the cephaas CLI.
 

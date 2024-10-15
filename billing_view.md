@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: administration, billing, platform
 
@@ -29,7 +29,7 @@ The Service is an infrastructure as a service (IaaS) offering where the operatin
 ### Performance tier
 {: #performance-tier}
 
-The Performance Tier of IBM Storage Ceph as a Service is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment.
+The Performance Tier of IBM Storage Ceph as a Service is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to use this equipment.
 
 Typical workloads for this tier are supporting VM infrastructure with storage or service high-performance object storage.
 

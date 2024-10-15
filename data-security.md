@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # Securing your data
 {: #mng-data}
 
-To help ensure that, you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
+To help ensure that you can securely manage your data when you use {{site.data.keyword.cephaas_full}}, it is important to know exactly what data is stored and encrypted, and how you can delete any stored data.
 {: shortdesc}
 
 
@@ -35,7 +35,7 @@ Currently, {{site.data.keyword.cephaas_full_notm}} does not support BYOK or KYOK
 ## Deleting your data
 {: #data-delete}
 
-If you no longer need a specific resource such as volume, host, S3 object credential or encryption keys, you can delete it any time as long as it is not mapped to any other data. For example, you can delete a block storage volume only when it is not mapped to a host and vice versa.
+If you no longer need a specific resource such as volume, host, S3 object credential, or encryption keys, you can delete it anytime as long as it is not mapped to any other data. For example, you can delete a block storage volume only when it is not mapped to a host and vice versa.
 
 To delete the data, see the following documentation.
 
@@ -47,7 +47,7 @@ To delete the data, see the following documentation.
 
 When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 
-Sanitizing and deleting the resources means your data cannot be restored.
+Sanitizing and deleting the resources means that your data cannot be restored.
 
 
 ### Deleting {{site.data.keyword.cephaas_full_notm}} instances

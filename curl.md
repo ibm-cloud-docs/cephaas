@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
-keywords: cli, command line interface, object storage, curl
+keywords: cli, command-line interface, object storage, curl
 
 subcollection: cephaas
 
@@ -16,14 +16,14 @@ subcollection: cephaas
 # Using `cURL`
 {: #curl}
 
-You can get the most out working with the command line in most environments with {{site.data.keyword.cephaas_full}} and `cURL`.
+You can get the most out working with the command-line in most environments with {{site.data.keyword.cephaas_full}} and `cURL`.
 {: shortdesc}
 
 Here's a 'cheat sheet' of basic `curl` commands for the {{site.data.keyword.cephaas_full}} REST API.
 
 
 
-Using `curl` assumes a certain amount of familiarity with the command line and Object Storage, and have the necessary information from a [credential](/docs/cephaas?topic=cephaas-credentials-overview), the [endpoints reference](/docs/cephaas?topic=cephaas-endpoints), or the [console](/docs/cephaas?topic=cephaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
+Using `curl` assumes a certain amount of familiarity with the command-line and Object Storage, and have the necessary information from a [credential](/docs/cephaas?topic=cephaas-credentials-overview), the [endpoints reference](/docs/cephaas?topic=cephaas-endpoints), or the [console](/docs/cephaas?topic=cephaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
 
 **Note**: Personally Identifiable Information (PII): When _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
 {: tip}
@@ -31,7 +31,7 @@ Using `curl` assumes a certain amount of familiarity with the command line and O
 ## Request an IAM Token
 {: #curl-iam}
 
-Two ways you can generate an IAM `oauth` token for authenticating requests are using a `curl` command with an API key (described later), or from the command line by using [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_oauth_tokens).
+Two ways you can generate an IAM `oauth` token for authenticating requests are using a `curl` command with an API key (described later), or from the command-line by using [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_oauth_tokens).
 
 ### Request an IAM token by using an API key
 {: #curl-token}

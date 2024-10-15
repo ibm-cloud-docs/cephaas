@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas , delete service credential
 
@@ -73,7 +73,7 @@ ibmcloud software-defined-storage cred-delete --instanceid exampleString --acces
 ```
 {: screen}
 
-You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
 {: tip}
 
 ## Deleting an object storage credential with the API

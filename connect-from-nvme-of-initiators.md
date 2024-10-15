@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Connecting from NVMe-oF initiators
 {: #connecting-nvme-initiators}
 
-Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command line interface.
+Before you can use the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command-line interface.
 
 * [Configuring the NVMe-oF initiator for Red Hat Enterprise Linux](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvmeof-initiator-rhel)
 
@@ -35,7 +35,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
 
 1. Connect to the NVMe-oF target.
 
-    Use the storage_identifiers.id that is returned in the host details in GET /hosts API.
+    Use the `storage_identifiers.id` that is returned in the host details in the `GET /hosts` API.
 
     ```sh
     nvme connect -t tcp -a GATEWAY_IP -n storage_identifiers.id
@@ -53,7 +53,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     Node                    Generic           SN                   Model                   Namespace Usage                      Format           FW Rev
@@ -73,7 +73,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     $ mkfs /home/nvme01_node01
@@ -99,7 +99,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     mount /home/nvme01_node01 /mnt/nvmeof
@@ -149,7 +149,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     [root@host01:~] esxcli nvme adapter list
@@ -167,7 +167,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     [root@host01:~] esxcli nvme fabrics discover -a vmhba64 -i 10.0.211.196 -p 4420
@@ -187,7 +187,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     [root@host01:~] esxcli nvme fabrics connect -a vmhba64 -i 10.0.211.196 -p 4420 -s nqn.2016-06.io.spdk:cnode1
@@ -201,7 +201,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     [root@host01:~] esxcli nvme controller list
@@ -219,7 +219,7 @@ Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must instal
     ```
     {: pre}
 
-    See following example.
+    See the following example.
 
     ```sh
     [root@host01:~] esxcli nvme namespace list

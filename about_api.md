@@ -20,9 +20,9 @@ subcollection: cephaas
 
 {{site.data.keyword.cephaas_full_notm}} provides you with two APIs to configure and manage your storage resources.
 
-* Block Storage Management API
+* Block storage management API
 
-* Object Storage Adminstration API
+* Object storage administration API
 
 
 These {{site.data.keyword.cephaas_full_notm}} APIs use {{site.data.keyword.iamlong}} for authorize and authenticate requests.
@@ -35,8 +35,7 @@ The following sections describe the complete set of operations of the {{site.dat
 ## Block storage management API
 {: #block-storage-api}
 
-The Block storage management api allows you to programmatically provision and manage block storage resources within a {{site.data.keyword.cephaas_full_notm}} deployment, including volumes, hosts and volume to host mappings.
-
+Use the Block storage management api to programmatically provision and manage block storage resources within the {{site.data.keyword.cephaas_full_notm}} deployment, including volumes, hosts, and volume to host mappings.
 
 
 ### Block operations
@@ -48,16 +47,16 @@ These operations create, delete, get information about, and control the behavior
 |:------------------------|:--------------------------------------------------------------------------------|
 | `GET` /volumes          | Used to retrieve a list of all block volumes.                                   |
 | `DELETE` /volume        | Deletes a volume.                                                               |
-| `POST` /volumes         | Create a new volume in a deployment.                                            |
+| `POST` /volumes         | Create volume in a deployment.                                                  |
 | `PATCH` /volumes        | Updates the name or capacity of a volume.                                       |
 | `DELETE` /host          | Deletes a host                                                                  |
 | `GET` hosts             | Lists hosts in a deployment.                                                    |
-| `POST` /hosts           | Create a new host in a deployment.                                              |
-| `PATCH` /hosts          | Updates the name a host.                                                        |
+| `POST` /hosts           | Create host in a deployment.                                                    |
+| `PATCH` /hosts          | Updates the name of a host.                                                        |
 {: caption="Block storage operation" caption-side="top"}
 
 
-## Object storage management API
+## Object storage administration API
 {: #object-storage-api}
 
 The {{site.data.keyword.cephaas_full}} Object Storage API is a REST-based API for reading and writing objects.
@@ -70,7 +69,7 @@ This {{site.data.keyword.cephaas_full_notm}} API uses {{site.data.keyword.iamlon
 ### Object operations
 {: #api-object-ops}
 
-These operations create, delete, get information about, and control behavior of objects.
+These operations create, delete, get information about, and control the behavior of objects.
 
 | Object operation          | Note                                                                                |
 |:--------------------------|:------------------------------------------------------------------------------------|
@@ -93,7 +92,7 @@ These operations create, delete, get information about, and control behavior of 
 ### Bucket operations
 {: #api-bucket-ops}
 
-These operations create, delete, get information about, and control behavior of buckets.
+These operations create, delete, get information about, and control the behavior of buckets.
 
 | Bucket operation        | Note                                                                            |
 |:------------------------|:--------------------------------------------------------------------------------|

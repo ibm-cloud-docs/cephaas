@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: managing deployments in vsphere plug-in
 
@@ -12,12 +12,12 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Managing deployments in vSphere plug-in
-{: #managing-deployments-vsphere-plugin}
+{: #managing-deployments-vsphere-plug-in}
 
 ## Adding a deployment
 {: #add-deployment}
 
-Use the following procedure to add an IBM Ceph as a Service deployment to the vSphere Plugin.
+Use the following procedure to add an IBM Ceph as a Service deployment to the vSphere plug-in.
 
 1. From the vSphere Client, go to the plug-in dashboard from the vSphere Client main menu and click IBM Ceph as a Service.
 2. **Add Service Instance** screen is displayed which shows the first step of **Connect to IBM Storage CephaaS**.

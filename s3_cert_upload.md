@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -20,7 +20,7 @@ S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in th
 
 Before you can upload the certificate file, you must create a server-side certificate with Subject Alternative Name (SAN) which includes the S3 DNS endpoint and then upload the server-side certificate along with the Key using the UI, CLI or API .
 
-For secure traffic, S3 Clients must utilize the associated CA certificate.
+For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
 
 
@@ -65,7 +65,7 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
-You can also use the aliase `sds` an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API

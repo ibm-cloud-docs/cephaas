@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
-keywords: cephaas, cli, command line interface, object storage, s3
+keywords: cephaas, cli, command-line interface, object storage, s3
 
 subcollection: cephaas
 

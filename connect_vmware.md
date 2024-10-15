@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: Connect VMware environment
 
@@ -14,7 +14,7 @@ subcollection: cephaas
 # Connect to VMware environment
 {: #connecting-to-environment}
 
-These instructions are for a quick installation overview of the {{site.data.keyword.cephaas_full}} plugin for VMWare vSphere.
+These instructions are for a quick installation overview of the {{site.data.keyword.cephaas_full}} plug-in for VMWare vSphere.
 
 
 ## Before you begin
@@ -36,21 +36,21 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 
     - By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
 
-    - Initial login has a default password of IBMplugin and requires the user to change the password before continuing.
+    - Initial login has a default password of IBMplug-in and requires the user to change the password before continuing.
 
 
-## Register the vSphere plugin into vCenter.
-{: #register-plugin}
+## Register the vSphere plug-in into vCenter.
+{: #register-plug-in}
 {: step}
 
-1. Log in to the vSphere Plugin appliance as root.
+1. Log in to the vSphere plug-in appliance as root.
 
-2. Register the vSphere Plugin with the vCenter instance or instances.
+2. Register the vSphere plug-in with the vCenter instance or instances.
 
     The registration command displays the thumbprint of the vSphere instance for verification.
 
     ```sh
-    ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
+    ibm-plug-in register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
     ```
     {: pre}
 
@@ -68,10 +68,10 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 Check the plug-in status to see which vCenters are registered to the appliance.
 
 ```sh
-ibm-plugin status
+ibm-plug-in status
 ```
 {: pre}
 
-The `ibm-plugin` status command can be run at any time.
+The `ibm-plug-in` status command can be run at any time.
 
-If the plug-in is not registered to any vCenter, the Plugin Registered output displays as `False`.
+If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.

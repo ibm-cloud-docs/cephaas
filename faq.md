@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -41,7 +41,7 @@ There are capacity based quota limits for your block storage volumes based on th
 {: faq}
 {: #faq-increase-capacity}
 
-Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more informaton, see [Managing volume count and capacity limits](/docs/cephaas?topic=cephaas-manage-storage-limit).
+Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Managing volume count and capacity limits](/docs/cephaas?topic=cephaas-manage-storage-limit).
 
 ### What rules apply to volume names and can I rename a volume later on?
 {: faq}
@@ -49,7 +49,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume using the UI. See [this information](/docs/cephaas?topic=cephaas-updating-block-volume&interface=ui#renaming-block-volume-from-list-view-page-ui) for details.
+You can change the name of an existing volume by using the UI. See [this information](/docs/cephaas?topic=cephaas-updating-block-volume&interface=ui#renaming-block-volume-from-list-view-page-ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -79,7 +79,7 @@ One confusing aspect of storage is the units that storage capacity and usage are
 
 Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, API, and Terraform, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
 
-However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer file systems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available storage systems are considerably larger this unit difference is causing confusion.
+However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer filesystems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available Storage Systems are considerably larger this unit difference is causing confusion.
 
 The difference between GB and GiB lies in their numerical representation:
 - GB (Gigabyte) is a decimal unit, where 1 GB equals 1,000,000,000 bytes. When you convert GB to TB, you use 1000 as the multiplier.
@@ -104,7 +104,7 @@ The storage system uses base-2 units for volume allocation. So if your volume is
 {: faq}
 {: #faq-host-per-instance}
 
-Total number of hosts that can be provisioned in an instance is 32.
+The total number of hosts that can be provisioned in an instance is 32.
 
 ### Can a volume be mapped to multiple hosts?
 {: faq}
@@ -136,23 +136,23 @@ Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the
 {: faq}
 {: #faq-create-vol-10k-iops}
 
-To ensure a throttling of 10000 IOPS, the volume capacity should be at least 10000/3 = 3334GB. So, you must create a volume with capacity ~3500GB.
+To help ensure a throttling of 10000 IOPS, the volume capacity should be at least 10000/3 = 3334 GB. So, you must create a volume with capacity ~3500 GB.
 
 ### How to create volume for a workload that requires a throughput of 1000MBps?
 {: faq}
 {: #faq-create-vol-thruput-1kmbps}
 
-To ensure a throttling of 1000 * 1000KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21TB.
+To help ensure a throttling of 1000 * 1000 KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
 
 
-## FAQs on low cost objects
+## FAQs on low-cost objects
 {: #faq-low-cost-objects}
 
-### What is the defaul storage class for low cost objects?
+### What is the defaul storage class for low-cost objects?
 {: faq}
 {: #faq-default-sc}
 
-For Low Cost Object, new S3 accounts will have STANDARD_IA as the default storage class.
+For Low-cost Object, new S3 accounts will have STANDARD_IA as the default storage class.
 
 
 
@@ -164,4 +164,4 @@ For Low Cost Object, new S3 accounts will have STANDARD_IA as the default storag
 {: faq}
 {: #faq-access-ic-mon-ui}
 
-At present, there is no link available from {{site.data.keyword.cephaas_full_notm}} user interface to {{site.data.keyword.mon_full_notm}} user interface.
+The {{site.data.keyword.mon_full_notm}} user interface is not linked from the {{site.data.keyword.cephaas_full_notm}} user interface. Hence it cannot be accessed from the {{site.data.keyword.cephaas_short}} user interface.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # About NVMe-oF host mappings
 {: #about-volume-host-mappings}
 
-With {{site.data.keyword.cephaas_full}}, block-level access to the Ceph storage cluster can take advantage of the NVMe over Fabrics (NVMe-oF) standard to provide data storage. The NVMe TCP protocol allows clients, which are known as initiators, to send NVMe-oF commands to storage devices, which are known as targets, over an Internet Protocol network. Initiators can be either Linux client or VMWare clients or both. For VMWare clients, the NVMe TCP volumes are shown as VMFS Data store and for Linux clients, the NVMe TCP volumes are shown as block devices.
+With {{site.data.keyword.cephaas_full}}, block-level access to the Ceph storage cluster can take advantage of the NVMe over Fabrics (NVMe-oF) standard to provide data storage. The NVMe TCP protocol allows clients, which are known as initiators, to send NVMe-oF commands to storage devices, which are known as targets, over an Internet Protocol network. Initiators can be either Linux client or VMWare clients or both. For VMWare clients, the NVMe TCP volumes are shown as `VMFS data store` and for Linux clients, the NVMe TCP volumes are shown as `block devices`.
 
 Initiators are configured to allow the NVMe TCP protocol to send NVMe-oF commands to targets over an Internet Protocol network.
 
@@ -42,7 +42,7 @@ For more information, see [Connecting from NVME-oF initiators](/docs/cephaas?top
 ## Configuring NVMe-oF initiators
 {: #config-nvme-initiators}
 
-Before you can utilize the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command line interface.
+Before you can use the benefits of the Ceph NVMe-oF gateway, you must install and configure an NVMe-oF gateway by using command-line interface.
 
 * [Configuring the NVMe-oF initiator for Red Hat Enterprise Linux](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvmeof-initiator-rhel)
 
@@ -100,7 +100,7 @@ Use this procedure to configure the NMVe fabrics for VMware ESXi.
 
 1. Make sure that the VMware ESXi host is running VMware vSphere Hypervisor (ESXi) 7.0U3 version or later.
 
-2. Configure NVMe/TCP adapter.
+2. Configure an NVMe/TCP adapter.
 
 3. Enable NVMe/TCP on a physical network interface controller (NIC).
 
@@ -139,7 +139,7 @@ Use this procedure to configure the NMVe fabrics for VMware ESXi.
 ## Next steps
 {: #nvmeof-initiator-nextsteps}
 
-Once the initaitor is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/cephaas?topic=cephaas-creating-host).
+Once the initiator is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/cephaas?topic=cephaas-creating-host).
 
 During host creation, NQN from the initiator must be used.
 {: note}

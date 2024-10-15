@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
 
@@ -27,14 +27,14 @@ IAM access policies enable access to be granted at different levels. Some of the
 * Access across all instances of the service in your account
 * Access to an individual service instance in your account
 
-After defining the sope of the access policy, assgn a role.
+After defining the scope of the access policy, assign a role.
 
 Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](/docs/cephaas?topic=cephaas-managing-iam&interface=ui#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
 | Viewer                 |  As a viewer, you can view deployments, but you can't modify them. |
-| Operator               |  As an operator, you can perform platform actions required to configure and operate deployments, such as viewing a deployment's dashboard.            |
+| Operator               |  As an operator, you can perform platform actions that are required to configure and operate deployments, such as viewing a deployment's dashboard.            |
 | Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
 | Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
 {: row-headers}
@@ -48,14 +48,14 @@ Review the following tables that outline what types of tasks each role allows fo
 {: #iam-actions}
 
 
-| Action id                               | Roles                                         | Descriptions                     |
+| Action ID                               | Roles                                         | Descriptions                     |
 | ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties.  Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance. |
-| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance.  |
-| `resource-controller.instance.update` | Administrator, Editor, Operator | Update a {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings and S3 Certificate for object. Allowed to create, list and delete object credentials within the service instance. Allowed to create, **view**, list, update and delete block volumes and hosts within the service instance. |
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties.  Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes, and hosts within the service instance. |
+| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance.  |
+| `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance. |
 {: caption="IAM action descriptions"}
 
-All the roles including the `Viewer` role provide some service actions using plaform level roles within the deployments. Use caution when assiging these roles to users.
+All the roles including the `Viewer` role provide some service actions by using platform level roles within the deployments. Use caution when assigning these roles to users.
 {: attention}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
@@ -87,7 +87,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 {: #assign-access-api}
 {: api}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api){: external} or the [Create a policy API docs](/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api){: external} or the [Create a policy API doc](/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
 
 | Role name | Role CRN |
@@ -102,7 +102,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 The following example is for assigning the `<Viewer>` role for `<IBM CephaaS Storage>`:
 
-Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
+Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to helo ensure that you're using the correct value for the CRN.
 {: tip}
 
 

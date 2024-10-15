@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas, capacity management, performance management
 
@@ -42,7 +42,7 @@ The upper section of the deployment dashboard displays the current usage informa
 
 The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of nn used of nn TB reflects used capacity from your Overall capacity.
 
-Till the capacity is not fully utilized, the bar displays blue color. When the Overall capacity is fully utilized, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to utilize.
+Till the capacity is not fully used, the bar displays blue color. When the Overall capacity is fully used, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to use.
 If the burst capacity is also exhausted, the bar turns red.
 
 ## Viewing Performance of your deployments
