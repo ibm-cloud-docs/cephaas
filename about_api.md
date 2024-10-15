@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error
 
@@ -27,7 +27,7 @@ subcollection: cephaas
 
 These {{site.data.keyword.cephaas_full_notm}} APIs use {{site.data.keyword.iamlong}} for authorize and authenticate requests.
 
-As {{site.data.keyword.iamshort}} tokens are relatively easy to work with, `curl` is a good choice for basic testing and interaction with your storage. More information can be found in [the `curl` reference](/docs/cephaas?topic=cephaas-curl).
+As the {{site.data.keyword.iamshort}} tokens are relatively easy to work with, `curl` is a good choice for basic testing and interaction with your storage. More information can be found in [the `curl` reference](/docs/cephaas?topic=cephaas-curl).
 
 The following sections describe the complete set of operations of the {{site.data.keyword.cephaas_full_notm}} API. For more information, see [the API reference page for block storage](/docs/cephaas?topic=cephaas-block-storage-api) or [object storage](/docs/cephaas?topic=cephaas-object-storage-api).
 

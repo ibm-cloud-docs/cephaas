@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
 keywords: cephaas, observability, monitoring metrics, ceph as a service
 
@@ -71,7 +71,7 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 | [{{site.data.keyword.cephaas_full_notm}} provisioned block storage](#ibm_software_defined_storage_block_provisioned_volumes) |
 | [{{site.data.keyword.cephaas_full_notm}} provisioned bytes of block storage](#ibm_software_defined_storage_block_provisioned_bytes) |
 | [{{site.data.keyword.cephaas_full_notm}} used bytes of object storage](#ibm_software_defined_storage_object_used_bytes) |
-{: caption="Table 1: Metrics Available by Plan Names" caption-side="top"}
+{: caption="Metrics Available by Plan Names" caption-side="top"}
 
 
 
@@ -90,7 +90,7 @@ The number of storage block volumes provisioned by the {{site.data.keyword.cepha
 | `Metric Type` | `gauge` |
 | `Value Type`  | `none` |
 | `Segment By` | `Service instance` |
-{: caption="Table 2: Provisioned block storage metric metadata" caption-side="top"}
+{: caption="Provisioned block storage metric metadata" caption-side="top"}
 
 ### Provisioned bytes of block storage
 {: #ibm_sds_block_provisioned_bytes}
@@ -103,7 +103,7 @@ The bytes of provisioned block storage by the {{site.data.keyword.cephaas_full_n
 | `Metric Type` | `gauge` |
 | `Value Type`  | `byte` |
 | `Segment By` | `Service instance` |
-{: caption="Table 3: Provisioned bytes of block storage metric metadata" caption-side="top"}
+{: caption="Provisioned bytes of block storage metric metadata" caption-side="top"}
 
 ### Used bytes of object storage
 {: #ibm_sds_object_used_bytes}
@@ -116,7 +116,7 @@ The bytes of object storage used by the {{site.data.keyword.cephaas_full_notm}} 
 | `Metric Type` | `gauge` |
 | `Value Type`  | `byte` |
 | `Segment By` | `Service instance, Object storage class` |
-{: caption="Table 4: Used bytes of object storage metric metadata" caption-side="top"}
+{: caption="Used bytes of object storage metric metadata" caption-side="top"}
 
 ## Attributes for Segmentation
 {: #attributes}
@@ -137,7 +137,7 @@ The following global attributes are available for segmenting all the metrics tha
 | `Resource group` | `ibm_resource_group_name` | The resource group where the service instance was created |
 | `Scope` | `ibm_scope` | The scope is the account, organization or space GUID associated with this metric |
 | `Service name` | `ibm_service_name` | Name of the service generating this metric |
-{: caption="Table 5: Global segmentation attributes" caption-side="top"}
+{: caption="Global segmentation attributes" caption-side="top"}
 
 
 ### Additional attributes
@@ -149,4 +149,4 @@ The following additional attributes are available for segmenting all the metrics
 |-----------|----------------|-----------------------|
 | `Object storage class` | `storageclass` | Object storage class |
 | `Service instance` | `ibm_service_instance` | The service instance segment identifies the instance the metric is associated with |
-{: caption="Table 6: Additional segmentation attributes" caption-side="top"}
+{: caption="Additional segmentation attributes" caption-side="top"}

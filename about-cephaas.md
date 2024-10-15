@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-15"
 
-keywords:
+keywords: cephaas, ceph as a service, about
 
 subcollection: cephaas
 
