@@ -53,9 +53,9 @@ Sanitizing and deleting the resources means that your data cannot be restored.
 ### Deleting {{site.data.keyword.cephaas_full_notm}} instances
 {: #service-delete}
 
-When a service instance no longer needed and is canceled, you can mark it for deletion. IBM will remove all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
+When a service instance no longer needed, you can cancel the subscription by deleting the deployment. The deployment is marked for deletion and becomes inactive. IBM removes all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
 
-During the deployment deletion process, the resource is removed from the IBM Cloud Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
+During the deployment removal process, the resources are removed from the IBM Cloud Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
 
 After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
 

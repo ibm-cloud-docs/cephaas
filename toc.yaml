@@ -142,6 +142,9 @@ toc:
            - curl.md
            - aws_cli.md
 #           - config_controls.md
+      - link:
+          label: Terraform reference
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
 
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:

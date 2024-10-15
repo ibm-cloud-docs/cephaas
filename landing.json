@@ -1,22 +1,30 @@
 {
-  "title": "IBM Storage Ceph as a Service docs",
-  "introduction": "IBM Storage Ceph as a Service is a high performing, flexible and predictable unified storage (block and object) on-premises which is IBM managed with cloud-like provisioning capabilities and on-demand capacity. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
+  "title": "IBM Storage Ceph as a Service",
+  "introduction": "IBM® Storage Ceph® as a Service is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated storage systems. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
 
-  "product_page": "https://www.ibm.com/products/product-value",
+  "product_page": "https://www.ibm.com/products/software-defined-storage",
   "console_page": "/catalog/storage/service/software-defined-storage",
   "section_topics": {
     "links": [
       {
-        "title": "Getting started with IBM CephaaS",
+        "title": "Getting started with IBM Ceph as a Service",
         "href": "/docs/cephaas?topic=cephaas-getting-started"
       },
       {
-        "title": "Create a block volume",
-        "href": "/docs/cephaas?topic=cephaas-creating-block-volume"
+        "title": "Understanding your responsibilities",
+        "href": "/docs/cephaas?topic=cephaas-responsibility-matrix"
       },
       {
-        "title": "IBM CephaaS CLI",
-        "href": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference"
+        "title": "Managing IAM access",
+        "href": "/docs/cephaas?topic=cephaas-managing-iam"
+      },
+      {
+        "title": "Setting up your CLI and API environment",
+        "href": "/docs/cephaas?topic=cephaas-set-up-environment"
+      },
+      {
+        "title": "Connect to VMware environment",
+        "href": "/docs/cephaas?topic=cephaas-connecting-to-environment"
       }
     ]
   },
@@ -40,6 +48,6 @@
     "cli": "/docs/cephaas"
   },
   "section_updates": {
-    "view_more": "/docs/cephaas?topic=cephaas-relnotes"
+    "view_more": "/docs/cephaas?topic=cephaas-relnotes" 
   }
 }

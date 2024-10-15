@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up your API and CLI environment
+# Setting up your CLI and API environment
 {: #set-up-environment}
 
 Before you can create an {{site.data.keyword.cephaas_full}} by using the API or CLI, set up your environment.
