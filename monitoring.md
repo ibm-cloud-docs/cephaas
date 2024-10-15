@@ -28,16 +28,7 @@ You can use {{site.data.keyword.mon_full}} to visualize and alert on metrics tha
 ## Viewing metrics
 {: #monitoring-view}
 
-To view the metrics dashboards, see [Accessing the IBM Cloud monitoring user interface from the Observability page](/docs/cephaas?topic=cephaas-monitoringß#ob-dash-view).
-
-To view metrics in your {{site.data.keyword.cephaas_short}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
-{: important}
-
-
-### Accessing {{site.data.keyword.mon_full}} from the Observability page
-{: #ob-dash-view}
-
-To access the dashboard, complete the following steps:
+To view the metrics dashboards, complete the following steps:
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com/login){: external} console.
 
@@ -56,6 +47,9 @@ To access the dashboard, complete the following steps:
 6. Click **Open dashboard**. The IBM Cloud Monitoring dashboard opens.
 
 7. Click **Dashboards > Dashboard Library > IBM** and select your dashboard to view.
+
+To view metrics in your {{site.data.keyword.cephaas_full_notm}} dashboard, you must launch the {{site.data.keyword.mon_full_notm}} web UI for the instance that is enabled for platform metrics in the region where your {{site.data.keyword.cephaas_short}} instance is provisioned.
+{: important}
 
 
 For more information about launching the {{site.data.keyword.mon_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.mon_full_notm}} documentation.](/docs/monitoring?topic=monitoring-launch)
