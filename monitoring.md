@@ -59,13 +59,14 @@ For more information about launching the {{site.data.keyword.mon_full_notm}} UI,
 ## Metrics available by service plan
 {: #monitoring-metrics-by-plan}
 
-
 | Metric Name |
 |------------|
-| [{{site.data.keyword.cephaas_full_notm}} provisioned block storage](ibm_software_defined_storage_block_provisioned_volumes) |
-| [{{site.data.keyword.cephaas_full_notm}} provisioned bytes of block storage](ibm_software_defined_storage_block_provisioned_bytes) |
-| [{{site.data.keyword.cephaas_full_notm}} used bytes of object storage](ibm_software_defined_storage_object_used_bytes) |
+| {{site.data.keyword.cephaas_full_notm}} provisioned block storage |
+| {{site.data.keyword.cephaas_full_notm}} provisioned bytes of block storage |
+| {{site.data.keyword.cephaas_full_notm}} used bytes of object storage |
 {: caption="Metrics Available by Plan Names" caption-side="top"}
+
+
 
 
 
