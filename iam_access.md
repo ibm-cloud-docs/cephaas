@@ -16,7 +16,7 @@ subcollection: cephaas
 # Managing IAM access
 {: #managing-iam}
 
-Access to {{site.data.keyword.cephaas_full}} service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_short}} service in your account must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_short}}.
+Access to {{site.data.keyword.cephaas_full}} instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.cephaas_short}} service must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to {{site.data.keyword.cephaas_short}}.
 {: shortdesc}
 
 The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by the {{site.data.keyword.cephaas_short}} as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
@@ -29,7 +29,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 
 After defining the scope of the access policy, assign a role.
 
-Review the following tables that outline what types of tasks each role allows for when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](/docs/cephaas?topic=cephaas-managing-iam&interface=ui#iam-actions).
+Review the following tables that outline what types of tasks each role allows when you're working with the {{site.data.keyword.cephaas_short}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. They also enable users access to {{site.data.keyword.cephaas_short}} and the ability to call the {{site.data.keyword.cephaas_short}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](/docs/cephaas?topic=cephaas-managing-iam&interface=ui#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -50,7 +50,7 @@ Review the following tables that outline what types of tasks each role allows fo
 
 | Action ID                               | Roles                                         | Descriptions                     |
 | ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties.  Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes, and hosts within the service instance. |
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes, and hosts within the service instance. |
 | `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance.  |
 | `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance. |
 {: caption="IAM action descriptions"}
