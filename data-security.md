@@ -53,11 +53,13 @@ Sanitizing and deleting the resources means that your data cannot be restored.
 ### Deleting {{site.data.keyword.cephaas_full_notm}} instances
 {: #service-delete}
 
-If you no longer need a specific deployment, you can delete it at any time. Deleting the deployment from the IBM Cloud resource list removes it from all connected applications and deletes access to all the resources provisioned under the service instance such as volumes/hosts/buckets from spaces that are using it. In addition, all of its data is permanently deleted.
+When a service instance no longer needed and is canceled, you can mark it for deletion. IBM will remove all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
+
+During the deployment deletion process, the resource is removed from the IBM Cloud Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
 
 After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
 
-Customers with special requirements for compliance such as NIST 800-88 Guidelines for Media Sanitization can perform the data sanitization procedure before they delete their storage.
+Customers with special requirements for compliance such as [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final) can perform the data sanitization procedure before they delete their storage.
 
 
 The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
