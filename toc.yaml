@@ -122,8 +122,11 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-      - ha.md
-      - bc-dr.md
+      - topicgroup:
+          label: High availability and disaster recovery
+          topics:
+            - ha.md
+            - bc-dr.md
       - topicgroup:
           label: API reference
           topics:
@@ -153,9 +156,4 @@ toc:
       - getting_help_and_support.md
       - billing_view.md
       - faq.md
-#      - topicgroup:
-#          label: Frequently asked questions
-#          topics:
-#             - faq_bs.md
-#             - faq_lco.md
       - troubleshooting.md
