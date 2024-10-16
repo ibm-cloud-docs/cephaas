@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -63,12 +63,14 @@ After you estimate the cost of your order, your IBM representative will contact 
 To get started, perform the following steps:
 
 1. Set up your satellite 
-Begin by setting up your IBM Cloud satellite location. This is an important step to ensure your deployment runs smoothly. With IBM Cloud Satellite, you can use your own compute infrastructure that is in your on-premises data center, other cloud providers, or edge networks to create a Satellite location. Then, you can use the capabilities of Satellite to run IBM Cloud services on your infrastructure, and consistently deploy, manage, and control your app workloads. 
-You can either review your current satellite locations or create a new location. 
+
+    Begin by setting up your IBM Cloud satellite location. This is an important step to ensure your deployment runs smoothly. With IBM Cloud Satellite, you can use your own compute infrastructure that is in your on-premises data center, other cloud providers, or edge networks to create a Satellite location. Then, you can use the capabilities of Satellite to run IBM Cloud services on your infrastructure, and consistently deploy, manage, and control your app workloads. 
+    You can either review your current satellite locations or create a new location. 
 
 
 
 2. Prepare Deployment
-After setting up the satellite, the next step is to prepare your deployment and assigning  it a name. You will receive the link to set up your deployment in an email after you place the order with your IBM representative. 
 
-Make sure to complete both the above steps before your device arrives on-site to ensure a seamless setup.
+    After setting up the satellite, the next step is to prepare your deployment and assigning  it a name. You will receive the link to set up your deployment in an email after you place the order with your IBM representative. 
+
+    Make sure to complete both the above steps before your device arrives on-site to ensure a seamless setup.

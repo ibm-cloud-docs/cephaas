@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: cephaas, capacity management, performance management
 
@@ -20,23 +20,21 @@ IBM Storage Ceph as a Service enables you to view the capacity and performance d
 
 To view capacity details of your IBM CephaaS deployments, complete the following steps.
 
-1. On the **IBM Cloud console**, click the hamburger menu > **Resource list** and expand **Storage**.
-2. Click Deployment name.
-3. Click **Deployments** option from the left - hand panel. Your deployments are listed on the dashboard.
-4. Click your deployment.
-
+1. On the **IBM Cloud console**, click the hamburger menu and navigate to **Resource list** > **Storage**.
+2. Expand Storage to see your service instances. 
+3. Click a service instance to view Deployments dashboard. 
+4. Click **Deployments** option from the left - hand panel. You can view your deployments alongwith their **Status**, **Size**, **Region**, and **Storage type**. 
+5. Click your deployment which is Available. 
 
 ## Viewing capacity of your deployments
 {: #view-capacity}
-
-Click on each deployment to display the capacity and performance details.
 
 The upper section of the deployment dashboard displays the current usage information about the following.
 
 | Usage Information | Description |
 |-------|-------------|
 | Overall Capacity | Used block and object capacity, along with the remaining available capacity, including the burst capacity|
-| Block capacity | Current usage and a link **Go to Block storage** link to update capacity|
+| Block capacity | Current usage and a link **Go to Block storage** link to update capacity |
 | Object capacity | Current usage and a link **Go to Object storage** link to update capacity |
 {: caption="Details about deployment capacity" caption-side="bottom"}
 
@@ -57,6 +55,8 @@ The lower section of the deployment dashboard provides graphical insights into v
 | Throughput| The performance a disk can deliver, measured in MB/S|
 {: caption="Details about deployment performance" caption-side="bottom"}
 
+
+
 ## Renaming your deployments
 {: #rename-deployment}
 
@@ -72,4 +72,4 @@ Select **Actions** > **Add capacity**. **Purchase additional capacity** screen i
 ## Next Steps
 {: #view-capacity-nextsteps}
 
-You can edit the block and object capacity, view the activity tracker, and view docs links from the capacity and performance dashboard.
+You can perform various tasks from the links create block volumes, create storage objects, and go to object storage. Refer to the docs links of Identity and access management, How to connect to VMware environment, and How to use the CLI for more information. 

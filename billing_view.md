@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: administration, billing, platform
 
@@ -62,7 +62,7 @@ This tier is offered in the following capacity options:
 - 2400 TB
 - 3200 TB
 
-## Understanding your overall capacity
+## Understanding your overall capacity and overage charges
 {: #overall-capacity}
 
 For each deployment, the hardware setup includes the committed monthly capacity along with an additional 30% burst capacity. Burst capacity allows you to temporarily expand your overall available capacity, if needed.
