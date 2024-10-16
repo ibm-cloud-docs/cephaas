@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 Frequently asked questions provides you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
 
 * [Block and Object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
-* [Low cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
+* [Low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
 * [Monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
 
 ## FAQs about block and object storage
@@ -34,7 +34,7 @@ Both block and object storage are calculated hourly. The calculation is based on
 {: faq}
 {: #faq-quota-limit}
 
-There are capacity based quota limits for your block storage volumes based on the block quota set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-manage-storage-limit).
+There are capacity based quota limits for your block and object storage based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-manage-storage-limit).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?

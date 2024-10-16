@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-16"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -82,20 +82,4 @@ Security and regulation compliance includes tasks such as security controls impl
 | Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | Update IAM policies and rules using IBM Cloud console to suit to your requirement. Also, ensure that the use of Storage resources are inline with the terms and conditions set forth in the IBM Cloud Service description and any other associated transaction documents. |
 {: row-headers}
 {: caption="Responsibilites for security and regulation compliance" caption-side="bottom"}
-{: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
-
-
-## Disaster recovery
-{: #disaster-recovery}
-
-
-Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
-
-| Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
-|----------|-----------------------|--------|
-| `Service` |  |  |
-|Task 2|   |  |
-|Task 3|   |  |
-{: row-headers}
-{: caption="Responsibilites for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

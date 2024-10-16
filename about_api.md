@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error
 
@@ -56,8 +56,27 @@ These operations create, delete, get information about, and control the behavior
 {: caption="Block storage operation" caption-side="top"}
 
 
+
 ## Object storage administration API
-{: #object-storage-api}
+{: #object-storage-admin-api}
+
+### Object operations
+{: #api-object-admin-ops}
+
+These operations create, delete, get information about, and control the behavior of objects.
+
+| Object operation          | Note                                                                                |
+|:--------------------------|:------------------------------------------------------------------------------------|
+| `DELETE` Object           | Deletes an object from a bucket.                                                   |
+| `GET` Object              | Retrieves an object from a bucket.                                                 |
+| `HEAD` Object             | Retrieves an object's headers.                                                     |
+| `PUT` Object              | Adds an object to a bucket.                                                        |
+| `PUT` Object (Copy)       | Creates a copy of an object.                                                       |
+{: caption="Object operation" caption-side="top"}
+
+
+## Object storage S3 API
+{: #object-storage-s3-api}
 
 The {{site.data.keyword.cephaas_full}} Object Storage API is a REST-based API for reading and writing objects.
 {: shortdesc}
@@ -77,7 +96,6 @@ These operations create, delete, get information about, and control the behavior
 | `DELETE` Batch            | Deletes many objects from a bucket with one operation.                             |
 | `GET` Object              | Retrieves an object from a bucket.                                                 |
 | `HEAD` Object             | Retrieves an object's headers.                                                     |
-| `OPTIONS` Object          | Checks CORS configuration to see whether a specific request can be sent.           |
 | `PUT` Object              | Adds an object to a bucket.                                                        |
 | `PUT` Object (Copy)       | Creates a copy of an object.                                                       |
 | Begin Multipart Upload    | Creates an upload ID for a set of parts to be uploaded.                            |
@@ -98,13 +116,10 @@ These operations create, delete, get information about, and control the behavior
 |:------------------------|:--------------------------------------------------------------------------------|
 | `GET` Buckets           | Used to retrieve a list of all buckets that belong to an account.              |
 | `DELETE` Bucket         | Deletes an empty bucket.                                                       |
-| `DELETE` Bucket CORS    | Deletes any CORS (cross-origin resource sharing) configuration set on a bucket. |
 | `GET` Bucket            | Lists objects in a bucket. Limited to listing 1,000 objects at a time.         |
-| `GET` Bucket CORS       | Retrieves any CORS configuration set on a bucket.                              |
 | `HEAD` Bucket           | Retrieves a bucket's headers.                                                  |
 | `GET` Multipart Uploads | Lists multipart uploads that aren't completed or canceled.                     |
 | `PUT` Bucket            | Buckets have naming restrictions. Accounts are limited to 100 buckets.         |
-| `PUT` Bucket CORS       | Creates a CORS configuration for a bucket.                                     |
 {: caption="Bucket operation" caption-side="top"}
 
 

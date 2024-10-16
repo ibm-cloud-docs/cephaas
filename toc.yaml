@@ -48,6 +48,7 @@ toc:
       - iam_overview.md
       - iam_access.md
       - setup_cli_api_environment.md
+      - terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -122,11 +123,11 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-      - topicgroup:
-          label: High availability and disaster recovery
-          topics:
-            - ha.md
-            - bc-dr.md
+#      - topicgroup:
+#          label: High availability and disaster recovery
+#          topics:
+#            - ha.md
+#            - bc-dr.md
       - topicgroup:
           label: API reference
           topics:
