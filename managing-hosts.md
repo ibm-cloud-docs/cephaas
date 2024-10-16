@@ -3,7 +3,7 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-10-16"
 
-keywords: Managing hosts in vsphere plug-in
+keywords: Managing hosts, vphere plug-in, cephaas
 
 subcollection: cephaas
 --- 
