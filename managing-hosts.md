@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-16"
 
 keywords: Managing hosts in vsphere plug-in
 
@@ -25,7 +25,7 @@ For viewing existing host connections, perform the following procedure.
 3. You can click double-headed arrow icon besides the deployment name to see the host details. 
 
 
-## Adding a host
+## Adding a new host
 {: #add-host}
 
 Use the following procedure to add a host to your deployment.
