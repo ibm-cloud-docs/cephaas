@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: cephaas , delete service credential
 
@@ -54,7 +54,7 @@ All access granted to any resources using these credentials will be lost once th
 {: #deleting-s3-credential-cli}
 {: cli}
 
-Use the `cred-delete` command and provide the `INSTANCEID` of the deployment (service instance) along with the `ACCESS-KEY` for the credential that you want to delete and the endpoint url.
+Use the `cred-delete` command and provide the `ACCESS-KEY` for the credential that you want to delete and the endpoint url.
 
 You will not be able to perform any s3 operations using the credentials after the delete process completes.
 {: note}
@@ -62,18 +62,18 @@ You will not be able to perform any s3 operations using the credentials after th
 Run the following command to delete a credential.
 
 ```sh
-ibmcloud software-defined-storage cred-delete --instanceid INSTANCEID --access-key ACCESS-KEY --url string
+ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
 See the following example where `sds_endpoint` is an environment variable that points to the endpoint that is provided to the user when `software-defined-storage (aliase: sds)` was configured and is in the for of a URL. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 
 ```bash
-ibmcloud software-defined-storage cred-delete --instanceid exampleString --access-key exampleString --url $sds_endpoint
+ibmcloud software-defined-storage cred-delete --access-key exampleString --url $sds_endpoint
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crd` an alternative to `cred-delete` for the CLI actions.
 {: tip}
 
 ## Deleting an object storage credential with the API
