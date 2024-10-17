@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-17"
 
 keywords: cephaas, capacity management, performance management
 
@@ -72,4 +72,4 @@ Select **Actions** > **Add capacity**. **Purchase additional capacity** screen i
 ## Next Steps
 {: #view-capacity-nextsteps}
 
-You can perform various tasks from the links create block volumes, create storage objects, and go to object storage. Refer to the docs links of Identity and access management, How to connect to VMware environment, and How to use the CLI for more information. 
+You can perform various tasks from the links in the right panel such as create block volumes, create storage objects, and go to object storage. Refer to the docs links of Identity and access management, How to connect to VMware environment, and How to use the CLI for more information. 
