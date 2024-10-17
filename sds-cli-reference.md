@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -113,7 +113,7 @@ ibmcloud software-defined-storage volume-create --instanceid INSTANCEID --capaci
 
 **ALIASES**: volume-create, volc
 
-**Example**
+See example.
 
 ```sh
 ibmcloud software-defined-storage volume-create \
@@ -154,7 +154,8 @@ ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url s
 
 **ALIASES**: volume, vol
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage volume \
@@ -189,7 +190,8 @@ ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID 
 
 **ALIASES**: volume-update, volu
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage volume-update \
@@ -238,7 +240,8 @@ ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID 
 
 **ALIASES**: volume-delete, vold
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage volume-delete \
@@ -274,7 +277,8 @@ ibmcloud software-defined-storage volumes [--limit LIMIT] [--name NAME]
 
 **ALIASES**: volumes, vols
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage volumes \
@@ -310,7 +314,8 @@ ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN 
 
 **ALIASES**: host-create, hstc
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-create \
@@ -353,7 +358,8 @@ ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID
 {: pre}
 
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host \
@@ -386,7 +392,8 @@ ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] 
 
 **ALIASES**: hosts, hsts
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage hosts \
@@ -430,7 +437,8 @@ ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INS
 
 **ALIASES**: host-update, hstu
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-update \
@@ -473,7 +481,8 @@ ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id 
 
 **ALIASES**: host-vol-update, hstvidu
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-vol-update \
@@ -511,7 +520,8 @@ ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INS
 
 **ALIASES**: host-delete, hstd
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-delete \
@@ -544,7 +554,8 @@ ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-i
 
 **ALIASES**: host-volid-delete, hstvidd
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-volid-delete \
@@ -581,7 +592,8 @@ ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanc
 
 **ALIASES**: host-vol-deleteall, hstvd
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage host-vol-deleteall \
@@ -620,7 +632,8 @@ ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url stri
 ```
 {: pre}
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage cred-create \
@@ -651,7 +664,8 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 ```
 {: pre}
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage cred-delete \
@@ -685,7 +699,8 @@ ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
 ```
 {: pre}
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage credentials \
@@ -716,7 +731,8 @@ ibmcloud software-defined-storage cert-upload --body BODY --url string
 ```
 {: pre}
 
-**Example**
+See example.
+
 
 ```sh
   ibmcloud software-defined-storage cert-upload \
@@ -747,7 +763,8 @@ ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
 ```
 {: pre}
 
-**Example**
+See example.
+
 
 ```sh
 ibmcloud software-defined-storage cert \
