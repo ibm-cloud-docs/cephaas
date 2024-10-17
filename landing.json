@@ -1,7 +1,7 @@
 {
   "title": "IBM Storage Ceph as a Service",
-  "introduction": "IBM® Storage Ceph® as a Service is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated storage systems. Leverage the docs, API & SDK reference, architecture references, and more to support your app development needs.",
-
+  "introduction": "IBM® Storage Ceph® as a Service is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Leverage the docs, API & SDK reference, architecture references, and more to support your development needs.",
+  "version": 2,
   "product_page": "https://www.ibm.com/products/software-defined-storage",
   "console_page": "/catalog/storage/service/software-defined-storage",
   "section_topics": {
@@ -28,21 +28,6 @@
       }
     ]
   },
-  "section_highlights": [
-    {
-      "title": "Resource title",
-      "description": "Short description of resource content.",
-      "href": "https://www.example.ibm.com/link/to/resource",
-      "type": "blog"
-    },
-    {
-      "title": "Db2 Optimization Techniques for SAP Database Migration to the Cloud",
-      "description": "This IBM Redbook provides in-depth recommendations for the source system database export.",
-      "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
-      "type": "redbook",
-      "recommended": true
-    }
-  ],
   "section_devtools": {
     "api": "/apidocs/software-defined-storage",
     "cli": "/docs/cephaas",
