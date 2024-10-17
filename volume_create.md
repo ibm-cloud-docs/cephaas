@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -25,7 +25,7 @@ Create a block storage volume by using the UI, CLI or API.
 
 Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deployment.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Volumes**.
 1. Click **Create volume**.
 1. Select **Deployment** where the volume will be created.
 1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
@@ -34,6 +34,10 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
     {: note}
 
 1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.
+1. Select one or more hosts to map. This is an optional step.
+
+    You can create a new host to map to this volume by providing the **Host name** and **Host nqn** details and clicking **Create host +**. The new host is added to the existing host list.
+
 1. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
 
