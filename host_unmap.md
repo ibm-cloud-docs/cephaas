@@ -65,7 +65,7 @@ ibmcloud software-defined-storage host-vol-deleteall \
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvd` an alternative to `host-vol-deleteall` for the CLI actions.
 {: tip}
 
 ## Unmap a volume for a host with the API

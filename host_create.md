@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: sds, cephaas host,
 
@@ -28,7 +28,7 @@ Before creating a host, the NVME-oF initiator, which is required for mapping vol
 
 Use the {{site.data.keyword.cloud_notm}} console to create a host for a service instance.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Hosts**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Hosts**.
 2. Click **Create host**.
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
@@ -46,12 +46,10 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 
 You can create hosts by using the command-line interface (CLI).
 
-
-
 Run the following command to create a new host from a host template object.
 
 ```sh
-ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
+ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
 ```
 {: pre}
 
@@ -62,12 +60,11 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 See the following example.
 
 ```bash
-  ibmcloud software-defined-storage host-create \
-    --instanceid abcd123 \
-    --nqn nqn.2014-08.org.nvmexpress:uuid:abcd1234-1234-1234-1234-abcd1234abcd \
-    --name my-host-1 \
-    --volume-mappings '[{"volume_id": "r134-d75e1aeb-4bcf-4d41-8926-517198d55448"}]' \
-    --url $sds_endpoint
+ibmcloud software-defined-storage host-create \
+  --nqn nqn.2014-06.org:9345 \
+  --name my-host \
+  --volume-mappings '[{"volume_id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}]' \
+  --url $sds_endpoint
 ```
 {: screen}
 
@@ -76,7 +73,7 @@ Maximum supported NQN length is 223 bytes.
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstc` an alternative to `host-create` for the CLI actions.
 {: tip}
 
 

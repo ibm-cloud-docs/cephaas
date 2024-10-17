@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -64,24 +64,23 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 Run the following command to delete a host.
 
 ```sh
-ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-delete --host-id HOST-ID --url string
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-  ibmcloud software-defined-storage host-delete \
-    --host-id exampleString \
-    --instanceid exampleString \
-    --url $sds_endpoint
+ibmcloud software-defined-storage host-delete \
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --url $sds_endpoint
 ```
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstd` an alternative to `host-delete` for the CLI actions.
 {: tip}
 
 

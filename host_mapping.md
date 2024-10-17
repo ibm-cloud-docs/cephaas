@@ -57,12 +57,12 @@ To map a volume to a host from Hosts page, complete the following steps.
 {: #mapping-hosts-cli}
 {: cli}
 
-Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID`, and `INSTANCEID` to create a volume mapping to the host ID.
+Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` along with the endpoint url to create a volume mapping to the host ID.
 
 Run the following command to map the volume to the host.
 
 ```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
@@ -70,9 +70,8 @@ See the following example.
 
 ```bash
 ibmcloud software-defined-storage host-vol-update \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
     --url $sds_endpoint
 ```
 {: screen}
@@ -80,7 +79,7 @@ ibmcloud software-defined-storage host-vol-update \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvidu` an alternative to `host-vol-update` for the CLI actions.
 {: tip}
 
 

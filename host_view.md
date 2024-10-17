@@ -107,10 +107,10 @@ View details of a single host or summary information about all hosts from the CL
 ### Viewing details of a single host from the CLI
 {: #view-single-host-detail-cli}
 
-Run the following command to show host details for a specific host `ID` within the specific service `INSTANCEID`.
+Run the following command to show host details for a specific host `ID`.
 
 ```sh
-ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host --host-id HOST-ID --url string
 ```
 {: pre}
 
@@ -119,9 +119,8 @@ The following example uses the volume ID to show volume details.
 
 ```sh
 $ ibmcloud software-defined-storage host \
-    --host-id exampleString \
-    --instanceid exampleString
-    --url $sds_endpoint
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --url $sds_endpoint
 ```
 {: screen}
 
@@ -139,7 +138,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Run this command to view the list summary information about all hosts:
 
 ```sh
-ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME] --url string
+ibmcloud software-defined-storage hosts [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -149,18 +148,16 @@ The following example shows all volumes for the service instance specified in yo
 
 ```sh
 ibmcloud software-defined-storage hosts \
-    --instanceid exampleString \
-    --start exampleString \
-    --limit 10 \
-    --name exampleString
-    --url $sds_endpoint
+  --limit 10 \
+  --name myhost1
+  --url $sds_endpoint
 ```
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hsts` an alternative to `hosts` for the CLI actions.
 {: tip}
 
 For more information about available command options, run `ibmcloud sds hosts --help`.

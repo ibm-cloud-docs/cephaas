@@ -107,7 +107,7 @@ ibmcloud software-defined-storage [command] [options]
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume-create --instanceid INSTANCEID --capacity CAPACITY --name NAME --url string
+ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--profile (PROFILE | @PROFILE-FILE) | --profile-name PROFILE-NAME] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
 {: pre}
 
@@ -117,17 +117,15 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage volume-create \
-	--instanceid sds-instance-1
-	--capacity 40 \
-	--name my-volume \
+    --capacity 10 \
+    --name my-volume \
+    --profile '{"name": "exampleString"}' \
+    --hostnqnstring nqn.2024-07.org:1234 \
 	--url $sds_endpoint
 ```
 {: screen}
 
 **Parameters to provide:**
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * Capacity of the volume (in gigabytes).
 	* Flag: `--capacity CAPACITY`
@@ -138,6 +136,8 @@ ibmcloud software-defined-storage volume-create \
 	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
 	{: note}
 
+* Host nqn string which have a maximum length of 200 characters and minimum length of 1 character.
+	* Flag: `--hostnqnstring string`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -148,7 +148,7 @@ ibmcloud software-defined-storage volume-create \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url string
+ibmcloud software-defined-storage volume --id ID --url string
 ```
 {: pre}
 
@@ -159,7 +159,6 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage volume \
-	--instanceid exampleString \
 	--id exampleString
 	--url $sds_endpoint
 ```
@@ -168,9 +167,6 @@ ibmcloud software-defined-storage volume \
 **Parameters to provide:**
 * The volume identifier.
 	* Flag: `--id ID`
-
-* Service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -184,7 +180,7 @@ Update a volume with the information in provided volume patch.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume-update --instanceid INSTANCEID --id ID  --capacity CAPACITY [--if-match IF-MATCH] --url string
+ibmcloud software-defined-storage volume-update --id ID [--volume-patch VOLUME-PATCH | @VOLUME-PATCH-FILE] --url string
 ```
 {: pre}
 
@@ -195,11 +191,9 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage volume-update \
-	--instanceid exampleString \
-	--id exampleString \
-	--if-match exampleString \
-	--capacity 38 \
-	--name exampleString
+    --id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --capacity 38 \
+    --name exampleString \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -209,20 +203,14 @@ ibmcloud software-defined-storage volume-update \
 * The volume identifier.
 	* Flag:`--id ID`
 
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
 * Capacity of the volume (in gigabytes).
 	* Flag: `--capacity CAPACITY`
 
 * Name of the volume.
 	* Flag: `--name NAME`
 
-* [Optional] JSON object that contains the volume information.
+* [Optional] JSON object that contains the volume information such as a path to a JSON file.
 	* Flag: `--volume-patch VOLUME-PATCH`
-
-* [Optional] A string value if provided then the query fails when the specified ETag value does not match the resource's current ETag value.
-	* Flag: `--if-match IF-MATCH`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -234,7 +222,7 @@ ibmcloud software-defined-storage volume-update \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage volume-delete --instanceid INSTANCEID --id ID --url string
+ibmcloud software-defined-storage volume-delete --id ID --url string
 ```
 {: pre}
 
@@ -245,8 +233,7 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage volume-delete \
-	--instanceid exampleString \
-	--id exampleString \
+	--id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -255,12 +242,6 @@ ibmcloud software-defined-storage volume-delete \
 
 * The volume identifier.
 	* Flag:`--id ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-* [Optional] A string value if provided then the query fails when the specified ETag value does not match the resource's current ETag value.
-	* Flag: `--if-match IF-MATCH`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -308,7 +289,7 @@ ibmcloud software-defined-storage volumes \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-create --instanceid INSTANCEID --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
+ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
 ```
 {: pre}
 
@@ -319,7 +300,6 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-create \
-    --instanceid exampleString \
     --nqn nqn.2014-08.org.nvmexpress:uuid:abcd1234-1234-1234-1234-abcd1234abcd \
     --name my-host \
     --volume-mappings '[{"volume_id": "exampleString"}]'
@@ -328,9 +308,6 @@ ibmcloud software-defined-storage host-create \
 {: screen}
 
 **Parameters to provide:**
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * NVMe Qualified Name (NQN) of the host configured in customer's environment. The maximum supported length is 223 bytes.
 	* Flag: `--nqn NQN`
@@ -353,7 +330,7 @@ ibmcloud software-defined-storage host-create \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host --host-id HOST-ID --url string
 ```
 {: pre}
 
@@ -363,8 +340,7 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host \
-    --host-id exampleString \
-    --instanceid exampleString
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -373,9 +349,6 @@ ibmcloud software-defined-storage host \
 
 * Host id whose details you want to view
 	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -386,7 +359,7 @@ ibmcloud software-defined-storage host \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage hosts --instanceid INSTANCEID [--start START] [--limit LIMIT] [--name NAME] --url string
+ibmcloud software-defined-storage hosts [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -397,8 +370,6 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage hosts \
-    --instanceid exampleString \
-    --start exampleString \
     --limit 10 \
     --name exampleString
 	--url $endpoint
@@ -407,20 +378,11 @@ ibmcloud software-defined-storage hosts \
 
 **Parameters to provide:**
 
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
-* The server-provided token for determining what resource to start the page on.
-	* Flag: `--start START`
-
 * Number of resources to return on a page.
 	* Flag: `--limit LIMIT`
 
 * Including this option filters the collection of resources by name.
 	* Flag: `--name NAME`
-
-* Including this option displays all pages of the collection for hosts.
-	* Flag: `--all-pages`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -431,7 +393,7 @@ ibmcloud software-defined-storage hosts \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH] --url string
+ibmcloud software-defined-storage host-update --host-id HOST-ID [--host-patch HOST-PATCH] --url string
 ```
 {: pre}
 
@@ -442,8 +404,7 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-update \
-    --host-id exampleString \
-    --instanceid exampleString \
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
     --name my-host
 	--url $sds_endpoint
 ```
@@ -453,9 +414,6 @@ ibmcloud software-defined-storage host-update \
 
 * Host id whose details you want to update
 	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * [Optional] Specify the JSON Merge-Patch content for `host_update`.
 	* Flag: `--host-patch HOST-PATCH`
@@ -475,7 +433,7 @@ ibmcloud software-defined-storage host-update \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
@@ -486,9 +444,8 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-vol-update \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \\
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -497,9 +454,6 @@ ibmcloud software-defined-storage host-vol-update \
 
 * Specify the host id whose details you want to view
 	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * Specify the unique volume identifier.
 	* Flag: `--volume-id VOLUME-ID`
@@ -514,7 +468,7 @@ ibmcloud software-defined-storage host-vol-update \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-delete --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-delete --host-id HOST-ID --url string
 ```
 {: pre}
 
@@ -525,8 +479,7 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-delete \
-	--host-id exampleString \
-    --instanceid exampleString
+	--host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -535,9 +488,6 @@ ibmcloud software-defined-storage host-delete \
 
 * Host id whose details you want to view
 	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -548,7 +498,7 @@ ibmcloud software-defined-storage host-delete \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-volid-delete --host-id HOST-ID --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
@@ -559,9 +509,8 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-volid-delete \
-    --host-id exampleString \
-    --volume-id exampleString \
-    --instanceid exampleString
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -570,9 +519,6 @@ ibmcloud software-defined-storage host-volid-delete \
 
 * Host id whose details you want to view
 	* Flag: `--host-id HOST-ID`
-
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * Unique volume identifier.
 	* Flag: `--volume-id VOLUME-ID`
@@ -586,7 +532,7 @@ ibmcloud software-defined-storage host-volid-delete \
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --url string
 ```
 {: pre}
 
@@ -597,8 +543,7 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage host-vol-deleteall \
-    --host-id exampleString \
-    --instanceid exampleString
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -645,8 +590,6 @@ ibmcloud software-defined-storage cred-create \
 **ALIASES:** cred-create, crc
 
 **Parameters to provide:**
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * Sets the access key for the service instance.
 	* Flag: `--access-key ACCESS-KEY`
@@ -678,9 +621,6 @@ ibmcloud software-defined-storage cred-delete \
 
 **Parameters to provide:**
 
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
-
 * Sets the access key for the service instance.
 	* Flag: `--access-key ACCESS-KEY`
 
@@ -695,7 +635,7 @@ Retrieves credentials for a specific storage account.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage creds --url string
 ```
 {: pre}
 
@@ -704,7 +644,6 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage credentials \
-	--instanceid examplestring \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -712,8 +651,6 @@ ibmcloud software-defined-storage credentials \
 **ALIASES:** creds, crl
 
 **Parameters to provide:**
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -759,7 +696,7 @@ Retrieves the S3 SSL certificate expiration date and status.
 **USAGE:**
 
 ```sh
-ibmcloud software-defined-storage cert --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage cert --url string
 ```
 {: pre}
 
@@ -768,14 +705,11 @@ See example.
 
 ```sh
 ibmcloud software-defined-storage cert \
-	--instanceid examplestring \
 	--url $sds_endpoint
 ```
 {: screen}
 
 **Parameters to provide:**
-* The service instance identifier.
-	* Flag: `--instanceid INSTANCEID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`

@@ -94,10 +94,10 @@ View details about a volume or summary information about all volumes from the CL
 ### Viewing details of a single volume from the CLI
 {: #viewvol-cli}
 
-Run the following command to show volume details for a specific volume `ID` within the specific service `INSTANCEID`.
+Run the following command to show volume details for a specific volume `ID` along with the endpoint url.
 
 ```sh
-ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url string
+ibmcloud software-defined-storage volume --id ID --url string
 ```
 {: pre}
 
@@ -105,7 +105,7 @@ ibmcloud software-defined-storage volume --instanceid INSTANCEID --id ID --url s
 The following example uses the volume ID to show volume details.
 
 ```sh
-$ ibmcloud sds volume --instanceid abc --url $sds_endpoint --id r134-3a7a8360-be78-4723-a341-356be350e683
+$ ibmcloud sds volume --url $sds_endpoint --id r134-3a7a8360-be78-4723-a341-356be350e683
 ...
 
 ID             r134-3a7a8360-be78-4723-a341-356be350e683
@@ -121,7 +121,7 @@ Created        2024-05-08T16:42:08Z
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `vol` and alternative to `volume` for the CLI actions.
 {: tip}
 
 
@@ -132,7 +132,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Run this command to list summary information about all volumes:
 
 ```sh
-ibmcloud software-defined-storage volumes [--instanceid INSTANCEID] --url string
+ibmcloud software-defined-storage volumes [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -141,7 +141,7 @@ Specifying the service instance ID is required since it is used to filter the li
 The following example shows all volumes for the service instance specified in your availability zone.
 
 ```sh
-ibmcloud software-defined-storage volumes --instanceid abc --url $sds_endpoint
+ibmcloud software-defined-storage volumes --url $sds_endpoint
 
 ID                                          Name       Status      Capacity_GB   Mapped_Host
 r134-2613272e-ff23-461e-94a3-3d3f77c13aa1   example2   available   10            -
@@ -153,7 +153,7 @@ r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10           
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `vols` and alternative to `volumes` for the CLI actions.
 {: tip}
 
 For more information about available command options, run `ibmcloud sds volumes --help`.

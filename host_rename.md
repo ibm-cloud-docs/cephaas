@@ -52,7 +52,7 @@ To rename the host using CLI, use the `host-update` command to rename a specific
 Run the following command to update the details of a specific host in a service instance.
 
 ```sh
-ibmcloud software-defined-storage host-update --host-id HOST-ID --instanceid INSTANCEID [--host-patch HOST-PATCH] --url string
+ibmcloud software-defined-storage host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATCH-FILE] --url string
 ```
 {: pre}
 
@@ -60,17 +60,16 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage host-update \
-    --host-id exampleString \
-    --instanceid exampleString \
-    --name my-host
-    --url $sds_endpoint
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --name mytesthost
+  --url $sds_endpoint
 ```
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstu` an alternative to `host-update` for the CLI actions.
 {: tip}
 
 

@@ -48,13 +48,13 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 
 You can create volumes by using the command-line interface (CLI).
 
-Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and the deployment ID `cephaas-INSTANCE-ID` where the volume will be created.
+Run the following command to create a volume. Provide the `CAPACITY` of the volume, `NAME` of the volume, and endpoint url.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 {: requirement}
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--cephaas-instance-id cephaas-INSTANCE-ID] --url string
+ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--profile (PROFILE | @PROFILE-FILE) | --profile-name PROFILE-NAME] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
 {: pre}
 
@@ -62,7 +62,7 @@ See the following example where the `$sds_endpoint` is an environment variable t
 
 
 ```bash
-ibmcloud sds volume-create --instanceid abc --capacity 10 --name example1 --url $sds_endpoint
+ibmcloud sds volume-create --capacity 10 --name example1 --url $sds_endpoint
 ...
 
 ID             r134-d75e1aeb-4bcf-4d41-8926-517198d55448
@@ -77,7 +77,7 @@ Created        2024-07-09T06:24:49Z
 
 Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `volc` and alternative to `volume-create` for the CLI actions.
 {: tip}
 
 ## Creating block volumes with the API
