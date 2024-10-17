@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: cephaas service credential view, list
 
@@ -33,25 +33,25 @@ To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} 
 
 Use the `creds` command to view the list of access keys that are created for a service instance (deployment).
 
-Run the following command and make sure that you have provided `INSTANCEID` of the credential whose details you want to view and the API endpoint.
+Run the following command to retreive the credential details for the API endpoint.
 
 
 ```sh
-ibmcloud software-defined-storage creds --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage creds --url string
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage creds --instanceid exampleString --url $sds_endpoint
+ibmcloud software-defined-storage creds --url $sds_endpoint
 ```
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crl` an alternative to `creds` for the CLI actions.
 {: tip}
 
 ## Viewing an object storage credential with the API

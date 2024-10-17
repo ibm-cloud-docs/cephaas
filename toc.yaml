@@ -57,6 +57,7 @@ toc:
               topics:
                 - volume_about.md
                 - volume_create.md
+                - volume_mapping.md
                 - volume_view.md
                 - volume_rename.md
                 - volume_expand.md
@@ -112,7 +113,7 @@ toc:
             - monitoring.md
       - topicgroup:
           label: VMWare vSphere plug-in
-          topics: 
+          topics:
             - connect_vmware.md
             - managing-deployments.md
             - managing-datastores.md
