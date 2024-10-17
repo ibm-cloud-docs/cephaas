@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -28,7 +28,7 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 1. Verify that the target is reachable from the initiator.
 
     ```sh
-    nvme discover -t tcp -a GATEWAY_IP -s 4420
+    nvme discover -t tcp -a GATEWAY_IP -s 8009
     ```
     {: pre}
 
@@ -60,7 +60,7 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 
     ---------------------   ----------------  -------------------  ----------------------- --------- -------------------------- ---------------- --------
 
-    /home/nvme01_node01     /home/ng1n1       SPDK00000000000001   SPDK bdev Controller    1          10,49  MB /  10,49  MB      4 KiB +  0 B   23.01
+    /home/nvme01_node01     /home/ng1n1       SPDK00000000000001   SPDK bdev Controller    1          10.74  GB /  10.74  GB      4 KiB +  0 B   23.01
 
     ...
     ```
@@ -163,7 +163,7 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 2. Discover any NVMe-oF-gateway subsystems.
 
     ```sh
-    esxcli nvme fabrics discover -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 4420
+    esxcli nvme fabrics discover -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 8009
     ```
     {: pre}
 
@@ -176,21 +176,21 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 
     -------------- -------------- -------------- ------------- -------------------- ----------------- -------------------- -------------------------- ---------
 
-    TCP            IPv4           NVM            65535         128                   10.0.211.196     4420                 nqn.2016-06.io.spdk:cnode1  false
+    TCP            IPv4           NVM            65535         128                   10.0.211.196     8009                 nqn.2016-06.io.spdk:cnode1  false
     ```
     {: screen}
 
 3. Connect to NVMe-oF gateway subsystem.
 
     ```sh
-    esxcli nvme fabrics connect -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 4420 -s SUBSYSTEM_NQN
+    esxcli nvme fabrics connect -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 8009 -s SUBSYSTEM_NQN
     ```
     {: pre}
 
     See the following example.
 
     ```sh
-    [root@host01:~] esxcli nvme fabrics connect -a vmhba64 -i 10.0.211.196 -p 4420 -s nqn.2016-06.io.spdk:cnode1
+    [root@host01:~] esxcli nvme fabrics connect -a vmhba64 -i 10.0.211.196 -p 8009 -s nqn.2016-06.io.spdk:cnode1
     ```
     {: screen}
 
@@ -208,7 +208,7 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 
     Name                                                                                        Controller Number  Adapter  Transport Type  Is Online
     ------------------------------------------------------------------------------------------  -----------------  -------  --------------  ---------
-    nqn.2016-06.io.spdk:cnode1#vmhba64#10.0.211.196:4420                                                      301  vmhba64  TCP                  true
+    nqn.2016-06.io.spdk:cnode1#vmhba64#10.0.211.196:8009                                                      301  vmhba64  TCP                  true
     ```
     {: screen}
 
