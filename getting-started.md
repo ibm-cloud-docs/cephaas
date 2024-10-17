@@ -69,7 +69,7 @@ Begin by setting up your IBM Cloud satellite location. This is an important step
 You can either review your current satellite locations or create a new location. 
 
 
-To learn more about {{site.data.keyword.satellitelong_notm}},[Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
+To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
 
 To create a new satellite location, see [the {{site.data.keyword.cephaas_short}} Creating a new satellite location](/docs/cephaas?topic=cephaas-creating-anew-satellite-location).
 
