@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: sds, host, view host details, host summary list
 
@@ -33,27 +33,28 @@ To view all hosts and all mapped volumes, in the [{{site.data.keyword.cloud_notm
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 
-| Field | Description |
-|-------|-------------|
-| Name | Click the name of the host to see individual host details. |
-| Volumes mapped | Shows the count of number of volumes mapped to the host. |
-| Host NQN | The NVMe Qualified Name (NQN) of the configured host. |
+| Field           | Description |
+|-----------------|-------------|
+| Name            | Click the name of the host to see individual host details. |
+| Volumes mapped  | Shows the count of number of volumes mapped to the host. |
+| Host NQN        | The NVMe Qualified Name (NQN) of the configured host. |
 {: caption="Details about all hosts" caption-side="bottom"}
 
 By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
 Row actions menu on the Hosts list page provides you with options to manage the single host information.
 
-Table 2 describes the Row actions menu options.
+Table describes the kebab menu options.
 
-| Action | Description |
-|--------|-------------|
-| View host details | Click to open the detailed view of the host. |
-| Rename | Click to change the host name. |
-| Map to volumes | Click to map the host to a volume. |
-| Delete | Remove the mapping between the volume and host. |
+| Action             | Description |
+|--------------------|-------------|
+| View host details  | Click to open the detailed view of the host. |
+| Rename host        | Click to change the host name. |
+| Map volumes        | Click to map the host to a volume. |
+| Delete             | Remove the mapping between the volume and host. |
 {: caption="Row actions menu options for Hosts." caption-side="bottom"}
 
+When you select one or more hosts, the `Delete` button is enabled and displayed which allows you to perform multiple delete operation.
 
 
 ### Viewing single host details in the UI
@@ -62,28 +63,38 @@ Table 2 describes the Row actions menu options.
 
 To view details of a single host, go to the list of all hosts and click on the hostname link.
 
-The Host details page shows the details of the chosen hostname and all its mapped volumes. Table 3 describes this information.
-
+The Host details page shows the details of the chosen hostname and all its mapped volumes. The table describes this information.
 
 | Field | Description |
 |-------|-------------|
 | **Host details** | |
-| Name  | Name of the host you specified when you created the host. Click the pencil icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
-| Total volumes mapped | Shows the total number of volumes mapped to the host. |
-| Added date | System-generated date when the host was added.|
+| Name  | Name of the host you specified when you created the host. Click the pen icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
+| Volumes mapped | Shows the total number of volumes mapped to the host. |
+| Created date | System-generated date when the host was added.|
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Deployment | Name of the instance |
+| **Mapped volumes** | |
+| Name                | Volume name.                                             |
+| Mapped status       | Shows the status of the volume mapped to the host.       |
+| Storage identifier  | Storage identication number.                             |
+| Gateway IP          | IP address.                                              |
+| Namespace ID        | Namespace identification number.                         |
+| Namespace UUID      | Universal unique identification number of the namespace. |
 {: caption="Host details" caption-side="bottom"}
+
+The Mapped volumes section shows the list of all the volumes mapped to the Host and a link to map volumes to the host.
+
+
+
+The kebab menu has the option to unmap the attached volume from the host.
 
 The Actions menu on the Host details page shows the actions that you can take.
 
-Table 4 describes the Actions menu options.
-
-| Action | Description |
-|--------|-------------|
-| Rename | Rename the host name |
-| Delete | Remove the mapping between the volume and host |
-{: caption="Actions menu options for Hosts." caption-side="bottom"}
+| Action             | Description |
+|--------------------|-------------|
+| Activity tracking  | Click to open the IBM Cloud activity tracking page where you can view the status of the generated events. |
+| Delete             | Remove the mapping between the volume and host. |
+{: caption="Actions menu options on Host details page." caption-side="bottom"}
 
 
 ## Viewing Hosts from the CLI

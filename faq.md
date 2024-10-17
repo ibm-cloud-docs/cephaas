@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-17"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -34,14 +34,14 @@ Both block and object storage are calculated hourly. The calculation is based on
 {: faq}
 {: #faq-quota-limit}
 
-There are capacity based quota limits for your block and object storage based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-manage-storage-limit).
+There are capacity based quota limits for your block and object storage based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-quota-capacity-mgmt&interface=ui).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?
 {: faq}
 {: #faq-increase-capacity}
 
-Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Managing volume count and capacity limits](/docs/cephaas?topic=cephaas-manage-storage-limit).
+Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Adding capacity to existing deployment](/docs/cephaas?topic=cephaas-add-capacity).
 
 ### What rules apply to volume names and can I rename a volume later on?
 {: faq}
@@ -49,7 +49,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume by using the UI. See [this information](/docs/cephaas?topic=cephaas-updating-block-volume&interface=ui#renaming-block-volume-from-list-view-page-ui) for details.
+You can change the name of an existing volume by using the UI. See [this information](//docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
