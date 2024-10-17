@@ -26,9 +26,9 @@ You can use the console to update the host name.
 
 To rename a host, follow these steps:
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/sds), go to **{{site.data.keyword.cephaas_full_notm}} > Block storage > Hosts**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Hosts**.
 2. Locate the Host **Name** and click the kebab menu at the end of the Host row to open a list of options.
-3. From the options menu, click **Rename**.
+3. From the options menu, click **Rename host**.
 4. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. If you create two hosts with the same name in the same service instance, a duplicate host name error is displayed.
 5. Click **Rename**.
 

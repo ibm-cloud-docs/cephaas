@@ -36,7 +36,8 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.
 1. Select one or more hosts to map. This is an optional step.
 
-    You can create a new host to map to this volume by providing the **Host name** and **Host nqn** details and clicking **Create host +**. The new host is added to the existing host list.
+    1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.
+    1. Select the newly created **Host** from the list.
 
 1. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
 
