@@ -46,7 +46,7 @@ If the burst capacity is also exhausted, the bar turns red.
 ## Viewing Performance of your deployments
 {: #view-performance}
 
-The lower section of the deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6, 12, 24, 2 days, past week and past 2 weeks.
+The lower section of the deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6 hours, 12 hours, 24 hours, 2 days, past week and past 2 weeks.
 
 | Performance Criteria | Description |
 |-------|-------------|
