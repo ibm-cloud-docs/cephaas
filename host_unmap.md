@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-17"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -25,7 +25,7 @@ Unmap one or more volumes from host by using the UI, CLI, or API.
 
 To remove all mapping of a volume that is mapped to a host, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+1. Log in to the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage) and go to **Block storage > Hosts**.
 
 2. Click the Host **Name** from which you want to unmap the volume.
 
@@ -36,12 +36,15 @@ To remove all mapping of a volume that is mapped to a host, complete the followi
 5. Click **Unmap** to confirm the unmapping of the selected volume from the host.
 
 
+You can also unmap the host from a volume from **Volume details** page.
+{: tip}
+
 
 ## Unmap all volumes for a host from the CLI
 {: #unmap-all-volume-for-hosts-cli}
 {: cli}
 
-Use the `host-vol-deleteall` command and specify the `HOST-ID` and `INSTANCEID` to unmap all volumes that are associated with the given host id based on the instance id.
+Use the `host-vol-deleteall` command and specify the `HOST-ID` along with the endpoint url to unmap all volumes that are associated with the host.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
@@ -49,17 +52,16 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Run the following command to delete a volume.
 
 ```sh
-ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --instanceid INSTANCEID --url string
+ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --url string
 ```
 {: pre}
 
 See the following example.
 
-```bash
+```sh
 ibmcloud software-defined-storage host-vol-deleteall \
-  --host-id exampleString \
-  --instanceid exampleString
-  --url $sds_endpoint
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --url exampleString
 ```
 {: screen}
 
