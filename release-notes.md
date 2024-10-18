@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-18"
 
 keywords: CephaaS release notes
 
@@ -31,7 +31,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## 12 November 2024
+## 22 November 2024
 {: #sds-nov1224}
 {: release-note}
 

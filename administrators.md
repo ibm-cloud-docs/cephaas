@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-18"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -72,10 +72,10 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
     ```
     {: pre}
 
-3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment and the Subscription plan. Now you have a CRN for the instance.
+3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and satallite details. Now you have a CRN for the instance.
 
     ```sh
-    ibmcloud resource service-instance-create <instance-name> software-defined-storage <plan> global
+    ibmcloud resource service-instance-create <instance-name> software-defined-storage <plan> global <satellite-location> -p ‘{“satellite_crn":"<satellite-crn>","order_id":"<order-id>”}’ -g Default
     ```
     {: pre}
 
