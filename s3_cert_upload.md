@@ -65,7 +65,7 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` an alternative to `cred-upload` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` an alternative to `cert-upload` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API
