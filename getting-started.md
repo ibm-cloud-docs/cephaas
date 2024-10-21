@@ -69,7 +69,11 @@ To get started, perform the following steps:
     You can either review your current satellite locations or create a new location.
 
 
+<<<<<<< HEAD
+To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
+=======
     To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
+>>>>>>> 8c737674336b6155e39453d2be866dcc9c814d84
 
     To create a new satellite location, see [the {{site.data.keyword.cephaas_short}} Creating a new satellite location](/docs/cephaas?topic=cephaas-creating-anew-satellite-location).
 
