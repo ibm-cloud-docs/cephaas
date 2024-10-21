@@ -25,16 +25,7 @@ toc:
           topics:
             - administrators.md
             - developers.md
-#      - sds_activity_tracker_events.md
       - release-notes.md
-#      - terminology_list.md
-#  - navgroup:
-#      id: tutorial
-#      topics:
-#      - topic-1.md
-#      - topic-2.md
-#      - topic: topic-3.md
-#        navtitle: A shorter navtitle
   - navgroup:
       id: howto
       topics:
@@ -79,7 +70,6 @@ toc:
             - sds_quota_mgmt.md
             - sds_capacity_performance.md
             - capacity_add.md
-      #         - view_capacity_details.md
       - topicgroup:
           label: Managing object storage
           topics:
@@ -103,6 +93,7 @@ toc:
             - data-security.md
             - compliance.md
             - eu.md
+# include this event notifications file in the future when it becomes part of the scope.
 #      - event-notifications-events.md
       - topicgroup:
           label: Observability
@@ -145,11 +136,9 @@ toc:
            - sds-cli-reference.md
            - curl.md
            - aws_cli.md
-#           - config_controls.md
       - link:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
-
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
