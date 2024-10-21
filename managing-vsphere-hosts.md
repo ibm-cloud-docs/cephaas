@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-21"
 
 keywords: Managing hosts, vsphere plug-in, cephaas
 
@@ -53,7 +53,7 @@ For editing host details of a deployment, use the following procedure.
 
 For deleting a host from a deployment, perform the following procedure.
 
-1. From the vSphere Client screen, navigate to **Inventory** > **CephaaS** > **Cluster** > **Configure** tab > **Host Connectivity**.
+1. From the vSphere client screen, navigate to **Inventory** > **CephaaS** > **Cluster** > **Configure** tab > **Host Connectivity**.
 2. Select the deployment which contains the Host you need to delete and click the delete icon.
 3. A confirmation pop-up is displayed about removal of the host.
 4. Click **Remove**.
