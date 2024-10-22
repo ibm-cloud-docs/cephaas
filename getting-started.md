@@ -64,14 +64,12 @@ To get started, perform the following steps:
 
 1. Set up your satellite
 
-    Begin by setting up your IBM Cloud satellite location. This is an important step to ensure your deployment runs smoothly. With IBM Cloud Satellite, you can use your own compute infrastructure that is in your on-premises data center, other cloud providers, or edge networks to create a Satellite location. Then, you can use the capabilities of Satellite to run IBM Cloud services on your infrastructure, and consistently deploy, manage, and control your app workloads.
+Begin by setting up your IBM Cloud satellite location. This is an important step to ensure your deployment runs smoothly. With IBM Cloud Satellite, you can use your own compute infrastructure that is in your on-premises data center, other cloud providers, or edge networks to create a Satellite location. Then, you can use the capabilities of Satellite to run IBM Cloud services on your infrastructure, and consistently deploy, manage, and control your app workloads.
 
-    You can either review your current satellite locations or create a new location.
+You can either review your current satellite locations or create a new location.
 
 
-    To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
-
-    
+To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
 
 
 2. Prepare Deployment
