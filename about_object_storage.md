@@ -34,7 +34,7 @@ This section includes the known limitations that might impact your experience.
 
 * Only one object user is supported
 
-* S3 is compatible only with IBM Storage Ceph version 7.1
+* S3 features align with IBM Storage Ceph version 7.1
 
 * Virtual hosted buckets not supported
 

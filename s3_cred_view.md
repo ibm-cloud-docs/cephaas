@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-22"
 
 keywords: cephaas service credential view, list
 
@@ -61,6 +61,6 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make the 'GET /accounts/credentials' request to retrieve and view one or all S3 credentials.
 
 ```sh
-curl -X 'GET /accounts/credentials' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: $token"
+curl -X 'GET' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: $token"
 ```
 {: pre}

@@ -62,17 +62,17 @@ These operations create, delete, get information about, and control the behavior
 ## Object storage administration API
 {: #object-storage-admin-api}
 
-### Object operations
+### Administration operations
 {: #api-object-admin-ops}
 
 These operations create, delete, get information about, and control the behavior of administration objects.
 
-| Object admininstraion operation | Note                                                                                |
+| Administration operation        | Note                                                                                |
 |:--------------------------------|:------------------------------------------------------------------------------------|
-| `POST` Object                   | Uploads S3 certificate.                                                             |
-| `GET` Object                    | Retrieves the certificate details.                                                  |
+| `POST` certificate              | Uploads S3 certificate.                                                             |
+| `GET` certificate               | Retrieves the certificate details.                                                  |
 | `POST` credentials              | Creates S3 credential for object.                                                   |
-| `GET` credentail                | Retrieves one or more S3 credentials.                                               |
+| `GET` credential                | Retrieves one or more S3 credentials.                                               |
 | `DELETE` credential             | Deletes the S3 credential.                                                          |
 {: caption="Object admin operation" caption-side="top"}
 
