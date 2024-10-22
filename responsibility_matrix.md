@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-10-22"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -27,13 +27,13 @@ Review the following sections for the specific responsibilities for you and for 
 {: #incident-and-ops}
 
 
-Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, recovery, and full state backup and recovery.
+Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, and recovery.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Infrastructure health monitoring and notification| Remediate all infrastructure and hypervisor environment issues. Notify customers of applicable incidents.  | Ascertain the impact of each incident that is reported. Engage IBM Support as required. |
 |Infrastructure health management| Continuously deliver new features, updates, and bug fixes as needed in a manner transparent to you. Schedule maintenance activities that have customer impact in advance and post notifications to the IBM Cloud status page.  | Set preferences to receive emails notifications. Monitor the IBM Cloud status page for general announcements. |
-|Workload monitoring| Forward to customer any network intrusion notifications detected. Triage virtualization and backup-related errors to determine whether the customer issue needs assistance. Remediate all hardware failures, notification of potential workload impact.  | Monitor and respond to OS or software failures, backup, and replication jobs. Engage IBM Support as required. |
+|Workload monitoring| Remediate all hardware failures, notification of potential workload impact.  | Engage IBM Support as required. |
 |Incident management | Communicate unplanned incidents with customer impact through the CIE process. | If you are an impacted customer, obtain a report about the incident upon request. |
 {: row-headers}
 {: caption="Responsibilites for incident and operations" caption-side="bottom"}
@@ -47,10 +47,10 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Scaling| Scale the storage infrastructure as requested and to meet the capacity that you selected.  | Choose the capacity for your service instances. |
-|Updates, fixes, and new features| Provide regular updates, bug fixes, and new features, following a continuous delivery model in a way that is transparent to you for all infrastructure tools, VMware components, IBM deployed cloud services and IBM management, monitoring, and automation tools. Post notifications for changes that impact you.  | Set preferences to receive email notifications. Monitor the IBM Cloud status page for general announcements. Use best practices and keep application operating systems and workload applications patched and secure with the most recent security patches. |
-|Creating and deploying configurations |IBM provides the ability for customers to create and deploy configurations. | |
-|Deleting block and object storage |IBM provides the ability for customers to delete block & object storage. |You can delete block & object storage whenever you need to.|
+| Scaling | Scale the storage infrastructure as requested and to meet the capacity that you selected.  | Monitor the capacity usage for future increase of your subscription. Estimate and place order to add more capacity for your service instances. |
+| Updates, fixes, and new features| Provide regular updates, bug fixes, and new features, following a continuous delivery model in a way that is transparent to you for all infrastructure tools, IBM deployed cloud services and IBM management, monitoring, and automation tools. Post notifications for changes that impact you.  | Set preferences to receive email notifications. Monitor the IBM Cloud status page for general announcements. Use best practices and keep application operating systems and workload applications patched and secure with the most recent security patches. |
+| Creating and deploying configurations | Deploy and configure {{site.data.keyword.cephaas_full_notm}}. Provides the capability to select committed capacity for the service. | |
+| Deleting block and object storage |  | You can delete block & object storage whenever you need to.|
 {: row-headers}
 {: caption="Responsibilites for change management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -64,7 +64,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IAM (Identity and Access Management). Manage access to the on-premises environment. |
+|Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IBM Cloud IAM (Identity and Access Management). Manage access to the on-premises environment. |
 |Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premises environment that audits the actions the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
 {: row-headers}
 {: caption="Responsibilites for identity and access management" caption-side="bottom"}

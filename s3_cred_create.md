@@ -40,6 +40,9 @@ To create s3 credential, complete the following steps.
 
 3. Enter S3 credential **Name** and click **Add**.
 
+    Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+    {: important}
+
 4. After the credential is created, **Copy** the credential or click **Download** to save the credential to your local system.
 
 You will not be able to see the credential again after you close this message. Make sure to save or download the credential.
@@ -51,6 +54,9 @@ You will not be able to see the credential again after you close this message. M
 {: cli}
 
 Run the `cred-create` command with the `ACCESS-KEY` and API endpoint to create a new object storage S3 credential for the storage deployment.
+
+Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+{: important}
 
 ```sh
 ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url string
@@ -76,6 +82,9 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: api}
 
 You can create a S3 credential for object storage by specifying the access key.
+
+Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+{: important}
 
 ```sh
 curl -X 'POST' \
