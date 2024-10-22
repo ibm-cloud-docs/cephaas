@@ -41,8 +41,20 @@ This section includes the known limitations that might impact your experience.
 * Static Web Hosting not supported
 
 
+## HMAC credentials
+{: #about-hmac-creds}
+
+HMAC credentials consist of an Access Key and Secret Key paired for use with S3-compatible tools and libraries that require authentication.
+
+The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to IBM Cloud.
+
+You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential).
+
+You must have the IBM Cloud Platform Command Line installed to use the examples.
+{: requirement}
+
 
 ## Next Steps
 {: #next-steps}
 
-Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds&interface=ui) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate-sds&interface=ui).
+Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).

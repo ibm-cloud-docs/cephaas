@@ -13,7 +13,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Uploading S3 certificate
-{: #uploading-s3-certificate-sds}
+{: #uploading-s3-certificate}
 
 S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in the Middle (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
 {: shortdesc}

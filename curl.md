@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-22"
 
 keywords: cli, command-line interface, object storage, curl
 
@@ -23,7 +23,7 @@ Here's a 'cheat sheet' of basic `curl` commands for the {{site.data.keyword.ceph
 
 
 
-Using `curl` assumes a certain amount of familiarity with the command-line and Object Storage, and have the necessary information from a [credential](/docs/cephaas?topic=cephaas-credentials-overview), the [endpoints reference](/docs/cephaas?topic=cephaas-endpoints), or the [console](/docs/cephaas?topic=cephaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
+Using `curl` assumes a certain amount of familiarity with the command-line and Object Storage, and have the necessary information from a [credential](/docs/cephaas?topic=cephaas-about-object-storage#about-hmac-creds), the [endpoints reference](/docs/cephaas?topic=cephaas-endpoints), or the [console](/docs/cephaas?topic=cephaas-getting-started). If any terms or variables are unfamiliar, they can be found in the [glossary](/docs/overview?topic=overview-glossary).
 
 **Note**: Personally Identifiable Information (PII): When _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
 {: tip}

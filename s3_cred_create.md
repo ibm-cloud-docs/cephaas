@@ -13,12 +13,13 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating object storage S3 credential
-{: #creating-s3-credential-sds}
+{: #creating-s3-credential}
 
-A credential provides the information required to provide authentication for applications.
+A credential consist of an Access Key and Secret Key paired for use with S3-compatible tools and libraries that require authentication.
 {: shortdesc}
 
-The credentials are always associated with a Service ID, and new Service IDs can be created along with a new credential.
+
+
 
 Create S3 credentials for object storage by using the UI, CLI, or API.
 
