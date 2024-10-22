@@ -69,11 +69,7 @@ To get started, perform the following steps:
     You can either review your current satellite locations or create a new location.
 
 
-<<<<<<< HEAD
-    To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
-=======
     To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
->>>>>>> 415e765d939fc4d266c02d7a3e0248f7e591d317
 
     
 
