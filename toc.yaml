@@ -5,11 +5,11 @@
 toc:
   properties:
     subcollection: cephaas
-    service-name: cephaas #If your subcollection is not for a service, don't include this property.
+    service-name: software-defined-storage #If your subcollection is not for a service, don't include this property.
     category: storage
     audience: service
     href: /docs/cephaas
-    console-page: /catalog/services/cephaas
+#    console-page: /catalog/services/software-defined-storage
     product-page: https://ibm.com/cloud/cephaas
     path: cephaas
     label: IBM Storage Ceph as a Service

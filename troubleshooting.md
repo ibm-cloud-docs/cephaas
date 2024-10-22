@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-10-22"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service
 
@@ -44,7 +44,7 @@ Verify that the volume was not deleted from a deployment. Search for the deploym
 
 If the volume does not appear in the list of volumes, it was probably deleted. Because deleting a volume completely removes its data, it cannot be restored.
 
-If you use the CLI, verify that you entered the correct command syntax for viewing volumes. See [Viewing all Block Storage volumes from the CLI](/docs/cephaas?topic=cephaas-view-sds-volume&interface=cli#viewall-vol-cli).
+If you use the CLI, verify that you entered the correct command syntax for viewing volumes. See [Viewing all Block Storage volumes from the CLI](/docs/cephaas?topic=cephaas-view-volume&interface=cli#viewall-vol-cli).
 
 ## Cannot update a volume name by using the API or CLI
 {: #troubleshoot-topic-2}

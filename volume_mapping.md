@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-22"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -90,4 +90,4 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 * You can continue creating more volumes or manage existing volumes.
 
-* [Configure NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-from-nvme-of-initiators)
+* [Configure NVME-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators)
