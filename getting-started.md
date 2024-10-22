@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-10-22"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -69,9 +69,13 @@ To get started, perform the following steps:
     You can either review your current satellite locations or create a new location.
 
 
+<<<<<<< HEAD
+    To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
+=======
     To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
+>>>>>>> 415e765d939fc4d266c02d7a3e0248f7e591d317
 
-    To create a new satellite location, see [the {{site.data.keyword.cephaas_short}} Creating a new satellite location](/docs/cephaas?topic=cephaas-creating-anew-satellite-location).
+    
 
 
 2. Prepare Deployment

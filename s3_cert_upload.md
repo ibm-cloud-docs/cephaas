@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-10-22"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -65,7 +65,7 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` an alternative to `cert-upload` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` an alternative to `cred-upload` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API
