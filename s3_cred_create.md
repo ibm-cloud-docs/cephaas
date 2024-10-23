@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-10-23"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -13,7 +13,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # Creating object storage S3 credential
-{: #creating-s3-credential}
+{: #creating-s3-credential-sds}
 
 A credential consist of an Access Key and Secret Key paired for use with S3-compatible tools and libraries that require authentication.
 {: shortdesc}

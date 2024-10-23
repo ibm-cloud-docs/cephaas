@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-10-23"
 
 keywords: about, basics, cephaas object storage
 
@@ -48,7 +48,7 @@ HMAC credentials consist of an Access Key and Secret Key paired for use with S3-
 
 The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to IBM Cloud.
 
-You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential).
+You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds).
 
 You must have the IBM Cloud Platform Command Line installed to use the examples.
 {: requirement}
@@ -57,4 +57,4 @@ You must have the IBM Cloud Platform Command Line installed to use the examples.
 ## Next Steps
 {: #next-steps}
 
-Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).
+Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).

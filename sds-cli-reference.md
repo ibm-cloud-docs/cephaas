@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-23"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -22,16 +22,8 @@ The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyw
 ## Before you begin
 {: #before-you-begin-using-cli}
 
-Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the SDS CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
+Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the `software-defined-storage` CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
 
-Log in to the IBM Cloud.
-
-```sh
-ibmcloud login --sso -a cloud.ibm.com
-```
-{: pre}
-
-This command returns a URL and prompts for a passcode. Go to that URL in your browser and log in. If successful, you get a one-time passcode. Copy this passcode and paste it as a response on the prompt. After successful authentication, you are prompted to choose your account. If you have access to multiple accounts, select the account that you want to log in as. Respond to any remaining prompts to finish logging in.
 
 
 
