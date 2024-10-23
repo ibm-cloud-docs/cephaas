@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-23"
 
 keywords: cephaas, developer, getting started, command-line interface, cli
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](https://cloud.ibm.com/docs/cli/index.html) and [IBM Developer Tools](https://cloud.ibm.com/docs/cloudnative/idt/index.html) installed.
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and [IBM Developer Tools](https://cloud.ibm.com/docs/cloudnative/idt/index.html) installed.
 
 
 

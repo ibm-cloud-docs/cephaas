@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-23"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -170,7 +170,7 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
     See the following example.
 
     ```sh
-    [root@host01:~] esxcli nvme fabrics discover -a vmhba64 -i 10.0.211.196 -p 4420
+    [root@host01:~] esxcli nvme fabrics discover -a vmhba64 -i 10.0.211.196 -p 8009
 
     Transport Type Address Family Subsystem Type Controller ID Admin Queue Max Size Transport Address Transport Service ID Subsystem NQN              Connected
 
@@ -183,14 +183,14 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
 3. Connect to NVMe-oF gateway subsystem.
 
     ```sh
-    esxcli nvme fabrics connect -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 8009 -s SUBSYSTEM_NQN
+    esxcli nvme fabrics connect -a NVME_TCP_ADAPTER -i GATEWAY_IP -p 4420 -s SUBSYSTEM_NQN
     ```
     {: pre}
 
     See the following example.
 
     ```sh
-    [root@host01:~] esxcli nvme fabrics connect -a vmhba64 -i 10.0.211.196 -p 8009 -s nqn.2016-06.io.spdk:cnode1
+    [root@host01:~] esxcli nvme fabrics connect -a vmhba64 -i 10.0.211.196 -p 4420 -s nqn.2016-06.io.spdk:cnode1
     ```
     {: screen}
 

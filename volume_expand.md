@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-23"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -121,7 +121,7 @@ A successful response looks like this:
     "name": "sds-vol-updated",
     "capacity": 100,
     "iops": 150,
-    "status": "available",
+    "status": "updating",
     "profile": {
         "name": "sds-general-purpose"
     },
@@ -132,7 +132,6 @@ A successful response looks like this:
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
     "host_mappings": []
-}
-
+} 
 ```
 {: screen}
