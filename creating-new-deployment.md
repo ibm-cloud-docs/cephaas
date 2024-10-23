@@ -11,8 +11,13 @@ subcollection: cephaas
 ---
 {{site.data.keyword.attribute-definition-list}}
 
+<<<<<<< HEAD
 # Creating a new deployment
 {: #getting-started}
+=======
+# Creating a new deployment in {{site.data.keyword.cephaas_full_notm}}
+{: #creating-new-deployment}
+>>>>>>> vaibhavi-latest
 
 You can create a new deployment in {{site.data.keyword.cephaas_full}} by performing the following steps: 
 
