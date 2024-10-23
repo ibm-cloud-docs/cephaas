@@ -4,20 +4,17 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-10-23"
 
-keywords: Creating a new deployment
+keywords: cephaas, Creating a new deployment
 
 subcollection: cephaas
 
 ---
-{{site.data.keyword.attribute-definition-list}}
 
-<<<<<<< HEAD
-# Creating a new deployment
-{: #getting-started}
-=======
+{{site.data.keyword.attribute-definition-list}}
+{: ui-linked}
+
 # Creating a new deployment in {{site.data.keyword.cephaas_full_notm}}
 {: #creating-new-deployment}
->>>>>>> vaibhavi-latest
 
 You can create a new deployment in {{site.data.keyword.cephaas_full}} by performing the following steps: 
 
