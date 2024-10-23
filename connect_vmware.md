@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-23"
 
 keywords: Connect VMware environment
 
@@ -11,8 +11,8 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect to VMware environment
-{: #connecting-to-environment}
+# Installing vSphere Plug-in
+{: #installing-the-plugin}
 
 These instructions are for a quick installation overview of the {{site.data.keyword.cephaas_full}} plug-in for VMWare vSphere.
 
@@ -75,3 +75,10 @@ ibm-plug-in status
 The `ibm-plug-in` status command can be run at any time.
 
 If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.
+
+## Next Steps
+
+After the installation, you need to get the following from your admin. 
+
+- Service ID with a viewer role for {{site.data.keyword.cephaas_full_notm}}
+- API Key

@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-23"
 
 keywords: managing deployments in vsphere plug-in
 
@@ -25,13 +25,12 @@ Use the following procedure to add an IBM Ceph as a Service deployment to the vS
 4. Enter the information in the fields **Block Endpoint FQDN** and **API Key**.
 5. Click **Next**. **Deployment Details** screen is displayed where you need to enter the name of the deployment.
 6. Click **Next**. **Review** screen is displayed which shows the new deployment details entered by you in the previous steps.
-7. Click **Add**.
-8. The newly added deployment details will be reflected on the deployment dashboard.
+7. Click **Add**. The newly added deployment details will be reflected on the deployment dashboard.
 
 ## Editing deployment details
 {: #edit-deployment-details}
 
-For editing deployment details such as name and API key, use the following prodedure.
+For editing deployment details such as the name and API key, use the following prodedure.
 
 1. From the deployment dashboard of the vSphere Client, select the deployment you need to edit and click the pencil icon.
 2. **Edit Deployment Details** screen is displayed. 
