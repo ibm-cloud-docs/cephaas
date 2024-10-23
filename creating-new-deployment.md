@@ -4,13 +4,12 @@ copyright:
  years: 2024, 2024
 lastupdated: "2024-10-23"
 
-keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
+keywords: Creating a new deployment
 
 subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
-{: ui-linked}
 
 # Creating a new deployment
 {: #getting-started}
