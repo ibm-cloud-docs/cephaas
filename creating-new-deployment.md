@@ -12,7 +12,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-# Creating a new deployment in {{site.data.keyword.cephaas_full_notm}}
+# Creating a new deployment
 {: #getting-started}
 
 You can create a new deployment in {{site.data.keyword.cephaas_full}} by performing the following steps: 
@@ -32,10 +32,3 @@ After placing the order, you will receive an email with a link to prepare for yo
 ## Step 4: Hardware Setup
 
 After you finish the Prepare deployment setup, the on-premise hardware set up will be done by IBM. Post the set up, your deployment will be available for provisioning. 
-
-
-
-
-
-
-
