@@ -32,9 +32,10 @@ toc:
       - topicgroup:
           label: Ordering and onboarding
           topics:
+            - Creating-new-deployment.md
             - estimating_cost.md
             - placing_order.md
-            - creating_new_satellite_location.md
+# - creating_new_satellite_location.md
             - preparing_deployment.md
       - iam_overview.md
       - iam_access.md

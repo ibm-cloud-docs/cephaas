@@ -19,3 +19,5 @@ After cost estimation and the subsequent communication with the IBM seller, your
 1. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 2. Enter your **Deployment name**. 
 3. Click **Create**.
+4. Your **Deployment Preparation** status will be reflected as **Completed**. 
+5. After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned. 
