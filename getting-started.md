@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-10-23"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -74,6 +74,6 @@ To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting sta
 
 2. Prepare Deployment
 
-    After setting up the satellite, the next step is to prepare your deployment and assigning  it a name. You will receive the link to set up your deployment in an email after you place the order with your IBM representative.
+After setting up the satellite, the next step is to prepare your deployment and assigning  it a name. You will receive the link to set up your deployment in an email after you place the order with your IBM representative.
 
-    Make sure to complete both the above steps before your device arrives on-site to ensure a seamless setup.
+Make sure to complete both the above steps before your device arrives on-site to ensure a seamless setup.
