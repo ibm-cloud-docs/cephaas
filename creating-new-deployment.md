@@ -24,7 +24,7 @@ This is the first step in process of creating your deployment. Follow the proced
 
 ## Step 2: Placing an order
 
-For placing your order, you need to contact your IBM seller. Follow the procedure [Placing an order](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-placing-an-order). 
+For placing your order, contact your IBM seller. Follow the procedure [Placing an order](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-placing-an-order). 
 
 ## Step 3: Preparing deployment
 

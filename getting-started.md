@@ -53,24 +53,12 @@ While IBM owns and operates the infrastructure, you can provision your own stora
 {: #submitorder}
 {: step}
 
-After you estimate the cost of your order, your IBM representative will contact you for placing your order.
+After you estimate the cost of your order, your IBM representative will contact you for placing the order.
 
-
-## Setting up your deployments
+## Preparing your deployment
 {: #managingnewstorage}
 {: step}
 
-To get started, perform the following steps:
-
-Select your satellite
-
-Begin by selecting your IBM Cloud satellite location. This is an important step to ensure your deployment runs smoothly. With IBM Cloud Satellite, you can use your own compute infrastructure that is in your on-premises data center, other cloud providers, or edge networks to create a Satellite location. Then, you can use the capabilities of Satellite to run IBM Cloud services on your infrastructure, and consistently deploy, manage, and control your app workloads.
-
-You can either review your current satellite locations or create a new location. To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
 
 
-2. Prepare Deployment
-
-    After setting up the satellite, the next step is to prepare your deployment and assigning it a name. You will receive the link to set up your deployment in an email after you place the order with your IBM representative.
-
-    Make sure to complete both the above steps before your device arrives on-site to ensure a seamless setup.
+After placing your order, the next step is to prepare your deployment and assigning it a name. You will receive the link to [prepare your deployment](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-preparing-deployment) in an e-mail.

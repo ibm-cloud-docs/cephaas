@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-24"
 
 keywords: cephaas, capacity management, performance management
 
@@ -38,7 +38,7 @@ The upper section of the deployment dashboard displays the current usage informa
 | Object capacity | Current usage and a link **Go to Object storage** link to update capacity |
 {: caption="Details about deployment capacity" caption-side="bottom"}
 
-The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of nn used of nn TB reflects used capacity from your Overall capacity.
+The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of **XXX used of YYY** TB reflects used capacity from your Overall capacity.
 
 Till the capacity is not fully used, the bar displays blue color. When the Overall capacity is fully used, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to use.
 If the burst capacity is also exhausted, the bar turns red.
@@ -54,7 +54,6 @@ The lower section of the deployment dashboard provides graphical insights into v
 | Latency | Response time delay measured in milliseconds |
 | Throughput| The performance a disk can deliver, measured in MB/S|
 {: caption="Details about deployment performance" caption-side="bottom"}
-
 
 
 ## Renaming your deployments
