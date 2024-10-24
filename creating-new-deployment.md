@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-10-24"
 
 keywords: cephaas, Creating a new deployment
 
@@ -13,7 +13,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-# Creating a new deployment in {{site.data.keyword.cephaas_full_notm}}
+# Creating a new deployment
 {: #creating-new-deployment}
 
 You can create a new deployment in {{site.data.keyword.cephaas_full}} by performing the following steps: 
