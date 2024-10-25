@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-25"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
 
@@ -187,3 +187,29 @@ fmt.Println(string(b))
 ```
 {: go}
 {: codeblock}
+
+## Assigning access to {{site.data.keyword.cephaas_short}} by using Terraform
+{: #assign-access-terraform}
+{: terraform}
+
+
+
+The following example is for assigning the `<Viewer>` role for `<software-defined-storage>`:
+
+Use `<programmatic_service_name>` for the service name.
+{: tip}
+
+
+
+```terraform
+resource "ibm_iam_user_policy" "policy" {
+  ibm_id = "test@example.com"
+  roles  = ["Viewer"]
+  resources {
+    service = "software-defined-storage"
+  }
+}
+```
+{: codeblock}
+
+For more information, see [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external}.
