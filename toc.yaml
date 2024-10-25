@@ -131,11 +131,11 @@ toc:
             - link:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
-      - topicgroup:
-          label: Libraries
-          topics:
-            - getting-started-sdks.md
-            - go.md
+#      - topicgroup:
+#          label: Libraries
+#          topics:
+#            - getting-started-sdks.md
+#            - go.md
       - topicgroup:
           label: CLI reference
           topics:
