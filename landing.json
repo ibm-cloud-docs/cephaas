@@ -24,13 +24,13 @@
       },
       {
         "title": "Connect to VMware environment",
-        "href": "/docs/cephaas?topic=cephaas-connecting-to-environment"
+        "href": "/docs/cephaas?topic=cephaas-installing-the-plugin"
       }
     ]
   },
   "section_devtools": {
     "api": "/apidocs/software-defined-storage",
-    "cli": "/docs/cephaas/sds-cli-reference",
+    "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
   },
   "section_updates": {

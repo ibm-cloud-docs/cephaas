@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-04"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -61,7 +61,7 @@ You can provision up to 1000 block storage volumes per deployment. You can reque
 {: faq}
 {: #faq-how-del-vol}
 
-You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/cephaas?topic=cephaas-deleting-hosts&interface=ui#deleting-volume-mapping-from-host-ui) before deleting it.
+You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/cephaas?topic=cephaas-unmap-hosts) before deleting it.
 
 
 ### What happens to the data when I delete a block storage volume?
