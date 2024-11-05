@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-05"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -85,7 +85,7 @@ ibmcloud resource service-instance <instancename> --output json
 Make a `PATCH` request to modify the block and object quota.
 
 ```sh
-curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: $token" -H 'Content-Type: application/json' -d '{
+curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: Bearer $token" -H 'Content-Type: application/json' -d '{
 "parameters": {
        "quota":{"block":55,"object":75},
        "allocate_burst_capacity":true

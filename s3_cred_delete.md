@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-05"
 
 keywords: cephaas , delete service credential
 
@@ -27,27 +27,13 @@ To delete an object storage S3 credential, complete the following steps.
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
-2. Select one service credential that you want to delete.
-
-3. Click **Delete**.
-
-All access granted to any resources using this credential will be lost once the credential is deleted.
-{: note}
-
-## Deleting multiple object storage credential in the UI
-{: #deleting-mulitple-s3-credential-ui}
-{: ui}
-
-To delete multiple object storage S3 credential, complete the following steps.
-
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
-
-2. Select one or more credentials that you want to delete.
+2. Select one or more service credential that you want to delete.
 
 3. Click **Delete selected credentials** > **Delete**.
 
-All access granted to any resources using these credentials will be lost once the credentials are deleted.
+You will not be able to perform any s3 operations using the credentials after the delete process completes.
 {: note}
+
 
 
 ## Deleting an objects storage credential from the CLI
@@ -73,7 +59,7 @@ ibmcloud software-defined-storage cred-delete --access-key exampleString --url $
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crd` an alternative to `cred-delete` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crd` as an alternative to `cred-delete` for the CLI actions.
 {: tip}
 
 ## Deleting an object storage credential with the API
@@ -85,7 +71,7 @@ You can delete a specific S3 credential using an access key.
 ```sh
 curl -X 'DELETE' \
   '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
-  -H 'accept: application/json' -H "Authorization: $token"
+  -H 'accept: application/json' -H "Authorization: Bearer $token"
 ```
 {: pre}
 

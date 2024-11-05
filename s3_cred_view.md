@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-05"
 
 keywords: cephaas service credential view, list
 
@@ -51,7 +51,7 @@ ibmcloud software-defined-storage creds --url $sds_endpoint
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crl` an alternative to `creds` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crl` as an alternative to `creds` for the CLI actions.
 {: tip}
 
 ## Viewing an object storage credential with the API
@@ -61,6 +61,6 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make the 'GET /accounts/credentials' request to retrieve and view one or all S3 credentials.
 
 ```sh
-curl -X 'GET' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: $token"
+curl -X 'GET' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: Bearer $token"
 ```
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-05"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -77,7 +77,7 @@ Created        2024-07-09T06:24:49Z
 
 Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `volc` and alternative to `volume-create` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `volc` as an alternative to `volume-create` for the CLI actions.
 {: tip}
 
 ## Creating block volumes with the API

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-05"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -65,14 +65,14 @@ ibmcloud software-defined-storage cert-upload \
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` an alternative to `cred-upload` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` as an alternative to `cred-upload` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API
 {: #uploading-s3-certificate-api}
 {: api}
 
-Make a `POST /s3tlscert` call to update the S3 SSL Certificates or upload a new one if it does not exist.
+Make a `POST /certificate/s3` call to update the S3 SSL Certificates or upload a new one if it does not exist.
 
 Ensure that the file you are uploading has included the server-side certificate and key.
 {: requirement}
@@ -81,7 +81,7 @@ Ensure that the file you are uploading has included the server-side certificate 
 curl -X 'POST' \
   '$sds_api_enpoint/v1/object/s3tlscert' \
   -H 'accept: application/json' \
-  -H "Authorization: $token"
+  -H "Authorization: Bearer $token"
   -H 'Content-Type: text/plain' \
   --data-binary "@<filename>"
 ```

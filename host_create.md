@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-11-05"
 
 keywords: sds, cephaas host,
 
@@ -73,7 +73,7 @@ Maximum supported NQN length is 223 bytes.
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstc` an alternative to `host-create` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstc` as an alternative to `host-create` for the CLI actions.
 {: tip}
 
 

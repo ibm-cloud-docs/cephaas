@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-11-05"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -65,7 +65,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #retrieve-sds-s3-certificate-api}
 {: api}
 
-Make a `GET /s3tlscertstatus` to retrieve the S3 certficate expiration date and status.
+Make a `GET /certificate/s3` to retrieve the S3 certficate expiration date and status.
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/object/s3tlscertstatus' -H 'accept: application/json'

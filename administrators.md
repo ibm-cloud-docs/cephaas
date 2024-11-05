@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-18"
+lastupdated: "2024-11-05"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -98,7 +98,7 @@ Use a hostless or full satellite location as Location for the deployment.
 {: prereq}
 
 ```sh
-curl -X POST $rc_endpoint/v2/resource_instances -H "Authorization: $token" -H 'Content-Type: application/json' -d '{
+curl -X POST $rc_endpoint/v2/resource_instances -H "Authorization: Bearer $token" -H 'Content-Type: application/json' -d '{
         "name": "sds-unified-1",
         "target": "us-south",
         "resource_group": "8c3bdd054c7b459b8ddb327d1609b2f4",
