@@ -20,6 +20,7 @@ toc:
       topics:
       - getting-started.md
       - about-cephaas.md
+      - preinstallation_checklist.md
       - topicgroup:
           label: Getting organized
           topics:
