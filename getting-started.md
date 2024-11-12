@@ -53,7 +53,7 @@ While IBM owns and operates the infrastructure, you can provision your own stora
 {: #submitorder}
 {: step}
 
-After you estimate the cost of your order, your IBM representative will contact you for placing the order.
+After you estimate the cost of your order and enter your contact information, your IBM representative will contact you for placing the order.
 
 ## Preparing your deployment
 {: #managingnewstorage}
