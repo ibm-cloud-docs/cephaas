@@ -35,25 +35,20 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 
 
 
-## Provisioning considerations
+## Pre-Order Checklist
 {: #provconsiderationsBlockStorage}
 {: step}
 
-### Block storage volume size
-{: #sdsblockstoragevolumesize}
+IBM Storage Ceph as a Service is available in IBM Cloud Catalog under the IBM Storage Ceph as a Service tile. 
 
-IBM Storage Ceph as a Service is available in IBM Cloud Catalog under the IBM Storage Ceph as a Service tile. You can use the cost estimator option in the GUI to define the required configuration and get an estimated monthly cost. You can contact IBM or your business partner for more pricing details and to place an order.
+### Cost Estimation
 
-After the order is placed and the infrastructure is ready to be installed, IBM works with you to install it in your data center. You are responsible for meeting the physical site requirements (for example, energy, cooling, space, physical network connectivity.) where the infrastructure will be installed. IBM is responsible for installation, configuration, and operation of the infrastructure.
+To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs. 
 
-While IBM owns and operates the infrastructure, you can provision your own storage volumes. IBM operates and maintains the respective hardware and software maintenance operations.
+### Start order process
 
+After reviewing your cost estimation, Click **Start order process** to enter your contact information, allowing an IBM representative to reach out and assist you further. 
 
-## Submitting your order
-{: #submitorder}
-{: step}
-
-After you estimate the cost of your order and enter your contact information, your IBM representative will contact you for placing the order.
 
 ## Preparing your deployment
 {: #managingnewstorage}
@@ -62,3 +57,10 @@ After you estimate the cost of your order and enter your contact information, yo
 
 
 After placing your order, the next step is to prepare your deployment and assigning it a name. You will receive the link to [prepare your deployment](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-preparing-deployment) in an e-mail.
+
+
+### Infrastructure set up and maintenance
+
+After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install it in your data center. You will be responsible for meeting the physical site requirements (for example, energy, cooling, space, physical network connectivity.) where the infrastructure will be installed. IBM will be responsible for installation, configuration, and operation of the infrastructure.
+
+While IBM will own and operate the infrastructure, you will be able to provision your own storage volumes. IBM will continue to operate and maintain the respective hardware and software maintenance operations.
