@@ -25,7 +25,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #prereqs}
 {: step}
 
-You can select the term (3, 4, or 5 years), performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
+You can select the term (3, 4, or 5 years) performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
 The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two options:
 
@@ -35,7 +35,7 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 
 
 
-## Pre-Order Checklist
+## Getting ready to order
 {: #provconsiderationsBlockStorage}
 {: step}
 
@@ -48,7 +48,6 @@ To estimate your monthly storage cost, use the **Estimate Cost** option in the p
 ### Start order process
 
 After reviewing your cost estimation, Click **Start order process** to enter your contact information, allowing an IBM representative to reach out and assist you further. 
-
 
 ## Preparing your deployment
 {: #managingnewstorage}

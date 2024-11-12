@@ -35,7 +35,7 @@ Typical workloads for this tier are supporting VM infrastructure with storage or
 
 When committing to a certain capacity, the delivered hardware includes at least 30% extra capacity for optional excess usage.
 
-This Tier is offered in the following capacity options:
+This tier is offered in the following capacity options:
 
 - 100 TB
 - 200 TB
@@ -55,7 +55,7 @@ Typical workloads for this tier are backup workloads. The storage capacity can g
 
 When committing to a certain capacity, the delivered hardware includes at least 30% extra capacity for optional excess usage.
 
-This tier is offered in the following capacity options:
+This tier is offered in the following capacity options for the terms 3, 4, or 5 years:
 
 - 800 TB
 - 1600 TB

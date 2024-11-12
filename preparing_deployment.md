@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-12"
 
 keywords: cephaas, preparing deployment
 
@@ -16,8 +16,9 @@ subcollection: cephaas
 
 After cost estimation and the subsequent communication with the IBM seller, your order processing is initiated. After your order is processed, you will receive a link **Prepare deployment** from your IBM sales parter through e-mail. Clicking on this link will display the deployment dashboard which will list your orders in-progress.
 
-1. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
-2. Enter your **Deployment name**. 
-3. Click **Create**.
-4. Your **Deployment Preparation** status will be reflected as **Completed**. 
-5. After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned. 
+1. Click **Prepare deployment** link from your In progress order.
+2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+3. Enter your **Deployment name**. 
+4. Click **Create**.
+5. Your **Deployment Preparation** status will be reflected as **Completed**. 
+6. After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned. 

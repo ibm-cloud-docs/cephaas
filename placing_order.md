@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-12"
 
 keywords: cephaas, Place Order
 
@@ -17,7 +17,7 @@ subcollection: cephaas
 
 To place an order for your IBM Ceph as a Service deployment, you need to estimate the cost based on your specific requirements.
 
-1. After estimating the cost, click **How to deploy**.
+1. After estimating the cost, click **Start order process**.
 2. How to deploy screen is displayed which includes the following steps for placing the order.
 3. Get in touch: You need to connect with your IBM seller to know about discounts and offers.
 4. Process order: Your IBM seller will place the order.
