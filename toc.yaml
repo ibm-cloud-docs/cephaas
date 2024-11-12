@@ -20,7 +20,16 @@ toc:
       topics:
       - getting-started.md
       - about-cephaas.md
-      - preinstallation_checklist.md
+      - topicgroup:
+          label: Preparing the data center
+          topics:
+            - preinstallation_checklist.md
+            - site_readiness.md
+            - site_access_requirements.md
+            - environ_requirements.md
+            - power_requirements.md
+            - network_requirements.md
+            - network_latency.md
       - topicgroup:
           label: Getting organized
           topics:

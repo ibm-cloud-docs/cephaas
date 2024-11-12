@@ -28,8 +28,8 @@ IBM provides a pre-installation checklist after you place an order for {{site.da
 {: #pre-order-check}
 
 Before you place the order, you must confirm if the following criteria to install the pod in your data center are met:
-*  Identify an IBM Cloud region closest to the physical location of your data center where the pod resides. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency].
-*  Confirm that the site and environment requirements to place the pod are met. For more information, see [Site-planning and environmental requirements].
+*  Identify an IBM Cloud region closest to the physical location of your data center where the pod resides. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/cephaas?topic=cephaas-network_latency_main).
+*  Confirm that the site and environment requirements to place the pod are met. For more information, see [Site-planning and environmental requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist#site-plan-env-req).
 
 ## {{site.data.keyword.cephaas_full_notm}} requirements
 {: #sds-sys-req}
@@ -43,10 +43,10 @@ Before you connect to the IBM Cloud, perform other pre-installation activities, 
 
 Before you place the order, you must prepare your data center site to meet the following site and environmental requirements:
 *  The data center can accommodate all the 42U racks in a pod. For example, a small pod contains one 42U rack and a medium pod might contain two or four 42U racks.
-*  The floor of the data center is able to withstand the weight of the racks and other equipment. For more information about rack dimensions and weight, see [Site access requirements].
-*  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control is ready. For more information, see [Environmental requirements].
-*  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements].
-*  The data center is in a secured location with restricted access. For more information, see [Site readiness].
+*  The floor of the data center is able to withstand the weight of the racks and other equipment. For more information about rack dimensions and weight, see [Site access requirements](/docs/cephaas?topic=cephaas-site-access-requirements).
+*  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control is ready. For more information, see [Environmental requirements](/docs/cephaas?topic=cephaas-environmental-requirements).
+*  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements](/docs/cephaas?topic=cephaas-power-requirements).
+*  The data center is in a secured location with restricted access. For more information, see [Site readiness](/docs/cephaas?topic=cephaas-site-readiness).
 
 The following data center site requirements must be met before the pod is delivered to your data center:
 *  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the pod infrastructure.
@@ -57,7 +57,7 @@ The following data center site requirements must be met before the pod is delive
 {: #network-req}
 
 The following network requirements must be completed before the pod is delivered to your data center:
-*  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements].
+*  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
 *  Review and identify the available network use cases and communicate your requirements to IBM before you proceed with installation. For more information, see [Network use cases].
 
 ## Network validation and account activation
