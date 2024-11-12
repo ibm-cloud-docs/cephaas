@@ -40,7 +40,6 @@ toc:
       - iam_overview.md
       - iam_access.md
       - setup_cli_api_environment.md
-      - terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -92,8 +91,6 @@ toc:
             - architecture-workload-isolation.md
             - endpoints.md
             - data-security.md
-            - compliance.md
-            - eu.md
 # include this event notifications file in the future when it becomes part of the scope.
 #      - event-notifications-events.md
       - topicgroup:
@@ -116,11 +113,6 @@ toc:
       topics:
       - responsibility_matrix.md
       - topicgroup:
-          label: High availability and disaster recovery
-          topics:
-#            - ha.md
-            - bc-dr.md
-      - topicgroup:
           label: API reference
           topics:
             - about_api.md
@@ -142,9 +134,6 @@ toc:
            - sds-cli-reference.md
            - curl.md
            - aws_cli.md
-      - link:
-          label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
