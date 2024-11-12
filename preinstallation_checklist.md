@@ -13,7 +13,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites for installation {{site.data.keyword.cephaas_full_notm}}
+# Prerequisites for installing {{site.data.keyword.cephaas_full_notm}}
 {: #pre_installation_checklist}
 
 
@@ -34,7 +34,7 @@ Before you place the order, you must confirm if the following criteria to instal
 ## {{site.data.keyword.cephaas_full_notm}} requirements
 {: #sds-sys-req}
 
-Before you connect to the IBM Cloud, create a workspace, or perform other pre-installation activities, you must complete the following tasks or keep the following information in hand:
+Before you connect to the IBM Cloud, perform other pre-installation activities, you must complete the following tasks or keep the following information in hand:
 *  You must have an active IBM Cloud account ID. To create an IBM Cloud account ID, see [Setting up your IBM Cloud account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started){: external}.
 *  Create a Satellite location associated with an IBM Cloud region. Select the IBM Cloud region that is closest to the physical location of your data center. The network latency between your data center and the selected IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Create a Satellite location overview](https://cloud.ibm.com/docs/satellite?topic=satellite-locations){: external}.
 
