@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-12"
 
 keywords: managing deployments in vsphere plug-in
 
@@ -35,7 +35,7 @@ For editing deployment details such as the name and API key, use the following p
 1. From the deployment dashboard of the vSphere Client, select the deployment you need to edit and click the pencil icon.
 2. **Edit Deployment Details** screen is displayed. 
 3. Enter the valid API key to either replace the key or rename the deployment 
-4. Click **Update**. 
+4. Click **Edit**. 
 
 ## Deleting a deployment
 {: #delete-deployment}

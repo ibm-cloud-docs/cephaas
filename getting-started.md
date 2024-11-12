@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-11-12"
 
 keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
 
@@ -25,7 +25,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #prereqs}
 {: step}
 
-You can select the term (1, 2, 3, 4, or 5 years), performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
+You can select the term (3, 4, or 5 years), performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
 The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two options:
 
