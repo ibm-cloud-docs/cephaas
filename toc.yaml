@@ -115,11 +115,11 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-#      - topicgroup:
-#          label: High availability and disaster recovery
-#          topics:
+      - topicgroup:
+          label: High availability and disaster recovery
+          topics:
 #            - ha.md
-#            - bc-dr.md
+            - bc-dr.md
       - topicgroup:
           label: API reference
           topics:

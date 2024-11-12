@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: cephaas, block storage, rename host
 
@@ -49,7 +49,7 @@ To rename a host, follow these steps:
 
 To rename the host using CLI, use the `host-update` command to rename a specific host.
 
-Run the following command to update the details of a specific host in a service instance.
+Run the following command to update the name of a specific host.
 
 ```sh
 ibmcloud software-defined-storage host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATCH-FILE] --url string

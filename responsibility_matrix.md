@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -16,10 +16,10 @@ subcollection: cephaas
 {: #responsibility-matrix}
 
 
-Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cephaas_short}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
+Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cephaas_short}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities){: external}.
 {: shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cephaas_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cephaas_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cloud}} Terms and Notices](https://www.ibm.com/terms/?id=i126-9923){: external}.
 
 
 
@@ -82,4 +82,20 @@ Security and regulation compliance includes tasks such as security controls impl
 | Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | Update IAM policies and rules using IBM Cloud console to suit to your requirement. Also, ensure that the use of Storage resources are inline with the terms and conditions set forth in the IBM Cloud Service description and any other associated transaction documents. |
 {: row-headers}
 {: caption="Responsibilites for security and regulation compliance" caption-side="bottom"}
+{: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
+
+
+## Disaster recovery
+{: #disaster-recovery}
+
+Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
+
+| Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
+|----------|-----------------------|--------|
+| `Service` |  |  |
+
+|Task 2|   |  |
+|Task 3|   |  |
+{: row-headers}
+{: caption="Responsibilites for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

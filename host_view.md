@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, host, view host details, host summary list
 
@@ -115,7 +115,7 @@ ibmcloud software-defined-storage host --host-id HOST-ID --url string
 {: pre}
 
 
-The following example uses the volume ID to show volume details.
+The following example uses the host ID to show host details.
 
 ```sh
 $ ibmcloud software-defined-storage host \
@@ -142,9 +142,8 @@ ibmcloud software-defined-storage hosts [--limit LIMIT] [--name NAME] --url stri
 ```
 {: pre}
 
-Specifying the service instance ID is required since it is used to filter the list of volumes that belong to the specified service instance.
 
-The following example shows all volumes for the service instance specified in your availability zone.
+The following example shows all volumes in your availability zone.
 
 ```sh
 ibmcloud software-defined-storage hosts \

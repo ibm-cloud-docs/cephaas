@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -64,7 +64,7 @@ To increase the block volume-provisioned size from the Volume details page, comp
 Use the `volume-update` command and specify the deployment ID, volume ID, capacity (in gigabytes), and enpoint to update the capacity of a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-update --id ID --capacity CAPACITY --url string
+ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --capacity CAPACITY --url string
 ```
 {: pre}
 
@@ -72,7 +72,7 @@ See the following example for updating the capacity of a volume.
 
 ```bash
 
-ibmcloud sds volume-update --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --capacity 20 --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --capacity 20 --url $sds_endpoint
 ...
 
 ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b

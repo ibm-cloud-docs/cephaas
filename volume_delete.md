@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -61,12 +61,12 @@ To delete multiple volumes together, follow these steps:
 {: #deleting-block-volume-cli}
 {: cli}
 
-Use the `volume-delete` command to delete a single volume. Specify the volume ID with `--id ID` and API endpoint url.
+Use the `volume-delete` command to delete a single volume. Specify the volume ID with `--volume-id VOLUME-ID` and API endpoint url.
 
 Run the following command to delete a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-delete --id ID --url string
+ibmcloud software-defined-storage volume-delete --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
@@ -74,7 +74,7 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage volume-delete \
-    --id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
     --url $sds_endpoint
 ```
 {: screen}

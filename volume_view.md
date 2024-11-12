@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: list all volumes, view volume details
 
@@ -97,7 +97,7 @@ View details about a volume or summary information about all volumes from the CL
 Run the following command to show volume details for a specific volume `ID` along with the endpoint url.
 
 ```sh
-ibmcloud software-defined-storage volume --id ID --url string
+ibmcloud software-defined-storage volume --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
@@ -105,7 +105,7 @@ ibmcloud software-defined-storage volume --id ID --url string
 The following example uses the volume ID to show volume details.
 
 ```sh
-$ ibmcloud sds volume --url $sds_endpoint --id r134-3a7a8360-be78-4723-a341-356be350e683
+$ ibmcloud sds volume --url $sds_endpoint --volume-id r134-3a7a8360-be78-4723-a341-356be350e683
 ...
 
 ID             r134-3a7a8360-be78-4723-a341-356be350e683

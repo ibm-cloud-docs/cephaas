@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas host,
 
@@ -49,7 +49,7 @@ You can create hosts by using the command-line interface (CLI).
 Run the following command to create a new host from a host template object.
 
 ```sh
-ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS] --url string
+ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
 ```
 {: pre}
 

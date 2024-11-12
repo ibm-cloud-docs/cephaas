@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -48,12 +48,12 @@ To manage your Block storage volumes, you can use the `volume-update` command to
 Specify the volume ID, and new name of the volume along with the endpoint when runing the following command for updating the name of a volume.
 
 ```sh
-ibmcloud software-defined-storage volume-update --id ID --name NAME --url string
+ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --name NAME --url string
 ```
 {: pre}
 
 ```bash
-ibmcloud sds volume-update --id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
 ...
 
 ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -54,7 +54,7 @@ The volume names can include a combination of lowercase alpha-numeric characters
 {: requirement}
 
 ```sh
-ibmcloud software-defined-storage volume-create [--capacity CAPACITY] [--name NAME] [--profile (PROFILE | @PROFILE-FILE) | --profile-name PROFILE-NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
 {: pre}
 
