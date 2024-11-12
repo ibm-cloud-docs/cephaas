@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-12"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -78,6 +78,28 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
     ibmcloud resource service-instance-create <instance-name> software-defined-storage <plan> global <satellite-location> -p ‘{“satellite_crn":"<satellite-crn>","order_id":"<order-id>”}’ -g Default
     ```
     {: pre}
+
+    See example.
+
+    ```sh
+    $ ibmcloud resource service-instance-create service-instance-cli software-defined-storage 38bacce6d-9644-4b88-8v40-f5e44e6c75c5 satloc_dal_cqsuoub20mq4s939tq20 -p '{"satellite_crn"}: "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cqsuoub20mq4s939tq20::","order_id":"account-1"}' -g Default
+    Creating service instance service-instance-cli in resource group Default of account account-1 as user@company.com...
+    OK
+    Service instance service-instance-cli  was created.
+
+    Name:             service-instance-cli
+    ID:               crn:v1:staging:public:software-defined-storage:satloc_dal_cqsuoub20mq4s939tq20:a/3faf73b8d12b47fa6ce87494f8ae7686:421e79b8-aa9f-4d69-bc57-4a9d5955e1a6::
+    GUID:             421e79b8-aa9f-4d69-bc57-4a9d5955e1a6
+    Location:         satloc_dal_cqsuoub20mq4s939tq20
+    State:            provisioning
+    Type:             service_instance
+    Sub Type:
+    Allow Cleanup:    false
+    Locked:           false
+    Created at:       2024-08-23T07:38:11Z
+    Updated at:       2024-08-23T07:38:12Z
+    ```
+    {: screen}
 
 When creating a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found by using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}

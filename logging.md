@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-12"
 
 keywords: cephaas, logging for IBM CephaaS, observability, platform logs, ceph as a service
 
@@ -37,7 +37,7 @@ For more information about launching the {{site.data.keyword.logs_full_notm}} UI
 ## Fields by log type
 {: #log-fields}
 
-For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#platform_reqd)
+For information about fields included in every platform log, see [Fields for platform logs](/docs/logs-router?topic=logs-router-about-platform-logs#about-platform-logs-2)
 
 | Field             | Type       | Description             |
 |-------------------|------------|-------------------------|

@@ -93,7 +93,6 @@ Disaster recovery includes tasks such as providing dependencies on disaster reco
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | `Service` |  |  |
-
 |Task 2|   |  |
 |Task 3|   |  |
 {: row-headers}

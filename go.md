@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-11-12"
 
 keywords: object storage, go, sdk
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 The {{site.data.keyword.cephaas_full}} SDK for Go provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
-The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/ibm-cos-sdk-go/){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/ibm-cos-sdk-go){: external}.
+The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/sds-go-sdk/sdsaasv1){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk/sdsaasv1){: external}.
 
 ## Getting the SDK
 {: #go-get-sdk}
@@ -26,14 +26,14 @@ The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with ma
 Use `go get` to retrieve the SDK to add it to your GOPATH workspace, or project's Go module dependencies. The SDK requires a minimum version of Go 1.10 and maximum version of Go 1.12. Future versions of Go will be supported once our quality control process has been completed.
 
 ```sh
-go get github.com/IBM/ibm-cos-sdk-go
+go get github.com/IBM/sds-go-sdk/sdsaasv1
 ```
 {: pre}
 
 To update the SDK use `go get -u` to retrieve the latest version of the SDK.
 
 ```sh
-go get -u github.com/IBM/ibm-cos-sdk-go
+go get -u github.com/IBM/sds-go-sdk/sdsaasv1
 ```
 {: pre}
 
@@ -43,10 +43,7 @@ go get -u github.com/IBM/ibm-cos-sdk-go
 After installing the SDK, import the packages that is required for the Go applications to use the SDK, as shown in the following example:
 ```sh
 import (
-    "github.com/IBM/ibm-cos-sdk-go/aws/credentials/ibmiam"
-    "github.com/IBM/ibm-cos-sdk-go/aws"
-    "github.com/IBM/ibm-cos-sdk-go/aws/session"
-    "github.com/IBM/ibm-cos-sdk-go/service/s3"
+	"github.com/IBM/sds-go-sdk/sdsaasv1"
 )
 ```
 {: codeblock}
@@ -56,7 +53,7 @@ import (
 
 To connect to {{site.data.keyword.cephaas_full_notm}}, a client is created and configured by providing credential information (API key and service instance ID). These values can also be automatically sourced from a credentials file or from environment variables.
 
-The credentials can be found by creating a [Service Credential](/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials), or through the CLI.
+The credentials can be found by creating a [Service Credential](/docs/cephaas?topic=cephaas-creating-s3-credential-sds), or through the CLI.
 
 Figure 1 shows an example of how to define environment variables in an application runtime at the {{site.data.keyword.cos_full_notm}} portal. The required variables are `IBM_API_KEY_ID` containing your Service Credential `apikey`, `IBM_SERVICE_INSTANCE_ID` holding the `resource_instance_id` also from your Service Credential, and an `IBM_AUTH_ENDPOINT` with a value appropriate to your account, like `https://iam.cloud.ibm.com/identity/token`. If using environment variables to define your application credentials, use `WithCredentials(ibmiam.NewEnvCredentials(aws.NewConfig())).`, replacing the similar method used in the configuration example.
 
@@ -805,4 +802,3 @@ func main() {
 {: #go-next-steps}
 
 If you haven't already, please see the detailed class and method documentation available at the [Go API documentation].
-

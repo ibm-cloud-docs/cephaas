@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-12"
 
 keywords: about, basics, cephaas object storage
 
@@ -55,6 +55,6 @@ You must have the IBM Cloud Platform Command Line installed to use the examples.
 
 
 ## Next Steps
-{: #next-steps}
+{: #about-obj-storage-next-steps}
 
 Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).
