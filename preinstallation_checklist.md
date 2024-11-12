@@ -13,7 +13,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites for installing {{site.data.keyword.cephaas_full_notm}}
+# Prerequisites for installing {{site.data.keyword.cephaas_short}} server
 {: #pre_installation_checklist}
 
 
