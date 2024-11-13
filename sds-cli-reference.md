@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -797,7 +797,7 @@ ibmcloud software-defined-storage config
 This is an example for setting the url option.
 
 ```sh
-pc@mac ~ % ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 OK
 ```
 {: screen}
@@ -849,7 +849,7 @@ See example.
 
 ```sh
 pc@mac ~ % ibmcloud sds config get url
-http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ```
 {: screen}
 
@@ -870,7 +870,7 @@ See example.
 ```sh
 pc@mac ~ % ibmcloud sds config list url
 url
-http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ```
 {: screen}
 
@@ -892,13 +892,13 @@ When `set` command is used together with `url` option, the value for the 'url' o
 See example on with `url` option.
 
 ```sh
-pc@mac ~ % ibmcloud sds config set url http://c-01.private.eu-de.link.satellite.cloud.ibm.com:33189/v1
+pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 OK
 ```
 {: screen}
 
 
-### Reset config values
+### Unset config values
 {: #ic-unset-config-values}
 
 Using `unset` with `config` command allows you to reset the current configured values for a specific option.
