@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}} as a service, private cloud
 
@@ -17,7 +17,7 @@ subcollection: cephaas
 {: #site-access-requirements}
 
 
-Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.cephaas_full_notm}} racks. Work with the IBM representative to ensure that these prerequisites are completed before the pods are delivered to your data center.
+Site planners can use this information to assess the physical site and operational requirements that are necessary to prepare your site for new {{site.data.keyword.cephaas_full_notm}} racks. Work with the IBM representative to ensure that these prerequisites are completed before the racks are delivered to your data center.
 
 
 

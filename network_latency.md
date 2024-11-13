@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords: network latency, {{site.data.keyword.cephaas_full_notm}}, on-premises
 
@@ -38,7 +38,7 @@ You can note the IP addresses for the IBM Cloud region that you want to test fro
 
 To check the latency requirements of a connection, complete the following steps:
 
-1. From a computer in the data center where you place the pod, ping the IP address of the IBM Cloud region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the pod is placed.
+1. From a computer in the data center where you place the rack, ping the IP address of the IBM Cloud region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the rack is placed.
 
    For example,
    ```text
@@ -49,7 +49,7 @@ To check the latency requirements of a connection, complete the following steps:
 
 3. In the **ping statistics** output, note the average (avg) round-trip distance in milliseconds (ms) between the host and the IBM Cloud region. Compare whether the connection meets the latency requirement of less than or equal to 200 milliseconds (<= 200 ms).
 
-If you are selecting the IBM Direct Link 2.0 Connect to connect the Virtual Private Cloud (VPC) on IBM Cloud and the router on pod, the minimum speed must be 1 Gbps.
+If you are selecting the IBM Direct Link 2.0 Connect to connect the Virtual Private Cloud (VPC) on IBM Cloud and the router on rack, the minimum speed must be 1 Gbps.
 {: note}
 
 The following example meets the latency requirements as the round-trip time is 77.716 ms:

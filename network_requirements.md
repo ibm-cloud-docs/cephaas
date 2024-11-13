@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
-keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud
+keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network requirement
 
 subcollection: cephaas
 
@@ -21,11 +21,3 @@ To facilitate the {{site.data.keyword.cephaas_full_notm}} server infrastructure 
 * Contract with a service provider to:
     * Provide redundant connections to the IBM Direct Link connection or VPN connection.
     * Provide the last mile connection from the point-of-presence (PoP) of your service provider to the customer data center.  
-
-For network architecture diagrams, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-private-cloud#netwok-architecture-diagrams).
-
-Setting up a network has two parts:
-* [Control plane network](/docs/power-iaas?topic=power-iaas-network-private-cloud#control-plane-network) - for communication between IBM Cloud and the pod.
-* [Data plane network](/docs/power-iaas?topic=power-iaas-network-private-cloud#data-plane-network) - for accessing virtual servers.
-
-

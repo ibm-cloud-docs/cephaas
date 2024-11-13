@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -88,13 +88,12 @@ Security and regulation compliance includes tasks such as security controls impl
 ## Disaster recovery
 {: #disaster-recovery}
 
-Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
+Disaster recovery includes tasks such as data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| `Service` |  |  |
-|Task 2|   |  |
-|Task 3|   |  |
+| Meet disaster recovery objectives | Provides procedure for manual disaster recovery. | Use application level backup and DR solutions while maintaining a disaster recovery plan for their applications.  |
+| Meet high availability objectives | IBM Cloud is available globally and is highly available. For more information about high availability, see the IBM service level objectives. IBM Storage Ceph as a service deployment on-prem is highly available for services as well as data access by means of replication and erasure coding.  | Follow best practices for application level high availability. |
 {: row-headers}
 {: caption="Responsibilites for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

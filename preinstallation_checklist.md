@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -22,14 +22,14 @@ Proper planning is essential for the successful setup and use of {{site.data.key
 
 IBM owns the responsibility to install, upgrade, and update the hardware and software for the on-premise infrastructure. IBM coordinates with you for any dependencies to ensure that your {{site.data.keyword.cephaas_full_notm}} data center meets all the prerequisites before the installation.
 
-IBM provides a pre-installation checklist after you place an order for {{site.data.keyword.cephaas_full_notm}} and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your IBM {{site.data.keyword.cephaas_notm}} environment for the installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
+IBM provides a pre-installation checklist after you place an order for {{site.data.keyword.cephaas_full_notm}} and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your {{site.data.keyword.cephaas_full_notm}} environment for the installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
 
 ## Preorder checklist
 {: #pre-order-check}
 
-Before you place the order, you must confirm if the following criteria to install the pod in your data center are met:
-*  Identify an IBM Cloud region closest to the physical location of your data center where the pod resides. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/cephaas?topic=cephaas-network_latency_main).
-*  Confirm that the site and environment requirements to place the pod are met. For more information, see [Site-planning and environmental requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist#site-plan-env-req).
+Before you place the order, you must confirm if the following criteria to install the rack in your data center are met:
+*  Identify an IBM Cloud region closest to the physical location of your data center where the rack resides. The network latency between your data center and the selected IBM Cloud region that will run the control plane must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Network latency](/docs/cephaas?topic=cephaas-network_latency_main).
+*  Confirm that the site and environment requirements to place the rack are met. For more information, see [Site-planning and environmental requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist#site-plan-env-req).
 
 ## {{site.data.keyword.cephaas_full_notm}} requirements
 {: #sds-sys-req}
@@ -42,21 +42,21 @@ Before you connect to the IBM Cloud, perform other pre-installation activities, 
 {: #site-plan-env-req}
 
 Before you place the order, you must prepare your data center site to meet the following site and environmental requirements:
-*  The data center can accommodate all the 42U racks in a pod. For example, a small pod contains one 42U rack and a medium pod might contain two or four 42U racks.
+*  The data center can accommodate all the 42U racks in a rack. For example, a small rack contains one 42U rack and a medium rack might contain two or four 42U racks.
 *  The floor of the data center is able to withstand the weight of the racks and other equipment. For more information about rack dimensions and weight, see [Site access requirements](/docs/cephaas?topic=cephaas-site-access-requirements).
 *  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control is ready. For more information, see [Environmental requirements](/docs/cephaas?topic=cephaas-environmental-requirements).
 *  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements](/docs/cephaas?topic=cephaas-power-requirements).
 *  The data center is in a secured location with restricted access. For more information, see [Site readiness](/docs/cephaas?topic=cephaas-site-readiness).
 
-The following data center site requirements must be met before the pod is delivered to your data center:
-*  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the pod infrastructure.
-*  Ensure that the power cables and network cables are routed to the location where the pod will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
+The following data center site requirements must be met before the rack is delivered to your data center:
+*  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the rack infrastructure.
+*  Ensure that the power cables and network cables are routed to the location where the rack will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
 *  Identify a network administrator and hire a service provider who can participate in establishing the connections to IBM Direct Link connection or VPN connection and to provide last mile connectivity.
 
 ## Networking requirements
 {: #network-req}
 
-The following network requirements must be completed before the pod is delivered to your data center:
+The following network requirements must be completed before the rack is delivered to your data center:
 *  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
 *  Review and identify the available network use cases and communicate your requirements to IBM before you proceed with installation. For more information, see [Network use cases].
 
@@ -69,9 +69,9 @@ You must complete the following steps to validate the network functions and to a
 * The SRE team configures the network for network validation testing.
     The network validation testing ensures the functionality of the control plane network.
 * The SRE team conducts provisioning testing over the control plane by simulating a user request from the IBM Cloud.
-    To complete the remaining network connectivity after the installation of the pod, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
+    To complete the remaining network connectivity after the installation of the rack, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
 * After testing is complete, the SRE team activates the account specifying the period from when the billing starts.
-* The SRE team works with you to ensure the visibility of the pod Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
+* The SRE team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
 * Perform a provisioning test by using the service broker. The provisioning test is successful if the following statements are true:
     * A virtual machine is successfully provisioned.
     * The virtual machine has an IP address that is assigned to it.
