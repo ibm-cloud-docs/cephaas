@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-11-13"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -35,8 +35,8 @@ This Quick Start guide provides a code example that demonstrates the following o
 You need:
 
 * An [{{site.data.keyword.cloud}} Platform account](https://cloud.ibm.com/login)
-* An [instance of {{site.data.keyword.cos_full_notm}}](/docs/cephaas?topic=cephaas-provision)
-* An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) with Writer access to your {{site.data.keyword.cos_short}}
+* An [instance of {{site.data.keyword.cephaas_full_notm}}](/docs/cephaas?topic=cephaas-provision)
+* An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) with Writer access to your {{site.data.keyword.cephaas_short}}
 
 ## Getting the SDK
 {: #sdk-gs-install}
@@ -55,9 +55,9 @@ To complete the code example, you need to replace the following values:
 
 |Value|Description|Example|
 |---|---|---|
-|`<endpoint>`|Regional endpoint for your COS instance|`s3.us-south.cloud-object-storage.appdomain.cloud`|
+|`<endpoint>`|Regional endpoint for your {{site.data.keyword.cephaas_short}} instance|`s3.us-south.software-defined-storage.appdomain.cloud`|
 |`<api-key>`|IAM API Key with at least `Writer` permissions|`xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4`|
-|`<resource-instance-id>`|Unique ID for the Service Instance|`crn:v1:bluemix:public:cloud-object-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::`|
+|`<resource-instance-id>`|Unique ID for the Service Instance|`crn:v1:bluemix:public:software-defined-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::`|
 |`<storage-class>`|Storage class for a new bucket|`us-south-standard`|
 
 For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints).
@@ -68,10 +68,10 @@ package main
 import (
     "bytes"
     "fmt"
-    "github.com/IBM/ibm-cos-sdk-go/aws"
-    "github.com/IBM/ibm-cos-sdk-go/aws/credentials/ibmiam"
-    "github.com/IBM/ibm-cos-sdk-go/aws/session"
-    "github.com/IBM/ibm-cos-sdk-go/service/s3"
+    "github.com/IBM/sds-go-sdk/aws"
+    "github.com/IBM/sds-go-sdk/aws/credentials/ibmiam"
+    "github.com/IBM/sds-go-sdk/aws/session"
+    "github.com/IBM/sds-go-sdk/service/s3"
     "io"
     "math/rand"
     "os"

@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
-keywords: object storage, go, sdk
+keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
 subcollection: cephaas
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 The {{site.data.keyword.cephaas_full}} SDK for Go provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
-The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/sds-go-sdk/sdsaasv1){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk/sdsaasv1){: external}.
+The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/sds-go-sdk){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
 
 ## Getting the SDK
 {: #go-get-sdk}
@@ -41,6 +41,7 @@ go get -u github.com/IBM/sds-go-sdk/sdsaasv1
 {: #go-import-packages}
 
 After installing the SDK, import the packages that is required for the Go applications to use the SDK, as shown in the following example:
+
 ```sh
 import (
 	"github.com/IBM/sds-go-sdk/sdsaasv1"
@@ -55,7 +56,7 @@ To connect to {{site.data.keyword.cephaas_full_notm}}, a client is created and c
 
 The credentials can be found by creating a [Service Credential](/docs/cephaas?topic=cephaas-creating-s3-credential-sds), or through the CLI.
 
-Figure 1 shows an example of how to define environment variables in an application runtime at the {{site.data.keyword.cos_full_notm}} portal. The required variables are `IBM_API_KEY_ID` containing your Service Credential `apikey`, `IBM_SERVICE_INSTANCE_ID` holding the `resource_instance_id` also from your Service Credential, and an `IBM_AUTH_ENDPOINT` with a value appropriate to your account, like `https://iam.cloud.ibm.com/identity/token`. If using environment variables to define your application credentials, use `WithCredentials(ibmiam.NewEnvCredentials(aws.NewConfig())).`, replacing the similar method used in the configuration example.
+Figure 1 shows an example of how to define environment variables in an application runtime at the {{site.data.keyword.cephaas_full_notm}} portal. The required variables are `IBM_API_KEY_ID` containing your Service Credential `apikey`, `IBM_SERVICE_INSTANCE_ID` holding the `resource_instance_id` also from your Service Credential, and an `IBM_AUTH_ENDPOINT` with a value appropriate to your account, like `https://iam.cloud.ibm.com/identity/token`. If using environment variables to define your application credentials, use `WithCredentials(ibmiam.NewEnvCredentials(aws.NewConfig())).`, replacing the similar method used in the configuration example.
 
 ![environment variables](images/go-library-fig-1-env-vars.png){: caption="Environment Variables"}
 
