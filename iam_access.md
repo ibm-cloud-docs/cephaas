@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-11-13"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
 
@@ -143,73 +143,3 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 ```
 {: curl}
 {: codeblock}
-
-
-```go
-subjectAttribute := &iampolicymanagementv1.SubjectAttribute{
-  Name:  core.StringPtr("iam_id"),
-  Value: core.StringPtr("IBMid-123453user"),
-}
-policySubjects := &iampolicymanagementv1.PolicySubject{
-  Attributes: []iampolicymanagementv1.SubjectAttribute{*subjectAttribute},
-}
-policyRoles := &iampolicymanagementv1.PolicyRole{
-  RoleID: core.StringPtr("crn:v1:bluemix:public:software-defined-storage::::serviceRole:Viewer"),
-}
-accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
-  Name:     core.StringPtr("accountId"),
-  Value:    core.StringPtr("ACCOUNT_ID"),
-  Operator: core.StringPtr("stringEquals"),
-}
-serviceNameResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
-  Name:     core.StringPtr("serviceName"),
-  Value:    core.StringPtr("software-defined-storage"),
-  Operator: core.StringPtr("stringEquals"),
-}
-policyResources := &iampolicymanagementv1.PolicyResource{
-  Attributes: []iampolicymanagementv1.ResourceAttribute{
-    *accountIDResourceAttribute, *serviceNameResourceAttribute}
-}
-
-options := iamPolicyManagementService.NewCreatePolicyOptions(
-  "access",
-  []iampolicymanagementv1.PolicySubject{*policySubjects},
-  []iampolicymanagementv1.PolicyRole{*policyRoles},
-  []iampolicymanagementv1.PolicyResource{*policyResources},
-)
-
-policy, response, err := iamPolicyManagementService.CreatePolicy(options)
-if err != nil {
-  panic(err)
-}
-b, _ := json.MarshalIndent(policy, "", "  ")
-fmt.Println(string(b))
-```
-{: go}
-{: codeblock}
-
-## Assigning access to {{site.data.keyword.cephaas_short}} by using Terraform
-{: #assign-access-terraform}
-{: terraform}
-
-
-
-The following example is for assigning the `<Viewer>` role for `<software-defined-storage>`:
-
-Use `<programmatic_service_name>` for the service name.
-{: tip}
-
-
-
-```terraform
-resource "ibm_iam_user_policy" "policy" {
-  ibm_id = "test@example.com"
-  roles  = ["Viewer"]
-  resources {
-    service = "software-defined-storage"
-  }
-}
-```
-{: codeblock}
-
-For more information, see [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external}.
