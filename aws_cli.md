@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-14"
 
 keywords: cephaas, cli, command-line interface, object storage, s3
 
@@ -33,7 +33,7 @@ To configure the AWS CLI, type `aws configure` and provide your [HMAC credential
 aws configure
 AWS Access Key ID [None]: {Access Key ID}
 AWS Secret Access Key [None]: {Secret Access Key}
-Default region name [None]: {Provisioning Code}
+Default region name [None]: {Region name}
 Default output format [None]: json
 ```
 
@@ -52,11 +52,17 @@ aws_secret_access_key = {Secret Access Key}
 
 ```sh
 [default]
-region = {Provisioning Code}
+region = {Region name}
 output = json
+endpoint_url = {endpoint}
+ca_bundle = {CA certificate location}
 ```
 {: codeblock}
 
+The {{site.data.keyword.cephaas_short}} endpoint must be sourced by using the `--endpoint-url` option, and can be set in the aws config file.
+
+Add your endpoint and CA Certificate location in this `~/.aws/config` config file instead of using it in all of your aws requests.
+{: tip}
 
 You can also use environment variables to set HMAC credentials:
 
@@ -67,19 +73,17 @@ export AWS_SECRET_ACCESS_KEY="{Secret Access Key}"
 {: codeblock}
 
 
-The {{site.data.keyword.cephaas_short}} endpoint must be sourced by using the `--endpoint-url` option, and can be set in the aws config file.
-
 
 ## High-level syntax commands
 {: #aws-cli-high-level}
 
-Simple use cases can be accomplished by using `aws --endpoint-url {endpoint} s3 <command>`. For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints). Objects are managed by using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`. Buckets can be created by using `mb` and deleted by using `rb`.
+Simple use cases can be accomplished by using `aws s3 <command>`. For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints). Objects are managed by using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`. Buckets can be created by using `mb` and deleted by using `rb`.
 
 ### List all buckets within a service instance
 {: #aws-cli-high-level-list-buckets}
 
 ```sh
-aws --endpoint-url {endpoint} s3 ls
+aws s3 ls
 2016-09-09 12:48  s3://bucket-1
 2016-09-16 21:29  s3://bucket-2
 ```
@@ -88,7 +92,7 @@ aws --endpoint-url {endpoint} s3 ls
 {: #aws-cli-high-level-list-objects}
 
 ```sh
-aws --endpoint-url {endpoint} s3 ls s3://bucket-1
+aws s3 ls s3://bucket-1
 2016-09-28 15:36       837   s3://bucket-1/c1ca2-filename-00001
 2016-09-09 12:49       533   s3://bucket-1/c9872-filename-00002
 2016-09-28 15:36     14476   s3://bucket-1/98837-filename-00003
@@ -104,7 +108,7 @@ aws --endpoint-url {endpoint} s3 ls s3://bucket-1
 
 
 ```sh
-aws --endpoint-url {endpoint} s3 mb s3://bucket-1
+aws s3 mb s3://bucket-1
 make_bucket: s3://bucket-1/
 ```
 
@@ -114,14 +118,14 @@ make_bucket: s3://bucket-1/
 {: #aws-cli-high-level-upload}
 
 ```sh
-aws --endpoint-url {endpoint} s3 cp large-dataset.tar.gz s3://bucket-1
+aws s3 cp large-dataset.tar.gz s3://bucket-1
 upload: ./large-dataset.tar.gz to s3://bucket-1/large-dataset.tar.gz
 ```
 
 You can also set a new object key that is different from the file name:
 
 ```sh
-aws --endpoint-url {endpoint} s3 cp large-dataset.tar.gz s3://bucket-1/large-dataset-for-project-x
+aws s3 cp large-dataset.tar.gz s3://bucket-1/large-dataset-for-project-x
 upload: ./large-dataset.tar.gz to s3://bucket-1/large-dataset-for-project-x
 ```
 
@@ -129,7 +133,7 @@ upload: ./large-dataset.tar.gz to s3://bucket-1/large-dataset-for-project-x
 {: #aws-cli-high-level-copy}
 
 ```sh
-$ aws --endpoint-url {endpoint} s3 cp s3://bucket-1/new-file s3://bucket-2/
+$ aws s3 cp s3://bucket-1/new-file s3://bucket-2/
 copy: s3://bucket-1/new-file to s3://bucket-2/new-file
 ```
 
@@ -137,7 +141,7 @@ copy: s3://bucket-1/new-file to s3://bucket-2/new-file
 {: #aws-cli-high-level-delete-object}
 
 ```sh
-aws --endpoint-url {endpoint} s3 rm s3://mybucket/argparse-1.2.1.tar.gz
+aws s3 rm s3://mybucket/argparse-1.2.1.tar.gz
 delete: s3://mybucket/argparse-1.2.1.tar.gz
 ```
 
@@ -145,7 +149,7 @@ delete: s3://mybucket/argparse-1.2.1.tar.gz
 {: #aws-cli-high-level-delete-bucket}
 
 ```sh
-aws --endpoint-url {endpoint} s3 rb s3://bucket-1
+aws s3 rb s3://bucket-1
 remove_bucket: s3://bucket-1/
 ```
 
@@ -159,7 +163,7 @@ The AWS CLI also allows direct API calls that provide the same responses as dire
 {: #aws-cli-low-level-list-buckets}
 
 ```sh
-aws --endpoint-url {endpoint} s3api list-buckets
+aws s3api list-buckets
 {
     "Owner": {
         "DisplayName": "{storage-account-uuid}",
@@ -182,7 +186,7 @@ aws --endpoint-url {endpoint} s3api list-buckets
 {: #aws-cli-low-level-list-objects}
 
 ```sh
-aws --endpoint-url {endpoint} s3api list-objects --bucket bucket-1
+aws s3api list-objects --bucket bucket-1
 ```
 
 ```json

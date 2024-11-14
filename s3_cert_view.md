@@ -81,3 +81,7 @@ A successful response looks like this:
 }
 ```
 {: screen}
+
+
+Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment for this to prevent an outage.
+{: tip}
