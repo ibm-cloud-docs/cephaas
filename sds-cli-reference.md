@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-14"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -174,7 +174,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Update a volume
 {: #ic-update-volume}
 
-Update a volume with the information in provided volume patch.
+Use `volume-update` command along with the new information provided in volume patch parameter to update the volume capacity or the volume name.
+
+You can change only one parameter value at a time in the command. More than one change in the same command is not supported.
+{: note}
 
 **USAGE:**
 
@@ -193,7 +196,7 @@ ibmcloud software-defined-storage volume-update \
     --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
     --capacity 38 \
     --name exampleString \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 

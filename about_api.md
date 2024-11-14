@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-14"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error
 
@@ -72,8 +72,8 @@ These operations create, delete, get information about, and control the behavior
 | `POST` certificate              | Uploads S3 certificate.                                                             |
 | `GET` certificate               | Retrieves the certificate details.                                                  |
 | `POST` credentials              | Creates S3 credential for object.                                                   |
-| `GET` credential                | Retrieves one or more S3 credentials.                                               |
-| `DELETE` credential             | Deletes the S3 credential.                                                          |
+| `GET` credentials                | Retrieves one or more S3 credentials.                                               |
+| `DELETE` credentials             | Deletes the S3 credential.                                                          |
 {: caption="Object admin operation" caption-side="top"}
 
 

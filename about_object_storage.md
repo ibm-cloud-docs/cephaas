@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-14"
 
 keywords: about, basics, cephaas object storage
 
@@ -24,7 +24,7 @@ All data stored in {{site.data.keyword.cephaas_short}} Object Storage is encrypt
 
 All requests and responses are made over `HTTPS`. All `GET` and `HEAD` requests made to objects return an Etag value with the MD5 hash of the object to ensure integrity on the client side.
 
-Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for Go framework. A plug-in is available for the [{{site.data.keyword.cloud_notm}} Command-Line Interface](/docs/cli?topic=cli-getting-started){: external}.
+Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for Go framework.
 
 
 ## Known limitations
@@ -50,8 +50,7 @@ The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading a
 
 You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds).
 
-You must have the IBM Cloud Platform Command Line installed to use the examples.
-{: requirement}
+
 
 
 ## Next Steps

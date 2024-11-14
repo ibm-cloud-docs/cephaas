@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-11-14"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating object storage S3 credential
 {: #creating-s3-credential-sds}
 
-A credential consist of an Access Key and Secret Key paired for use with S3-compatible tools and libraries that require authentication.
+A credential consist of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
 {: shortdesc}
 
 
@@ -41,7 +41,7 @@ To create s3 credential, complete the following steps.
 
 3. Enter S3 credential **Name** and click **Add**.
 
-    Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+    Avoid using special characters when creating access keys with the exception of dashes `-` and underscores `_` symbols. All alphabets and numbers are allowed.
     {: important}
 
 4. After the credential is created, **Copy** the credential or click **Download** to save the credential to your local system.
