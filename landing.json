@@ -3,7 +3,7 @@
   "introduction": "IBM® Storage Ceph® as a Service is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Leverage the docs, API & SDK reference, architecture references, and more to support your development needs.",
   "version": 2,
   "product_page": "https://www.ibm.com/products/storage-ceph",
-  "console_page": "/catalog/storage/service/software-defined-storage",
+  "console_page": "/software-defined-storage/deployments",
   "section_topics": {
     "links": [
       {
@@ -30,8 +30,7 @@
   },
   "section_devtools": {
     "api": "/apidocs/software-defined-storage",
-    "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference",
-    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
+    "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference"
   },
   "section_updates": {
     "view_more": "/docs/cephaas?topic=cephaas-relnotes"
