@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-14"
 
 keywords: Connect VMware environment
 
@@ -50,7 +50,7 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
     The registration command displays the thumbprint of the vSphere instance for verification.
 
     ```sh
-    ibm-plugin status
+    ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter
     ```
     {: pre}
 
@@ -68,7 +68,7 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 Check the plug-in status to see which vCenters are registered to the appliance.
 
 ```sh
-ibm-plug-in status
+ibm-plugin status
 ```
 {: pre}
 
