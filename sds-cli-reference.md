@@ -871,7 +871,7 @@ ibmcloud software-defined-storage config list
 See example.
 
 ```sh
-pc@mac ~ % ibmcloud sds config list url
+pc@mac ~ % ibmcloud sds config list
 url
 http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ```
@@ -909,7 +909,7 @@ Using `unset` with `config` command allows you to reset the current configured v
 **USAGE**
 
 ```sh
-ibmcloud software-defined-storage config set [option]
+ibmcloud software-defined-storage config unset [option]
 ```
 {: pre}
 
