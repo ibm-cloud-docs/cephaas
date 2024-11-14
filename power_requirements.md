@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-14"
 
 keywords: planning, site-readiness, on-premises, on premises, on-prem, power requirement, power
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 
 Your on-premises site for {{site.data.keyword.cephaas_full_notm}} must be provisioned with A-side and B-side power redundancy that meets the {{site.data.keyword.cephaas_full_notm}} rack connector and load requirements. Table 1 shows the rack connector and load requirements.
 
-Be sure to read all caution and danger statements provided in the Safety notices before you perform the procedures. For more information about safety notices containing the caution and danger information, see [Safety notices](/docs/cephaas?topic=cephaas-safety-notices){: external}. Read any additional safety information that comes with your system or optional device before you install the device.
+Be sure to read all caution and danger statements provided in the Safety notices before you perform the procedures.  Read any additional safety information that comes with your system or optional device before you install the device.
 
 
 | Corresponding PDU| Rack line cord feature code | Wall plug      | Rated voltage (V AC) line to line | Phase   | Rated amperage | Location |

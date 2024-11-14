@@ -24,7 +24,7 @@ All data stored in {{site.data.keyword.cephaas_short}} Object Storage is encrypt
 
 All requests and responses are made over `HTTPS`. All `GET` and `HEAD` requests made to objects return an Etag value with the MD5 hash of the object to ensure integrity on the client side.
 
-Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for Go framework.
+Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. 
 
 
 ## Known limitations
@@ -44,7 +44,7 @@ This section includes the known limitations that might impact your experience.
 ## HMAC credentials
 {: #about-hmac-creds}
 
-HMAC credentials consist of an Access Key and Secret Key paired for use with S3-compatible tools and libraries that require authentication.
+HMAC credentials consist of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
 
 The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to IBM Cloud.
 

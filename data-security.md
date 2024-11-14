@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-10-15"
+lastupdated: "2024-11-14"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -62,4 +62,4 @@ After the storage space is reclaimed, the disk is wiped, and data cannot be rest
 Customers with special requirements for compliance such as [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final) can perform the data sanitization procedure before they delete their storage.
 
 
-The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
+The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cephaas_full_notm}} Terms and Notices](https://www.ibm.com/terms/?id=i126-9923).
