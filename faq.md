@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-11-18"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -143,6 +143,8 @@ To help ensure a throttling of 10000 IOPS, the volume capacity should be at leas
 {: #faq-create-vol-thruput-1kmbps}
 
 To help ensure a throttling of 1000 * 1000 KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
+
+### 
 
 
 ## FAQs on low-cost objects
