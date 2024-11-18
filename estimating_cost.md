@@ -24,7 +24,7 @@ Here are the steps for estimating cost of your IBM Ceph as a Service order.
 5. **Create** tab is displayed by default which displays the following sections.
 
     - **Location**: Enter your Geography, Country, and State.
-    - **Subscription term**: Select the subscription term from from 1 to 5 years. Longer subscription term can reduce your cost.
+    - **Subscription term**: Select the subscription term from from 3 to 5 years. Longer subscription term can reduce your cost.
     - **Storage details**: Select the storage tier from **Performance** and **Capacity**. Performace tier offers both - Block and Object storage. The Capacity tier offers Object storage only.
 
 6. Select **Total storage** in TB. For the Performance tier, the available range is from 100 to 800 TB and for the Capacity tier, the available range is from 800 to 3200 TB. 
