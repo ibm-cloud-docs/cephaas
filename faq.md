@@ -144,7 +144,20 @@ To help ensure a throttling of 10000 IOPS, the volume capacity should be at leas
 
 To help ensure a throttling of 1000 * 1000 KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
 
-### 
+### What does the ‘pending’ status mean for block volumes and hosts?
+{: #faq-pending-status-block-volumes-hosts}
+
+Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long running API cases, the caller can track the status of resource using the "status" property in GET API. 
+An ‘available’ status indicates that the processing has completed and the resource is ready for use. The pending statuses indicate that the resource is still being processed. 
+There are the following pending status that the block storage API uses:
+
+- ‘pending’: This is used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after POST /volumes, POST /hosts or PUT /hosts/{id}/volumes/{id}  call if the operation is still in progress.
+- ‘pending-deletion’: This is used when a volume deletion is in progress. GET /volumes  API will return this status after DELETE /volumes/{id} call if delete operation is still in progress.
+- "pending-unmapping": This is used when a volume unmapping from a host operation is in progress. GET /hosts  API will return this status for a volume mapping after DELETE /hosts/{id}/volumes/{id} or DELETE /hosts/{id}/volumes  call  if the unmapping operation is still in progress.
+
+The resource may remain in one of these pending states for as long as the operation does not complete. The backend will keep on trying the operation until it succeeds. 
+
+For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It will only come in ‘available’ state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller will have to implement timeouts if needed for such cases.
 
 
 ## FAQs on low-cost objects
