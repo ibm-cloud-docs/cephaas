@@ -76,6 +76,9 @@ The `ibm-plugin` status command can be run at any time.
 
 If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.
 
+If you wish to unregister the plug-in, run the command `ibm-plugin unregister`.
+{: note}
+
 ## Next Steps
 
 After the installation, you need to get the following from your admin. 
