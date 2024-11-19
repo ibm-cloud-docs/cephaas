@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-19"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -13,7 +13,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites for installing {{site.data.keyword.cephaas_short}} server
+# Prerequisites for installing {{site.data.keyword.cephaas_short}}
 {: #pre_installation_checklist}
 
 
