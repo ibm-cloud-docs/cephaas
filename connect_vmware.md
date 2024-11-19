@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-14"
+lastupdated: "2024-11-19"
 
 keywords: Connect VMware environment
 
@@ -72,7 +72,7 @@ ibm-plugin status
 ```
 {: pre}
 
-The `ibm-plug-in` status command can be run at any time.
+The `ibm-plugin` status command can be run at any time.
 
 If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.
 

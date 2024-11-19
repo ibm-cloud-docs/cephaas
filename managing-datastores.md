@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-19"
 
 keywords: managing datastores in vsphere plug-in
 
@@ -50,6 +50,6 @@ This task initiates a workflow that increases the available capacity of the sele
 
 For deleting a datastore, perform the following procedure.
 
-1. In the datastore dashboard, select the VMFS datastore that needs to be deleted from the left pane.
+1. In the datastore dashboard, select the VMFS datastore that needs to be deleted from the left pane. Datastore summary page is displayed in the right pane. 
 2. From the IBM Storage Ceph as a Service submenu, select **Delete VMFS Datastore**.
 3. Review the confirmation pop up and click **Delete**.
