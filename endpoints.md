@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-20"
 
 keywords: cephaas, endpoint, location, object storage, bucket, region, rclone, resiliency
 
@@ -15,18 +15,28 @@ subcollection: cephaas
 # Endpoints
 {: #endpoints}
 
-Sending a REST API request or configuring a storage client requires setting a target endpoint or URL. Each storage location has its own set of URLs.
-{: shortdesc}
+Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI or configuring a storage client requires setting a target endpoint or URL. Each storage appliance has a unique endpoint as named as follows: 
+- `<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.  
 
-All requests must use SSL when using IAM, and the service will reject any plain-text requests.
+To retrieve your `cephaas-instance-id` from the IBM Cloud CLI:
+1. Download the IBM Cloud CLI
+2. Login to your IBM Cloud account using the `ibmcloud login` command.
+3. Retrieve a list of all {{site.data.keyword.cephaas_short} service instances / deployments in your IBM Cloud account using the `software-defined-storage` service name:
 
-All {{site.data.keyword.cephaas_full}} endpoints support TLS 1.2 encryption.
+   `ibmcloud resource service-instances --service-name software-defined-storage`
+4. Retrieve the {{site.data.keyword.cephaas_short} instance id (GUID) of the desired instance: 
+
+   `ibm-cloud resource service-instance <cephaas-deployment-name> --guid`
+
+An example of a {{site.data.keyword.cephaas_short}} endpoint would be: `a5646acb-bf72-4127-bd4d-71b5ba3ae253.software-defined-storage.appdomain.cloud`
+
+All {{site.data.keyword.cephaas_full}} endpoints require either TLS 1.2 or TLS 1.3 encryption.
 {: note}
 
+## Management API Endpoints
+Each Management API has a separate host identifier as follows:
+- Block Management API: `https://block-storage.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
+- Object Management API: `https://object-storage.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
 
-## Endpoint Types
-{: #advanced-endpoint-types}
-
-{{site.data.keyword.cephaas_full_notm}} is connected to a single network using **direct endpoints**.
-
-**Direct endpoints** are used for requests originating from resources within {{site.data.keyword.cephaas_short}}. Direct endpoints provide better performance over Public endpoints and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers.
+## S3 API Endpoints
+The Object Storage S3 data access APIs do not have a fully-qualified domain name assigned by IBM.  Instead, a set of IP addresses are provided to you and can provide your own, custom domain name and certificate.  TODO:  Link to instructions.

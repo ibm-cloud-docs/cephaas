@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-11-14"
+lastupdated: "2024-11-20"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -45,7 +45,7 @@ To delete the data, see the following documentation.
 
 * [Deleting object storage S3 credential](/docs/cephaas?topic=cephaas-deleting-s3-credential)
 
-When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
+When you delete any data, IBM guarantees that your data is inaccessible on the physical disk and is eventually destroyed. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures by encrypting the data and leveraging cryptographic erasure techniques before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 
 Sanitizing and deleting the resources means that your data cannot be restored.
 
