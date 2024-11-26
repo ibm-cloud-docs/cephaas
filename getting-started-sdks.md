@@ -20,14 +20,14 @@ subcollection: cephaas
 
 This Quick Start guide provides a code example that demonstrates the following operations:
 
-* Create a new bucket
-* List the available buckets
-* Create a new text file
-* List the available files
-* Retrieve the text file contents
-* Upload a large binary file
-* Delete a file
-* Delete a bucket
+* Create a new volume
+* List the available volumes
+* Create a new host
+* List the available hosts
+* Retrieve all volumes
+* Upload a certificate
+* Delete a volume
+* Delete a host
 
 ## Before you begin
 {: #sdk-gs-prereqs}
@@ -36,7 +36,7 @@ You need:
 
 * An [{{site.data.keyword.cloud}} Platform account](https://cloud.ibm.com/login)
 * An [{{site.data.keyword.cephaas_full_notm}} deployment](/docs/cephaas?topic=cephaas-creating-new-deployment)
-* An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) with Writer access to your {{site.data.keyword.cephaas_short}}
+* An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) to allow the SDK to access your account
 
 ## Getting the SDK
 {: #sdk-gs-install}

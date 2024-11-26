@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-26"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -802,4 +802,4 @@ func main() {
 ## Next Steps
 {: #go-next-steps}
 
-If you haven't already, please see the detailed class and method documentation available at the [Go API documentation].
+If you haven't already, please see the detailed class and method documentation available at the [Go API documentation](https://ibm.github.io/ibm-sds-go-sdk/){: external}.
