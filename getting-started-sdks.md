@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-26"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -35,7 +35,7 @@ This Quick Start guide provides a code example that demonstrates the following o
 You need:
 
 * An [{{site.data.keyword.cloud}} Platform account](https://cloud.ibm.com/login)
-* An [instance of {{site.data.keyword.cephaas_full_notm}}](/docs/cephaas?topic=cephaas-provision)
+* An [{{site.data.keyword.cephaas_full_notm}} deployment](/docs/cephaas?topic=cephaas-creating-new-deployment)
 * An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) with Writer access to your {{site.data.keyword.cephaas_short}}
 
 ## Getting the SDK
@@ -59,6 +59,7 @@ To complete the code example, you need to replace the following values:
 |`<api-key>`|IAM API Key with at least `Writer` permissions|`xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4`|
 |`<resource-instance-id>`|Unique ID for the Service Instance|`crn:v1:bluemix:public:software-defined-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::`|
 |`<storage-class>`|Storage class for a new bucket|`us-south-standard`|
+{: caption="Code value variable descriptions" caption-side="bottom"}
 
 For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints).
 
