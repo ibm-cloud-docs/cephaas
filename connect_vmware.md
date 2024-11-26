@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-19"
+lastupdated: "2024-11-26"
 
 keywords: Connect VMware environment
 
@@ -50,7 +50,7 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
     The registration command displays the thumbprint of the vSphere instance for verification.
 
     ```sh
-    ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter
+    ibm-plugin register -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
     ```
     {: pre}
 
@@ -81,7 +81,7 @@ If you wish to unregister the plug-in, run the command `ibm-plugin unregister`.
 
 ## Next Steps
 
-After the installation, you need to get the following from your admin. 
+After the installation, you need to get the following from your admin.
 
 - Service ID with a viewer role for {{site.data.keyword.cephaas_full_notm}}
 - API Key
