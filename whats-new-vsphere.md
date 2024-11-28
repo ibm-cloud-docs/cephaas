@@ -11,7 +11,7 @@ subcollection: Cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# What's new with IBM Storage Ceph as a service plug-in for vSphere 
+# What's new with vSphere plug-in
 {: #whats-new}
 
 Learn about the dates and nature of updates to the published information of the IBM Storage Ceph as a Service plug-in for vSphere.
@@ -27,7 +27,3 @@ Initial release of the new IBM Storage Ceph as a service plug-in for vSphere 1.0
 - Managing ESXi hosts
 
 For a full list of new features and known issues in this release, see [Release notes](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-relnotes).
-
-
-
-

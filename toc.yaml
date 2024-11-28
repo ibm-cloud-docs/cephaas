@@ -20,7 +20,6 @@ toc:
       topics:
       - getting-started.md
       - about-cephaas.md
-      - whats-new-vsphere.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -115,6 +114,7 @@ toc:
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
+            - whats-new-vsphere.md
             - connect_vmware.md
             - managing-deployments.md
             - managing-vsphere-hosts.md
