@@ -20,6 +20,7 @@ toc:
       topics:
       - getting-started.md
       - about-cephaas.md
+      - whats-new-vsphere.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -50,7 +51,6 @@ toc:
       - iam_overview.md
       - iam_access.md
       - setup_cli_api_environment.md
-      - terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -152,9 +152,6 @@ toc:
             - sds-cli-reference.md
             - curl.md
             - aws_cli.md
-      - link:
-          label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
