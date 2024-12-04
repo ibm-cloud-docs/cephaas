@@ -25,7 +25,6 @@ This Quick Start guide provides a code example that demonstrates the following o
 * Create a new host
 * List the available hosts
 * Retrieve all volumes
-* Upload a certificate
 * Delete a volume
 * Delete a host
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-12-04"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -55,21 +55,6 @@ import (
 To connect to {{site.data.keyword.cephaas_full_notm}}, a client is created and configured by providing credential information (API key and service instance ID). These values can also be automatically sourced from a credentials file or from environment variables.
 
 The credentials can be found by creating a [Service Credential](/docs/cephaas?topic=cephaas-creating-s3-credential-sds), or through the CLI.
-
-Figure 1 shows an example of how to define environment variables in an application runtime at the {{site.data.keyword.cephaas_full_notm}} portal. The required variables are `IBM_API_KEY_ID` containing your Service Credential `apikey`, `IBM_SERVICE_INSTANCE_ID` holding the `resource_instance_id` also from your Service Credential, and an `IBM_AUTH_ENDPOINT` with a value appropriate to your account, like `https://iam.cloud.ibm.com/identity/token`. If using environment variables to define your application credentials, use `WithCredentials(ibmiam.NewEnvCredentials(aws.NewConfig())).`, replacing the similar method used in the configuration example.
-
-![environment variables](images/go-library-fig-1-env-vars.png){: caption="Environment Variables"}
-
-
-If migrating from AWS S3, you can also source credentials data from  `~/.aws/credentials` in the format:
-
-``` sh
-[default]
-aws_access_key_id = {ACCESS_KEY}
-aws_secret_access_key = {SECRET_ACCESS_KEY}
-```
-
-If both `~/.bluemix/cos_credentials` and `~/.aws/credentials` exist, `cos_credentials` takes preference.
 
 ### Initializing configuration
 {: #go-init-config}
