@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-12-04"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -55,10 +55,9 @@ To complete the code example, you need to replace the following values:
 
 |Value|Description|Example|
 |---|---|---|
-|`<endpoint>`|Regional endpoint for your {{site.data.keyword.cephaas_short}} instance|`s3.us-south.software-defined-storage.appdomain.cloud`|
-|`<api-key>`|IAM API Key with at least `Writer` permissions|`xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4`|
+|`<service-endpoint>`|Regional endpoint for your {{site.data.keyword.cephaas_short}} instance|`s3.us-south.software-defined-storage.appdomain.cloud`|
+|`<apikey>`|IAM API Key with at least `Writer` permissions|`xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4`|
 |`<resource-instance-id>`|Unique ID for the Service Instance|`crn:v1:bluemix:public:software-defined-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::`|
-|`<storage-class>`|Storage class for a new bucket|`us-south-standard`|
 {: caption="Code value variable descriptions" caption-side="bottom"}
 
 For more information about endpoints, see [Endpoints and storage locations](/docs/cephaas?topic=cephaas-endpoints).
@@ -66,199 +65,173 @@ For more information about endpoints, see [Endpoints and storage locations](/doc
 
 ``` Go
 package main
+
 import (
-    "bytes"
-    "fmt"
-    "github.com/IBM/sds-go-sdk/aws"
-    "github.com/IBM/sds-go-sdk/aws/credentials/ibmiam"
-    "github.com/IBM/sds-go-sdk/aws/session"
-    "github.com/IBM/sds-go-sdk/service/s3"
-    "io"
-    "math/rand"
-    "os"
-    "time"
+	"fmt"
+	"os"
+	"time"
+
+	"github.com/IBM/go-sdk-core/core"
+	"github.com/IBM/sds-go-sdk/sdsaasv1"
 )
 
-// Constants for IBM COS values
+var (
+	sdsaasService *sdsaasv1.SdsaasV1
+)
+
 const (
-    apiKey            = "<api-key>" // example: xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4
-    serviceInstanceID = "<resource-instance-id>" // example: crn:v1:bluemix:public:software-defined-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::
-    authEndpoint      = "https://iam.cloud.ibm.com/identity/token"
-    serviceEndpoint   = "<endpoint>" // example: https://s3.us-south.software-defined-storage.appdomain.cloud
+	apiKey          = "<apikey>"
+	serviceEndpoint = "<service-endpoint>"
 )
-
-// UUID
-func random(min int, max int) int {
-    return rand.Intn(max-min) + min
-}
 
 func main() {
 
-    // UUID
-    rand.Seed(time.Now().UnixNano())
-    UUID := random(10, 2000)
+	var err error
 
-    // Variables
-    newBucket := fmt.Sprintf("%s%d", "go.bucket", UUID) // New bucket name
-    objectKey := fmt.Sprintf("%s%d%s", "go_file_", UUID, ".txt") // Object Key
-    content := bytes.NewReader([]byte("This is a test file from Go code sample!!!"))
-    downloadObjectKey := fmt.Sprintf("%s%d%s", "downloaded_go_file_", UUID, ".txt") // Downloaded Object Key
+	newVolume := "volume1"
+	newHost := "host1"
+	hostNQN := "nqn.2014-06.org:9345"
 
-    //Setting up a new configuration
-    conf := aws.NewConfig().
-        WithRegion("<storage-class>"). // Enter your storage class (LocationConstraint) - example: us-standard
-        WithEndpoint(serviceEndpoint).
-        WithCredentials(ibmiam.NewStaticCredentials(aws.NewConfig(), authEndpoint, apiKey, serviceInstanceID)).
-        WithS3ForcePathStyle(true)
+	// Create sds service
 
-    // Create client connection
-    sess := session.Must(session.NewSession()) // Creating a new session
-    client := s3.New(sess, conf)               // Creating a new client
-
-    // Create new bucket
-    _, err := client.CreateBucket(&s3.CreateBucketInput{
-        Bucket: aws.String(newBucket), // New Bucket Name
-    })
-    if err != nil {
-        exitErrorf("Unable to create bucket %q, %v", newBucket, err)
-    }
-
-    // Wait until bucket is created before finishing
-    fmt.Printf("Waiting for bucket %q to be created...\n", newBucket)
-
-    err = client.WaitUntilBucketExists(&s3.HeadBucketInput{
-        Bucket: aws.String(newBucket),
-    })
-    if err != nil {
-        exitErrorf("Error occurred while waiting for bucket to be created, %v", newBucket)
-    }
-
-    fmt.Printf("Bucket %q successfully created\n", newBucket)
-
-    // Retrieve the list of available buckets
-    bklist, err := client.ListBuckets(nil)
-    if err != nil {
-        exitErrorf("Unable to list buckets, %v", err)
-    }
-
-    fmt.Println("Buckets:")
-
-    for _, b := range bklist.Buckets {
-        fmt.Printf("* %s created on %s\n",
-            aws.StringValue(b.Name), aws.TimeValue(b.CreationDate))
-    }
-
-	// Uploading an object
-	input3 := s3.CreateMultipartUploadInput{
-		Bucket: aws.String(newBucket), // Bucket Name
-		Key:    aws.String(objectKey), // Object Key
+	authenticator := &core.IamAuthenticator{
+		ApiKey: apiKey,
 	}
 
-	upload, _ := client.CreateMultipartUpload(&input3)
-
-	uploadPartInput := s3.UploadPartInput{
-		Bucket:     aws.String(newBucket), // Bucket Name
-		Key:        aws.String(objectKey), // Object Key
-		PartNumber: aws.Int64(int64(1)),
-		UploadId:   upload.UploadId,
-		Body:       content,
+	sdsaasServiceOptions := &sdsaasv1.SdsaasV1Options{
+		URL:           serviceEndpoint,
+		Authenticator: authenticator,
 	}
 
-	var completedParts []*s3.CompletedPart
-	completedPart, _ := client.UploadPart(&uploadPartInput)
-
-	completedParts = append(completedParts, &s3.CompletedPart{
-		ETag:       completedPart.ETag,
-		PartNumber: aws.Int64(int64(1)),
-	})
-
-	completeMPUInput := s3.CompleteMultipartUploadInput{
-		Bucket: aws.String(newBucket), // Bucket Name
-		Key:    aws.String(objectKey), // Object Key
-		MultipartUpload: &s3.CompletedMultipartUpload{
-			Parts: completedParts,
-		},
-		UploadId: upload.UploadId,
-	}
-
-	d, _ := client.CompleteMultipartUpload(&completeMPUInput)
-	fmt.Println(d)
-
-	// List objects within a bucket
-	resp, err := client.ListObjects(&s3.ListObjectsInput{Bucket: aws.String(newBucket)})
+	sdsaasService, err = sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
 	if err != nil {
-		exitErrorf("Unable to list items in bucket %q, %v", newBucket, err)
-	}
-	for _, item := range resp.Contents {
-		fmt.Println("Name:         ", *item.Key)          // Print the object's name
-		fmt.Println("Last modified:", *item.LastModified) // Print the last modified date of the object
-		fmt.Println("Size:         ", *item.Size)         // Print the size of the object
-		fmt.Println("")
+		exitErrorf("Unable to create sds service %v", err)
 	}
 
-	fmt.Println("Found", len(resp.Contents), "items in bucket", newBucket)
+	// Volume create
 
+	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+		int64(5),
+	)
+	volumeCreateOptions.SetHostnqnstring(hostNQN)
+	volumeCreateOptions.SetName(newVolume)
 
-	// Download an object
-	input4 := s3.GetObjectInput{
-		Bucket: aws.String(newBucket), // The bucket where the object is located
-		Key:    aws.String(objectKey), // Object you want to download
-	}
+	fmt.Printf("Creating new volume %q...\n", newVolume)
 
-	res, err := client.GetObject(&input4)
+	volume, _, err := sdsaasService.VolumeCreate(volumeCreateOptions)
 	if err != nil {
-		exitErrorf("Unable to download object %q from bucket %q, %v", objectKey, newBucket, err)
+		exitErrorf("Unable to create sds volume %q, %v", newVolume, err)
 	}
 
-	f, _ := os.Create(downloadObjectKey)
-	defer f.Close()
-	io.Copy(f, res.Body)
+	time.Sleep(3 * time.Second)
 
-	fmt.Println("Downloaded", f.Name())
+	// Host create
 
+	hostCreateOptions := sdsaasService.NewHostCreateOptions(
+		hostNQN,
+	)
 
-	// Delete object within the new bucket
-	_, err = client.DeleteObject(&s3.DeleteObjectInput{Bucket: aws.String(newBucket), Key: aws.String(objectKey)})
+	hostCreateOptions.SetName("my-host")
+
+	fmt.Printf("Creating new host %q...\n", newHost)
+
+	host, _, err := sdsaasService.HostCreate(hostCreateOptions)
 	if err != nil {
-		exitErrorf("Unable to delete object %q from bucket %q, %v", objectKey, newBucket, err)
+		exitErrorf("Unable to create sds host %q, %v", newHost, err)
 	}
 
-	err = client.WaitUntilObjectNotExists(&s3.HeadObjectInput{
-		Bucket: aws.String(newBucket),
-		Key:    aws.String(objectKey),
-	})
+	time.Sleep(3 * time.Second)
+
+	// Assign volume to host
+
+	hostVolUpdateOptions := sdsaasService.NewHostVolUpdateOptions(
+		*host.ID,
+		*volume.ID,
+	)
+
+	fmt.Printf("Assigning volume %q to host %q...\n", newVolume, newHost)
+
+	host, _, err = sdsaasService.HostVolUpdate(hostVolUpdateOptions)
 	if err != nil {
-		exitErrorf("Error occurred while waiting for object %q to be deleted, %v", objectKey)
+		exitErrorf("Unable to assign sds host %q to sds volume %q, %v", newHost, newVolume, err)
 	}
 
-	fmt.Printf("Object %q successfully deleted\n", objectKey)
+	time.Sleep(3 * time.Second)
 
-	// Delete the new bucket
-	// It must be empty or else the call fails
-	_, err = client.DeleteBucket(&s3.DeleteBucketInput{
-		Bucket: aws.String(newBucket),
-	})
+	// Display host and volume
+
+	volumeOptions := sdsaasService.NewVolumeOptions(
+		*volume.ID,
+	)
+	volume, _, err = sdsaasService.Volume(volumeOptions)
 	if err != nil {
-		exitErrorf("Unable to delete bucket %q, %v", newBucket, err)
+		panic(err)
 	}
 
-	// Wait until bucket is deleted before finishing
-	fmt.Printf("Waiting for bucket %q to be deleted...\n", newBucket)
+	fmt.Printf("\nGetting volume %q\n", newVolume)
+	fmt.Printf("Volume ID: %q\n", *volume.ID)
+	fmt.Printf("Volume Name: %q\n", *volume.Name)
+	fmt.Printf("Volume capacity: %d\n", *volume.Capacity)
+	fmt.Printf("Volume host mapping: %q\n", *volume.HostMappings[0].HostID)
 
-	err = client.WaitUntilBucketNotExists(&s3.HeadBucketInput{
-		Bucket: aws.String(newBucket),
-	})
+	hostOptions := sdsaasService.NewHostOptions(
+		*host.ID,
+	)
+	host, _, err = sdsaasService.Host(hostOptions)
 	if err != nil {
-		exitErrorf("Error occurred while waiting for bucket to be deleted, %v", newBucket)
+		exitErrorf("Unable to get sds host %q, %v", newHost, err)
 	}
 
-	fmt.Printf("Bucket %q successfully deleted\n", newBucket)
+	fmt.Printf("\nGetting host %q\n", newHost)
+	fmt.Printf("Host ID: %q\n", *host.ID)
+	fmt.Printf("Host Name: %q\n", *host.Name)
+	fmt.Printf("Host VolumeMappings: %q\n\n", *host.VolumeMappings[0].VolumeID)
+
+	// Remove volume assignment
+
+	fmt.Printf("Removing assignment from volume %q...\n", newVolume)
+
+	hostVolDeleteOptions := sdsaasService.NewHostVolDeleteOptions(
+		*host.ID,
+		*volume.ID,
+	)
+
+	_, err = sdsaasService.HostVolDelete(hostVolDeleteOptions)
+	if err != nil {
+		exitErrorf("Unable to delete host %q assigment between volume %q, %v", newHost, newVolume, err)
+	}
+
+	time.Sleep(3 * time.Second)
+
+	// Volume Delete
+	fmt.Printf("Deleting volume %q...\n", newVolume)
+
+	volumeDeleteOptions := sdsaasService.NewVolumeDeleteOptions(
+		*volume.ID,
+	)
+
+	_, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	if err != nil {
+		exitErrorf("Unable to create sds volume %q, %v", newVolume, err)
+	}
+
+	// Host Delete
+	fmt.Printf("Deleting host %q...\n", newHost)
+
+	hostDeleteOptions := sdsaasService.NewHostDeleteOptions(
+		*host.ID,
+	)
+
+	_, err = sdsaasService.HostDelete(hostDeleteOptions)
+	if err != nil {
+		exitErrorf("Unable to delete host %q, %v", newHost, err)
+	}
 }
-
 
 func exitErrorf(msg string, args ...interface{}) {
 	fmt.Fprintf(os.Stderr, msg+"\n", args...)
 	os.Exit(1)
+}
 ```
 {: codeblock}
 {: go}
@@ -280,31 +253,24 @@ go run go_example.go
 The output from the Code Example should resemble the following:
 
 ```go
-Waiting for bucket "go.bucket645" to be created...
-Bucket "go.bucket645" successfully created
+Creating new volume "volume1"...
+Creating new host "host1"...
+Assigning volume "volume1" to host "host1"...
 
-Listing buckets:
-* go.bucket645 created on 2019-03-10 13:25:12.072 +0000 UTC
+Getting volume "volume1"
+Volume ID: "r134-92e8c388-6f78-4644-998e-ed5d215d20ad"
+Volume Name: "volume1"
+Volume capacity: 5
+Volume host mapping: "r134-32475c27-2dc8-4be5-9c13-ee91d84e5372"
 
-{
-  Bucket: "go.bucket645",
-  ETag: "\"686d1d07d6de02e920532342fcbd6d2a-1\"",
-  Key: "go_file_645.txt",
-  Location: "http://s3.us.software-defined-storage.appdomain.cloud/go.bucket645/go_file_645.txt"
-}
+Getting host "host1"
+Host ID: "r134-32475c27-2dc8-4be5-9c13-ee91d84e5372"
+Host Name: "my-host"
+Host VolumeMappings: "r134-92e8c388-6f78-4644-998e-ed5d215d20ad"
 
-Name:          go_file_645.txt
-Last modified: 2019-03-10 13:25:14 +0000 UTC
-Size:          42
-
-Found 1 items in bucket go.bucket645
-
-Downloaded downloaded_go_file_645.txt
-
-Object "go_file_645.txt" successfully deleted
-
-Waiting for bucket "go.bucket645" to be deleted...
-Bucket "go.bucket645" successfully deleted
+Removing assignment from volume "volume1"...
+Deleting volume "volume1"...
+Deleting host "host1"...
 ```
 {: codeblock}
 {: go}
