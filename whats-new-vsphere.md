@@ -28,7 +28,3 @@ Initial release of the new IBM Storage Ceph as a service plug-in for vSphere 1.0
 - Managing ESXi hosts
 
 For a full list of new features and known issues in this release, see [Release notes](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-relnotes).
-<<<<<<< HEAD
-=======
-
->>>>>>> vaibhavi-latest
