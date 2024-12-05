@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-26"
+lastupdated: "2024-12-05"
 
 keywords: Connect VMware environment
 
@@ -11,7 +11,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Installing vSphere Plug-in
+# Installing vSphere plug-in
 {: #installing-the-plugin}
 
 These instructions are for a quick installation overview of the {{site.data.keyword.cephaas_full}} plug-in for VMWare vSphere.
