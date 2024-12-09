@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2024-11-29"
+lastupdated: "2024-12-09"
 
 subcollection: cephaas
 
@@ -34,42 +34,34 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 1. Create a {{site.data.keyword.keymanagementserviceshort}} instance by using the `ibm_resource_instance` resource argument in your `main.tf` file.
 
-   The {{site.data.keyword.keymanagementserviceshort}} instance in the following example is named `my_kp` and is created with the tiered pricing plan in the `us-south` region. The `user@ibm.com` is assigned the Manager role in the IAM access policy. For other supported regions, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).
+   The {{site.data.keyword.keymanagementserviceshort}} instance in the following example is named `my_kp` and is created with the tiered pricing plan in the `us-south` region. The `user@ibm.com` is assigned the Manager role in the IAM access policy.
 
    ```terraform
-   resource "ibm_resource_instance" "kms_instance" {
-     name     = "my_kp"
-     service  = "kms"
-     plan     = "tiered-pricing"
-     location = "us-south"
+   provider "ibm" {
+     ibmcloud_api_key = var.ibmcloud_api_key
    }
 
-   resource "ibm_iam_user_policy" "policy" {
-     ibm_id = "user@ibm.com"
-     roles  = ["Manager"]
+   // Provision sds_volume resource instance
+   resource "ibm_sds_volume" "sds_volume_instance" {
+     hostnqnstring = "<hostNQN>"
+     capacity = 10
+     name = "demo-volume"
+   }
 
-     resources {
-       service              = "kms"
-       resource_instance_id = element(split(":", ibm_resource_instance.kms_instance.id), 7)
+   // Provision sds_host resource instance
+   resource "ibm_sds_host" "sds_host_instance" {
+
+     name = "demo-host"
+     nqn = "<hostNQN>"
+     volume_mappings {
+       volume_id = ibm_sds_volume.sds_volume_instance.id
+       volume_name = ibm_sds_volume.sds_volume_instance.id
      }
    }
    ```
    {: codeblock}
 
-   
 
-   ```terraform
-   resource "ibm_resource_instance" "hpcs" {
-     name     = "my_hpcs"
-     service  = "hs_crypto"
-     plan     = "standard"
-     location = "us-south"
-     parameters = {
-        units = 2
-     }
-   }
-   ```
-   {: codeblock}
 
 2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
 
