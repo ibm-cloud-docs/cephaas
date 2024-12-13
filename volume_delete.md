@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-13"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -102,6 +102,52 @@ There is no response body for a successful delete operation. HTTP response code 
 
 
 To verify that the volume is deleted, list the volumes by making a `GET /volumes` call.
+
+## Deleting a block volume using terraform
+{: #deleting-block-volume-tf}
+{: terraform}
+
+
+1. Run `terraform state list` to show the list of all volumes.
+
+    ```terraform
+    terraform state list
+    ```
+    {: pre}
+
+2. Run `terraform destroy -target <volume_name>` to delete a single volume that is no longer needed.
+
+    See example.
+
+    ```terraform
+    terraform destroy -target ibm_sds_volume.sds_volume_instance_2
+    ```
+    {: pre}
+
+3. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
+
+    ```terraform
+    terraform plan
+    ```
+    {: pre}
+
+4. Run `terraform apply` to modify the resources that are defined in the plan.
+
+    ```terraform
+    terraform apply
+    ```
+    {: pre}
+
+5. Respond to "Do you really want to destroy all resouces?" with "Yes" to continue deleting the volume. A confirmation messages is displayed when the delete operation completes.
+
+    ```terraform
+    ibm_sds_volume.sds_volume_instance_2: Destroying... [id=r134-4e3f26c6-e8bf-4213-a523-33f2244fa286]
+    ibm_sds_volume.sds_volume_instance_2: Destruction complete after 1s
+
+    Destroy complete! Resources: 1 destroyed.
+    ```
+    {: screen}
+
 
 ## Sanitizing your data before you delete a volume
 {: #sanitizing-your-data-before-you-delete-a-volume}

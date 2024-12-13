@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-13"
 
 subcollection: cephaas
 
@@ -18,13 +18,9 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent crea
 {: shortdesc}
 
 
-
-
 ## Installing Terraform and configuring resources
 {: #install-terraform}
 
-
-_**NOTE**: The following example is specific to Key Protect. Work with your development team to update the steps in this example for your service. It is IMPORTANT that you document how to create an instance of your service and assign an access policy in IAM to your service. Most IAM-enabled services use the `ibm_resource_instance` Terraform resource to create a service instance. Because these services share the same Terraform resource, you must make sure that you document ALL supported configurations that are specific to your service. If your service does not require an instance to be created first, such as in {{site.data.keyword.containerlong_notm}}, document how to create the most common resource instead (e.g. cluster). These services usually have dedicated resources in Terraform that you must use. For example, to create an {{site.data.keyword.containerlong_notm}} cluster, you use the `ibm_container_cluster` Terraform resource. Make sure that it is clear to the user what configuration parameters are supported for your service and how the user can retrieve supported values._
 
 Before you can create an authorization by using Terraform, make sure that you have completed the following:
 
@@ -32,9 +28,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 * Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
 * Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
 
-1. Create a {{site.data.keyword.keymanagementserviceshort}} instance by using the `ibm_resource_instance` resource argument in your `main.tf` file.
-
-   The {{site.data.keyword.keymanagementserviceshort}} instance in the following example is named `my_kp` and is created with the tiered pricing plan in the `us-south` region. The `user@ibm.com` is assigned the Manager role in the IAM access policy.
+1. Create a volume and host instance by using the `ibm_sds_volume` and `ibm_sds_host` resource argument in your `main.tf` file. The volume and host instance in the following example are named `sds_volume_instance` and `sds_host_instance` respectively.
 
    ```terraform
    provider "ibm" {
@@ -93,5 +87,3 @@ Before you can create an authorization by using Terraform, make sure that you ha
 {: #terraform-setup-next}
 
 Now that you successfully created your first {{site.data.keyword.keymanagementserviceshort}} service instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:
-
-

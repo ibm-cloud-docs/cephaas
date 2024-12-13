@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-13"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -85,9 +85,50 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvidu` as an alternative to `host-vol-update` for the CLI actions.
 {: tip}
 
+
+## Mapping volume to a host with the API
+{: #mapping-hosts-api}
+{: api}
+
+Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a given host.
+
+```sh
+curl -X PUT '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
+--header 'Authorization: Bearer $IAM_TOKEN'
+```
+{: pre}
+
+A successful response looks like this:
+
+```json
+{
+    "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
+    "name": "host1",
+    "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
+    "created_at": "2024-06-21T07:22:15Z",
+    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
+    "storage_workspace_id": "default",
+    "volume_mappings": [
+        {
+            "volume_name": "vol1",
+            "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
+            "status": "pending"
+        }
+    ]
+}
+
+```
+{: screen}
+
+You can map only one volume at a time by using API command.
+{: note}
+
+
+
+
 ## Next steps
 {: #next-step-mapping-volume}
 
-* You can continue creating more volumes or manage existing volumes.
-
 * [Configure NVME-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators)
+
+* You can continue creating more volumes or manage existing volumes.
