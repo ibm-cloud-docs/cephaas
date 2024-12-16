@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-16"
 
 keywords: list all volumes, view volume details
 
@@ -249,6 +249,15 @@ A successful response provides details of the volume, including capacity and IOP
 ```
 {: codeblock}
 
+
+
+## View volume details using Terraform
+{: #view-volume-tf}
+{: terraform}
+
+To view details of single volume, run `terraform show`
+
+Run `terraform state list` to view the list of all volumes.
 
 ## Next steps
 {: #next-step-viewing-block-storage-volumes}

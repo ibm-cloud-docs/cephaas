@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-16"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating block volumes
 {: #creating-block-volume}
 
-Create a block storage volume by using the UI, CLI or API.
+Create a block storage volume by using the UI, CLI, API or terraform.
 {: shortdesc}
 
 
@@ -142,7 +142,7 @@ A successful response looks like this:
 {: terraform}
 
 
-1. Create a volume instance by using the `ibm_sds_volume` esource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
+1. Create a volume instance by using the `ibm_sds_volume` resource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
 
    ```terraform
     resource "ibm_sds_volume" "sds_volume_instance" {

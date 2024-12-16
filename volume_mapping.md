@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-16"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -124,6 +124,13 @@ You can map only one volume at a time by using API command.
 {: note}
 
 
+## Mapping block volume using Terraform
+{: #mapping-volume-tf}
+{: terraform}
+
+To map a volume to a host, edit the `main.tf` file to add the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+
+You can map mulitple volumes to a host at a time.
 
 
 ## Next steps

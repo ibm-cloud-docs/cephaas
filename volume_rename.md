@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-16"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Renaming a block volume
 {: #renaming-block-volume}
 
-Renaming volumes help to improve organization, clarity, and accessibility, contributing to more efficient and effective management. You can rename a block storage volume in the UI, from the CLI, or with the API.
+Renaming volumes help to improve organization, clarity, and accessibility, contributing to more efficient and effective management. You can rename a block storage volume in the UI, from the CLI, using the API or terraform.
 {: shortdesc}
 
 ## Renaming block volume in the UI
@@ -118,3 +118,13 @@ A successful response looks like this:
 
 ```
 {: screen}
+
+
+## Renaming block volume using Terraform
+{: #rename-volume-tf}
+{: terraform}
+
+To rename the volume, open and modify the `name` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+
+You can modify only one parameter value at a time.
+{: note}

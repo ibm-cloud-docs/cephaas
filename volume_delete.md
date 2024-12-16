@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-16"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Deleting a block volume
 {: #deleting-block-volume}
 
-Delete a volume from a service instance by using the UI, CLI, or API.
+Delete a volume from a service instance by using the UI, CLI, API or terraform.
 {: shortdesc}
 
 When you delete a Block Storage volume, that data immediately becomes inaccessible.
@@ -107,46 +107,16 @@ To verify that the volume is deleted, list the volumes by making a `GET /volumes
 {: #deleting-block-volume-tf}
 {: terraform}
 
+To delete a single volume using terraform, you can run `terraform destroy -target <volume_name>` where <volume_name> is the name of the volume that is no longer needed.
 
-1. Run `terraform state list` to show the list of all volumes.
+See example where <volume_name> is `ibm_sds_volume.sds_volume_instance_2`
 
-    ```terraform
-    terraform state list
-    ```
-    {: pre}
+```terraform
+terraform destroy -target ibm_sds_volume.sds_volume_instance_2
+```
+{: pre}
 
-2. Run `terraform destroy -target <volume_name>` to delete a single volume that is no longer needed.
-
-    See example.
-
-    ```terraform
-    terraform destroy -target ibm_sds_volume.sds_volume_instance_2
-    ```
-    {: pre}
-
-3. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
-
-    ```terraform
-    terraform plan
-    ```
-    {: pre}
-
-4. Run `terraform apply` to modify the resources that are defined in the plan.
-
-    ```terraform
-    terraform apply
-    ```
-    {: pre}
-
-5. Respond to "Do you really want to destroy all resouces?" with "Yes" to continue deleting the volume. A confirmation messages is displayed when the delete operation completes.
-
-    ```terraform
-    ibm_sds_volume.sds_volume_instance_2: Destroying... [id=r134-4e3f26c6-e8bf-4213-a523-33f2244fa286]
-    ibm_sds_volume.sds_volume_instance_2: Destruction complete after 1s
-
-    Destroy complete! Resources: 1 destroyed.
-    ```
-    {: screen}
+For more information about the arguments and attributes, see 
 
 
 ## Sanitizing your data before you delete a volume
