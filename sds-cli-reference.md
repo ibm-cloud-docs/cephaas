@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-14"
+lastupdated: "2024-12-17"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -466,7 +466,7 @@ ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id 
 ```
 {: pre}
 
-**ALIASES**: host-vol-update, hstvidu
+**ALIASES**: host-vol-update, hstvu
 
 See example.
 
