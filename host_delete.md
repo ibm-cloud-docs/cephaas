@@ -108,9 +108,9 @@ To verify that the host is deleted, list the hosts by making a `GET /hosts` call
 {: #deleting-host-tf}
 {: terraform}
 
-To delete a host using terraform, you can run `terraform destroy -target <host_name>` where <host_name> is the name of the host in the resource `ibm_sds_host` that is no longer needed.
+To delete a host using terraform, you can run `terraform destroy -target <host_name>` where _<host_name>_ is the name of the host in the resource `ibm_sds_host` that is no longer needed.
 
-See example where <host_name> is `ibm_sds_host.sds_host_instance_2`
+See example where <host_name> is `ibm_sds_host.sds_host_instance_2`.
 
 ```terraform
 terraform destroy -target ibm_sds_host.sds_host_instance_2

@@ -143,7 +143,7 @@ To verify that all volumes mappings for a host are deleted, list the hosts by ma
 {: #unmap-volume-host-tf}
 {: terraform}
 
-To unmap a volume for a host, open and modify the `host_mappings` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+To unmap a volume for a host, open and remove the `host_mappings` value for the volume in the `ibm_sds_volume` resource of your `main.tf` file.
 
 You can unmap one volume from a host at a time.
 {: note}
