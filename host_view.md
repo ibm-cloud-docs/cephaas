@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-17"
 
 keywords: sds, host, view host details, host summary list
 
@@ -264,3 +264,13 @@ A successful response provides details of the host, such as the host id, host na
 
 ```
 {: codeblock}
+
+
+
+## View host details using Terraform
+{: #view-volume-tf}
+{: terraform}
+
+To view host details, run `terraform show`.
+
+Run `terraform state list` to view the list of all hosts.

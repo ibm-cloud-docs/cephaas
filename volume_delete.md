@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-12-16"
+lastupdated: "2024-12-17"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -116,7 +116,6 @@ terraform destroy -target ibm_sds_volume.sds_volume_instance_2
 ```
 {: pre}
 
-For more information about the arguments and attributes, see 
 
 
 ## Sanitizing your data before you delete a volume

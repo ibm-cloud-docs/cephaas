@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-17"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -102,3 +102,17 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}' \
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 
 To verify that the host is deleted, list the hosts by making a `GET /hosts` call.
+
+
+## Deleting a host using terraform
+{: #deleting-host-tf}
+{: terraform}
+
+To delete a host using terraform, you can run `terraform destroy -target <host_name>` where <host_name> is the name of the host in the resource `ibm_sds_host` that is no longer needed.
+
+See example where <host_name> is `ibm_sds_host.sds_host_instance_2`
+
+```terraform
+terraform destroy -target ibm_sds_host.sds_host_instance_2
+```
+{: pre}

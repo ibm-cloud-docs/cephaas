@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-17"
 
 keywords: sds, cephaas host,
 
@@ -135,6 +135,77 @@ A successful response looks like this:
 
 ```
 {: screen}
+
+
+
+## Creating hosts using Terraform
+{: #create-host-tf}
+{: terraform}
+
+
+1. Create a host instance by using the `ibm_sds_host` resource argument in your `main.tf` file. The host instance in the following example is named `sds_host_instance` respectively.
+
+   ```terraform
+    resource "ibm_sds_host" "sds_host_instance" {
+      name = "demo-host"
+      nqn = "<hostNQN>"
+      volume_mappings {
+        volume_id = ibm_sds_volume.sds_volume_instance.id
+        volume_name = ibm_sds_volume.sds_volume_instance.id
+        }
+    }
+   ```
+   {: codeblock}
+
+
+2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
+
+   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
+
+      ```terraform
+      terraform plan
+      ```
+      {: pre}
+
+   1. Run `terraform apply` to create the resources that are defined in the plan.
+
+      ```terraform
+      terraform apply
+      ```
+      {: pre}
+
+4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+
+    See the example output for details.
+
+    ```terraform
+    ibm_sds_volume = [
+    {
+      "bandwidth" = 19
+      "capacity" = 10
+      "created_at" = "2024-12-11T13:44:36Z"
+      "host_mappings" = tolist([])
+      "hostnqnstring" = "nqn.2014-06.org:9345"
+      "id" = "r134-51ad673d-ccdb-4b9c-b557-3ec6ff046879"
+      "iops" = 150
+      "name" = "demo-volume-1"
+      "resource_type" = "volume"
+      "status" = "available"
+      "status_reasons" = tolist([])
+      },
+    ]
+    ```
+    {: screen}
+
+
+
 
 
 

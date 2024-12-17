@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-17"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -52,7 +52,7 @@ For more information on IAM roles and permissions, see [the {{site.data.keyword.
 ## Creating deployments
 {: #provision-deployment}
 
-You can create a deployment (also called as service instance) by resource controller through the custom catalog UI, RC CLIs, and API.
+You can create a deployment (also called as service instance) by resource controller through the UI, RC CLIs, and API.
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
@@ -75,15 +75,15 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
 3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and satallite details. Now you have a CRN for the instance.
 
     ```sh
-    ibmcloud resource service-instance-create <instance-name> software-defined-storage <plan> global <satellite-location> -p ‘{“satellite_crn":"<satellite-crn>","order_id":"<order-id>”}’ -g Default
+    ibmcloud resource service-instance-create <name> software-defined-storage <plan id> <catalog satellite location> -p '{"satellite_crn": <satellite_location_crn>, "order_id": <order_id>}' -g <resource_group_name>
     ```
     {: pre}
 
     See example.
 
     ```sh
-    $ ibmcloud resource service-instance-create service-instance-cli software-defined-storage 38bacce6d-9644-4b88-8v40-f5e44e6c75c5 satloc_dal_cqsuoub20mq4s939tq20 -p '{"satellite_crn"}: "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cqsuoub20mq4s939tq20::","order_id":"account-1"}' -g Default
-    Creating service instance service-instance-cli in resource group Default of account account-1 as user@company.com...
+    $ ibmcloud resource service-instance-create service-instance-cli software-defined-storage 38bacce6d-9644-4b88-8v40-f5e44e6c75c5 satloc_dal_cqsuoub20mq4s939tq20 -p '{"satellite_crn"}: "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cqsuoub20mq4s939tq20::","order_id":"account-1"}' -g resource-group-1
+    Creating service instance service-instance-cli in resource group resource-group-1 of account account-1 as user@company.com...
     OK
     Service instance service-instance-cli  was created.
 
@@ -101,12 +101,17 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
     ```
     {: screen}
 
+
+    During instance creation, the status shows as provisioning state. Wait until the status changes to Active state to start using the volume and host operations.
+    {: note}
+
+
 When creating a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found by using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}
 
-The [Getting Started guide](/docs/cephaas?topic=cephaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/cephaas?topic=cephaas-curl).
 
-Learn more about using the {{site.data.keyword.cloud_notm}} CLI to create applications, manage Kubernetes clusters, and more [in the documentation](/docs/cli?topic=cli-ibmcloud_cli).
+
+The [Getting Started guide](/docs/cephaas?topic=cephaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/cephaas?topic=cephaas-curl).
 
 
 ### Creating deployments with the API

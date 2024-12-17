@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-17"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -138,3 +138,12 @@ There is no response that is returned if the request is successful. HTTP respons
 
 
 To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` call.
+
+## Unmapping a volume for a host using Terraform
+{: #unmap-volume-host-tf}
+{: terraform}
+
+To unmap a volume for a host, open and modify the `host_mappings` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+
+You can unmap one volume from a host at a time.
+{: note}
