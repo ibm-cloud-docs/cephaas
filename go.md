@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-13"
+ years: 2024, 2025
+lastupdated: "2025-01-08"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -54,13 +54,49 @@ import (
 ## Code Examples
 {: #go-code-examples}
 
+### Setup
+{: #go-setup}
+
+```Go
+var (
+	sdsaasService *sdsaasv1.SdsaasV1
+)
+
+
+func main() {
+
+	authenticator := &core.IamAuthenticator{
+		ApiKey: <apiKey>,
+	}
+
+	sdsaasServiceOptions := &sdsaasv1.SdsaasV1Options{
+		URL:           <serviceEndpoint>,
+		Authenticator: authenticator,
+	}
+
+	sdsaasService, err = sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
+	if err != nil {
+		exitErrorf("Unable to create sds service %v", err)
+	}
+}
+
+```
+{: codeblock}
+
 ### Creating a new volume
 {: #go-new-volume}
 
 
 ```Go
+	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+		int64(5),
+	)
+	volumeCreateOptions.SetName("my-volume")
 
-
+	volume, _, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	if err != nil {
+		panic(err)
+	}
 ```
 {: codeblock}
 
@@ -68,8 +104,18 @@ import (
 {: #go-list-volumes}
 
 ```Go
+	volumesOptions := sdsaasService.NewVolumesOptions()
+	volumesOptions.SetLimit(int64(10))
 
+	volumeCollection, _, err := sdsaasService.Volumes(volumesOptions)
+	if err != nil {
+		panic(err)
+	}
 
+	fmt.Println("Printing out a collection of volumes")
+	for _, volume := range volumeCollection.Volumes {
+		fmt.Println("Volume: ", *volume.Name, "    Volume ID: ", *volume.ID)
+	}
 ```
 {: codeblock}
 
@@ -78,7 +124,17 @@ import (
 {: #go-get-object}
 
 ```Go
+	volumeOptions := sdsaasService.NewVolumeOptions(
+		*volume.ID,
+	)
 
+	volume, _, err = sdsaasService.Volume(volumeOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Printing out volume ", *volume.Name)
+	fmt.Println("Volume: ", *volume.Name, "    Volume ID: ", *volume.ID)
 
 ```
 {: codeblock}
@@ -87,25 +143,36 @@ import (
 {: #go-delete-volume}
 
 ```Go
-
+	volumeDeleteOptions := sdsaasService.NewVolumeDeleteOptions(
+		*volume.ID,
+	)
+	_, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
 ```
 {: codeblock}
 
-### Delete multiple volumes
-{: #go-multidelete}
-
-```Go
-
-```
-{: codeblock}
 
 ### List hosts
 {: #go-list-hosts}
 
 ```Go
+	hostsOptions := sdsaasService.NewHostsOptions()
+	hostsOptions.SetLimit(int64(10))
 
+	hostCollection, _, err := sdsaasService.Hosts(hostsOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Printing out a collection of hosts")
+	for _, host := range hostCollection.Hosts {
+		fmt.Println("Host: ", *host.Name, "    Host ID: ", *host.ID)
+	}
 ```
 {: codeblock}
+
 
 ### Before You Begin
 {: #go-examples-prereqs}

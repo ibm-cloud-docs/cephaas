@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-19"
+ years: 2024, 2025
+lastupdated: "2025-01-08"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -65,14 +65,4 @@ The following network requirements must be completed before the rack is delivere
 
 You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account:
 
-* After the physical cabling is completed, provide the initial configuration to set up the data plane network to the IBM site reliability engineering (SREs) team.
-* The SRE team configures the network for network validation testing.
-    The network validation testing ensures the functionality of the control plane network.
-* The SRE team conducts provisioning testing over the control plane by simulating a user request from the IBM Cloud.
-    To complete the remaining network connectivity after the installation of the rack, you can contact IBM Support Center through the ticketing system. For more information, see [Getting Support](https://cloud.ibm.com/docs/get-support?topic=get-support-using-avatar&interface=ui){: external}.
-* After testing is complete, the SRE team activates the account specifying the period from when the billing starts.
 * The SRE team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
-* Perform a provisioning test by using the service broker. The provisioning test is successful if the following statements are true:
-    * A virtual machine is successfully provisioned.
-    * The virtual machine has an IP address that is assigned to it.
-    * You can log on to the virtual machine and can run basic commands to inspect the environment settings, such as check memory, CPU, and storage capacity.
