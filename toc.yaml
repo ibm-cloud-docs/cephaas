@@ -143,16 +143,16 @@ toc:
                 label: Object storage management API
                 href: https://{DomainName}/apidocs/object-storage
       - topicgroup:
-          label: Libraries
-          topics:
-            - getting-started-sdks.md
-            - go.md
-      - topicgroup:
           label: CLI reference
           topics:
             - sds-cli-reference.md
             - curl.md
             - aws_cli.md
+      - topicgroup:
+          label: SDK reference
+          topics:
+            - getting-started-sdks.md
+            - go.md
       - link:
           label: Terraform reference
           href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs

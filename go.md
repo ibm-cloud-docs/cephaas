@@ -49,16 +49,19 @@ import (
 ```
 {: codeblock}
 
-## Code Examples
-{: #go-code-examples}
 
-### Before You Begin
+## Before You Begin using code examples
 {: #go-examples-prereqs}
 
 The following items are necessary to create a volume or a host:
 
-* A Ceph as a service instance [provisioned - TODO: Update link](/docs/key-protect?topic=key-protect-provision)
+* A Ceph as a service deployment instance [provisioned - TODO: Update link](/docs/key-protect?topic=key-protect-provision)
 * TODO: Are there any other items that are required?
+
+## Code Examples
+{: #go-code-examples}
+
+
 
 ### Setup
 {: #go-setup}
