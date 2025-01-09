@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-09"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -49,10 +49,16 @@ import (
 ```
 {: codeblock}
 
-
-
 ## Code Examples
 {: #go-code-examples}
+
+### Before You Begin
+{: #go-examples-prereqs}
+
+The following items are necessary to create a volume or a host:
+
+* A Ceph as a service instance [provisioned - TODO: Update link](/docs/key-protect?topic=key-protect-provision)
+* TODO: Are there any other items that are required?
 
 ### Setup
 {: #go-setup}
@@ -61,7 +67,6 @@ import (
 var (
 	sdsaasService *sdsaasv1.SdsaasV1
 )
-
 
 func main() {
 
@@ -76,7 +81,7 @@ func main() {
 
 	sdsaasService, err = sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
 	if err != nil {
-		exitErrorf("Unable to create sds service %v", err)
+		panic(err)
 	}
 }
 
@@ -119,6 +124,27 @@ func main() {
 ```
 {: codeblock}
 
+### Updating a volume
+{: #go-update-volume}
+
+
+```Go
+	volumeUpdateOptions := sdsaasService.NewVolumeUpdateOptions(
+		*volume.ID,
+	)
+
+	volumePatch := map[string]interface{}{
+		"name": "my-volume-updated",
+	}
+
+	volumeUpdateOptions.SetVolumePatch(volumePatch)
+
+	volume, _, err = sdsaasService.VolumeUpdate(volumeUpdateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
 
 ### Get volume details
 {: #go-get-object}
@@ -153,6 +179,22 @@ func main() {
 ```
 {: codeblock}
 
+### Create a host
+{: #go-create-host}
+
+```Go
+	hostCreateOptions := sdsaasService.NewHostCreateOptions(
+		<hostNQN>,
+	)
+
+	hostCreateOptions.SetName("my-host")
+
+	host, _, err := sdsaasService.HostCreate(hostCreateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
 
 ### List hosts
 {: #go-list-hosts}
@@ -173,17 +215,138 @@ func main() {
 ```
 {: codeblock}
 
+### Updating a host
+{: #go-update-host}
 
-### Before You Begin
-{: #go-examples-prereqs}
+```Go
+	hostUpdateOptions := sdsaasService.NewHostUpdateOptions(
+		*host.ID,
+	)
 
-The following items are necessary to create a volume or a host:
+	hostPatch := map[string]interface{}{
+		"name": "my-host-updated",
+	}
 
-* A Key Protect service [provisioned](/docs/key-protect?topic=key-protect-provision)
-* A Root key available (either [generated](/docs/key-protect?topic=key-protect-create-root-keys) or [imported](/docs/key-protect?topic=key-protect-import-root-keys))
+	hostUpdateOptions.SetHostPatch(hostPatch)
+
+	host, _, err = sdsaasService.HostUpdate(hostUpdateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Get host details
+{: #go-host-details}
+
+```Go
+	hostOptions := sdsaasService.NewHostOptions(
+		*host.ID,
+	)
+
+	host, _, err = sdsaasService.Host(hostOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Printing out host ", *host.Name)
+	fmt.Println("Host: ", *volume.Name, "    Host ID: ", *host.ID)
+```
+{: codeblock}
+
+### Map a host to a volume
+{: #go-host-map}
 
 
+```Go
+	hostVolUpdateOptions := sdsaasService.NewHostVolUpdateOptions(
+		*host.ID,
+		*volume.ID,
+	)
 
+	host, _, err = sdsaasService.HostVolUpdate(hostVolUpdateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Unmap a host from a volume
+{: #go-host-unmap}
+
+
+```Go
+	hostVolDeleteOptions := sdsaasService.NewHostVolDeleteOptions(
+		*host.ID,
+		*volume.ID,
+	)
+
+	_, err = sdsaasService.HostVolDelete(hostVolDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Delete a host
+{: #go-host-delete}
+
+
+```Go
+	hostDeleteOptions := sdsaasService.NewHostDeleteOptions(
+		*host.ID,
+	)
+
+	_, err = sdsaasService.HostDelete(hostDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Credential create
+{: #go-cred-create}
+
+
+```Go
+	credCreateOptions := sdsaasService.NewCredCreateOptions(
+		"test-key",
+	)
+
+	credentialsUpdated, _, err := sdsaasService.CredCreate(credCreateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Credentials list
+{: #go-cred-list}
+
+
+```Go
+	credsOptions := sdsaasService.NewCredsOptions()
+
+	credentialsFound, _, err := sdsaasService.Creds(credsOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Certificate list
+{: #go-cert-list}
+
+
+```Go
+	certOptions := sdsaasService.NewCertOptions()
+
+	certificateFound, response, err := sdsaasService.Cert(certOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
 
 ## Next Steps
 {: #go-next-steps}
