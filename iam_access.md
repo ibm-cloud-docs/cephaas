@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2025
 lastupdated: "2025-01-10"
 
-keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
+keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
 subcollection: cephaas
 
@@ -46,7 +46,7 @@ Review the following tables that outline what types of tasks each role allows wh
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Manager        | As a Manager, you can perform all service level actions based on the platform role assigned along with this service role. This role allows you to manage all aspects of data storage, create, and destroy buckets and objects.  |
+| Manager        | As a Manager, you can perform all service level actions based on the platform role assigned along with this service role. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -65,9 +65,9 @@ Review the following tables that outline what types of tasks each role allows wh
 | `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page.  |
 | `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. |
 | `software-defined-storage.subresource.read`	  |	Manager | View volume, host and deployment details. |
-| `software-defined-storage.subresource.create`	|	Manager | Create volume, host, object credential and certificates. |
+| `software-defined-storage.subresource.create`	|	Manager | Create volume, host and object credential. |
 | `software-defined-storage.subresource.update`	|	Manager | Modify volume name, host name, object credential and object certificates. |
-| `software-defined-storage.subresource.delete`	|	Manager | Delete volume, host, object credential and object certificates. |
+| `software-defined-storage.subresource.delete`	|	Manager | Delete volume, host and object credential. |
 {: caption="IAM action descriptions"}
 
 
