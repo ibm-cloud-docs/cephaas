@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-13"
+ years: 2024, 2025
+lastupdated: "2025-01-10"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access managment
 
@@ -44,19 +44,32 @@ Review the following tables that outline what types of tasks each role allows wh
 {: tab-title="Platform roles"}
 
 
+| Service role |  Description of actions |
+|--------------|------------------------|
+| Manager        | As a Manager, you can perform all service level actions based on the platform role assigned along with this service role. This role allows you to manage all aspects of data storage, create, and destroy buckets and objects.  |
+{: row-headers}
+{: class="simple-tab-table"}
+{: caption="IAM service access roles" caption-side="bottom"}
+{: #iamrolesservice}
+{: tab-title="Service roles"}
+{: tab-group="IAM"}
+
+
 ## Identity and access management actions mapped to roles
 {: #iam-actions}
 
 
 | Action ID                               | Roles                                         | Descriptions                     |
 | ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes, and hosts within the service instance. |
-| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance.  |
-| `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. Allowed to create, list, and delete object credentials within the service instance. Allowed to create, **view**, list, update, and delete block volumes and hosts within the service instance. |
+| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. |
+| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page.  |
+| `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. |
+| `software-defined-storage.subresource.read`	  |	Manager | View volume, host and deployment details. |
+| `software-defined-storage.subresource.create`	|	Manager | Create volume, host, object credential and deployments. |
+| `software-defined-storage.subresource.update`	|	Manager | Modify volume name, host name, object credential, object certificates and deployments. |
+| `software-defined-storage.subresource.delete`	|	Manager | Delete volume, host, object credential and deployments. |
 {: caption="IAM action descriptions"}
 
-All the roles including the `Viewer` role provide some service actions by using platform level roles within the deployments. Use caution when assigning these roles to users.
-{: attention}
 
 ## Assigning access to {{site.data.keyword.cephaas_short}} in the console
 {: #assign-access-console}
@@ -72,14 +85,14 @@ There are two common ways to assign access in the console:
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli){: external}. The following example shows a command for assigning the `<Viewer>` role for `<IBM CephaaS Storage>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli){: external}. The following example shows a command for assigning the `<Manager>` role for `<IBM CephaaS Storage>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
 
 
 ```bash
-ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined-storage --roles "Viewer"
+ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined-storage --roles "Manager"
 ```
 {: pre}
 
@@ -96,20 +109,21 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 | Operator               | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Operator`      |
 | Editor                 | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Editor`        |
 | Administrator          | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Administrator` |
+| Manager                | `crn:v1:bluemix:public:software-defined-storage::::serviceRole:Manager` |
 {: caption="Role ID values for API use" caption-side="bottom"}
 
 
 
-The following example is for assigning the `<Viewer>` role for `<IBM CephaaS Storage>`:
+The following example is for assigning the `<Manager>` role for `<IBM CephaaS Storage>`:
 
-Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to helo ensure that you're using the correct value for the CRN.
+Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
 
 
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
   "type": "access",
-  "description": "Viewer role for IBM CephaaS Storage",
+  "description": "Manager role for IBM CephaaS Storage",
   "subjects": [
     {
       "attributes": [
@@ -122,7 +136,7 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
   ],
   "roles":[
     {
-      "role_id": "crn:v1:bluemix:public:software-defined-storage::::serviceRole:Viewer"
+      "role_id": "crn:v1:bluemix:public:software-defined-storage::::serviceRole:Manager"
     }
   ],
   "resources":[
@@ -143,3 +157,71 @@ curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $
 ```
 {: curl}
 {: codeblock}
+
+
+```go
+subjectAttribute := &iampolicymanagementv1.SubjectAttribute{
+    Name:  core.StringPtr("iam_id"),
+    Value: core.StringPtr("IBMid-123453user"),
+}
+policySubjects := &iampolicymanagementv1.PolicySubject{
+    Attributes: []iampolicymanagementv1.SubjectAttribute{*subjectAttribute},
+}
+policyRoles := &iampolicymanagementv1.PolicyRole{
+    RoleID: core.StringPtr("crn:v1:bluemix:public:software-defined-storage::::serviceRole:Manager"),
+}
+accountIDResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
+    Name:     core.StringPtr("accountId"),
+    Value:    core.StringPtr("ACCOUNT_ID"),
+    Operator: core.StringPtr("stringEquals"),
+}
+serviceNameResourceAttribute := &iampolicymanagementv1.ResourceAttribute{
+    Name:     core.StringPtr("serviceName"),
+    Value:    core.StringPtr("software-defined-storage"),
+    Operator: core.StringPtr("stringEquals"),
+}
+policyResources := &iampolicymanagementv1.PolicyResource{
+    Attributes: []iampolicymanagementv1.ResourceAttribute{
+      *accountIDResourceAttribute, *serviceNameResourceAttribute}
+}
+
+options := iamPolicyManagementService.NewCreatePolicyOptions(
+    "access",
+    []iampolicymanagementv1.PolicySubject{*policySubjects},
+    []iampolicymanagementv1.PolicyRole{*policyRoles},
+    []iampolicymanagementv1.PolicyResource{*policyResources},
+)
+
+policy, response, err := iamPolicyManagementService.CreatePolicy(options)
+if err != nil {
+    panic(err)
+}
+b, _ := json.MarshalIndent(policy, "", "  ")
+fmt.Println(string(b))
+```
+{: go}
+{: codeblock}
+
+
+## Assigning access to {{site.data.keyword.cephaas_short}} by using Terraform
+{: #assign-access-terraform}
+{: terraform}
+
+The following example is for assigning the `<Manager>` role for `<software-defined-storage>`:
+
+Use `software-defined-storage` for the service name.
+{: tip}
+
+
+```terraform
+resource "ibm_iam_user_policy" "policy" {
+    ibm_id = "test@example.com"
+    roles  = ["Manager"]
+    resources {
+    service = "software-defined-storage"
+    }
+}
+```
+{: codeblock}
+
+For more information, see [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-10"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Mapping volume to a host
 {: #mapping-vol-to-host}
 
-You can map one or more volumes to a host by using UI, CLI, and APIs.
+You can map one or more volumes to a host by using UI, CLI, API and Terraform.
 
 Make sure that there is one or more volumes available for mapping to a host.
 {: requirement}
@@ -118,6 +118,16 @@ A successful response looks like this:
 {: screen}
 
 You can map only one volume at a time by using API command.
+{: note}
+
+
+## Mapping block volume using Terraform
+{: #mapping-host-to-volume-tf}
+{: terraform}
+
+To map one or more hosts to a volume, edit the `main.tf` file to add the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+
+Using terraform, You can map mulitple volumes to a host at a time.
 {: note}
 
 ## Next steps

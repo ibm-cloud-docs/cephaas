@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-10"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -53,14 +53,15 @@ import (
 ## Before You Begin using code examples
 {: #go-examples-prereqs}
 
-The following items are necessary to create a volume or a host:
+The following items are necessary to create or modify volume or host details:
 
-* A Ceph as a service deployment instance [provisioned - TODO: Update link](/docs/key-protect?topic=key-protect-provision)
-* TODO: Are there any other items that are required?
+* A Ceph as a service deployment instance.
+* API Key
+
+
 
 ## Code Examples
 {: #go-code-examples}
-
 
 
 ### Setup
