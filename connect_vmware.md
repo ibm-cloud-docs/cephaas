@@ -1,7 +1,7 @@
 ---
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-05"
+ years: 2024, 2025
+lastupdated: "2025-01-14"
 
 keywords: Connect VMware environment
 
@@ -83,5 +83,5 @@ If you wish to unregister the plug-in, run the command `ibm-plugin unregister`.
 
 After the installation, you need to get the following from your admin.
 
-- Service ID with a viewer role for {{site.data.keyword.cephaas_full_notm}}
+- Service ID with a manager role for {{site.data.keyword.cephaas_full_notm}}
 - API Key
