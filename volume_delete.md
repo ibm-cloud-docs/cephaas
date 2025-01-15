@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -56,6 +56,8 @@ To delete multiple volumes together, follow these steps:
 
 3. Click **Delete**.
 
+You can choose a maximum of 10 volumes only for deletion at one time.
+{: note}
 
 ## Deleting a block volume from the CLI
 {: #deleting-block-volume-cli}

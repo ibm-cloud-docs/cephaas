@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-14"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: cephaas, cli, command-line interface, object storage, s3
 
@@ -144,6 +144,9 @@ copy: s3://bucket-1/new-file to s3://bucket-2/new-file
 aws s3 rm s3://mybucket/argparse-1.2.1.tar.gz
 delete: s3://mybucket/argparse-1.2.1.tar.gz
 ```
+
+Deleting an object can take up to 30 minutes to reflect in the system since the Ceph Object storage does garbage collection as per the minimum default settings.
+{: note}
 
 ### Remove a bucket
 {: #aws-cli-high-level-delete-bucket}
