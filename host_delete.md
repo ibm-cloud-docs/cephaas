@@ -15,7 +15,7 @@ subcollection: cephaas
 # Deleting hosts
 {: #deleting-hosts}
 
-Delete a host from a deployment by using the UI, CLI, or API.
+Delete a host from a deployment by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 

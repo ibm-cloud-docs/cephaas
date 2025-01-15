@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-15"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Unmap volume from a host
 {: #unmap-hosts}
 
-Unmap one or more volumes from host by using the UI, CLI, or API.
+Unmap one or more volumes from host by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 

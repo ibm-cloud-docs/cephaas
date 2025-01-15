@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: cephaas, block storage, rename host
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Renaming hosts
 {: #renaming-hosts}
 
-You can update host name (rename) from the UI, CLI, or by using the API.
+You can update host name (rename) from the UI, CLI, by using the API or Terraform.
 {: shortdesc}
 
 ## Renaming hosts from the UI

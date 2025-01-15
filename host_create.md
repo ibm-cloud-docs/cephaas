@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: sds, cephaas host,
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating a host
 {: #creating-host}
 
-Create a host by using the UI, CLI, or API.
+Create a host by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 Before creating a host, the NVME-oF initiator, which is required for mapping volume to a host, must be configured.

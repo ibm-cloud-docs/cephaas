@@ -15,7 +15,7 @@ subcollection: cephaas
 # Mapping volume to a host
 {: #mapping-volume-to-host}
 
-You can map one or more volume to a host by using UI, CLI and APIs.
+You can map one or more volume to a host by using UI, CLI, API and Terraform.
 
 ## Mapping volumes to a host from Volumes page in the UI
 {: #mapping-volume-to-host-ui}
