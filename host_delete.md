@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -34,15 +34,15 @@ To delete a host, complete the following steps.
 A host cannot be deleted if it has one or more volumes that are mapped to it. Unmap all associated volumes first to delete the host.
 {: note}
 
-## Deleting multiple host from the UI
+## Deleting multiple hosts from the UI
 {: #deleting-multiple-hosts-ui}
 {: ui}
 
-To delete a host, complete the following steps.
+To delete multiple hosts together, complete the following steps.
 
 1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
-2. Select one or more Host **Name** that you want to delete.
+2. Select one or more Host **Names** that you want to delete.
 
 3. Click **Delete**.
 
@@ -56,7 +56,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: #deleting-hosts-cli}
 {: cli}
 
-Use the `host-delete` command and specify the `INSTANCEID` and endpoint url along with the `HOST-ID` to delete the host based on the host id.
+Use the `host-delete` command and specify the `INSTANCEID` and endpoint url along with the `HOST-ID` to delete the host based on the host ID.
 
 A host cannot be deleted if it has one or more volumes that are mapped to it. Unmap all associated volumes first to delete the host.
 {: note}
@@ -99,7 +99,7 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}' \
 ```
 {: pre}
 
-There is no response body for a successful delete operation. HTTP response code 204 is returned.
+There are no response body for a successful delete operation. HTTP response code 204 is returned.
 
 To verify that the host is deleted, list the hosts by making a `GET /hosts` call.
 
@@ -108,9 +108,9 @@ To verify that the host is deleted, list the hosts by making a `GET /hosts` call
 {: #deleting-host-tf}
 {: terraform}
 
-To delete a host using terraform, you can run `terraform destroy -target <host_name>` where _<host_name>_ is the name of the host in the resource `ibm_sds_host` that is no longer needed.
+To delete a host by using terraform, run `terraform destroy -target <host_name>` where _<host_name>_ is the name of the host in the resource `ibm_sds_host` that is no longer needed.
 
-See example where <host_name> is `ibm_sds_host.sds_host_instance_2`.
+Example of <host_name>: `ibm_sds_host.sds_host_instance_2`
 
 ```terraform
 terraform destroy -target ibm_sds_host.sds_host_instance_2

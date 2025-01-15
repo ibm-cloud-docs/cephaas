@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-04"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -15,18 +15,17 @@ subcollection: cephaas
 # Getting Started with the SDKs
 {: #getting-started-sdk}
 
-{{site.data.keyword.cephaas_full}} provides SDK for Go which can help you to make the most of {{site.data.keyword.cephaas_short}}.
+{{site.data.keyword.cephaas_full}} provides an SDK for GO, which can help you to make the most of {{site.data.keyword.cephaas_short}}.
 {: shortdesc}
 
 This Quick Start guide provides a code example that demonstrates the following operations:
 
-* Create a new volume
-* List the available volumes
-* Create a new host
-* List the available hosts
-* Retrieve all volumes
-* Delete a volume
-* Delete a host
+* Create new volume or host
+* List the available volumes or hosts
+* Retrieve all volumes or hosts
+* Modify volume or host details
+* Map or unmap volume to host
+* Delete a volume or hosts
 
 ## Before you begin
 {: #sdk-gs-prereqs}
@@ -40,14 +39,14 @@ You need:
 ## Getting the SDK
 {: #sdk-gs-install}
 
-Specific instructions for downloading and installing the SDK is available in [Using Go](/docs/cephaas?topic=cephaas-using-go){: external}{: go}.
+Specific instructions for downloading and installing the SDK are available in [Using Go](/docs/cephaas?topic=cephaas-using-go){: external}{: go}.
 
 ## Code Example
 {: #sdk-gs-example}
 
-The code examples below provide introductory examples of running the basic operations with {{site.data.keyword.cos_short}}. For simplicity, the code example can be run multiple times as it uses Universally Unique Identifiers (UUIDs) for bucket/item names to prevent potential conflicts.
+The code example provides introductory examples of running the basic operations with {{site.data.keyword.cos_short}}. For simplicity, the code example can be run multiple times as it uses Universally Unique Identifiers (UUIDs) for bucket or item names to prevent potential conflicts.
 
-In your code, you must remove the angled brackets or any other excess characters that are provided here as illustration.
+In your code, you must remove the angled brackets or any other excess characters that are provided here as an illustration.
 {: note}
 
 To complete the code example, you need to replace the following values:
@@ -238,7 +237,7 @@ func exitErrorf(msg string, args ...interface{}) {
 ## Running the Code Example
 {: #sdk-gs-run}
 
-To run the code sample, copy the code blocks above and run the following:
+To run the code sample, copy the preceding code blocks and run the following command.
 
 ``` sh
 go run go_example.go
@@ -246,10 +245,10 @@ go run go_example.go
 {: codeblock}
 {: go}
 
-## Output from the Code Example
+## Output from the code example
 {: #sdk-gs-output}
 
-The output from the Code Example should resemble the following:
+The output from the code example resembles:
 
 ```go
 Creating new volume "volume1"...

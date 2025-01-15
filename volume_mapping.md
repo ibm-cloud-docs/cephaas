@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-16"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -87,7 +87,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 
 ## Mapping volume to a host with the API
-{: #mapping-hosts-api}
+{: #mapping-vol-to-hosts-api}
 {: api}
 
 Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a given host.

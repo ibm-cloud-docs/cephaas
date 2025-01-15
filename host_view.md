@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: sds, host, view host details, host summary list
 
@@ -19,13 +19,13 @@ subcollection: cephaas
 View details of a host or summary information about all hosts for the chosen deployment.
 {: shortdesc}
 
-## Viewing host details in the UI
+## View host details in the UI
 {: #view-host-details-ui}
 {: ui}
 
 You can view a summary of all host and view details for a single volume for the chosen deployment on the user interface.
 
-### Viewing all host in the UI
+### View all hosts in the UI
 {: #view-all-hosts-ui}
 {: ui}
 
@@ -36,13 +36,13 @@ By default, all Hosts are displayed for the chosen Deployment. In the list of al
 | Field           | Description |
 |-----------------|-------------|
 | Name            | Click the name of the host to see individual host details. |
-| Volumes mapped  | Shows the count of number of volumes mapped to the host. |
+| Volumes mapped  | Shows the count of the number of volumes that are mapped to the host. |
 | Host NQN        | The NVMe Qualified Name (NQN) of the configured host. |
 {: caption="Details about all hosts" caption-side="bottom"}
 
 By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
 
-Row actions menu on the Hosts list page provides you with options to manage the single host information.
+The row actions menu on the Hosts list page provides you with options to manage the single host information.
 
 Table describes the kebab menu options.
 
@@ -54,10 +54,10 @@ Table describes the kebab menu options.
 | Delete             | Remove the mapping between the volume and host. |
 {: caption="Row actions menu options for Hosts." caption-side="bottom"}
 
-When you select one or more hosts, the `Delete` button is enabled and displayed which allows you to perform multiple delete operation.
+When you select one or more hosts, the `Delete` button is enabled and displayed which enables you to perform multiple delete operations.
 
 
-### Viewing single host details in the UI
+### View single host details in the UI
 {: #view-single-host-details-ui}
 {: ui}
 
@@ -68,21 +68,21 @@ The Host details page shows the details of the chosen hostname and all its mappe
 | Field | Description |
 |-------|-------------|
 | **Host details** | |
-| Name  | Name of the host you specified when you created the host. Click the pen icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
+| Name  | The name of the host you specified when you created the host. Click the pen icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
 | Volumes mapped | Shows the total number of volumes mapped to the host. |
 | Created date | System-generated date when the host was added.|
 | Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Deployment | Name of the instance |
 | **Mapped volumes** | |
 | Name                | Volume name.                                             |
-| Mapped status       | Shows the status of the volume mapped to the host.       |
-| Storage identifier  | Storage identication number.                             |
+| Mapped status       | Shows the status of the volume that is mapped to the host. |
+| Storage identifier  | Storage identification number.                             |
 | Gateway IP          | IP address.                                              |
 | Namespace ID        | Namespace identification number.                         |
 | Namespace UUID      | Universal unique identification number of the namespace. |
 {: caption="Host details" caption-side="bottom"}
 
-The Mapped volumes section shows the list of all the volumes mapped to the Host and a link to map volumes to the host.
+The Mapped volumes section shows the list of all the volumes that are mapped to the Host and a link to map volumes to the host.
 
 
 
@@ -94,7 +94,7 @@ The Actions menu on the Host details page shows the actions that you can take.
 |--------------------|-------------|
 | Activity tracking  | Click to open the IBM Cloud activity tracking page where you can view the status of the generated events. |
 | Delete             | Remove the mapping between the volume and host. |
-{: caption="Actions menu options on Host details page." caption-side="bottom"}
+{: caption="Actions menu options on the Host details page." caption-side="bottom"}
 
 
 ## Viewing Hosts from the CLI
@@ -132,10 +132,10 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 
 
-### Viewing a list of all hosts from the CLI
+### View a list of all hosts from the CLI
 {: #view-all-host-cli}
 
-Run this command to view the list summary information about all hosts:
+Run this command to view the list of summary information about all hosts.
 
 ```sh
 ibmcloud software-defined-storage hosts [--limit LIMIT] [--name NAME] --url string
@@ -170,7 +170,7 @@ You can list all hosts and view details for a specific host within all deploymen
 
 Before you begin, make sure that you [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
 
-### Viewing list of all hosts with the API
+### View a list of all hosts with the API
 {: #view-all-host-api}
 
 Make a `GET /hosts` call to list summary information about all hosts. See the following example.
@@ -232,7 +232,7 @@ curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4
 ```
 {: pre}
 
-A successful response provides details of the host, such as the host id, host name, nqn, service instance id and also includes mapped volume details if it mapped to a volume.
+A successful response provides details of the host, such as the `host ID`, `host name`, `nqn`, `service instance ID` and also includes mapped volume details if it mapped to a volume.
 
 ```json
 {
@@ -268,7 +268,7 @@ A successful response provides details of the host, such as the host id, host na
 
 
 ## View host details using Terraform
-{: #view-volume-tf}
+{: #view-host-tf}
 {: terraform}
 
 To view host details, run `terraform show`.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2024-12-13"
+lastupdated: "2025-01-15"
 
 subcollection: cephaas
 
@@ -80,10 +80,10 @@ Before you can create an authorization by using Terraform, make sure that you ha
       ```
       {: pre}
 
-6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, select the {{site.data.keyword.keymanagementserviceshort}} instance that you created and note the instance ID.
+6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
 7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}
 
-Now that you successfully created your first {{site.data.keyword.keymanagementserviceshort}} service instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:
+Now that you successfully created your first {{site.data.keyword.cephaas_short}} deployment instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:

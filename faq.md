@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-02"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Freqently asked questions
 {: #faq}
 
-Frequently asked questions provides you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
+Frequently asked questions provide you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
 
 * [Block and Object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
 * [Low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
@@ -34,7 +34,7 @@ Both block and object storage are calculated hourly. The calculation is based on
 {: faq}
 {: #faq-quota-limit}
 
-There are capacity based quota limits for your block and object storage based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-quota-capacity-mgmt&interface=ui).
+The capacity-based quota limits for your block and object storage are based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-quota-capacity-mgmt&interface=ui).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?
@@ -68,7 +68,7 @@ You can delete a block storage volume only when it is not mapped to a host. [Unm
 {: faq}
 {: #faq-data-post-vol-delete}
 
-When you delete a block storage volume, all pointers to the data on that volume are removed and the data becomes inaccessible. If you later reprovision the physical storage to another deployment, a new set of pointers is assigned. The new deployment cannot access any data that was on the physical storage because the pointers have been deleted. When new data is written to the volume, any inaccessible data is overwritten.
+When you delete a block storage volume, all pointers to the data on that volume are removed and the data becomes inaccessible. If you later reprovision the physical storage to another deployment, a new set of pointers is assigned. The new deployment cannot access any data that was on the physical storage because the pointers were deleted. When new data is written to the volume, any inaccessible data is overwritten.
 
 
 ### Is storage capacity measured in GB or GiB?
@@ -79,7 +79,7 @@ One confusing aspect of storage is the units that storage capacity and usage are
 
 Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, API, and Terraform, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
 
-However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer filesystems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available Storage Systems are considerably larger this unit difference is causing confusion.
+However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer file systems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available Storage Systems are considerably larger this unit difference is causing confusion.
 
 The difference between GB and GiB lies in their numerical representation:
 - GB (Gigabyte) is a decimal unit, where 1 GB equals 1,000,000,000 bytes. When you convert GB to TB, you use 1000 as the multiplier.
@@ -116,7 +116,7 @@ Yes, a volume can be mapped to up to 32 hosts.
 {: faq}
 {: #faq-vol-increase-performance}
 
-Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the bandwidth are dependent on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
+Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and the bandwidth depend on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
 
 | Setting name                          |   Values                              |
 |---------------------------------------|---------------------------------------|
@@ -125,10 +125,10 @@ Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the
 | Max Volume Size                       |	32 TB                               |
 | Min IOPS  (minimum value of max IOPS that is set on a volume) | 150           |
 | Max IOPS                              |	96000 (3 * max vol size)            |
-| Blocksize / Throughput Multiplier     |	16 K                                |
+| Blocksize (Throughput Multiplier)     |	16 K                                |
 | Min Throughput (Blocksize * Min IOPS) |	1.6 MBps                            |
 | Max Throughput (Blocksize * Max IOPS) |   1536 MBps                           |
-{: caption="volume settings" caption-side="bottom"}
+{: caption="Volume settings" caption-side="bottom"}
 
 
 
@@ -136,38 +136,39 @@ Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and hence the
 {: faq}
 {: #faq-create-vol-10k-iops}
 
-To help ensure a throttling of 10000 IOPS, the volume capacity should be at least 10000/3 = 3334 GB. So, you must create a volume with capacity ~3500 GB.
+To help ensure a throttling of 10000 IOPS, the volume capacity must be at least 10000/3 = 3334 GB. So, you must create a volume with capacity ~3500 GB.
 
-### How to create volume for a workload that requires a throughput of 1000MBps?
+### How to create volume for a workload that requires a throughput of 1000 MBps?
 {: faq}
 {: #faq-create-vol-thruput-1kmbps}
 
-To help ensure a throttling of 1000 * 1000 KBps, max IOPS should be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
+To help ensure a throttling of 1000 * 1000 KBps, max IOPS must be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
 
 ### What does the ‘pending’ status mean for block volumes and hosts?
 {: #faq-pending-status-block-volumes-hosts}
 
-Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long running API cases, the caller can track the status of resource using the "status" property in GET API.
-An ‘available’ status indicates that the processing has completed and the resource is ready for use. The pending statuses indicate that the resource is still being processed.
-There are the following pending status that the block storage API uses:
+Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long-running API cases, the caller can track the status of a resource using the "status" property in the `GET` API.
+An ‘available’ status indicates that the process is complete and that the resource is ready for use. The pending statuses indicate that the resource is still being processed.
 
-- ‘pending’: This is used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after POST /volumes, POST /hosts or PUT /hosts/{id}/volumes/{id}  call if the operation is still in progress.
-- ‘pending-deletion’: This is used when a volume deletion is in progress. GET /volumes  API will return this status after DELETE /volumes/{id} call if delete operation is still in progress.
-- "pending-unmapping": This is used when a volume unmapping from a host operation is in progress. GET /hosts  API will return this status for a volume mapping after DELETE /hosts/{id}/volumes/{id} or DELETE /hosts/{id}/volumes  call  if the unmapping operation is still in progress.
+The Block storage API uses the following pending status:
 
-The resource may remain in one of these pending states for as long as the operation does not complete. The backend will keep on trying the operation until it succeeds.
+- ‘pending’: Used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after `POST /volumes`, `POST /hosts`, or `PUT /hosts/{id}/volumes/{id}` call if the operation is still in progress.
+- ‘pending-deletion’: Used when a volume deletion is in progress. `GET /volumes` API will return this status after `DELETE /volumes/{id}` call if delete operation is still in progress.
+- "pending-unmapping": Used when a volume unmapping from a host operation is in progress. `GET /hosts` API will return this status for a volume mapping after `DELETE /hosts/{id}/volumes/{id}` or `DELETE /hosts/{id}/volumes` call if the unmapping operation is still in progress.
 
-For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It will only come in ‘available’ state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller will have to implement timeouts if needed for such cases.
+The resource can remain in one of these pending states for as long as the operation does not complete. The backend keeps on trying the operation until it succeeds.
+
+For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It changes to `available` state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller must implement timeouts if needed for such cases.
 
 
 ## FAQs on low-cost objects
 {: #faq-low-cost-objects}
 
-### What is the defaul storage class for low-cost objects?
+### What is the default storage class for low-cost objects?
 {: faq}
 {: #faq-default-sc}
 
-For Low-cost Object, new S3 accounts will have STANDARD_IA as the default storage class.
+For Low-cost Object, new S3 accounts have `STANDARD_IA` as the default storage class.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-15"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -15,15 +15,15 @@ subcollection: cephaas
 # Using Go
 {: #using-go}
 
-The {{site.data.keyword.cephaas_full}} SDK for Go provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
+The {{site.data.keyword.cephaas_full}} SDK for GO provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
-The {{site.data.keyword.cephaas_full_notm}} SDK for Go is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the Go API documentation](https://ibm.github.io/sds-go-sdk){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
+The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, [see the GO API documentation](https://ibm.github.io/sds-go-sdk){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
 
 ## Getting the SDK
 {: #go-get-sdk}
 
-Use `go get` to retrieve the SDK to add it to your GOPATH workspace, or project's Go module dependencies. The SDK requires a minimum version of Go 1.10 and maximum version of Go 1.12. Future versions of Go will be supported once our quality control process has been completed.
+Use `go get` to retrieve the SDK to add it to your GOPATH workspace, or project's Go module dependencies. The SDK requires a minimum version of GO 1.10 and a maximum version of GO 1.12. Future versions of Go will be supported once our quality control process has been completed.
 
 ```sh
 go get github.com/IBM/sds-go-sdk/sdsaasv1
@@ -40,7 +40,7 @@ go get -u github.com/IBM/sds-go-sdk/sdsaasv1
 ### Import packages
 {: #go-import-packages}
 
-After installing the SDK, import the packages that is required for the Go applications to use the SDK, as shown in the following example:
+After installing the SDK, import the packages that are required for the GO applications to use the SDK, as shown in the following example.
 
 ```sh
 import (
@@ -50,7 +50,7 @@ import (
 {: codeblock}
 
 
-## Before You Begin using code examples
+## Before you begin using code examples
 {: #go-examples-prereqs}
 
 The following items are necessary to create or modify volume or host details:
@@ -92,7 +92,7 @@ func main() {
 ```
 {: codeblock}
 
-### Creating a new volume
+### Creating new volume
 {: #go-new-volume}
 
 
@@ -355,4 +355,4 @@ func main() {
 ## Next Steps
 {: #go-next-steps}
 
-If you haven't already, please see the detailed class and method documentation available at the [Go API documentation](https://ibm.github.io/ibm-sds-go-sdk/){: external}.
+If you haven't already, see the detailed class and method documentation available at the [GO API documentation](https://ibm.github.io/ibm-sds-go-sdk/){: external}.
