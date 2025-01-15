@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-15"
 
 keywords: list all volumes, view volume details
 
@@ -255,7 +255,12 @@ A successful response provides details of the volume, including capacity and IOP
 {: #view-volume-tf}
 {: terraform}
 
-To view details of single volume, run `terraform show`.
+To view details of single volume, run the following command:
+
+```terra
+Terraform state show <instance-based-off-list>
+```
+{: pre}
 
 Run `terraform state list` to view the list of all volumes.
 

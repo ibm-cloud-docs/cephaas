@@ -271,6 +271,12 @@ A successful response provides details of the host, such as the `host ID`, `host
 {: #view-host-tf}
 {: terraform}
 
-To view host details, run `terraform show`.
+To view details of a specific host, run the following command:
+
+```terra
+Terraform state show <instance-based-off-list>
+```
+{: pre}
+
 
 Run `terraform state list` to view the list of all hosts.

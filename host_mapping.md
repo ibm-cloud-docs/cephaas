@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-15"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -126,6 +126,27 @@ You can map only one volume at a time by using API command.
 {: terraform}
 
 To map one or more hosts to a volume, edit the `main.tf` file to add the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+
+
+The following examples show how you can map multiple volumes to a host.
+
+```terra
+// Provision sds_host resource instance
+resource "ibm_sds_host" "sds_host_instance" {
+
+  name = var.sds_host_name
+  nqn = var.sds_host_nqn
+  volumes {
+    volume_id = ibm_sds_volume.sds_volume_instance_1.id
+    volume_name = ibm_sds_volume.sds_volume_instance_1.name
+  }
+  volumes {
+    volume_id = ibm_sds_volume.sds_volume_instance_2.id
+    volume_name = ibm_sds_volume.sds_volume_instance_2.name
+  }
+}
+```
+{: pre}
 
 Using terraform, You can map mulitple volumes to a host at a time.
 {: note}

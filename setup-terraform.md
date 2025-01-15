@@ -87,3 +87,10 @@ Before you can create an authorization by using Terraform, make sure that you ha
 {: #terraform-setup-next}
 
 Now that you successfully created your first {{site.data.keyword.cephaas_short}} deployment instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:
+
+* Create new volume or host
+* List the available volumes or hosts
+* Retrieve all volumes or hosts
+* Modify volume or host details
+* Map or unmap volume to host
+* Delete a volume or hosts
