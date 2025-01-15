@@ -231,7 +231,7 @@ func exitErrorf(msg string, args ...interface{}) {
 	os.Exit(1)
 }
 ```
-{: codeblock}
+{: pre}
 {: go}
 
 ## Running the Code Example
@@ -242,7 +242,7 @@ To run the code sample, copy the preceding code blocks and run the following com
 ``` sh
 go run go_example.go
 ```
-{: codeblock}
+{: pre}
 {: go}
 
 ## Output from the code example
@@ -270,7 +270,7 @@ Removing assignment from volume "volume1"...
 Deleting volume "volume1"...
 Deleting host "host1"...
 ```
-{: codeblock}
+{: pre}
 {: go}
 
 <br/>
