@@ -49,7 +49,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume by using the UI. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
+You can change the name of an existing volume by using the UI, CLI, API and Terraform. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -75,7 +75,7 @@ When you delete a block storage volume, all pointers to the data on that volume 
 {: faq}
 {: #faq-storage-units}
 
-One confusing aspect of storage is the units that storage capacity and usage are reported in. Sometime GB is really gigabytes (base-10) and sometimes GB represents gibibytes (base-2) which ought to be abbreviated as GiB.
+One confusing aspect of storage is the units that storage capacity and usage are reported in. Sometime GB represents gigabytes (base-10) and sometimes GB represents gibibytes (base-2) which ought to be abbreviated as GiB.
 
 Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, API, and Terraform, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
 
@@ -116,7 +116,7 @@ Yes, a volume can be mapped to up to 32 hosts.
 {: faq}
 {: #faq-vol-increase-performance}
 
-Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and the bandwidth depend on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
+Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and bandwidth depend on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
 
 | Setting name                          |   Values                              |
 |---------------------------------------|---------------------------------------|
