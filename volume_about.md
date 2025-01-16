@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-14"
+ years: 2024, 2025
+lastupdated: "2025-01-16"
 
 keywords:
 
@@ -28,7 +28,7 @@ Block storage volume provides hypervisor-mounted, high-performance data storage 
 
 You pay for only the capacity that you need. The capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
 
-When you create, view, or update a volume, the volume state is reported in the UI, CLI, or API. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/cephaas?topic=cephaas-view-volume&interface=ui#viewvols-ui).
+When you create, view, or update a volume, the volume state is reported in the UI, CLI, API and terraform. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/cephaas?topic=cephaas-view-volume&interface=ui#viewvols-ui).
 
 
 ## IAM roles for creating and managing volumes

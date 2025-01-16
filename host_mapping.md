@@ -130,7 +130,7 @@ To map one or more hosts to a volume, edit the `main.tf` file to add the `host_m
 
 The following examples show how you can map multiple volumes to a host.
 
-```terra
+```sh
 // Provision sds_host resource instance
 resource "ibm_sds_host" "sds_host_instance" {
 

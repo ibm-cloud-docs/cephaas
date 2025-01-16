@@ -111,17 +111,17 @@ To verify that the volume is deleted, list the volumes by making a `GET /volumes
 
 To delete a single volume using terraform, you can run `terraform destroy -target <volume_name>` where <volume_name> is the name of the volume that is no longer needed.
 
-See example where <volume_name> is `ibm_sds_volume.sds_volume_instance_2`
+Example of <volume_name>: `ibm_sds_volume.sds_volume_instance_2`.
 
-```terraform
+```sh
 terraform destroy -target ibm_sds_volume.sds_volume_instance_2
 ```
+{: pre}
 
-If a volume is mapped to a host, it will need to be unmapped before deletion using the CLI.
+If a volume is mapped to a host, you must unmap the volume from host before deletion using the CLI.
 {: note}
 
 
-{: pre}
 
 
 

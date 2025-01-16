@@ -176,7 +176,7 @@ A successful response looks like this:
 
    1. Run `terraform apply` to create the resources that are defined in the plan.
 
-      ```terraform
+      ```sh
       terraform apply
       ```
       {: pre}
@@ -185,7 +185,7 @@ A successful response looks like this:
 
     See the example output for details.
 
-    ```terraform
+    ```sh
     ibm_sds_volume = [
     {
       "bandwidth" = 19

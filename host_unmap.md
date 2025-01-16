@@ -148,13 +148,13 @@ To unmap a volume for a host, use the CLI terminal and run the following command
 * To delete a single host mapping
 
 ```sh
-ibmcloud sds host-vol-delete --host-id <hostid> --volume-id <volumeid>
+ibmcloud sds host-vol-delete --host-id <HOST-ID> --volume-id <VOLUME-ID>
 ```
 {: pre}
 
 * To delete all host mappings
 
 ```sh
-ibmcloud sds host-vol-deleteall --host-id <hostid>
+ibmcloud sds host-vol-deleteall --host-id <HOST-ID>
 ```
 {: pre}

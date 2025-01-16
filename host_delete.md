@@ -112,11 +112,10 @@ To delete a host by using terraform, run `terraform destroy -target <host_name>`
 
 Example of <host_name>: `ibm_sds_host.sds_host_instance_2`
 
-```terraform
+```sh
 terraform destroy -target ibm_sds_host.sds_host_instance_2
 ```
-
-If a volume is mapped to a host, it will need to be unmapped before deletion using the CLI.
-{: note}
-
 {: pre}
+
+If a volume is mapped to a host, you must unmap the volume from host before deletion using the CLI.
+{: note}

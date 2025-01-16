@@ -141,9 +141,11 @@ A successful response looks like this:
 {: #expand-volume-tf}
 {: terraform}
 
-To expand the capacity of a volume, open and modify the `capacity` value in your `main.tf` file.
+To expand the capacity of a volume, do the following steps:
 
-After, run `terraform plan` and `terraform apply` to apply your changes
+1. Open and modify the `capacity` value in your `main.tf` file.
+
+2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
 
 You can modify only one parameter value at a time.
 {: note}

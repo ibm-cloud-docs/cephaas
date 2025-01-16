@@ -124,9 +124,11 @@ A successful response looks like this:
 {: #rename-volume-tf}
 {: terraform}
 
-To rename the volume, open and modify the `name` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+To rename the volume, do the following steps:
 
-After, run `terraform plan` and `terraform apply` to apply your changes
+1. Open and modify the `name` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+
+2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
 
 You can modify only one parameter value at a time.
 {: note}
