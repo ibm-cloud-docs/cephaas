@@ -151,6 +151,7 @@ resource "ibm_sds_host" "sds_host_instance" {
 {: screen}
 
 You can map mulitple volumes to a host at a time.
+{: note}
 
 
 ## Next steps

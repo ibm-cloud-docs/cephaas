@@ -55,7 +55,7 @@ import (
 
 The following items are necessary to create or modify volume or host details:
 
-* An {site.data.keyword_cephaas_full_notm} deployment instance
+* An {{site.data.keyword_cephaas_full_notm}} deployment instance
 * A service endpoint associated with the deployment
 * API Key
 
