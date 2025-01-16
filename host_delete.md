@@ -112,7 +112,7 @@ To delete a host by using terraform, run `terraform destroy -target <host_name>`
 
 Example of <host_name>: `ibm_sds_host.sds_host_instance_2`
 
-```sh
+```terraform
 terraform destroy -target ibm_sds_host.sds_host_instance_2
 ```
 {: pre}

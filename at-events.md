@@ -1,10 +1,10 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-14"
+ years: 2024, 2025
+lastupdated: "2025-01-16"
 
-keywords: cephaas activity tracker events
+keywords: cephaas, activity tracker events, auditing events
 
 subcollection: cephaas
 
@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracking events for {{site.data.keyword.cephaas_full_notm}}
+# Activity tracker events
 {: #at_events}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.
@@ -25,7 +25,7 @@ You can use {{site.data.keyword.atracker_full_notm}}, a platform service to rout
 For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
 
-## Viewing activity tracking events for {{site.data.keyword.cephaas_full_notm}}
+## Viewing activity tracking events
 {: #at-viewing}
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.

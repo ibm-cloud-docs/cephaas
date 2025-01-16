@@ -273,7 +273,7 @@ A successful response provides details of the host, such as the `host ID`, `host
 
 To view details of a specific host, run the following command:
 
-```terra
+```terraform
 Terraform state show <instance-based-off-list>
 ```
 {: pre}

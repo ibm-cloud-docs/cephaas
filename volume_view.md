@@ -257,7 +257,7 @@ A successful response provides details of the volume, including capacity and IOP
 
 To view details of single volume, run the following command:
 
-```sh
+```terraform
 Terraform state show <instance-based-off-list>
 ```
 {: pre}

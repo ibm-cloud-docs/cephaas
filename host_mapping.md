@@ -130,7 +130,7 @@ To map one or more hosts to a volume, edit the `main.tf` file to add the `host_m
 
 The following examples show how you can map multiple volumes to a host.
 
-```sh
+```terraform
 // Provision sds_host resource instance
 resource "ibm_sds_host" "sds_host_instance" {
 
@@ -146,7 +146,7 @@ resource "ibm_sds_host" "sds_host_instance" {
   }
 }
 ```
-{: pre}
+{: screen}
 
 Using terraform, You can map mulitple volumes to a host at a time.
 {: note}
