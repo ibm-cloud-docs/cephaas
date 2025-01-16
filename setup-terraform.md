@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 subcollection: cephaas
 
@@ -47,7 +47,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
      name = "demo-host"
      nqn = "<hostNQN>"
-     volume_mappings {
+     volumes {
        volume_id = ibm_sds_volume.sds_volume_instance.id
        volume_name = ibm_sds_volume.sds_volume_instance.id
      }

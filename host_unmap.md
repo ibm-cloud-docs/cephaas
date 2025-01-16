@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -155,12 +155,6 @@ ibmcloud sds host-vol-delete --host-id <hostid> --volume-id <volumeid>
 * To delete all host mappings
 
 ```sh
-ibmcloud sds host-vol-deleteall --host-id
+ibmcloud sds host-vol-deleteall --host-id <hostid>
 ```
 {: pre}
-
-
-
-
-You can unmap one volume from a host at a time.
-{: note}

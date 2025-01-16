@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -105,7 +105,7 @@ A successful response looks like this:
     "created_at": "2024-06-21T07:22:15Z",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
-    "volume_mappings": [
+    "volumes": [
         {
             "volume_name": "vol1",
             "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",

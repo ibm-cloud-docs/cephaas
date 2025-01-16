@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -115,4 +115,8 @@ Example of <host_name>: `ibm_sds_host.sds_host_instance_2`
 ```terraform
 terraform destroy -target ibm_sds_host.sds_host_instance_2
 ```
+
+If a volume is mapped to a host, it will need to be unmapped before deletion using the CLI.
+{: note}
+
 {: pre}

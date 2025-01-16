@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -116,6 +116,11 @@ See example where <volume_name> is `ibm_sds_volume.sds_volume_instance_2`
 ```terraform
 terraform destroy -target ibm_sds_volume.sds_volume_instance_2
 ```
+
+If a volume is mapped to a host, it will need to be unmapped before deletion using the CLI.
+{: note}
+
+
 {: pre}
 
 

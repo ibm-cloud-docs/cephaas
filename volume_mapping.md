@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -72,7 +72,7 @@ Created_At    2024-07-23T04:53:29Z
 ID        r134-0bb14043-73a1-47e0-b46c-a147fdacba25
 Name       host1
 NQN        nqn.2014-08.org.nvmexpress:uuid:54821642-dc4b-47bd-9b54-02699cebac79
-Volume_Mappings
+Volumes
          Status    pending
          Volume_ID   r134-3bc5068a-2936-4f30-b277-968fad03da2d
          Volume_Name  volume1
@@ -108,7 +108,7 @@ A successful response looks like this:
     "created_at": "2024-06-21T07:22:15Z",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
-    "volume_mappings": [
+    "volumes": [
         {
             "volume_name": "vol1",
             "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -23,7 +23,7 @@ The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with ma
 ## Getting the SDK
 {: #go-get-sdk}
 
-Use `go get` to retrieve the SDK to add it to your GOPATH workspace, or project's Go module dependencies. The SDK requires a minimum version of GO 1.10 and a maximum version of GO 1.12. Future versions of Go will be supported once our quality control process has been completed.
+Use `go get` to retrieve the SDK to add it to your GOPATH workspace, or project's Go module dependencies. The SDK requires a minimum version of GO 1.21 or above. Future versions of Go will be supported once our quality control process has been completed.
 
 ```sh
 go get github.com/IBM/sds-go-sdk/sdsaasv1
@@ -56,6 +56,7 @@ import (
 The following items are necessary to create or modify volume or host details:
 
 * A Ceph as a service deployment instance.
+* A service endpoint associated with the Ceph as a service deployment
 * API Key
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: sds, host, view host details, host summary list
 
@@ -195,7 +195,7 @@ A successful response looks like the following example.
       "nqn": "nqn.2014-08.com.vmware:nvme:vm2-esx-host",
       "service_instance_id": "9f158770-66a4-4746-a2aa-245a8e06f451",
       "storage_workspace_id": "default",
-      "volume_mappings": [
+      "volumes": [
         {
           "status": "string",
           "storage_identifiers": {
@@ -242,7 +242,7 @@ A successful response provides details of the host, such as the `host ID`, `host
     "created_at": "date-time",
     "service_instance_id": "xxxx",
     "storage_workspace_id": "yyyy",
-      volume_mappings" : [
+      volumes" : [
         {
            "volume_name": "<volume_name>",
            "volume_id": "<volume_id1>",

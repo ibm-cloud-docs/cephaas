@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-16"
 
 keywords: sds, cephaas host,
 
@@ -105,7 +105,7 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 curl -X 'POST' '$sds_api_endpoint/v1/hosts' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
   "name": "host1",
   "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
-  "volume_mappings": [
+  "volumes": [
     {
       "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
     }
@@ -124,7 +124,7 @@ A successful response looks like this:
     "created_at": "2024-06-21T07:22:15Z",
     "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
     "storage_workspace_id": "default",
-    "volume_mappings": [
+    "volumes": [
          {
              "volume_name": "vol1",
              "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
@@ -149,7 +149,7 @@ A successful response looks like this:
     resource "ibm_sds_host" "sds_host_instance" {
       name = "demo-host"
       nqn = "<hostNQN>"
-      volume_mappings {
+      volumes {
         volume_id = ibm_sds_volume.sds_volume_instance.id
         volume_name = ibm_sds_volume.sds_volume_instance.id
         }
