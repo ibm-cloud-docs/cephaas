@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-17"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -55,7 +55,7 @@ import (
 
 The following items are necessary to create or modify volume or host details:
 
-* An {{site.data.keyword_cephaas_full_notm}} deployment instance
+* An {{site.data.keyword.cephaas_full_notm}} deployment instance
 * A service endpoint associated with the deployment
 * API Key
 

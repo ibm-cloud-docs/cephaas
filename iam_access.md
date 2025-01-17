@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-17"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -59,15 +59,28 @@ Review the following tables that outline what types of tasks each role allows wh
 {: #iam-actions}
 
 
-| Action ID                               | Roles                                         | Descriptions                     |
-| ----------------------------------------|-----------------------------------------------------|---------------------------|
-| `resource-controller.instance.retrieve` | Administrator, Editor, Operator, Viewer | View and list deployments but cannot modify the instance properties. |
-| `resource-controller.instance.create`   | Administrator, Editor | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page.  |
-| `resource-controller.instance.update` | Administrator, Editor, Operator | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. |
-| `software-defined-storage.subresource.read`	  |	Manager | View details of volume, host and object credentials. |
-| `software-defined-storage.subresource.create`	|	Manager | Create volume, host and object credential. |
-| `software-defined-storage.subresource.update`	|	Manager | Modify volume name, host name, and object credential. |
-| `software-defined-storage.subresource.delete`	|	Manager | Delete volume, host and object credential. |
+| Action ID                                       | Roles                                     | Descriptions                      |
+| ------------------------------------------------|-------------------------------------------|-----------------------------------|
+| `resource-controller.instance.retrieve`         | Administrator, Editor, Operator, Viewer   | View and list deployments but cannot modify the instance properties. |
+| `resource-controller.instance.create`           | Administrator, Editor                     | Create a deployment from {{site.data.keyword.cephaas_short}} Deployments page.  |
+| `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. |
+| `software-defined-storage.certificate.update`   |	Administrator, Editor, Operator           | Update certificate |
+| `software-defined-storage.certificate.inspect`  |	Administrator, Editor, Operator, Viewer   | Inspect certificate |
+| `software-defined-storage.certificate.delete`   |	Administrator, Editor                     | Delete certificates |
+| `software-defined-storage.certificate.create`   |	Administrator                             | Create certificate  |
+| `software-defined-storage.s3-credential.create` |	Manager                                   | Create S3 credentials |
+| `software-defined-storage.s3-credential.get`    |	Manager                                   | Get S3 credentials  |
+| `software-defined-storage.s3-credential.delete` |	Manager                                   | Delete S3 credentials |
+| `software-defined-storage.volume.create`        |	Manager                                   | Create a volume |
+| `software-defined-storage.volume.read`          |	Manager                                   | Read volumes  |
+| `software-defined-storage.volume.update`        |	Manager                                   | Update volumes  |
+| `software-defined-storage.volume.delete`        |	Manager                                   | Delete volumes  |
+| `software-defined-storage.host.create`          |	Manager                                   | Create hosts  |
+| `software-defined-storage.host.read`            |	Manager                                   | Read hosts  |
+| `software-defined-storage.host.update`          |	Manager                                   | Update hosts  |
+| `software-defined-storage.host.delete`          |	Manager                                   | Delete hosts  |
+| `software-defined-storage.host.unmap`           |	Manager                                   | Unmap hosts |
+| `software-defined-storage.host.map`             |	Manager                                   | Map hosts |
 {: caption="IAM action descriptions"}
 
 
