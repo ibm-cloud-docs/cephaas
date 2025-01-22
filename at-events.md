@@ -24,6 +24,50 @@ You can use {{site.data.keyword.atracker_full_notm}}, a platform service to rout
 
 For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
+## Locations where activity tracking events are generated
+{: #at-locations}
+
+
+
+
+### Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
+{: #atracker-locations}
+
+
+
+{{site.data.keyword.cephaas_full_notm}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
+
+| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
+|---------------------|-------------------------|-------------------|----------------------|
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
+{: #atracker-table-1}
+{: tab-title="Americas"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
+|---------------------|------------------|------------------|--------------------|
+| [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
+{: #atracker-table-2}
+{: tab-title="Asia Pacific"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
+|---------------------------------------------------------------|---------------------|------------------|
+| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+{: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
+{: #atracker-table-3}
+{: tab-title="Europe"}
+{: tab-group="atracker"}
+{: class="simple-tab-table"}
+{: row-headers}
+
+
 
 ## Viewing activity tracking events
 {: #at-viewing}
@@ -55,7 +99,7 @@ The following table lists the {{site.data.keyword.cephaas_short}} actions that g
 | software-defined-storage.s3-credential.create  | Storage account credential was created |
 | software-defined-storage.s3-credential.delete  | Storage account credential was deleted |
 | software-defined-storage.s3-credential.get     | One or more storage account credentials were retrieved |
-| software-defined-storage.certificate.get       | S3 Cert status was retrieved |
+| software-defined-storage.certificate.inspect   | S3 Cert status was retrieved |
 | software-defined-storage.certificate.update    | S3 TLS certificate was updated |
 | software-defined-storage.certificate.create    | S3 TLS certificate was created |
 | software-defined-storage.certificate.delete    | S3 TLS certificate was deleted |
