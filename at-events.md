@@ -54,9 +54,11 @@ The following table lists the {{site.data.keyword.cephaas_short}} actions that g
 | software-defined-storage.instance.delete       | Service instance was deleted  |
 | software-defined-storage.s3-credential.create  | Storage account credential was created |
 | software-defined-storage.s3-credential.delete  | Storage account credential was deleted |
-| software-defined-storage.s3-credential.inspect | One or more storage account credentials were retrieved |
+| software-defined-storage.s3-credential.get     | One or more storage account credentials were retrieved |
 | software-defined-storage.certificate.get       | S3 Cert status was retrieved |
+| software-defined-storage.certificate.update    | S3 TLS certificate was updated |
 | software-defined-storage.certificate.create    | S3 TLS certificate was created |
+| software-defined-storage.certificate.delete    | S3 TLS certificate was deleted |
 | software-defined-storage.volume.create         | The volume was created |
 | software-defined-storage.volume.read           | One or more volumes were retrieved |
 | software-defined-storage.volume.update         | The volume was updated |
