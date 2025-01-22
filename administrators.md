@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-17"
+ years: 2024, 2025
+lastupdated: "2025-01-22"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -19,7 +19,7 @@ subcollection: cephaas
 Storage and system administrators familiar with {{site.data.keyword.cephaas_full}} can easily manage users, create API keys, and grant roles to users and services.
 {: shortdesc}
 
-If you haven't already, go ahead and read through the [getting started tutorial](/docs/cephaas?topic=cephaas-getting-started) to familiarize yourself with the core concepts of buckets, objects, and users.
+
 
 ## Setting up your storage
 {: #administrators-setup}

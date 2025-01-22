@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-22"
 
-keywords:
+keywords: about block storage volume, volume encryption, IAM permissions for block storage volume
 
 subcollection: cephaas
 
@@ -19,14 +19,9 @@ subcollection: cephaas
 Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, extra security, and performance.
 {: shortdesc}
 
-## Overview
-{: #block-storage-overview}
-
 {{site.data.keyword.cephaas_full}} volume data is stored redundantly across multiple physical disks in an Availability Zone to prevent data loss due to failure of any single component.
 
-{{site.data.keyword.cephaas_short}} provides primary and secondary data volumes. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, you can use your own encryption keys or choose IBM-managed encryption.
-
-You pay for only the capacity that you need. The capacity ranges from 1 GB up to 16,000 GB for all available instances. For data volumes attached to a virtual server instance, you can [increase volume capacity] in GB increments up to 16,000 GB capacity.
+{{site.data.keyword.cephaas_short}} provides primary and secondary data volumes. Data volumes can be created and attached during instance provisioning as well, or as stand-alone volumes that you can later attach to an instance. To protect your data, choose IBM-managed encryption.
 
 When you create, view, or update a volume, the volume state is reported in the UI, CLI, API and Terraform. For more information, see [{{site.data.keyword.cephaas_full_notm}} volume dashboard](/docs/cephaas?topic=cephaas-view-volume&interface=ui#viewvols-ui).
 
@@ -43,10 +38,7 @@ For more information, see the [best practices for assigning access](/docs/accoun
 ## Block storage volume type
 {: #block-storage-volumes-type}
 
-{{site.data.keyword.cephaas_full_notm}} offers block-level volumes that are attached to a deployment when the deployment is created or attached as secondary data volumes. You can configure up to 300 CephaaS volumes per account in a region. You can request to increase this quota by opening support case and specifying the amount you need for more volumes.
-
-{{site.data.keyword.cephaas_full_notm}} data volumes are secondary volumes with total capacity range of 1 GB to 16,000 GB. Maximum IOPS for data volumes varies based on volume size.
-
+{{site.data.keyword.cephaas_full_notm}} offers block-level volumes that are attached to a deployment when the deployment is created or attached as secondary data volumes.
 
 You can create data volumes as stand-alone volumes or when you provision a deployment. Stand-alone volumes exist in an unattached state until you attach the volume to an deployment. When you create a data volume as part of storage provisioning, the volume is automatically attached to the deployment.
 
@@ -54,19 +46,15 @@ You can create data volumes as stand-alone volumes or when you provision a deplo
 
 Detached volumes can be attached to an available, running deployments without reprovisioning the volume or the deployment.
 
-Data volumes are encrypted by default with IBM-managed encryption. You can also encrypt data volumes by using your own root keys.
-
-### Volume profiles
-{: #volume-profiles-intro}
-
-Volume profiles are a way to determine the IOPS performance of a volume. When you create a volume in your deployment, you can use 3 different tiered profiles with predefined IOPS levels and a custom profile with which you can define your own IOPS level based on the volume capacity. All profiles are backed by solid-state drives (SSDs).
-
 
 ## Block storage volume encryption
 {: #storage-encryption}
 
-{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe. When you create a volume, you can choose to protect the volume by using your own root keys, or use the default IBM-managed encryption. Volumes that are created during storage provisioning are encrypted with IBM-managed encryption by default. You can edit the volume to using your root keys. After you set up encryption for a volume, you can't change it.
+{{site.data.keyword.cloud_notm}} takes the need for security seriously and understands the importance of being able to encrypt data to keep it safe.
 
+Data volumes are encrypted by default with IBM-managed encryption.
+
+When you create a volume, they are encrypted with IBM-managed encryption by default.
 
 
 ## Deleting your block storage volume
