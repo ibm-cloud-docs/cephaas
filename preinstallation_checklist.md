@@ -51,16 +51,17 @@ Before you place the order, you must prepare your data center site to meet the f
 The following data center site requirements must be met before the rack is delivered to your data center:
 *  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the rack infrastructure.
 *  Ensure that the power cables and network cables are routed to the location where the rack will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
-*  Identify a network administrator and hire a service provider to help you with the below networking requirements.
+*  Ensure that the data center site meets the [networking requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist&interface=ui#network-req).
 
 ## Networking requirements
 {: #network-req}
 
 The following network requirements must be completed before the rack is delivered to your data center:
+
 *  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
-* A part of these requirements will be a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}.
-Some of these IP addresses will need to be able to connect with other services on the internet. Make sure your network is ready to allow for this communication. {{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
-*  Review and identify the available network use cases and communicate your requirements to IBM before you proceed with installation. For more information, see [Network use cases].
+
+* A part of these requirements will be a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}. Some of these IP addresses will need to be able to connect with other services on the internet. Make sure your network is ready to allow for this communication. {{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
+
 
 ## Network validation and account activation
 {: #validation-activation}
