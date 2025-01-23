@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-13"
+ years: 2024, 2025
+lastupdated: "2025-01-23"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}} as a service, private cloud
 
@@ -47,12 +47,12 @@ Refer to Table 2 to understand rack characteristics and capacity.
 | ------------------| ----------------- | ----------------------------- |
 | Dynamic (rolling) | 1134 kg (2500 lb) | 18 kg (40 lb) or EIA average  |
 | Static            | 1678 kg (3700 lb) | 32 kg (70 lb) or EIA average  |
-| Seismic certified | 1170 mm (2580 lb) | 20 kg (45 lb) or EIA maximum  |
+| Seismic certified | 1170 kg (2580 lb) | 20 kg (45 lb) or EIA maximum  |
 | EIA: Energy Information Administration |
 {: caption="Rack characteristics and capacity" caption-side="bottom"}
 
 
-**Floor load calculator**: You can use [Floor load calculator](http://www-01.ibm.com/support/knowledgecenter/v1/content/POWER6/iphdl/floorloadcalc.htm){: external} to determine the distributed load that a server, expansion unit, or migration tower places on a subfloor (for example, in a data center with a raised floor) or on an above-ground or nonraised floor structure.
+**Floor load calculator**: You can use the [Floor load calculator](http://www-01.ibm.com/support/knowledgecenter/v1/content/POWER6/iphdl/floorloadcalc.htm){: external} to determine the distributed load that a server, expansion unit, or migration tower places on a subfloor (for example, in a data center with a raised floor) or on an above-ground or nonraised floor structure.
 
 For generic prerequisites and planning guidelines for Power10, see the following topics:
 

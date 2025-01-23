@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-23"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -42,7 +42,7 @@ Before you connect to the IBM Cloud, perform other pre-installation activities, 
 {: #site-plan-env-req}
 
 Before you place the order, you must prepare your data center site to meet the following site and environmental requirements:
-*  The data center can accommodate all the 42U racks in a rack. For example, a small rack contains one 42U rack and a medium rack might contain two or four 42U racks.
+*  The data center can accommodate all the 42U racks.
 *  The floor of the data center is able to withstand the weight of the racks and other equipment. For more information about rack dimensions and weight, see [Site access requirements](/docs/cephaas?topic=cephaas-site-access-requirements).
 *  Ensure heating, ventilation, and air conditioning (HVAC) setup for front-to-back airflow and humidity control is ready. For more information, see [Environmental requirements](/docs/cephaas?topic=cephaas-environmental-requirements).
 *  The data center site meets the power source requirements for rack connector and load requirements. For more information, see [Power requirements](/docs/cephaas?topic=cephaas-power-requirements).
@@ -51,18 +51,20 @@ Before you place the order, you must prepare your data center site to meet the f
 The following data center site requirements must be met before the rack is delivered to your data center:
 *  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the rack infrastructure.
 *  Ensure that the power cables and network cables are routed to the location where the rack will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
-*  Identify a network administrator and hire a service provider who can participate in establishing the connections to IBM Direct Link connection or VPN connection and to provide last mile connectivity.
+*  Identify a network administrator and hire a service provider to help you with the below networking requirements.
 
 ## Networking requirements
 {: #network-req}
 
 The following network requirements must be completed before the rack is delivered to your data center:
 *  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
+* A part of these requirements will be a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}.
+Some of these IP addresses will need to be able to connect with other services on the internet. Make sure your network is ready to allow for this communication. {{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
 *  Review and identify the available network use cases and communicate your requirements to IBM before you proceed with installation. For more information, see [Network use cases].
 
 ## Network validation and account activation
 {: #validation-activation}
 
-You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account:
+You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account after delivery:
 
 * The SRE team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
