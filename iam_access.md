@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-01-23"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -34,7 +34,7 @@ Review the following tables that outline what types of tasks each role allows wh
 | Platform role |  Description of actions |
 |---------------|-------------------------|
 | Viewer                 |  As a viewer, you can view deployments, but you can't modify them. |
-| Operator               |  As an operator, you can perform platform actions that are required to configure and operate deployments, such as viewing a deployment's dashboard.            |
+| Operator               |  As an operator, you can perform platform actions that are required to configure and operate deployments.            |
 | Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
 | Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
 {: row-headers}

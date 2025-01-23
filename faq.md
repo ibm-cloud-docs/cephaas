@@ -28,7 +28,7 @@ Frequently asked questions provide you with helpful answers and insight into bes
 {: faq}
 {: #faq-usage-cost}
 
-Both block and object storage are charging based on the monthly fee for the plan you choose. When the storage in the burst capacity used then overage fees are charged on an hourly usage basis.
+Both block and object storage are charging based on the monthly fee for the plan you choose. If the storage in the burst capacity is used then overage fees are charged on an hourly usage basis.
 
 
 
