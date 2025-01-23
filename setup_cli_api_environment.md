@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-15"
+ years: 2024, 2025
+lastupdated: "2025-01-23"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -45,7 +45,7 @@ Make sure that your environment from which the CLI will be run is connected to t
 1. Install the {{site.data.keyword.cephaas_short}} CLI plug-in `software-defined-storage`.
 
    ```sh
-   ibmcloud plug-in install software-defined-storage
+   ibmcloud plugin install software-defined-storage
    ```
    {: pre}
 
@@ -72,7 +72,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 
    ```sh
    ibmcloud update
-   ibmcloud plug-in update software-defined-storage
+   ibmcloud plugin update software-defined-storage
    ```
    {: pre}
 
