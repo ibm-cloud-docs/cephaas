@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-23"
 
 keywords: cephaas, activity tracker events, auditing events
 
@@ -39,7 +39,7 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 
 | Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
 |---------------------|-------------------------|-------------------|----------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
 {: tab-title="Americas"}
@@ -59,7 +59,7 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 
 | Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
 |---------------------------------------------------------------|---------------------|------------------|
-| [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
+| [Yes]{: tag-green} | [No]{: tag-red} | [Yes]{: tag-green} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #atracker-table-3}
 {: tab-title="Europe"}

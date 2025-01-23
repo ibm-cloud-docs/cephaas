@@ -110,8 +110,8 @@ toc:
           label: Observability
           topics:
             - at-events.md
-            - logging.md
-            - monitoring.md
+#            - logging.md
+#            - monitoring.md
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:

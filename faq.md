@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-23"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -28,7 +28,9 @@ Frequently asked questions provide you with helpful answers and insight into bes
 {: faq}
 {: #faq-usage-cost}
 
-Both block and object storage are calculated hourly. The calculation is based on the total number of hours that the block storage volume exists on the account. It exists on the account until you delete the volume or you reach the end of a billing cycle, whichever comes first.
+Both block and object storage are charging based on the monthly fee for the plan you choose. When the storage in the burst capacity used then overage fees are charged on an hourly usage basis.
+
+
 
 ### Are there quota limits?
 {: faq}
@@ -55,7 +57,10 @@ You can change the name of an existing volume by using the UI, CLI, API and Terr
 {: faq}
 {: #faq-count-vol-provision}
 
-You can provision up to 1000 block storage volumes per deployment. You can request your quota to be increased by opening a [support case](https://cloud.ibm.com/unifiedsupport/cases/form){: external}.
+You can provision up to 1000 block storage volumes per deployment.
+
+
+
 
 ### When can I delete a block storage volume?
 {: faq}
