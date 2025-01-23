@@ -96,20 +96,21 @@ The following table lists the {{site.data.keyword.cephaas_short}} actions that g
 | software-defined-storage.instance.create       | Service instance was created   |
 | software-defined-storage.instance.update       | Service instance was updated  |
 | software-defined-storage.instance.delete       | Service instance was deleted  |
-| software-defined-storage.s3-credential.create  | Storage account credential was created |
-| software-defined-storage.s3-credential.delete  | Storage account credential was deleted |
-| software-defined-storage.s3-credential.get     | One or more storage account credentials were retrieved |
-| software-defined-storage.certificate.inspect   | S3 Cert status was retrieved |
-| software-defined-storage.certificate.update    | S3 TLS certificate was updated |
-| software-defined-storage.certificate.create    | S3 TLS certificate was created |
-| software-defined-storage.certificate.delete    | S3 TLS certificate was deleted |
+| software-defined-storage.certificate.inspect   | Certificate status was retrieved |
+| software-defined-storage.certificate.update    | Certificate was updated |
+| software-defined-storage.certificate.create    | Certificate was created |
+| software-defined-storage.certificate.delete    | Certificate was deleted |
+| software-defined-storage.s3-credential.create  | S3 credential was created |
+| software-defined-storage.s3-credential.delete  | S3 credential was deleted |
+| software-defined-storage.s3-credential.get     | One or more S3 credentials were retrieved |
 | software-defined-storage.volume.create         | The volume was created |
 | software-defined-storage.volume.read           | One or more volumes were retrieved |
 | software-defined-storage.volume.update         | The volume was updated |
 | software-defined-storage.volume.delete         | The volume was deleted |
 | software-defined-storage.host.create           | The host was created |
 | software-defined-storage.host.read             | One or more hosts were retrieved |
+| software-defined-storage.host.update           | The host was updated |
 | software-defined-storage.host.delete           | The host was deleted |
-| software-defined-storage.volumemap.create      | The volume was mapped |
-| software-defined-storage.volumemap.delete      | The volume was unmapped |
+| software-defined-storage.host.unmap            | The host was unmapped |
+| software-defined-storage.host.map              | The host was mapped |
 {: caption="Actions that generate management events" caption-side="bottom"}
