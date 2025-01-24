@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-24"
+ years: 2024, 2025
+lastupdated: "2025-01-24"
 
 keywords: cephaas, capacity management, performance management
 
@@ -21,12 +21,12 @@ IBM Storage Ceph as a Service enables you to view the capacity and performance d
 To view capacity details of your IBM CephaaS deployments, complete the following steps.
 
 1. On the **IBM Cloud console**, click the hamburger menu and navigate to **Resource list** > **Storage**.
-2. Expand Storage to see your service instances. 
-3. Click a service instance to view Deployments dashboard. 
-4. Click **Deployments** option from the left - hand panel. You can view your deployments alongwith their **Status**, **Size**, **Region**, and **Storage type**. 
-5. Click your deployment which is Available. 
+2. Expand Storage to see your service instances.
+3. Click a service instance to view the Deployments dashboard.
+4. Click **Deployments** option from the left - hand panel. You can view your deployments along with their **Status**, **Size**, **Region**, and **Storage type**.
+5. Click your deployment, which is Available.
 
-## Viewing capacity of your deployments
+## Viewing the capacity of your deployments
 {: #view-capacity}
 
 The upper section of the deployment dashboard displays the current usage information about the following.
@@ -38,9 +38,9 @@ The upper section of the deployment dashboard displays the current usage informa
 | Object capacity | Current usage and a link **Go to Object storage** link to update capacity |
 {: caption="Details about deployment capacity" caption-side="bottom"}
 
-The Overall Capacity is displayed using a bar with visual indicators for both used and available capacity. The numerical value in the format of **XXX used of YYY** TB reflects used capacity from your Overall capacity.
+The Overall Capacity is displayed by using a bar with visual indicators for both used and available capacity. The numerical value in the format of **XXX used of YYY** TB reflects used capacity from your Overall capacity.
 
-Till the capacity is not fully used, the bar displays blue color. When the Overall capacity is fully used, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to use.
+Till the capacity is not fully used, the bar displays a blue color. When the Overall capacity is fully used, the burst threshold stage is reached and the bar turns yellow. After the burst threshold, the burst capacity begins to use.
 If the burst capacity is also exhausted, the bar turns red.
 
 ## Viewing Performance of your deployments
@@ -59,7 +59,7 @@ The lower section of the deployment dashboard provides graphical insights into v
 ## Renaming your deployments
 {: #rename-deployment}
 
-1. To rename a deployment, go to **Actions** menu on your deployment dashboard.
+1. To rename a deployment, go to the **Actions** menu on your deployment dashboard.
 2. Enter a new name in the **Rename deployment** screen.
 3. Click **Save**.
 
@@ -71,4 +71,4 @@ Select **Actions** > **Add capacity**. **Purchase additional capacity** screen i
 ## Next Steps
 {: #view-capacity-nextsteps}
 
-You can perform various tasks from the links in the right panel such as create block volumes, create storage objects, and go to object storage. Refer to the docs links of Identity and access management, How to connect to VMware environment, and How to use the CLI for more information. 
+You can perform various tasks from the links in the right panel such as create block volumes, create storage objects, and go to object storage. Refer to the docs links of Identity and access management, How to connect to the VMware environment, and How to use the CLI for more information.

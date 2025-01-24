@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-24"
 
 keywords: cephaas, block storage, rename host
 
@@ -47,7 +47,7 @@ To rename a host, follow these steps:
 {: #renaming-hosts-cli}
 {: cli}
 
-To rename the host using CLI, use the `host-update` command to rename a specific host.
+To rename the host from the CLI, use the `host-update` command to rename a specific host.
 
 Run the following command to update the name of a specific host.
 
@@ -77,7 +77,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #renaming-hosts-api}
 {: api}
 
-To update your host name with the API, you can make use of the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
+To update your host name by using the API, you can use the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
 
 Make a `PATCH /hosts/{id}` request to update or rename a host.
 
@@ -108,7 +108,7 @@ A successful response looks like this:
 
 
 
-## Renaming host using Terraform
+## Renaming host by using Terraform
 {: #rename-host-tf}
 {: terraform}
 
@@ -116,7 +116,7 @@ To rename the host, do the following steps:
 
 1. Open and modify the `host_mapping` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
 
-2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
+2. After editing and saving the file, run commands `terraform plan` and `terraform apply` to apply your changes.
 
 You can modify only one parameter value at a time.
 {: note}

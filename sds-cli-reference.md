@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-24"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -15,14 +15,14 @@ subcollection: cephaas
 # {{site.data.keyword.cephaas_short}} CLI
 {: #ic-sds-cli-reference}
 
-The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to give you the ability to run commands that perform various operations for the service including but not limited to managing volumes, hosts, mappings, object credentials and certificates.
+The {{site.data.keyword.cephaas_full_notm}} plugin extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to give you the ability to run commands that perform various operations for the service that includ but not limited to managing volumes, hosts, mappings, object credentials, and certificates.
 {: shortdesc}
 
 
 ## Before you begin
 {: #before-you-begin-using-cli}
 
-Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the `software-defined-storage` CLI plug-in. For instruction on how to install {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
+Before you can use the {{site.data.keyword.cephaas_short}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the `software-defined-storage` CLI plug-in. For instruction on how to install the {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
 
 
 
@@ -115,7 +115,7 @@ ibmcloud software-defined-storage volume-create \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -127,10 +127,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Name of the volume.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly-selected words.
+	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly selected words.
 	{: note}
 
-* Host nqn string which have a maximum length of 200 characters and minimum length of 1 character.
+* Host nqn string which has a maximum length of 200 characters and a minimum length of 1 character.
 	* Flag: `--hostnqnstring HOSTNQNSTRING`
 
 * API Endpoint in the URL form.
@@ -160,7 +160,7 @@ ibmcloud software-defined-storage volume \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 **Parameters to provide:**
@@ -200,7 +200,7 @@ ibmcloud software-defined-storage volume-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -244,7 +244,7 @@ ibmcloud software-defined-storage volume-delete \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 **Parameters to provide:**
@@ -278,7 +278,7 @@ ibmcloud software-defined-storage volumes \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -320,19 +320,19 @@ ibmcloud software-defined-storage host-create \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* NVMe Qualified Name (NQN) of the host configured in customer's environment. The maximum supported length is 223 bytes.
+* NVMe Qualified Name (NQN) of the host configured in the customer's environment. The maximum supported length is 223 bytes.
 	* Flag: `--nqn NQN`
 
 * Name for the new host. Ensure that the new name is unique.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly-selected words.
+	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly selected words.
 	{: note}
 
 * The unique identifier of the volume to be mapped to this host.  Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
@@ -362,13 +362,13 @@ ibmcloud software-defined-storage host \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* Host id whose details you want to view
+* Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * API Endpoint in the URL form.
@@ -397,7 +397,7 @@ ibmcloud software-defined-storage hosts \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -435,13 +435,13 @@ ibmcloud software-defined-storage host-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* Host id whose details you want to update
+* Host ID whose details you want to update
 	* Flag: `--host-id HOST-ID`
 
 * [Optional] Specify the JSON Merge-Patch content for `host_update`.
@@ -479,7 +479,7 @@ ibmcloud software-defined-storage host-vol-update \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -517,13 +517,13 @@ ibmcloud software-defined-storage host-delete \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* Host id whose details you want to view
+* Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * API Endpoint in the URL form.
@@ -552,13 +552,13 @@ ibmcloud software-defined-storage host-vol-delete \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* Host id whose details you want to view
+* Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * Unique volume identifier.
@@ -589,13 +589,13 @@ ibmcloud software-defined-storage host-vol-deleteall \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
 **Parameters to provide:**
 
-* Host id whose details you want to view
+* Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * API Endpoint in the URL form.
@@ -629,7 +629,7 @@ ibmcloud software-defined-storage cred-create \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -663,7 +663,7 @@ ibmcloud software-defined-storage cred-delete \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -698,7 +698,7 @@ ibmcloud software-defined-storage credentials \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -732,7 +732,7 @@ See example.
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -767,7 +767,7 @@ ibmcloud software-defined-storage cert \
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
 {: note}
 
 
@@ -784,7 +784,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 `Config` Command can be used for controlling or viewing persistent configuration of global options.
 
-To control or view persistant configurations, you can run `ibmcloud sds config` command along with the global options to list, set and unset the config values.
+To control or view persistant configurations, you can run `ibmcloud sds config` command along with the global options to list, set, and unset the config values.
 
 You can set the `url` variable such that you do not need to use the `--url` flag when using with the `sds` command.
 
@@ -797,7 +797,7 @@ ibmcloud software-defined-storage config
 {: pre}
 
 
-This is an example for setting the url option.
+Example for setting the url option.
 
 ```sh
 pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
@@ -806,7 +806,7 @@ OK
 {: screen}
 
 
-This example shows how to use the command without the config set.
+Example that shows how to use the command without the config set.
 
 ```sh
 ibmcloud sds volumes --url $endpoint
@@ -814,7 +814,7 @@ ibmcloud sds volumes --url $endpoint
 {: pre}
 
 
-This example shows how to use the command with the `url` configured.
+Example shows how to use the command with the `url` configured.
 
 ```sh
 ibmcloud sds volumes
@@ -892,7 +892,7 @@ ibmcloud software-defined-storage config set [option]
 
 When `set` command is used together with `url` option, the value for the 'url' option is set.
 
-See example on with `url` option.
+See example with `url` option.
 
 ```sh
 pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
@@ -915,7 +915,7 @@ ibmcloud software-defined-storage config unset [option]
 
 When `unset` command is used together with `url` option, the currently configured value for the 'url' option is reset.
 
-See example on with `url` option.
+See example with `url` option.
 
 ```sh
 ibmcloud software-defined-storage config unset url

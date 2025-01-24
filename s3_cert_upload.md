@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-26"
+ years: 2024, 2025
+lastupdated: "2025-01-24"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -15,17 +15,17 @@ subcollection: cephaas
 # Uploading S3 certificate
 {: #uploading-s3-certificate}
 
-S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in the Middle (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
 {: shortdesc}
 
-Before you can upload the certificate file, you must create a server-side certificate with Subject Alternative Name (SAN) which includes the S3 DNS endpoint and then upload the server-side certificate along with the Key using the UI, CLI or API .
+Before you can upload the certificate file, you must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint. Upload the server-side certificate along with the Key by using the UI, CLI, or API.
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
 
 
 
-## Uploading S3 certificate using the UI
+## Uploading S3 certificate by using the UI
 {: #uploading-s3-certificate-using-ui}
 {: ui}
 
@@ -35,7 +35,7 @@ To upload a S3 certificate, complete the following steps.
 
 2. Click **Upload certificate**.
 
-    Make sure that the file includes the root certificate, server certificate and server key. The maximum file size allowed is 20kb and the supported file type is `.pem` only.
+    Make sure that the file includes the root certificate, server certificate, and server key. The maximum file size that is allowed is 20 kb and the supported file type is `.pem` only.
     {: note}
 
 3. Click **Upload** to choose the certificate from your computer.
@@ -74,7 +74,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 Make a `POST /certificate/s3` call to update the S3 SSL Certificates or upload a new one if it does not exist.
 
-Ensure that the file you are uploading has included the server-side certificate and key.
+Ensure that the file you are uploading have the server-side certificate and key.
 {: requirement}
 
 ```sh

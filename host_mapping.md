@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-24"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -15,9 +15,9 @@ subcollection: cephaas
 # Mapping volume to a host
 {: #mapping-vol-to-host}
 
-You can map one or more volumes to a host by using UI, CLI, API and Terraform.
+You can map one or more volumes to a host by using UI, CLI, API, and Terraform.
 
-Make sure that there is one or more volumes available for mapping to a host.
+Make sure that there are one or more volumes available for mapping to a host.
 {: requirement}
 
 ## Mapping volumes to a host from Volumes page in the UI
@@ -87,7 +87,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #mapping-hosts-api}
 {: api}
 
-Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a given host.
+Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a host.
 
 ```sh
 curl -X PUT '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
@@ -121,7 +121,7 @@ You can map only one volume at a time by using API command.
 {: note}
 
 
-## Mapping block volume using Terraform
+## Mapping block volume by using Terraform
 {: #mapping-host-to-volume-tf}
 {: terraform}
 
@@ -148,7 +148,7 @@ resource "ibm_sds_host" "sds_host_instance" {
 ```
 {: screen}
 
-Using terraform, You can map mulitple volumes to a host at a time.
+Using terraform, You can map multiple volumes to a host at a time.
 {: note}
 
 ## Next steps

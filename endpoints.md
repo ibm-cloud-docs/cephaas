@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-24"
 
 keywords: cephaas, endpoint, location, object storage, bucket, region, rclone, resiliency
 
@@ -15,9 +15,9 @@ subcollection: cephaas
 # Endpoints
 {: #endpoints}
 
-Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance has a unique endpoint named as `<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
+Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance have a unique endpoint that is named as `<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
 
-To retrieve your `cephaas-instance-id` from the IBM Cloud CLI, do the following:
+To retrieve your `cephaas-instance-id` from the IBM Cloud CLI, do the following steps:
 
 1. Download the IBM Cloud CLI.
 
@@ -30,7 +30,7 @@ ibmcloud resource service-instances --service-name software-defined-storage
 ```
 {: pre}
 
-4. Retrieve the {{site.data.keyword.cephaas_short}} instance ID (GUID) of the desired instance.
+4. Retrieve the {{site.data.keyword.cephaas_short}} instance ID (GUID) of the instance you want.
 
 ```sh
 ibm-cloud resource service-instance <cephaas-deployment-name> --guid

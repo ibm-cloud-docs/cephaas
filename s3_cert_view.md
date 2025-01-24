@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-14"
+ years: 2024, 2025
+lastupdated: "2025-01-24"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -15,13 +15,13 @@ subcollection: cephaas
 # View S3 certificate expiration date and status
 {: #viewing-sds-s3-certificate-details-sds}
 
-S3 TLS certificates are required to encrypt the S3 traffic and prevent Man in the Middle (MITM) attacks.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks.
 
 This section provides guidance on how to view the expiration date and status of the S3 SSL certificate.
 {: shortdesc}
 
 
-## View S3 certificate details using the UI
+## View S3 certificate details by using the UI
 {: #view-sds-s3-certificate-using-ui}
 {: ui}
 
@@ -34,9 +34,9 @@ Here, you can view the **S3 certificate** expiration date and status.
 {: #retrieving-sds-s3-certificate-details-cli}
 {: cli}
 
-Use the `certificate` command to retrieve and view the S3 SSL Certificates expiration date and it's status.
+Use the `certificate` command to retrieve and view the S3 SSL Certificates expiration date and its status.
 
-Run the following command and ensure you have provided the endpoint url.
+Run the following command and ensure that you have provided the endpoint url.
 
 ```sh
 ibmcloud software-defined-storage cert --url string
@@ -65,7 +65,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #retrieve-sds-s3-certificate-api}
 {: api}
 
-Make a `GET /certificate/s3` to retrieve the S3 certficate expiration date and status.
+Make a `GET /certificate/s3` to retrieve the S3 certificate expiration date and status.
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/object/certificate/s3' -H 'accept: application/json'
@@ -83,5 +83,5 @@ A successful response looks like this:
 {: screen}
 
 
-Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment for this to prevent an outage.
+Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment to prevent an outage.
 {: tip}

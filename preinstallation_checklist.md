@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-24"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -51,7 +51,7 @@ Before you place the order, you must prepare your data center site to meet the f
 The following data center site requirements must be met before the rack is delivered to your data center:
 *  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the rack infrastructure.
 *  Ensure that the power cables and network cables are routed to the location where the rack will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
-*  Ensure that the data center site meets the [networking requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist&interface=ui#network-req).
+*  Ensure that the data center site also meets the below [networking requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist&interface=ui#network-req).
 
 ## Networking requirements
 {: #network-req}

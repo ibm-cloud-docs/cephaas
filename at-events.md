@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-24"
 
 keywords: cephaas, activity tracker events, auditing events
 
@@ -20,7 +20,7 @@ subcollection: cephaas
 
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events in your account to destinations of your choice by configuring targets and routes that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
+You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
 
 For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
 
@@ -89,28 +89,28 @@ For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [L
 ## List of management events
 {: #at_actions}
 
-The following table lists the {{site.data.keyword.cephaas_short}} actions that generates an event.
+The following table lists the {{site.data.keyword.cephaas_short}} actions that generate an event.
 
 | Action             | Description      |
 |--------------------|------------------|
-| software-defined-storage.instance.create       | Service instance was created   |
-| software-defined-storage.instance.update       | Service instance was updated  |
-| software-defined-storage.instance.delete       | Service instance was deleted  |
-| software-defined-storage.certificate.inspect   | Certificate status was retrieved |
-| software-defined-storage.certificate.update    | Certificate was updated |
-| software-defined-storage.certificate.create    | Certificate was created |
-| software-defined-storage.certificate.delete    | Certificate was deleted |
-| software-defined-storage.s3-credential.create  | S3 credential was created |
-| software-defined-storage.s3-credential.delete  | S3 credential was deleted |
-| software-defined-storage.s3-credential.get     | One or more S3 credentials were retrieved |
-| software-defined-storage.volume.create         | The volume was created |
-| software-defined-storage.volume.read           | One or more volumes were retrieved |
-| software-defined-storage.volume.update         | The volume was updated |
-| software-defined-storage.volume.delete         | The volume was deleted |
-| software-defined-storage.host.create           | The host was created |
-| software-defined-storage.host.read             | One or more hosts were retrieved |
-| software-defined-storage.host.update           | The host was updated |
-| software-defined-storage.host.delete           | The host was deleted |
-| software-defined-storage.host.unmap            | The host was unmapped |
-| software-defined-storage.host.map              | The host was mapped |
+| software-defined-storage.instance.create       | The service instance was created.   |
+| software-defined-storage.instance.update       | The Service instance was updated. |
+| software-defined-storage.instance.delete       | The Service instance was deleted.  |
+| software-defined-storage.certificate.inspect   | The certificate status was retrieved. |
+| software-defined-storage.certificate.update    | The certificate was updated. |
+| software-defined-storage.certificate.create    | The certificate was created. |
+| software-defined-storage.certificate.delete    | The certificate was deleted. |
+| software-defined-storage.s3-credential.create  | The S3 credential was created. |
+| software-defined-storage.s3-credential.delete  | The S3 credential was deleted. |
+| software-defined-storage.s3-credential.get     | One or more S3 credentials were retrieved. |
+| software-defined-storage.volume.create         | The volume was created. |
+| software-defined-storage.volume.read           | One or more volumes were retrieved. |
+| software-defined-storage.volume.update         | The volume was updated. |
+| software-defined-storage.volume.delete         | The volume was deleted. |
+| software-defined-storage.host.create           | The host was created. |
+| software-defined-storage.host.read             | One or more hosts were retrieved. |
+| software-defined-storage.host.update           | The host was updated. |
+| software-defined-storage.host.delete           | The host was deleted. |
+| software-defined-storage.host.unmap            | The host was unmapped. |
+| software-defined-storage.host.map              | The host was mapped. |
 {: caption="Actions that generate management events" caption-side="bottom"}
