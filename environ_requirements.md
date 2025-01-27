@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-12"
+ years: 2024, 2025
+lastupdated: "2025-01-27"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, on-premises, environment, environmental requirement
 
@@ -60,4 +60,4 @@ The following minimum requirements apply to data centers that are operated at a 
 
 Before installation, the equipment is in the powered-down state when it is removed from the container. The allowable nonoperating environment is provided to define the environmental range that an unpowered system can experience for a short time without sustaining damage.
 
-For more information, see Table 1 - 5 in [Environmental design criteria](https://www.ibm.com/docs/en/power10/9080-HEX?topic=planning-environmental-design-criteria){: external}.
+For more information, see Table 1 - 5 in [Environmental design criteria](https://www.ibm.com/docs/en/storage-ready-node?topic=installation-site-preparation-environment){: external}.
