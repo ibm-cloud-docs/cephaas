@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-22"
+lastupdated: "2025-01-28"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -42,9 +42,9 @@ IAM is based on a fundamental concept: A _subject_ is granted a _role_ on a _res
 
 There are two basic types of subjects: a _user_ and a _service ID_.
 
-There is another concept, a _service credential_. A service credential is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID). When you create the service credential you have the option of either associating it with an existing service ID, or creating a new service ID.
+There is another concept, a _service credential_. A service credential is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID).
 
-You might want your development team to be able to use the console to view Object Storage instances and Kubernetes clusters. They would need `Viewer` roles on the Object Storage resources and `Administrator` roles on the Container Service. The `Viewer` role allows for the user to see that the deployment exists, and to view existing credentials, but **not** to modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Operator` or `Editor` role on the deployment to be able to create and delete volumes and hosts.
+The `Viewer` role allows for the user to see that the deployment exists, and to view existing credentials, but **not** to modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Operator` or `Editor` role on the deployment to be able to create and delete volumes and hosts.
 
 For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
@@ -108,10 +108,6 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
 
 When creating a new instance, if you encounter the error `No resource group targeted`, it indicates that the default resource group is not available and that a resource group must be explicitly set. A list of available resource groups can be found by using `ibmcloud resource groups` and the target can be set with `ibmcloud target -g <resource-group>`.
 {: tip}
-
-
-
-The [Getting Started guide](/docs/cephaas?topic=cephaas-getting-started) walks through the basic steps of creating deployment instances, volumes and objects, as well as inviting users and creating policies. A list of basic 'curl' commands can be found [here](/docs/cephaas?topic=cephaas-curl).
 
 
 ### Creating deployments with the API
