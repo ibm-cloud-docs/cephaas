@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2024-11-13"
+lastupdated: "2025-01-28"
 
 keywords: network latency, {{site.data.keyword.cephaas_full_notm}}, on-premises
 
@@ -49,8 +49,6 @@ To check the latency requirements of a connection, complete the following steps:
 
 3. In the **ping statistics** output, note the average (avg) round-trip distance in milliseconds (ms) between the host and the IBM Cloud region. Compare whether the connection meets the latency requirement of less than or equal to 200 milliseconds (<= 200 ms).
 
-If you are selecting the IBM Direct Link 2.0 Connect to connect the Virtual Private Cloud (VPC) on IBM Cloud and the router on rack, the minimum speed must be 1 Gbps.
-{: note}
 
 The following example meets the latency requirements as the round-trip time is 77.716 ms:
 ```text
