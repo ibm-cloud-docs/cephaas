@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-28"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -20,7 +20,7 @@ subcollection: cephaas
 Proper planning is essential for the successful setup and use of {{site.data.keyword.cephaas_full_notm}} deployment. It ensures that you have everything you need and that you meet all the prerequisites for your deployment.
 {: shortdesc}
 
-IBM owns the responsibility to install, upgrade, and update the hardware and software for the on-premise infrastructure. IBM coordinates with you for any dependencies to ensure that your {{site.data.keyword.cephaas_full_notm}} data center meets all the prerequisites before the installation.
+IBM owns the responsibility to install, upgrade, and update the hardware and software for the on-premise infrastructure. IBM coordinates with you for any dependencies to ensure that your {{site.data.keyword.cephaas_full_notm}} data center meets all the prerequisites before the installation. You will need “pay-as-you-go” IBM Cloud account for {{site.data.keyword.cephaas_full_notm}}.
 
 IBM provides a pre-installation checklist after you place an order for {{site.data.keyword.cephaas_full_notm}} and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your {{site.data.keyword.cephaas_full_notm}} environment for the installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
 
@@ -49,7 +49,7 @@ Before you place the order, you must prepare your data center site to meet the f
 *  The data center is in a secured location with restricted access. For more information, see [Site readiness](/docs/cephaas?topic=cephaas-site-readiness).
 
 The following data center site requirements must be met before the rack is delivered to your data center:
-*  Ensure that the IBM site reliability engineering (SRE) operations team has the security and access approval to operationally manage the rack infrastructure.
+*  Ensure that the IBM TLS SSR team has the security and access approval to operationally manage the rack infrastructure.
 *  Ensure that the power cables and network cables are routed to the location where the rack will be installed. The power cables must have connectors that are compatible with rack PDU. For more information, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
 *  Ensure that the data center site also meets the below [networking requirements](/docs/cephaas?topic=cephaas-pre_installation_checklist&interface=ui#network-req).
 
@@ -68,4 +68,4 @@ The following network requirements must be completed before the rack is delivere
 
 You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account after delivery:
 
-* The SRE team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
+* The SSR team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
