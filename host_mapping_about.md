@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-15"
+ years: 2024, 2025
+lastupdated: "2025-01-29"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -37,6 +37,8 @@ For more information, see [Connecting from NVME-oF initiators](/docs/cephaas?top
 * Mapping of the same volume to multiple RHEL hosts is not supported.
 
 * In order for multiple ESXi hosts to be able to access the same volume, they must be part of the same VMWare cluster.
+
+* A host will not be able to discover any volumes if it is not mapped to any of the volumes. However, the host will be able to discover all volumes even if it is mapped to a single volume.
 
 
 ## Configuring NVMe-oF initiators
