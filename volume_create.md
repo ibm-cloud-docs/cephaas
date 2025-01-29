@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-16"
+ years: 2024, 2025
+lastupdated: "2025-01-29"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -137,7 +137,7 @@ A successful response looks like this:
 
 
 
-## Creating block volume using Terraform
+## Creating block volumes using Terraform
 {: #create-volume-tf}
 {: terraform}
 
@@ -145,11 +145,11 @@ A successful response looks like this:
 1. Create a volume instance by using the `ibm_sds_volume` resource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
 
    ```terraform
-    resource "ibm_sds_volume" "sds_volume_instance" {
-    hostnqnstring = "<hostNQN>"
-    capacity = 10
-    name = "demo-volume"
-    }
+   resource "ibm_sds_volume" "sds_volume_instance" {
+     hostnqnstring = "<hostNQN>"
+     capacity = 10
+     name = "demo-volume"
+   }
    ```
    {: codeblock}
 
@@ -182,21 +182,21 @@ A successful response looks like this:
     See the example output for details.
 
     ```terraform
-    ibm_sds_volume = [
-    {
-      "bandwidth" = 19
-      "capacity" = 10
-      "created_at" = "2024-12-11T13:44:36Z"
-      "host_mappings" = tolist([])
-      "hostnqnstring" = "nqn.2014-06.org:9345"
-      "id" = "r134-51ad673d-ccdb-4b9c-b557-3ec6ff046879"
-      "iops" = 150
-      "name" = "demo-volume-1"
-      "resource_type" = "volume"
-      "status" = "available"
-      "status_reasons" = tolist([])
-      },
-    ]
+   # ibm_sds_volume.sds_volume_instance will be created
+   + resource "ibm_sds_volume" "sds_volume_instance" {
+         + bandwidth      = (known after apply)
+         + capacity       = 10
+         + created_at     = (known after apply)
+         + hostnqnstring  = "nqn.2014-06.org:9345"
+         + hosts          = (known after apply)
+         + id             = (known after apply)
+         + iops           = (known after apply)
+         + name           = "demo-volume-2"
+         + resource_type  = (known after apply)
+         + sds_endpoint   = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
+         + status         = (known after apply)
+         + status_reasons = (known after apply)
+      }
     ```
     {: screen}
 

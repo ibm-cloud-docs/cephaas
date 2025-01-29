@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -128,23 +128,19 @@ You can map only one volume at a time by using API command.
 {: #mapping-volume-tf}
 {: terraform}
 
-To map a volume to a host, edit the `main.tf` file to add the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+To map a volume to a host, a host must already exist or be created. Edit or add the `ibm_sds_host` resource in the `main.tf` file and add the `volumes` block which will map a volume to a host
 
-The following examples show how you can map multiple volumes to a host.
+The following examples show how you can map the volume created in the `Creating block volumes` section, to a host.
 
 ```terraform
 // Provision sds_host resource instance
 resource "ibm_sds_host" "sds_host_instance" {
 
-  name = var.sds_host_name
-  nqn = var.sds_host_nqn
+  name = "demo-host"
+  nqn = "<hostNQN>"
   volumes {
-    volume_id = ibm_sds_volume.sds_volume_instance_1.id
-    volume_name = ibm_sds_volume.sds_volume_instance_1.name
-  }
-  volumes {
-    volume_id = ibm_sds_volume.sds_volume_instance_2.id
-    volume_name = ibm_sds_volume.sds_volume_instance_2.name
+    volume_id = ibm_sds_volume.sds_volume_instance.id
+    volume_name = ibm_sds_volume.sds_volume_instance.name
   }
 }
 ```

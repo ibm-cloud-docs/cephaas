@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-29"
 
 keywords: cephaas, block storage, rename host
 
@@ -108,13 +108,13 @@ A successful response looks like this:
 
 
 
-## Renaming host by using Terraform
+## Renaming a host by using Terraform
 {: #rename-host-tf}
 {: terraform}
 
 To rename the host, do the following steps:
 
-1. Open and modify the `host_mapping` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+1. Open your `main.tf` file and modify the `name` value in the `ibm_sds_host` resource.
 
 2. After editing and saving the file, run commands `terraform plan` and `terraform apply` to apply your changes.
 

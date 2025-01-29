@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 keywords: list all volumes, view volume details
 
@@ -255,14 +255,20 @@ A successful response provides details of the volume, including capacity and IOP
 {: #view-volume-tf}
 {: terraform}
 
-To view details of single volume, run the following command:
+To view terraform objects
 
 ```terraform
-Terraform state show <instance-based-off-list>
+terraform state list
 ```
 {: pre}
 
-Run `terraform state list` to view the list of all volumes.
+To target a volume resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}
+
 
 ## Next steps
 {: #next-step-viewing-block-storage-volumes}

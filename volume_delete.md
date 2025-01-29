@@ -109,9 +109,9 @@ To verify that the volume is deleted, list the volumes by making a `GET /volumes
 {: #deleting-block-volume-tf}
 {: terraform}
 
-To delete a single volume using terraform, you can run `terraform destroy -target <volume_name>` where _<volume_name>_ is the name of the volume that is no longer needed.
+To delete a volume using terraform, you can run `terraform destroy -target <volume_name>` where _<volume_name>_ is the name of the volume that is no longer needed.
 
-Example of _<volume_name>_: `ibm_sds_volume.sds_volume_instance_1`.
+Example of _<volume_name>_: `ibm_sds_volume.sds_volume_instance`.
 
 First, show the list of terraform resources
 ```terraform
@@ -121,7 +121,7 @@ terraform state list
 
 Then, target a specific resource to destroy
 ```terraform
-terraform destroy -target ibm_sds_volume.sds_volume_instance_1
+terraform destroy -target ibm_sds_volume.sds_volume_instance
 ```
 {: pre}
 

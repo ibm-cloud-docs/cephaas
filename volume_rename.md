@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -126,7 +126,7 @@ A successful response looks like this:
 
 To rename the volume, do the following steps:
 
-1. Open and modify the `name` of the volume for the `ibm_sds_volume` resource in your `main.tf` file.
+1. Open your `main.tf` file and modify the `name` value in the `ibm_sds_volume` resource.
 
 2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 keywords: sds, cephaas host,
 
@@ -143,16 +143,12 @@ A successful response looks like this:
 {: terraform}
 
 
-1. Create a host instance by using the `ibm_sds_host` resource argument in your `main.tf` file. The host instance in the following example is named `sds_host_instance` respectively.
+1. Create a host instance in your `main.tf` file by using the `ibm_sds_host` resource argument. The host instance in the following example is named `sds_host_instance` respectively.
 
    ```terraform
     resource "ibm_sds_host" "sds_host_instance" {
       name = "demo-host"
       nqn = "<hostNQN>"
-      volumes {
-        volume_id = ibm_sds_volume.sds_volume_instance.id
-        volume_name = ibm_sds_volume.sds_volume_instance.id
-        }
     }
    ```
    {: codeblock}
@@ -186,21 +182,14 @@ A successful response looks like this:
     See the example output for details.
 
     ```sh
-    ibm_sds_volume = [
-    {
-      "bandwidth" = 19
-      "capacity" = 10
-      "created_at" = "2024-12-11T13:44:36Z"
-      "host_mappings" = tolist([])
-      "hostnqnstring" = "nqn.2014-06.org:9345"
-      "id" = "r134-51ad673d-ccdb-4b9c-b557-3ec6ff046879"
-      "iops" = 150
-      "name" = "demo-volume-1"
-      "resource_type" = "volume"
-      "status" = "available"
-      "status_reasons" = tolist([])
-      },
-    ]
+    # ibm_sds_host.sds_host_instance will be created
+    + resource "ibm_sds_host" "sds_host_instance" {
+        + created_at   = (known after apply)
+        + id           = (known after apply)
+        + name         = "demo-host"
+        + nqn          = "nqn.2014-06.org:9345"
+        + sds_endpoint = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
+      }
     ```
     {: screen}
 
