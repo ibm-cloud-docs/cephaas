@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-29"
 
 keywords: cephaas, activity tracker events, auditing events
 
@@ -71,11 +71,6 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 
 ## Viewing activity tracking events
 {: #at-viewing}
-
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
-
-### Launching {{site.data.keyword.logs_full_notm}} from the {{site.data.keyword.cephaas_full_notm}} dashboard
-{: #log-launch-integrated}
 
 You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
 
