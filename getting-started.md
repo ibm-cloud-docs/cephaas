@@ -57,7 +57,7 @@ An IBM representative will contact you to understand your requirements and provi
 After placing your order, the next step is to select the IBM Cloud Satellite location and naming your deployment. You will receive the link to [prepare your deployment](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-preparing-deployment) in an e-mail.
 
 
-## Infrastructure set up and maintenance
+## Infrastructure setup and maintenance
 {: #setupandmaintenance}
 {: step}
 
