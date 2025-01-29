@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -111,10 +111,17 @@ To verify that the volume is deleted, list the volumes by making a `GET /volumes
 
 To delete a single volume using terraform, you can run `terraform destroy -target <volume_name>` where _<volume_name>_ is the name of the volume that is no longer needed.
 
-Example of _<volume_name>_: `ibm_sds_volume.sds_volume_instance_2`.
+Example of _<volume_name>_: `ibm_sds_volume.sds_volume_instance_1`.
 
+First, show the list of terraform resources
 ```terraform
-terraform destroy -target ibm_sds_volume.sds_volume_instance_2
+terraform state list
+```
+{: pre}
+
+Then, target a specific resource to destroy
+```terraform
+terraform destroy -target ibm_sds_volume.sds_volume_instance_1
 ```
 {: pre}
 

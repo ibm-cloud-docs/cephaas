@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-01-16"
+lastupdated: "2025-01-29"
 
 subcollection: cephaas
 
@@ -31,10 +31,6 @@ Before you can create an authorization by using Terraform, make sure that you ha
 1. Create a volume and host instance by using the `ibm_sds_volume` and `ibm_sds_host` resource argument in your `main.tf` file. The volume and host instance in the following example are named `sds_volume_instance` and `sds_host_instance` respectively.
 
    ```terraform
-   provider "ibm" {
-     ibmcloud_api_key = var.ibmcloud_api_key
-   }
-
    // Provision sds_volume resource instance
    resource "ibm_sds_volume" "sds_volume_instance" {
      hostnqnstring = "<hostNQN>"
@@ -55,16 +51,28 @@ Before you can create an authorization by using Terraform, make sure that you ha
    ```
    {: codeblock}
 
+2. Set your SDS endpoint as an environment variable
 
+   ```bash
+   export IBMCLOUD_SDS_ENDPOINT="<SDS_ENDPOINT>"
+   ```
+   {: screen}
 
-2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
+Setting the endpoint can also be accomplished by including the below tag in your terraform resources
+
+   ```terraform
+   sds_endpoint="<SDS_ENDPOINT>"
+   ```
+   {: pre}
+
+3. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
 
    ```terraform
    terraform init
    ```
    {: pre}
 
-3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
+4. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
 
    1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
 
@@ -73,15 +81,15 @@ Before you can create an authorization by using Terraform, make sure that you ha
       ```
       {: pre}
 
-   1. Run `terraform apply` to create the resources that are defined in the plan.
+   2. Run `terraform apply` to create the resources that are defined in the plan.
 
       ```terraform
       terraform apply
       ```
       {: pre}
 
-6. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
-7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+5. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
+6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}
