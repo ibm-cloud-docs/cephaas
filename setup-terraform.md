@@ -25,8 +25,13 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent crea
 Before you can create an authorization by using Terraform, make sure that you have completed the following:
 
 * Make sure that you have the [required access](/docs/cephaas?topic=cephaas-managing-iam) to create and work with {{site.data.keyword.cephaas_full_notm}} resources. 
+
 * Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
+
 * Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+
+## Creating a sample volume and host instance
+{: #sample-vol-host-instance}
 
 1. Create a volume and host instance by using the `ibm_sds_volume` and `ibm_sds_host` resource argument in your `main.tf` file. The volume and host instance in the following example are named `sds_volume_instance` and `sds_host_instance` respectively.
 
@@ -58,7 +63,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
    ```
    {: screen}
 
-Setting the endpoint can also be accomplished by including the below tag in your terraform resources
+   Setting the endpoint can also be accomplished by including the below tag in your terraform resources.
 
    ```terraform
    sds_endpoint="<SDS_ENDPOINT>"
@@ -89,6 +94,7 @@ Setting the endpoint can also be accomplished by including the below tag in your
       {: pre}
 
 5. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
+
 6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
