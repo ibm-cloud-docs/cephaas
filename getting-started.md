@@ -12,7 +12,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-An IBM representative will contact you to understand your requirements and provide you with offers and discounts. Post discussions and approvals, your IBM representative will place your order. You will be able to track your order from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processed, you can track the status from your IBM Cloud account dashboard.
 {: important}
 
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
@@ -48,7 +48,7 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 
 After saving your cost estimation, click **Start order process** and share your contact details. After you submit the contact form, a notification with a Confirmation ID is displayed.
 
-An IBM representative will contact you to understand your requirements and provide you with offers and discounts. Post discussions and approvals, your IBM representative will place your order. You will be able to track your order from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processed, you can track the status from your IBM Cloud account dashboard.
 
 
 ## Preparing your deployment
