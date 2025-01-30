@@ -69,3 +69,4 @@ After the order is placed and the infrastructure is ready to be installed, IBM w
 While IBM will own and operate the infrastructure, you will be able to provision your own storage volumes. IBM will continue to operate and maintain the respective hardware and software maintenance operations.
 
 To understand and prepare your data center before the rack arrives for installation, read the [pre-requisites for installing {{site.data.keyword.cephaas_short}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
+{: note}
