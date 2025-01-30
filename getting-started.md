@@ -12,7 +12,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processed, you can track the status from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your IBM Cloud account dashboard.
 {: important}
 
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
@@ -25,10 +25,10 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 
 ## Cost Estimation
-{: #prereqs}
+{: #estimatecost}
 {: step}
 
-IBM Storage Ceph as a Service is available in IBM Cloud Catalog under the IBM Storage Ceph as a Service tile.
+{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud Catalog as a tile. You can click on the {{site.data.keyword.cephaas_short}} tile to start the cost estimation tool.
 
 To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs.
 
@@ -48,7 +48,7 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 
 After saving your cost estimation, click **Start order process** and share your contact details. After you submit the contact form, a notification with a Confirmation ID is displayed.
 
-An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processed, you can track the status from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your IBM Cloud account dashboard.
 
 
 ## Preparing your deployment
@@ -67,3 +67,5 @@ After placing your order, the next step is to select the IBM Cloud Satellite loc
 After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You will be responsible for meeting the physical site requirements (for example, energy, cooling, space, physical network connectivity.) where the infrastructure will be installed. IBM will be responsible for installation, configuration, and operation of the infrastructure.
 
 While IBM will own and operate the infrastructure, you will be able to provision your own storage volumes. IBM will continue to operate and maintain the respective hardware and software maintenance operations.
+
+To understand and prepare your data center before the rack arrives for installation, read the [pre-requisites for installing {{site.data.keyword.cephaas_short}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
