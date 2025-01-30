@@ -2,15 +2,18 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-01-30"
 
-keywords: unified storage, volume size, IOPS, Security, Encryption, LUN, secondary storage, mount storage, provision storage, iSCSI, MPIO, redundant
+keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
 
 subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
+
+An IBM representative will contact you to understand your requirements and provide you with offers and discounts. Post discussions and approvals, your IBM representative will place your order. You will be able to track your order from your IBM Cloud account dashboard.
+{: important}
 
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
 {: #getting-started}
@@ -25,9 +28,9 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #prereqs}
 {: step}
 
-IBM Storage Ceph as a Service is available in IBM Cloud Catalog under the IBM Storage Ceph as a Service tile. 
+IBM Storage Ceph as a Service is available in IBM Cloud Catalog under the IBM Storage Ceph as a Service tile.
 
-To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs. 
+To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs.
 
 You can select the term (3, 4, or 5 years) performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
 The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
@@ -43,9 +46,9 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 {: #orderplacing}
 {: step}
 
-After saving your cost estimation, click **Start order process** and share your contact details. After you submit the contact form, a notification with a Confirmation ID is displayed. 
+After saving your cost estimation, click **Start order process** and share your contact details. After you submit the contact form, a notification with a Confirmation ID is displayed.
 
-An IBM representative will contact you to understand your requirements and provide you with offers and discounts. Post discussions and approvals, your IBM representative will place your order. You will be able to track your order from your IBM Cloud account dashboard. 
+An IBM representative will contact you to understand your requirements and provide you with offers and discounts. Post discussions and approvals, your IBM representative will place your order. You will be able to track your order from your IBM Cloud account dashboard.
 
 
 ## Preparing your deployment

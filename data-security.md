@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2024-11-20"
+lastupdated: "2025-01-30"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -53,7 +53,7 @@ Sanitizing and deleting the resources means that your data cannot be restored.
 ### Deleting {{site.data.keyword.cephaas_full_notm}} instances
 {: #service-delete}
 
-When a service instance no longer needed, you can cancel the subscription by deleting the deployment. The deployment is marked for deletion and becomes inactive. IBM removes all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
+When a service instance is no longer needed, you can cancel the subscription by deleting the deployment. The deployment is marked for deletion and becomes inactive. IBM removes all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
 
 During the deployment removal process, the resources are removed from the IBM Cloud Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
 

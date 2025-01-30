@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-01-30"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, on-premises, environment, environmental requirement
 
@@ -17,26 +17,24 @@ subcollection: cephaas
 
 Your on-premises site must have adequate cooling and humidity control for {{site.data.keyword.cephaas_full_notm}} racks. To know the recommended and allowed values of the required parameters, see Table 1:
 
-| Environment (operating) (1)                                           | |
-|---------------------------------------------------------------------- | --- |
-| Properties        | Recommended   |
-| ------------------| ------------------- |
-| ASHRAE class      | A2                  |
-| Airflow direction |                     |
-| Temperature       | 5.0°C – 40.0°C (41.0°F – 104.0°F) |
-| Low-end moisture  | -12.0°C (10.4°F) dew point and 8% relative humidity|
-| High-end moisture | 85% relative humidity and 24.0°C (75.2°F) dew point |
-| Maximum altitude  | 3050 m (10,000 ft)        |
-|-------------------| ------------------------- |
-| Allowable environment (nonoperating) (5)    | |
-|-------------------| -------------------------  |
-| Temperature       | 5°C - 45°C (41°F - 113°F)  |
-| Relative humidity | 8% to 85%                 |
-| Maximum dew point | 27.0°C (80.6°F)           |
-{: caption="Recommended and allowed environmental parameter values" caption-side="bottom"}
+| Environment (operating) (1) |        |
+|--------------------------   | ------ |
+| Properties        | Recommended    |
+| ------------------| -------------- |
+| ASHRAE class      | A2             |
+| Airflow direction |                |
+| Temperature       | 10°C to 35°C (50°F to 95°F) with no direct sunlight on the equipment |
+| Humidity          | 8% RH with -12°C (10.4°F) minimum dew point to 80% RH with 21°C (69.8°F) maximum dew point (non condensing at all times) |
+| Maximum altitude  | 3,048 m (10,000 ft) |
+|-------------------| ------------------ |
+| Allowable environment (nonoperating) (5)    |        |
+|-------------------| ------------------ |
+| Temperature       | -40°C to 65°C (-104°F to 149°F)  |
+| Relative humidity | 5% to 95% RH                     |
+| Maximum dew point | 27.0°C (80.6°F)                  |
+{: caption="Recommended environmental parameter values" caption-side="bottom"}
 
 To set up the operating environment, IBM suggests using the recommended values from Table 1. Over prolonged use, this operating environment becomes reliable and energy-efficient.
-
 
 If altitude of the on-premises site exceeds by 900 m (2953 ft), derate the maximum allowable temperature by 1°C (1.8°F) for every 175 m (574 ft). The maximum allowable elevation is 3050 m (10000 ft).
 

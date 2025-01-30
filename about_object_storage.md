@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-01-30"
 
 keywords: about, basics, cephaas object storage
 
@@ -24,7 +24,7 @@ All data stored in {{site.data.keyword.cephaas_short}} Object Storage is encrypt
 
 All requests and responses are made over `HTTPS`. All `GET` and `HEAD` requests made to objects return an Etag value with the MD5 hash of the object to ensure integrity on the client side.
 
-Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. 
+Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_short}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for GO framework.
 
 
 ## Known limitations
@@ -58,4 +58,4 @@ You can create a set of HMAC credentials using the console, CLI, and API. For in
 ## Next Steps
 {: #about-obj-storage-next-steps}
 
-Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).
+Read documentation on the best way to get started since they provide support to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).
