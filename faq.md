@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-01-30"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -159,7 +159,7 @@ The Block storage API uses the following pending status:
 
 - ‘pending’: Used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after `POST /volumes`, `POST /hosts`, or `PUT /hosts/{id}/volumes/{id}` call if the operation is still in progress.
 - ‘pending-deletion’: Used when a volume deletion is in progress. `GET /volumes` API will return this status after `DELETE /volumes/{id}` call if delete operation is still in progress.
-- "pending-unmapping": Used when a volume unmapping from a host operation is in progress. `GET /hosts` API will return this status for a volume mapping after unmap single volume from a host `DELETE /hosts/{id}/volumes/{id}` or *unmap all volumes from a host `DELETE /hosts/{id}/volumes` call if the unmapping operation is still in progress.
+- "pending-unmapping": Used when a volume unmapping from a host operation is in progress. `GET /hosts` API will return this status for a volume mapping after unmap single volume from a host `DELETE /hosts/{id}/volumes/{id}` or unmap all volumes from a host `DELETE /hosts/{id}/volumes` call if the unmapping operation is still in progress.
 
 The resource can remain in one of these pending states for as long as the operation does not complete. The backend keeps on trying the operation until it succeeds.
 
