@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-31"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -136,26 +136,12 @@ An IAM token is valid for up to 60 minutes, and it is subject to change. When a 
 ### Step 3: Store the API endpoint as a variable
 {: #store-api-endpoint-variable}
 
-Run the following command to store the API endpoint in a variable so it can be reused later in your session.
+The `$sds_api_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}`. Run the following command to store the API endpoint in a variable so it can be reused later in your session.
 
-Cloud endpoint:
-
-```sh
-sds_api_endpoint="https://us-south.sds.cloud.ibm.com"
-```
-{: pre}
-
-On-premise block storage endpoint:
+For example:
 
 ```sh
-sds_api_endpoint="https://block-storage.936481b2-379d-4ca6-94ed-4dc1911d749f.software-defined-storage.appdomain.cloud"
-```
-{: pre}
-
-On-premise object storage endpoint:
-
-```sh
-sds_api_endpoint="https://object-storage.936481b2-379d-4ca6-94ed-4dc1911d749f.software-defined-storage.appdomain.cloud"
+sds_api_endpoint="https://sds-cephaas.936481b2-379d-4ca6-94ed-4dc1911d749f.software-defined-storage.appdomain.cloud:33173"
 ```
 {: pre}
 
@@ -165,6 +151,8 @@ To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make 
 
 ### Step 4: Verify that you have API access
 {: #verify-api-access}
+
+Now that you have an endpoint and your IAM token, verify your API access via one of the APIs described in the [API Reference](docs/cephaas?topic=cephaas-about-api).
 
 If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. 
 {: tip}

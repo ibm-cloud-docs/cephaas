@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-05"
+ years: 2024, 2025
+lastupdated: "2025-01-31"
 
 keywords: cephaas service credential view, list
 
@@ -48,7 +48,7 @@ ibmcloud software-defined-storage creds --url $sds_endpoint
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crl` as an alternative to `creds` for the CLI actions.
@@ -61,6 +61,9 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make the 'GET /accounts/credentials' request to retrieve and view one or all S3 credentials.
 
 ```sh
-curl -X 'GET' '$sds_api_endpoint/v1/object/accounts/credentials' -H 'accept: application/json' -H "Authorization: Bearer $token"
+curl -X GET "$sds_api_endpoint/v1/object/accounts/credentials" -H "accept: application/json" -H "Authorization: $iam_token" -H "IBM-API-Version: 2025-01-30"
 ```
 {: pre}
+
+See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment&interface=api) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+{: note}

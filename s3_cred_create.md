@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-14"
+ years: 2024, 2025
+lastupdated: "2025-01-31"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -72,7 +72,7 @@ ibmcloud software-defined-storage cred-create --access-key exampleString --url $
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crc` as an alternative to `cred-create` for the CLI actions.
@@ -91,7 +91,7 @@ Avoid using special characters when creating access keys with the exception of d
 curl -X 'POST' \
   '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
   -H 'accept: application/json' \
-  -H "Authorization: Bearer $token"
+  -H "Authorization: $iam_token"
 ```
 {: pre}
 
@@ -104,3 +104,6 @@ A successful response looks like this:
 }
 ```
 {: screen}
+
+See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment&interface=api) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+{: note}
