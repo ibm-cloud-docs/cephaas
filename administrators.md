@@ -26,25 +26,16 @@ Storage and system administrators familiar with {{site.data.keyword.cephaas_full
 
 First, you need to have at least one {{site.data.keyword.cephaas_full_notm}} resource instance, and some volumes to store the data in. How do you want to segment access to your data? Where do you want your data to physically reside? How often is the data accessed?
 
-### Segmenting access
-{: #administrators-access}
-
-You can segment access at two levels: at the resource instance level, and at the bucket level.
-
-Perhaps you want to make sure that your developers can only access a particular storage volume. Or, if you want to ensure that only the application your team is making can edit the data that is stored. You might want your developers with access to the cloud platform to only be able to read data for troubleshooting reasons, but not change anything. These access levels are examples of service-level policies.
-
-Now what if the development team, or any individual user, who has viewer access to a storage instance, and is expected to directly edit data in one or more buckets? You can use bucket level policies to elevate the level of access that is granted to users within your account. For instance, a user might not be able to create new buckets, but can create and delete objects within existing buckets.
+For more information, see [IAM overview](/docs/cephaas?topic=cephaas-iam-overview)
 
 ### Managing access
 {: #administrators-manage-access}
 
-IAM is based on a fundamental concept: A _subject_ is granted a _role_ on a _resource_.
+The _service credential_ is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID).
 
-There are two basic types of subjects: a _user_ and a _service ID_.
+The `Manager` role allows users to perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. This role **does not allow** users to modify the deployments.
 
-There is another concept, a _service credential_. A service credential is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID).
-
-The `Viewer` role allows for the user to see that the deployment exists, and to view existing credentials, but **not** to modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Operator` or `Editor` role on the deployment to be able to create and delete volumes and hosts.
+The `Administrator` role allows for the user to see that the deployment exists, and to view existing credentials, and modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Manager` role on the deployment to be able to create and delete volumes and hosts.
 
 For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
