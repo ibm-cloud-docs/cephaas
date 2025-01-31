@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-31"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, on-premises
 
@@ -22,4 +22,4 @@ Ensure that the {{site.data.keyword.cephaas_full_notm}} racks are protected with
 
 
 
-For more information, see [Site preparation and physical planning](https://www.ibm.com/docs/en/power10?topic=system-site-preparation-physical-planning){: external}.
+For more information, see [Site preparation and physical planning](https://www.ibm.com/docs/en/storage-ready-node?topic=installation-site-preparation-environment){: external}.
