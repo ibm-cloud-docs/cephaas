@@ -19,14 +19,12 @@ subcollection: cephaas
 Storage and system administrators familiar with {{site.data.keyword.cephaas_full}} can easily manage users, create API keys, and grant roles to users and services.
 {: shortdesc}
 
-
-
 ## Setting up your storage
 {: #administrators-setup}
 
 First, you need to have at least one {{site.data.keyword.cephaas_full_notm}} resource instance, and some volumes to store the data in. How do you want to segment access to your data? Where do you want your data to physically reside? How often is the data accessed?
 
-For more information, see [IAM overview](/docs/cephaas?topic=cephaas-iam-overview)
+For more information, see [IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
 ### Managing access
 {: #administrators-manage-access}
@@ -47,15 +45,15 @@ You can create a deployment (also called as service instance) through the UI, or
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
-You must have an 'Administrator' and 'Editor' role to create the service instance.
+You must have an 'Administrator', 'Operator' and 'Editor' role to create the service instance.
 {: note}
+
+To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your satallite CRN, click on the **hamburger menu > Resource list > satallite location**.
+{: requirement}
 
 ### Creating deployments by using CLI
 {: #creating-deployment-cli}
 {: cli}
-
-To create a deployment, you must have the Subscription Plan ID and satallite CRN handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your satallite CRN, click on the **hamburger menu > Resource list > satallite location**.
-{: requirement}
 
 
 1. First, make sure that you have an API key. Get it from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/iam/apikeys).
