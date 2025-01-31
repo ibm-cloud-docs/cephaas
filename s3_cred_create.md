@@ -107,3 +107,10 @@ A successful response looks like this:
 
 See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment&interface=api) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
 {: note}
+
+
+
+## Next steps
+{: #next-step-creating-s3-cred}
+
+You can start creating and managing buckets and objects using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).

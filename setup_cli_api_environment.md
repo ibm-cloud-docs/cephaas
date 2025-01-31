@@ -60,10 +60,10 @@ Make sure that your environment from which the CLI will be run is connected to t
 
 
 
-### Accessing CLI through the API private endpoint
-{: #access_cli_through_api_private_endpoints}
+### Accessing CLI through the API endpoint
+{: #access_cli_through_api_endpoints}
 
-To set the CLI to use the API private endpoint, follow these steps:
+To set the CLI to use the API endpoint, follow these steps:
 
 If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated plug-ins, you must be able to access the public repository where they are located.
 {: note}
@@ -76,14 +76,14 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
    ```
    {: pre}
 
-1. To switch to API private endpoint mode, enter the following command:
+1. To switch to API endpoint mode, enter the following command:
 
    ```sh
-   ibmcloud login -a private.cloud.ibm.com
+   ibmcloud login -a cloud.ibm.com
    ```
    {: pre}
 
-   Currently, API private endpoint mode supports only `us-south` and `us-east` regions.
+   Currently, API endpoint mode supports only `us-south` and `us-east` regions.
    {: important}
 
 
@@ -93,7 +93,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 
 Before you can use the API to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
 
-The following examples use the `us-south` regional endpoint. 
+The following examples use the `us-south` regional endpoint.
 {: note}
 
 ### Step 1: Store your API key as a variable

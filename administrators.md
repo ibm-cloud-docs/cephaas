@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-28"
+lastupdated: "2025-01-31"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -52,7 +52,7 @@ For more information on IAM roles and permissions, see [the {{site.data.keyword.
 ## Creating deployments
 {: #provision-deployment}
 
-You can create a deployment (also called as service instance) by resource controller through the UI, RC CLIs, and API.
+You can create a deployment (also called as service instance) through the UI, or by using resource controller (RC) CLI, and API.
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
@@ -62,6 +62,10 @@ You must have an 'Administrator' and 'Editor' role to create the service instanc
 ### Creating deployments by using CLI
 {: #creating-deployment-cli}
 {: cli}
+
+To create a deployment, you must have the Subscription Plan ID and satallite CRN handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your satallite CRN, click on the **hamburger menu > Resource list > satallite location**.
+{: requirement}
+
 
 1. First, make sure that you have an API key. Get it from [IBM Cloud Identity and Access Management](https://cloud.ibm.com/iam/apikeys).
 

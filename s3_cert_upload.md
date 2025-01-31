@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-31"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -94,3 +94,9 @@ A successful response looks like this:
 
 ```
 {: screen}
+
+
+## Next steps
+{: #next-step-uploading-s3-certificate-sds}
+
+You can start creating and managing buckets and objects using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
