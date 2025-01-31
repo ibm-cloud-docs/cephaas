@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-01-31"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -33,10 +33,10 @@ Review the following tables that outline what types of tasks each role allows wh
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer                 |  As a viewer, you can view deployments, but you can't modify them. |
-| Operator               |  As an operator, you can perform platform actions that are required to configure and operate deployments.            |
-| Editor                 |  As an editor, you can perform all platform actions except for managing the account and assigning access policies.            |
-| Administrator          |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users.            |
+| Viewer        |  As a viewer, you can view deployments, but you can't modify them. In addition, you can also inspect, the s3 certificate and view quota. |
+| Operator      |  As an operator, you can perform platform actions that are required to configure and operate deployments. In addition, you can also inspect, upload, update and delete the s3 certificate, and update quota.           |
+| Editor        |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. In addition, you can also inspect, upload, update and delete the s3 certificate, and update quota.           |
+| Administrator |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. In addition, you can also inspect, upload, update and delete the s3 certificate, and update quota.          |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM platform roles" caption-side="bottom"}
@@ -46,7 +46,7 @@ Review the following tables that outline what types of tasks each role allows wh
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Manager        | As a Manager, you can perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. |
+| Manager      | As a manager, you have permissions beyond the editor role to complete privileged actions as defined by the service. You can create, update, delete and view service level resources such as volumes, hosts, and S3 credentials. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -66,8 +66,8 @@ Review the following tables that outline what types of tasks each role allows wh
 | `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update an {{site.data.keyword.cephaas_short}} deployment. Allowed to modify {{site.data.keyword.cephaas_short}} deployment parameters such as name, quota settings, and S3 Certificate for object. |
 | `software-defined-storage.certificate.update`   |	Administrator, Editor, Operator           | Update certificate |
 | `software-defined-storage.certificate.inspect`  |	Administrator, Editor, Operator, Viewer   | Inspect certificate |
-| `software-defined-storage.certificate.delete`   |	Administrator, Editor                     | Delete certificates |
-| `software-defined-storage.certificate.create`   |	Administrator                             | Create certificate  |
+| `software-defined-storage.certificate.delete`   |	Administrator, Editor, operator           | Delete certificates |
+| `software-defined-storage.certificate.create`   |	Administrator, Editor, operator           | Create certificate  |
 | `software-defined-storage.s3-credential.create` |	Manager                                   | Create S3 credentials |
 | `software-defined-storage.s3-credential.get`    |	Manager                                   | Get S3 credentials  |
 | `software-defined-storage.s3-credential.delete` |	Manager                                   | Delete S3 credentials |
