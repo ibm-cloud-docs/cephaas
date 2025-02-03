@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-03"
 
 keywords: list all volumes, view volume details
 
@@ -102,7 +102,7 @@ ibmcloud software-defined-storage volume --volume-id VOLUME-ID --url string
 {: pre}
 
 
-The following example uses the volume ID to show volume details.
+See the following example.
 
 ```sh
 $ ibmcloud sds volume --url $sds_endpoint --volume-id r134-3a7a8360-be78-4723-a341-356be350e683
@@ -118,7 +118,7 @@ Created        2024-05-08T16:42:08Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vol` as an alternative to `volume` for the CLI actions.
@@ -150,7 +150,7 @@ r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10           
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when CephaaS was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vols` as an alternative to `volumes` for the CLI actions.

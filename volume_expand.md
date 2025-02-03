@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-03"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -68,7 +68,7 @@ ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --capacity
 ```
 {: pre}
 
-See the following example for updating the capacity of a volume.
+See the following example.
 
 ```bash
 
@@ -84,7 +84,7 @@ Created       2024-06-21T21:08:51Z
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `volu` as an alternative to `volume-update` for the CLI actions.

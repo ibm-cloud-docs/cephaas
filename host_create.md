@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-03"
 
 keywords: sds, cephaas host,
 
@@ -70,7 +70,7 @@ ibmcloud software-defined-storage host-create \
 
 Maximum supported NQN length is 223 bytes.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://{on-prem}.endpoint.com:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstc` as an alternative to `host-create` for the CLI actions.
