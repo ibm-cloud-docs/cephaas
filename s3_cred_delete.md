@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-03"
 
 keywords: cephaas , delete service credential
 
@@ -59,7 +59,7 @@ ibmcloud software-defined-storage cred-delete --access-key exampleString --url $
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crd` as an alternative to `cred-delete` for the CLI actions.
@@ -72,7 +72,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 You can delete a specific S3 credential using an access key.
 
 ```sh
-curl -X DELETE "$sds_api_endpoint/v1/object/accounts/credentials?access_key=dsfdgdf2343435666" \ 
+curl -X DELETE "$sds_api_endpoint/v1/object/accounts/credentials?access_key=dsfdgdf2343435666" \
   -H "accept: application/json" -H "Authorization: $iam_token" -H "IBM-API-Version: 2025-01-30"
 ```
 {: pre}
