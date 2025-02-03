@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-23"
+lastupdated: "2025-02-03"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network requirement
 
@@ -24,6 +24,9 @@ To facilitate the {{site.data.keyword.cephaas_full_notm}} server infrastructure 
 * The site must provide two uplink cables to connect the {{site.data.keyword.cephaas_full_notm}} on-premises network infrastructure to the IBM Cloud region in a redundant way.
 
 * IP addresses will need to be provided inside of the customer's IP subnet. More details on the number of IP addresses and internet endpoints will be shared after the order is placed.
+
+IPv6 is currently not supported in this version.
+{: exception}
 
 * Some of these addresses will need to be able to reach the internet.
 
