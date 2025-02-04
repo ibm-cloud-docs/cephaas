@@ -88,10 +88,11 @@ Avoid using special characters when creating access keys with the exception of d
 {: important}
 
 ```sh
-curl -X 'POST' \
-  '$sds_api_endpoint/v1/object/accounts/credentials?access-key=dsfdgdf2343435666' \
-  -H 'accept: application/json' \
-  -H "Authorization: $iam_token"
+curl -X POST \
+  "$sds_api_endpoint/v1/object/accounts/credentials?access_key=dsfdgdf2343435666" \
+  -H "accept: application/json" \
+  -H "Authorization: $iam_token" \
+  -H "IBM-API-Version: 2025-01-30"
 ```
 {: pre}
 

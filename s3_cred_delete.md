@@ -73,7 +73,9 @@ You can delete a specific S3 credential using an access key.
 
 ```sh
 curl -X DELETE "$sds_api_endpoint/v1/object/accounts/credentials?access_key=dsfdgdf2343435666" \
-  -H "accept: application/json" -H "Authorization: $iam_token" -H "IBM-API-Version: 2025-01-30"
+  -H "accept: application/json" \
+  -H "Authorization: $iam_token" \
+  -H "IBM-API-Version: 2025-01-30"
 ```
 {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-04"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -78,11 +78,12 @@ Ensure that the file you are uploading have the server-side certificate and key.
 {: requirement}
 
 ```sh
-curl -X 'POST' \
-  '$sds_api_enpoint/v1/object/certificate/s3' \
-  -H 'accept: application/json' \
-  -H "Authorization: Bearer $token"
-  -H 'Content-Type: text/plain' \
+curl -X POST \
+  "$sds_api_enpoint/v1/object/certificate/s3" \
+  -H "accept: application/json" \
+  -H "Authorization: $iam_token"
+  -H "Content-Type: text/plain" \
+  -H "IBM-API-Version: 2025-01-30" \
   --data-binary "@<filename>"
 ```
 {: pre}
@@ -94,6 +95,9 @@ A successful response looks like this:
 
 ```
 {: screen}
+
+See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+{: note}
 
 
 ## Next steps

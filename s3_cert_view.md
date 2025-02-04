@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -68,7 +68,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `GET /certificate/s3` to retrieve the S3 certificate expiration date and status.
 
 ```sh
-curl -X 'GET' '$sds_api_endpoint/v1/object/certificate/s3' -H 'accept: application/json'
+curl -X GET "$sds_api_endpoint/v1/object/certificate/s3" -H "accept: application/json" -H "IBM-API-Version: 2025-01-30"
 ```
 {: pre}
 
@@ -85,3 +85,6 @@ A successful response looks like this:
 
 Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment to prevent an outage.
 {: tip}
+
+See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+{: note}
