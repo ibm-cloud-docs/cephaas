@@ -21,7 +21,7 @@ To facilitate the {{site.data.keyword.cephaas_full_notm}} server infrastructure 
 
 * Network cables within the rack are provided as part of the service.
 
-* The site must provide two uplink cables along with compatible switch modules that fit into QSFP+ ports only. For information on supported transceivers, see [Cisco Optics-to-Device Compatibity Matrix](https://tmgmatrix.cisco.com/?si=93600CD-GX).
+* The site must provide two uplink cables along with LACP bond over the uplink cables, and compatible switch modules that fit into QSFP+ ports only. For information on supported transceivers, see [Cisco Optics-to-Device Compatibity Matrix](https://tmgmatrix.cisco.com/?si=93600CD-GX).
 
 * IP addresses will need to be provided inside of the customer's IP subnet. More details on the number of IP addresses and internet endpoints will be shared after the order is placed.
 
