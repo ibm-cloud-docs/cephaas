@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-04"
 
 keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -43,7 +43,7 @@ The capacity-based quota limits for your block and object storage are based on t
 {: faq}
 {: #faq-increase-capacity}
 
-Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Adding capacity to existing deployment](/docs/cephaas?topic=add-capacity-to-deployment).
+Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Adding capacity to existing deployment](/docs/cephaas?topic=cephaas-add-capacity-to-deployment).
 
 ### What rules apply to volume names and can I rename a volume later on?
 {: faq}

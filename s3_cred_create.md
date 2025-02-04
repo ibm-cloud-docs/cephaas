@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -105,7 +105,7 @@ A successful response looks like this:
 ```
 {: screen}
 
-See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment&interface=api) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
 {: note}
 
 
