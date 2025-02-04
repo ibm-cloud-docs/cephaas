@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-28"
+lastupdated: "2025-02-04"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -68,4 +68,4 @@ The following network requirements must be completed before the rack is delivere
 
 You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account after delivery:
 
-* The SSR team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
+* The SSR team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_short}} account.

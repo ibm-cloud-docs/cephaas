@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-04"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -272,5 +272,3 @@ Deleting host "host1"...
 ```
 {: pre}
 {: go}
-
-<br/>

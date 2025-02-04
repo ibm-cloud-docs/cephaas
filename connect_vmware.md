@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-14"
+lastupdated: "2025-02-04"
 
 keywords: Connect VMware environment
 
@@ -80,6 +80,7 @@ If you wish to unregister the plug-in, run the command `ibm-plugin unregister`.
 {: note}
 
 ## Next Steps
+{: #next-steps-post-vsphere-plugin-install}
 
 After the installation, you need to get the following from your admin.
 
