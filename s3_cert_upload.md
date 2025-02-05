@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-05"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -96,7 +96,7 @@ A successful response looks like this:
 ```
 {: screen}
 
-See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
 {: note}
 
 

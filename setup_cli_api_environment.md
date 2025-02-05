@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-05"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -150,7 +150,7 @@ To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make 
 ### Step 4: Verify that you have API access
 {: #verify-api-access}
 
-Now that you have an endpoint and your IAM token, verify your API access via one of the APIs described in the [API Reference](docs/cephaas?topic=cephaas-about-api).
+Now that you have an endpoint and your IAM token, verify your API access via one of the APIs described in the [API Reference](/docs/cephaas?topic=cephaas-about-api).
 
 If you run into unexpected results, add the `--verbose` (debug) flag after the `curl` command to obtain detailed logging information. 
 {: tip}

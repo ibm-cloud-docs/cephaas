@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-05"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -86,5 +86,5 @@ A successful response looks like this:
 Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment to prevent an outage.
 {: tip}
 
-See [Setting up your CLI and API environment](docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
+See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
 {: note}
