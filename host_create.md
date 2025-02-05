@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-05"
 
-keywords: sds, cephaas host,
+keywords: sds, cephaas host, host nqn
 
 subcollection: cephaas
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 Create a host by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
-Before creating a host, the NVME-oF initiator, which is required for mapping volume to a host, must be configured.
+Before creating a host, the NVME-oF initiator, which is required for mapping volume to a host, must be configured. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators).
 {: requirement}
 
 
@@ -33,7 +33,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
     Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error "Host name already exists" is displayed.
-    {: note}
+    {: tip}
 
 4. Click **Next**.
 5. [Optional] Select one or more volumes to map them to the host.
@@ -54,7 +54,7 @@ ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-
 {: pre}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
-{: important}
+{: tip}
 
 
 See the following example.
@@ -83,22 +83,20 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/block-storage){: external}.
 
-### Before you begin
-{: #host-api-prereqs}
 
 Define variables for the IAM token and API endpoint.
-
+{: requirement}
 
 ### Creating a host with the API
 {: #creating-host-api}
 
 Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
-The `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
-{: note}
+The host `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
+{: requirement}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
-{: important}
+{: tip}
 
 
 ```sh
@@ -192,10 +190,6 @@ A successful response looks like this:
       }
     ```
     {: screen}
-
-
-
-
 
 
 
