@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-05"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -45,11 +45,28 @@ You can create a deployment (also called as service instance) through the UI, or
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
-You must have an 'Administrator', 'Operator' and 'Editor' role to create the service instance.
+You must have an 'Administrator', 'Operator' and 'Editor' role to create the deployment.
 {: note}
 
 To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your satallite CRN, click on the **hamburger menu > Resource list > satallite location**.
 {: requirement}
+
+
+### Creating deployments by using UI
+{: #creating-deplyment-ui}
+{: ui}
+
+You can start creating a deployment after cost estimation and the order processing is initiated.
+
+
+1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. The link opens the deployment dashboard which lists your in-progress or completed orders.
+2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+3. Enter your **Deployment name**.
+4. Click **Create**.
+5. Your **Deployment Preparation** status will be reflected as **Completed**.
+6. After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned.
+
+
 
 ### Creating deployments by using CLI
 {: #creating-deployment-cli}

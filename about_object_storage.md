@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-05"
 
 keywords: about, basics, cephaas object storage
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 
 {{site.data.keyword.cephaas_full}} Object Storage is a highly available, durable, and secure platform for storing unstructured data. Unstructured data that are sometimes called `binary` or "blob" data, refers to data that is not highly structured in the database. Object storage is the most efficient way to store PDFs, media files, database backups, disk images, or even large structured datasets.
 
-The files that are uploaded into {{site.data.keyword.cephaas_short}} Object Storage are called objects. Objects can be anywhere from very small (a few bytes) to very large. They are organized into buckets that serve as containers for objects, and which can be configured independently from one another. Objects themselves have their own metadata in the form of user-defined tags or legal holds. Within a bucket, the hierarchy of objects is effectively "flat", although it is possible to add prefixes to object names to provide some organization and to provide flexibility in listing and other operations. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli)
+The files that are uploaded into {{site.data.keyword.cephaas_short}} Object Storage are called objects. Objects can be anywhere from very small (a few bytes) to very large. They are organized into buckets that serve as containers for objects, and which can be configured independently from one another. Objects themselves have their own metadata in the form of user-defined tags or legal holds. Within a bucket, the hierarchy of objects is effectively "flat", although it is possible to add prefixes to object names to provide some organization and to provide flexibility in listing and other operations. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
 
 All data stored in {{site.data.keyword.cephaas_short}} Object Storage is encrypted, erasure-coded, and dispersed across storage nodes.
 
