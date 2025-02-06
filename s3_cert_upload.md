@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-06"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -79,7 +79,7 @@ Ensure that the file you are uploading have the server-side certificate and key.
 
 ```sh
 curl -X POST \
-  "$sds_api_enpoint/v1/object/certificate/s3" \
+  "$sds_api_enpoint/v1/object/certificates/s3" \
   -H "accept: application/json" \
   -H "Authorization: $iam_token"
   -H "Content-Type: text/plain" \

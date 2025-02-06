@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-06"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -72,7 +72,7 @@ ibmcloud software-defined-storage cred-create --access-key exampleString --url $
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.{uuid}.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crc` as an alternative to `cred-create` for the CLI actions.
@@ -89,7 +89,7 @@ Avoid using special characters when creating access keys with the exception of d
 
 ```sh
 curl -X POST \
-  "$sds_api_endpoint/v1/object/accounts/credentials?access_key=dsfdgdf2343435666" \
+  "$sds_api_endpoint/v1/object/s3_credentials?access_key=dsfdgdf2343435666" \
   -H "accept: application/json" \
   -H "Authorization: $iam_token" \
   -H "IBM-API-Version: 2025-01-30"

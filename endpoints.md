@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-02-06"
 
 keywords: cephaas, endpoint, location, object storage, bucket, region, rclone, resiliency
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Endpoints
 {: #endpoints}
 
-Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance have a unique endpoint that is named as `<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
+Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance have a unique endpoint that is named as `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
 
 To retrieve your `cephaas-instance-id` from the IBM Cloud CLI, do the following steps:
 
@@ -47,9 +47,9 @@ All {{site.data.keyword.cephaas_full}} endpoints require either TLS 1.2 or TLS 1
 
 Each Management API has a separate host identifier. For example,
 
-- Block Management API: `https://block-storage.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
+- Block Management API: `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
 
-- Object Management API: `https://object-storage.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
+- Object Management API: `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
 
 ## S3 API Endpoints
 {: #s3-api-endpoints}
