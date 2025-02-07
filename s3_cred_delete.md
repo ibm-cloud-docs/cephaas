@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 keywords: cephaas , delete service credential
 
@@ -72,12 +72,13 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 You can delete a specific S3 credential using an access key.
 
 ```sh
-curl -X DELETE "$sds_api_endpoint/v1/object/s3_credentials?access_key=dsfdgdf2343435666" \
+curl -X DELETE "$sds_api_endpoint/v1/s3_credentials?access_key=dsfdgdf2343435666" \
   -H "accept: application/json" \
   -H "Authorization: $iam_token" \
-  -H "IBM-API-Version: 2025-01-30"
+  -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
+
 
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 

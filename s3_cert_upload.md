@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -79,20 +79,28 @@ Ensure that the file you are uploading have the server-side certificate and key.
 
 ```sh
 curl -X POST \
-  "$sds_api_enpoint/v1/object/certificates/s3" \
+  "$sds_api_enpoint/v1/certificates/s3" \
   -H "accept: application/json" \
   -H "Authorization: $iam_token"
   -H "Content-Type: text/plain" \
-  -H "IBM-API-Version: 2025-01-30" \
-  --data-binary "@<filename>"
+  -H "IBM-API-Version: 2025-02-01" \
+  --data-binary "@<filename>.pem"
 ```
 {: pre}
 
-A successful response looks like this:
+
+Example of a response when a certificate already exits in the system:
 
 ```json
-{ "ValidCertificate": true, "ValidKey": true, "Error": null }
-
+(sdsaas_env) ~ % curl -X POST "$SDS_ENDPOINT/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15' | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  4677  100   102  100  4575     54   2423  0:00:01  0:00:01 --:--:--  2477
+{
+  "error_message": "Trying to create a s3 certificate when one already exists",
+  "errors": null,
+  "trace": ""
+}
 ```
 {: screen}
 

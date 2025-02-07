@@ -24,7 +24,7 @@ Storage and system administrators familiar with {{site.data.keyword.cephaas_full
 
 First, you need to have at least one {{site.data.keyword.cephaas_full_notm}} resource instance, and some volumes to store the data in. How do you want to segment access to your data? Where do you want your data to physically reside? How often is the data accessed?
 
-For more information, see [IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
+For more information, see the [IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
 ### Managing access
 {: #administrators-manage-access}
@@ -48,7 +48,7 @@ With the Resource controller (RC) API and CLI, you can set and manage the servic
 You must have an 'Administrator', 'Operator' and 'Editor' role to create the deployment.
 {: note}
 
-To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your satallite CRN, click on the **hamburger menu > Resource list > satallite location**.
+To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click on the **hamburger menu > Resource list > Satellite location**.
 {: requirement}
 
 
@@ -59,12 +59,13 @@ To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN
 You can start creating a deployment after cost estimation and the order processing is initiated.
 
 
-1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard which lists your in-progress or completed orders.
+1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 3. Enter your **Deployment name**.
 4. Click **Create**.
 5. Your **Deployment Preparation** status will be reflected as **Completed**.
-6. After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned.
+
+    After the on-premise hardware setup is done, the deployment shows **Available** status and ready-to-be provisioned.
 
 
 
@@ -82,7 +83,7 @@ You can start creating a deployment after cost estimation and the order processi
     ```
     {: pre}
 
-3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and satallite details. Now you have a CRN for the instance.
+3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and Satellite details. Now you have a CRN for the instance.
 
     ```sh
     ibmcloud resource service-instance-create <name> software-defined-storage <plan id> <catalog satellite location> -p '{"satellite_crn": <satellite_location_crn>, "order_id": <order_id>}' -g <resource_group_name>

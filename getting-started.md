@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-07"
 
 keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
 
@@ -32,13 +32,13 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs.
 
-You can select the term (3, 4, or 5 years) performance tier or capacity tier which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized rack(s), servers, storage, networking switches, and software integrated, which connect to the IBM Cloud.
-The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
+You can select the term (3, 4, or 5 years) performance tier or capacity tier, which best matches your needs. IBM Storage Ceph as a Service hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the IBM Cloud. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
+
 IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two options:
 
-- The Performance Tier of IBM Storage Ceph as a Service is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity from 100-800TB in this tier.
+- The Performance Tier of IBM Storage Ceph as a Service is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity from 100-800 TB in this tier.
 
-- The Capacity tier of IBM Storage Ceph as a Service offers cost-effective online storage of less frequently used data. You can provision the capacity from 800TB-3200TB in this tier.
+- The Capacity tier of IBM Storage Ceph as a Service offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
 
 
 
@@ -48,7 +48,7 @@ IBM Storage Ceph as a Service can be provisioned from 100 TB to 3200 TB with two
 
 After saving your cost estimation, click **Start order process** and share your contact details. After you submit the contact form, a notification with a Confirmation ID is displayed.
 
-An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative places your order. While the order is processing, you can track the status from your IBM Cloud account dashboard.
 
 
 ## Preparing your deployment

@@ -35,7 +35,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 |Workload monitoring| Remediate all hardware failures, notification of potential workload impact.  | Engage IBM Support as required. |
 |Incident management | Communicate unplanned incidents with customer impact through the CIE process. | If you are an impacted customer, obtain a report about the incident upon request. |
 {: row-headers}
-{: caption="Responsibilites for incident and operations" caption-side="bottom"}
+{: caption="Responsibilities for incidents and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -49,9 +49,9 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 | Scaling | Scale the storage infrastructure as requested and to meet the capacity that you selected.  | Monitor the capacity usage for future increase of your subscription. Estimate and place order to add more capacity for your service instances. |
 | Updates, fixes, and new features| Provide regular updates, bug fixes, and new features, following a continuous delivery model in a way that is transparent to you for all infrastructure tools, IBM deployed cloud services and IBM management, monitoring, and automation tools. Post notifications for changes that impact you.  | Set preferences to receive email notifications. Monitor the IBM Cloud status page for general announcements. Use best practices and keep application operating systems and workload applications patched and secure with the most recent security patches. |
 | Creating and deploying configurations | Deploy and configure {{site.data.keyword.cephaas_full_notm}}. Provides the capability to select committed capacity for the service. | |
-| Deleting block and object storage |  | You can delete block & object storage whenever you need to.|
+| Deleting block and object storage |  | You can delete block and object storage whenever you need to.|
 {: row-headers}
-{: caption="Responsibilites for change management" caption-side="bottom"}
+{: caption="Responsibilities for change management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -64,9 +64,9 @@ Identity and access management includes tasks such as authentication, authorizat
 | Task  | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Identity and access| Provide the function to restrict access to resources through the IBM Cloud console. Provide default access to the provisioned environment.  | Manage access to resources through IBM Cloud IAM (Identity and Access Management). Manage access to the on-premises environment. |
-|Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premises environment that audits the actions the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
+|Observability| Ensure overall health of the system by allowing integration of IBM Cloud Activity Tracker with your on-premises environment that audits the actions that the users take in the cluster. | Set up IBM Cloud Activity Tracker or other functions to track user activity. |
 {: row-headers}
-{: caption="Responsibilites for identity and access management" caption-side="bottom"}
+{: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Security and regulation compliance
@@ -77,10 +77,10 @@ Security and regulation compliance includes tasks such as security controls impl
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Compliance | Maintain controls commensurate with the compliance certifications/attestations as stated in official data sheets. | Ensure and seek appropriate legal guidance in order to validate its compliance with pertinent industry compliance certifications and regulations. |
-| Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | * Update IAM policies and rules using IBM Cloud console to suit to your requirement. \n Also, ensure that the use of Storage resources are inline with the terms and conditions set forth in the IBM Cloud Service description and any other associated transaction documents. \n * Manage the lifecycle of S3 object storage credentials created to access buckets and objects, and also update any existing automations that use these credentials in the event the credentials need to be rotated.|
+| Compliance | Maintain controls commensurate with the compliance certifications or attestations as stated in official data sheets. | Ensure and seek appropriate legal guidance in order to validate its compliance with pertinent industry compliance certifications and regulations. |
+| Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | * Update IAM policies and rules by using IBM Cloud console to suit to your requirement. \n Also, ensure that the use of Storage resources are inline with the terms and conditions present in the IBM Cloud Service description and any other associated transaction documents. \n * Manage the lifecycle of S3 object storage credentials created to access buckets and objects, and also update any existing automations that use these credentials in the event the credentials need to be rotated.|
 {: row-headers}
-{: caption="Responsibilites for security and regulation compliance" caption-side="bottom"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -91,8 +91,8 @@ Disaster recovery includes tasks such as data and configuration backup, replicat
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Meet disaster recovery objectives | Provides procedure for manual disaster recovery. | Use application level backup and DR solutions while maintaining a disaster recovery plan for their applications.  |
-| Meet high availability objectives | IBM Cloud is available globally and is highly available. For more information about high availability, see the [IBM service level objectives](/docs/resiliency?topic=resiliency-slo). {{site.data.keyword.cephaas_full_notm}} deployment on-prem is highly available for services as well as data access by means of replication and erasure coding.  | Follow best practices for application level high availability. |
+| Meet disaster recovery objectives | Provides a procedure for manual disaster recovery. | Use application level backup and DR solutions while maintaining a disaster recovery plan for their applications.  |
+| Meet high availability objectives | IBM Cloud is available globally and is highly available. For more information about high availability, see the [IBM service level objectives](/docs/resiliency?topic=resiliency-slo). {{site.data.keyword.cephaas_full_notm}} deployment on-prem is highly available for services as well as data access by using replication and erasure coding.  | Follow best practices for application level high availability. |
 {: row-headers}
-{: caption="Responsibilites for disaster recovery" caption-side="bottom"}
+{: caption="Responsibilities for disaster recovery" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

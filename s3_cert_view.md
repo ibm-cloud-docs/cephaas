@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
 
@@ -68,7 +68,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `GET /certificates/{cert_type}` to retrieve the S3 certificate expiration date and status.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/object/certificates" -H "accept: application/json" -H "IBM-API-Version: 2025-01-30"
+curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H "accept: application/json" -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
@@ -76,14 +76,29 @@ A successful response looks like this:
 
 ```json
 {
-  "ExpirationDate": "2024-08-13T05:23:42Z",
-  "Expired": false
+  "name": "s3",
+  "expiration_date": "2035-02-04T08:33:04Z",
+  "expired": false
+}
+```
+{: screen}
+
+Example of a response when there is no certificate available:
+```sh
+(sdsaas_env) ~ % curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15' | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    50  100    50    0     0     26      0  0:00:01  0:00:01 --:--:--    26
+{
+  "name": "s3",
+  "expiration_date": "",
+  "expired": false
 }
 ```
 {: screen}
 
 
-Use this API call to detect when the S3 certificate is about to expire and update them before they expire so that it does not affect the I/O usage. You can automate the expiry notification process within your environment to prevent an outage.
+Use this API call to learn when the S3 certificate is about to expire and update them before they expire, so that it does not affect the I/O usage. You can automate the expiry notification process within your environment to prevent an outage.
 {: tip}
 
 See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.

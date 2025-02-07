@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -35,7 +35,7 @@ To increase the block volume-provisioned size from the list view page, complete 
 3. Click **Expand volume**.
 2. Enter a new **size**.
 
-    You can only increase the provisioned size and cannot reduce it.
+    You can increase the provisioned size. It cannot be reduced.
     {: note}
 
 3. Click **Expand**.
@@ -50,7 +50,7 @@ To increase the block volume-provisioned size from the Volume details page, comp
 1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
 2. Enter a new **size**.
 
-    You can only increase the provisioned size and cannot reduce it.
+    You can increase the provisioned size. It cannot be reduced.
     {: note}
 
 3. Click **Expand**.
@@ -61,7 +61,7 @@ To increase the block volume-provisioned size from the Volume details page, comp
 {: #expanding-volume-capacity-cli}
 {: cli}
 
-Use the `volume-update` command and specify the deployment ID, volume ID, capacity (in gigabytes), and enpoint to update the capacity of a volume.
+Use the `volume-update` command and specify the deployment ID, volume ID, capacity (in gigabytes), and endpoint to update the capacity of a volume.
 
 ```sh
 ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --capacity CAPACITY --url string

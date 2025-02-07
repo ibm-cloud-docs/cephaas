@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-07"
 
 keywords: cephaas, endpoint, location, object storage, bucket, region, rclone, resiliency
 
@@ -45,11 +45,12 @@ All {{site.data.keyword.cephaas_full}} endpoints require either TLS 1.2 or TLS 1
 ## Management API Endpoints
 {: #mgmt-api-endpoints}
 
-Each Management API has a separate host identifier. For example,
+The CephaaS Management API has a separate host identifier.
 
-- Block Management API: `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
+For example,
+`https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
 
-- Object Management API: `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:443`
+
 
 ## S3 API Endpoints
 {: #s3-api-endpoints}
