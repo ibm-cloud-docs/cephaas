@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-07"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -59,7 +59,7 @@ To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN
 You can start creating a deployment after cost estimation and the order processing is initiated.
 
 
-1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. The link opens the deployment dashboard which lists your in-progress or completed orders.
+1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard which lists your in-progress or completed orders.
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 3. Enter your **Deployment name**.
 4. Click **Create**.
