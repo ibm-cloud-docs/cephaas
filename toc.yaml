@@ -59,7 +59,7 @@ toc:
               topics:
                 - volume_about.md
                 - volume_create.md
-                - volume_mapping.md
+#                - volume_mapping.md
                 - volume_view.md
                 - volume_rename.md
                 - volume_expand.md
@@ -69,10 +69,10 @@ toc:
               topics:
                 - host_mapping_about.md
                 - host_create.md
-                - host_mapping.md
                 - host_view.md
                 - host_rename.md
                 - host_delete.md
+                - host_mapping.md
                 - host_unmap.md
                 - connect-from-nvme-of-initiators.md
       - topicgroup:
@@ -90,6 +90,7 @@ toc:
               topics:
                 - s3_cert_upload.md
                 - s3_cert_view.md
+                - s3_cert_delete.md
           - topicgroup:
               label: Managing authentication
               topics:
