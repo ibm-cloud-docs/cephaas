@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-11"
 
 keywords: cephaas , delete service credential
 
@@ -55,9 +55,14 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage cred-delete --access-key exampleString --url $sds_endpoint
+(sdsaas_env) ~ % ibmcloud software-defined-storage cred-delete --access-key exampleString --url $sds_endpoint
+Are you sure you want to delete?[y/n]> y
+...
+OK
 ```
 {: screen}
+
+
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
