@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-11"
 
 keywords: sds, cephaas host, host nqn
 
@@ -33,7 +33,6 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
     Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error "Host name already exists" is displayed.
-    {: tip}
 
 4. Click **Next**.
 5. [Optional] Select one or more volumes to map them to the host.
@@ -44,9 +43,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 {: #creating-hosts-from-cli}
 {: cli}
 
-You can create hosts by using the command-line interface (CLI).
-
-Run the following command to create a new host from a host template object.
+To create hosts by using the command-line interface (CLI) from a host template object, run the following command.
 
 ```sh
 ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
@@ -54,7 +51,8 @@ ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-
 {: pre}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
-{: tip}
+
+For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
 
 
 See the following example.
@@ -140,6 +138,7 @@ A successful response looks like this:
 {: #create-host-tf}
 {: terraform}
 
+To create host using terraform, you must have the `host nqn` handy. For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
 
 1. Create a host instance in your `main.tf` file by using the `ibm_sds_host` resource argument. The host instance in the following example is named `sds_host_instance` respectively.
 
