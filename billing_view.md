@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-15"
+lastupdated: "2025-02-11"
 
 keywords: administration, billing, platform
 
@@ -15,6 +15,17 @@ subcollection: cephaas
 
 # Billing
 {: #billing}
+
+This section provides you with an overview on pricing information and invoices for your service subscriptions.
+{: shortdesc}
+
+
+
+## Invoices
+{: #billing-invoices}
+
+To find your invoices, on the IBM Cloud console, from the navigatation menu, go to **Manage > Billing and Usage > Invoices**.
+
 
 ## {{site.data.keyword.cephaas_full_notm}} Pricing
 {: #billing-pricing}
