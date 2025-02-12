@@ -73,6 +73,7 @@ toc:
                 - host_rename.md
                 - host_delete.md
                 - host_mapping.md
+                - host_mapping_view.md
                 - host_unmap.md
                 - connect-from-nvme-of-initiators.md
       - topicgroup:

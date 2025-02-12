@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: sds, host, view host details, host summary list
 
@@ -134,6 +134,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 ### View a list of all hosts from the CLI
 {: #view-all-host-cli}
+{: cli}
 
 Run this command to view the list of summary information about all hosts.
 
@@ -172,6 +173,7 @@ Before you begin, make sure that you [set up your API environment](/docs/cephaas
 
 ### View a list of all hosts with the API
 {: #view-all-host-api}
+{: api}
 
 Make a `GET /hosts` call to list summary information about all hosts. See the following example.
 
@@ -224,6 +226,7 @@ A successful response looks like the following example.
 
 ### Viewing single host details with the API
 {: #view-single-host-details-api}
+{: api}
 
 Make a `GET /hosts/{id}` call to see details of a host. See the following example.
 
