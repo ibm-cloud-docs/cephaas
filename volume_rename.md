@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -55,16 +55,17 @@ ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --name NAM
 See the following example.
 
 ```bash
-ibmcloud sds volume-update --volume-id r134-7ef8c36e-5234-45c3-bbab-de08bd61855b --name new-demo3 --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682 --name new-demo3 --url $sds_endpoint
 ...
 
-ID            r134-7ef8c36e-5234-45c3-bbab-de08bd61855b
-Name          new-demo3
+Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+Volume_Name   example1
 Status        available
-Mapped_Host   -
-Capacity_GB   15
-Created       2024-06-21T21:08:51Z
-```
+Bandwidth     19
+Capacity_GB   10
+Created       2025-02-11T19:08:21.000Z
+IOPS          150
+Hosts         -
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).

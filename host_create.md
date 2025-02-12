@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas host, host nqn
 
@@ -46,7 +46,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 To create hosts by using the command-line interface (CLI) from a host template object, run the following command.
 
 ```sh
-ibmcloud software-defined-storage host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
+ibmcloud software-defined-storage host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
 ```
 {: pre}
 
@@ -61,7 +61,7 @@ See the following example.
 ibmcloud software-defined-storage host-create \
   --nqn nqn.2014-06.org:9345 \
   --name my-host \
-  --volume-mappings '[{"volume_id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}]' \
+  --volume-mappings '[{"volume": {"id": "r134-af4273d1-b1a2-4ba8-82aa-2285133e2682"}}]' \
   --url $sds_endpoint
 ```
 {: screen}

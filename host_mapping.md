@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -57,29 +57,29 @@ To map a volume to a host from Hosts page, complete the following steps.
 {: #mapping-hosts-cli}
 {: cli}
 
-Use the `host-vol-update` command and specify the `HOST-ID`, `VOLUME-ID` along with the endpoint url to create a volume mapping to the host ID.
+Use the `host-mapping-create` command and specify the `HOST-ID`, and the volume information, along with the endpoint url to create a volume mapping to the host ID.
 
 Run the following command to map the volume to the host.
 
 ```sh
-ibmcloud software-defined-storage host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --url string
+ibmcloud software-defined-storage host-mapping-create --host-id HOST-ID [--volume (VOLUME | @VOLUME-FILE) | --volume-id VOLUME-ID]
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage host-vol-update \
+ibmcloud software-defined-storage host-mapping-create \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-    --url $sds_endpoint
+    --volume '{"id": "r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39"}' \
+    --url exampleString
 ```
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvu` as an alternative to `host-vol-update` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstmc` as an alternative to `host-mapping-create` for the CLI actions.
 {: tip}
 
 

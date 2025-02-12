@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: list all volumes, view volume details
 
@@ -105,15 +105,17 @@ ibmcloud software-defined-storage volume --volume-id VOLUME-ID --url string
 See the following example.
 
 ```sh
-$ ibmcloud sds volume --url $sds_endpoint --volume-id r134-3a7a8360-be78-4723-a341-356be350e683
+$ ibmcloud sds volume --url $sds_endpoint --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
 ...
 
-ID             r134-3a7a8360-be78-4723-a341-356be350e683
-Name           saved-sandblast-calcium-heftiness
-Status         available
-Mapped_Host    -
-Capacity_GB    10
-Created        2024-05-08T16:42:08Z
+Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+Volume_Name   example1
+Status        pending
+Bandwidth     19
+Capacity_GB   10
+Created       2025-02-11T19:08:21.000Z
+IOPS          150
+Hosts         -
 
 ```
 {: screen}

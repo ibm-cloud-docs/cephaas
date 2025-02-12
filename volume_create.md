@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -49,11 +49,11 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 To create volumes by using the command-line interface (CLI), run the following command.
 
 ```sh
-ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] --url string
 ```
 {: pre}
 
-Provide the `CAPACITY` of the volume, `NAME` of the volume, host nqn `hostnqnstring`, and endpoint url. For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
+Provide the `CAPACITY` of the volume, `NAME` of the volume, and endpoint url.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 
@@ -63,12 +63,14 @@ See the following example.
 ibmcloud sds volume-create --capacity 10 --name example1 --url $sds_endpoint
 ...
 
-ID             r134-d75e1aeb-4bcf-4d41-8926-517198d55448
-Name           example1
-Status         pending
-Mapped_Host    -
-Capacity_GB    10
-Created        2024-07-09T06:24:49Z
+Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+Volume_Name   example1
+Status        pending
+Capacity_GB   10
+Created       2025-02-11T19:08:21.000Z
+Bandwidth     19
+IOPS          150
+Hosts         -
 
 ```
 {: screen}

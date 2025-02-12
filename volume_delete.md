@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -76,7 +76,7 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage volume-delete \
-    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682 \
     --url $sds_endpoint
 ```
 {: screen}

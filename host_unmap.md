@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -46,7 +46,9 @@ You can also unmap the host from a volume from **Volume details** page.
 {: #unmap-single-volume-for-hosts-cli}
 {: cli}
 
-Use the `host-vol-delete` command and specify the `HOST-ID` along with the endpoint url and the volume ID that is associated with the host to unmap it.
+Use the `host-mapping-delete` command and specify the `HOST-ID`, the `Volume-Mapping-ID`, and the endpoint url and the volume ID that is associated with the host to unmap it.
+
+The `Volume-Mapping-ID` can be found in the output of a get host or a get volume command
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
@@ -54,21 +56,21 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Run the following command to delete a single volume mapping from a host.
 
 ```sh
-ibmcloud software-defined-storage host-vol-delete --host-id HOST-ID --volume-id VOLUME-ID --url string
+ibmcloud software-defined-storage host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
 ```
 {: pre}
 
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage host-vol-delete \
+ibmcloud software-defined-storage host-mapping-delete \
   --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+  --volume-mapping-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
   --url exampleString
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvd` as an alternative to `host-vol-deleteall` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstmd` as an alternative to `host-mapping-delete` for the CLI actions.
 {: tip}
 
 
@@ -76,7 +78,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #unmap-all-volume-for-hosts-cli}
 {: cli}
 
-Use the `host-vol-deleteall` command and specify the `HOST-ID` along with the endpoint url to unmap all volumes that are associated with the host.
+Use the `host-mapping-delete-all` command and specify the `HOST-ID` along with the endpoint url to unmap all volumes that are associated with the host.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
@@ -84,20 +86,20 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Run the following command to delete all volume mappings from a host.
 
 ```sh
-ibmcloud software-defined-storage host-vol-deleteall --host-id HOST-ID --url string
+ibmcloud software-defined-storage host-mapping-delete-all --host-id HOST-ID
 ```
 {: pre}
 
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage host-vol-deleteall \
+ibmcloud software-defined-storage host-mapping-delete-all \
   --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
   --url exampleString
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstvda` as an alternative to `host-vol-deleteall` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstmda` as an alternative to `host-mapping-delete-all` for the CLI actions.
 {: tip}
 
 ## Unmap a volume for a host with the API
