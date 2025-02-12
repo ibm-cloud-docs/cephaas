@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-14"
+ years: 2024, 2025
+lastupdated: "2025-02-12"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error
 
@@ -45,16 +45,24 @@ Use the Block storage management api to programmatically provision and manage bl
 
 These operations create, delete, get information about, and control the behavior of block storage.
 
-| Bucket operation        | Note                                                                            |
-|:------------------------|:--------------------------------------------------------------------------------|
-| `GET` /volumes          | Used to retrieve a list of all block volumes.                                   |
-| `DELETE` /volume        | Deletes a volume.                                                               |
-| `POST` /volumes         | Create volume in a deployment.                                                  |
-| `PATCH` /volumes        | Updates the name or capacity of a volume.                                       |
-| `DELETE` /host          | Deletes a host                                                                  |
-| `GET` hosts             | Lists hosts in a deployment.                                                    |
-| `POST` /hosts           | Create host in a deployment.                                                    |
-| `PATCH` /hosts          | Updates the name of a host.                                                        |
+| Block operation                                           | Action                                            |
+|:----------------------------------------------------------|:--------------------------------------------------|
+| `GET /volumes`                                            | Used to retrieve a list of all block volumes.     |
+| `DELETE /volumes/{id}`                                    | Deletes a volume.                                 |
+| `POST /volumes`                                           | Create volume in a deployment.                    |
+| `GET /volumes/{id}`                                       | Retrieves a single volume.                        |
+| `PATCH /volumes/{id}`                                     | Updates the name or capacity of a volume.         |
+|:----------------------------------------------------------|:--------------------------------------------------|
+| `GET /hosts`                                              | Retrieves a list of all hosts in the deployment   |
+| `POST /hosts`                                             | Creates a new host.                               |
+| `DELETE /host/{id}`                                       | Deletes a specific host.                          |
+| `GET /hosts/{id}`                                         | Retrieves a specific host.                        |
+| `PATCH /hosts/{id}`                                       | Updates the host information.                     |
+| `POST /hosts/{id}/volume_mappings`                        | Create a Volume mapping for a host.               |
+| `GET /hosts/{id}/volume_mappings/{volume_mapping_id}`     | Retrieves a single volume mapping.                |
+| `GET /hosts/{id}/volume_mappings`                         | Retrieves the lists volume mappings for a host.   |
+| `DELETE /hosts/{id}/volume_mappings/{volume_mapping_id}`  | Deletes the specific volume mapping.              |
+| `DELETE /hosts/{id}/volume_mappings`                      | Deletes all volume mappings for a host.           |
 {: caption="Block storage operation" caption-side="top"}
 
 
@@ -67,13 +75,16 @@ These operations create, delete, get information about, and control the behavior
 
 These operations create, delete, get information about, and control the behavior of administration objects.
 
-| Administration operation        | Note                                                                                |
-|:--------------------------------|:------------------------------------------------------------------------------------|
-| `POST` certificate              | Uploads S3 certificate.                                                             |
-| `GET` certificate               | Retrieves the certificate details.                                                  |
-| `POST` credentials              | Creates S3 credential for object.                                                   |
-| `GET` credentials                | Retrieves one or more S3 credentials.                                               |
-| `DELETE` credentials             | Deletes the S3 credential.                                                          |
+| Administration operation              | Note                                                               |
+|:------------------------------------  |:-------------------------------------------------------------------|
+| `POST /certificates/{cert_type}`      | Create S3 certificate.                                             |
+| `PUT /certificates/{cert_type}`       | Replace or update the S3 certificate                               |
+| `GET /certificates/{cert_type}`       | Retrieves the certificate status.                                  |
+| `DELETE /certificates/{cert_type}`    | Deletes the S3 certificate.                                        |
+| `GET /certificates`                   | Retrieves the list of configured certificates                      |
+| `POST /s3_credentials/{access_key}`   | Creates S3 credential for object.                                  |
+| `GET /s3_credentials`                 | Retrieves one or more S3 credentials.                              |
+| `DELETE /s3_credentials/{access_key}` | Deletes the S3 credential.                                         |
 {: caption="Object admin operation" caption-side="top"}
 
 

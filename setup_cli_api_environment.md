@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -81,7 +81,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
    ```
    {: pre}
 
-   Currently, API endpoint mode supports only `us-south` and `us-east` regions.
+   Currently, API endpoint mode supports only `us-south` and `eu-de` regions.
    {: important}
 
 
