@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-12"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -93,47 +93,47 @@ ibmcloud software-defined-storage [command] [options]
 ### Create volume
 {: #ic-create-volume}
 
-**USAGE:**
+* **USAGE:**
 
-```sh
-ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
-```
-{: pre}
+	```sh
+	ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+	```
+	{: pre}
 
-**ALIASES**: volume-create, volc
+* **ALIASES**: volume-create, volc
 
-See example.
+* **Example**
 
-```sh
-ibmcloud software-defined-storage volume-create \
-    --capacity 10 \
-    --name my-volume \
-    --profile '{"name": "exampleString"}' \
-    --hostnqnstring nqn.2024-07.org:1234 \
-	--url $sds_endpoint
-```
-{: screen}
+	```sh
+	ibmcloud software-defined-storage volume-create \
+		--capacity 10 \
+		--name my-volume \
+		--profile '{"name": "exampleString"}' \
+		--hostnqnstring nqn.2024-07.org:1234 \
+		--url $sds_endpoint
+	```
+	{: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
-
-**Parameters to provide:**
-
-* Capacity of the volume (in gigabytes).
-	* Flag: `--capacity CAPACITY`
-
-* Name of the volume.
-	* Flag: `--name NAME`
-
-	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly selected words.
+	The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 	{: note}
 
-* Host nqn string which has a maximum length of 200 characters and a minimum length of 1 character.
-	* Flag: `--hostnqnstring HOSTNQNSTRING`
 
-* API Endpoint in the URL form.
-	* Flag: `--url string`
+* **Parameters to provide:**
+
+	* Capacity of the volume (in gigabytes).
+		* Flag: `--capacity CAPACITY`
+
+	* Name of the volume.
+		* Flag: `--name NAME`
+
+		If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly selected words.
+		{: note}
+
+	* Host nqn string which has a maximum length of 200 characters and a minimum length of 1 character.
+		* Flag: `--hostnqnstring HOSTNQNSTRING`
+
+	* API Endpoint in the URL form.
+		* Flag: `--url string`
 
 
 
