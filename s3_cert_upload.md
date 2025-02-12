@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-12"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -47,25 +47,26 @@ To upload a S3 certificate, complete the following steps.
 {: #uploading-s3-certificate-cli}
 {: cli}
 
-Use the `cert-upload` command to update the S3 SSL Certificates or create them if they do not exist. Include the parameters `--body BODY` to specify the file name with extension `.pem` that contains the S3 TLS certificate.
+Use the `cert-create` command to create new SSL Certificates if they do not exist. Include the parameters `--body BODY` to specify the file name with extension `.pem` that contains the TLS certificate.
 
 Run the following command to upload the certificate.
 
 ```sh
-ibmcloud software-defined-storage cert-upload --body BODY --url string
+ibmcloud software-defined-storage cert-create --body BODY --url string
 ```
 {: pre}
 
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage cert-upload \
-    --body tempdir/cert-file.pem \
-    --url $sds_endpoint
+ibmcloud software-defined-storage cert-create \
+  --cert s3 \
+  --body tempdir/test-file.txt \
+  --url exampleString
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` as an alternative to `cred-upload` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtc` as an alternative to `cert-create` for the CLI actions.
 {: tip}
 
 ## Uploading S3 certificate with the API
