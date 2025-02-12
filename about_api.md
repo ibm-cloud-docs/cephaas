@@ -52,7 +52,6 @@ These operations create, delete, get information about, and control the behavior
 | `POST /volumes`                                           | Create volume in a deployment.                    |
 | `GET /volumes/{id}`                                       | Retrieves a single volume.                        |
 | `PATCH /volumes/{id}`                                     | Updates the name or capacity of a volume.         |
-|:----------------------------------------------------------|:--------------------------------------------------|
 | `GET /hosts`                                              | Retrieves a list of all hosts in the deployment   |
 | `POST /hosts`                                             | Creates a new host.                               |
 | `DELETE /host/{id}`                                       | Deletes a specific host.                          |

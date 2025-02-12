@@ -12,12 +12,12 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# View S3 certificate expiration date and status
-{: #viewing-sds-s3-certificate-details-sds}
+# Retrieve S3 certificate status and types
+{: #retrieve-s3-cert-details}
 
 S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks.
 
-This section provides guidance on how to view the expiration date and status of the S3 SSL certificate.
+This section provides guidance on how to retrieve and view the list of configured certificates, and the status of each of the S3 SSL certificate.
 {: shortdesc}
 
 
@@ -30,7 +30,7 @@ To view the expiration date and status of the S3 certificate, on the IBM Cloud c
 Here, you can view the **S3 certificate** expiration date and status.
 
 
-## Retrieve configured certificates using the CLI
+## Retrieve list of configured certificates
 {: #retrieve-list-config-certs-cli}
 {: cli}
 
@@ -57,8 +57,8 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 
 
-## Retrieving S3 certificate expiration date and status using the CLI
-{: #retrieving-sds-s3-certificate-details-cli}
+## Retrieving S3 certificate status using the CLI
+{: #retrieving-s3-certificate-status-cli}
 {: cli}
 
 Use the `cert` command to retrieve and view the SSL Certificates expiration date and its status.
@@ -90,7 +90,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: tip}
 
 
-## Retrieve configured certificates with the API
+## Retrieve list of configured certificates with the API
 {: #list-config-certs-api}
 {: api}
 
@@ -124,7 +124,7 @@ See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up
 
 
 
-## Retrieve S3 certificate details with the API
+## Retrieve S3 certificate status with the API
 {: #retrieve-sds-s3-certificate-api}
 {: api}
 

@@ -57,7 +57,6 @@ ibmcloud software-defined-storage cert-update --cert CERT --body BODY --url stri
 {: pre}
 
 
-
 See the following example.
 
 ```sh
@@ -68,16 +67,16 @@ ibmcloud software-defined-storage cert-update \
 ```
 {: screen}
 
-You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtc` as an alternative to `cert-create` for the CLI actions.
+You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` as an alternative to `cert-update` for the CLI actions.
 {: tip}
 
-## Uploading S3 certificate with the API
+## Updating S3 certificate with the API
 {: #uploading-s3-certificate-api}
 {: api}
 
 Make a `PUT /certificate/{cert_type}` call to replace the S3 SSL Certificates or upload a new PEM formatted file if it does not exist.
 
-Ensure that the file you are uploading have the server-side certificate and key.
+Ensure that the replacement file that you are uploading has the server-side certificate and key.
 {: requirement}
 
 ```sh
