@@ -18,7 +18,8 @@ subcollection: cephaas
 Create a host by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
-Before creating a host, the NVME-oF initiator, which is required for mapping volume to a host, must be configured. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators).
+
+Before creating a host, you must configure the NVME-oF initiator. This is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
 {: requirement}
 
 
@@ -51,9 +52,6 @@ ibmcloud software-defined-storage host-create --name NAME --nqn NQN [--volume-ma
 {: pre}
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
-
-For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
-
 
 See the following example.
 

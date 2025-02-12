@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-12"
 
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
@@ -60,12 +60,13 @@ The following network requirements must be completed before the rack is delivere
 
 *  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
 
-* A part of these requirements will be a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}. Some of these IP addresses will need to be able to connect with other services on the internet. Make sure your network is ready to allow for this communication. {{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
+* A part of these requirements, you must have a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}. Some of these IP addresses must be able to connect with other services on the internet. Make sure your network is ready to allow for this communication.
+
+{{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
+{: note}
 
 
 ## Network validation and account activation
 {: #validation-activation}
 
-You must complete the following steps to validate the network functions and to activate the {{site.data.keyword.cephaas_full_notm}} account after delivery:
-
-* The SSR team works with you to ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_short}} account.
+To validate the network functions and activate the {{site.data.keyword.cephaas_full_notm}} account after delivery, the SSR team will work with you to help ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_short}} account.

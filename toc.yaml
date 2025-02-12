@@ -88,8 +88,9 @@ toc:
           - topicgroup:
               label: Managing S3 certificates
               topics:
-                - s3_cert_upload.md
+                - s3_cert_create.md
                 - s3_cert_view.md
+                - s3_cert_update.md
                 - s3_cert_delete.md
           - topicgroup:
               label: Managing authentication

@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-12"
 
-keywords: cephaas, endpoint, location, object storage, bucket, region, rclone, resiliency
+keywords: cephaas, endpoint, location, region,
 
 subcollection: cephaas
 
@@ -25,17 +25,17 @@ To retrieve your `cephaas-instance-id` from the IBM Cloud CLI, do the following 
 
 3. Retrieve a list of all {{site.data.keyword.cephaas_short}} deployments in your IBM Cloud account by using the `software-defined-storage` service name.
 
-```sh
-ibmcloud resource service-instances --service-name software-defined-storage
-```
-{: pre}
+    ```sh
+    ibmcloud resource service-instances --service-name software-defined-storage
+    ```
+    {: pre}
 
 4. Retrieve the {{site.data.keyword.cephaas_short}} instance ID (GUID) of the instance you want.
 
-```sh
-ibm-cloud resource service-instance <cephaas-deployment-name> --guid
-```
-{: pre}
+    ```sh
+    ibm-cloud resource service-instance <cephaas-deployment-name> --guid
+    ```
+    {: pre}
 
 Example of an {{site.data.keyword.cephaas_short}} endpoint: `a5646acb-bf72-4127-bd4d-71b5ba3ae253.software-defined-storage.appdomain.cloud`
 

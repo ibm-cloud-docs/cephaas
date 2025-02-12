@@ -1,0 +1,70 @@
+{
+    "create-utterances-example":[
+      "create utterance",
+      "creating utterance",
+      "write utterance",
+      "writing utterance",
+      "make utterance",
+      "write for chatbot",
+      "link FAQs to chatbot",
+      "integrate docs with chatbot"
+      ],
+
+    "endpoints":[
+		  "how do I set an endpoint in CephaaS",
+		  "want to set an endpoint location for CephaaS",
+		  "setting an endpoint for Object Storage",
+		  "set an object storage endpoint",
+		  "endpoint setting in object storage",
+		  "endpoint location setting"
+     ],
+   "creating-s3-credential-sds":[
+        "CephaaS Object Storage authentication type apikey",
+        "CephaaS Object Storage authentication type HMAC credentials",
+        "how to create HMAC credentials",
+        "how to get hmac_keys",
+        "get hmac keys",
+        "authentication type HMAC credentials",
+        "login credentials for object storage",
+        "obtain Object Storage HMAC credentials",
+        "object storage authentication methods",
+        "how to login to CephaaS",
+        "log into object storage",
+        "to log into object storage",
+        "access key and secret key pair in CephaaS",
+        "generate access keys for object storage",
+        "generating access keys for cloud object storage",
+        "use Access Key and Secret Key to access Cloud Object Storage",
+        "obtain the HMAC credentials for COS",
+        "obtain an OAuth token for COS"
+    ],
+    "creating-s3-certificate":[
+        "how to create tls certificate",
+        "how to create s3 certificate",
+        ""
+    ],
+    "getting-started":[
+      ""
+    ],
+    "estimatecost":[
+      "estimate cost of ceph as a service",
+      ""
+    ],
+    "responsibility-matrix":[
+      "where can i learn about the management responsibilities for CephaaS",
+      "learn about the responsibilities for CephaaS"
+    ],
+    "pre_installation_checklist":[
+      "what do i need to do to prepare my data center",
+      "pre req for installing cephaas",
+      "requirements for installing cephaas",
+      "requirements for installing ceph as a service",
+      "preorder checklist for cephaas"
+    ],
+    "administrators":[
+      "how to set up storage",
+      "setting up cephaas",
+      "setting up deployments",
+      "creating deployments"
+    ]
+  }
