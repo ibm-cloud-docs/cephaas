@@ -76,15 +76,14 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 ### software-defined-storage
 {: #ic-sds-plug-in}
 
-`software-defined-storage` -  an OpenAPI definition for the cephaas CLI.
+`software-defined-storage` -  an OpenAPI definition for the cephaas CLI on IBM Cloud platform.
 
-* **USAGE:**
 ```sh
 ibmcloud software-defined-storage [command] [options]
 ```
 {: pre}
 
-* **ALIASES**: software-defined-storage, sds
+Aliase of `software-defined-storage`: sds
 
 
 ## Block storage
@@ -93,29 +92,27 @@ ibmcloud software-defined-storage [command] [options]
 ### Create volume
 {: #ic-create-volume}
 
-* **USAGE:**
+```sh
+ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+```
+{: pre}
 
-	```sh
-	ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
-	```
-	{: pre}
+Aliase for volume-create: volc
 
-* * **ALIASES**: volume-create, volc
+**Example**
 
-* **Example**
+```sh
+ibmcloud sds volume-create \
+	--capacity 10 \
+	--name my-volume \
+	--profile '{"name": "exampleString"}' \
+	--hostnqnstring nqn.2024-07.org:1234 \
+	--url $sds_endpoint
+```
+{: screen}
 
-	```sh
-	ibmcloud sds volume-create \
-		--capacity 10 \
-		--name my-volume \
-		--profile '{"name": "exampleString"}' \
-		--hostnqnstring nqn.2024-07.org:1234 \
-		--url $sds_endpoint
-	```
-	{: screen}
-
-	The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-	{: note}
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
 
 
 **Parameters to provide:**
@@ -140,26 +137,24 @@ ibmcloud software-defined-storage [command] [options]
 ### Retrieve a single volume details
 {: #ic-retrieve-volume-details}
 
-* **USAGE:**
+```sh
+ibmcloud sds volume --volume-id VOLUME-ID --url string
+```
+{: pre}
 
-	```sh
-	ibmcloud sds volume --volume-id VOLUME-ID --url string
-	```
-	{: pre}
+Aliases of `volume`: vol
 
-* * **ALIASES**: volume, vol
+**Example**
 
-* **Example**
+```sh
+ibmcloud sds volume \
+	--volume-id exampleString
+	--url $sds_endpoint
+```
+{: screen}
 
-	```sh
-	ibmcloud sds volume \
-		--volume-id exampleString
-		--url $sds_endpoint
-	```
-	{: screen}
-
-	The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-	{: note}
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
 
 **Parameters to provide:**
 * The volume identifier.
@@ -177,28 +172,26 @@ Use `volume-update` command along with the new information provided in volume pa
 You can change only one parameter value at a time in the command. More than one change in the same command is not supported.
 {: note}
 
-* **USAGE:**
+```sh
+ibmcloud sds volume-update --volume-id VOLUME-ID [--volume-patch VOLUME-PATCH | @VOLUME-PATCH-FILE] --url string
+```
+{: pre}
 
-	```sh
-	ibmcloud sds volume-update --volume-id VOLUME-ID [--volume-patch VOLUME-PATCH | @VOLUME-PATCH-FILE] --url string
-	```
-	{: pre}
+Aliases of `volume-update`: volu
 
-* * **ALIASES**: volume-update, volu
+**Example**
 
-* **Example**
+```sh
+ibmcloud sds volume-update \
+	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+	--capacity 38 \
+	--name exampleString \
+	--url $sds_endpoint
+```
+{: screen}
 
-	```sh
-	ibmcloud sds volume-update \
-		--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-		--capacity 38 \
-		--name exampleString \
-		--url $sds_endpoint
-	```
-	{: screen}
-
-	The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-	{: note}
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
 
 **Parameters to provide:**
 
@@ -221,17 +214,14 @@ You can change only one parameter value at a time in the command. More than one 
 ### Delete a single volume
 {: #ic-delete-volume}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds volume-delete --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
-* **ALIASES**: volume-delete, vold
+Aliases of `volume-delete`: vold
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds volume-delete \
@@ -255,16 +245,15 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### List all volumes
 {: #ic-list-volumes}
 
-* **USAGE:**
+
 ```sh
 ibmcloud sds volumes [--limit LIMIT] [--name NAME]
 ```
 {: pre}
 
-* **ALIASES**: volumes, vols
+Aliases of `volumes`: vols
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds volumes \
@@ -295,17 +284,14 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Create new host
 {: #ic-create-host-from-template}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
 ```
 {: pre}
 
-* **ALIASES**: host-create, hstc
+Aliases of `host-create`: hstc
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-create \
@@ -331,7 +317,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly selected words.
 	{: note}
 
-* The unique identifier of the volume to be mapped to this host.  Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
+* The unique identifier of the volume to be mapped to this host. Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
 	* Flag: `--volume-mappings VOLUME-MAPPINGS`
 
 * API Endpoint in the URL form.
@@ -340,16 +326,13 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Retrieve a single host
 {: #ic-retrieve-host-profile}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host --host-id HOST-ID --url string
 ```
 {: pre}
 
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host \
@@ -370,20 +353,18 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
 ### List all hosts
 {: #ic-sds-list-all-hosts}
-
-* **USAGE:**
 
 ```sh
 ibmcloud sds hosts [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
-* **ALIASES**: hosts, hsts
+Aliases of `hosts`: hsts
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds hosts \
@@ -411,17 +392,14 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Update a host
 {: #ic-sds-update-host}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATCH-FILE] --url string
 ```
 {: pre}
 
-* **ALIASES**: host-update, hstu
+Aliases of `host-update`: hstu
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-update \
@@ -455,17 +433,15 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Map volume to a host
 {: #ic-map-volume-to-host}
 
-* **USAGE:**
 
 ```sh
 ibmcloud sds host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
-* **ALIASES**: host-vol-update, hstvu
+Aliases of `host-vol-update`: hstvu
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-vol-update \
@@ -494,17 +470,14 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Delete a host
 {: #ic-delete-host}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host-delete --host-id HOST-ID --url string
 ```
 {: pre}
 
-* **ALIASES**: host-delete, hstd
+Aliases of `host-delete`: hstd
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-delete \
@@ -528,17 +501,14 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Delete a single volume mapping from a host
 {: #ic-delete-single-volume-from-host}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host-vol-delete --host-id HOST-ID --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
-* **ALIASES**: host-vol-delete, hstvd
+Aliases of `host-vol-delete`: hstvd
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-vol-delete \
@@ -566,17 +536,14 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Delete all volume mappings associated with a host
 {: #ic-delete-all-volume-mapped-to-host}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds host-vol-deleteall --host-id HOST-ID --url string
 ```
 {: pre}
 
-* **ALIASES**: host-vol-deleteall, hstvd
+Aliases of `host-vol-deleteall`: hstvd
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds host-vol-deleteall \
@@ -608,15 +575,12 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 Updates credentials for a storage account or creates them if they do not exist.
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds cred-create \
@@ -629,7 +593,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-**ALIASES:** cred-create, crc
+Aliases of `cred-create`: crc
 
 **Parameters to provide:**
 
@@ -642,15 +606,12 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Delete a service credential
 {: #ic-delete-service-cred}
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds cred-delete \
@@ -663,7 +624,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-**ALIASES:** cred-delete, crd
+Aliases of `cred-delete`: crd
 
 **Parameters to provide:**
 
@@ -678,15 +639,12 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 Retrieves credentials for a specific storage account.
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds creds --url string
 ```
 {: pre}
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds credentials \
@@ -698,7 +656,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-**ALIASES:** creds, crl
+Aliases of `creds`: crl
 
 **Parameters to provide:**
 
@@ -711,15 +669,12 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 Updates the S3 SSL Certificates or creates them if they do not exist.
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds cert-upload --body BODY --url string
 ```
 {: pre}
 
-* **Example**
-
+**Example**
 
 ```sh
   ibmcloud sds cert-upload \
@@ -732,7 +687,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-**ALIASES:** cert-upload, crtu
+Aliases of `cert-upload`: crtu
 
 **Parameters to provide:**
 
@@ -747,15 +702,12 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 Retrieves the S3 SSL certificate expiration date and status.
 
-* **USAGE:**
-
 ```sh
 ibmcloud sds cert --url string
 ```
 {: pre}
 
-* **Example**
-
+**Example**
 
 ```sh
 ibmcloud sds cert \
@@ -780,12 +732,9 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 `Config` Command can be used for controlling or viewing persistent configuration of global options.
 
-To control or view persistant configurations, you can run `ibmcloud sds config` command along with the global options to list, set, and unset the config values.
+To control or view persistant configurations, run `ibmcloud sds config` command along with the global options to list, set, and unset the config values.
 
 You can set the `url` variable such that you do not need to use the `--url` flag when using with the `sds` command.
-
-
-* **USAGE:**
 
 ```sh
 ibmcloud sds config
@@ -793,7 +742,7 @@ ibmcloud sds config
 {: pre}
 
 
-* Example for setting the url option.
+Example for setting the url option.
 
 ```sh
 pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
@@ -802,7 +751,7 @@ OK
 {: screen}
 
 
-* Example that shows how to use the command without the config set.
+Example that shows how to use the command without the config set.
 
 ```sh
 ibmcloud sds volumes --url $endpoint
@@ -810,14 +759,14 @@ ibmcloud sds volumes --url $endpoint
 {: pre}
 
 
-* Example shows how to use the command with the `url` configured.
+Example shows how to use the command with the `url` configured.
 
 ```sh
 ibmcloud sds volumes
 ```
 {: pre}
 
-* **COMMAND OPTIONS**
+**COMMAND OPTIONS**
 {: #ic-config-command-options}
 
 * `get` - Retrieves the currently set configured value of an option.
@@ -833,18 +782,16 @@ ibmcloud sds volumes
 ### Retrieve configuration values
 {: #ic-get-config-values}
 
-Using `get` with `config` command allows you to retrieve the currently set value for a specific option.
+Use `get` option with `config` command to retrieve the currently set value for a specific option.
 
-When `Get` command is used together with `url` option, the currently set value for the 'url' option is retrieved.
-
-* **USAGE**
+When `Get` option is used together with `url` option, the currently set value for the 'url' option is retrieved.
 
 ```sh
 ibmcloud sds config get url
 ```
 {: pre}
 
-* **Example**
+See example output.
 
 ```sh
 pc@mac ~ % ibmcloud sds config get url
@@ -855,16 +802,14 @@ http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ### List all configuration values
 {: #ic-list-config-values}
 
-Using `List` with `config` command allows you to retrieve and view all of the currently set configured values.
-
-* **USAGE**
+Use `List` option with `config` command to retrieve and view all of the currently set configured values.
 
 ```sh
 ibmcloud sds config list
 ```
 {: pre}
 
-* **Example**
+See example output.
 
 ```sh
 pc@mac ~ % ibmcloud sds config list
@@ -877,16 +822,14 @@ http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ### Set new config values
 {: #ic-set-config-values}
 
-Using `set` with `config` command allows you to configure new values for a specific option.
-
-* **USAGE**
+Use `set` option with `config` command to configure new values for a specific option.
 
 ```sh
 ibmcloud sds config set [option]
 ```
 {: pre}
 
-When `set` command is used together with `url` option, the value for the 'url' option is set.
+When `set` option is used together with `url` option, the value for the 'url' option is set.
 
 See example with `url` option.
 
@@ -900,16 +843,14 @@ OK
 ### Unset config values
 {: #ic-unset-config-values}
 
-Using `unset` with `config` command allows you to reset the current configured values for a specific option.
-
-* **USAGE**
+Use `unset` option with `config` command to reset the current configured values for a specific option.
 
 ```sh
 ibmcloud sds config unset [option]
 ```
 {: pre}
 
-When `unset` command is used together with `url` option, the currently configured value for the 'url' option is reset.
+When `unset` option is used together with `url` option, the currently configured value for the 'url' option is reset.
 
 See example with `url` option.
 
