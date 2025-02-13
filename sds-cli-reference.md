@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -83,7 +83,7 @@ ibmcloud software-defined-storage [command] [options]
 ```
 {: pre}
 
-Aliase of `software-defined-storage`: sds
+Aliases of `software-defined-storage`: sds
 
 
 ## Block storage
@@ -93,21 +93,19 @@ Aliase of `software-defined-storage`: sds
 {: #ic-create-volume}
 
 ```sh
-ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
 ```
 {: pre}
 
-Aliase for volume-create: volc
+Aliases of `volume-create`: volc
 
 **Example**
 
 ```sh
 ibmcloud sds volume-create \
-	--capacity 10 \
-	--name my-volume \
-	--profile '{"name": "exampleString"}' \
-	--hostnqnstring nqn.2024-07.org:1234 \
-	--url $sds_endpoint
+--capacity 10 \
+--name my-volume \
+--url $sds_endpoint
 ```
 {: screen}
 
@@ -125,9 +123,6 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly selected words.
 	{: note}
-
-* Host nqn string which has a maximum length of 200 characters and a minimum length of 1 character.
-	* Flag: `--hostnqnstring HOSTNQNSTRING`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -148,7 +143,7 @@ Aliases of `volume`: vol
 
 ```sh
 ibmcloud sds volume \
-	--volume-id exampleString
+	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -185,7 +180,7 @@ Aliases of `volume-update`: volu
 ibmcloud sds volume-update \
 	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
 	--capacity 38 \
-	--name exampleString \
+	--name my-volume-updated \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -258,7 +253,7 @@ Aliases of `volumes`: vols
 ```sh
 ibmcloud sds volumes \
     --limit 10 \
-    --name myhost1 \
+    --name my-volume \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -285,7 +280,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-create-host-from-template}
 
 ```sh
-ibmcloud sds host-create --nqn NQN [--name NAME] [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
+ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
 ```
 {: pre}
 
@@ -295,10 +290,10 @@ Aliases of `host-create`: hstc
 
 ```sh
 ibmcloud sds host-create \
-    --nqn nqn.2014-06.org:9345 \
     --name my-host \
-    --volume-mappings '[{"volume_id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}]' \
-	--url $sds_endpoint
+    --nqn nqn.2014-06.org:9345 \
+    --volume-mappings '[{"volume": {"id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}}]' \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -317,7 +312,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly selected words.
 	{: note}
 
-* The unique identifier of the volume to be mapped to this host. Must be in the form `['volume_id':'1a6b7274-678d-4dfb-8981-c71dd9d4daa5']`.
+* The unique identifier of the volume to be mapped to this host. Must be in the form `[{"volume": {"id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}}]`.
 	* Flag: `--volume-mappings VOLUME-MAPPINGS`
 
 * API Endpoint in the URL form.
@@ -369,7 +364,7 @@ Aliases of `hosts`: hsts
 ```sh
 ibmcloud sds hosts \
     --limit 10 \
-    --name exampleString
+    --name my-host \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -435,19 +430,29 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ```sh
-ibmcloud sds host-vol-update --host-id HOST-ID --volume-id VOLUME-ID --url string
+ibmcloud sds host-mapping-create --host-id HOST-ID [--volume (VOLUME | @VOLUME-FILE) | --volume-id VOLUME-ID]
 ```
 {: pre}
 
-Aliases of `host-vol-update`: hstvu
+Aliases of `host-mapping-create`: hstmc
 
 **Example**
 
 ```sh
-ibmcloud sds host-vol-update \
-    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \\
+ibmcloud sds host-mapping-create \
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --volume '{"id": "r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39"}' \
+    --url $sds_endpoint
+```
+{: screen}
+
+Or
+
+```sh
+ibmcloud sds host-mapping-create \
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
     --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -462,6 +467,75 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 * Specify the unique volume identifier.
 	* Flag: `--volume-id VOLUME-ID`
+
+* The unique identifier of the volume to be mapped to this host. Must be in the form `[{"volume": {"id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}}]`.
+	* Flag: `--volume VOLUME-ID`
+
+* API Endpoint in the URL form.
+	* Flag: `--url string`
+
+### View all host-mappings for a host
+{: #ic-view-all-host-mappings}
+
+```sh
+ibmcloud sds host-mappings --host-id HOST-ID
+```
+{: pre}
+
+Aliases of `host-mappings`: hstms
+
+**Example**
+
+```sh
+ibmcloud sds host-mappings \
+	--host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+	--url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
+
+
+**Parameters to provide:**
+
+* Host ID whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* API Endpoint in the URL form.
+	* Flag: `--url string`
+
+### View a single host mapping for a host
+{: #ic-view-host-mapping}
+
+```sh
+ibmcloud sds host-mapping --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
+```
+{: pre}
+
+Aliases of `host-mapping`: hstm
+
+**Example**
+
+```sh
+ibmcloud sds host-mapping \
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --volume-mapping-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
+
+
+**Parameters to provide:**
+
+* Host ID whose details you want to view
+	* Flag: `--host-id HOST-ID`
+
+* Unique volume-mapping identifier. This can be found by viewing either the associated volume or host you'd like to complete this operation against
+	* Flag: `--volume-mapping-id VOLUME-MAPPING_ID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -502,19 +576,19 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-delete-single-volume-from-host}
 
 ```sh
-ibmcloud sds host-vol-delete --host-id HOST-ID --volume-id VOLUME-ID --url string
+ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
 ```
 {: pre}
 
-Aliases of `host-vol-delete`: hstvd
+Aliases of `host-mapping-delete`: hstmd
 
 **Example**
 
 ```sh
-ibmcloud sds host-vol-delete \
+ibmcloud sds host-mapping-delete \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-	--url $sds_endpoint
+    --volume-mapping-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -527,8 +601,8 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
-* Unique volume identifier.
-	* Flag: `--volume-id VOLUME-ID`
+* Unique volume-mapping identifier. This can be found by viewing either the associated volume or host you'd like to complete this operation against
+	* Flag: `--volume-mapping-id VOLUME-MAPPING_ID`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -537,16 +611,16 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-delete-all-volume-mapped-to-host}
 
 ```sh
-ibmcloud sds host-vol-deleteall --host-id HOST-ID --url string
+ibmcloud sds host-mapping-delete-all --host-id HOST-ID
 ```
 {: pre}
 
-Aliases of `host-vol-deleteall`: hstvd
+Aliases of `host-vol-delete-all`: hstmda
 
 **Example**
 
 ```sh
-ibmcloud sds host-vol-deleteall \
+ibmcloud sds host-mapping-delete-all \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
 	--url $sds_endpoint
 ```
@@ -663,21 +737,88 @@ Aliases of `creds`: crl
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+### View certificate types
+{: #ic-cert-types}
 
-### Create or modify certificate
-{: #ic-upload-cert}
-
-Updates the S3 SSL Certificates or creates them if they do not exist.
+Retrieves the list of configured SSL Certificates.
 
 ```sh
-ibmcloud sds cert-upload --body BODY --url string
+ibmcloud sds cert-types --url string
 ```
 {: pre}
 
 **Example**
 
 ```sh
-  ibmcloud sds cert-upload \
+ibmcloud sds cert-types \
+    --url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
+
+
+Aliases of `cert-types`: crtt
+
+**Parameters to provide:**
+
+* API Endpoint in the URL form.
+	* Flag: `--url string`
+
+
+### Create a certificate
+{: #ic-create-cert}
+
+Creates a new SSL Certificates if one does not exist.
+
+```sh
+ibmcloud sds cert-create --body BODY --url string
+```
+{: pre}
+
+**Example**
+
+```sh
+ibmcloud sds cert-create \
+    --cert s3 \
+    --body tempdir/test-file.txt \
+    --url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
+
+
+Aliases of `cert-create`: crtc
+
+**Parameters to provide:**
+
+* The request body that contains the TLS certificate. The CLI accepts certificate file in `.pem` format.
+	* Flag: `--body BODY`
+
+* The certificate type that is to be used in the request. Acceptable values include - s3.
+	* Flag: `--cert CERT`
+
+* API Endpoint in the URL form.
+	* Flag: `--url string`
+
+
+### Update a certificate
+{: #ic-update-cert}
+
+Updates the existing SSL Certificate.
+
+```sh
+ibmcloud sds cert-update --body BODY --url string
+```
+{: pre}
+
+**Example**
+
+```sh
+  ibmcloud sds cert-update \
     --body tempdir/certificate-file.pem \
 	--url $sds_endpoint
 ```
@@ -687,20 +828,21 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: note}
 
 
-Aliases of `cert-upload`: crtu
+Aliases of `cert-update`: crtu
 
 **Parameters to provide:**
 
-* The request body that contains the S3 TLS certificate. The CLI accepts certificate file in `.pem` format.
+* The request body that contains the TLS certificate. The CLI accepts certificate file in `.pem` format.
 	* Flag: `--body BODY`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
 ### Retrieve certificate details
 {: #ic-retrieve-cert-details}
 
-Retrieves the S3 SSL certificate expiration date and status.
+Retrieves the SSL certificate expiration date and status.
 
 ```sh
 ibmcloud sds cert --url string
