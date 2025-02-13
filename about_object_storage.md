@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-13"
 
 keywords: about, basics, cephaas object storage
 
@@ -40,7 +40,6 @@ This section includes the known limitations that might impact your experience.
 
 * Static Web Hosting not supported
 
-* Deleting an object can take up to 30 minutes to reflect in the system since the Ceph Object storage does garbage collection as per the minimum default setting.
 
 
 ## HMAC credentials

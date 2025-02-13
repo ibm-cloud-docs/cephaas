@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -96,6 +96,8 @@ You can create volumes by directly calling the Block Volume REST APIs.
 
 Define variables for the IAM token and API endpoint.
 
+For instructions, see [Setting up your API and CLI environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
+
 
 ### Creating a new volume with the API
 {: #creating-new-volume-api}
@@ -139,69 +141,6 @@ A successful response looks like this:
 {: screen}
 
 
-
-## Creating block volumes using Terraform
-{: #create-volume-tf}
-{: terraform}
-
-
-1. Create a volume instance by using the `ibm_sds_volume` resource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
-
-   ```terraform
-   resource "ibm_sds_volume" "sds_volume_instance" {
-     hostnqnstring = "<hostNQN>"
-     capacity = 10
-     name = "demo-volume"
-   }
-   ```
-   {: codeblock}
-
-
-2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
-
-   ```terraform
-   terraform init
-   ```
-   {: pre}
-
-3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
-
-   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
-
-      ```terraform
-      terraform plan
-      ```
-      {: pre}
-
-   1. Run `terraform apply` to create the resources that are defined in the plan.
-
-      ```terraform
-      terraform apply
-      ```
-      {: pre}
-
-4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
-
-    See the example output for details.
-
-    ```terraform
-   # ibm_sds_volume.sds_volume_instance will be created
-   + resource "ibm_sds_volume" "sds_volume_instance" {
-         + bandwidth      = (known after apply)
-         + capacity       = 10
-         + created_at     = (known after apply)
-         + hostnqnstring  = "nqn.2014-06.org:9345"
-         + hosts          = (known after apply)
-         + id             = (known after apply)
-         + iops           = (known after apply)
-         + name           = "demo-volume-2"
-         + resource_type  = (known after apply)
-         + sds_endpoint   = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
-         + status         = (known after apply)
-         + status_reasons = (known after apply)
-      }
-    ```
-    {: screen}
 
 
 

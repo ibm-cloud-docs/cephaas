@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -121,66 +121,10 @@ You can map only one volume at a time by using API command.
 {: note}
 
 
-## Mapping block volume by using Terraform
-{: #mapping-host-to-volume-tf}
-{: terraform}
-
-To map one or more hosts to a volume, edit the `main.tf` file to add a volume the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
-
-To map a host and a volume, a volume must already exist or be created. Edit or add the `ibm_sds_volume` resource in the `main.tf` file and add the `volumes` block to the `ibm_sds_host`.
-
-The following examples show how you can map a volume to a host.
-
-```terraform
-
-resource "ibm_sds_volume" "sds_volume_instance" {
-  hostnqnstring = "<hostNQN>"
-  capacity = 10
-  name = "demo-volume"
-}
-
-// Provision sds_host resource instance
-resource "ibm_sds_host" "sds_host_instance" {
-
-  name = "demo-host"
-  nqn = "<hostNQN>"
-  volumes {
-    volume_id = ibm_sds_volume.sds_volume_instance.id
-    volume_name = ibm_sds_volume.sds_volume_instance.name
-  }
-}
-```
-{: screen}
-
-
-To map multiple volumes to a host, add another `volumes` block
-
-```terraform
-// Provision sds_host resource instance
-resource "ibm_sds_host" "sds_host_instance" {
-
-  name = "demo-host"
-  nqn = "<hostNQN>"
-  volumes {
-    volume_id = ibm_sds_volume.sds_volume_instance.id
-    volume_name = ibm_sds_volume.sds_volume_instance.name
-  }
-  volumes {
-    volume_id = ibm_sds_volume.sds_volume_instance_2.id
-    volume_name = ibm_sds_volume.sds_volume_instance_2.name
-  }
-}
-```
-{: screen}
-
-
-Using terraform, You can map multiple volumes to a host at a time.
-{: note}
 
 ## Next steps
 {: #next-step-mapping-hosts}
 
 * [Configure NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators)
-
 
 * You can continue with mapping and unmapping hosts.

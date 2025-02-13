@@ -50,7 +50,7 @@ toc:
       - iam_overview.md
       - iam_access.md
       - setup_cli_api_environment.md
-      - setup-terraform.md
+#      - setup-terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -156,9 +156,9 @@ toc:
           topics:
             - getting-started-sdks.md
             - go.md
-      - link:
-          label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+#      - link:
+#          label: Terraform reference
+#          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -104,30 +104,6 @@ There is no response body for a successful delete operation. HTTP response code 
 
 
 To verify that the volume is deleted, list the volumes by making a `GET /volumes` call.
-
-## Deleting a block volume using terraform
-{: #deleting-block-volume-tf}
-{: terraform}
-
-To delete a volume using terraform, you can run `terraform destroy -target <volume_name>` where _<volume_name>_ is the name of the volume that is no longer needed.
-
-Example of _<volume_name>_: `ibm_sds_volume.sds_volume_instance`.
-
-First, show the list of terraform resources
-```terraform
-terraform state list
-```
-{: pre}
-
-Then, target a specific resource to destroy
-```terraform
-terraform destroy -target ibm_sds_volume.sds_volume_instance
-```
-{: pre}
-
-If a volume is mapped to a host, you must unmap the volume from host before deletion using the CLI.
-{: note}
-
 
 
 

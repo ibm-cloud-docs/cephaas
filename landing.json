@@ -11,6 +11,10 @@
         "href": "/docs/cephaas?topic=cephaas-getting-started"
       },
       {
+        "title": "Prerequisites for installing IBM CephaaS",
+        "href": "/docs/cephaas?topic=cephaas-pre_installation_checklist"
+      },
+      {
         "title": "Understanding your responsibilities",
         "href": "/docs/cephaas?topic=cephaas-responsibility-matrix"
       },
