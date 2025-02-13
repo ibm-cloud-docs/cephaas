@@ -70,6 +70,10 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 
    ```sh
    ibmcloud update
+   ```
+   {: pre}
+
+   ```sh
    ibmcloud plugin update software-defined-storage
    ```
    {: pre}
