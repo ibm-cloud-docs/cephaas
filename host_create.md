@@ -77,22 +77,12 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Host REST APIs. For more information about the Host {{site.data.keyword.cephaas_short}} API, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/block-storage){: external}.
+You can create hosts by directly calling the Host REST APIs. For more information, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/block-storage){: external}.
 
+Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
-Define variables for the IAM token and API endpoint.
+Ensure that you have defined the variables for the IAM token and API endpoint. Also, ensure that you have the host `nqn` handy. The host `nqn` can be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
 {: requirement}
-
-### Creating a host with the API
-{: #creating-host-api}
-
-Make a `POST /hosts` request to create a host, and define the host by using the `name` parameter. Specify a host `name`, `nqn`, and an optional `volume_id`.
-
-The host `nqn` must be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
-{: requirement}
-
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
-{: tip}
 
 
 ```sh
@@ -107,6 +97,9 @@ curl -X 'POST' '$sds_api_endpoint/v1/hosts' -H 'accept: application/json' -H 'Co
 }'
 ```
 {: pre}
+
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
+{: tip}
 
 A successful response looks like this:
 

@@ -16,7 +16,7 @@ subcollection: cephaas
 # View host details
 {: #view-host-details}
 
-View details of a host or summary information about all hosts for the chosen deployment.
+View single host detail or a summary information about all hosts for the chosen deployment.
 {: shortdesc}
 
 ## View host details in the UI
@@ -163,19 +163,15 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 For more information about available command options, run `ibmcloud sds hosts --help`.
 
 
-## View all hosts with the API
-{: #viewing-hosts-api}
-{: api}
-
-You can list all hosts and view details for a specific host within all deployments that you have access to.
-
-Before you begin, make sure that you [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
-
-### View a list of all hosts with the API
+## View a list of all hosts with the API
 {: #view-all-host-api}
 {: api}
 
 Make a `GET /hosts` call to list summary information about all hosts. See the following example.
+
+Before you begin, make sure that you have [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
+{: requirement}
+
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/hosts -H 'accept: application/json'

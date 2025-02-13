@@ -92,7 +92,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #mapping-vol-to-hosts-api}
 {: api}
 
-Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a given host.
+Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a host.
 
 ```sh
 curl -X PUT '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
