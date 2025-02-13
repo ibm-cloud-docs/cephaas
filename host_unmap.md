@@ -50,9 +50,6 @@ Use the `host-mapping-delete` command and specify the `HOST-ID`, the `Volume-Map
 
 The `Volume-Mapping-ID` can be found in the output of a get host or a get volume command
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 Run the following command to delete a single volume mapping from a host.
 
 ```sh
@@ -66,9 +63,12 @@ See the following example.
 ibmcloud software-defined-storage host-mapping-delete \
   --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
   --volume-mapping-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-  --url exampleString
+  --url $sds_endpoint
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstmd` as an alternative to `host-mapping-delete` for the CLI actions.
 {: tip}
@@ -79,9 +79,6 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: cli}
 
 Use the `host-mapping-delete-all` command and specify the `HOST-ID` along with the endpoint url to unmap all volumes that are associated with the host.
-
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 Run the following command to delete all volume mappings from a host.
 
@@ -95,9 +92,11 @@ See the following example.
 ```sh
 ibmcloud software-defined-storage host-mapping-delete-all \
   --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --url exampleString
+  --url $sds_endpoint
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstmda` as an alternative to `host-mapping-delete-all` for the CLI actions.
 {: tip}
@@ -114,10 +113,9 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
 ```
 {: pre}
 
-The command unmaps a volume from a host.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-There is no response that is returned if the request is successful. HTTP response code 204 is returned.
-
+The command unmaps a volume from a host. There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
 To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` call.
 
@@ -135,8 +133,8 @@ curl -X DELETE '$sds_api_endpoint/v1/hosts/{host-id}/volumes'
 ```
 {: pre}
 
-The command unmaps all volumes from a host.
-There is no response that is returned if the request is successful. HTTP response code 204 is returned.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
+The command unmaps all volumes from a host. There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
 To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` call.

@@ -46,7 +46,7 @@ ibmcloud software-defined-storage host-mappings \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstms` as an alternative to `host-mappings` for the CLI actions.
 {: tip}
@@ -75,7 +75,7 @@ $ ibmcloud software-defined-storage host-mapping \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstm` as an alternative to `host-mapping` for the CLI actions.
 {: tip}
@@ -100,6 +100,7 @@ curl -X 'GET' '$sds_api_endpoint/v1/hosts/{id}/volume_mappings -H 'accept: appli
 
 A successful response displays a list all the volume mapping for the host.
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 ### View details of a single volume mapping for a host with the API
@@ -114,3 +115,5 @@ curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4
 {: pre}
 
 A successful response provides details of the host, such as the `host ID`, `host name`, `nqn`, `service instance ID` and also includes mapped volume details if it mapped to a volume.
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).

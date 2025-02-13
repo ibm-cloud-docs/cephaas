@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-13"
 
 keywords: cephaas , delete service credential
 
@@ -54,7 +54,7 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 
 See the following example.
 
-```bash
+```sh
 (sdsaas_env) ~ % ibmcloud software-defined-storage cred-delete --access-key exampleString --url $sds_endpoint
 Are you sure you want to delete?[y/n]> y
 ...
@@ -63,9 +63,7 @@ OK
 {: screen}
 
 
-
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crd` as an alternative to `cred-delete` for the CLI actions.
 {: tip}
@@ -89,5 +87,7 @@ There is no response body for a successful delete operation. HTTP response code 
 
 To verify that the credential is deleted, list the credential by making a `GET /s3_credentials` call.
 
-See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
-{: note}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$iam_token` variables.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -22,7 +22,6 @@ Before you can update or replace the certificate file, you must create a server-
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
-
 
 
 ## Updating S3 certificate by using the UI
@@ -67,6 +66,8 @@ ibmcloud software-defined-storage cert-update \
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` as an alternative to `cert-update` for the CLI actions.
 {: tip}
 
@@ -108,9 +109,9 @@ Example of a response when a certificate already exits in the system:
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$sds_api_endpoint` and `$iam_token` variables.
-{: note}
+See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment) for instructions on how to set the `$iam_token` variables.
 
 
 ## Next steps

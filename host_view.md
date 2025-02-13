@@ -19,17 +19,11 @@ subcollection: cephaas
 View single host detail or a summary information about all hosts for the chosen deployment.
 {: shortdesc}
 
-## View host details in the UI
-{: #view-host-details-ui}
-{: ui}
-
-You can view a summary of all host and view details for a single volume for the chosen deployment on the user interface.
-
-### View all hosts in the UI
+## View all hosts in the UI
 {: #view-all-hosts-ui}
 {: ui}
 
-To view all hosts and all mapped volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+To view a list of all hosts, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 
@@ -57,7 +51,7 @@ Table describes the kebab menu options.
 When you select one or more hosts, the `Delete` button is enabled and displayed which enables you to perform multiple delete operations.
 
 
-### View single host details in the UI
+## View single host details in the UI
 {: #view-single-host-details-ui}
 {: ui}
 
@@ -97,42 +91,8 @@ The Actions menu on the Host details page shows the actions that you can take.
 {: caption="Actions menu options on the Host details page." caption-side="bottom"}
 
 
-## Viewing Hosts from the CLI
-{: #viewing-hosts-cli}
-{: cli}
 
-View details of a single host or summary information about all hosts from the CLI.
-
-
-### Viewing details of a single host from the CLI
-{: #view-single-host-detail-cli}
-
-Run the following command to show host details for a specific host `ID`.
-
-```sh
-ibmcloud software-defined-storage host --host-id HOST-ID --url string
-```
-{: pre}
-
-
-The following example uses the host ID to show host details.
-
-```sh
-$ ibmcloud software-defined-storage host \
-  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --url $sds_endpoint
-```
-{: screen}
-
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
-You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
-{: tip}
-
-
-
-### View a list of all hosts from the CLI
+## View a list of all hosts from the CLI
 {: #view-all-host-cli}
 {: cli}
 
@@ -155,10 +115,42 @@ ibmcloud software-defined-storage hosts \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hsts` as an alternative to `hosts` for the CLI actions.
 {: tip}
+
+
+## View details of a single host from the CLI
+{: #view-single-host-detail-cli}
+{: cli}
+
+Run the following command to show host details for a specific host `ID`.
+
+```sh
+ibmcloud software-defined-storage host --host-id HOST-ID --url string
+```
+{: pre}
+
+
+The following example uses the host ID to show host details.
+
+```sh
+$ ibmcloud software-defined-storage host \
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+You can also use the alias `sds` as an alternative to `software-defined-storage` for the CLI actions.
+{: tip}
+
+
+
+
 
 For more information about available command options, run `ibmcloud sds hosts --help`.
 
@@ -167,16 +159,19 @@ For more information about available command options, run `ibmcloud sds hosts --
 {: #view-all-host-api}
 {: api}
 
-Make a `GET /hosts` call to list summary information about all hosts. See the following example.
+Make a `GET /hosts` call to list summary information about all hosts.
 
 Before you begin, make sure that you have [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
 {: requirement}
 
+See the following example.
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/hosts -H 'accept: application/json'
 ```
 {: pre}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 A successful response looks like the following example.
 
@@ -263,3 +258,5 @@ A successful response provides details of the host, such as the `host ID`, `host
 
 ```
 {: codeblock}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
