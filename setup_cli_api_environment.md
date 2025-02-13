@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-02-13"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -74,15 +74,15 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
    ```
    {: pre}
 
-1. To switch to API endpoint mode, enter the following command:
+1. To specify an API endpoint, enter the following command:
 
    ```sh
-   ibmcloud login -a api-endpoint.cloud.ibm.com
+   ibmcloud login -a https://cloud.ibm.com
    ```
    {: pre}
 
-   Currently, API endpoint mode supports only `us-south` and `eu-de` regions.
-   {: important}
+   For more information on CLI option details, see [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login).
+
 
 
 ## API prerequisites

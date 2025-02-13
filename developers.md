@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-13"
 
 keywords: cephaas, developer, getting started, command-line interface, cli
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the IBM Developer Tools: [API/SDK](/apidocs/software-defined-storage) and [terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) installed.
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the IBM Developer Tools: [API/SDK](/apidocs/software-defined-storage)  installed.
 
 
 
