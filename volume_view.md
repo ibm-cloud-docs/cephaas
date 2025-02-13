@@ -15,19 +15,15 @@ subcollection: cephaas
 # View block volumes
 {: #view-volume}
 
-View details about a block storage volume or summary information about all volumes for the chosen service instance.
+View details about a block storage volume or summary information about all volumes for the deployment.
 {: shortdesc}
 
-## Viewing volume details in the UI
-{: #viewvols}
+
+## View list of all volumes in the UI
+{: #viewvols-ui}
 {: ui}
 
-You can view a summary of all volumes and view details for a single volume for the chosen deployment.
-
-### Viewing summay information of all volumes in the UI
-{: #viewvols-ui}
-
-To view all the Block storage volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
+To view the list of all the volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 
 By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen service instance are displayed. In the list of all **Volumes**, you see the following information.
 
@@ -55,8 +51,9 @@ Table 2 describes the Actions menu options.
 {: caption="Row actions menu options for volumes." caption-side="bottom"}
 
 
-### Viewing details of a volume
+## View details of a single volume
 {: #view-vol-details-ui}
+{: ui}
 
 To view details of a single volume, go to the list of all volumes and click on the volume name.
 
@@ -84,15 +81,14 @@ Table 4 shows Actions menu options from the volume details page.
 | Delete | Delete the volume. |
 {: caption="Actions menu options from the volume details page." caption-side="bottom"}
 
-## Viewing volumes details from the CLI
-{: #viewing-block-storage-cli}
-{: cli}
-
-View details about a volume or summary information about all volumes from the CLI.
 
 
-### Viewing details of a single volume from the CLI
+
+
+
+## View single volume details from the CLI
 {: #viewvol-cli}
+{: cli}
 
 Run the following command to show volume details for a specific volume `ID` along with the endpoint url.
 
@@ -121,15 +117,15 @@ Hosts         -
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vol` as an alternative to `volume` for the CLI actions.
 {: tip}
 
 
 
-### Viewing list of all volumes from the CLI
+## View list of all volumes from the CLI
 {: #viewall-vol-cli}
+{: cli}
 
 Run this command to list summary information about all volumes:
 
@@ -153,25 +149,23 @@ r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10           
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vols` as an alternative to `volumes` for the CLI actions.
 {: tip}
 
 For more information about available command options, run `ibmcloud sds volumes --help`.
 
-## View all volumes with the API
-{: #viewing-block-storage-api}
+
+
+
+## View list of all volumes with the API
+{: #viewall-vol-api}
 {: api}
 
-You can list all volumes and view details for a specific volume within all storage workspaces that you have access to.
+Make a `GET /volumes` call to retrieve and view a list of all volumes within your deployment.
 
-Before you begin, make sure that you [set up your API environment].
-
-### Viewing all cephaas volumes with the API
-{: #viewall-vol-api}
-
-Make a `GET /volumes` call to list summary information about all volumes. See the following example.
+See the following example.
 
 ```sh
 curl -X GET "$sds_api_endpoint/v1/volumes --header 'Authorization: Bearer $IAM_TOKEN'
@@ -213,8 +207,12 @@ A successful response looks like the following example. This example shows the f
 }
 ```
 
-### Viewing volume details with the API
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+## Viewing volume details with the API
 {: #viewvol-details-api}
+{: api}
 
 Make a `GET /volumes/{volume_id}` call to see details of a volume. See the following example.
 
@@ -250,6 +248,8 @@ A successful response provides details of the volume, including capacity and IOP
     }
 ```
 {: codeblock}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 

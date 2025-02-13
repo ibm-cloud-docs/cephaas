@@ -78,7 +78,6 @@ Hosts         -
 Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `volc` as an alternative to `volume-create` for the CLI actions.
 {: tip}
@@ -87,26 +86,13 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #creating-volume-api}
 {: api}
 
-You can create volumes by directly calling the Block Volume REST APIs.
+You can create volumes by directly calling the Block storage REST API.
 
+Define variables for the IAM token and API endpoint. For instructions, see [Setting up your API and CLI environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
+{: requirement}
 
-
-### Before you begin
-{: #block-volume-api-prereqs}
-
-Define variables for the IAM token and API endpoint.
-
-For instructions, see [Setting up your API and CLI environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
-
-
-### Creating a new volume with the API
-{: #creating-new-volume-api}
 
 Make a `POST /volumes` request to create a new block volume. Specify capacity and volume name. Volume name is optional.
-
-The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
-{: important}
-
 
 ```sh
 curl -X POST '$sds_api_endpoint/v1/volumes' \
@@ -118,6 +104,12 @@ curl -X POST '$sds_api_endpoint/v1/volumes' \
 }'
 ```
 {: pre}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
+{: tip}
 
 A successful response looks like this:
 
