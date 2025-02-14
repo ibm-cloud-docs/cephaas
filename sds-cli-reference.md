@@ -112,7 +112,6 @@ ibmcloud sds volume-create \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
-
 **Parameters to provide:**
 
 * Capacity of the volume (in gigabytes).
@@ -149,7 +148,6 @@ ibmcloud sds volume \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 **Parameters to provide:**
 * The volume identifier.
@@ -186,7 +184,7 @@ ibmcloud sds volume-update \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 **Parameters to provide:**
 
@@ -226,7 +224,6 @@ ibmcloud sds volume-delete \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 **Parameters to provide:**
 
@@ -259,7 +256,6 @@ ibmcloud sds volumes \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -298,7 +294,6 @@ ibmcloud sds host-create \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -318,6 +313,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
 ### Retrieve a single host
 {: #ic-retrieve-host-profile}
 
@@ -325,7 +321,6 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ibmcloud sds host --host-id HOST-ID --url string
 ```
 {: pre}
-
 
 Example command:
 
@@ -337,8 +332,6 @@ ibmcloud sds host \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -370,8 +363,6 @@ ibmcloud sds hosts \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -405,8 +396,6 @@ ibmcloud sds host-update \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -424,6 +413,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
 
 ### Map volume to a host
 {: #ic-map-volume-to-host}
@@ -457,7 +447,6 @@ ibmcloud sds host-mapping-create \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -473,6 +462,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
 
 ### View all host-mappings for a host
 {: #ic-view-all-host-mappings}
@@ -494,7 +484,6 @@ ibmcloud sds host-mappings \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -526,8 +515,6 @@ ibmcloud sds host-mapping \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -561,8 +548,6 @@ ibmcloud sds host-delete \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -571,6 +556,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
 
 ### Delete a single volume mapping from a host
 {: #ic-delete-single-volume-from-host}
@@ -593,8 +579,6 @@ ibmcloud sds host-mapping-delete \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
@@ -627,7 +611,6 @@ ibmcloud sds host-mapping-delete-all \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -654,6 +637,8 @@ ibmcloud sds cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
+Aliases of `cred-create`: crc
+
 Example command:
 
 ```sh
@@ -664,10 +649,6 @@ ibmcloud sds cred-create \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
-
-Aliases of `cred-create`: crc
 
 **Parameters to provide:**
 
@@ -677,6 +658,7 @@ Aliases of `cred-create`: crc
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+
 ### Delete a service credential
 {: #ic-delete-service-cred}
 
@@ -684,6 +666,8 @@ Aliases of `cred-create`: crc
 ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
+
+Aliases of `cred-delete`: crd
 
 Example command:
 
@@ -695,10 +679,7 @@ ibmcloud sds cred-delete \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
-
-Aliases of `cred-delete`: crd
 
 **Parameters to provide:**
 
@@ -718,6 +699,8 @@ ibmcloud sds creds --url string
 ```
 {: pre}
 
+Aliases of `creds`: crl
+
 Example command:
 
 ```sh
@@ -727,15 +710,14 @@ ibmcloud sds creds \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
-
-Aliases of `creds`: crl
 
 **Parameters to provide:**
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
+
 
 ### View certificate types
 {: #ic-cert-types}
@@ -747,6 +729,8 @@ ibmcloud sds cert-types --url string
 ```
 {: pre}
 
+Aliases of `cert-types`: crtt
+
 Example command:
 
 ```sh
@@ -756,10 +740,7 @@ ibmcloud sds cert-types \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
-
-Aliases of `cert-types`: crtt
 
 **Parameters to provide:**
 
@@ -777,6 +758,8 @@ ibmcloud sds cert-create --cert CERT --body BODY --url string
 ```
 {: pre}
 
+Aliases of `cert-create`: crtc
+
 Example command:
 
 ```sh
@@ -788,10 +771,7 @@ ibmcloud sds cert-create \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
-
-Aliases of `cert-create`: crtc
 
 **Parameters to provide:**
 
@@ -815,6 +795,8 @@ ibmcloud sds cert-update --cert CERT --body BODY --url string
 ```
 {: pre}
 
+Aliases of `cert-update`: crtu
+
 Example command:
 
 ```sh
@@ -826,10 +808,6 @@ ibmcloud sds cert-update \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
-
-Aliases of `cert-update`: crtu
 
 **Parameters to provide:**
 
@@ -864,7 +842,6 @@ ibmcloud sds cert \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
 
 
 **Parameters to provide:**
@@ -899,8 +876,6 @@ ibmcloud sds cert-delete \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
-
 
 **Parameters to provide:**
 
