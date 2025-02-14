@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-14"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -126,7 +126,7 @@ When creating a new instance, if you encounter the error `No resource group targ
 {: api}
 
 
-To create a deployment, you need the bearer token of the user-id used.
+To create a deployment, you need the Bearer token of the user-id used.
 
 Use a hostless or full satellite location as Location for the deployment.
 {: prereq}

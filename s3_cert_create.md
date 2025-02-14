@@ -70,7 +70,7 @@ Ensure that you have the server-side certificate and key handy.
 curl -X POST \
   "$sds_api_enpoint/v1/certificates/s3" \
   -H "accept: application/json" \
-  -H "Authorization: BEARER $IAM_TOKEN"
+  -H "Authorization: Bearer $IAM_TOKEN"
   -H "Content-Type: text/plain" \
   -H "IBM-API-Version: 2025-02-01" \
   --data-binary "@<filename>.pem"
@@ -81,7 +81,7 @@ curl -X POST \
 Example of a response when a certificate is created:
 
 ```json
-curl -X POST "$SDS_ENDPOINT/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
+curl -X POST "$sds_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 
 {

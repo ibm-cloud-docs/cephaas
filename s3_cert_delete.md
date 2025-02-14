@@ -57,7 +57,7 @@ Make `DELETE /certificates/{cert_type}` call to delete a S3 certificate.
 ```sh
 curl -X DELETE "$sds_api_endpoint/v1/certificates/s3" \
   -H 'accept: application/json' \
-  -H "Authorization: BEARER $IAM_TOKEN" \
+  -H "Authorization: Bearer $IAM_TOKEN" \
   -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}

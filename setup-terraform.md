@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-14"
 
 subcollection: cephaas
 
@@ -59,14 +59,14 @@ Before you can create an authorization by using Terraform, make sure that you ha
 2. Set your SDS endpoint as an environment variable
 
    ```bash
-   export IBMCLOUD_SDS_ENDPOINT="<SDS_ENDPOINT>"
+   export IBMCLOUD_sds_endpoint="<sds_endpoint>"
    ```
    {: screen}
 
    Setting the endpoint can also be accomplished by including the below tag in your terraform resources.
 
    ```terraform
-   sds_endpoint="<SDS_ENDPOINT>"
+   sds_endpoint="<sds_endpoint>"
    ```
    {: pre}
 

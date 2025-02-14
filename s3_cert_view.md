@@ -99,14 +99,14 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make `Get /certificates` to retrieve the list of configured certificates.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
+curl -X GET "$sds_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
 Example of a successful response.
 
 ```sh
-(sdsaas_env) ~ % curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
+curl -X GET "$sds_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 {
   "certificates": [
@@ -131,7 +131,7 @@ See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up
 Make a `GET /certificates/{cert_type}` to retrieve the S3 certificate expiration date and status.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
+curl -X GET "$sds_endpoint/v1/certificates/s3" -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -148,7 +148,7 @@ A successful response looks like this:
 
 Example of a response when there is no certificate available:
 ```sh
-curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
+curl -X GET "$sds_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 
 {

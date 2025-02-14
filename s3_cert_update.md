@@ -59,10 +59,13 @@ ibmcloud software-defined-storage cert-update --cert CERT --body BODY --url stri
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage cert-update \
-  --cert s3 \
-  --body tempdir/test-file.pem \
-  --url $sds_endpoint
+ibmcloud sds cert-update --cert s3 --url $sds_endpoint --body file-name.pem
+
+...
+Name               s3
+ValidCertificate   true
+ValidKey           true
+Trace              75cacd10-7918-44c0-9914-1723ebf74ee1
 ```
 {: screen}
 
@@ -84,7 +87,7 @@ Ensure that the replacement file that you are uploading has the server-side cert
 curl -X PUT \
   "$sds_api_enpoint/v1/certificates/s3" \
   -H "accept: application/json" \
-  -H "Authorization: BEARER $IAM_TOKEN"
+  -H "Authorization: Bearer $IAM_TOKEN"
   -H "Content-Type: text/plain" \
   -H "IBM-API-Version: 2025-02-01" \
   --data-binary "@<filename>.pem"
@@ -95,7 +98,7 @@ curl -X PUT \
 Example of a response when a certificate already exits in the system:
 
 ```json
-curl -X PUT "$sds_api_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
+curl -X PUT "$sds_api_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ...
 {
   "name": "s3",

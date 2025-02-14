@@ -773,7 +773,7 @@ Aliases of `cert-types`: crtt
 Creates a new SSL Certificates if one does not exist.
 
 ```sh
-ibmcloud sds cert-create --body BODY --url string
+ibmcloud sds cert-create --cert CERT --body BODY --url string
 ```
 {: pre}
 
@@ -834,7 +834,10 @@ Aliases of `cert-update`: crtu
 **Parameters to provide:**
 
 * The request body that contains the TLS certificate. The CLI accepts certificate file in `.pem` format.
-	* Flag: `--body BODY`
+	* Flag: `--body BODY
+
+* The certificate type that is to be used in the request. Acceptable values include - s3.
+	* Flag: `--cert CERT`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -849,6 +852,7 @@ Retrieves the SSL certificate expiration date and status.
 ibmcloud sds cert --cert CERT --url string
 ```
 {: pre}
+
 
 **Example**
 
@@ -865,8 +869,48 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
+* The certificate type that is to be used in the request. Acceptable values include - s3.
+	* Flag: `--cert CERT`
+
 * API Endpoint in the URL form.
 	* Flag: `--url string`
+
+
+
+### Delete certificate
+{: #ic-delete-cert}
+
+Deletes the SSL certificate.
+
+```sh
+ibmcloud sds cert-delete --cert CERT --url string
+```
+{: pre}
+
+Aliases of `cert-delete`: crtd
+
+**Example**
+
+```sh
+ibmcloud sds cert-delete \
+	--cert s3
+	--url $sds_endpoint
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+{: note}
+
+
+**Parameters to provide:**
+
+* The certificate type that is to be used in the request. Acceptable values include - s3.
+	* Flag: `--cert CERT`
+
+* API Endpoint in the URL form.
+	* Flag: `--url string`
+
+
 
 
 
