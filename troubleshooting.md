@@ -87,5 +87,25 @@ Verify that the volume name or identifier is correct and that the volume is not 
 {: tsResolve}
 
 
-## Trying to create a s3 certificate when one already exists
-{: #troubleshoot}
+## Unable to create a s3 certificate
+{: #troubleshoot-topic-4}
+{: troubleshoot}
+{: support}
+
+You receive an error message when you attempt to create s3 certificate.
+{: tsSymptoms}
+
+This condition might appear in the API or CLI in the following scenarios.
+
+* In API: when you make a `POST` request.
+* In CLI: when you run the command `ibmcloud sds cert-create`.
+
+There exists already a S3 certificate with the same file name.
+{: tsCauses}
+
+Follow these guidelines to replace the existing certificate with the new one:
+{: tsResolve}
+
+* In API: Make a `PUT /certificate/{cert_type}` request to upload the new s3 certificate. See [Updating S3 certificate with the API](/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=api#uploading-s3-certificate-api).
+
+* In CLi: Use the command `cert-update` to upload the new s3 certificate. See [Updating S3 certificate with the CLI](/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=cli#updating-s3-certificate-cli).
