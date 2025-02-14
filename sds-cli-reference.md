@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -99,13 +99,13 @@ ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
 
 Aliases of `volume-create`: volc
 
-**Example**
+Example
 
 ```sh
 ibmcloud sds volume-create \
---capacity 10 \
---name my-volume \
---url $sds_endpoint
+	--capacity 10 \
+	--name my-volume \
+	--url $sds_endpoint
 ```
 {: screen}
 
@@ -721,7 +721,7 @@ ibmcloud sds creds --url string
 **Example**
 
 ```sh
-ibmcloud sds credentials \
+ibmcloud sds creds \
 	--url $sds_endpoint
 ```
 {: screen}
@@ -811,16 +811,17 @@ Aliases of `cert-create`: crtc
 Updates the existing SSL Certificate.
 
 ```sh
-ibmcloud sds cert-update --body BODY --url string
+ibmcloud sds cert-update --cert CERT --body BODY --url string
 ```
 {: pre}
 
 **Example**
 
 ```sh
-  ibmcloud sds cert-update \
-    --body tempdir/certificate-file.pem \
-	--url $sds_endpoint
+ibmcloud sds cert-update \
+  --cert s3 \
+  --body tempdir/test-file.pem \
+  --url $sds_endpoint
 ```
 {: screen}
 
@@ -845,7 +846,7 @@ Aliases of `cert-update`: crtu
 Retrieves the SSL certificate expiration date and status.
 
 ```sh
-ibmcloud sds cert --url string
+ibmcloud sds cert --cert CERT --url string
 ```
 {: pre}
 
@@ -853,6 +854,7 @@ ibmcloud sds cert --url string
 
 ```sh
 ibmcloud sds cert \
+	--cert s3
 	--url $sds_endpoint
 ```
 {: screen}

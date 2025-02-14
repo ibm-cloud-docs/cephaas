@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-22"
+ years: 2024, 2025
+lastupdated: "2025-02-14"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service
 
@@ -85,3 +85,7 @@ The volume name and ID are not accepted.
 
 Verify that the volume name or identifier is correct and that the volume is not mapped to a host. Also, verify that the volume is not in a _pending_ state.
 {: tsResolve}
+
+
+## Trying to create a s3 certificate when one already exists
+{: #troubleshoot}

@@ -42,10 +42,13 @@ ibmcloud software-defined-storage cert-create --cert CERT --body BODY --url stri
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage cert-create \
-  --cert s3 \
-  --body tempdir/test-file.txt \
-  --url $sds_endpoint
+ibmcloud sds cert-create --cert s3 --url $sds_endpoint --body file-name.pem
+
+...
+Name               s3
+ValidCertificate   true
+ValidKey           true
+Trace              75cacd10-7918-44c0-9914-1723ebf74ee1
 ```
 {: screen}
 
@@ -67,7 +70,7 @@ Ensure that you have the server-side certificate and key handy.
 curl -X POST \
   "$sds_api_enpoint/v1/certificates/s3" \
   -H "accept: application/json" \
-  -H "Authorization: $iam_token"
+  -H "Authorization: BEARER $IAM_TOKEN"
   -H "Content-Type: text/plain" \
   -H "IBM-API-Version: 2025-02-01" \
   --data-binary "@<filename>.pem"
@@ -78,14 +81,15 @@ curl -X POST \
 Example of a response when a certificate is created:
 
 ```json
-(sdsaas_env) ~ % curl -X POST "$SDS_ENDPOINT/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15' | jq
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  4677  100   102  100  4575     54   2423  0:00:01  0:00:01 --:--:--  2477
+curl -X POST "$SDS_ENDPOINT/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
+...
+
 {
-  "errors": [],
+  "name": "s3",
   "valid_certificate": true,
-  "value_key": true
+  "valid_key": true,
+  "trace": "d0313b8e-adce-4232-96b4-627587bc0982",
+  "errors": null
 }
 ```
 {: screen}

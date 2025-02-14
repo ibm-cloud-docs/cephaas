@@ -35,7 +35,7 @@ ibmcloud software-defined-storage cert-delete --cert CERT --url string
 Example of deleting a certificate.
 
 ```bash
-(sdsaas_env) ~ % ibmcloud software-defined-storage cert-delete --url $sds_endpoint --cert s3
+ibmcloud software-defined-storage cert-delete --url $sds_endpoint --cert s3
 Are you sure you want to delete?[y/n]> y
 ...
 OK
@@ -57,20 +57,10 @@ Make `DELETE /certificates/{cert_type}` call to delete a S3 certificate.
 ```sh
 curl -X DELETE "$sds_api_endpoint/v1/certificates/s3" \
   -H 'accept: application/json' \
-  -H "Authorization: $iam_tOKEN" \
+  -H "Authorization: BEARER $IAM_TOKEN" \
   -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
-
-See example response.
-
-```sh
-(sdsaas_env) ~ % curl -X DELETE "$sds_api_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: $iam_tOKEN" -H 'IBM-API-Version: 2025-02-01' | jq
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
-```
-{: screen}
 
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 

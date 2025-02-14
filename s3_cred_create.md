@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -67,8 +67,11 @@ ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage cred-create --access-key exampleString --url $sds_endpoint
+ibmcloud software-defined-storage cred-create --access-key test-key1 --url $sds_endpoint
+...
 
+Access_Key   test-key
+Secret_Key   B13r2VkGB7InBmYNhs6N0vB7k2B2lvvEFT1HID2n
 ```
 {: screen}
 
@@ -88,17 +91,16 @@ Avoid using special characters when creating access keys with the exception of d
 {: important}
 
 ```sh
-curl -X POST \
-  "$sds_api_endpoint/v1/s3_credentials?access_key=dsfdgdf2343435666" \
-  -H "accept: application/json" \
-  -H "Authorization: $iam_token" \
-  -H "IBM-API-Version: 2025-02-01"
+curl -X POST "$sds_api_endpoint/v1/s3_credentials/{access_key}"   -H "accept: application/json"   -H "Authorization: BEARER $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01
 ```
 {: pre}
 
 Example of a successful response looks like this:
 
 ```json
+curl -X POST   "$sds_api_endpoint/v1/s3_credentials/dsfdgdf2343435666"   -H "accept: application/json"   -H "Authorization: BEARER $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01"
+...
+
 {
   "access_key": "dsfdgdf2343435666",
   "secret_key": "ZGAelVfLo7QAzWlIAsTPYVckXMl8gIcKzvdXaDtJ"

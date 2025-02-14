@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: cephaas , delete service credential
 
@@ -55,7 +55,7 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```sh
-(sdsaas_env) ~ % ibmcloud software-defined-storage cred-delete --access-key exampleString --url $sds_endpoint
+(sdsaas_env) ~ % ibmcloud software-defined-storage cred-delete --access-key test-key1 --url $sds_endpoint
 Are you sure you want to delete?[y/n]> y
 ...
 OK
@@ -75,13 +75,22 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 You can delete a specific S3 credential using an access key.
 
 ```sh
-curl -X DELETE "$sds_api_endpoint/v1/s3_credentials?access_key=dsfdgdf2343435666" \
+curl -X DELETE "$sds_api_endpoint/v1/s3_credentials/{access-key}" \
   -H "accept: application/json" \
-  -H "Authorization: $iam_token" \
+  -H "Authorization: BEARER $IAM_TOKEN" \
   -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
+See example of a delete request.
+
+```sh
+curl -X DELETE "$sds_api_endpoint/v1/s3_credentials/dsfdgdf2343435666" \
+  -H "accept: application/json" \
+  -H "Authorization: BEARER $IAM_TOKEN" \
+  -H "IBM-API-Version: 2025-02-01"
+```
+{: screen}
 
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 

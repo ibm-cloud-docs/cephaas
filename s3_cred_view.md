@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: cephaas service credential view, list
 
@@ -45,6 +45,9 @@ See the following example.
 
 ```bash
 ibmcloud software-defined-storage creds --url $sds_endpoint
+...
+
+s3_Credentials   [test-key1, test-key2, test-key3, test-key4]
 ```
 {: screen}
 
@@ -60,7 +63,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make the `GET /s3_credentials` request to retrieve and view one or all S3 credentials.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/s3_credentials" -H "accept: application/json" -H "Authorization: $iam_token" -H "IBM-API-Version: 2025-02-01"
+curl -X GET "$sds_api_endpoint/v1/s3_credentials" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 

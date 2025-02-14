@@ -43,9 +43,11 @@ ibmcloud software-defined-storage cert-types --url string
 
 See following command example.
 
-
 ```sh
 ibmcloud software-defined-storage cert-types --url $sds_endpoint
+...
+
+Certificates   [s3]
 ```
 {: screen}
 
@@ -97,14 +99,14 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make `Get /certificates` to retrieve the list of configured certificates.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: $iam_token" -H "IBM-API-Version: 2025-02-01"
+curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
 Example of a successful response.
 
 ```sh
-(sdsaas_env) ~ % curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: $iam_token" -H 'IBM-API-Version: 2025-01-15'
+(sdsaas_env) ~ % curl -X GET "$sds_api_endpoint/v1/certificates" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 {
   "certificates": [
@@ -129,7 +131,7 @@ See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up
 Make a `GET /certificates/{cert_type}` to retrieve the S3 certificate expiration date and status.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H "accept: application/json" -H "IBM-API-Version: 2025-02-01"
+curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H "accept: application/json" -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -146,10 +148,9 @@ A successful response looks like this:
 
 Example of a response when there is no certificate available:
 ```sh
-(sdsaas_env) ~ % curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15' | jq
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    50  100    50    0     0     26      0  0:00:01  0:00:01 --:--:--    26
+curl -X GET "$sds_api_endpoint/v1/certificates/s3" -H 'accept: application/json'  -H "Authorization: BEARER $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
+...
+
 {
   "name": "s3",
   "expiration_date": "",
