@@ -78,7 +78,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #uploading-s3-certificate-api}
 {: api}
 
-Make a `PUT /certificate/{cert_type}` call to replace the S3 SSL Certificates or upload a new PEM formatted file if it does not exist.
+Make a `PUT /certificates/{cert_type}` call to replace the S3 SSL Certificates or upload a new PEM formatted file if it does not exist.
 
 Ensure that the replacement file that you are uploading has the server-side certificate and key.
 {: requirement}
