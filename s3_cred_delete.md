@@ -55,7 +55,7 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```sh
-(sdsaas_env) ~ % ibmcloud software-defined-storage cred-delete --access-key test-key1 --url $sds_endpoint
+ibmcloud software-defined-storage cred-delete --access-key test-key1 --url $sds_endpoint
 Are you sure you want to delete?[y/n]> y
 ...
 OK
