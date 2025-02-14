@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -46,7 +46,7 @@ To upload a S3 certificate, complete the following steps.
 {: #updating-s3-certificate-cli}
 {: cli}
 
-Use the `cert-update` command to update or replace existing SSL Certificates. Include the parameters `--body BODY` to specify the file name with extension `.pem` that contains the TLS certificate.
+Use the `cert-update` command to update or replace existing SSL Certificates. You must include the parameters `--cert CERT` to specify the certifcate type to be used, and `--body BODY` to specify the file name with extension `.pem` that contains the TLS certificate.
 
 Run the following command to upload the certificate.
 
@@ -95,10 +95,8 @@ curl -X PUT \
 Example of a response when a certificate already exits in the system:
 
 ```json
-(sdsaas_env) ~ % curl -X PUT "$sds_api_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: $iam_token" -H 'IBM-API-Version: 2025-02-01' | jq
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  4691  100   116  100  4575     59   2346  0:00:01  0:00:01 --:--:--  2404
+(sdsaas_env) ~ % curl -X PUT "$sds_api_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: $iam_token" -H 'IBM-API-Version: 2025-02-01'
+...
 {
   "name": "s3",
   "valid_certificate": true,

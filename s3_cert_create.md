@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: cephaas settings, creating S3 Certificate
 
@@ -30,12 +30,12 @@ For secure traffic, S3 Clients must use the associated CA certificate.
 {: #creating-s3-certificate-cli}
 {: cli}
 
-Use the `cert-create` command to create new SSL Certificates if they do not exist. Include the parameters `--body BODY` to specify the file name with extension `.pem` that contains the TLS certificate.
+Use the `cert-create` command to create new SSL Certificates if they do not exist. You must include the parameters `--cert CERT` to specify the certifcate type to be used, and `--body BODY` to specify the file name with extension `.pem` that contains the TLS certificate.
 
 Run the following command to upload the certificate.
 
 ```sh
-ibmcloud software-defined-storage cert-create --body BODY --url string
+ibmcloud software-defined-storage cert-create --cert CERT --body BODY --url string
 ```
 {: pre}
 

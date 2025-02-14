@@ -34,8 +34,7 @@
   },
   "section_devtools": {
     "api": "/apidocs/software-defined-storage",
-    "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference",
-    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
+    "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference"
   },
   "section_updates": {
     "view_more": "/docs/cephaas?topic=cephaas-relnotes"

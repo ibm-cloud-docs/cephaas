@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-14"
 
 keywords: cephaas, delete s3 certificate
 
@@ -25,7 +25,7 @@ Delete S3 credential using the CLI, or API.
 {: #deleting-s3-cert-cli}
 {: cli}
 
-To delete a certificate, you can run the `cert-delete` command from CLI. Provide the certificate name and the endpoint url.
+To delete a certificate, you can run the `cert-delete` command from CLI. Provide the certificate type and the endpoint url.
 
 ```sh
 ibmcloud software-defined-storage cert-delete --cert CERT --url string
