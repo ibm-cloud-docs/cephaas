@@ -110,7 +110,7 @@ ibmcloud sds volume-create \
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
-{: note}
+
 
 
 **Parameters to provide:**
@@ -139,7 +139,7 @@ ibmcloud sds volume --volume-id VOLUME-ID --url string
 
 Aliases of `volume`: vol
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds volume \
@@ -174,7 +174,7 @@ ibmcloud sds volume-update --volume-id VOLUME-ID [--volume-patch VOLUME-PATCH | 
 
 Aliases of `volume-update`: volu
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds volume-update \
@@ -216,7 +216,7 @@ ibmcloud sds volume-delete --volume-id VOLUME-ID --url string
 
 Aliases of `volume-delete`: vold
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds volume-delete \
@@ -248,7 +248,7 @@ ibmcloud sds volumes [--limit LIMIT] [--name NAME]
 
 Aliases of `volumes`: vols
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds volumes \
@@ -286,7 +286,7 @@ ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPING
 
 Aliases of `host-create`: hstc
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-create \
@@ -327,7 +327,7 @@ ibmcloud sds host --host-id HOST-ID --url string
 {: pre}
 
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host \
@@ -359,7 +359,7 @@ ibmcloud sds hosts [--limit LIMIT] [--name NAME] --url string
 
 Aliases of `hosts`: hsts
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds hosts \
@@ -394,7 +394,7 @@ ibmcloud sds host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATC
 
 Aliases of `host-update`: hstu
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-update \
@@ -436,7 +436,7 @@ ibmcloud sds host-mapping-create --host-id HOST-ID [--volume (VOLUME | @VOLUME-F
 
 Aliases of `host-mapping-create`: hstmc
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-mapping-create \
@@ -484,7 +484,7 @@ ibmcloud sds host-mappings --host-id HOST-ID
 
 Aliases of `host-mappings`: hstms
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-mappings \
@@ -515,7 +515,7 @@ ibmcloud sds host-mapping --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-I
 
 Aliases of `host-mapping`: hstm
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-mapping \
@@ -551,7 +551,7 @@ ibmcloud sds host-delete --host-id HOST-ID --url string
 
 Aliases of `host-delete`: hstd
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-delete \
@@ -582,7 +582,7 @@ ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MA
 
 Aliases of `host-mapping-delete`: hstmd
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-mapping-delete \
@@ -617,7 +617,7 @@ ibmcloud sds host-mapping-delete-all --host-id HOST-ID
 
 Aliases of `host-vol-delete-all`: hstmda
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds host-mapping-delete-all \
@@ -654,7 +654,7 @@ ibmcloud sds cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cred-create \
@@ -685,7 +685,7 @@ ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cred-delete \
@@ -718,7 +718,7 @@ ibmcloud sds creds --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds creds \
@@ -747,7 +747,7 @@ ibmcloud sds cert-types --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cert-types \
@@ -777,7 +777,7 @@ ibmcloud sds cert-create --cert CERT --body BODY --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cert-create \
@@ -815,7 +815,7 @@ ibmcloud sds cert-update --cert CERT --body BODY --url string
 ```
 {: pre}
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cert-update \
@@ -854,7 +854,7 @@ ibmcloud sds cert --cert CERT --url string
 {: pre}
 
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cert \
@@ -889,7 +889,7 @@ ibmcloud sds cert-delete --cert CERT --url string
 
 Aliases of `cert-delete`: crtd
 
-**Example**
+Example command:
 
 ```sh
 ibmcloud sds cert-delete \
