@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-17"
 
 keywords: sds, cephaas host, host nqn
 
@@ -33,7 +33,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a service 
 2. Click **Create host**.
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
-    Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error "Host name already exists" is displayed.
+    Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error <q>Host name already exists</q> is displayed.
 
 4. Click **Next**.
 5. [Optional] Select one or more volumes to map them to the host.

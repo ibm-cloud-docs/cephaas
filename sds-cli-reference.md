@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-17"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -929,7 +929,7 @@ ibmcloud sds volumes
 ```
 {: pre}
 
-**COMMAND OPTIONS**
+### Config command options
 {: #ic-config-command-options}
 
 * `get` - Retrieves the currently set configured value of an option.

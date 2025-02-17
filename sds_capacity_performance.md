@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-24"
+lastupdated: "2025-02-17"
 
 keywords: cephaas, capacity management, performance management
 
@@ -29,7 +29,7 @@ To view capacity details of your IBM CephaaS deployments, complete the following
 ## Viewing the capacity of your deployments
 {: #view-capacity}
 
-The upper section of the deployment dashboard displays the current usage information about the following.
+The deployment dashboard displays the current usage information about the following.
 
 | Usage Information | Description |
 |-------|-------------|
@@ -46,7 +46,7 @@ If the burst capacity is also exhausted, the bar turns red.
 ## Viewing Performance of your deployments
 {: #view-performance}
 
-The lower section of the deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6 hours, 12 hours, 24 hours, 2 days, past week and past 2 weeks.
+The deployment dashboard provides graphical insights into various aspects of deployment performance. You can monitor both read and write performance for block and object storage. The dashboard displays performance data from the last 6 hours, 12 hours, 24 hours, 2 days, past week and past 2 weeks.
 
 | Performance Criteria | Description |
 |-------|-------------|
