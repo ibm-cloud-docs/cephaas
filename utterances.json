@@ -9,7 +9,6 @@
       "link FAQs to chatbot",
       "integrate docs with chatbot"
       ],
-
     "endpoints":[
 		  "how do I set an endpoint in CephaaS",
 		  "want to set an endpoint location for CephaaS",
@@ -19,44 +18,35 @@
 		  "endpoint location setting"
      ],
    "creating-s3-credential-sds":[
-        "CephaaS Object Storage authentication type apikey",
-        "CephaaS Object Storage authentication type HMAC credentials",
+        "cephaas object storage authentication type apikey",
         "how to create HMAC credentials",
         "how to get hmac_keys",
         "get hmac keys",
         "authentication type HMAC credentials",
         "login credentials for object storage",
-        "obtain Object Storage HMAC credentials",
+        "obtain object Storage HMAC credentials",
         "object storage authentication methods",
-        "how to login to CephaaS",
-        "log into object storage",
-        "to log into object storage",
         "access key and secret key pair in CephaaS",
-        "generate access keys for object storage",
-        "generating access keys for cloud object storage",
-        "use Access Key and Secret Key to access Cloud Object Storage",
-        "obtain the HMAC credentials for COS",
-        "obtain an OAuth token for COS"
+        "generate access keys for object storage"
     ],
     "creating-s3-certificate":[
-        "how to create tls certificate",
-        "how to create s3 certificate",
-        ""
-    ],
-    "getting-started":[
-      ""
+        "create tls certificate",
+        "create s3 certificate",
+        "creating certificate"
     ],
     "estimatecost":[
       "estimate cost of ceph as a service",
-      ""
+      "estimating cost"
     ],
     "responsibility-matrix":[
-      "where can i learn about the management responsibilities for CephaaS",
-      "learn about the responsibilities for CephaaS"
+      "management responsibilities for cephaas",
+      "understanding responsibilities for cephaas",
+      "cephaas responsibilities"
     ],
     "pre_installation_checklist":[
-      "what do i need to do to prepare my data center",
-      "pre req for installing cephaas",
+      "prepare my data center",
+      "preparing my data center",
+      "installing cephaas pre-requisites",
       "requirements for installing cephaas",
       "requirements for installing ceph as a service",
       "preorder checklist for cephaas"
@@ -66,5 +56,47 @@
       "setting up cephaas",
       "setting up deployments",
       "creating deployments"
+    ],
+    "billing-invoices":[
+      "find my service invoices",
+      "access cephaas invoices"
+    ],
+    "performance-tier":[
+      "what is performance tier",
+      "what does the cephaas service performance tier include",
+      "capacity is offered in performance tiers",
+      "typical workload for performance tier"
+    ],
+    "capacity-tier":[
+      "capacity tier in cephaas",
+      "typical workload for capacity tier",
+      "capacity options offered in capacity tier"
+    ],
+    "overall-capacity":[
+      "overage charges cephaas",
+      "overall capacity overage charges in cephaas"
+    ],
+    "faq-pending-status-block-volumes-hosts":[
+      "What does the pending status mean for block volumes and hosts?",
+      "pending status for block storage",
+      "meaning of pending status",
+      "different pending status",
+      "when do we see pending status"
+    ],
+    "faq-create-vol-10k-iops":[
+      "create volume for a workload that requires 10,000 IOPS",
+      "creating volume for workload that requires 10,000 IOPS"
+    ],
+    "faq-create-vol-thruput-1kmbps":[
+      "create volume for a workload that requires a throughput of 1000 MBps",
+      "creating volume for a workload that requires a throughput of 1000 MBps"
+    ],
+    "faq-vol-increase-performance":[
+      "create volume for increased performance",
+      "creating volume"
+    ],
+    "faq-data-post-vol-delete":[
+      "What happens to the data when i delete a block storage volume",
+      "What happens when new data is written to the volume"
     ]
   }
