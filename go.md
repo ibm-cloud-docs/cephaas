@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-17"
+lastupdated: "2025-02-17"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -84,7 +84,7 @@ func main() {
 		Authenticator: authenticator,
 	}
 
-	sdsaasService, err = sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
+	sdsaasService, err := sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -103,7 +103,7 @@ func main() {
 	)
 	volumeCreateOptions.SetName("my-volume")
 
-	volume, _, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	volume, response, err := sdsaasService.VolumeCreate(volumeCreateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -117,7 +117,7 @@ func main() {
 	volumesOptions := sdsaasService.NewVolumesOptions()
 	volumesOptions.SetLimit(int64(10))
 
-	volumeCollection, _, err := sdsaasService.Volumes(volumesOptions)
+	volumeCollection, response, err := sdsaasService.Volumes(volumesOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -144,7 +144,7 @@ func main() {
 
 	volumeUpdateOptions.SetVolumePatch(volumePatch)
 
-	volume, _, err = sdsaasService.VolumeUpdate(volumeUpdateOptions)
+	volume, response, err := sdsaasService.VolumeUpdate(volumeUpdateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -159,7 +159,7 @@ func main() {
 		*volume.ID,
 	)
 
-	volume, _, err = sdsaasService.Volume(volumeOptions)
+	volume, response, err := sdsaasService.Volume(volumeOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -177,7 +177,7 @@ func main() {
 	volumeDeleteOptions := sdsaasService.NewVolumeDeleteOptions(
 		*volume.ID,
 	)
-	_, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	response, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -194,7 +194,7 @@ func main() {
 
 	hostCreateOptions.SetName("my-host")
 
-	host, _, err := sdsaasService.HostCreate(hostCreateOptions)
+	host, response, err := sdsaasService.HostCreate(hostCreateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -208,7 +208,7 @@ func main() {
 	hostsOptions := sdsaasService.NewHostsOptions()
 	hostsOptions.SetLimit(int64(10))
 
-	hostCollection, _, err := sdsaasService.Hosts(hostsOptions)
+	hostCollection, response, err := sdsaasService.Hosts(hostsOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -234,7 +234,7 @@ func main() {
 
 	hostUpdateOptions.SetHostPatch(hostPatch)
 
-	host, _, err = sdsaasService.HostUpdate(hostUpdateOptions)
+	host, response, err := sdsaasService.HostUpdate(hostUpdateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -249,7 +249,7 @@ func main() {
 		*host.ID,
 	)
 
-	host, _, err = sdsaasService.Host(hostOptions)
+	host, response, err := sdsaasService.Host(hostOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -262,17 +262,71 @@ func main() {
 ### Map a host to a volume
 {: #go-host-map}
 
-
 ```Go
-	hostVolUpdateOptions := sdsaasService.NewHostVolUpdateOptions(
+
+	volumeIdentityModel := &sdsaasv1.VolumeIdentity{
+		ID: volume.ID,
+	}
+
+	hostMappingCreateOptions := sdsaasService.NewHostMappingCreateOptions(
 		*host.ID,
-		*volume.ID,
+		volumeIdentityModel,
 	)
 
-	host, _, err = sdsaasService.HostVolUpdate(hostVolUpdateOptions)
+	volumeMapping, response, err := sdsaasService.HostMappingCreate(hostMappingCreateOptions)
 	if err != nil {
 		panic(err)
 	}
+
+	fmt.Println("Host mapping created")
+	fmt.Println("Volume ID: ", *volumeMapping.Volume.ID)
+	fmt.Println("Host ID: ", *volumeMapping.Host.ID)
+	fmt.Println("Volume mapping ID: ", *volumeMapping.ID)
+```
+{: codeblock}
+
+### View all host mappings
+{: #go-host-mappings}
+
+```Go
+	hostMappingsOptions := sdsaasService.NewHostMappingsOptions(
+		*host.ID,
+	)
+
+	volumeMappingCollection, response, err := sdsaasService.HostMappings(hostMappingsOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Printing out a collection of host mappings")
+	for _, mapping := range volumeMappingCollection.VolumeMappings {
+		fmt.Println("Host ID: ", *mapping.Host.ID)
+		fmt.Println("Volume ID: ", *mapping.Volume.ID)
+		fmt.Println("Volume mapping ID: ", *mapping.ID)
+		fmt.Println()
+	}
+```
+{: codeblock}
+
+### View a specific host mapping - TODO: Update
+{: #go-host-mapping}
+
+```Go
+	hostMappingOptions := sdsaasService.NewHostMappingOptions(
+		*host.ID,
+		<VOLUME-MAPPING-ID>,
+	)
+
+	volumeMapping, response, err := sdsaasService.HostMapping(hostMappingOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Host mapping")
+	fmt.Println("Volume ID: ", *volumeMapping.Volume.ID)
+	fmt.Println("Host ID: ", *volumeMapping.Host.ID)
+	fmt.Println("Volume mapping ID: ", *volumeMapping.ID)
+
 ```
 {: codeblock}
 
@@ -281,28 +335,30 @@ func main() {
 
 
 ```Go
-	hostVolDeleteOptions := sdsaasService.NewHostVolDeleteOptions(
+	hostMappingDeleteOptions := sdsaasService.NewHostMappingDeleteOptions(
 		*host.ID,
-		*volume.ID,
+		<VOLUME-MAPPING-ID>,
 	)
 
-	_, err = sdsaasService.HostVolDelete(hostVolDeleteOptions)
+	response, err := sdsaasService.HostMappingDelete(hostMappingDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
 ```
 {: codeblock}
 
+### Unmap all mappings from a host
+
 ### Delete a host
 {: #go-host-delete}
 
 
 ```Go
-	hostDeleteOptions := sdsaasService.NewHostDeleteOptions(
+	hostMappingDeleteAllOptions := sdsaasService.NewHostMappingDeleteAllOptions(
 		*host.ID,
 	)
 
-	_, err = sdsaasService.HostDelete(hostDeleteOptions)
+	response, err := sdsaasService.HostMappingDeleteAll(hostMappingDeleteAllOptions)
 	if err != nil {
 		panic(err)
 	}

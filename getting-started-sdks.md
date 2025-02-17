@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-17"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -111,7 +111,6 @@ func main() {
 	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
 		int64(5),
 	)
-	volumeCreateOptions.SetHostnqnstring(hostNQN)
 	volumeCreateOptions.SetName(newVolume)
 
 	fmt.Printf("Creating new volume %q...\n", newVolume)
@@ -121,7 +120,7 @@ func main() {
 		exitErrorf("Unable to create sds volume %q, %v", newVolume, err)
 	}
 
-	time.Sleep(3 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	// Host create
 
@@ -138,23 +137,27 @@ func main() {
 		exitErrorf("Unable to create sds host %q, %v", newHost, err)
 	}
 
-	time.Sleep(3 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	// Assign volume to host
 
-	hostVolUpdateOptions := sdsaasService.NewHostVolUpdateOptions(
+	volumeIdentityModel := &sdsaasv1.VolumeIdentity{
+		ID: volume.ID,
+	}
+
+	hostMappingCreateOptions := sdsaasService.NewHostMappingCreateOptions(
 		*host.ID,
-		*volume.ID,
+		volumeIdentityModel,
 	)
 
 	fmt.Printf("Assigning volume %q to host %q...\n", newVolume, newHost)
 
-	host, _, err = sdsaasService.HostVolUpdate(hostVolUpdateOptions)
+	_, _, err = sdsaasService.HostMappingCreate(hostMappingCreateOptions)
 	if err != nil {
 		exitErrorf("Unable to assign sds host %q to sds volume %q, %v", newHost, newVolume, err)
 	}
 
-	time.Sleep(3 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	// Display host and volume
 
@@ -170,7 +173,9 @@ func main() {
 	fmt.Printf("Volume ID: %q\n", *volume.ID)
 	fmt.Printf("Volume Name: %q\n", *volume.Name)
 	fmt.Printf("Volume capacity: %d\n", *volume.Capacity)
-	fmt.Printf("Volume host mapping: %q\n", *volume.HostMappings[0].HostID)
+	fmt.Printf("Volume mapping ID: %q\n", *volume.VolumeMappings[0].ID)
+	fmt.Printf("Volume mapping Host ID: %q\n", *volume.VolumeMappings[0].Host.ID)
+	fmt.Printf("Volume mapping Name: %q\n", *volume.VolumeMappings[0].Host.Name)
 
 	hostOptions := sdsaasService.NewHostOptions(
 		*host.ID,
@@ -183,23 +188,23 @@ func main() {
 	fmt.Printf("\nGetting host %q\n", newHost)
 	fmt.Printf("Host ID: %q\n", *host.ID)
 	fmt.Printf("Host Name: %q\n", *host.Name)
-	fmt.Printf("Host VolumeMappings: %q\n\n", *host.VolumeMappings[0].VolumeID)
+	fmt.Printf("Host VolumeMapping ID: %q\n\n", *host.VolumeMappings[0].ID)
 
-	// Remove volume assignment
+	// Remove host and volume assignment
 
 	fmt.Printf("Removing assignment from volume %q...\n", newVolume)
 
-	hostVolDeleteOptions := sdsaasService.NewHostVolDeleteOptions(
+	hostMappingDeleteOptions := sdsaasService.NewHostMappingDeleteOptions(
 		*host.ID,
-		*volume.ID,
+		*host.VolumeMappings[0].ID,
 	)
 
-	_, err = sdsaasService.HostVolDelete(hostVolDeleteOptions)
+	_, err = sdsaasService.HostMappingDelete(hostMappingDeleteOptions)
 	if err != nil {
 		exitErrorf("Unable to delete host %q assigment between volume %q, %v", newHost, newVolume, err)
 	}
 
-	time.Sleep(3 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	// Volume Delete
 	fmt.Printf("Deleting volume %q...\n", newVolume)
@@ -256,15 +261,17 @@ Creating new host "host1"...
 Assigning volume "volume1" to host "host1"...
 
 Getting volume "volume1"
-Volume ID: "r134-92e8c388-6f78-4644-998e-ed5d215d20ad"
+Volume ID: "r134-221e4eb4-ed0c-4165-957b-8a54e65829f4"
 Volume Name: "volume1"
 Volume capacity: 5
-Volume host mapping: "r134-32475c27-2dc8-4be5-9c13-ee91d84e5372"
+Volume mapping ID: "r134-106ff4ca-4564-4f07-abcd-4dc8c819af00"
+Volume mapping Host ID: "r134-d7369321-da97-4998-948c-ddecefa7d39f"
+Volume mapping Name: "my-host"
 
 Getting host "host1"
-Host ID: "r134-32475c27-2dc8-4be5-9c13-ee91d84e5372"
+Host ID: "r134-d7369321-da97-4998-948c-ddecefa7d39f"
 Host Name: "my-host"
-Host VolumeMappings: "r134-92e8c388-6f78-4644-998e-ed5d215d20ad"
+Host volume mapping ID "r134-106ff4ca-4564-4f07-abcd-4dc8c819af00" for volume %!q(*string=0x1400018f6b0)
 
 Removing assignment from volume "volume1"...
 Deleting volume "volume1"...
