@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: sds, host, view host details, host summary list
 
@@ -159,7 +159,7 @@ For more information about available command options, run `ibmcloud sds hosts --
 {: #view-all-host-api}
 {: api}
 
-Make a `GET /hosts` call to list summary information about all hosts.
+Make a `GET /hosts` request to list summary information about all hosts.
 
 Before you begin, make sure that you have [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
 {: requirement}
@@ -219,7 +219,7 @@ A successful response looks like the following example.
 {: #view-single-host-details-api}
 {: api}
 
-Make a `GET /hosts/{id}` call to see details of a host. See the following example.
+Make a `GET /hosts/{id}` request to see details of a host. See the following example.
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921' -H 'accept: application/json'

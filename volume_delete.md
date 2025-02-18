@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -103,7 +103,7 @@ curl -X DELETE '$sds_api_endpoint/v1/volumes/{volume-id}' \
 There is no response body for a successful delete operation. HTTP response code 202 is returned.
 
 
-To verify that the volume is deleted, list the volumes by making a `GET /volumes` call.
+To verify that the volume is deleted, list the volumes by making a `GET /volumes` request.
 
 
 

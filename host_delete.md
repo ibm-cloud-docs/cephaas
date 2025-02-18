@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -103,4 +103,4 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 
-To verify that the host is deleted, list the hosts by making a `GET /hosts` call.
+To verify that the host is deleted, list the hosts by making a `GET /hosts` request.

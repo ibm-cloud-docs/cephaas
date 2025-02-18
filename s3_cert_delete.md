@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-18"
 
 keywords: cephaas, delete s3 certificate
 
@@ -52,7 +52,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #deleting-s3-cert-api}
 {: api}
 
-Make `DELETE /certificates/{cert_type}` call to delete a S3 certificate.
+Make `DELETE /certificates/{cert_type}` request to delete a S3 certificate.
 
 ```sh
 curl -X DELETE "$sds_api_endpoint/v1/certificates/s3" \
@@ -64,7 +64,7 @@ curl -X DELETE "$sds_api_endpoint/v1/certificates/s3" \
 
 There is no response body for a successful delete operation. HTTP response code 204 is returned.
 
-To verify that the credential is deleted, list the credential by making a `GET /s3_credentials` call.
+To verify that the credential is deleted, list the credential by making a `GET /s3_credentials` request.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 

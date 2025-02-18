@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: sds, host, view host details, host summary list
 
@@ -89,7 +89,7 @@ For more information about available command options, run `ibmcloud sds hosts --
 {: #view-all-host-mappings-api}
 {: api}
 
-Make a `GET /hosts` call to list all volume mappings for a host.
+Make a `GET /hosts` request to list all volume mappings for a host.
 
 See the following example.
 
@@ -103,11 +103,11 @@ A successful response displays a list all the volume mapping for the host.
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
-### View details of a single volume mapping for a host with the API
+## View details of a single volume mapping for a host with the API
 {: #view-single-host-details-api}
 {: api}
 
-Make a `GET /hosts/{id}/volume_mappings/{volume_mapping_id}` call to see details of a single volume mapping for a host. See the following example.
+Make a `GET /hosts/{id}/volume_mappings/{volume_mapping_id}` request to see details of a single volume mapping for a host. See the following example.
 
 ```sh
 curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921/volume_mappings/{volume_mapping_id}' -H 'accept: application/json'

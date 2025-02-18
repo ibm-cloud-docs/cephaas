@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: list all volumes, view volume details
 
@@ -163,7 +163,7 @@ For more information about available command options, run `ibmcloud sds volumes 
 {: #viewall-vol-api}
 {: api}
 
-Make a `GET /volumes` call to retrieve and view a list of all volumes within your deployment.
+Make a `GET /volumes` request to retrieve and view a list of all volumes within your deployment.
 
 See the following example.
 
@@ -214,7 +214,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #viewvol-details-api}
 {: api}
 
-Make a `GET /volumes/{volume_id}` call to see details of a volume. See the following example.
+Make a `GET /volumes/{volume_id}` request to see details of a volume. See the following example.
 
 ```sh
 curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88 \

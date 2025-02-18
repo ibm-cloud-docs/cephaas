@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-18"
 
 keywords: cephaas settings, creating S3 Certificate
 
@@ -61,7 +61,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #creating-s3-certificate-api}
 {: api}
 
-Make a `POST /certificate/{cert_type}` call to create the S3 SSL Certificates.
+Make a `POST /certificate/{cert_type}` request to create the S3 SSL Certificates.
 
 Ensure that you have the server-side certificate and key handy.
 {: requirement}

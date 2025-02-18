@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-18"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -117,7 +117,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 The command unmaps a volume from a host. There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
-To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` call.
+To verify that the volume mapping for a host is deleted, list the host details by making a `GET /hosts/{id}` request.
 
 
 
@@ -137,4 +137,4 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 The command unmaps all volumes from a host. There is no response that is returned if the request is successful. HTTP response code 204 is returned.
 
-To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` call.
+To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` request.
