@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-18"
 
 keywords: cephaas, preparing deployment
 
@@ -19,8 +19,8 @@ After cost estimation and the subsequent communication with the IBM seller, your
 1. Click **Prepare deployment** link from your In progress order.
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 
-To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
-{: note}
+    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
+    {: note}
 
 3. Enter your **Deployment name**.
 4. Click **Create**.

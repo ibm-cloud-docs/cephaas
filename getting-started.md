@@ -30,15 +30,17 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 {{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud Catalog. You can click on the {{site.data.keyword.cephaas_short}} tile to start the service cost estimation tool.
 
-1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page. You can select the required **Subscription term**, Storage tier from **Performance** and **Capacity**, and Total storage (TB) to view your estimated costs.
+1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 
-2. You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the IBM Cloud. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
+2. Select the required **Subscription term**, choose the **Storage tier** from `Performance` and `Capacity`, and enter the **Total storage** (TB) value to view your estimated costs.
+
+    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the IBM Cloud. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 
     {{site.data.keyword.cephaas_short}} can be provisioned with 100 TB to 3200 TB with two storage options:
 
-    - The **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
+    - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
 
-    - The **Capacity tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
+    - **Capacity tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
 
 
 
@@ -57,7 +59,19 @@ Soon thereafter, an IBM representative will contact you to understand your requi
 
 
 
-After placing your order, the next step is to select the IBM Cloud Satellite location and naming your deployment. See [prepare your deployment](https://test.cloud.ibm.com/docs/cephaas?topic=cephaas-preparing-deployment) for guidance.
+After IBM places your order, the next step is to select the IBM Cloud Satellite location and naming your deployment.
+
+1. Click **Prepare deployment** link from your `In progress` order.
+2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+
+    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
+    {: note}
+
+3. Enter your **Deployment name** and click **Create**.
+
+    Your **Deployment Preparation** status will be reflected as **Completed**.
+
+    After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned.
 
 
 ## Infrastructure setup and maintenance
