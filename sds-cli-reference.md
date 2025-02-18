@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-18"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -83,7 +83,7 @@ ibmcloud software-defined-storage [command] [options]
 ```
 {: pre}
 
-Aliases of `software-defined-storage`: sds
+Aliases of `software-defined-storage`: `sds`
 
 
 ## Block storage
@@ -97,15 +97,15 @@ ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
 ```
 {: pre}
 
-Aliases of `volume-create`: volc
+Aliases of `volume-create`: `volc`
 
 Example
 
 ```sh
 ibmcloud sds volume-create \
-	--capacity 10 \
-	--name my-volume \
-	--url $sds_endpoint
+    --capacity 10 \
+    --name my-volume \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -136,14 +136,14 @@ ibmcloud sds volume --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
-Aliases of `volume`: vol
+Aliases of `volume`: `vol`
 
 Example command:
 
 ```sh
 ibmcloud sds volume \
-	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-	--url $sds_endpoint
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -170,16 +170,16 @@ ibmcloud sds volume-update --volume-id VOLUME-ID [--volume-patch VOLUME-PATCH | 
 ```
 {: pre}
 
-Aliases of `volume-update`: volu
+Aliases of `volume-update`: `volu`
 
 Example command:
 
 ```sh
 ibmcloud sds volume-update \
-	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-	--capacity 38 \
-	--name my-volume-updated \
-	--url $sds_endpoint
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --capacity 38 \
+    --name my-volume-updated \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -212,14 +212,14 @@ ibmcloud sds volume-delete --volume-id VOLUME-ID --url string
 ```
 {: pre}
 
-Aliases of `volume-delete`: vold
+Aliases of `volume-delete`: `vold`
 
 Example command:
 
 ```sh
 ibmcloud sds volume-delete \
-	--volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
-	--url $sds_endpoint
+    --volume-id r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39 \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -243,7 +243,7 @@ ibmcloud sds volumes [--limit LIMIT] [--name NAME]
 ```
 {: pre}
 
-Aliases of `volumes`: vols
+Aliases of `volumes`: `vols`
 
 Example command:
 
@@ -251,7 +251,7 @@ Example command:
 ibmcloud sds volumes \
     --limit 10 \
     --name my-volume \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -280,7 +280,7 @@ ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPING
 ```
 {: pre}
 
-Aliases of `host-create`: hstc
+Aliases of `host-create`: `hstc`
 
 Example command:
 
@@ -327,7 +327,7 @@ Example command:
 ```sh
 ibmcloud sds host \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -350,7 +350,7 @@ ibmcloud sds hosts [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
-Aliases of `hosts`: hsts
+Aliases of `hosts`: `hsts`
 
 Example command:
 
@@ -358,7 +358,7 @@ Example command:
 ibmcloud sds hosts \
     --limit 10 \
     --name my-host \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -383,7 +383,7 @@ ibmcloud sds host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATC
 ```
 {: pre}
 
-Aliases of `host-update`: hstu
+Aliases of `host-update`: `hstu`
 
 Example command:
 
@@ -391,7 +391,7 @@ Example command:
 ibmcloud sds host-update \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
     --name my-host
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -424,7 +424,7 @@ ibmcloud sds host-mapping-create --host-id HOST-ID [--volume (VOLUME | @VOLUME-F
 ```
 {: pre}
 
-Aliases of `host-mapping-create`: hstmc
+Aliases of `host-mapping-create`: `hstmc`
 
 Example command:
 
@@ -472,14 +472,14 @@ ibmcloud sds host-mappings --host-id HOST-ID
 ```
 {: pre}
 
-Aliases of `host-mappings`: hstms
+Aliases of `host-mappings`: `hstms`
 
 Example command:
 
 ```sh
 ibmcloud sds host-mappings \
-	--host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-	--url $sds_endpoint
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -502,7 +502,7 @@ ibmcloud sds host-mapping --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-I
 ```
 {: pre}
 
-Aliases of `host-mapping`: hstm
+Aliases of `host-mapping`: `hstm`
 
 Example command:
 
@@ -536,14 +536,14 @@ ibmcloud sds host-delete --host-id HOST-ID --url string
 ```
 {: pre}
 
-Aliases of `host-delete`: hstd
+Aliases of `host-delete`: `hstd`
 
 Example command:
 
 ```sh
 ibmcloud sds host-delete \
-	--host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-	--url $sds_endpoint
+    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -566,7 +566,7 @@ ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MA
 ```
 {: pre}
 
-Aliases of `host-mapping-delete`: hstmd
+Aliases of `host-mapping-delete`: `hstmd`
 
 Example command:
 
@@ -599,14 +599,14 @@ ibmcloud sds host-mapping-delete-all --host-id HOST-ID
 ```
 {: pre}
 
-Aliases of `host-vol-delete-all`: hstmda
+Aliases of `host-vol-delete-all`: `hstmda`
 
 Example command:
 
 ```sh
 ibmcloud sds host-mapping-delete-all \
     --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -637,14 +637,14 @@ ibmcloud sds cred-create --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-Aliases of `cred-create`: crc
+Aliases of `cred-create`: `crc`
 
 Example command:
 
 ```sh
 ibmcloud sds cred-create \
-	--access-key mytestkey
-	--url $sds_endpoint
+    --access-key mytestkey
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -667,14 +667,14 @@ ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
 ```
 {: pre}
 
-Aliases of `cred-delete`: crd
+Aliases of `cred-delete`: `crd`
 
 Example command:
 
 ```sh
 ibmcloud sds cred-delete \
-	--access-key mytestkey
-	--url $sds_endpoint
+    --access-key mytestkey
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -699,13 +699,13 @@ ibmcloud sds creds --url string
 ```
 {: pre}
 
-Aliases of `creds`: crl
+Aliases of `creds`: `crl`
 
 Example command:
 
 ```sh
 ibmcloud sds creds \
-	--url $sds_endpoint
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -729,7 +729,7 @@ ibmcloud sds cert-types --url string
 ```
 {: pre}
 
-Aliases of `cert-types`: crtt
+Aliases of `cert-types`: `crtt`
 
 Example command:
 
@@ -758,7 +758,7 @@ ibmcloud sds cert-create --cert CERT --body BODY --url string
 ```
 {: pre}
 
-Aliases of `cert-create`: crtc
+Aliases of `cert-create`: `crtc`
 
 Example command:
 
@@ -795,15 +795,15 @@ ibmcloud sds cert-update --cert CERT --body BODY --url string
 ```
 {: pre}
 
-Aliases of `cert-update`: crtu
+Aliases of `cert-update`: `crtu`
 
 Example command:
 
 ```sh
 ibmcloud sds cert-update \
-  --cert s3 \
-  --body tempdir/test-file.pem \
-  --url $sds_endpoint
+    --cert s3 \
+    --body tempdir/test-file.pem \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -836,8 +836,8 @@ Example command:
 
 ```sh
 ibmcloud sds cert \
-	--cert s3
-	--url $sds_endpoint
+    --cert s3
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -864,14 +864,14 @@ ibmcloud sds cert-delete --cert CERT --url string
 ```
 {: pre}
 
-Aliases of `cert-delete`: crtd
+Aliases of `cert-delete`: `crtd`
 
 Example command:
 
 ```sh
 ibmcloud sds cert-delete \
-	--cert s3
-	--url $sds_endpoint
+    --cert s3
+    --url $sds_endpoint
 ```
 {: screen}
 

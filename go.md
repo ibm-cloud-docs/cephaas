@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-18"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -308,7 +308,7 @@ func main() {
 ```
 {: codeblock}
 
-### View a specific host mapping - TODO: Update
+### View a specific host mapping
 {: #go-host-mapping}
 
 ```Go
@@ -348,6 +348,18 @@ func main() {
 {: codeblock}
 
 ### Unmap all mappings from a host
+{: #go-host-unmap-all}
+
+```Go
+	hostMappingDeleteAllOptions := sdsaasService.NewHostMappingDeleteAllOptions(
+		*host.ID,
+	)
+
+	_, err = sdsaasService.HostMappingDeleteAll(hostMappingDeleteAllOptions)
+	if err != nil {
+		panic(err)
+	}
+```
 
 ### Delete a host
 {: #go-host-delete}
@@ -395,6 +407,54 @@ func main() {
 ```
 {: codeblock}
 
+### Credential delete
+{: #go-cred-delete}
+
+
+```Go
+	credDeleteOptions := sdsaasService.NewCredDeleteOptions(
+		"test-key",
+	)
+
+	response, err := sdsaasService.CredDelete(credDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Certificate types list
+{: #go-cert-list}
+
+
+```Go
+
+	certTypesOptions := sdsaasService.NewCertTypesOptions()
+
+	certificateList, response, err := sdsaasService.CertTypes(certTypesOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Certificate create
+{: #go-cert-create}
+
+
+```Go
+	certCreateOptions := sdsaasService.NewCertCreateOptions(
+		"s3",
+		CreateMockReader("This is a mock file."),
+	)
+
+	certificateUpdated, response, err := sdsaasService.CertCreate(certCreateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
 ### Certificate list
 {: #go-cert-list}
 
@@ -408,6 +468,42 @@ func main() {
 	}
 ```
 {: codeblock}
+
+### Certificate update
+{: #go-cert-update}
+
+
+```Go
+	certUpdateOptions := sdsaasService.NewCertUpdateOptions(
+		"s3",
+		CreateMockReader("This is a mock file."),
+	)
+
+	certificateUpdated, response, err := sdsaasService.CertUpdate(certUpdateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Certificate delete
+{: #go-cert-delete}
+
+
+```Go
+	certDeleteOptions := sdsaasService.NewCertDeleteOptions(
+		"s3",
+	)
+
+	response, err := sdsaasService.CertDelete(certDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+
+
 
 ## Next Steps
 {: #go-next-steps}
