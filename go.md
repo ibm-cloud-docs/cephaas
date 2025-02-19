@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-19"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -456,7 +456,7 @@ func main() {
 {: codeblock}
 
 ### Certificate list
-{: #go-cert-list}
+{: #go-list-certs}
 
 
 ```Go

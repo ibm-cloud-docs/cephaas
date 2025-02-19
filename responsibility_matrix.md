@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-02-19"
 
 keywords: sds, cephaas, responsibilities matrix
 
@@ -78,7 +78,7 @@ Security and regulation compliance includes tasks such as security controls impl
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Compliance | Maintain controls commensurate with the compliance certifications or attestations as stated in official data sheets. | Ensure and seek appropriate legal guidance in order to validate its compliance with pertinent industry compliance certifications and regulations. |
-| Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | * Update IAM policies and rules by using IBM Cloud console to suit to your requirement. \n Also, ensure that the use of Storage resources are inline with the terms and conditions present in the IBM Cloud Service description and any other associated transaction documents. \n * Manage the lifecycle of S3 object storage credentials created to access buckets and objects, and also update any existing automations that use these credentials in the event the credentials need to be rotated.|
+| Security | Continuous monitoring of resources to check for vulnerabilities and security breaches. | * Update IAM policies and rules by using IBM Cloud console to suit to your requirement. \n Also, ensure that the use of Storage resources are inline with the terms and conditions present in the IBM Cloud Service description and any other associated transaction documents. \n * Manage the lifecycle of S3 object storage credentials created to access buckets and objects, and also update any existing automations that use these credentials in the event the credentials need to be rotated. \n * Isolate and protect the unencrypted NVMe/TCP network. |
 {: row-headers}
 {: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

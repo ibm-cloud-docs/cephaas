@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-19"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -27,6 +27,9 @@ To help ensure that you can securely manage your data when you use {{site.data.k
 Each deployment instance is assigned a unique, randomly generated key by IBM when built at the factory.
 
 All the data that is stored by using the data access APIs (S3 and NVMe/TCP), is stored locally within the {{site.data.keyword.cephaas_full_notm}} appliance and all the data within the appliance is encrypted with the unique, IBM managed key.
+
+The NVMe/TCP interface is not encrypted and requires additional network controls.
+{: important}
 
 Currently, {{site.data.keyword.cephaas_full_notm}} does not support BYOK or KYOK.
 {: note}

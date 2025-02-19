@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-19"
 
 keywords: sds, host, view host details, host summary list
 
@@ -53,7 +53,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 
 ## Viewing details of a single volume to a host mapping from the CLI
-{: #view-single-host-detail-cli}
+{: #view-single-host-mapping-detail-cli}
 {: cli}
 
 Run the following command to show volume mapping details for a specific `HOST-ID` and `VOLUME_MAPPING_ID`.
@@ -104,7 +104,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ## View details of a single volume mapping for a host with the API
-{: #view-single-host-details-api}
+{: #view-single-host-mapping-details-api}
 {: api}
 
 Make a `GET /hosts/{id}/volume_mappings/{volume_mapping_id}` request to see details of a single volume mapping for a host. See the following example.

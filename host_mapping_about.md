@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-19"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -25,8 +25,10 @@ The NVMe-oF gateway initiator can be configured on either of the following platf
 
 * VMware vSphere Hypervisor (ESXi) 7.0U3 or later
 
+The NVMe/TCP interface is not encrypted and requires additional network controls.
+{: important}
 
-For more information, see [Connecting from NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators).
+For guidance, see [Connecting from NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators).
 
 
 
