@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-25"
 
 keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
 
@@ -28,7 +28,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #estimatecost}
 {: step}
 
-{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud Catalog. You can click on the {{site.data.keyword.cephaas_short}} tile to start the service cost estimation tool.
+{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud Catalog. You can click on the **Storage Ceph as a Service** tile to start the service cost estimation tool.
 
 1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 
@@ -48,7 +48,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #consultation-request}
 {: step}
 
-After saving your cost estimation, click **Start order process** and share your contact details. On submitting the contact form, a Confirmation ID is generated. A notification with the consultation confirmation ID and your service cost estimation is displayed and an email to sent to IBM.
+After saving your cost estimation, click **Start order process** and share your contact details. On submitting the contact form, a Confirmation ID is generated. A notification with the consultation confirmation ID and your service cost estimation is displayed, and an email is sent to IBM.
 
 Soon thereafter, an IBM representative will contact you to understand your requirements. Post discussions and approvals, the IBM representative places your order. The details of your order and order tracking link is email to you. While the order is processing, you can track the status from your IBM Cloud account dashboard.
 

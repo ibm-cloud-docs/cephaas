@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-25"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -114,7 +114,7 @@ apikey="<YOUR_API_KEY>"
 Run the following command to get and parse an IAM token by using the JSON processing utility [jq](https://stedolan.github.io/jq/){: external}. You can modify the command to use another parsing tool, or you can remove the last part of the command if you prefer to manually parse the token.
 
 ```json
-iam_token=`curl -k -X POST \
+IAM_TOKEN=`curl -k -X POST \
   --header "Content-Type: application/x-www-form-urlencoded" \
   --header "Accept: application/json" \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
@@ -123,14 +123,14 @@ iam_token=`curl -k -X POST \
 ```
 {: pre}
 
-To view the IAM token, run ``echo $iam_token``. The result should look like this:
+To view the IAM token, run ``echo $IAM_TOKEN``. The result should look like this:
 
 ```sh
 Bearer <your token>
 ```
 {: screen}
 
-The Authorization header expects the token to begin with "Bearer". If the result doesn't include "Bearer", update the `iam_token` variable to include it. These examples assume that "Bearer" is included in the `iam_token`.
+The Authorization header expects the token to begin with "Bearer". If the result doesn't include "Bearer", update the `IAM_TOKEN` variable to include it. These examples assume that "Bearer" is included in the `IAM_TOKEN`.
 
 An IAM token is valid for up to 60 minutes, and it is subject to change. When a token expires, you must generate a new one. Use the property expires_in for the expiration of the IAM token that you have just created.
 {: important}

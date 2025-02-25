@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-25"
 
 keywords: cephaas, developer, getting started, command-line interface, cli
 
@@ -18,7 +18,14 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the IBM Developer Tools: [API/SDK](/apidocs/software-defined-storage)  installed.
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the following IBM Developer Tools installed.
+
+* [{{site.data.keyword.cephaas_short}} Block Storage API](/apidocs/block-storage)
+
+* [{{site.data.keyword.cephaas_short}} Object Storage API](/apidocs/object-storage)
+
+
+
 
 
 
@@ -29,7 +36,7 @@ For managing the data stored in {{site.data.keyword.cephaas_full_notm}}, you can
 
 * [Block storage management API](/apidocs/block-storage)
 
-* [Object storage administration API](https://test.cloud.ibm.com/apidocs/object-storage)
+* [Object storage administration API](/apidocs/object-storage)
 
 * For Object storage S3 API, see [AWS CLI](/docs/cephaas?topic=cephaas-aws-cli) with HMAC credentials for compatibility
 

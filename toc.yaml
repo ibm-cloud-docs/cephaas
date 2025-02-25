@@ -39,14 +39,14 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - topicgroup:
-          label: Ordering and onboarding
-          topics:
-            - creating-new-deployment.md
-            - estimating_cost.md
-            - placing_order.md
+#      - topicgroup:
+#          label: Ordering and onboarding
+#          topics:
+#            - creating-new-deployment.md
+#            - estimating_cost.md
+#            - placing_order.md
 # - creating_new_satellite_location.md
-            - preparing_deployment.md
+#            - preparing_deployment.md
       - iam_overview.md
       - iam_access.md
       - setup_cli_api_environment.md
