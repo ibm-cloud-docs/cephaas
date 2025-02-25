@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-25"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -25,7 +25,7 @@ Create a block storage volume by using the UI, CLI, API or terraform.
 
 Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deployment.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Volumes**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), access your deployment and then go to **Block storage > Volumes**.
 1. Click **Create volume**.
 1. Select **Deployment** where the volume will be created.
 1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
@@ -49,28 +49,32 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 To create volumes by using the command-line interface (CLI), run the following command.
 
 ```sh
-ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] --url string
+ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
 ```
 {: pre}
 
-Provide the `CAPACITY` of the volume, `NAME` of the volume, and endpoint url.
+Provide the `CAPACITY` of the volume, `NAME` of the volume, host nqn string and endpoint url.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
 
 See the following example.
 
 ```bash
-ibmcloud sds volume-create --capacity 10 --name example1 --url $sds_endpoint
+ibmcloud sds volume-create \
+   --capacity 10 \
+   --name my-volume \
+   --hostnqnstring nqn.2024-07.org:1234 \
+   --url $sds_endpoint
 ...
 
 Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
-Volume_Name   example1
+Volume_Name   my-volume
 Status        pending
 Capacity_GB   10
 Created       2025-02-11T19:08:21.000Z
 Bandwidth     19
 IOPS          150
-Hosts         -
+Hosts         nqn.2024-07.org:1234
 
 ```
 {: screen}
@@ -96,9 +100,11 @@ Make a `POST /volumes` request to create a new block volume. Specify capacity an
 
 ```sh
 curl -X POST '$sds_api_endpoint/v1/volumes' \
---header 'Authorization: Bearer $IAM_TOKEN' \
---header 'Content-Type: application/json' \
---data '{
+   -H "accept: application/json" \
+   -H "Authorization: Bearer $IAM_TOKEN"  \
+   -H "Content-Type: text/plain" \
+   -H "IBM-API-Version: 2025-02-01" \
+   --data '{
      "capacity": 10,
      "name": "sds-vol"
 }'

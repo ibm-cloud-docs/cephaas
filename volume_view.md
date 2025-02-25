@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-25"
 
 keywords: list all volumes, view volume details
 
@@ -168,7 +168,10 @@ Make a `GET /volumes` request to retrieve and view a list of all volumes within 
 See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes --header 'Authorization: Bearer $IAM_TOKEN'
+curl -X GET "$sds_api_endpoint/v1/volumes"  \
+  -H 'accept: application/json'   \
+  -H "Authorization: Bearer $IAM_TOKEN"   \
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -217,8 +220,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Make a `GET /volumes/{volume_id}` request to see details of a volume. See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88 \
---header 'Authorization: Bearer $IAM_TOKEN'
+curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88" \
+  -H 'accept: application/json'   \
+  -H "Authorization: Bearer $IAM_TOKEN"   \
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-05"
+ years: 2024, 2025
+lastupdated: "2025-02-25"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Managing quota
 {: #quota-capacity-mgmt}
 
-{{site.data.keyword.cephaas_full_notm}} supports deployment level quotas for both the unified (block & object) and value object storage plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity usage limit.
+{{site.data.keyword.cephaas_full_notm}} supports deployment level quotas for both the Performance and Capacity plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity usage limit.
 
 Since the provisioned capacity and quota is at deployment level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created that also includes the maximum burst capacity usage limit.
 
@@ -99,17 +99,3 @@ In the example, `$rc_endpoint` is the resource controller endpoint. Make sure th
 When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the bust capacity is also included in this total quota leading to increase in the overages and pricing fees.
 
 When the `allocate burst capacity` value is set to `false`, the bust capacity is disabled and the quota does not exceed the total of the current set value.
-
-To verify that object and block quota was set correctly, run the following requests.
-
-```sh
-curl -X GET $sds_endpoint/v1/block_quota
-```
-{: pre}
-
-
-
-```sh
-curl -X GET $sds_endpoint/v1/object/storageclass/standard
-```
-{: pre}

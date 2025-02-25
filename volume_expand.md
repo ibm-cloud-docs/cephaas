@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-25"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -106,12 +106,13 @@ PATCH operation to change more than one parameter value in the same command is n
 
 
 ```sh
-curl -X PATCH '<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c' \
---header 'Authorization: Bearer $IAM_TOKEN' \
---header 'Content-Type: application/json' \
---data '{
-    "capacity": 100
-}'
+curl -X PATCH "<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c"  \
+    -H 'accept: application/json'   \
+    -H "Authorization: Bearer $IAM_TOKEN"   \
+    -H 'IBM-API-Version: 2025-02-01'    \
+    --data '{
+        "capacity": 100
+    }'
 ```
 {: pre}
 

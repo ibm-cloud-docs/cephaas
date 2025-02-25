@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-25"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -134,7 +134,7 @@ Use `<programmatic_service_name>` for the service name, and refer to the Role ID
 
 
 ```curl
-curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $TOKEN' -H 'Content-Type: application/json' -d '{
+curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H 'Authorization: Bearer $IAM_TOKEN' -H 'Content-Type: application/json' -d '{
   "type": "access",
   "description": "Manager role for IBM CephaaS Storage",
   "subjects": [

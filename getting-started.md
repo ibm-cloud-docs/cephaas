@@ -61,17 +61,9 @@ Soon thereafter, an IBM representative will contact you to understand your requi
 
 After IBM places your order, the next step is to select the IBM Cloud Satellite location and naming your deployment.
 
-1. Click **Prepare deployment** link from your `In progress` order.
-2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+For instructions, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).
 
-    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
-    {: note}
 
-3. Enter your **Deployment name** and click **Create**.
-
-    Your **Deployment Preparation** status will be reflected as **Completed**.
-
-    After the on-premise hardware setup is done, the deployment will be reflected as **Available** and ready-to-be provisioned.
 
 
 ## Infrastructure setup and maintenance

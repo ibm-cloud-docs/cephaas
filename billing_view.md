@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-25"
 
 keywords: administration, billing, platform
 
@@ -30,7 +30,7 @@ To find your invoices, on the IBM Cloud console, from the navigatation menu, go 
 ## {{site.data.keyword.cephaas_full_notm}} Pricing
 {: #billing-pricing}
 
-You can select the term (3, 4, or 5 years) performance tier or capacity tier that best matches your needs. IBM Storage Ceph as a Service hardware contains optimized racks, servers, storage, networking switches, and software that is integrated, when connectted to IBM Cloud.
+You can select the term (3, 4, or 5 years) performance tier or capacity tier that best matches your needs. IBM Storage Ceph as a Service hardware contains optimized racks, servers, storage, networking switches, and software that is integrated, when connected to IBM Cloud.
 
 The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software are licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated data center.
 
@@ -42,11 +42,11 @@ The Service is an infrastructure as a service (IaaS) offering where the operatin
 
 The Performance Tier of IBM Storage Ceph as a Service is tailored to performance-intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components that are needed to use this equipment.
 
-Typical workloads for this tier are supporting VM infrastructure with storage or service high-performance object storage.
+Typical workloads for this tier includes support for VM infrastructure with storage or services for high-performance object storage.
 
 When committing to a certain capacity, the delivered hardware includes at least 30% extra capacity for optional excess usage.
 
-This tier is offered in the following capacity options:
+This tier is offered in the following capacity options for the terms 3, 4, or 5 years:
 
 - 100 TB
 - 200 TB

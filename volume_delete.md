@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-25"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -94,9 +94,10 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `DELETE /volumes/{volume_id}` request to delete a volume. This operation cannot be reversed. For this request to succeed, the volume must not be mapped to any hosts.
 
 ```sh
-curl -X DELETE '$sds_api_endpoint/v1/volumes/{volume-id}' \
---header 'Authorization: Bearer $IAM_TOKEN'
-
+curl -X DELETE "$sds_api_endpoint/v1/volumes/{volume-id}" \
+  -H 'accept: application/json' \
+  -H "Authorization: Bearer $IAM_TOKEN" \
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 

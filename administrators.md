@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-25"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -61,11 +61,14 @@ You can start creating a deployment after cost estimation and the order processi
 
 1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
-3. Enter your **Deployment name**.
-4. Click **Create**.
-5. Your **Deployment Preparation** status will be reflected as **Completed**.
+    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
+    {: note}
 
-    After the on-premise hardware setup is done, the deployment shows **Available** status and ready-to-be provisioned.
+3. Enter your **Deployment name** and click **Create**.
+
+    Your **Deployment Preparation** status will show as **Completed**.
+
+    After the on-premise hardware setup is completed, the deployment shows **Available** status and ready-to-be provisioned.
 
 
 
@@ -172,3 +175,6 @@ A successful response looks like this:
 }
 ```
 {: screen}
+
+During deployment creation, the status shows as `provisioning` state. Wait until the status changes to `Active` state to start using the volume and host operations.
+{: note}
