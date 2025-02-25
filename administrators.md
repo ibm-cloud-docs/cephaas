@@ -60,7 +60,9 @@ You can start creating a deployment after cost estimation and the order processi
 
 
 1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
+
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+
     To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
     {: note}
 
