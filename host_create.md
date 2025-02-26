@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-26"
 
 keywords: sds, cephaas host, host nqn
 
@@ -27,17 +27,18 @@ Before creating a host, you must configure the NVME-oF initiator. This is requir
 {: #creating-host-ui}
 {: ui}
 
-Use the {{site.data.keyword.cloud_notm}} console to create a host for a service instance.
+Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployment.
 
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Hosts**.
 2. Click **Create host**.
 3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
-    Host name must be unique in the entire service instance. For example, if you create two hosts that are in the same service instance, and have the same name, an error <q>Host name already exists</q> is displayed.
+    Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error <q>Host name already exists</q> is displayed.
 
 4. Click **Next**.
 5. [Optional] Select one or more volumes to map them to the host.
-6. Click **Create**.
+6. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
+
 
 
 ## Creating hosts from the CLI
@@ -85,21 +86,25 @@ Ensure that you have defined the variables for the IAM token and API endpoint. A
 Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
 ```sh
-curl -X 'POST' '$sds_api_endpoint/v1/hosts' -H 'accept: application/json' -H 'Content-Type: application/json' -d '{
-  "name": "host1",
-  "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
-  "volumes": [
-    {
-      "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
-    }
-  ]
-}'
+curl -X 'POST' '$sds_endpoint/hosts' \
+  -H 'accept: application/json' \
+  -H "Authorization: Bearer $IAM_TOKEN"  \
+  -H "IBM-API-Version: 2025-02-01" \
+  -d '{
+        "name": "host1",
+        "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
+        "volumes": [
+          {
+            "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
+          }
+        ]
+      }'
 ```
 {: pre}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two volumes with the same name in the same deployment, an error `Host name already exists` is displayed.
+Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 {: tip}
 
 A successful response looks like this:
@@ -130,8 +135,6 @@ A successful response looks like this:
 ## Next steps
 {: #next-step-creating-hosts}
 
-When you refresh the Hosts page, the new host appears at the beginning of the list of hosts.
-{: ui}
 
 * [Connect NVME-oF initiators](/docs/cephaas?topic=cephaas-connecting-nvme-initiators)
 

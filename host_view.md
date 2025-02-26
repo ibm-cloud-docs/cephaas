@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-26"
 
 keywords: sds, host, view host details, host summary list
 
@@ -167,7 +167,10 @@ Before you begin, make sure that you have [set up your API environment](/docs/ce
 See the following example.
 
 ```sh
-curl -X 'GET' '$sds_api_endpoint/v1/hosts -H 'accept: application/json'
+curl -X 'GET' '$sds_endpoint/hosts \
+  -H 'accept: application/json' \
+  -H "Authorization: Bearer $IAM_TOKEN"  \
+  -H "IBM-API-Version: 2025-02-01" \
 ```
 {: pre}
 
@@ -222,7 +225,10 @@ A successful response looks like the following example.
 Make a `GET /hosts/{id}` request to see details of a host. See the following example.
 
 ```sh
-curl -X 'GET' '$sds_api_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921' -H 'accept: application/json'
+curl -X 'GET' '$sds_endpoint/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921' \
+  -H 'accept: application/json' \
+  -H "Authorization: Bearer $IAM_TOKEN"  \
+  -H "IBM-API-Version: 2025-02-01" \
 ```
 {: pre}
 

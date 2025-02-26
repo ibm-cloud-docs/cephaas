@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -138,7 +138,7 @@ An IAM token is valid for up to 60 minutes, and it is subject to change. When a 
 ### Step 3: Store the API endpoint as a variable
 {: #store-api-endpoint-variable}
 
-The `$sds_api_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}`. Run the following command to store the API endpoint in a variable so it can be reused later in your session.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}`. Run the following command to store the API endpoint in a variable so it can be reused later in your session.
 
 For example:
 
@@ -147,7 +147,7 @@ sds_api_endpoint="https://sds-cephaas.936481b2-379d-4ca6-94ed-4dc1911d749f.softw
 ```
 {: pre}
 
-To verify that this variable was saved, run ``echo $sds_api_endpoint`` and make sure that the response is not empty.
+To verify that this variable was saved, run ``echo $sds_endpoint`` and make sure that the response is not empty.
 
 
 

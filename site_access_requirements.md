@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-26"
 
 keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}} as a service, private cloud
 
@@ -22,7 +22,7 @@ Site planners can use this information to assess the physical site and operation
 
 Review the following requirements that your {{site.data.keyword.cephaas_full_notm}} site must fulfill:
 * Accommodate a fully configured 42U rack that is 7 ft tall.
-* Provide secured and controlled access to the {{site.data.keyword.cephaas_full_notm}} racks in your {{site.data.keyword.cephaas_full_notm}} on-premises site.
+* Provide secured and controlled access to the {{site.data.keyword.cephaas_full_notm}} racks on-premises site.
 * Provide the flooring that supports the weight of the {{site.data.keyword.cephaas_full_notm}} racks.
 
 

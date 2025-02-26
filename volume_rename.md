@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -31,9 +31,13 @@ To manage your Block storage volumes, you can use the {{site.data.keyword.cloud_
 To rename a volume, complete the following steps.
 
 1. Go to the list of all Block storage volumes.
+
 2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+
 3. From the options menu, click **Rename volume**.
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. The names must begin with a lowercase letter and must be unique. For example, if you create two volumes with the same name in the same service instance, an error <q>volume name exists</q> is displayed.
+
+4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. For example, if you create two volumes with the same name in the same deployment, an error <q>volume name exists</q> is displayed.
+
 5. Click **Rename**.
 
 
@@ -81,7 +85,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #renaming-block-volume-api}
 {: api}
 
-Make a `PATCH /volumes/{volume_id}` request to update or rename a volume.
+Make a `PATCH /volumes/{id}` request to update or rename a volume.
 
 
 PATCH operation to change more than one parameter value in the same command is not supported.
@@ -90,7 +94,7 @@ PATCH operation to change more than one parameter value in the same command is n
 
 
 ```sh
-curl -X PATCH "<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c" \
+curl -X PATCH "$sds_endpoint/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c" \
     -H 'accept: application/json'   \
     -H "Authorization: Bearer $IAM_TOKEN"   \
     -H 'IBM-API-Version: 2025-02-01'    \

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: how to create cephaas S3 credential for object storage
 
@@ -91,14 +91,14 @@ Avoid using special characters when creating access keys with the exception of d
 {: important}
 
 ```sh
-curl -X POST "$sds_api_endpoint/v1/s3_credentials/{access_key}"   -H "accept: application/json"   -H "Authorization: Bearer $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01
+curl -X POST "$sds_endpoint/v1/s3_credentials/{access_key}"   -H "accept: application/json"   -H "Authorization: Bearer $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01
 ```
 {: pre}
 
 Example of a successful response looks like this:
 
 ```json
-curl -X POST   "$sds_api_endpoint/v1/s3_credentials/dsfdgdf2343435666"   -H "accept: application/json"   -H "Authorization: Bearer $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01"
+curl -X POST   "$sds_endpoint/v1/s3_credentials/dsfdgdf2343435666"   -H "accept: application/json"   -H "Authorization: Bearer $IAM_TOKEN"   -H "IBM-API-Version: 2025-02-01"
 ...
 
 {

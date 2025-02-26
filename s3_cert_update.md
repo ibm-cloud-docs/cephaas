@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -98,7 +98,7 @@ curl -X PUT \
 Example of a response when a certificate already exits in the system:
 
 ```json
-curl -X PUT "$sds_api_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
+curl -X PUT "$sds_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ...
 {
   "name": "s3",

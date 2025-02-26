@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-26"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -94,7 +94,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: note}
 
 ```sh
-curl -X DELETE '$sds_api_endpoint/v1/hosts/{id}' \
+curl -X DELETE '$sds_endpoint/v1/hosts/{id}' \
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}

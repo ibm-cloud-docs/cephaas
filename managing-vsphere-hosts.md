@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-19"
+ years: 2024, 2025
+lastupdated: "2025-02-26"
 
 keywords: Managing hosts, vsphere plug-in, cephaas
 
@@ -33,11 +33,19 @@ For viewing existing host connections, perform the following procedure.
 Use the following procedure to add a host to your deployment.
 
 1. From the vSphere client screen, navigate to **Inventory** > **Datacenter** > **Cluster** > **Host** > **Configure** tab > **Host Connectivity**.
-2. Click **Add Host**.
-3. **Add Host** screen is displayed.
-4. Enter values in the fields **Host Name**. You need to enter the host name to add ESXi host. If the network configuration is incorrect, the automatic fetching of the host nqn will not occur and you will need to either enter the nqn manually or fix the network configuration settings. 
-5. Click **Add**.
-6. Clicking on the arrow besides the deployment name will show details of the added host.
+
+2. Select the deployment in which you want to add the host and click **Add Host**.
+
+    **Add Host** screen is displayed.
+
+3. Enter values in the fields **Host Name**. Enter the host name to add ESXi host.
+
+    The `host nqn` is fetched automatically. If the network configuration is incorrect and not connected, the auto fetch of `host nqn` will not occur. In that case, you can either enter the `nqn` manually or fix the network configuration settings.
+    {: note}
+
+4. Click **Add**.
+
+5. Clicking on the arrow besides the deployment name will show details of the added host.
 
 
 ## Editing host details
@@ -46,8 +54,11 @@ Use the following procedure to add a host to your deployment.
 For editing host details of a deployment, use the following procedure.
 
 1. From the vSphere client screen, navigate to **Inventory** > **Datacenter** > **Cluster** > **Host** > **Configure** tab > **Host Connectivity**.
+
 2. Select the deployment which contains the Host you need to edit and click the pencil icon.
-2. **Edit Host Details** screen is desplayed.
+
+    **Edit Host Details** screen is desplayed.
+
 3. Enter a new host name and click **Update**.
 
 ## Deleting a host
@@ -56,6 +67,9 @@ For editing host details of a deployment, use the following procedure.
 For deleting a host from a deployment, perform the following procedure.
 
 1. From the vSphere client screen, navigate to **Inventory** > **Datacenter** > **Cluster** > **Host** > **Configure** tab > **Host Connectivity**.
+
 2. Select the deployment which contains the Host you need to delete and click the delete icon.
-3. A confirmation pop-up is displayed about removal of the host.
+
+    A confirmation pop-up is displayed about removal of the host.
+
 4. Click **Delete**.

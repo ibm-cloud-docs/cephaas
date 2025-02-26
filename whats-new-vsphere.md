@@ -1,9 +1,9 @@
 ---
 copyright:
- years: 2024, 2024
-lastupdated: "2024-12-05"
+ years: 2024, 2025
+lastupdated: "2025-02-26"
 
-keywords: vSphere, release, what's new
+keywords: vSphere, plug-in, cephaas, release, what's new
 
 subcollection: cephaas
 
@@ -14,12 +14,12 @@ subcollection: cephaas
 # What's new with vSphere plug-in
 {: #whats-new}
 
-Learn about the dates and nature of updates to the published information of the IBM Storage Ceph as a Service plug-in for vSphere.
+Learn about the dates and nature of updates to the published information of the {{site.data.keyword.cephaas_full}} plug-in for vSphere.
 
 ## February 2025
 {: #sds-feb2025}
 
-Initial release of the new IBM Storage Ceph as a service plug-in for vSphere 1.0.0.0 includes the following features:
+Initial release of the new {{site.data.keyword.cephaas_full_notm}} plug-in for vSphere 1.0.0.0 includes the following features:
 
 - Deployment of the vSphere plug-in
 - Registration of the plug-in to vCenter(s)

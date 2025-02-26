@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-26"
 
 keywords: Connect VMware environment
 
@@ -36,14 +36,14 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 
     - By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
 
-    - Initial login has a default password of IBMplug-in and requires the user to change the password before continuing.
+    - Initial login has a default password of `IBMplugin` and requires the user to change the password before continuing.
 
 
 ## Register the vSphere plug-in into vCenter.
 {: #register-plug-in}
 {: step}
 
-1. Log in to the vSphere plug-in appliance as root.
+1. Log in to the vSphere plug-in appliance as `root`.
 
 2. Register the vSphere plug-in with the vCenter instance or instances.
 

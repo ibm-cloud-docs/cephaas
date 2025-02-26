@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -97,7 +97,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #expanding-volume-capacity-api}
 {: api}
 
-Make a `PATCH /volumes/{volume_id}` request to update or expand the volume size to increase the current capacity.
+Make a `PATCH /volumes/{id}` request to update or expand the volume size to increase the current capacity.
 
 Specify the capacity parameter with the new value that you want to modify for the existing volume in the request to update the volume details.
 
@@ -106,7 +106,7 @@ PATCH operation to change more than one parameter value in the same command is n
 
 
 ```sh
-curl -X PATCH "<endpoint_URL>/v1/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c"  \
+curl -X PATCH "$sds_endpoint/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c"  \
     -H 'accept: application/json'   \
     -H "Authorization: Bearer $IAM_TOKEN"   \
     -H 'IBM-API-Version: 2025-02-01'    \

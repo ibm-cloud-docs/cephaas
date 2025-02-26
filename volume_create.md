@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -28,9 +28,9 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), access your deployment and then go to **Block storage > Volumes**.
 1. Click **Create volume**.
 1. Select **Deployment** where the volume will be created.
-1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. You can later edit the name if you want.
+1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. You can later edit the name if you want.
 
-    Volume names must be unique in the entire service instance. If you create two volumes that are in the same service instance, and have the same name, a <q>volume name duplicate</q> error is displayed.
+    Volume names must be unique in the entire deployment. If you create two volumes that are in the same deployment, and have the same name, a <q>volume name duplicate</q> error is displayed.
     {: note}
 
 1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.
@@ -39,8 +39,10 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
     1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list. For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
     1. Select the newly created **Host** from the list.
 
-1. Click **Create**. During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
+1. Click **Create**. Once the volume creation is successful, you will be redirectred to the volumes main page where you can see the status of the newly created volume under the volume table.
 
+During the new volume creation, the volume is in `Pending` state. The status changes to `Available` or `Failed` based on the actual state of the volume.
+{: note}
 
 ## Creating block volumes from the CLI
 {: #creating-block-volume-cli}
@@ -55,7 +57,7 @@ ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME
 
 Provide the `CAPACITY` of the volume, `NAME` of the volume, host nqn string and endpoint url.
 
-The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. If you create two volumes with the same name in the same deployment and region, a `volume name duplicate` error is displayed.
 
 See the following example.
 
@@ -99,10 +101,9 @@ Define variables for the IAM token and API endpoint. For instructions, see [Sett
 Make a `POST /volumes` request to create a new block volume. Specify capacity and volume name. Volume name is optional.
 
 ```sh
-curl -X POST '$sds_api_endpoint/v1/volumes' \
+curl -X POST '$sds_endpoint/volumes' \
    -H "accept: application/json" \
    -H "Authorization: Bearer $IAM_TOKEN"  \
-   -H "Content-Type: text/plain" \
    -H "IBM-API-Version: 2025-02-01" \
    --data '{
      "capacity": 10,
@@ -114,7 +115,7 @@ curl -X POST '$sds_api_endpoint/v1/volumes' \
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
-The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter and should not end with a hyphen. If you create two volumes with the same name in the same service instance and region, a `volume name duplicate` error is displayed.
+The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. If you create two volumes with the same name in the same deployment and region, a `volume name duplicate` error is displayed.
 {: tip}
 
 A successful response looks like this:

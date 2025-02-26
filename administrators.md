@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -63,7 +63,7 @@ You can start creating a deployment after cost estimation and the order processi
 
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 
-    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/https://test.cloud.ibm.com/satellite/overview).
+    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/docs/satellite?topic=satellite-locations).
     {: note}
 
 3. Enter your **Deployment name** and click **Create**.
@@ -139,7 +139,7 @@ Use a hostless or full satellite location as Location for the deployment.
 ```sh
 curl -X POST $rc_endpoint/v2/resource_instances -H "Authorization: Bearer $token" -H 'Content-Type: application/json' -d '{
         "name": "sds-unified-1",
-        "target": "us-south",
+        "target": "satloc_dal_cqsuoub20mq4s939tq20",
         "resource_group": "8c3bdd054c7b459b8ddb327d1609b2f4",
         "resource_plan_id": "38bace6d-9644-4b88-8c40-f5e44e6c75c5",
         "parameters": {

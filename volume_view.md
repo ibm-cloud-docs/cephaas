@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: list all volumes, view volume details
 
@@ -25,7 +25,7 @@ View details about a block storage volume or summary information about all volum
 
 To view the list of all the volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 
-By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen service instance are displayed. In the list of all **Volumes**, you see the following information.
+By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen deployment are displayed. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|
@@ -62,7 +62,7 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | Field | Description |
 |-------|-------------|
 | **Volume details** | |
-| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the service instance. |
+| Name  | Name of the volume you specified when you created the volume. Click the pencil icon to edit the volume name. The volume name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. Volume names must be unique for the deployment. |
 | volume ID | System-generated volume ID. |
 | Provisioned size | Size of the volume you specified, in GBs. |
 | Created date | System-generated date when the volume was created.|
@@ -134,9 +134,9 @@ ibmcloud software-defined-storage volumes [--limit LIMIT] [--name NAME] --url st
 ```
 {: pre}
 
-Specifying the service instance ID is required since it is used to filter the list of volumes that belong to the specified service instance.
+Specify the endpoint url since it is used to filter the list of volumes that belong to the specified deployment.
 
-The following example shows all volumes for the service instance specified in your availability zone.
+The following example shows all volumes for the endpoint url specified in your availability zone.
 
 ```sh
 ibmcloud software-defined-storage volumes --url $sds_endpoint
@@ -168,7 +168,7 @@ Make a `GET /volumes` request to retrieve and view a list of all volumes within 
 See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes"  \
+curl -X GET "$sds_endpoint/volumes?start=r134-b274-678d-4dfb-8981-c71dd9d4daa5&limit=20&name=vol1"  \
   -H 'accept: application/json'   \
   -H "Authorization: Bearer $IAM_TOKEN"   \
   -H 'IBM-API-Version: 2025-02-01'
@@ -182,7 +182,7 @@ A successful response looks like the following example. This example shows the f
   "first": {
     "href": "https://localhost:8000/hosts?limit=50"
   },
-  "limit": 50,
+  "limit": 20,
   "total_count": 1,
   "volumes": [
     {
@@ -217,10 +217,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #viewvol-details-api}
 {: api}
 
-Make a `GET /volumes/{volume_id}` request to see details of a volume. See the following example.
+Make a `GET /volumes/{id}` request to see details of a volume. See the following example.
 
 ```sh
-curl -X GET "$sds_api_endpoint/v1/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88" \
+curl -X GET "$sds_endpoint/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88" \
   -H 'accept: application/json'   \
   -H "Authorization: Bearer $IAM_TOKEN"   \
   -H 'IBM-API-Version: 2025-02-01'
