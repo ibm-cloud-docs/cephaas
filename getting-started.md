@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
 
@@ -59,11 +59,11 @@ Soon thereafter, an IBM representative will contact you to understand your requi
 
 
 
-After IBM places your order, the next step is to select the IBM Cloud Satellite location and naming your deployment.
+After IBM places your order, the next step is to select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
 
-For instructions, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).
+You can either select an existing satellite location or create a new location. To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
 
-
+To learn more about how to create your deployments, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).
 
 
 ## Infrastructure setup and maintenance
