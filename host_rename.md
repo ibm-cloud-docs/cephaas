@@ -82,7 +82,7 @@ To update your host name by using the API, you can use the `PATCH /hosts/{id}` r
 Make a `PATCH /hosts/{id}` request to update or rename a host.
 
 ```sh
-curl -X PATCH '$sds_endpoint/v1/hosts/{host-name-1}' \
+curl -X PATCH '$sds_endpoint/hosts/{host-name-1}' \
   --header 'Authorization: Bearer $IAM_TOKEN' \
   --header 'Content-Type: application/json' \
   --data '{

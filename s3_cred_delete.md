@@ -75,7 +75,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 You can delete a specific S3 credential using an access key.
 
 ```sh
-curl -X DELETE "$sds_endpoint/v1/s3_credentials/{access-key}" \
+curl -X DELETE "$sds_endpoint/s3_credentials/{access-key}" \
   -H "accept: application/json" \
   -H "Authorization: Bearer $IAM_TOKEN" \
   -H "IBM-API-Version: 2025-02-01"
@@ -85,7 +85,7 @@ curl -X DELETE "$sds_endpoint/v1/s3_credentials/{access-key}" \
 See example of a delete request.
 
 ```sh
-curl -X DELETE "$sds_endpoint/v1/s3_credentials/dsfdgdf2343435666" \
+curl -X DELETE "$sds_endpoint/s3_credentials/dsfdgdf2343435666" \
   -H "accept: application/json" \
   -H "Authorization: Bearer $IAM_TOKEN" \
   -H "IBM-API-Version: 2025-02-01"

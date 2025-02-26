@@ -94,7 +94,7 @@ Make a `GET /hosts` request to list all volume mappings for a host.
 See the following example.
 
 ```sh
-curl -X 'GET' '$sds_endpoint/v1/hosts/{id}/volume_mappings -H 'accept: application/json'
+curl -X 'GET' '$sds_endpoint/hosts/{id}/volume_mappings -H 'accept: application/json'
 ```
 {: pre}
 
@@ -110,7 +110,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Make a `GET /hosts/{id}/volume_mappings/{volume_mapping_id}` request to see details of a single volume mapping for a host. See the following example.
 
 ```sh
-curl -X 'GET' '$sds_endpoint/v1/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921/volume_mappings/{volume_mapping_id}' -H 'accept: application/json'
+curl -X 'GET' '$sds_endpoint/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921/volume_mappings/{volume_mapping_id}' -H 'accept: application/json'
 ```
 {: pre}
 

@@ -108,7 +108,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a host.
 
 ```sh
-curl -X DELETE '$sds_endpoint/v1/hosts/{host-id}/volumes/{volume-id}'
+curl -X DELETE '$sds_endpoint/hosts/{host-id}/volumes/{volume-id}'
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}
@@ -128,7 +128,7 @@ To verify that the volume mapping for a host is deleted, list the host details b
 Make a `DELETE /hosts/{id}/volumes` request to delete all volumes that are mapped for a host.
 
 ```sh
-curl -X DELETE '$sds_endpoint/v1/hosts/{host-id}/volumes'
+curl -X DELETE '$sds_endpoint/hosts/{host-id}/volumes'
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}

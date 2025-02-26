@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: cephaas settings, creating S3 Certificate
 
@@ -68,7 +68,7 @@ Ensure that you have the server-side certificate and key handy.
 
 ```sh
 curl -X POST \
-  "$sds_api_enpoint/v1/certificates/s3" \
+  "$sds_endpoint/certificates/s3" \
   -H "accept: application/json" \
   -H "Authorization: Bearer $IAM_TOKEN"
   -H "Content-Type: text/plain" \
@@ -81,7 +81,7 @@ curl -X POST \
 Example of a response when a certificate is created:
 
 ```json
-curl -X POST "$sds_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
+curl -X POST "$sds_endpoint/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 
 {

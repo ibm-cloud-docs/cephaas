@@ -55,7 +55,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make `DELETE /certificates/{cert_type}` request to delete a S3 certificate.
 
 ```sh
-curl -X DELETE "$sds_endpoint/v1/certificates/s3" \
+curl -X DELETE "$sds_endpoint/certificates/s3" \
   -H 'accept: application/json' \
   -H "Authorization: Bearer $IAM_TOKEN" \
   -H 'IBM-API-Version: 2025-02-01'

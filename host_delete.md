@@ -94,7 +94,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: note}
 
 ```sh
-curl -X DELETE '$sds_endpoint/v1/hosts/{id}' \
+curl -X DELETE '$sds_endpoint/hosts/{id}' \
 --header 'Authorization: Bearer $IAM_TOKEN'
 ```
 {: pre}

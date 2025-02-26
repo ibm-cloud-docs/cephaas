@@ -85,7 +85,7 @@ Ensure that the replacement file that you are uploading has the server-side cert
 
 ```sh
 curl -X PUT \
-  "$sds_api_enpoint/v1/certificates/s3" \
+  "$sds_endpoint/certificates/s3" \
   -H "accept: application/json" \
   -H "Authorization: Bearer $IAM_TOKEN"
   -H "Content-Type: text/plain" \
@@ -98,7 +98,7 @@ curl -X PUT \
 Example of a response when a certificate already exits in the system:
 
 ```json
-curl -X PUT "$sds_endpoint/v1/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
+curl -X PUT "$sds_endpoint/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ...
 {
   "name": "s3",
