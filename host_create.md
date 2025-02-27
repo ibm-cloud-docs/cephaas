@@ -87,18 +87,23 @@ Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and
 
 ```sh
 curl -X POST $sds_endpoint/hosts\
-  -H 'accept: application/json'\
-  -H "Authorization: Bearer $IAM_TOKEN"\
-  -H "IBM-API-Version: 2025-02-01"\
-  -d '{
-        "name": "host1",
-        "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
-        "volumes": [
-          {
-            "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5"
-          }
-        ]
-      }'
+ -H "Authorization: $IAM_TOKEN" \
+ -H "IBM-API-Version: 2025-02-01" \
+ -d '{
+ 		"volume_mappings": [
+ 			{
+ 				"volume": {
+ 					"id": "r134-b05d91af-6393-4652-aada-13fd4fdbd065"
+ 					}
+ 			},
+ 			{
+ 				"volume": {
+ 					"id": "r134-601e431b-22ab-47a1-b0c1-411049b432a0"
+ 					}
+ 			}
+ 		],
+ 	"name": "host1",
+ 	"nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149"}'
 ```
 {: pre}
 
@@ -111,19 +116,41 @@ A successful response looks like this:
 
 ```json
 {
-    "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
-    "name": "host1",
-    "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
-    "created_at": "2024-06-21T07:22:15Z",
-    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-    "storage_workspace_id": "default",
-    "volumes": [
-         {
-             "volume_name": "vol1",
-             "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
-             "status": "pending"
-         }
-     ]
+  "id": "r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d",
+  "name": "host1",
+  "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
+  "created_at": "2025-02-27T10:55:07Z",
+  "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d",
+  "volume_mappings": [
+    {
+      "id": "r134-dfb2c915-4788-4cb3-b1d5-8e00ee09e780",
+      "status": "pending",
+      "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-dfb2c915-4788-4cb3-b1d5-8e00ee09e780",
+      "volume": {
+        "name": "seventy-banked-pry-punt",
+        "id": "r134-b05d91af-6393-4652-aada-13fd4fdbd065"
+      },
+      "host": {
+        "name": "host1",
+        "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
+        "id": "r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d"
+      }
+    },
+    {
+      "id": "r134-b557c11f-6c90-48e5-93b3-deac047e815c",
+      "status": "pending",
+      "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-b557c11f-6c90-48e5-93b3-deac047e815c",
+      "volume": {
+        "name": "new-vol",
+        "id": "r134-601e431b-22ab-47a1-b0c1-411049b432a0"
+      },
+      "host": {
+        "name": "host1",
+        "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
+        "id": "r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d"
+      }
+    }
+  ]
 }
 
 ```
