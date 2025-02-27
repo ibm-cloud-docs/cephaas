@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: Connect VMware environment
 
@@ -76,7 +76,7 @@ The `ibm-plugin` status command can be run at any time.
 
 If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.
 
-If you wish to unregister the plug-in, run the command `ibm-plugin unregister`.
+If you wish to unregister the plug-in, run the command `ibm-plugin unregister -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>`.
 {: note}
 
 ## Next Steps

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: Managing hosts, vsphere plug-in, cephaas
 
@@ -34,7 +34,7 @@ Use the following procedure to add a host to your deployment.
 
 1. From the vSphere client screen, navigate to **Inventory** > **Datacenter** > **Cluster** > **Host** > **Configure** tab > **Host Connectivity**.
 
-2. Select the deployment in which you want to add the host and click **Add Host**.
+2. Select the deployment in which you want to add the host and click **ADD HOST**.
 
     **Add Host** screen is displayed.
 
