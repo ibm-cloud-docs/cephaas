@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-27"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -33,7 +33,7 @@ This Quick Start guide provides a code example that demonstrates the following o
 You need:
 
 * An [{{site.data.keyword.cloud}} Platform account](https://cloud.ibm.com/login)
-* An [{{site.data.keyword.cephaas_full_notm}} deployment](/docs/cephaas?topic=cephaas-creating-new-deployment)
+* An [{{site.data.keyword.cephaas_full_notm}} deployment](/docs/cephaas?topic=cephaas-administrators&interface=ui#provision-deployment)
 * An [IAM API key](/docs/cephaas?topic=cephaas-iam-overview) to allow the SDK to access your account
 
 ## Getting the SDK

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-27"
 
 keywords: cephaas, developer, getting started, command-line interface, cli
 
@@ -39,9 +39,3 @@ For managing the data stored in {{site.data.keyword.cephaas_full_notm}}, you can
 * [Object storage administration API](/apidocs/object-storage)
 
 * For Object storage S3 API, see [AWS CLI](/docs/cephaas?topic=cephaas-aws-cli) with HMAC credentials for compatibility
-
-
-## Using the SDK
-{: #gs-dev-sdk}
-
-{{site.data.keyword.cephaas_short}} SDK is currently available only for [Go](/docs/cephaas?topic=cephaas-using-go). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/cephaas?topic=cephaas-iam-overview).

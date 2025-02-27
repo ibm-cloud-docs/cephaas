@@ -1,14 +1,4 @@
 {
-    "create-utterances-example":[
-      "create utterance",
-      "creating utterance",
-      "write utterance",
-      "writing utterance",
-      "make utterance",
-      "write for chatbot",
-      "link FAQs to chatbot",
-      "integrate docs with chatbot"
-      ],
     "endpoints":[
 		  "how do I set an endpoint in CephaaS",
 		  "want to set an endpoint location for CephaaS",

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-14"
+ years: 2024, 2025
+lastupdated: "2025-02-27"
 
 keywords: sds getting help, getting cephaas support
 
@@ -22,11 +22,11 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 
 * Review the Freqently asked questions (FAQs) in the product documentation.
 
-   * [FAQs about block and object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
+   * [FAQ about block and object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
 
-   * [FAQs about low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
+   * [FAQ about low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
 
-   * [FAQs about monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
+   * [FAQ about monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
 
 
 * Review the [troubleshooting documentation](/docs/cephaas?topic=cephaas-troubleshooting) to troubleshoot and resolve common issues.

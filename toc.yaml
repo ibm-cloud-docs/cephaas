@@ -35,12 +35,14 @@ toc:
           topics:
             - administrators.md
             - developers.md
+#            - request-boseman-access.md
+#            - ssr-rack-reploy-steps.md
       - release-notes.md
   - navgroup:
       id: howto
       topics:
-      - iam_overview.md
       - iam_access.md
+      - iam_overview.md
       - setup_cli_api_environment.md
 #      - setup-terraform.md
       - topicgroup:

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
 
@@ -70,7 +70,7 @@ To learn more about how to create your deployments, see [Creating deployments](/
 {: #setupandmaintenance}
 {: step}
 
-After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You will be responsible for meeting the physical site requirements (for example, energy, cooling, space, physical network connectivity.) where the infrastructure will be installed. IBM will be responsible for installation, configuration, and operation of the infrastructure.
+After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You will be responsible for meeting the physical site requirements; for example, energy, cooling, space, physical network connectivity; where the infrastructure will be installed. IBM will be responsible for installation, configuration, and operation of the infrastructure.
 
 While IBM will own and operate the infrastructure, you will be able to provision your own storage volumes. IBM will continue to operate and maintain the respective hardware and software maintenance operations.
 
