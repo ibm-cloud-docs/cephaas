@@ -91,8 +91,6 @@ Make a `PATCH /volumes/{id}` request to update or rename a volume.
 PATCH operation to change more than one parameter value in the same command is not supported.
 {: note}
 
-
-
 ```sh
 curl -X PATCH "$sds_endpoint/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c" \
     -H 'accept: application/json'   \

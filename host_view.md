@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: sds, host, view host details, host summary list
 
@@ -63,9 +63,10 @@ The Host details page shows the details of the chosen hostname and all its mappe
 |-------|-------------|
 | **Host details** | |
 | Name  | The name of the host you specified when you created the host. Click the pen icon to edit the host name. The name can be up to 63 lowercase alpha-numeric characters and include the hyphen (-), and must begin with a lowercase letter. The name must be unique for the deployments. |
+| Host ID | Unique alphanumeric value to identify the host. |
+| Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Volumes mapped | Shows the total number of volumes mapped to the host. |
 | Created date | System-generated date when the host was added.|
-| Host NQN | The NVMe Qualified Name (NQN) of the configured host |
 | Deployment | Name of the instance |
 | **Mapped volumes** | |
 | Name                | Volume name.                                             |
@@ -218,7 +219,7 @@ A successful response looks like the following example.
 }
 ```
 
-### Viewing single host details with the API
+## Viewing single host details with the API
 {: #view-single-host-details-api}
 {: api}
 
