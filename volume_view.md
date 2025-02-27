@@ -83,9 +83,6 @@ Table 4 shows Actions menu options from the volume details page.
 
 
 
-
-
-
 ## View single volume details from the CLI
 {: #viewvol-cli}
 {: cli}
@@ -101,18 +98,38 @@ ibmcloud software-defined-storage volume --volume-id VOLUME-ID --url string
 See the following example.
 
 ```sh
-$ ibmcloud sds volume --url $sds_endpoint --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+$ ibmcloud sds volume --url $sds_endpoint --volume-id r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd
 ...
 
-Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
-Volume_Name   example1
-Status        pending
+Volume_ID     r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd
+Volume_Name   magma-agreeably-groovy-hardwood
+Status        available
 Bandwidth     19
-Capacity_GB   10
-Created       2025-02-11T19:08:21.000Z
+Capacity_GB   1
+Created       2025-02-27T09:49:02.000Z
 IOPS          150
-Hosts         -
+Hosts
+              Gateways
+                                  IP_Address   xxx.xx.x.xx
+                                  Port         8009
 
+                                  IP_Address   xxx.xx.x.xx
+                                  Port         8009
+
+                                  IP_Address   xxx.xx.x.xx
+                                  Port         8009
+
+                                  IP_Address   xxx.xx.x.xx
+                                  Port         8009
+
+              Host_ID             r134-886f1457-7bee-4893-b3b8-0a75b0076a85
+              Host_NQN            nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002145
+              Host_Name           groovey-hardwood
+              Namespace_ID        1
+              Namespace_UUID      ff5e44ffdeb15e1d9d134f6f0a2dc4bf
+              Status              mapped
+              Subsystem_NQN       nqn.2014-08.com.ibm:nvmeof-f538f202-2907-4061-8463-6a40dbe6b69f
+              Volume_Mapping_ID   r134-b561e8f8-cea4-4934-8527-726a5ccc309f
 ```
 {: screen}
 
@@ -141,9 +158,10 @@ The following example shows all volumes for the endpoint url specified in your a
 ```sh
 ibmcloud software-defined-storage volumes --url $sds_endpoint
 
-ID                                          Name       Status      Capacity_GB   Mapped_Host
-r134-2613272e-ff23-461e-94a3-3d3f77c13aa1   example2   available   10            -
-r134-d75e1aeb-4bcf-4d41-8926-517198d55448   example1   available   10            -
+Volume_ID                                   Volume_Name                       Status      Capacity_GB   Hosts
+r134-b05d91af-6393-4652-aada-13fd4fdbd065   seventy-banked-pry-punt           available   150           -
+r134-601e431b-22ab-47a1-b0c1-411049b432a0   grain-snooper-blank-gyration      available   15            -
+r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd   magma-agreeably-groovy-hardwood   available   1             [r134-886f1457-7bee-4893-b3b8-0a75b0076a85]
 
 ```
 {: screen}
@@ -168,10 +186,10 @@ Make a `GET /volumes` request to retrieve and view a list of all volumes within 
 See the following example.
 
 ```sh
-curl -X GET "$sds_endpoint/volumes?start=r134-b274-678d-4dfb-8981-c71dd9d4daa5&limit=20&name=vol1"  \
-  -H 'accept: application/json'   \
-  -H "Authorization: Bearer $IAM_TOKEN"   \
-  -H 'IBM-API-Version: 2025-02-01'
+curl -X GET $sds_endpoint/volumes\
+	-H 'accept: application/json'\
+	-H "Authorization: Bearer $token"\
+	-H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -181,35 +199,66 @@ A successful response looks like the following example. This example shows the f
 
 ```json
 {
-  "first": {
-    "href": "https://localhost:8000/hosts?limit=50"
-  },
-  "limit": 20,
-  "total_count": 1,
   "volumes": [
     {
-      "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
-      "name": "vol1",
-      "bandwidth": 19,
-      "capacity": 10,
+      "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+      "name": "magma-agreeably-groovy-hardwood",
+      "capacity": 1,
       "iops": 150,
-      "created_at": "2024-06-21T07:22:15Z",
-      "host_mappings": [
-        {
-          "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
-          "host_name": "host1",
-          "host_nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23"
-        }
-      ],
-      "profile": {
-        "name": "sds-general-purpose"
-      },
-      "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-      "storage_workspace_id": "default"
       "status": "available",
+      "created_at": "2025-02-27T09:49:02Z",
+      "status_reasons": [],
+      "bandwidth": 19,
+      "resource_type": "volume",
+      "href": "https://block-storage.7b6121a1b00b849d81.appdomain.cloud/v1/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+      "volume_mappings": [
+        {
+          "id": "r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+          "status": "mapped",
+          "href": "https://block-storage.7b6121a1b00b849d81.appdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+          "volume": {
+            "name": "magma-agreeably-groovy-hardwood",
+            "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd"
+          },
+          "host": {
+            "name": "groovey-hardwood",
+            "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002145",
+            "id": "r134-886f1457-7bee-4893-b3b8-0a75b0076a85"
+          },
+          "subsystem_nqn": "nqn.2014-08.com.ibm:nvmeof-f538f202-2907-4061-8463-6a40dbe6b69f",
+          "namespace": {
+            "id": 1,
+            "uuid": "ff5e44ffdeb15e1d9d134f6f0a2dc4bf"
+          },
+          "gateways": [
+            {
+              "ip_address": "xxx.xx.x.xx",
+              "port": 8009
+            },
+            {
+              "ip_address": "xxx.xx.x.xx",
+              "port": 8009
+            },
+            {
+              "ip_address": "xxx.xx.x.xx",
+              "port": 8009
+            },
+            {
+              "ip_address": "xxx.xx.x.xx",
+              "port": 8009
+            }
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "first": {
+    "href": "https://block-storage.8ce82ab061950a.appdomain.cloud/v1/volumes?limit=1000"
+  },
+  "limit": 1000,
+  "total_count": 1
 }
+
 ```
 
 
@@ -221,9 +270,9 @@ A successful response looks like the following example. This example shows the f
 Make a `GET /volumes/{id}` request to see details of a volume. See the following example.
 
 ```sh
-curl -X GET "$sds_endpoint/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88" \
-  -H 'accept: application/json'   \
-  -H "Authorization: Bearer $IAM_TOKEN"   \
+curl -X GET $sds_endpoint/volumes/r134-04f0e415-3c70-43a8-a98d-a0160e50cc88\
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
   -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
@@ -233,27 +282,58 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 A successful response provides details of the volume, including capacity and IOPS, the volume status, and the host to which the volume is mapped.
 
 ```json
+{
+  "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+  "name": "magma-agreeably-groovy-hardwood",
+  "capacity": 1,
+  "iops": 150,
+  "status": "available",
+  "created_at": "2025-02-27T09:49:02Z",
+  "status_reasons": [],
+  "bandwidth": 19,
+  "resource_type": "volume",
+  "href": "https://block-storage.7b6121a1b00b849d81-0000.appdomain.cloud/v1/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+  "volume_mappings": [
     {
-      "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4800",
-      "name": "vol1",
-      "bandwidth": 19,
-      "capacity": 10,
-      "iops": 150,
-      "created_at": "2024-06-21T07:22:15Z",
-      "host_mappings": [
-        {
-          "host_id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
-          "host_name": "host1",
-          "host_nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23"
-        }
-      ],
-      "profile": {
-        "name": "sds-general-purpose"
+      "id": "r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+      "status": "mapped",
+      "href": "https://block-storage.7b6121a1b00b849d81-0000.appdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+      "volume": {
+        "name": "magma-agreeably-groovy-hardwood",
+        "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd"
       },
-      "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-      "storage_workspace_id": "default"
-      "status": "available",
+      "host": {
+        "name": "groovey-hardwood",
+        "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002145",
+        "id": "r134-886f1457-7bee-4893-b3b8-0a75b0076a85"
+      },
+      "subsystem_nqn": "nqn.2014-08.com.ibm:nvmeof-f538f202-2907-4061-8463-6a40dbe6b69f",
+      "namespace": {
+        "id": 1,
+        "uuid": "ff5e44ffdeb15e1d9d134f6f0a2dc4bf"
+      },
+      "gateways": [
+        {
+          "ip_address": "xxx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xxx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xxx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xxx.xx.x.xx",
+          "port": 8009
+        }
+      ]
     }
+  ]
+}
+
 ```
 {: codeblock}
 

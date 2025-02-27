@@ -72,15 +72,15 @@ See the following example.
 
 ```bash
 
-ibmcloud sds volume-update --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682 --capacity 20 --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --capacity 20 --url $sds_endpoint
 ...
 
-Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
-Volume_Name   example1
-Status        available
+Volume_ID     r134-601e431b-22ab-47a1-b0c1-411049b432a0
+Volume_Name   grain-snooper-blank-gyration
+Status        updating
 Bandwidth     19
 Capacity_GB   20
-Created       2025-02-11T19:08:21.000Z
+Created       2025-02-27T10:14:42.000Z
 IOPS          150
 Hosts         -
 ```
@@ -106,10 +106,10 @@ PATCH operation to change more than one parameter value in the same command is n
 
 
 ```sh
-curl -X PATCH "$sds_endpoint/volumes/r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c"  \
-    -H 'accept: application/json'   \
-    -H "Authorization: Bearer $IAM_TOKEN"   \
-    -H 'IBM-API-Version: 2025-02-01'    \
+curl -X PATCH $sds_endpoint/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0\
+    -H 'accept: application/json'\
+    -H "Authorization: Bearer $IAM_TOKEN"\
+    -H 'IBM-API-Version: 2025-02-01'\
     --data '{
         "capacity": 100
     }'
@@ -122,21 +122,16 @@ A successful response looks like this:
 
 ```json
 {
-    "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
-    "name": "sds-vol-updated",
-    "capacity": 100,
-    "iops": 150,
-    "status": "updating",
-    "profile": {
-        "name": "sds-general-purpose"
-    },
-    "created_at": "2024-06-19T06:22:51Z",
-    "status_reasons": [],
-    "bandwidth": 19,
-    "resource_type": "volume",
-    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-    "storage_workspace_id": "default",
-    "host_mappings": []
+  "id": "r134-601e431b-22ab-47a1-b0c1-411049b432a0",
+  "name": "grain-snooper-blank-gyration",
+  "capacity": 100,
+  "iops": 300,
+  "status": "updating",
+  "created_at": "2025-02-27T10:14:42Z",
+  "status_reasons": [],
+  "bandwidth": 39,
+  "resource_type": "volume",
+  "href": "https://block-storage.8ce82ab061950a.appdomain.cloud/v1/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0"
 }
 ```
 {: screen}

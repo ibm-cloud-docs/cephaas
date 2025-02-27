@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -51,11 +51,11 @@ During the new volume creation, the volume is in `Pending` state. The status cha
 To create volumes by using the command-line interface (CLI), run the following command.
 
 ```sh
-ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] [--hostnqnstring HOSTNQNSTRING] --url string
+ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
 ```
 {: pre}
 
-Provide the `CAPACITY` of the volume, `NAME` of the volume, host nqn string and endpoint url.
+Provide the `CAPACITY` of the volume, `NAME` of the volume and endpoint url.
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. If you create two volumes with the same name in the same deployment and region, a `volume name duplicate` error is displayed.
 
@@ -65,18 +65,17 @@ See the following example.
 ibmcloud sds volume-create \
    --capacity 10 \
    --name my-volume \
-   --hostnqnstring nqn.2024-07.org:1234 \
    --url $sds_endpoint
 ...
 
-Volume_ID     r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+Volume_ID     r134-279863d6-c37b-4601-b586-80f6dac215c2
 Volume_Name   my-volume
 Status        pending
 Capacity_GB   10
-Created       2025-02-11T19:08:21.000Z
+Created       2025-02-27T10:21:05.000Z
 Bandwidth     19
 IOPS          150
-Hosts         nqn.2024-07.org:1234
+Hosts         -
 
 ```
 {: screen}
@@ -101,13 +100,13 @@ Define variables for the IAM token and API endpoint. For instructions, see [Sett
 Make a `POST /volumes` request to create a new block volume. Specify capacity and volume name. Volume name is optional.
 
 ```sh
-curl -X POST '$sds_endpoint/volumes' \
-   -H "accept: application/json" \
-   -H "Authorization: Bearer $IAM_TOKEN"  \
-   -H "IBM-API-Version: 2025-02-01" \
+curl -X POST $sds_endpoint/volumes\
+   -H "accept: application/json"\
+   -H "Authorization: Bearer $IAM_TOKEN"\
+   -H "IBM-API-Version: 2025-02-01"\
    --data '{
      "capacity": 10,
-     "name": "sds-vol"
+     "name": "sandbox-stability-pasta-stroller"
 }'
 ```
 {: pre}
@@ -122,19 +121,16 @@ A successful response looks like this:
 
 ```json
 {
-    "id": "r134-36c119c1-22fa-42cc-b33b-cfdd1591d89c",
-    "name": "sds-vol",
-    "capacity": 10,
-    "iops": 150,
-    "status": "pending",
-    "profile":{
-       "name": "sds-general-purpose"
-     },
-    "created_at": "2024-06-19T06:22:51Z",
-    "bandwidth": 19,
-    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-    "storage_workspace_id": "default",
-    "host_mappings": []
+  "id": "r134-8cdec173-1bcb-4b85-ada9-a6374a4f5906",
+  "name": "sandbox-stability-pasta-stroller",
+  "capacity": 10,
+  "iops": 150,
+  "status": "pending",
+  "created_at": "2025-02-27T10:18:01Z",
+  "status_reasons": [],
+  "bandwidth": 19,
+  "resource_type": "volume",
+  "href": "https://block-storage.bee0456f845e.appdomain.cloud/v1/volumes/r134-8cdec173-1bcb-4b85-ada9-a6374a4f5906"
 }
 ```
 {: screen}

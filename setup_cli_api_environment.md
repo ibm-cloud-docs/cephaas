@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli
 
@@ -87,7 +87,14 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 
    For more information on CLI option details, see [ibmcloud login](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login).
 
+### Setup IAM Token
+{: #setup-iam-token}
 
+Before you can use the CLI to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS service.
+
+```sh
+IAM_TOKEN=$(ibmcloud iam oauth-tokens --output json | jq -r '.iam_token)
+```
 
 ## API prerequisites
 {: #api-prerequisites-setup}

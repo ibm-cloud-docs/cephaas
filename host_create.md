@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: sds, cephaas host, host nqn
 
@@ -86,10 +86,10 @@ Ensure that you have defined the variables for the IAM token and API endpoint. A
 Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and an optional `volume_id`.
 
 ```sh
-curl -X 'POST' '$sds_endpoint/hosts' \
-  -H 'accept: application/json' \
-  -H "Authorization: Bearer $IAM_TOKEN"  \
-  -H "IBM-API-Version: 2025-02-01" \
+curl -X POST $sds_endpoint/hosts\
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
+  -H "IBM-API-Version: 2025-02-01"\
   -d '{
         "name": "host1",
         "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
