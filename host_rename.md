@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: cephaas, block storage, rename host
 
@@ -82,9 +82,10 @@ To update your host name by using the API, you can use the `PATCH /hosts/{id}` r
 Make a `PATCH /hosts/{id}` request to update or rename a host.
 
 ```sh
-curl -X PATCH '$sds_endpoint/hosts/{host-name-1}' \
-  --header 'Authorization: Bearer $IAM_TOKEN' \
-  --header 'Content-Type: application/json' \
+curl -X PATCH $sds_endpoint/hosts/{host-name-1}\
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
+  -H 'IBM-API-Version: 2025-02-01'
   --data '{
     "name": "sds-host-name-updated"
   }'

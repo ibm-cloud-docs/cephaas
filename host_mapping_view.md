@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: sds, host, view host details, host summary list
 
@@ -94,7 +94,10 @@ Make a `GET /hosts` request to list all volume mappings for a host.
 See the following example.
 
 ```sh
-curl -X 'GET' '$sds_endpoint/hosts/{id}/volume_mappings -H 'accept: application/json'
+curl -X GET $sds_endpoint/hosts/{id}/volume_mappings\
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -110,7 +113,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Make a `GET /hosts/{id}/volume_mappings/{volume_mapping_id}` request to see details of a single volume mapping for a host. See the following example.
 
 ```sh
-curl -X 'GET' '$sds_endpoint/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921/volume_mappings/{volume_mapping_id}' -H 'accept: application/json'
+curl -X GET $sds_endpoint/hosts/r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921/volume_mappings/{volume_mapping_id} \
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 

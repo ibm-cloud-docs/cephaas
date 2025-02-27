@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -90,8 +90,10 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a host.
 
 ```sh
-curl -X PUT '$sds_endpoint/hosts/{host-id}/volumes/{volume-id}'
---header 'Authorization: Bearer $IAM_TOKEN'
+curl -X PUT $sds_endpoint/hosts/{host-id}/volumes/{volume-id}\
+  -H 'accept: application/json'\
+  -H "Authorization: Bearer $IAM_TOKEN"\
+  -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
