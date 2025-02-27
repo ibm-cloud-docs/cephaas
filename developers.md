@@ -18,11 +18,7 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the following IBM Developer Tools installed.
-
-* [{{site.data.keyword.cephaas_short}} Block Storage API](/apidocs/block-storage)
-
-* [{{site.data.keyword.cephaas_short}} Object Storage API](/apidocs/object-storage)
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the [IBM Developer Tools](/docs/sdk-handbook?topic=sdk-handbook-devtools) installed.
 
 
 

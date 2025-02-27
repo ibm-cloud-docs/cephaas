@@ -35,8 +35,6 @@ toc:
           topics:
             - administrators.md
             - developers.md
-            - request-boseman-access.md
-            - ssr-rack-reploy-steps.md
       - release-notes.md
   - navgroup:
       id: howto
