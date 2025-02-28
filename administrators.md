@@ -91,29 +91,38 @@ You can start creating a deployment after cost estimation and the order processi
 3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and Satellite details. Now you have a CRN for the instance.
 
     ```sh
-    ibmcloud resource service-instance-create <name> software-defined-storage <plan id> <catalog satellite location> -p '{"satellite_crn": <satellite_location_crn>, "order_id": <order_id>}' -g <resource_group_name>
+    ibmcloud resource service-instance-create <service_instance_name> software-defined-storage <plan_id> satloc_dal_<satellite_guid> -p '{"satellite_crn":"<"satellite_crn>,"order_id":"<order-id>}' -g Default
     ```
     {: pre}
 
     See example.
 
     ```sh
-    $ ibmcloud resource service-instance-create service-instance-cli software-defined-storage 38bacce6d-9644-4b88-8v40-f5e44e6c75c5 satloc_dal_cqsuoub20mq4s939tq20 -p '{"satellite_crn"}: "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cqsuoub20mq4s939tq20::","order_id":"account-1"}' -g resource-group-1
+    $ iibmcloud resource service-instance-create abcd-51150B3JN0 software-defined-storage 94f887fd-e984-4298-8efa-6ae7d3adc9d6 satloc_dal_cuvckfu20ia0nl71ndgg -p '{"satellite_crn":"crn:v1:staging:public:satellite:us-south:a/0b7bd21d002841be9c6a1936412394dd:cuvckfu20ia0nl71ndgg::","order_id":"51150B3JN0"}' -g Default
+    ...
+
     Creating service instance service-instance-cli in resource group resource-group-1 of account account-1 as user@company.com...
     OK
     Service instance service-instance-cli  was created.
 
-    Name:             service-instance-cli
-    ID:               crn:v1:staging:public:software-defined-storage:satloc_dal_cqsuoub20mq4s939tq20:a/3faf73b8d12b47fa6ce87494f8ae7686:421e79b8-aa9f-4d69-bc57-4a9d5955e1a6::
-    GUID:             421e79b8-aa9f-4d69-bc57-4a9d5955e1a6
-    Location:         satloc_dal_cqsuoub20mq4s939tq20
-    State:            provisioning
-    Type:             service_instance
+    Name:                   abcd-51150B3JN0
+    ID:                     crn:v1:staging:public:software-defined-storage:satloc_dal_cuvckfu20ia0nl71ndgg:a/0571b3a07aba4a7c8bb3ba1edaf93521:3764d865-75f6-4b8f-9c13-eeaf882b0705::
+    GUID:                   3764d865-75f6-4b8f-9c13-eeaf882b0705
+    Location:               satloc_dal_cuvckfu20ia0nl71ndgg
+    Service Name:           software-defined-storage
+    Service Plan Name:      capacity
+    Resource Group Name:    Default
+    State:                  provisioning
+    Type:                   service_instance
     Sub Type:
-    Allow Cleanup:    false
-    Locked:           false
-    Created at:       2024-08-23T07:38:11Z
-    Updated at:       2024-08-23T07:38:12Z
+    Locked:                 false
+    One-time credentials:   false
+    Created at:             2025-02-28T10:52:41Z
+    Created by:             user@company.com
+    Updated at:             2025-02-28T10:52:51Z
+    Last Operation:
+                            Status    create in progress
+                            Message   Started create instance operation
     ```
     {: screen}
 
@@ -137,17 +146,19 @@ Use a hostless or full satellite location as Location for the deployment.
 {: prereq}
 
 ```sh
-curl -X POST $rc_endpoint/v2/resource_instances -H "Authorization: Bearer $token" -H 'Content-Type: application/json' -d '{
-        "name": "sds-unified-1",
-        "target": "satloc_dal_cqsuoub20mq4s939tq20",
-        "resource_group": "8c3bdd054c7b459b8ddb327d1609b2f4",
-        "resource_plan_id": "38bace6d-9644-4b88-8c40-f5e44e6c75c5",
-        "parameters": {
-            "committed_capacity":"100",
-            "tenure":"5",
-            "storage_type": "unified"
-       }
-  }' |jq
+curl --location 'https://resource-controller.cloud.ibm.com/v2/resource_instances/' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer $IAM_TOKEN' \
+--data '{
+    "name": "test-maryam-27feb:2:29",
+    "target": "satloc_dal_cspit2i20f0dosc3rn20",
+    "resource_group": "e094c5810724956dc62890402dbbbe3d",
+    "resource_plan_id": "34beb6d3-7afb-406c-9c75-6e2ab91e87ed",
+    "parameters": {
+        "satellite_crn" : "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cspit2i20f0dosc3rn20::",
+        "order_id":"MVT-test-1"
+    }
+}'
 ```
 {: pre}
 
@@ -155,26 +166,72 @@ A successful response looks like this:
 
 ```json
 {
-  "_id": "66248c60-4350-11ee-93ea-093eed40336e",
-  "_rev": "1-e8e76187cd43545726005411b3a22811",
-  "committedCapacity": 600,
-  "createdByIAMID": "IBMid-663003U96I",
-  "creationDate": "2024-04-15T08:48:24.324507588Z",
-  "crn": "crn:v1:staging:public:sds-samriddhi:global:a/f85ab2d7af0c43edbdf7d47241a9494f:66248c60-4350-11ee-93ea-093eed40336e::",
-  "planID": "1b7afb92-91be-4a19-8647-f5a1f57b6d4b",
-  "region": "global",
-  "serviceInstanceID": "66248c60-4350-11ee-93ea-093eed40336e",
-  "storageType": "unified",
-  "tenantID": "298f2202abc54fd3ad26602c396106a4",
-  "tenure": 5
-  "burstCapacity: 180,
-  "allocatedBurstCapacity: 0,
-  "quota.block": 300,
-  "quota.object: 300,
-  "satellite_crn": "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:coss5vm20tfjc8f72430::"
-  "order_id": "BSS_123456789",
-  "state": "provisioning"
+    "id": "crn:v1:staging:public:software-defined-storage:satloc_dal_cspit2i20f0dosc3rn20:a/3faf73b8d12b47fa6ce87494f8ae7686:a8d1c2c0-de91-4c59-a983-9866d8cd5b2a::",
+    "guid": "a8d1c2c0-de91-4c59-a983-9866d8cd5b2a",
+    "url": "/v2/resource_instances/a8d1c2c0-de91-4c59-a983-9866d8cd5b2a",
+    "created_at": "2025-02-28T12:59:29.736799693Z",
+    "updated_at": "2025-02-28T12:59:40.705078066Z",
+    "deleted_at": null,
+    "created_by": "IBMid-6960008R79",
+    "updated_by": "",
+    "deleted_by": "",
+    "scheduled_reclaim_at": null,
+    "restored_at": null,
+    "scheduled_reclaim_by": "",
+    "restored_by": "",
+    "name": "test-sample-28feb:6:29",
+    "region_id": "satloc_dal_cspit2i20f0dosc3rn20",
+    "account_id": "3faf73b8d12b47fa6ce87494f8ae7686",
+    "reseller_channel_id": "",
+    "resource_plan_id": "34beb6d3-7afb-406c-9c75-6e2ab91e87ed",
+    "resource_group_id": "e094c5810724956dc62890402dbbbe3d",
+    "resource_group_crn": "crn:v1:staging:public:resource-controller::a/3faf73b8d12b47fa6ce87494f8ae7686::resource-group:e094c5810724956dc62890402dbbbe3d",
+    "target_crn": "crn:v1:staging:public:globalcatalog::a/3faf73b8d12b47fa6ce87494f8ae7686::deployment:satdep_cspit2i20f0dosc3rn20_sattmpl_34beb6d3-7afb-406c-9c75-6e2ab91e87ed%3Asatcon_dal13892",
+    "parameters": {
+        "order_id": "MVT-test-1",
+        "satellite_crn": "crn:v1:staging:public:satellite:us-south:a/3faf73b8d12b47fa6ce87494f8ae7686:cspit2i20f0dosc3rn20::"
+    },
+    "allow_cleanup": false,
+    "crn": "crn:v1:staging:public:software-defined-storage:satloc_dal_cspit2i20f0dosc3rn20:a/3faf73b8d12b47fa6ce87494f8ae7686:a8d1c2c0-de91-4c59-a983-9866d8cd5b2a::",
+    "state": "provisioning",
+    "type": "service_instance",
+    "resource_id": "2bea02b0-c0a4-11ee-83aa-3171b0bf2976",
+    "dashboard_url": "https://cloud.ibm.com/software-defined-storage/crn:v1:staging:public:software-defined-storage:satloc_dal_cspit2i20f0dosc3rn20:a%2F3faf73b8d12b47fa6ce87494f8ae7686:a8d1c2c0-de91-4c59-a983-9866d8cd5b2a::",
+    "last_operation": {
+        "type": "create",
+        "state": "in progress",
+        "async": true,
+        "description": "Started create instance operation",
+        "cancelable": false,
+        "poll": false
+    },
+    "resource_aliases_url": "/v2/resource_instances/a8d1c2c0-de91-4c59-a983-9866d8cd5b2a/resource_aliases",
+    "resource_bindings_url": "/v2/resource_instances/a8d1c2c0-de91-4c59-a983-9866d8cd5b2a/resource_bindings",
+    "resource_keys_url": "/v2/resource_instances/a8d1c2c0-de91-4c59-a983-9866d8cd5b2a/resource_keys",
+    "plan_history": [
+        {
+            "resource_plan_id": "34beb6d3-7afb-406c-9c75-6e2ab91e87ed",
+            "start_date": "2025-02-28T12:59:29.736799693Z",
+            "requestor_id": "IBMid-6960008R79"
+        }
+    ],
+    "migrated": false,
+    "extensions": {
+        "allocate_burst_capacity": true,
+        "available_burst_capacity": 60,
+        "committed_capacity": 200,
+        "quota": {
+            "block": 130,
+            "object": 130
+        },
+        "storage_type": "unified",
+        "tenure": 0
+    },
+    "controlled_by": "",
+    "locked": false,
+    "onetime_credentials": false
 }
+
 ```
 {: screen}
 
