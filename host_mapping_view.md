@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: sds, host, view host details, host summary list
 
@@ -16,11 +16,42 @@ subcollection: cephaas
 # View host mapping details
 {: #view-host-mapping-details}
 
-View details of a single volume to a host mapping or view a list of all host mappings for the deployment.
+View details of a single host mapping to a one or more volumes or view a list of all host mappings for the deployment.
 {: shortdesc}
 
-Before you begin, make sure that you have [set up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
+Before you begin, make sure that you have [set up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up-environment).
 {: requirement}
+
+
+## View all mapped volumes to a host in the UI
+{: #view-all-mapped-vols-host-ui}
+{: ui}
+
+To view all mapped hosts to a volume, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts** and click on the single host name link.
+
+All mapped volumes are displayed for the chosen host on the Mapped volume section of Host details page. In the list, you can see the following information.
+
+| Field               | Description |
+|---------------------|-------------|
+| Name                | Volume name.                                             |
+| Mapped status       | Shows the status of the volume that is mapped to the host. |
+| Storage identifier  | Storage identification number.                             |
+| Gateway IP          | IP address.                                              |
+| Namespace ID        | Namespace identification number.                         |
+| Namespace UUID      | Universal unique identification number of the namespace. |
+{: caption="Details of all mapped volumes to a host." caption-side="bottom"}
+
+By default, 10 hosts are shown from the list of all hosts. Change this default by clicking the Page Control down arrow and increase the list to 25, 50 or 100 hosts. Use the Page Control arrows after the list to go to the following page or return to the current page.
+
+The row actions menu on the Hosts list page provides you with options to manage the single host information.
+
+Table describes the kebab menu options.
+
+| Action             | Description |
+|--------------------|-------------|
+| Unmap             | Remove the mapping between the volume and host. |
+{: caption="Row actions menu options for mapped volumes to a host." caption-side="bottom"}
+
 
 
 

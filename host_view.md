@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: sds, host, view host details, host summary list
 
@@ -79,17 +79,7 @@ The Host details page shows the details of the chosen hostname and all its mappe
 
 The Mapped volumes section shows the list of all the volumes that are mapped to the Host and a link to map volumes to the host.
 
-
-
 The kebab menu has the option to unmap the attached volume from the host.
-
-The Actions menu on the Host details page shows the actions that you can take.
-
-| Action             | Description |
-|--------------------|-------------|
-| Activity tracking  | Click to open the IBM Cloud activity tracking page where you can view the status of the generated events. |
-| Delete             | Remove the mapping between the volume and host. |
-{: caption="Actions menu options on the Host details page." caption-side="bottom"}
 
 
 

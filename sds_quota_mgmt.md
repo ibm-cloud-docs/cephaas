@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-28"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -95,6 +95,8 @@ curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: Bearer
 {: pre}
 
 In the example, `$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
+
+Default endpoint for resource controller: `https://resource-controller.cloud.ibm.com/v2/resource_instances`
 
 When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the bust capacity is also included in this total quota leading to increase in the overages and pricing fees.
 
