@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-28"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
 
@@ -63,8 +63,8 @@ You can start creating a deployment after cost estimation and the order processi
 
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 
-    To understand more about IBM Cloud Satellite locations, refer [IBM Cloud Satellite](/docs/satellite?topic=satellite-locations).
-    {: note}
+    While creating the IBM Cloud Satellite location, you can choose Object storage standard plan. For more information, see [IBM Cloud Satellite](/docs/satellite?topic=satellite-locations).
+    {: tip}
 
 3. Enter your **Deployment name** and click **Create**.
 

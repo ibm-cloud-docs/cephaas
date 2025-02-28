@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
-keywords: frequently asked questions, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
+keywords: frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
 subcollection: cephaas
 
@@ -166,7 +166,7 @@ The resource can remain in one of these pending states for as long as the operat
 For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It changes to `available` state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller must implement timeouts if needed for such cases.
 
 
-## FAQs on low-cost objects
+## FAQ on low-cost objects
 {: #faq-low-cost-objects}
 
 ### What is the default storage class for low-cost objects?
@@ -177,7 +177,7 @@ For Low-cost Object, new S3 accounts have `STANDARD_IA` as the default storage c
 
 
 
-## FAQs on monitoring
+## FAQ on monitoring
 {: #faq-monitoring}
 
 
