@@ -40,8 +40,6 @@ You can also unmap the host from a volume from **Volume details** page.
 {: tip}
 
 
-
-
 ## Unmap a single volume for a host from the CLI
 {: #unmap-single-volume-for-hosts-cli}
 {: cli}
