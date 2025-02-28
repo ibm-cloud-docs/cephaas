@@ -19,8 +19,8 @@ subcollection: cephaas
 
 Use the following procedure to add an IBM Ceph as a Service deployment to the vSphere plug-in.
 
-1. From the vSphere Client, go to the plug-in dashboard from the vSphere Client main menu and click IBM Ceph as a Service.
-2. Click **Add Deployment**. 
+1.	Login to the vSphere Web client Navigate to **Main menu** -> **IBM Storage CephaaS** for the plug-in dashboard.
+2. Click **ADD DEPLOYMENT**. 
 3. **Add Deployment** screen is displayed which shows the first step of **Connect to IBM Storage CephaaS**.
 4. Enter the information in the fields **Block Endpoint FQDN** and **API Key**.
 5. Click **Next**. **Deployment Details** screen is displayed where you need to enter the name of the deployment.

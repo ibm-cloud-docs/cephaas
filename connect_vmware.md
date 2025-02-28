@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: Connect VMware environment
 
@@ -21,6 +21,16 @@ These instructions are for a quick installation overview of the {{site.data.keyw
 {: #vm-connect-prereq}
 {: step}
 
+The IBM Storage Ceph as a Service plugin for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
+
+**Appliance requirements** 
+The virtual machine appliance requires the following resources:
+- 2 vCPUs and 4 GB of memory Red Hat Enterprise Linux 9.2 or higher
+
+Following are the networking (Ethernet, TCPIP) requirements:
+- One IP address (IPv4)
+- Static or DHCP Gateway DNS Netmask
+
 Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Central](https://www.ibm.com/support/fixcentral){: external}
 
 
@@ -36,7 +46,7 @@ Download the Open Virtual Appliance (OVA) installation package. [IBM® Fix Centr
 
     - By default, the appliance is configured with a firewall and therefore does not respond to ping (ICMP) requests.
 
-    - Initial login has a default password of `IBMplugin` and requires the user to change the password before continuing.
+    - Initial login has a default username as `root` and default password as `IBMplugin`. Users need to change the password after the initial login to continue.
 
 
 ## Register the vSphere plug-in into vCenter.
