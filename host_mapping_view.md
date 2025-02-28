@@ -27,7 +27,7 @@ Before you begin, make sure that you have [set up your CLI and API environment](
 {: #view-all-mapped-vols-host-ui}
 {: ui}
 
-To view all mapped hosts to a volume, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts** and click on the single host name link.
+To view all mapped hosts to a volume, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link > **Block Storage > Hosts** and click on the single host name link.
 
 All mapped volumes are displayed for the chosen host on the Mapped volume section of Host details page. In the list, you can see the following information.
 

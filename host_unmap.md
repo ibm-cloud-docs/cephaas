@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -25,7 +25,7 @@ Unmap one or more volumes from host by using the UI, CLI, API or Terraform.
 
 To remove all mapping of a volume that is mapped to a host, complete the following steps.
 
-1. Log in to the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage) and go to **Block storage > Hosts**.
+1. Log in to the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage) and Click **Deployments > deployment Name** link and then go to **Block storage > Hosts**.
 
 2. Click the Host **Name** from which you want to unmap the volume.
 

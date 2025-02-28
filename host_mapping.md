@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -26,13 +26,16 @@ Make sure that there are one or more volumes available for mapping to a host.
 
 To map a volume to a host from Volumes page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block Storage > Volumes**.
-2. Locate the Volume **Name** and click the kebab menu at the end of the row to open a list of options.
-3. From the options menu, click **Map to host**.
-4. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
+
+2. Click **Block Storage > Volumes**.
+
+3. Locate the Volume **Name** and click the kebab menu at the end of the row to open a list of options.
+4. From the options menu, click **Map to host**.
+5. Select an existing **Host** from the list or you can **Create new host** to map to the volume.
     1. If you choose to create a new host, then enter the new **Host name**, **Host NQN** and click **Create host**. The new Host is added to the beginning of the list.
     1. Select the newly created **Host** from the list.
-5. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
+6. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
 
 
 ## Mapping volumes to a host from Hosts page in the UI
@@ -41,15 +44,17 @@ To map a volume to a host from Volumes page, complete the following steps.
 
 To map a volume to a host from Hosts page, complete the following steps.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Hosts**.
-2. Locate the host **Name** and click the kebab menu at the end of the row to open a list of options.
-3. From the options menu, click **Map volumes**.
-4. Select one or more volumes that you want to map to the host.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
+
+2. Click **Block Storage > Hosts**.
+3. Locate the host **Name** and click the kebab menu at the end of the row to open a list of options.
+4. From the options menu, click **Map volumes**.
+5. Select one or more volumes that you want to map to the host.
 
     Volumes in pending state and already mapped volumes are not listed in the table.
     {: note}
 
-5. Click **Map**.
+6. Click **Map**.
 
 
 

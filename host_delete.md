@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: cephaas, delete host, sds host-delete,
 
@@ -25,11 +25,13 @@ Delete a host from a deployment by using the UI, CLI, API, or Terraform.
 
 To delete a host, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
 
-2. Locate the Host **Name** that you want to delete and then click the kebab menu at the end of the row to open a list of options.
+2. Click **Block Storage > Hosts**.
 
-3. From the options menu, click **Delete**.
+3. Locate the Host **Name** that you want to delete and then click the kebab menu at the end of the row to open a list of options.
+
+4. From the options menu, click **Delete**.
 
 A host cannot be deleted if it has one or more volumes that are mapped to it. Unmap all associated volumes first to delete the host.
 {: note}
@@ -40,11 +42,13 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 
 To delete multiple hosts together, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
 
-2. Select one or more Host **Names** that you want to delete.
+2. Click **Block Storage > Hosts**.
 
-3. Click **Delete**.
+3. Select one or more Host **Names** that you want to delete.
+
+4. Click **Delete**.
 
 A host cannot be deleted if it has one or more volumes that are mapped to it. Unmap all associated volumes first to delete the host.
 {: note}

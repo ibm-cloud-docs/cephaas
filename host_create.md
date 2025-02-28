@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-02-28"
 
 keywords: sds, cephaas host, host nqn
 
@@ -29,15 +29,16 @@ Before creating a host, you must configure the NVME-oF initiator. This is requir
 
 Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployment.
 
-1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **Block storage > Hosts**.
-2. Click **Create host**.
-3. Enter a unique **Host name** and enter the host identifier **Host NQN**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
+2. Click **Block Storage > Hosts**.
+3. Click **Create host**.
+4. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
     Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error <q>Host name already exists</q> is displayed.
 
-4. Click **Next**.
-5. [Optional] Select one or more volumes to map them to the host.
-6. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
+5. Click **Next**.
+6. [Optional] Select one or more volumes to map them to the host.
+7. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
 
 
 

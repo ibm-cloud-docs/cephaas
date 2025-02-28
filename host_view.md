@@ -23,7 +23,7 @@ View single host detail or a summary information about all hosts for the chosen 
 {: #view-all-hosts-ui}
 {: ui}
 
-To view a list of all hosts, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to  **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Hosts**.
+To view a list of all hosts, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link and then click **Block Storage > Hosts**.
 
 By default, all Hosts are displayed for the chosen Deployment. In the list of all **Hosts**, you can see the following information.
 
