@@ -1,7 +1,7 @@
 ---
 copyright:
- years: 2024, 2024
-lastupdated: "2024-11-12"
+ years: 2024, 2025
+lastupdated: "2025-02-28"
 
 keywords: managing deployments in vsphere plug-in
 
@@ -29,6 +29,9 @@ Use the following procedure to add an IBM Ceph as a Service deployment to the vS
 
 ## Editing deployment details
 {: #edit-deployment-details}
+
+If you detect any inconsistencies between the deployment and vSphere datastore volumes or hosts, click the ‘Reconcile’ button to fetch the latest data.
+{: note}
 
 For editing deployment details such as the name and API key, use the following prodedure.
 
