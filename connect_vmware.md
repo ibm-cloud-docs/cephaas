@@ -24,6 +24,7 @@ These instructions are for a quick installation overview of the {{site.data.keyw
 The IBM Storage Ceph as a Service plugin for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
 
 **Appliance requirements** 
+
 The virtual machine appliance requires the following resources:
 - 2 vCPUs and 4 GB of memory Red Hat Enterprise Linux 9.2 or higher
 
