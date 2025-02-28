@@ -33,7 +33,7 @@
     ]
   },
   "section_devtools": {
-    "api": "/apidocs/software-defined-storage",
+    "api": "/docs/cephaas?topic=cephaas-about-api",
     "cli": "/docs/cephaas?topic=cephaas-ic-sds-cli-reference"
   },
   "section_updates": {

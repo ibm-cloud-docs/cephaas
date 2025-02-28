@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-28"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage
@@ -239,7 +239,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ```sh
-ibmcloud sds volumes [--limit LIMIT] [--name NAME]
+ibmcloud sds volumes [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -346,7 +346,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-sds-list-all-hosts}
 
 ```sh
-ibmcloud sds hosts [--limit LIMIT] [--name NAME] --url string
+ibmcloud sds hosts [--limit LIMIT] --url string
 ```
 {: pre}
 
@@ -357,7 +357,6 @@ Example command:
 ```sh
 ibmcloud sds hosts \
     --limit 10 \
-    --name my-host \
     --url $sds_endpoint
 ```
 {: screen}
