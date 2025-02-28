@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Mapping volume to a host
+# Create volume mapping for a host
 {: #mapping-vol-to-host}
 
 You can map one or more volumes to a host by using UI, CLI, API, and Terraform.
@@ -20,7 +20,7 @@ You can map one or more volumes to a host by using UI, CLI, API, and Terraform.
 Make sure that there are one or more volumes available for mapping to a host.
 {: requirement}
 
-## Mapping volumes to a host from Volumes page in the UI
+## Creating a volume mapping for a host from Volumes page in the UI
 {: #mapping-volume-to-host-from-volume-ui}
 {: ui}
 
@@ -38,7 +38,7 @@ To map a volume to a host from Volumes page, complete the following steps.
 6. Click **Map**. When mapping completes successfully, the number of hosts that are mapped to the volume is displayed in the **Mapped Hosts** column.
 
 
-## Mapping volumes to a host from Hosts page in the UI
+## Creating a volume mapping for a host from Hosts page in the UI
 {: #mapping-volume-to-host-from-host-ui}
 {: ui}
 
@@ -58,7 +58,7 @@ To map a volume to a host from Hosts page, complete the following steps.
 
 
 
-## Mapping volume to a host from CLI
+## Creating a volume mapping for a host from CLI
 {: #mapping-hosts-cli}
 {: cli}
 
@@ -74,10 +74,25 @@ ibmcloud software-defined-storage host-mapping-create --host-id HOST-ID [--volum
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage host-mapping-create \
-    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-    --volume '{"id": "r134-f24710c4-d5f4-4881-ab78-7bfXX6281f39"}' \
-    --url exampleString
+ibmcloud sds hstmc --url "$sds_endpoint"\
+ --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 \
+ --volume-id r134-2ca809e8-3e63-44bc-916e-1eae49302aae
+...
+
+Volume_ID           r134-2ca809e8-3e63-44bc-916e-1eae49302aae
+Volume_Name         dividend-abet-getting-presume
+Volume_Mapping_ID   r134-152a73a9-dee8-4475-ad7c-fe73494140dd
+Host
+                    Host_ID     r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
+                    Host_NQN    nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+                    Host_Name   my-host
+
+Status              pending
+Subsystem_NQN       -
+Namespace_ID        -
+Namespace_UUID      -
+Gateways            -
+
 ```
 {: screen}
 
@@ -88,17 +103,17 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: tip}
 
 
-## Mapping volume to a host with the API
+## Creating a volume mapping for a host with the API
 {: #mapping-hosts-api}
 {: api}
 
-Make a `PUT /hosts/{id}/volumes/{vol_id}` request to map the volume to a host.
+Make a `POST /hosts/{id}/volume_mappings` request to map the volume to a host.
 
 ```sh
-curl -X PUT $sds_endpoint/hosts/{host-id}/volumes/{volume-id}\
-  -H 'accept: application/json'\
-  -H "Authorization: Bearer $IAM_TOKEN"\
-  -H 'IBM-API-Version: 2025-02-01'
+curl -X POST $sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings\
+ -H "Authorization: $IAM_TOKEN"\
+ -d '{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}'\
+ -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
@@ -109,19 +124,18 @@ A successful response looks like this:
 
 ```json
 {
-    "id": "r134-b82edf1f-79ad-46e7-a800-cabb9a3d4921",
-    "name": "host1",
-    "nqn": "nqn.2014-08.cloud.appdomain.cephaas:nvme:esx-dev-1-23",
-    "created_at": "2024-06-21T07:22:15Z",
-    "service_instance_id": "f538f202-2907-4061-8463-6a40dbe6b69f",
-    "storage_workspace_id": "default",
-    "volumes": [
-        {
-            "volume_name": "vol1",
-            "volume_id": "r134-f02df74f-dcba-4a85-93cb-088d0ffc1ae5",
-            "status": "pending"
-        }
-    ]
+  "id": "r134-21d769dc-46ba-4d53-a1a0-8e598588d40c",
+  "status": "pending",
+  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-21d769dc-46ba-4d53-a1a0-8e598588d40c",
+  "volume": {
+    "name": "dividend-abet-getting-presume",
+    "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"
+  },
+  "host": {
+    "name": "host-mapped-to-volume",
+    "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122",
+    "id": "r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66"
+  }
 }
 
 ```

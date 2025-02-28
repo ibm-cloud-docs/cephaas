@@ -62,9 +62,20 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage host-update \
-  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --name mytesthost
+  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 \
+  --name host-rename\
   --url $sds_endpoint
+...
+
+Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
+Host_Name         host-rename
+Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+Created_At        2025-02-28T10:05:30.000Z
+Volume_Mappings
+                  Status              mapped
+                  Volume_ID           r134-2ca809e8-3e63-44bc-916e-1eae49302aae
+                  Volume_Mapping_ID   r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa
+                  Volume_Name         dividend-abet-getting-presume
 ```
 {: screen}
 
@@ -79,18 +90,15 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #renaming-hosts-api}
 {: api}
 
-To update your host name by using the API, you can use the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
+To rename your host name by using the API, you can use the `PATCH /hosts/{id}` request to modify the host details. Specify the values for the parameter that you want to modify in the request to update the details.
 
-Make a `PATCH /hosts/{id}` request to update or rename a host.
+Make a `PATCH /hosts/{id}` request to rename a host.
 
 ```sh
-curl -X PATCH $sds_endpoint/hosts/{host-name-1}\
-  -H 'accept: application/json'\
-  -H "Authorization: Bearer $IAM_TOKEN"\
-  -H 'IBM-API-Version: 2025-02-01'
-  --data '{
-    "name": "sds-host-name-updated"
-  }'
+curl -X PATCH $sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66\
+ -H "Authorization: $IAM_TOKEN" \
+ -d '{"name":"host-renamed"}' \
+ --header 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -98,14 +106,51 @@ A successful response looks like this:
 
 ```json
 {
-  "id": "r134-69d40d27-bb86-4f52-83f9-6d3acb8d74eb",
-  "name": "sds-host-name-updated",
-  "nqn": "nqn.2014-08.com.vmware:nvme:vm2-esx-host",
-  "created_at": "2024-09-03T05:22:56Z",
-  "service_instance_id": "9f158770-66a4-4746-a2aa-245a8e06f451",
-  "storage_workspace_id": "default"
+  "id": "r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66",
+  "name": "host-renamed",
+  "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122",
+  "created_at": "2025-02-28T10:05:30Z",
+  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66",
+  "volume_mappings": [
+    {
+      "id": "r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa",
+      "status": "mapped",
+      "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa",
+      "volume": {
+        "name": "dividend-abet-getting-presume",
+        "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"
+      },
+      "host": {
+        "name": "host-renamed",
+        "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122",
+        "id": "r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66"
+      },
+      "subsystem_nqn": "nqn.2014-08.com.ibm:nvmeof-f538f202-2907-4061-8463-6a40dbe6b69f",
+      "namespace": {
+        "id": 1,
+        "uuid": "89c7e458acdd59ce82b9d0d688289a50"
+      },
+      "gateways": [
+        {
+          "ip_address": "xx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xx.xx.x.xx",
+          "port": 8009
+        },
+        {
+          "ip_address": "xx.xx.x.xx",
+          "port": 8009
+        }
+      ]
+    }
+  ]
 }
-
 ```
 {: screen}
 

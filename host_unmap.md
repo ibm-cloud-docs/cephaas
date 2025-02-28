@@ -108,11 +108,9 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make a `DELETE /hosts/{id}/volumes/{vol_id}` request to delete a specific volume that is mapped to a host.
 
 ```sh
-curl -X DELETE $sds_endpoint/hosts/{host-id}/volumes/{volume-id}\
-  -H 'accept: application/json'\
-  -H "Authorization: Bearer $IAM_TOKEN"\
-  -H 'IBM-API-Version: 2025-02-01'
-
+curl -X DELETE $sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-152a73a9-dee8-4475-ad7c-fe73494140dd \
+ -H "Authorization: $IAM_TOKEN" \
+ -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 
@@ -131,10 +129,9 @@ To verify that the volume mapping for a host is deleted, list the host details b
 Make a `DELETE /hosts/{id}/volumes` request to delete all volumes that are mapped for a host.
 
 ```sh
-curl -X DELETE $sds_endpoint/hosts/{host-id}/volumes\
-  -H 'accept: application/json'\
-  -H "Authorization: Bearer $IAM_TOKEN"\
-  -H 'IBM-API-Version: 2025-02-01'
+curl -X DELETE '$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings' \
+ -H "Authorization: $IAM_TOKEN" \
+ -H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
 

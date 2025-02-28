@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2024
-lastupdated: "2024-10-23"
+ years: 2024, 2025
+lastupdated: "2025-02-28"
 
 keywords: cephaas cephaas about volume host mappings
 
@@ -32,13 +32,13 @@ Before you can use the benefits of the Ceph NVMe-oF gateway, you must install an
     ```
     {: pre}
 
+    GATEWAY_IP can be fetched from `GET /hosts` API.
+    {: tip}
 
 1. Connect to the NVMe-oF target.
 
-    Use the `storage_identifiers.id` that is returned in the host details in the `GET /hosts` API.
-
     ```sh
-    nvme connect -t tcp -a GATEWAY_IP -n storage_identifiers.id
+    nvme connect-all -traddr=GATEWAY_IP --transport=tcp -l 1800
     ```
     {: pre}
 

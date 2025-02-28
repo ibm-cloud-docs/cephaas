@@ -58,11 +58,25 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage host-create \
-  --nqn nqn.2014-06.org:9345 \
-  --name my-host \
-  --volume-mappings '[{"volume": {"id": "r134-af4273d1-b1a2-4ba8-82aa-2285133e2682"}}]' \
-  --url $sds_endpoint
+ibmcloud software-defined-storage host-create --url "$sds_endpoint"\
+ --nqn "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122"\
+ --name "dummy-host"\
+ --volume-mappings  '[{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}]'
+...
+
+Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
+Host_Name         dummy-host
+Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+Created_At        2025-02-28T10:05:30.000Z
+Volume_Mappings
+                  Namespace_ID        -
+                  Namespace_UUID      -
+                  Status              pending
+                  Subsystem_NQN       -
+                  Volume_ID           r134-2ca809e8-3e63-44bc-916e-1eae49302aae
+                  Volume_Mapping_ID   r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa
+                  Volume_Name         dividend-abet-getting-presume
+
 ```
 {: screen}
 
