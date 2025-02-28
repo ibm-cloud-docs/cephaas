@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-28"
 
 keywords: cephaas settings, uploading S3 Certificate
 
@@ -30,7 +30,7 @@ For secure traffic, S3 Clients must use the associated CA certificate.
 
 To upload a S3 certificate, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Settings**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), access your deployment and then go to **Settings**.
 
 2. Click **Upload certificate**.
 
@@ -84,8 +84,7 @@ Ensure that the replacement file that you are uploading has the server-side cert
 {: requirement}
 
 ```sh
-curl -X PUT \
-  "$sds_endpoint/certificates/s3" \
+curl -X PUT $sds_endpoint/certificates/s3 \
   -H "accept: application/json" \
   -H "Authorization: Bearer $IAM_TOKEN"
   -H "Content-Type: text/plain" \
@@ -98,7 +97,7 @@ curl -X PUT \
 Example of a response when a certificate already exits in the system:
 
 ```json
-curl -X PUT "$sds_endpoint/certificates/s3" --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
+curl -X PUT $sds_endpoint/certificates/s3 --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01'
 ...
 {
   "name": "s3",

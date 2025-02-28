@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-28"
 
 keywords: cephaas, capacity management, performance management
 
@@ -18,13 +18,10 @@ subcollection: cephaas
 IBM Storage Ceph as a Service enables you to view the capacity and performance details of your deployments in real-time.
 {: shortdesc}
 
-To view capacity details of your IBM CephaaS deployments, complete the following steps.
+To view capacity details of your deployment, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.
 
-1. On the **IBM Cloud console**, click the hamburger menu and navigate to **Resource list** > **Storage**.
-2. Expand Storage to see your service instances.
-3. Click a service instance to view the Deployments dashboard.
-4. Click **Deployments** option from the left - hand panel. You can view your deployments along with their **Status**, **Size**, **Region**, and **Storage type**.
-5. Click your deployment, which is Available.
+You can view your deployments dashboard which shows the **Overall capacity**, Status of both Block and Object capacity, and **Performance** of each of the storage types.
+
 
 ## Viewing the capacity of your deployments
 {: #view-capacity}
@@ -66,7 +63,9 @@ The deployment dashboard provides graphical insights into various aspects of dep
 ## Adding capacity
 {: #add-capacity}
 
-Select **Actions** > **Add capacity**. **Purchase additional capacity** screen is displayed which guides you to contact your IBM seller for further process.
+To add additional capacity, select **Actions** > **Add capacity**.
+
+**Purchase additional capacity** screen is displayed which guides you to contact your IBM seller for further process.
 
 ## Next Steps
 {: #view-capacity-nextsteps}

@@ -23,28 +23,26 @@ Since the provisioned capacity and quota is at deployment level setting, the quo
 {: #managing-quota-ui}
 {: ui}
 
-1. On the {{site.data.keyword.cloud_notm}} console, click the **hamburger menu > Resource list** and expand **Storage**.
+1. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link > **Settings**.
 
-2. Click **Deployment name** link and go to **Settings**.
-
-3. Click **Edit preferences**.
+1. Click **Edit preferences**.
 
     If you want to manage quota for a different Deployment, then click **Deployments** drop down to choose the one whose quota you want to manage and click **Edit preferences**.
     {: note}
 
-4. Review the capacity limit. Select **Include burst capacity** if you want to include the burst capacity to expand your total available capacity.
+1. Review the capacity limit. Select **Include burst capacity** if you want to include the burst capacity to expand your total available capacity.
 
     Including burst capacity may incur overage fees for the amount of burst capacity used.
     {: note}
 
-4. Click **Next** and review the storage capacity allocations.
+1. Click **Next** and review the storage capacity allocations.
 
-5. Use the plus & minus controls to modify the allocated capacity.
+1. Use the plus & minus controls to modify the allocated capacity.
 
     The allocated capacity cannot be reduced or set below the current amount of used or provisioned capacity.
     {: note}
 
-6. Click **Save** to set the new storage capacity allocations.
+1. Click **Save** to set the new storage capacity allocations.
 
 
 ## Managing quota using the CLI
@@ -62,6 +60,7 @@ In the `--parameters` specify the capacity amounts. See the following example wh
 
 ```bash
 ibmcloud resource service-instance-update cephaas-unified-2 --parameters `{"quota": {"block": 60, "object": 40}, "allocate_burst_capacity":"true"}`
+...
 
 Updating service instance cephaas-unified-2 with ID crn:vi:staging:public:software-defined-storage:us-south:a/7a30fdf....:: is updated successfully
 ```
@@ -96,7 +95,7 @@ curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: Bearer
 
 In the example, `$rc_endpoint` is the resource controller endpoint. Make sure that `crn` is included in the url in encoded format.
 
-Default endpoint for resource controller: `https://resource-controller.cloud.ibm.com/v2/resource_instances`
+You can configure and set the default endpoint for resource controller $rc_endpoint to `https://resource-controller.cloud.ibm.com/v2/resource_instances`. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the bust capacity is also included in this total quota leading to increase in the overages and pricing fees.
 

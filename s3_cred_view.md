@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-28"
 
 keywords: cephaas service credential view, list
 
@@ -23,7 +23,7 @@ View object storage S3 credential by using the UI, CLI and API.
 {: #view-all-s3-credential-ui}
 {: ui}
 
-To view all the S3 credentials, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
+To view all the S3 credentials, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), access your deployment and then go to **Object Storage > Credentials** tab.
 
 
 
@@ -63,7 +63,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 Make the `GET /s3_credentials` request to retrieve and view one or all S3 credentials.
 
 ```sh
-curl -X GET "$sds_endpoint/s3_credentials" -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
+curl -X GET $sds_endpoint/s3_credentials -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN" -H "IBM-API-Version: 2025-02-01"
 ```
 {: pre}
 
