@@ -98,7 +98,7 @@ A host cannot be deleted if it has one or more volumes that are mapped to it. Un
 {: note}
 
 ```sh
-curl -X DELETE '$sds_endpoint/hosts/{id}'\
+curl -X DELETE '$sds_endpoint/hosts/r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e'\
   -H 'accept: application/json'\
   -H "Authorization: Bearer $IAM_TOKEN"\
   -H 'IBM-API-Version: 2025-02-01'
@@ -107,6 +107,6 @@ curl -X DELETE '$sds_endpoint/hosts/{id}'\
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-There is no response body for a successful delete operation. HTTP response code 204 is returned.
+There is no response body for a successful delete operation.
 
 To verify that the host is deleted, list the hosts by making a `GET /hosts` request.
