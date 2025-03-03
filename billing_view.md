@@ -27,7 +27,7 @@ This section provides you with an overview on pricing information and invoices f
 To find your invoices, on the IBM Cloud console, from the navigatation menu, go to **Manage > Billing and Usage > Invoices**.
 
 
-## {{site.data.keyword.cephaas_full_notm}} Pricing
+## Pricing
 {: #billing-pricing}
 
 You can select the term (3, 4, or 5 years) performance tier or capacity tier that best matches your needs. {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and software that is integrated, when connected to IBM Cloud.
