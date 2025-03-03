@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: sds, host, view host details, host summary list
 
@@ -186,7 +186,7 @@ A successful response displays a list all the volume mapping for the host.
     {
       "id": "r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
       "status": "mapped",
-      "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
+      "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
       "volume": {
         "name": "dividend-abet-getting-presume",
         "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"
@@ -222,7 +222,7 @@ A successful response displays a list all the volume mapping for the host.
     }
   ],
   "first": {
-    "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings?limit=1000"
+    "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings?limit=1000"
   },
   "limit": 1000,
   "total_count": 1
@@ -255,7 +255,7 @@ A successful response provides details of the host, such as the `host ID`, `host
 {
   "id": "r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
   "status": "mapped",
-  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
+  "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-152a73a9-dee8-4475-ad7c-fe73494140dd",
   "volume": {
     "name": "dividend-abet-getting-presume",
     "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"

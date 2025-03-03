@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: cephaas, block storage, rename host
 
@@ -110,12 +110,12 @@ A successful response looks like this:
   "name": "host-renamed",
   "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122",
   "created_at": "2025-02-28T10:05:30Z",
-  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66",
+  "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66",
   "volume_mappings": [
     {
       "id": "r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa",
       "status": "mapped",
-      "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa",
+      "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-95b99022-3cf7-42be-9c18-5b6e3fa30bfa",
       "volume": {
         "name": "dividend-abet-getting-presume",
         "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -126,7 +126,7 @@ A successful response looks like this:
 {
   "id": "r134-21d769dc-46ba-4d53-a1a0-8e598588d40c",
   "status": "pending",
-  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-21d769dc-46ba-4d53-a1a0-8e598588d40c",
+  "href": "$sds_endpoint/hosts/r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66/volume_mappings/r134-21d769dc-46ba-4d53-a1a0-8e598588d40c",
   "volume": {
     "name": "dividend-abet-getting-presume",
     "id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"
