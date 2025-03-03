@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-03"
 
 keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
 
@@ -19,6 +19,9 @@ The {{site.data.keyword.cephaas_full}} SDK for GO provides features to make the 
 {: shortdesc}
 
 The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, see the [GO API documentation](https://ibm.github.io/sds-go-sdk){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
+
+The SDK Go github links mentioned in the examples will work only post General Availability (GA).
+{: important}
 
 ## Getting the SDK
 {: #go-get-sdk}
@@ -37,6 +40,10 @@ go get -u github.com/IBM/sds-go-sdk/sdsaasv1
 ```
 {: pre}
 
+The SDK Go github links mentioned in the examples will work only post General Availability (GA).
+{: important}
+
+
 ### Import packages
 {: #go-import-packages}
 
@@ -48,6 +55,9 @@ import (
 )
 ```
 {: codeblock}
+
+The SDK Go github links mentioned in the examples will work only post General Availability (GA).
+{: important}
 
 
 ## Before you begin using code examples

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -40,6 +40,9 @@ You need:
 {: #sdk-gs-install}
 
 Specific instructions for downloading and installing the SDK are available in [Using Go](/docs/cephaas?topic=cephaas-using-go){: external}{: go}.
+
+The SDK Go github links mentioned in the examples will work only post General Availability (GA).
+{: important}
 
 ## Code Example
 {: #sdk-gs-example}
