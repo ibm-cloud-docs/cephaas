@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -131,7 +131,7 @@ A successful response looks like this:
   "status_reasons": [],
   "bandwidth": 39,
   "resource_type": "volume",
-  "href": "https://block-storage.8ce82ab061950a.appdomain.cloud/v1/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0"
+  "href": "$sds_endpoint/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0"
 }
 ```
 {: screen}

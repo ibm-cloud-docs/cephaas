@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: sds, cephaas host, host nqn
 
@@ -135,12 +135,12 @@ A successful response looks like this:
   "name": "host1",
   "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
   "created_at": "2025-02-27T10:55:07Z",
-  "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d",
+  "href": "$sds_endpoint/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d",
   "volume_mappings": [
     {
       "id": "r134-dfb2c915-4788-4cb3-b1d5-8e00ee09e780",
       "status": "pending",
-      "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-dfb2c915-4788-4cb3-b1d5-8e00ee09e780",
+      "href": "$sds_endpoint/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-dfb2c915-4788-4cb3-b1d5-8e00ee09e780",
       "volume": {
         "name": "seventy-banked-pry-punt",
         "id": "r134-b05d91af-6393-4652-aada-13fd4fdbd065"
@@ -154,7 +154,7 @@ A successful response looks like this:
     {
       "id": "r134-b557c11f-6c90-48e5-93b3-deac047e815c",
       "status": "pending",
-      "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-b557c11f-6c90-48e5-93b3-deac047e815c",
+      "href": "$sds_endpoint/hosts/r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d/volume_mappings/r134-b557c11f-6c90-48e5-93b3-deac047e815c",
       "volume": {
         "name": "new-vol",
         "id": "r134-601e431b-22ab-47a1-b0c1-411049b432a0"

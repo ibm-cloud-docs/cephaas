@@ -84,7 +84,7 @@ ibmcloud resource service-instance <Service_Instance_name> --output json
 Make a `PATCH` request to modify the block and object quota.
 
 ```sh
-curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: Bearer $token" -H 'Content-Type: application/json' -d '{
+curl -X PATCH $rc_endpoint/v2/resource_instances/$guid -H "Authorization: Bearer $IAM_TOKEN" -H 'Content-Type: application/json' -d '{
 "parameters": {
        "quota":{"block":60,"object":40},
        "allocate_burst_capacity":true

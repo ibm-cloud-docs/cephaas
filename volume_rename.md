@@ -119,7 +119,7 @@ A successful response looks like this:
   "status_reasons": [],
   "bandwidth": 19,
   "resource_type": "volume",
-  "href": "https://block-storage.8ce82ab061950a.appdomain.cloud/v1/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0"
+  "href": "$sds_endpoint/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0"
 }
 ```
 {: screen}

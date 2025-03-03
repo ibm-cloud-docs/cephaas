@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: list all volumes, view volume details
 
@@ -188,7 +188,7 @@ See the following example.
 ```sh
 curl -X GET $sds_endpoint/volumes\
 	-H 'accept: application/json'\
-	-H "Authorization: Bearer $token"\
+	-H "Authorization: Bearer $IAM_TOKEN"\
 	-H 'IBM-API-Version: 2025-02-01'
 ```
 {: pre}
@@ -210,12 +210,12 @@ A successful response looks like the following example. This example shows the f
       "status_reasons": [],
       "bandwidth": 19,
       "resource_type": "volume",
-      "href": "https://block-storage.7b6121a1b00b849d81.appdomain.cloud/v1/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+      "href": "$sds_endpoint/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
       "volume_mappings": [
         {
           "id": "r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
           "status": "mapped",
-          "href": "https://block-storage.7b6121a1b00b849d81.appdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+          "href": "$sds_endpoint/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
           "volume": {
             "name": "magma-agreeably-groovy-hardwood",
             "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd"
@@ -253,7 +253,7 @@ A successful response looks like the following example. This example shows the f
     }
   ],
   "first": {
-    "href": "https://block-storage.8ce82ab061950a.appdomain.cloud/v1/volumes?limit=1000"
+    "href": "$sds_endpoint/volumes?limit=1000"
   },
   "limit": 1000,
   "total_count": 1
@@ -292,12 +292,12 @@ A successful response provides details of the volume, including capacity and IOP
   "status_reasons": [],
   "bandwidth": 19,
   "resource_type": "volume",
-  "href": "https://block-storage.7b6121a1b00b849d81-0000.appdomain.cloud/v1/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
+  "href": "$sds_endpoint/volumes/r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd",
   "volume_mappings": [
     {
       "id": "r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
       "status": "mapped",
-      "href": "https://block-storage.7b6121a1b00b849d81-0000.appdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+      "href": "$sds_endpoint/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
       "volume": {
         "name": "magma-agreeably-groovy-hardwood",
         "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd"

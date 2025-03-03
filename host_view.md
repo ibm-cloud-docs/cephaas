@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: sds, host, view host details, host summary list
 
@@ -299,12 +299,12 @@ A successful response looks like the following example.
       "name": "groovey-hardwood",
       "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002145",
       "created_at": "2025-02-27T09:52:08Z",
-      "href": "https://block-storage.scp-bee0456f845eappdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85",
+      "href": "$sds_endpoint/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85",
       "volume_mappings": [
         {
           "id": "r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
           "status": "mapped",
-          "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
+          "href": "$sds_endpoint/hosts/r134-886f1457-7bee-4893-b3b8-0a75b0076a85/volume_mappings/r134-b561e8f8-cea4-4934-8527-726a5ccc309f",
           "volume": {
             "name": "magma-agreeably-groovy-hardwood",
             "id": "r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd"
@@ -345,11 +345,11 @@ A successful response looks like the following example.
       "name": "synthetics-test-host-dnd",
       "nqn": "nqn.2014-08.org.nvmexpress:uuid:d9eb0d42-f381-328d-0492-ce5ddce1297a",
       "created_at": "2025-02-20T09:08:53Z",
-      "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts/r134-f8e5b0dc-cfb3-470a-806e-a42cf47516d6"
+      "href": "$sds_endpoint/hosts/r134-f8e5b0dc-cfb3-470a-806e-a42cf47516d6"
     }
   ],
   "first": {
-    "href": "https://block-storage.scp-bee0456f845e.appdomain.cloud/v1/hosts?limit=1000"
+    "href": "$sds_endpoint/hosts?limit=1000"
   },
   "limit": 1000,
   "total_count": 2
@@ -381,12 +381,12 @@ A successful response provides details of the host, such as the `host ID`, `host
   "name": "automation-host-bg9qtv3d",
   "nqn": "nqn.2025-02.org.nvmeautomation:uuid:c34ed557-c1b1-4036-83aa-b8cbf3567b69",
   "created_at": "2025-02-27T11:15:42Z",
-  "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-9492bd82-f2db-4871-a85d-34321c695f26",
+  "href": "$sds_endpoint/hosts/r134-9492bd82-f2db-4871-a85d-34321c695f26",
   "volume_mappings": [
     {
       "id": "r134-c9ce93f8-e45d-42f3-abc2-0d9adcd67eb4",
       "status": "mapped",
-      "href": "https://sds-cephaas.scp-1b45e7473f4d.appdomain.cloud/v1/hosts/r134-9492bd82-f2db-4871-a85d-34321c695f26/volume_mappings/r134-c9ce93f8-e45d-42f3-abc2-0d9adcd67eb4",
+      "href": "$sds_endpoint/hosts/r134-9492bd82-f2db-4871-a85d-34321c695f26/volume_mappings/r134-c9ce93f8-e45d-42f3-abc2-0d9adcd67eb4",
       "volume": {
         "name": "svt-volume-automation-18244",
         "id": "r134-bad36c92-8cfc-4912-b6bc-e714460a9ef8"

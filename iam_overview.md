@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-16"
+lastupdated: "2025-03-03"
 
 keywords: sds, cephaas, authorization, iam, basics
 
@@ -37,7 +37,7 @@ API keys can be created and used by {{site.data.keyword.cloud_notm}} users for a
 ### Service IDs and API keys
 {: #iam-overview-service-id-api-key}
 
-Users also can create Service IDs and API keys for Service IDs. A Service ID is similar to a "functional ID" or an "application ID" and is used to authenticate services, and not to represent a user.
+Users also can create Service IDs and API keys. A Service ID is similar to a "functional ID" or an "application ID" and is used to authenticate services, and not to represent a user.
 
 Users create Service IDs and bind them to scopes, like an {{site.data.keyword.cloud_notm}} Platform account, a CloudFoundry organization, or a CloudFoundry space. It is best to bind Service IDs to an {{site.data.keyword.cloud_notm}} Platform account. This binding is done to give the Service ID a container to live in. This container also defines who can update and delete the Service ID and who can create, update, read, and delete API Keys that are associated to that Service ID. It is important to note that a Service ID is NOT related to a user.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: cephaas settings, creating S3 Certificate
 
@@ -80,7 +80,7 @@ curl -X POST $sds_endpoint/certificates/s3 \
 Example of a response when a certificate is created:
 
 ```json
-curl -X POST $sds_endpoint/certificates/s3 --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $TOKEN" -H 'IBM-API-Version: 2025-01-15'
+curl -X POST $sds_endpoint/certificates/s3 --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
 ...
 
 {

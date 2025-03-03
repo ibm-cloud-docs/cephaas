@@ -130,7 +130,7 @@ A successful response looks like this:
   "status_reasons": [],
   "bandwidth": 19,
   "resource_type": "volume",
-  "href": "https://block-storage.bee0456f845e.appdomain.cloud/v1/volumes/r134-8cdec173-1bcb-4b85-ada9-a6374a4f5906"
+  "href": "$sds_endpoint/volumes/r134-8cdec173-1bcb-4b85-ada9-a6374a4f5906"
 }
 ```
 {: screen}
