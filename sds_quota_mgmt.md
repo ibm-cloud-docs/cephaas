@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: cephaas, quota, capacity, manage
 
@@ -97,6 +97,6 @@ In the example, `$rc_endpoint` is the resource controller endpoint. Make sure th
 
 You can configure and set the default endpoint for resource controller `$rc_endpoint` to `https://resource-controller.cloud.ibm.com/v2/resource_instances`. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the bust capacity is also included in this total quota leading to increase in the overages and pricing fees.
+When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the burst capacity is also included in this total quota leading to increase in the overages and pricing fees.
 
 When the `allocate burst capacity` value is set to `false`, the burst capacity is disabled and the quota does not exceed the total of the current set value.

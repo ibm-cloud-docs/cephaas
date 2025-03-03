@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
 
@@ -51,7 +51,7 @@ During the new volume creation, the volume is in `Pending` state. The status cha
 To create volumes by using the command-line interface (CLI), run the following command.
 
 ```sh
-ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
+ibmcloud software-defined-storage volume-create --capacity CAPACITY [--name NAME] --url string
 ```
 {: pre}
 

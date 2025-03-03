@@ -51,7 +51,7 @@ To rename a volume, complete the following steps.
 
 To manage your Block storage volumes, you can use the `volume-update` command to rename the volumes.
 
-Specify the volume ID, and new name of the volume along with the endpoint when runing the following command for updating the name of a volume.
+Specify the volume ID, and new name of the volume along with the endpoint when running the following command for updating the name of a volume.
 
 ```sh
 ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --name NAME --url string
