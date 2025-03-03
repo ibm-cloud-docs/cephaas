@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords: sds, cephaas Block Storage Volume, update volume for cephaas, manage volume
 
@@ -36,7 +36,9 @@ To rename a volume, complete the following steps.
 
 3. From the options menu, click **Rename volume**.
 
-4. Provide a valid volume name. Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. For example, if you create two volumes with the same name in the same deployment, an error <q>volume name exists</q> is displayed.
+4. Provide a valid volume name.
+
+    Valid volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. For example, if you create two volumes with the same name in the same deployment, an error <q>volume name exists</q> is displayed.
 
 5. Click **Rename**.
 
