@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-03-03"
 
 keywords: CephaaS release notes
 
@@ -36,4 +36,4 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 Introducing {{site.data.keyword.cephaas_full}}
-:   {{site.data.keyword.cephaas_full_notm}} is a multi-protocol, cloud-like software-defined storage solution, delivered on-premises and fully managed by IBM. This innovative service offers a fast and effortless way to transition to a modern cloud-operating model, allowing you to quickly and easily self-deploy storage within your data center, without the need for costly infrastructure setup or lengthy implementation timelines.
+:   {{site.data.keyword.cephaas_full_notm}} is a multi-protocol, cloud-like software-defined storage solution, delivered on-premises, and fully managed by IBM. This innovative service offers a fast and effortless way to transition to a modern cloud-operating model, allowing you to quickly and easily self-deploy storage within your data center, without the need for costly infrastructure setup or lengthy implementation timelines.
