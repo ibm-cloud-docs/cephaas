@@ -1,0 +1,92 @@
+{
+    "endpoints":[
+		  "how do I set an endpoint in CephaaS",
+		  "want to set an endpoint location for CephaaS",
+		  "setting an endpoint for Object Storage",
+		  "set an object storage endpoint",
+		  "endpoint setting in object storage",
+		  "endpoint location setting"
+     ],
+   "creating-s3-credential-sds":[
+        "cephaas object storage authentication type apikey",
+        "how to create HMAC credentials",
+        "how to get hmac_keys",
+        "get hmac keys",
+        "authentication type HMAC credentials",
+        "login credentials for object storage",
+        "obtain object Storage HMAC credentials",
+        "object storage authentication methods",
+        "access key and secret key pair in CephaaS",
+        "generate access keys for object storage"
+    ],
+    "creating-s3-certificate":[
+        "create tls certificate",
+        "create s3 certificate",
+        "creating certificate"
+    ],
+    "estimatecost":[
+      "estimate cost of ceph as a service",
+      "estimating cost"
+    ],
+    "responsibility-matrix":[
+      "management responsibilities for cephaas",
+      "understanding responsibilities for cephaas",
+      "cephaas responsibilities"
+    ],
+    "pre_installation_checklist":[
+      "prepare my data center",
+      "preparing my data center",
+      "installing cephaas pre-requisites",
+      "requirements for installing cephaas",
+      "requirements for installing ceph as a service",
+      "preorder checklist for cephaas"
+    ],
+    "administrators":[
+      "how to set up storage",
+      "setting up cephaas",
+      "setting up deployments",
+      "creating deployments"
+    ],
+    "billing-invoices":[
+      "find my service invoices",
+      "access cephaas invoices"
+    ],
+    "performance-tier":[
+      "what is performance tier",
+      "what does the cephaas service performance tier include",
+      "capacity is offered in performance tiers",
+      "typical workload for performance tier"
+    ],
+    "capacity-tier":[
+      "capacity tier in cephaas",
+      "typical workload for capacity tier",
+      "capacity options offered in capacity tier"
+    ],
+    "overall-capacity":[
+      "overage charges cephaas",
+      "overall capacity overage charges in cephaas"
+    ],
+    "faq-pending-status-block-volumes-hosts":[
+      "What does the pending status mean for block volumes and hosts?",
+      "pending status for block storage",
+      "meaning of pending status",
+      "different pending status",
+      "when do we see pending status"
+    ],
+    "faq-create-vol-10k-iops":[
+      "create volume for a workload that requires 10,000 IOPS",
+      "creating volume for workload that requires 10,000 IOPS"
+    ],
+    "faq-create-vol-thruput-1kmbps":[
+      "create volume for a workload that requires a throughput of 1000 MBps",
+      "creating volume for a workload that requires a throughput of 1000 MBps"
+    ],
+    "faq-vol-increase-performance":[
+      "create volume for increased performance",
+      "creating volume"
+    ],
+    "faq-data-post-vol-delete":[
+      "What happens to the data when i delete a block storage volume",
+      "What happens when new data is written to the volume"
+    ]
+  }
