@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: Connect VMware environment
 
@@ -21,9 +21,9 @@ These instructions are for a quick installation overview of the {{site.data.keyw
 {: #vm-connect-prereq}
 {: step}
 
-The IBM Storage Ceph as a Service plugin for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
+The {{site.data.keyword.cephaas_full_notm}} plugin for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
 
-**Appliance requirements** 
+**Appliance requirements**
 
 The virtual machine appliance requires the following resources:
 - 2 vCPUs and 4 GB of memory Red Hat Enterprise Linux 9.2 or higher

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -181,7 +181,7 @@ For Low-cost Object, new S3 accounts have `STANDARD_IA` as the default storage c
 {: #faq-monitoring}
 
 
-### How can i access the IBM Cloud monitoring user interface from the IBM Storage Ceph as a Service user interface?
+### How can i access the IBM Cloud monitoring user interface from the {{site.data.keyword.cephaas_full_notm}} user interface?
 {: faq}
 {: #faq-access-ic-mon-ui}
 

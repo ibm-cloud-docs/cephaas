@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: cephaas, capacity management, performance management
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # View storage capacity and performance
 {: #storage-capacity-performance}
 
-IBM Storage Ceph as a Service enables you to view the capacity and performance details of your deployments in real-time.
+{{site.data.keyword.cephaas_full_notm}} enables you to view the capacity and performance details of your deployments in real-time.
 {: shortdesc}
 
 To view capacity details of your deployment, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link.

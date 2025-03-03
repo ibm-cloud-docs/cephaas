@@ -98,7 +98,7 @@ There are two common ways to assign access in the console:
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli){: external}. The following example shows a command for assigning the `<Manager>` role for `<IBM CephaaS Storage>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli){: external}. The following example shows a command for assigning the `<Manager>` role for `<{{site.data.keyword.cephaas_short}} Storage>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -127,7 +127,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 
 
-The following example is for assigning the `<Manager>` role for `<IBM CephaaS Storage>`:
+The following example is for assigning the `<Manager>` role for `<{{site.data.keyword.cephaas_short}} Storage>`:
 
 Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
@@ -136,7 +136,7 @@ Use `<programmatic_service_name>` for the service name, and refer to the Role ID
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01' -H 'accept: application/json' -d '{
   "type": "access",
-  "description": "Manager role for IBM CephaaS Storage",
+  "description": "Manager role for {{site.data.keyword.cephaas_short}} Storage",
   "subjects": [
     {
       "attributes": [

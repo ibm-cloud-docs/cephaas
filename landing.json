@@ -7,7 +7,7 @@
   "section_topics": {
     "links": [
       {
-        "title": "Getting started with IBM Ceph as a Service",
+        "title": "Getting started with {{site.data.keyword.cephaas_full_notm}}",
         "href": "/docs/cephaas?topic=cephaas-getting-started"
       },
       {

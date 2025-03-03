@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-20"
+lastupdated: "2025-03-03"
 
 keywords: cephaas, architecture, workload isolation levels
 
@@ -26,7 +26,7 @@ Review the following sample architecture for {{site.data.keyword.cephaas_full_no
 
 The following diagram describes the default components that are set up in an {{site.data.keyword.cephaas_full}} architecture.
 
-![Architecture of IBM Storage Ceph as a Service](images/architecture-cephaas.svg "Architecture of IBM Storage Ceph as a Service"){: caption="Architecture of IBM Storage Ceph as a Service" caption-side="bottom"}
+![Architecture of {{site.data.keyword.cephaas_full_notm}}](images/architecture-cephaas.svg "Architecture of {{site.data.keyword.cephaas_full_notm}}"){: caption="Architecture of {{site.data.keyword.cephaas_full_notm}}" caption-side="bottom"}
 
 ## {{site.data.keyword.cephaas_short}} workload isolation
 {: #workload-isolation}
