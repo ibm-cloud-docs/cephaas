@@ -51,7 +51,6 @@ toc:
               topics:
                 - volume_about.md
                 - volume_create.md
-#                - volume_mapping.md
                 - volume_view.md
                 - volume_rename.md
                 - volume_expand.md
@@ -97,16 +96,11 @@ toc:
             - architecture-workload-isolation.md
             - endpoints.md
             - data-security.md
-#            - compliance.md
-#            - eu.md
 # include this event notifications file in the future when it becomes part of the scope.
-#      - event-notifications-events.md
       - topicgroup:
           label: Observability
           topics:
             - at-events.md
-#            - logging.md
-#            - monitoring.md
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
