@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-07"
 
-keywords: unified storage, volume size, Security, Encryption, secondary storage, mount storage, provision storage, cost estimation
+keywords: getting started, cephaas, unified storage, cost estimation, software defined storage, on-premise, consultation request
 
 subcollection: cephaas
 

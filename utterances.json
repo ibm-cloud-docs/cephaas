@@ -1,4 +1,10 @@
 {
+    "getting-started":[
+      "how do i get started with cephaas",
+      "getting started with cephaas",
+      "requesting consultation",
+      "cost estimation for cephaas"
+    ],
     "endpoints":[
 		  "how do I set an endpoint in CephaaS",
 		  "want to set an endpoint location for CephaaS",
