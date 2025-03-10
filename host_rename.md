@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: cephaas, block storage, rename host
 
@@ -155,3 +155,18 @@ A successful response looks like this:
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+
+## Renaming a host by using Terraform
+{: #rename-host-tf}
+{: terraform}
+
+To rename the host, do the following steps:
+
+1. Open your `main.tf` file and modify the `name` value in the `ibm_sds_host` resource.
+
+2. After editing and saving the file, run commands `terraform plan` and `terraform apply` to apply your changes.
+
+You can modify only one parameter value at a time.
+{: note}

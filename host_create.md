@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: sds, cephaas host, host nqn
 
@@ -171,6 +171,64 @@ A successful response looks like this:
 ```
 {: screen}
 
+
+
+## Creating hosts using Terraform
+{: #create-host-tf}
+{: terraform}
+
+To create host using terraform, you must have the `host nqn` handy. For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
+
+1. Create a host instance in your `main.tf` file by using the `ibm_sds_host` resource argument. The host instance in the following example is named `sds_host_instance` respectively.
+
+   ```terraform
+    resource "ibm_sds_host" "sds_host_instance" {
+      name = "demo-host"
+      nqn = "<hostNQN>"
+    }
+   ```
+   {: codeblock}
+
+
+2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
+
+   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
+
+      ```terraform
+      terraform plan
+      ```
+      {: pre}
+
+   1. Run `terraform apply` to create the resources that are defined in the plan.
+
+      ```sh
+      terraform apply
+      ```
+      {: pre}
+
+4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+
+    See the example output for details.
+
+    ```sh
+    # ibm_sds_host.sds_host_instance will be created
+    + resource "ibm_sds_host" "sds_host_instance" {
+        + created_at   = (known after apply)
+        + id           = (known after apply)
+        + name         = "demo-host"
+        + nqn          = "nqn.2014-06.org:9345"
+        + sds_endpoint = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
+
+      }
+    ```
+    {: screen}
 
 
 

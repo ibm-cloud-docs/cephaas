@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -142,6 +142,63 @@ A successful response looks like this:
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+## Mapping block volume by using Terraform
+{: #mapping-host-to-volume-tf}
+{: terraform}
+
+To map one or more hosts to a volume, edit the `main.tf` file to add a volume the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+
+To map a host and a volume, a volume must already exist or be created. Edit or add the `ibm_sds_volume` resource in the `main.tf` file and add the `volumes` block to the `ibm_sds_host`.
+
+The following examples show how you can map a volume to a host.
+
+```terraform
+
+resource "ibm_sds_volume" "sds_volume_instance" {
+    hostnqnstring = "<hostNQN>"
+    capacity = 10
+    name = "demo-volume"
+}
+
+// Provision sds_host resource instance
+resource "ibm_sds_host" "sds_host_instance" {
+
+    name = "demo-host"
+    nqn = "<hostNQN>"
+    volumes {
+        volume_id = ibm_sds_volume.sds_volume_instance.id
+        volume_name = ibm_sds_volume.sds_volume_instance.name
+    }
+}
+```
+{: screen}
+
+
+To map multiple volumes to a host, add another `volumes` block
+
+```terraform
+// Provision sds_host resource instance
+resource "ibm_sds_host" "sds_host_instance" {
+
+    name = "demo-host"
+    nqn = "<hostNQN>"
+    volumes {
+        volume_id = ibm_sds_volume.sds_volume_instance.id
+        volume_name = ibm_sds_volume.sds_volume_instance.name
+    }
+    volumes {
+        volume_id = ibm_sds_volume.sds_volume_instance_2.id
+        volume_name = ibm_sds_volume.sds_volume_instance_2.name
+    }
+}
+```
+{: screen}
+
+
+Using terraform, You can map multiple volumes to a host at a time.
+{: note}
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: sds, host, view host details, host summary list
 
@@ -291,3 +291,24 @@ A successful response provides details of the host, such as the `host ID`, `host
 }
 ```
 {: screen}
+
+
+
+
+## View host details using Terraform
+{: #view-host-tf}
+{: terraform}
+
+To view terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a host resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}

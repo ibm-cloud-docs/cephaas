@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
 
@@ -135,3 +135,17 @@ A successful response looks like this:
 }
 ```
 {: screen}
+
+
+## Increasing block volume using Terraform
+{: #expand-volume-tf}
+{: terraform}
+
+To expand the capacity of a volume, do the following steps:
+
+1. Open your `main.tf` file and modify the `capacity` value in the `ibm_sds_volume` resource.
+
+2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
+
+You can modify only one parameter value at a time.
+{: note}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: list all volumes, view volume details
 
@@ -138,6 +138,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vol` as an alternative to `volume` for the CLI actions.
 {: tip}
 
+For more information about available command options, run `ibmcloud sds volume --help`.
 
 
 ## View list of all volumes from the CLI
@@ -338,7 +339,23 @@ A successful response provides details of the volume, including capacity and IOP
 {: codeblock}
 
 
+## View volume details using Terraform
+{: #view-volume-tf}
+{: terraform}
 
+To view terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a volume resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}
 
 
 ## Next steps

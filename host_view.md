@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-10"
 
 keywords: sds, host, view host details, host summary list
 
@@ -427,3 +427,29 @@ A successful response provides details of the host, such as the `host ID`, `host
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+
+## View host details using Terraform
+{: #view-host-tf}
+{: terraform}
+
+To view terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a host resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}
+
+
+## Next steps
+{: #next-step-view-hosts}
+
+Add hosts or manage your existing hosts.

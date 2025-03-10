@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-10"
 
 keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -138,3 +138,25 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 The command unmaps all volumes from a host. There is no response that is returned if the request is successful.
 
 To verify that all volumes mappings for a host are deleted, list the hosts by making a `GET /hosts/{id}` request.
+
+
+
+## Unmapping a volume for a host using Terraform
+{: #unmap-volume-host-tf}
+{: terraform}
+
+To unmap a volume for a host, use the CLI terminal and run the following commands. Currently terraform does not support unmapping of hosts.
+
+* To delete a single host mapping
+
+```sh
+ibmcloud sds host-vol-delete --host-id <HOST-ID> --volume-id <VOLUME-ID>
+```
+{: pre}
+
+* To delete all host mappings
+
+```sh
+ibmcloud sds host-vol-deleteall --host-id <HOST-ID>
+```
+{: pre}
