@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-03-11"
 
-keywords: Add capacity
+keywords: Add capacity, ceph as a service, cephaas
 
 subcollection: cephaas
 

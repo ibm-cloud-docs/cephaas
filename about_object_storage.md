@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-11"
 
-keywords: about, basics, cephaas object storage
+keywords: about, basics, cephaas object storage, ceph as a service
 
 subcollection: cephaas
 

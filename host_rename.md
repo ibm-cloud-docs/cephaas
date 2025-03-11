@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, block storage, rename host
+keywords: ceph as a service, cephaas, block storage, rename host
 
 subcollection: cephaas
 

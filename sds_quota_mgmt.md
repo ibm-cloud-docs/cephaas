@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, quota, capacity, manage
+keywords: cephaas, quota, capacity, manage, ceph as a service
 
 subcollection: cephaas
 

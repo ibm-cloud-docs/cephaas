@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-11"
 
-keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error
+keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error, ceph as a service
 
 subcollection: cephaas
 

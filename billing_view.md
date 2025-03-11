@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: administration, billing, platform
+keywords: administration, billing, platform, ceph as a service, cephaas, invoices, storage tiers, performance tier,  capacity tier
 
 subcollection: cephaas
 

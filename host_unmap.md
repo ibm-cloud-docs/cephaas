@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
+keywords: ceph as a service, sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
 subcollection: cephaas
 

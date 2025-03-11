@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
+keywords: sds, cephaas, block storage, volume, increase volume size for cephaas, manage volume, expand volume size, ceph as a service
 
 subcollection: cephaas
 

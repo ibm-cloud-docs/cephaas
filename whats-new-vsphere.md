@@ -1,9 +1,9 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: vSphere, plug-in, cephaas, release, what's new
+keywords: vSphere, plug-in, cephaas, release, what's new, ceph as a service
 
 subcollection: cephaas
 

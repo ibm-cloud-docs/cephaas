@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-11"
 
-keywords: CephaaS release notes
+keywords: ceph as a service, cephaas, release notes
 
 subcollection: cephaas
 

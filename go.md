@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: object storage, go, sdk, {{site.data.keyword.cephaas_full_notm}}
+keywords: object storage, go, sdk, ceph as a service
 
 subcollection: cephaas
 

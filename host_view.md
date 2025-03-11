@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: sds, host, view host details, host summary list
+keywords: ceph as a service, sds, host, view host details, host summary list
 
 subcollection: cephaas
 

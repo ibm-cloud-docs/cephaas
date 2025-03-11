@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas, responsibilities matrix
+keywords: sds, cephaas, responsibilities matrix, ceph as a service
 
 subcollection: cephaas
 

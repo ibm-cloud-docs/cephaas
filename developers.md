@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, developer, getting started, command-line interface, cli, developer tools,
+keywords: cephaas, developer, getting started, command-line interface, cli, developer tools, ceph as a service
 
 subcollection: cephaas
 

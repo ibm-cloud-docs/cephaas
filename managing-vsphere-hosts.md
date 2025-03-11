@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
-keywords: Managing hosts, vsphere plug-in, cephaas
+keywords: ceph as a service, Managing hosts, vsphere plug-in, cephaas
 
 subcollection: cephaas
 

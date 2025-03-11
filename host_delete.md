@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, delete host, sds host-delete,
+keywords: cephaas, delete host, sds host-delete, ceph as a service
 
 subcollection: cephaas
 

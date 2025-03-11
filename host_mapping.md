@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
+keywords: ceph as a service, cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
 subcollection: cephaas
 

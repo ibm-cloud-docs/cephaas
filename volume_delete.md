@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
+keywords: sds, cephaas, block storage, volume, delete Block Storage Volume for cephaas, ceph as a service
 
 subcollection: cephaas
 

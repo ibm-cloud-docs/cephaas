@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-14"
+lastupdated: "2025-03-11"
 
-keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service
+keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service, object storage, low cost object, 
 
 subcollection: cephaas
 

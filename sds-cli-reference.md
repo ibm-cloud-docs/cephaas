@@ -2,10 +2,10 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
 
-keywords: cli, command-line reference, unified storage, sds, software-defined-storage
+keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 
 subcollection: cephaas
 

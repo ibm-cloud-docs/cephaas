@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-11"
 
-keywords: getting started, cephaas, unified storage, cost estimation, software defined storage, on-premise, consultation request
+keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premise, consultation request
 
 subcollection: cephaas
 

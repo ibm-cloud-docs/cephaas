@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas host, host nqn
+keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
 subcollection: cephaas
 

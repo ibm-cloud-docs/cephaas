@@ -2,7 +2,9 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-02-14"
+lastupdated: "2025-03-11"
+
+keyword: ceph as a service, setting up terraform, installing terraform, configuring resources
 
 subcollection: cephaas
 

@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas, cephaas, set up environment, api, cli
+keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
 subcollection: cephaas
 

@@ -2,10 +2,10 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-12"
+lastupdated: "2025-03-11"
 
 
-keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network validation, account activation
+keywords: preorder, checklist, preinstallation checklist, site-readiness, ceph as a service, network validation, account activation
 
 subcollection: cephaas
 

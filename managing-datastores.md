@@ -1,9 +1,9 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: managing datastores in vsphere plug-in
+keywords: ceph as a service, managing datastores, vsphere plug-in, plugin, vSphere
 
 subcollection: cephaas
 ---

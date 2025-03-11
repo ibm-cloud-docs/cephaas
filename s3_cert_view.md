@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
-keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status
+keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status, ceph as a service
 
 subcollection: cephaas
 

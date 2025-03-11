@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
+keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
 subcollection: cephaas
 

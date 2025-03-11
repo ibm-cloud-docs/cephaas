@@ -1,9 +1,9 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: Connect VMware environment
+keywords: Connect VMware environment, ceph as a service, cephaas, vsphere, plug-in, vSphere, plugin, installing, register
 
 subcollection: cephaas
 ---

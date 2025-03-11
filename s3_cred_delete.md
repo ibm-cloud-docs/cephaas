@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
-keywords: cephaas , delete service credential
+keywords: cephaas, ceph as a service, delete service credential, object storage
 
 subcollection: cephaas
 

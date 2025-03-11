@@ -3,9 +3,9 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-01-28"
+lastupdated: "2025-03-11"
 
-keywords: network latency, {{site.data.keyword.cephaas_full_notm}}, on-premises
+keywords: network latency, ceph as a service, on-premises
 
 subcollection: cephaas
 
