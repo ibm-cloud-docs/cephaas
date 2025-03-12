@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premise, consultation request
 
@@ -32,7 +32,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 
-2. Select the required **Subscription term**, choose the **Storage tier** from `Performance` and `Capacity`, and enter the **Total storage** (TB) value to view your estimated costs.
+2. Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.
 
     You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the IBM Cloud. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 
@@ -40,7 +40,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
     - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
 
-    - **Capacity tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
+    - **Capacity Tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
 
 
 
