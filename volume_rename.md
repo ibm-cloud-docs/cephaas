@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: sds, cephaas, block storage, volume, remane volume, manage volume, ceph as a service
 
@@ -32,7 +32,7 @@ To rename a volume, complete the following steps.
 
 1. Go to the list of all Block storage volumes.
 
-2. Locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+2. Locate the volume and click the **options** icon at the end of the volume row to open a list of options.
 
 3. From the options menu, click **Rename volume**.
 

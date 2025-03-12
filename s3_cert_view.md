@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: cephaas settings, retrieve S3 Certificate details, S3 SSL certificate expiration date, status, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Retrieve S3 certificate status and types
 {: #retrieve-s3-cert-details}
 
-S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent **Man in the Middle (MITM)** attacks.
 
 This section provides guidance on how to retrieve and view the list of configured certificates, and the status of each of the S3 SSL certificate.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating S3 certificate
 {: #create-s3-certificate}
 
-S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks. You can create a new S3 SSL certificate by using the CLI or API.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent **Man in the Middle (MITM)** attacks. You can create a new S3 SSL certificate by using the CLI or API.
 {: shortdesc}
 
 You must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint.

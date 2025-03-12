@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -68,8 +68,8 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | Created date | System-generated date when the volume was created.|
 | Deployment | Name of the instance in the region.|
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
-| Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of `IOPS * 16` K block size.|
-| Mapped hosts | Displays a list of all hosts present in the system. You can also create a new host mapping or create a new host to map using the `Map host +` option. See [Creating a host](/docs/cephaas?topic=cephaas-creating-host&interface=ui).|
+| Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of **IOPS * 16** K block size.|
+| Mapped hosts | Displays a list of all hosts present in the system. You can also create a new host mapping or create a new host to map using the **Map host +** option. See [Creating a host](/docs/cephaas?topic=cephaas-creating-host&interface=ui).|
 {: caption="Volume details" caption-side="bottom"}
 
 The Actions menu on the volume details page shows the actions that you can take.

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: ceph as a service, cephaas, block storage, rename host
 
@@ -39,7 +39,7 @@ To rename a host, follow these steps:
 {: #renaming-sds-hosts-from-details-page-ui}
 {: ui}
 
-1. In the **Host** details page, click the `pen` icon next to the host name to modify the host name.
+1. In the **Host** details page, click the **pen** icon next to the host name to modify the host name.
 2. Provide a new valid **Host name**. Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter and must be unique. If you create two hosts with the same name in the same deployment, a duplicate host name error is displayed.
 3. Click **Rename host**.
 

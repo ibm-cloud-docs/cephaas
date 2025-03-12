@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: ceph as a service, sds, host, view host details, host summary list
 
@@ -48,7 +48,7 @@ Table describes the kebab menu options.
 | Delete             | Remove the mapping between the volume and host. |
 {: caption="Row actions menu options for Hosts." caption-side="bottom"}
 
-When you select one or more hosts, the `Delete` button is enabled and displayed which enables you to perform multiple delete operations.
+When you select one or more hosts, the **Delete** button is enabled and displayed which enables you to perform multiple delete operations.
 
 
 ## View single host details in the UI

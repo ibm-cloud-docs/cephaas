@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -31,9 +31,9 @@ For more information, see the [IAM overview](/docs/cephaas?topic=cephaas-iam-ove
 
 The _service credential_ is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID).
 
-The `Manager` role allows users to perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. This role **does not allow** users to modify the deployments.
+The **Manager** role allows users to perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. This role **does not allow** users to modify the deployments.
 
-The `Administrator` role allows for the user to see that the deployment exists, and to view existing credentials, and modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Manager` role on the deployment to be able to create and delete volumes and hosts.
+The **Administrator** role allows for the user to see that the deployment exists, and to view existing credentials, and modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the **Manager** role on the deployment to be able to create and delete volumes and hosts.
 
 For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
@@ -45,10 +45,10 @@ You can create a deployment (also called as service instance) through the UI, or
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
-You must have an `Administrator`, `Operator` and `Editor` role to create the deployment.
+You must have an **Administrator**, **Operator** and **Editor** role to create the deployment.
 {: note}
 
-To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click on the **hamburger menu > Resource list > Satellite location**.
+To create a deployment, you must have the **Subscription Plan ID**, **Satallite CRN** and **Order ID** handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click on the **hamburger menu > Resource list > Satellite location**.
 {: requirement}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-12"
 
 keywords: sds, cephaas, block storage, volume, increase volume size for cephaas, manage volume, expand volume size, ceph as a service
 
@@ -31,7 +31,7 @@ Use the console to expand the volume capacity. In the [{{site.data.keyword.cloud
 
 To increase the block volume-provisioned size from the list view page, complete the following steps.
 
-1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+1. In the **Volume** list view page, locate the volume and click the **options** icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
 2. Enter a new **size**.
 
@@ -47,7 +47,7 @@ To increase the block volume-provisioned size from the list view page, complete 
 
 To increase the block volume-provisioned size from the Volume details page, complete the following steps.
 
-1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
+1. In the **Volume** details page, you can click the **edit** icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
 2. Enter a new **size**.
 
     You can increase the provisioned size. It cannot be reduced.
