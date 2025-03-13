@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-13"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -353,7 +353,7 @@ terraform state list
 To target a volume resource, run the following command:
 
 ```terraform
-terraform state show <volume-instance-based-off-list>
+terraform state show ibm_sds_volume.<ibm_sds_volume_name>
 ```
 {: pre}
 

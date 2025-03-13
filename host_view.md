@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-13"
 
 keywords: ceph as a service, sds, host, view host details, host summary list
 
@@ -444,7 +444,7 @@ terraform state list
 To target a host resource, run the following command:
 
 ```terraform
-terraform state show <volume-instance-based-off-list>
+terraform state show ibm_sds_host.<ibm_sds_host_name>
 ```
 {: pre}
 

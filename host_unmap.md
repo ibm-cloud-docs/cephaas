@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-13"
 
 keywords: ceph as a service, sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -145,18 +145,8 @@ To verify that all volumes mappings for a host are deleted, list the hosts by ma
 {: #unmap-volume-host-tf}
 {: terraform}
 
-To unmap a volume for a host, use the CLI terminal and run the following commands. Currently terraform does not support unmapping of hosts.
+To unmap a volume from a host, do the following steps:
 
-* To delete a single host mapping
+1. Open your `main.tf` file and comment out/remove the `ibm_sds_volume_mapping` resource.
 
-```sh
-ibmcloud sds host-vol-delete --host-id <HOST-ID> --volume-id <VOLUME-ID>
-```
-{: pre}
-
-* To delete all host mappings
-
-```sh
-ibmcloud sds host-vol-deleteall --host-id <HOST-ID>
-```
-{: pre}
+2. After editing and saving the file, run commands `terraform plan` and `terraform apply` to apply your changes.

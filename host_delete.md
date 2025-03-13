@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-13"
 
 keywords: cephaas, delete host, sds host-delete, ceph as a service
 
@@ -116,9 +116,9 @@ To verify that the host is deleted, list the hosts by making a `GET /hosts` requ
 {: #deleting-host-tf}
 {: terraform}
 
-To delete a host by using terraform, run `terraform destroy -target <host_name>` where _<host_name>_ is the name of the host in the resource `ibm_sds_host` that is no longer needed.
+To delete a resource using terraform, you can run `terraform destroy -target <resource_type>.<resource_name>` where _<resource_name>_ is the name of the resource that is no longer needed.
 
-Example of <host_name> used in the below command is `ibm_sds_host.sds_host_instance`.
+Example of _<resource_type>.<resource_name>_: `ibm_sds_host.sds_host_instance`.
 
 First, show the list of terraform resources
 ```terraform

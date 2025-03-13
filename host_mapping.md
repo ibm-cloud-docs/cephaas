@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-13"
 
 keywords: ceph as a service, cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -148,50 +148,74 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #mapping-host-to-volume-tf}
 {: terraform}
 
-To map one or more hosts to a volume, edit the `main.tf` file to add a volume the `host_mappings` and `hostnqnstring` to the volume that needs to be mapped.
+To map one or more hosts to a volume, edit the `main.tf` file to add an `ibm_sds_volume_mapping` resource.
 
-To map a host and a volume, a volume must already exist or be created. Edit or add the `ibm_sds_volume` resource in the `main.tf` file and add the `volumes` block to the `ibm_sds_host`.
+To map a host and a volume, a volume  and host must be created or already exist.
 
-The following examples show how you can map a volume to a host.
+The following examples show how you can map a volume to a host using the `ibm_sds_volume_mapping` resource.
+
+A `time_sleep` resource is also used because the `ibm_sds_volume_mapping` resource depends on the `ibm_sds_host` and `ibm_sds_volume` resources to be created first.
 
 ```terraform
 
 resource "ibm_sds_volume" "sds_volume_instance" {
-    hostnqnstring = "<hostNQN>"
     capacity = 10
     name = "demo-volume"
 }
 
 // Provision sds_host resource instance
 resource "ibm_sds_host" "sds_host_instance" {
-
     name = "demo-host"
     nqn = "<hostNQN>"
-    volumes {
-        volume_id = ibm_sds_volume.sds_volume_instance.id
-        volume_name = ibm_sds_volume.sds_volume_instance.name
-    }
+}
+
+resource "ibm_sds_volume_mapping" "sds_vm" {
+
+  depends_on = [time_sleep.wait_5_seconds]
+
+  host_id = ibm_sds_host.sds_host_instance.id
+  volume {
+    id = ibm_sds_volume.sds_volume_instance.id
+  }
+}
+
+// Use this sleep to allow the volume mappings to delete first before deleting the volumes and hosts
+resource "time_sleep" "wait_5_seconds" {
+  depends_on = [
+    ibm_sds_volume.sds_volume_instance,
+    ibm_sds_host.sds_host_instance
+  ]
+  destroy_duration = "5s"
 }
 ```
 {: screen}
 
 
-To map multiple volumes to a host, add another `volumes` block
+To map multiple volumes to a host, create another volume, and then create another `ibm_sds_volume_mapping` resource
 
 ```terraform
-// Provision sds_host resource instance
-resource "ibm_sds_host" "sds_host_instance" {
+resource "ibm_sds_volume" "sds_volume_instance_2" {
+    capacity = 10
+    name = "demo-volume-2"
+}
 
-    name = "demo-host"
-    nqn = "<hostNQN>"
-    volumes {
-        volume_id = ibm_sds_volume.sds_volume_instance.id
-        volume_name = ibm_sds_volume.sds_volume_instance.name
-    }
-    volumes {
-        volume_id = ibm_sds_volume.sds_volume_instance_2.id
-        volume_name = ibm_sds_volume.sds_volume_instance_2.name
-    }
+resource "ibm_sds_volume_mapping" "sds_vm_2" {
+
+  depends_on = [time_sleep.wait_5_seconds]
+
+  host_id = ibm_sds_host.sds_host_instance.id
+  volume {
+    id = ibm_sds_volume.sds_volume_instance_2.id
+  }
+}
+
+resource "time_sleep" "wait_5_seconds" {
+  depends_on = [
+    ibm_sds_volume.sds_volume_instance,
+    ibm_sds_volume.sds_volume_instance_2,
+    ibm_sds_host.sds_host_instance
+  ]
+  destroy_duration = "5s"
 }
 ```
 {: screen}

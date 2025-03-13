@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-13"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -217,16 +217,23 @@ To create host using terraform, you must have the `host nqn` handy. For guidance
 
     See the example output for details.
 
-    ```sh
-    # ibm_sds_host.sds_host_instance will be created
-    + resource "ibm_sds_host" "sds_host_instance" {
-        + created_at   = (known after apply)
-        + id           = (known after apply)
-        + name         = "demo-host"
-        + nqn          = "nqn.2014-06.org:9345"
-        + sds_endpoint = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
+    ```terraform
+    ibm_sds_host.sds_host_instance: Creating...
+    ibm_sds_host.sds_host_instance: Creation complete after 1s [id=r134-e8b82dc5-e081-422e-9709-a44ec63f56af]
 
-      }
+    Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+    Outputs:
+
+    ibm_sds_host = {
+      "created_at" = "2025-03-10T14:58:33.000Z"
+      "href" = "https://block-storage.dev3-8ce82ab061950a7b6121a1b00b849d81-0000.us-south.containers.appdomain.cloud/v1/hosts/r134-e8b82dc5-e081-422e-9709-a44ec63f56af"
+      "id" = "r134-e8b82dc5-e081-422e-9709-a44ec63f56af"
+      "name" = "demo-host"
+      "nqn" = "nqn.2014-06.org:9345"
+      "sds_endpoint" = tostring(null)
+      "volume_mappings" = tolist([])
+    }
     ```
     {: screen}
 

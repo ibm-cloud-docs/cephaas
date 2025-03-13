@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-13"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -146,7 +146,6 @@ A successful response looks like this:
 
    ```terraform
    resource "ibm_sds_volume" "sds_volume_instance" {
-     hostnqnstring = "<hostNQN>"
      capacity = 10
      name = "demo-volume"
    }
@@ -182,27 +181,33 @@ A successful response looks like this:
     See the example output for details.
 
     ```terraform
-   # ibm_sds_volume.sds_volume_instance will be created
-   + resource "ibm_sds_volume" "sds_volume_instance" {
-         + bandwidth      = (known after apply)
-         + capacity       = 10
-         + created_at     = (known after apply)
-         + hostnqnstring  = "nqn.2014-06.org:9345"
-         + hosts          = (known after apply)
-         + id             = (known after apply)
-         + iops           = (known after apply)
-         + name           = "demo-volume-2"
-         + resource_type  = (known after apply)
-         + sds_endpoint   = "https://c-01.private.us-south.link.satellite.cloud.ibm.com:33029/v1"
-         + status         = (known after apply)
-         + status_reasons = (known after apply)
+   ibm_sds_volume.sds_volume_instance_1: Creating...
+   ibm_sds_volume.sds_volume_instance_1: Creation complete after 1s [id=r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f]
 
-      }
+   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+   Outputs:
+
+   ibm_sds_volume = [
+   {
+      "bandwidth" = 19
+      "capacity" = 10
+      "created_at" = "2025-03-10T14:44:34.000Z"
+      "href" = "https://block-storage.dev3-8ce82ab061950a7b6121a1b00b849d81-0000.us-south.containers.appdomain.cloud/v1/volumes/r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
+      "id" = "r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
+      "iops" = 150
+      "name" = "demo-volume-1"
+      "resource_type" = "volume"
+      "status" = "pending"
+      "status_reasons" = tolist([])
+      "volume_mappings" = tolist([])
+   },
+   ]
     ```
     {: screen}
 
 
-For more information about the arguments and attributes, see [ibm_is_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_instance){: external}.
+For more information about the arguments and attributes, see [ibm_is_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sdsaas){: external}.
 
 
 ## Next steps
