@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-17"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -51,7 +51,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume by using the UI, CLI, API and Terraform. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
+You can change the name of an existing volume by using the UI, CLI, and API . See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -82,7 +82,7 @@ When you delete a block storage volume, all pointers to the data on that volume 
 
 One confusing aspect of storage is the units that storage capacity and usage are reported in. Sometime GB represents gigabytes (base-10) and sometimes GB represents gibibytes (base-2) which ought to be abbreviated as GiB.
 
-Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, API, and Terraform, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
+Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, and API, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
 
 However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer file systems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available Storage Systems are considerably larger this unit difference is causing confusion.
 

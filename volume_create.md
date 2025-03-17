@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-17"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating block volumes
 {: #creating-block-volume}
 
-Create a block storage volume by using the UI, CLI, API or terraform.
+Create a block storage volume by using the UI, CLI, and API. 
 {: shortdesc}
 
 
@@ -136,78 +136,6 @@ A successful response looks like this:
 {: screen}
 
 
-
-## Creating block volumes using Terraform
-{: #create-volume-tf}
-{: terraform}
-
-
-1. Create a volume instance by using the `ibm_sds_volume` resource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
-
-   ```terraform
-   resource "ibm_sds_volume" "sds_volume_instance" {
-     capacity = 10
-     name = "demo-volume"
-   }
-   ```
-   {: codeblock}
-
-
-2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
-
-   ```terraform
-   terraform init
-   ```
-   {: pre}
-
-3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
-
-   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
-
-      ```terraform
-      terraform plan
-      ```
-      {: pre}
-
-   1. Run `terraform apply` to create the resources that are defined in the plan.
-
-      ```terraform
-      terraform apply
-      ```
-      {: pre}
-
-4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
-
-    See the example output for details.
-
-    ```terraform
-   ibm_sds_volume.sds_volume_instance_1: Creating...
-   ibm_sds_volume.sds_volume_instance_1: Creation complete after 1s [id=r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f]
-
-   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-
-   Outputs:
-
-   ibm_sds_volume = [
-   {
-      "bandwidth" = 19
-      "capacity" = 10
-      "created_at" = "2025-03-10T14:44:34.000Z"
-      "href" = "https://block-storage.dev3-8ce82ab061950a7b6121a1b00b849d81-0000.us-south.containers.appdomain.cloud/v1/volumes/r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
-      "id" = "r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
-      "iops" = 150
-      "name" = "demo-volume-1"
-      "resource_type" = "volume"
-      "status" = "pending"
-      "status_reasons" = tolist([])
-      "volume_mappings" = tolist([])
-   },
-   ]
-    ```
-    {: screen}
-
-
-For more information about the arguments and attributes, see [ibm_is_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sdsaas){: external}.
 
 
 ## Next steps

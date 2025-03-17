@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-17"
 
 keywords: sds, cephaas, block storage, volume, remane volume, manage volume, ceph as a service
 
@@ -123,17 +123,3 @@ A successful response looks like this:
 }
 ```
 {: screen}
-
-
-## Renaming block volume using Terraform
-{: #rename-volume-tf}
-{: terraform}
-
-To rename the volume, do the following steps:
-
-1. Open your `main.tf` file and modify the `name` value in the `ibm_sds_volume` resource.
-
-2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
-
-You can modify only one parameter value at a time.
-{: note}

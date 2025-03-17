@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-17"
 
 keywords: cephaas, developer, getting started, command-line interface, cli, developer tools, ceph as a service
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli), [IBM Developer Tools](/docs/sdk-handbook?topic=sdk-handbook-devtools), and [terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) installed.
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli), and [IBM Developer Tools](/docs/sdk-handbook?topic=sdk-handbook-devtools)  installed.
 
 
 
