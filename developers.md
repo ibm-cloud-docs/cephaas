@@ -38,6 +38,3 @@ For managing the data stored in {{site.data.keyword.cephaas_full_notm}}, you can
 {: #gs-dev-sdk}
 
 {{site.data.keyword.cephaas_short}} SDK is currently available only for [Go](/docs/cephaas?topic=cephaas-using-go). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/cephaas?topic=cephaas-iam-overview).
-
-The SDK Go github links mentioned in the examples will work only post General Availability (GA).
-{: important}
