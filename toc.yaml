@@ -137,7 +137,7 @@ toc:
       links:
         - link:
             label: Terraform reference
-            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_host
+            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
