@@ -12,7 +12,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 # What's new with vSphere plug-in
-{: #whats-new}
+{: #whats-new-vsphere}
 
 Learn about the dates and nature of updates to the published information of the {{site.data.keyword.cephaas_full}} plug-in for vSphere.
 
