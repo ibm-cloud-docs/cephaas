@@ -30,7 +30,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 * Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
 
-* Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+* Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
 ## Creating a sample volume and host instance
 {: #sample-vol-host-instance}
@@ -97,7 +97,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 5. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
 
-6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console&interface=ui).
 
 ## What's next?
 {: #terraform-setup-next}
