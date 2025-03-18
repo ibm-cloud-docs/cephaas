@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-18"
 
 keywords: ceph as a service, sds, host, view host mapping details, host summary list
 
@@ -291,3 +291,23 @@ A successful response provides details of the host, such as the `host ID`, `host
 }
 ```
 {: screen}
+
+
+
+## View host details using Terraform
+{: #view-host-tf}
+{: terraform}
+
+To view Terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a host resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}

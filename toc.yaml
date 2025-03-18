@@ -39,6 +39,7 @@ toc:
       - iam_access.md
       - iam_overview.md
       - setup_cli_api_environment.md
+      - setup-terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -133,6 +134,10 @@ toc:
           topics:
             - getting-started-sdks.md
             - go.md
+      links:
+        - link:
+            label: Terraform reference
+            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_host
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help

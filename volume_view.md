@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-18"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -337,6 +337,25 @@ A successful response provides details of the volume, including capacity and IOP
 
 ```
 {: codeblock}
+
+
+## View volume details using Terraform
+{: #view-volume-tf}
+{: terraform}
+
+To view Terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a volume resource, run the following command:
+
+```terraform
+terraform state show ibm_sds_volume.<ibm_sds_volume_name>
+```
+{: pre}
 
 
 

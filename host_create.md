@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-03-18"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating a host
 {: #creating-host}
 
-Create a host by using the UI, CLI, and API. 
+Create a host by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 
@@ -172,8 +172,71 @@ A successful response looks like this:
 {: screen}
 
 
+## Creating hosts using Terraform
+{: #create-host-tf}
+{: terraform}
+
+To create host using Terraform, you must have the `host nqn` handy. For guidance on how to find the `host nqn`, see [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings&interface=ui#config-nvme-initiators).
+
+1. Create a host instance in your `main.tf` file by using the `ibm_sds_host` resource argument. The host instance in the following example is named `sds_host_instance` respectively.
+
+   ```terraform
+    resource "ibm_sds_host" "sds_host_instance" {
+      name = "demo-host"
+      nqn = "<hostNQN>"
+    }
+   ```
+   {: codeblock}
 
 
+2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://developer.hashicorp.com/terraform/cli/run){: external}.
+
+   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
+
+      ```terraform
+      terraform plan
+      ```
+      {: pre}
+
+   1. Run `terraform apply` to create the resources that are defined in the plan.
+
+      ```sh
+      terraform apply
+      ```
+      {: pre}
+
+4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+
+    See the example output for details.
+
+    ```terraform
+    ibm_sds_host.sds_host_instance: Creating...
+    ibm_sds_host.sds_host_instance: Creation complete after 1s [id=r134-e8b82dc5-e081-422e-9709-a44ec63f56af]
+
+    Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+    Outputs:
+
+    ibm_sds_host = {
+      "created_at" = "2025-03-10T14:58:33.000Z"
+      "href" = "$sds_endpoint/hosts/r134-e8b82dc5-e081-422e-9709-a44ec63f56af"
+      "id" = "r134-e8b82dc5-e081-422e-9709-a44ec63f56af"
+      "name" = "demo-host"
+      "nqn" = "nqn.2014-06.org:9345"
+      "sds_endpoint" = tostring(null)
+      "volume_mappings" = tolist([])
+    }
+    ```
+    {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. 
 
 ## Next steps
 {: #next-step-creating-hosts}
