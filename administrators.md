@@ -63,7 +63,10 @@ You can start creating a deployment after cost estimation and the order processi
 
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 
-    While creating the IBM Cloud Satellite location, you can choose Object storage standard plan. For more information, see [IBM Cloud Satellite](/docs/satellite?topic=satellite-locations).
+    The Satellite location is required to be present on-premises deployment on IBM Cloud without a host, since the location is not dependent on the host and other setup in your infrastructure. To create a new on-premises type of location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem).
+    {: important}
+
+    While creating the IBM Cloud Satellite location, you can choose Object storage standard plan.
     {: tip}
 
 3. Enter your **Deployment name** and click **Create**.
