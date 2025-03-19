@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: ceph as a service, sds, host, view host mapping details, host summary list
 
@@ -294,8 +294,8 @@ A successful response provides details of the host, such as the `host ID`, `host
 
 
 
-## View host details using Terraform
-{: #view-host-tf}
+## View host mapping details using Terraform
+{: #view-host-mapping-details-tf}
 {: terraform}
 
 To view Terraform objects

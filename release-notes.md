@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -28,7 +28,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 ## 4 March 2025
-{: #sds-march2025}
+{: #sds-04march2025}
 {: release-note}
 
 Introducing {{site.data.keyword.cephaas_full}}
@@ -36,7 +36,7 @@ Introducing {{site.data.keyword.cephaas_full}}
 
 
 ## 20 March 2025
-{: #sds-march2025}
+{: #sds-20march2025}
 {: #release-note}
 
 API, Go SDK and Terraform is now available.
