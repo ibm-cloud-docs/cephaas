@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -15,11 +15,11 @@ subcollection: cephaas
 # Creating a host
 {: #creating-host}
 
-Create a host by using the UI, CLI, API or Terraform.
+Create a host by using the UI, CLI, API, or Terraform.
 {: shortdesc}
 
 
-Before creating a host, you must configure the NVME-oF initiator. This is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
+Before creating a host, you must configure the NVME-oF initiator. This NVME-oF initiator is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
 {: requirement}
 
 
@@ -80,7 +80,7 @@ Volume_Mappings
 ```
 {: screen}
 
-Maximum supported NQN length is 223 bytes.
+The maximum supported NQN length is 223 bytes.
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
@@ -236,7 +236,7 @@ To create host using Terraform, you must have the `host nqn` handy. For guidance
     ```
     {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`.
 
 ## Next steps
 {: #next-step-creating-hosts}

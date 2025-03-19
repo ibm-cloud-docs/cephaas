@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -15,7 +15,7 @@ subcollection: cephaas
 # {{site.data.keyword.cephaas_short}} CLI
 {: #ic-sds-cli-reference}
 
-The {{site.data.keyword.cephaas_full_notm}} plugin extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to give you the ability to run commands that perform various operations for the service that includ but not limited to managing volumes, hosts, mappings, object credentials, and certificates.
+The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyword.cloud_notm}} command-line interface (CLI) to give you the ability to run commands that perform various operations for the service that includ but not limited to managing volumes, hosts, mappings, object credentials, and certificates.
 {: shortdesc}
 
 
@@ -58,7 +58,7 @@ ibmcloud plugin update software-defined-storage
 ```
 {: pre}
 
-The latest plug-in version is downloaded and replaces your current plug-in service commands. If there are no updates available, the message `No updates are available` is displayed.
+The latest plug-in version is downloaded and replaces your current plug-in service commands. If there are no new updates available, the message `No updates are available` is displayed.
 
 You're notified on the command-line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
 {: tip}
@@ -76,7 +76,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 ### software-defined-storage
 {: #ic-sds-plug-in}
 
-`software-defined-storage` -  an OpenAPI definition for the cephaas CLI on IBM Cloud platform.
+`software-defined-storage` -  an OpenAPI definition for the {{site.date.keyword.cephaas_short}} CLI on the IBM Cloud platform.
 
 ```sh
 ibmcloud software-defined-storage [command] [options]
@@ -120,7 +120,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Name of the volume.
 	* Flag: `--name NAME`
 
-	If you do not specify a name for the new volume, the system generates a name which is a hyphenated list of randomly selected words.
+	If you do not specify a name for the new volume, the system generates a name that is a hyphenated list of randomly selected words.
 	{: note}
 
 * API Endpoint in the URL form.
@@ -260,7 +260,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
-* The number of resources to return on a page. The default value is 1. Maximum limit value is 1000.
+* The number of resources to return on a page. The default value is 1. The maximum limit value is 1000.
 	* Flag: `--limit int`
 
 * Filter by name from the resource collection. You can specify 0 to 200 characters in string length.
@@ -272,7 +272,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ## Hosts
 {: #ic-sds-hosts}
 
-### Create new host
+### Create a new host
 {: #ic-create-host-from-template}
 
 ```sh
@@ -450,7 +450,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
-* Specify the host id whose details you want to view
+* Specify the host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
 * Specify the unique volume identifier.
@@ -520,7 +520,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
-* Unique volume-mapping identifier. This can be found by viewing either the associated volume or host you'd like to complete this operation against
+* Unique volume-mapping identifier. This ID can be found by viewing either the associated volume or host you'd like to complete this operation against.
 	* Flag: `--volume-mapping-id VOLUME-MAPPING_ID`
 
 * API Endpoint in the URL form.
@@ -584,7 +584,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Host ID whose details you want to view
 	* Flag: `--host-id HOST-ID`
 
-* Unique volume-mapping identifier. This can be found by viewing either the associated volume or host you'd like to complete this operation against
+* Unique volume-mapping identifier. This ID can be found by viewing either the associated volume or host you'd like to complete this operation against.
 	* Flag: `--volume-mapping-id VOLUME-MAPPING_ID`
 
 * API Endpoint in the URL form.
@@ -626,7 +626,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ## Object storage
 {: #object-storage-cmds}
 
-### Create service credential
+### Create a service credential
 {: #ic-create-service-cred}
 
 Updates credentials for a storage account or creates them if they do not exist.
@@ -894,7 +894,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 `Config` Command can be used for controlling or viewing persistent configuration of global options.
 
-To control or view persistant configurations, run `ibmcloud sds config` command along with the global options to list, set, and unset the config values.
+To control or view persistent configurations, run `ibmcloud sds config` command along with the global options to list, set, and unset the config values.
 
 You can set the `url` variable such that you do not need to use the `--url` flag when using with the `sds` command.
 

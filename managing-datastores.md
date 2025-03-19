@@ -17,7 +17,7 @@ subcollection: cephaas
 ## Adding a datastore
 {: #add-datastore}
 
-Use the following procedure to add an {{site.data.keyword.cephaas_full_notm}} datastore to the vSphere Plug-in.
+Use the following procedure to add an {{site.data.keyword.cephaas_full_notm}} datastore to the vSphere plug-in.
 
 1. Login to the vSphere client.
 2. From the vSphere client dashboard left pane, select the vSphere Cluster that requires new datastores, and navigate to **Actions** > **{{site.data.keyword.cephaas_full_notm}}** > **Create VMFS Datastore**.
@@ -36,7 +36,7 @@ This task initiates a workflow that increases the available capacity of the sele
 
 1. From the vSphere client dashboard left pane, select your vSphere Cluster.
 2. Click datastore icon in the top pane.
-3. Select the datastore you wish to expand in the left pane and click **Actions** > **IBM Storage Cephaas from the menu**.
+3. Select the datastore that you wish to expand in the left pane and click **Actions** > **IBM Storage Cephaas from the menu**.
 4. From the submenu, select **Expand VMFS Datastore**.
 5. Expand VMFS datastore screen is displayed with values **Volume Name**, **Current Total Capacity**, **Expand by**, and **Datastore Capacity Usage** bar.
 6. Enter a value to increase the datastore by, select the appropriate unit, for example, TB or GB.

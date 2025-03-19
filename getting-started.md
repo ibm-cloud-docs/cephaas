@@ -18,7 +18,7 @@ An IBM representative will contact you to understand your requirements. Post dis
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
 {: #getting-started}
 
-{{site.data.keyword.cephaas_full}} is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated storage systems.
+{{site.data.keyword.cephaas_full}} is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated Storage Systems.
 {: shortdesc}
 
 By eliminating over-provisioning and right-sizing your infrastructure, you can ensure optimal resource utilization and cost-efficiency. Based on the benefits of IBM Storage Ceph, it breaks down the silos of dedicated, proprietary storage infrastructure and software, offering unified support for multiple protocols across a single platform. With a seamless, single point of management, it simplifies operations, giving you control over your entire storage environment from one interface.
@@ -28,7 +28,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #estimatecost}
 {: step}
 
-{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud catalog. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
+{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
 
 1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 
@@ -38,7 +38,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
     {{site.data.keyword.cephaas_short}} can be provisioned with 100 TB to 3200 TB with two storage options:
 
-    - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components needed to utilize this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
+    - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components that are needed to use this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
 
     - **Capacity Tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
 
@@ -74,9 +74,9 @@ To learn more about how to create your deployments, see [Creating deployments](/
 {: #setupandmaintenance}
 {: step}
 
-After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You will be responsible for meeting the physical site requirements; for example, energy, cooling, space, physical network connectivity; where the infrastructure will be installed. IBM will be responsible for installation, configuration, and operation of the infrastructure.
+After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You are responsible for meeting the physical site requirements; for example, energy, cooling, space, physical network connectivity; where the infrastructure is installed. IBM is responsible for installation, configuration, and operation of the infrastructure.
 
-While IBM will own and operate the infrastructure, you will be able to provision your own storage volumes. IBM will continue to operate and maintain the respective hardware and software maintenance operations.
+While IBM owns and operates the infrastructure, you are able to provision your own storage volumes. IBM continues to operate and maintain the respective hardware and software maintenance operations.
 
-To understand and prepare your data center before the rack arrives for installation, read the [pre-requisites for installing {{site.data.keyword.cephaas_short}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
+To understand and prepare your data center before the rack arrives for installation, read the [prerequisites for installing {{site.data.keyword.cephaas_short}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
 {: note}

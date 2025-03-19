@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error, ceph as a service
 
@@ -76,7 +76,7 @@ These operations create, delete, get information about, and control the behavior
 
 | Administration operation              | Note                                                               |
 |:------------------------------------  |:-------------------------------------------------------------------|
-| `POST /certificates/{cert_type}`      | Create S3 certificate.                                             |
+| `POST /certificates/{cert_type}`      | Create an S3 certificate.                                          |
 | `PUT /certificates/{cert_type}`       | Replace or update the S3 certificate                               |
 | `GET /certificates/{cert_type}`       | Retrieves the certificate status.                                  |
 | `DELETE /certificates/{cert_type}`    | Deletes the S3 certificate.                                        |
@@ -103,18 +103,18 @@ These operations create, delete, get information about, and control the behavior
 
 | Object operation          | Note                                                                                |
 |:--------------------------|:------------------------------------------------------------------------------------|
-| `DELETE` Object           | Deletes an object from a bucket.                                                   |
-| `DELETE` Batch            | Deletes many objects from a bucket with one operation.                             |
-| `GET` Object              | Retrieves an object from a bucket.                                                 |
-| `HEAD` Object             | Retrieves an object's headers.                                                     |
-| `PUT` Object              | Adds an object to a bucket.                                                        |
-| `PUT` Object (Copy)       | Creates a copy of an object.                                                       |
-| Begin Multipart Upload    | Creates an upload ID for a set of parts to be uploaded.                            |
-| Upload Part               | Uploads a part of an object that is associated with an upload ID.                  |
-| Upload Part (Copy)        | Uploads a part of an existing object that is associated with an upload ID.         |
-| Complete Multipart Upload | Assembles an object from parts that are associated with an upload ID.              |
+| `DELETE` Object           | Deletes an object from a bucket.                                                    |
+| `DELETE` Batch            | Deletes many objects from a bucket with one operation.                              |
+| `GET` Object              | Retrieves an object from a bucket.                                                  |
+| `HEAD` Object             | Retrieves an object's headers.                                                      |
+| `PUT` Object              | Adds an object to a bucket.                                                         |
+| `PUT` Object (Copy)       | Creates a copy of an object.                                                        |
+| Begin Multipart Upload    | Creates an upload ID for a set of parts to be uploaded.                             |
+| Upload Part               | Uploads a part of an object that is associated with an upload ID.                   |
+| Upload Part (Copy)        | Uploads a part of an existing object that is associated with an upload ID.          |
+| Complete Multipart Upload | Assembles an object from parts that are associated with an upload ID.               |
 | Cancel Multipart Upload   | Cancels upload and deletes outstanding parts that are associated with an upload ID. |
-| List Parts                | Returns a list of parts that are associated with an upload ID                       |
+| List Parts                | Returns a list of parts that are associated with an upload ID.                      |
 {: caption="Object operation" caption-side="top"}
 
 

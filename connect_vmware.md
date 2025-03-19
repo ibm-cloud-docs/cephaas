@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 keywords: Connect VMware environment, ceph as a service, cephaas, vsphere, plug-in, vSphere, plugin, installing, register
 
@@ -21,7 +21,7 @@ These instructions are for a quick installation overview of the {{site.data.keyw
 {: #vm-connect-prereq}
 {: step}
 
-The {{site.data.keyword.cephaas_full_notm}} plugin for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
+The {{site.data.keyword.cephaas_full_notm}} plug-in for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
 
 **Appliance requirements**
 

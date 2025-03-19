@@ -20,7 +20,7 @@ subcollection: cephaas
 
 This Quick Start guide provides a code example that demonstrates the following operations:
 
-* Create new volume or host
+* Create a new volume or host
 * List the available volumes or hosts
 * Retrieve all volumes or hosts
 * Modify volume or host details

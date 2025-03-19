@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keyword: ceph as a service, setting up terraform, installing terraform, configuring resources
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # Setting up Terraform
 {: #terraform-setup}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.cephaas_full}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments according to **Infrastructure as Code (IaC)** principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API, and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.cephaas_full}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
 
@@ -104,7 +104,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 Now that you successfully created your first {{site.data.keyword.cephaas_short}} deployment instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:
 
-* Create new volume or host
+* Create a new volume or host
 * List the available volumes or hosts
 * Retrieve all volumes or hosts
 * Modify volume or host details
