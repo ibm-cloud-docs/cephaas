@@ -59,15 +59,17 @@ Soon thereafter, an IBM representative will contact you to understand your requi
 
 
 
-After IBM places your order, the next step is to select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
+After IBM places your order, the next step is to
 
-You can either select an existing satellite location or create a new location.
-To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
+1. Select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
 
-While creating the new Satellite location, you can choose Object storage standard plan.
-{: tip}
+    You can either select an existing satellite location or create a new on-premises type of location.
+    To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
 
-To learn more about how to create your deployments, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).
+    While creating the new Satellite location, you can choose Object storage standard plan.
+    {: tip}
+
+2. Create your deployment. To learn how to create your deployments, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).
 
 
 ## Infrastructure setup and maintenance
