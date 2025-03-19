@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 keywords: about, basics, cephaas object storage, ceph as a service
 
@@ -57,6 +57,6 @@ You can create a set of HMAC credentials using the console, CLI, and API. For in
 ## Next Steps
 {: #about-obj-storage-next-steps}
 
-After creating the credentials and uploading the S3 SSL certificate, you can proceed with creating buckets and objects using the AWS CLI. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
+After creating the credentials and uploading the S3 SSL certificate, you can proceed with creating buckets and objects by using the AWS CLI. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
 
 Also, see guidance on how to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).
