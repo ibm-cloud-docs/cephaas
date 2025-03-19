@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -55,7 +55,7 @@ Table 2 describes the Actions menu options.
 {: #view-vol-details-ui}
 {: ui}
 
-To view details of a single volume, go to the list of all volumes and click on the volume name.
+To view details of a single volume, go to the list of all volumes and click the volume name.
 
 The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 3 describes this information.
 

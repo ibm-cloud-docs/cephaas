@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 keywords: ceph as a service, managing datastores, vsphere plug-in, plugin, vSphere
 
@@ -36,7 +36,7 @@ This task initiates a workflow that increases the available capacity of the sele
 
 1. From the vSphere client dashboard left pane, select your vSphere Cluster.
 2. Click datastore icon in the top pane.
-3. Select the datastore you wish to expand in the left pane and click on **Actions** > **IBM Storage Cephaas from the menu**.
+3. Select the datastore you wish to expand in the left pane and click **Actions** > **IBM Storage Cephaas from the menu**.
 4. From the submenu, select **Expand VMFS Datastore**.
 5. Expand VMFS datastore screen is displayed with values **Volume Name**, **Current Total Capacity**, **Expand by**, and **Datastore Capacity Usage** bar.
 6. Enter a value to increase the datastore by, select the appropriate unit, for example, TB or GB.

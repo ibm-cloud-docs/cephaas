@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-19"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -48,7 +48,7 @@ With the Resource controller (RC) API and CLI, you can set and manage the servic
 You must have an **Administrator**, **Operator** and **Editor** role to create the deployment.
 {: note}
 
-To create a deployment, you must have the **Subscription Plan ID**, **Satallite CRN** and **Order ID** handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click on the **hamburger menu > Resource list > Satellite location**.
+To create a deployment, you must have the **Subscription Plan ID**, **Satallite CRN**, and **Order ID** handy. You can get the Plan ID from the [Global catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click the **hamburger menu > Resource list > Satellite location**.
 {: requirement}
 
 
@@ -59,7 +59,7 @@ To create a deployment, you must have the **Subscription Plan ID**, **Satallite 
 You can start creating a deployment after cost estimation and the order processing is initiated.
 
 
-1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
+1. Open the order status email from your IBM sales partner and click the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
 
 2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
 
@@ -68,9 +68,9 @@ You can start creating a deployment after cost estimation and the order processi
 
 3. Enter your **Deployment name** and click **Create**.
 
-    Your **Deployment Preparation** status will show as **Completed**.
+    Your **Deployment Preparation** status shows as **Completed**.
 
-    After the on-premise hardware setup is completed, the deployment shows **Available** status and ready-to-be provisioned.
+    After the on-premises hardware setup is completed, the deployment shows **Available** status and ready-to-be provisioned.
 
 
 
@@ -88,7 +88,7 @@ You can start creating a deployment after cost estimation and the order processi
     ```
     {: pre}
 
-3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and Satellite details. Now you have a CRN for the instance.
+3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan, and Satellite details. Now you have a CRN for the instance.
 
     ```sh
     ibmcloud resource service-instance-create <service_instance_name> software-defined-storage <plan_id> satloc_dal_<satellite_guid> -p '{"satellite_crn":"<"satellite_crn>,"order_id":"<order-id>}' -g Default

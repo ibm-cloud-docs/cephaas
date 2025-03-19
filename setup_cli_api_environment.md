@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
@@ -36,7 +36,7 @@ Before you can create an {{site.data.keyword.cephaas_full}} by using the API, or
 Before you can use the CLI, you must install the IBM Cloud CLI and the {{site.data.keyword.cephaas_full_notm}} CLI plug-in.
 
 
-Make sure that your environment from which the CLI will be run is connected to the on-premise network before using the CLI on the on-premise deployment of {{site.data.keyword.cephaas_full_notm}}.
+Make sure that your environment from which the CLI will be run is connected to the on-premises network before using the CLI on the on-premises deployment of {{site.data.keyword.cephaas_full_notm}}.
 {: requirement}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.

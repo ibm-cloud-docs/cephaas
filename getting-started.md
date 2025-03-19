@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-19"
 
-keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premise, consultation request
+keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
 subcollection: cephaas
 
@@ -28,7 +28,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #estimatecost}
 {: step}
 
-{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud Catalog. You can click on the **Storage Ceph as a Service** tile to start the service cost estimation tool.
+{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud catalog. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
 
 1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 

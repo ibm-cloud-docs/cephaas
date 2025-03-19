@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-19"
 
 
 keywords: preorder, checklist, preinstallation checklist, site-readiness, ceph as a service, network validation, account activation
@@ -20,7 +20,7 @@ subcollection: cephaas
 Proper planning is essential for the successful setup and use of {{site.data.keyword.cephaas_full_notm}} deployment. It ensures that you have everything you need and that you meet all the prerequisites for your deployment.
 {: shortdesc}
 
-IBM owns the responsibility to install, upgrade, and update the hardware and software for the on-premise infrastructure. IBM coordinates with you for any dependencies to ensure that your {{site.data.keyword.cephaas_full_notm}} data center meets all the prerequisites before the installation. You will need “pay-as-you-go” IBM Cloud account for {{site.data.keyword.cephaas_full_notm}}.
+IBM owns the responsibility to install, upgrade, and update the hardware and software for the on-premises infrastructure. IBM coordinates with you for any dependencies to ensure that your {{site.data.keyword.cephaas_full_notm}} data center meets all the prerequisites before the installation. You will need “pay-as-you-go” IBM Cloud account for {{site.data.keyword.cephaas_full_notm}}.
 
 IBM provides a pre-installation checklist after you place an order for {{site.data.keyword.cephaas_full_notm}} and also during the pre-installation stage. You must complete the items in the pre-installation checklist to prepare your {{site.data.keyword.cephaas_full_notm}} environment for the installation. An IBM representative conducts an installation readiness review to ensure that you understand the prerequisites.
 

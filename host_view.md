@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: ceph as a service, sds, host, view host details, host summary list
 
@@ -55,7 +55,7 @@ When you select one or more hosts, the **Delete** button is enabled and displaye
 {: #view-single-host-details-ui}
 {: ui}
 
-To view details of a single host, go to the list of all hosts and click on the hostname link.
+To view details of a single host, go to the list of all hosts and click the hostname link.
 
 The Host details page shows the details of the chosen hostname and all its mapped volumes. The table describes this information.
 
