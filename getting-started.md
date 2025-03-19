@@ -66,7 +66,7 @@ After IBM places your order, the next step is to
     You can either select an existing satellite location or create a new on-premises type of location. To create a location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}.
 
     This location is required to be present on-premises deployment on IBM Cloud without a host, since the location is not dependent on the host and other setup in your infrastructure.
-    {: requirement}
+    {: important}
 
     While creating the new Satellite location, you can choose Object storage standard plan.
     {: tip}
