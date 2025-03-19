@@ -63,8 +63,10 @@ After IBM places your order, the next step is to
 
 1. Select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
 
-    You can either select an existing satellite location or create a new on-premises type of location.
-    To learn more about {{site.data.keyword.satellitelong_notm}}, refer [Getting started with IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
+    You can either select an existing satellite location or create a new on-premises type of location. To create a location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}.
+
+    This location is required to be present on-premises deployment on IBM Cloud without a host, since the location is not dependent on the host and other setup in your infrastructure.
+    {: requirement}
 
     While creating the new Satellite location, you can choose Object storage standard plan.
     {: tip}
