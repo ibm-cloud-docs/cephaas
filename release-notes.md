@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -39,4 +39,5 @@ Introducing {{site.data.keyword.cephaas_full}}
 {: #sds-20march2025}
 {: #release-note}
 
-API, Go SDK and Terraform is now available.
+General availability of API, Go SDK and Terraform
+: Block and Object storage management API reference documentation are now available along with documentation for Go SDK and Terraform.
