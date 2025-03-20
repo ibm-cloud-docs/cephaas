@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: Connect VMware environment, ceph as a service, cephaas, vsphere, plug-in, vSphere, plugin, installing, register
 
@@ -87,8 +87,11 @@ The `ibm-plugin` status command can be run at any time.
 
 If the plug-in is not registered to any vCenter, the plug-in Registered output displays as `False`.
 
-If you wish to unregister the plug-in, run the command `ibm-plugin unregister -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>`.
-{: note}
+If you wish to unregister the plug-in, run the command
+```sh
+ibm-plugin unregister -u <vCenter Username> -v <IP_or_FQDN_of_vCenter>
+```
+{: pre}
 
 ## Next Steps
 {: #next-steps-post-vsphere-plugin-install}
@@ -97,3 +100,5 @@ After the installation, you need to get the following from your admin.
 
 - Service ID with a manager role for {{site.data.keyword.cephaas_full_notm}}
 - API Key
+
+

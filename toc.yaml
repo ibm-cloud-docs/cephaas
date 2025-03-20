@@ -102,7 +102,7 @@ toc:
           label: VMWare vSphere plug-in
           topics:
             - whats-new-vsphere.md
-            - connect_vmware.md
+            - install_vmware_plugin.md
             - managing-deployments.md
             - managing-vsphere-hosts.md
             - managing-datastores.md

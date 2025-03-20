@@ -76,7 +76,7 @@ The CLI plug-in doesn't yet support the full suite of features available in Soft
 ### software-defined-storage
 {: #ic-sds-plug-in}
 
-`software-defined-storage` -  an OpenAPI definition for the {{site.date.keyword.cephaas_short}} CLI on the {{site.data.keyword.cloud_notm}} platform.
+`software-defined-storage` -  an OpenAPI definition for the IBM CephaaS CLI on the {{site.data.keyword.cloud_notm}} platform.
 
 ```sh
 ibmcloud software-defined-storage [command] [options]
