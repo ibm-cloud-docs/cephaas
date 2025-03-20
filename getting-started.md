@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
@@ -63,9 +63,10 @@ After IBM places your order, the next step is to
 
 1. Select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
 
-    You can either select an existing satellite location or create a new on-premises type of location. To create a location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}.
+    You can either select an existing Satellite location or create a new on-premises type of location.
+    To create a location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}.
 
-    This location is required to be present on-premises deployment on IBM Cloud without a host, since the location is not dependent on the host and other setup in your infrastructure.
+    This Satellite location is required to be present on IBM Cloud without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure. Make sure to select the **Managed for** region as Dallas or Frankfurt. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and IBM Cloud.
     {: important}
 
     While creating the new Satellite location, you can choose Object storage standard plan.
