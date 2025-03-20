@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-20"
 
 keywords: network latency, ceph as a service, on-premises
 
@@ -17,12 +17,11 @@ subcollection: cephaas
 {: #network_latency_main}
 
 
-The network latency between your data center and the corresponding IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds.
+The network latency between your data center and the corresponding {{site.data.keyword.cloud_notm}} region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds.
 {: shortdesc}
 
-You can note the IP addresses for the IBM Cloud region that you want to test from the following table:
+You can note the IP addresses for the {{site.data.keyword.cloud_notm}} region that you want to test from the following table:
 
-| IBM Cloud region | IP address |
 | ---------------- | ---------- |
 | Dallas | 52.117.39.146, 169.48.134.66, 169.63.36.210 |
 | Frankfurt | 149.81.188.122, 158.177.88.18, 161.156.38.122 |
@@ -38,7 +37,7 @@ You can note the IP addresses for the IBM Cloud region that you want to test fro
 
 To check the latency requirements of a connection, complete the following steps:
 
-1. From a computer in the data center where you place the rack, ping the IP address of the IBM Cloud region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the rack is placed.
+1. From a computer in the data center where you place the rack, ping the IP address of the {{site.data.keyword.cloud_notm}} region that is closest to the physical location of your data center. Run the ping test from a compute endpoint as close as possible to the potential region where the rack is placed.
 
    For example,
    ```text
@@ -47,7 +46,7 @@ To check the latency requirements of a connection, complete the following steps:
 
 2. Close the connection when the transmission of a few packets is complete. For example, from the command-line, enter `ctrl+c`.
 
-3. In the **ping statistics** output, note the average (avg) round-trip distance in milliseconds (ms) between the host and the IBM Cloud region. Compare whether the connection meets the latency requirement of less than or equal to 200 milliseconds (<= 200 ms).
+3. In the **ping statistics** output, note the average (avg) round-trip distance in milliseconds (ms) between the host and the {{site.data.keyword.cloud_notm}} region. Compare whether the connection meets the latency requirement of less than or equal to 200 milliseconds (<= 200 ms).
 
 
 The following example meets the latency requirements as the round-trip time is 77.716 ms:

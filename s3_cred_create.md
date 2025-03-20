@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: create S3 credential for object storage, ceph as a service, cephaas
 
@@ -35,7 +35,7 @@ The secret key cannot be viewed after you create the credential. So you must sav
 
 To create s3 credential, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
+1. On the {{site.data.keyword.cloud_notm}} console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
 2. Click **New credential**.
 

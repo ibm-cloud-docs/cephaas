@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-20"
 
 keywords: administration, billing, platform, ceph as a service, cephaas, invoices, storage tiers, performance tier,  capacity tier
 
@@ -24,13 +24,13 @@ This section provides you with an overview on pricing information and invoices f
 ## Invoices
 {: #billing-invoices}
 
-To find your invoices, on the IBM Cloud console, from the navigatation menu, go to **Manage > Billing and Usage > Invoices**.
+To find your invoices, on the {{site.data.keyword.cloud_notm}} console, from the navigatation menu, go to **Manage > Billing and Usage > Invoices**.
 
 
 ## Pricing
 {: #billing-pricing}
 
-You can select the term (3, 4, or 5 years) performance tier or capacity tier that best matches your needs. {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and software that is integrated, when connected to IBM Cloud.
+You can select the term (3, 4, or 5 years) performance tier or capacity tier that best matches your needs. {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and software that is integrated, when connected to {{site.data.keyword.cloud_notm}}.
 
 The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software are licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated data center.
 

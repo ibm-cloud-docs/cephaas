@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: about, basics, cephaas object storage, ceph as a service
 
@@ -47,7 +47,7 @@ This section includes the known limitations that might impact your experience.
 
 HMAC credentials consist of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
 
-The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to IBM Cloud.
+The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to {{site.data.keyword.cloud_notm}}.
 
 You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds).
 

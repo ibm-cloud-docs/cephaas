@@ -12,7 +12,7 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 {: ui-linked}
 
-An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your IBM Cloud account dashboard.
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
 {: important}
 
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
@@ -28,13 +28,13 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 {: #estimatecost}
 {: step}
 
-{{site.data.keyword.cephaas_full_notm}} is available in IBM Cloud catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
+{{site.data.keyword.cephaas_full_notm}} is available in {{site.data.keyword.cloud_notm}} catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
 
 1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
 
 2. Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.
 
-    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the IBM Cloud. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
+    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the {{site.data.keyword.cloud_notm}}. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 
     {{site.data.keyword.cephaas_short}} can be provisioned with 100 TB to 3200 TB with two storage options:
 
@@ -50,7 +50,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 After saving your cost estimation, click **Start order process** and share your contact details. On submitting the contact form, a Confirmation ID is generated. A notification with the consultation confirmation ID and your service cost estimation is displayed, and an email is sent to IBM.
 
-Soon thereafter, an IBM representative will contact you to understand your requirements. Post discussions and approvals, the IBM representative places your order. The details of your order and order tracking link is email to you. While the order is processing, you can track the status from your IBM Cloud account dashboard.
+Soon thereafter, an IBM representative will contact you to understand your requirements. Post discussions and approvals, the IBM representative places your order. The details of your order and order tracking link is email to you. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
 
 
 ## Preparing your deployment
@@ -59,17 +59,17 @@ Soon thereafter, an IBM representative will contact you to understand your requi
 
 
 
-After IBM places your order, the next step is to
+After you receive the email confirmation that your order is placed, the next step is to
 
 1. Select the {{site.data.keyword.satellitelong_notm}} location and naming your deployment.
 
     You can either select an existing Satellite location or create a new on-premises type of location.
     To create a location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}.
 
-    This Satellite location is required to be present on IBM Cloud without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure. Make sure to select the **Managed for** region as Dallas or Frankfurt. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and IBM Cloud.
+    This Satellite location is required to be present on {{site.data.keyword.cloud_notm}} without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure.
     {: important}
 
-    While creating the new Satellite location, you can choose Object storage standard plan.
+    While creating the {{site.data.keyword.satellitelong_notm}} location, choose Object storage standard plan and make sure to select the **Managed for** region as **Dallas** or **Frankfurt**. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and {{site.data.keyword.cloud_notm}}.
     {: tip}
 
 2. Create your deployment. To learn how to create your deployments, see [Creating deployments](/docs/cephaas?topic=cephaas-administrators&interface=ui&code=curl#provision-deployment).

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -61,12 +61,12 @@ You can start creating a deployment after cost estimation and the order processi
 
 1. Open the order status email from your IBM sales partner and click the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
 
-2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+2. On the **Prepare deployment** screen, select your **{{site.data.keyword.satellitelong_notm}} location** and **Resource group**.
 
-    The Satellite location is required to be present on-premises deployment on IBM Cloud without a host, since the location is not dependent on the host and other setup in your infrastructure. To create a new on-premises type of location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem).
+    This Satellite location is required to be present on {{site.data.keyword.cloud_notm}} without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure. To create a new on-premises type of location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem).
     {: important}
 
-    While creating the IBM Cloud Satellite location, you can choose Object storage standard plan.
+    While creating the {{site.data.keyword.satellitelong_notm}}location, choose Object storage standard plan and make sure to select the **Managed for** region as **Dallas** or **Frankfurt**. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and {{site.data.keyword.cloud_notm}}.
     {: tip}
 
 3. Enter your **Deployment name** and click **Create**.
