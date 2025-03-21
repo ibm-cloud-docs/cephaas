@@ -515,4 +515,4 @@ func main() {
 ## Next Steps
 {: #go-next-steps}
 
-If you haven't already, see the detailed class and method documentation available at the [GO API documentation](https://ibm.github.io/ibm-sds-go-sdk/){: external}.
+If you haven't already, see the detailed class and method documentation available at the GO API documentation for [Block Storage](/apidocs/block-storage?code=go){: external} and [Object Storage](/apidocs/object-storage?code=go){: external}.
