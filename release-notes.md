@@ -26,7 +26,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 ## 4 March 2025
-{: #sds-march0425}
+{: #sds-mar0425}
 {: release-note}
 
 Introducing {{site.data.keyword.cephaas_full}}
@@ -34,7 +34,7 @@ Introducing {{site.data.keyword.cephaas_full}}
 
 
 ## 20 March 2025
-{: #sds-march2025}
+{: #sds-mar2025}
 {: #release-note}
 
 General availability of API, Go SDK and Terraform
