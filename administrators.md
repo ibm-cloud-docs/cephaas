@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-20"
 
-keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment
+keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
 subcollection: cephaas
 
@@ -31,9 +31,9 @@ For more information, see the [IAM overview](/docs/cephaas?topic=cephaas-iam-ove
 
 The _service credential_ is a collection of important information that is needed to connect to a deployment of {{site.data.keyword.cephaas_full}}. It gives a user an identifier for the deployment of {{site.data.keyword.cephaas_full_notm}} (that is, the Resource Instance ID), service and authorization endpoints, and a means of associating the subject with an API key (that is, Service ID).
 
-The `Manager` role allows users to perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. This role **does not allow** users to modify the deployments.
+The **Manager** role allows users to perform all service level actions based on the service role assigned. This role allows you to manage all aspects of data storage such as create, update, delete and view operations for volumes, hosts and object service credentials. This role **does not allow** users to modify the deployments.
 
-The `Administrator` role allows for the user to see that the deployment exists, and to view existing credentials, and modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the `Manager` role on the deployment to be able to create and delete volumes and hosts.
+The **Administrator** role allows for the user to see that the deployment exists, and to view existing credentials, and modify the deployments. When the credentials are created, they are associated with a service ID. This service ID would need to have the **Manager** role on the deployment to be able to create and delete volumes and hosts.
 
 For more information on IAM roles and permissions, see [the {{site.data.keyword.cloud_notm}} IAM overview](/docs/cephaas?topic=cephaas-iam-overview).
 
@@ -45,10 +45,10 @@ You can create a deployment (also called as service instance) through the UI, or
 
 With the Resource controller (RC) API and CLI, you can set and manage the service-specific attributes by using the '–parameters' flag for inputs, which is a volatile attribute.
 
-You must have an `Administrator`, `Operator` and `Editor` role to create the deployment.
+You must have an **Administrator**, **Operator** and **Editor** role to create the deployment.
 {: note}
 
-To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN` and `Order ID` handy. You can get the Plan ID from the [Global Catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click on the **hamburger menu > Resource list > Satellite location**.
+To create a deployment, you must have the **Subscription Plan ID**, **Satallite CRN**, and **Order ID** handy. You can get the Plan ID from the [Global catalog](https://globalcatalog.cloud.ibm.com/). To locate your Satellite CRN, click the **hamburger menu > Resource list > Satellite location**.
 {: requirement}
 
 
@@ -59,18 +59,21 @@ To create a deployment, you must have the `Subscription Plan ID`, `Satallite CRN
 You can start creating a deployment after cost estimation and the order processing is initiated.
 
 
-1. Open the order status email from your IBM sales partner and click on the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
+1. Open the order status email from your IBM sales partner and click the link **Prepare deployment**. After you log in, the link opens the deployment dashboard, which lists your in-progress or completed orders.
 
-2. On the **Prepare deployment** screen, select your **IBM Cloud Satellite location** and **Resource group**.
+2. On the **Prepare deployment** screen, select your **{{site.data.keyword.satellitelong_notm}} location** and **Resource group**.
 
-    While creating the IBM Cloud Satellite location, you can choose Object storage standard plan. For more information, see [IBM Cloud Satellite](/docs/satellite?topic=satellite-locations).
+    This Satellite location is required to be present on {{site.data.keyword.cloud_notm}} without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure. To create a new on-premises type of location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem).
+    {: important}
+
+    While creating the {{site.data.keyword.satellitelong_notm}}location, choose Object storage standard plan and make sure to select the **Managed for** region as **Dallas** or **Frankfurt**. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and {{site.data.keyword.cloud_notm}}.
     {: tip}
 
 3. Enter your **Deployment name** and click **Create**.
 
-    Your **Deployment Preparation** status will show as **Completed**.
+    Your **Deployment Preparation** status shows as **Completed**.
 
-    After the on-premise hardware setup is completed, the deployment shows **Available** status and ready-to-be provisioned.
+    After the on-premises hardware setup is completed, the deployment shows **Available** status and ready-to-be provisioned.
 
 
 
@@ -88,7 +91,7 @@ You can start creating a deployment after cost estimation and the order processi
     ```
     {: pre}
 
-3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan and Satellite details. Now you have a CRN for the instance.
+3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan, and Satellite details. Now you have a CRN for the instance.
 
     ```sh
     ibmcloud resource service-instance-create <service_instance_name> software-defined-storage <plan_id> satloc_dal_<satellite_guid> -p '{"satellite_crn":"<"satellite_crn>,"order_id":"<order-id>}' -g Default

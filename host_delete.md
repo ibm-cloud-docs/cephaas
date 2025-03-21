@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-18"
 
-keywords: cephaas, delete host, sds host-delete,
+keywords: cephaas, delete host, sds host-delete, ceph as a service
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Deleting hosts
 {: #deleting-hosts}
 
-Delete a host from a deployment by using the UI, CLI, API, or Terraform.
+Delete a host from a deployment by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 
@@ -110,3 +110,38 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 There is no response body for a successful delete operation.
 
 To verify that the host is deleted, list the hosts by making a `GET /hosts` request.
+
+
+## Deleting a host by using Terraform
+{: #deleting-host-tf}
+{: terraform}
+
+To delete a resource, you can run `terraform destroy -target <resource_type>.<resource_name>` where _<resource_name>_ is the name of the resource that is no longer needed.
+
+Example of _<resource_type>.<resource_name>_: `ibm_sds_host.sds_host_instance`.
+
+First, show the list of Terraform resources
+
+```terraform
+terraform state list
+```
+{: pre}
+
+Then, target a specific resource to destroy
+
+```terraform
+terraform destroy -target ibm_sds_volume.sds_host_instance
+```
+{: pre}
+
+If a volume is mapped to a host, you must unmap the volume from host before deletion using the CLI.
+{: note}
+
+
+
+## Sanitizing your data before you delete a host
+{: #sanitizing-your-data-before-you-delete-a-host}
+
+When you delete a host, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
+
+Sanitizing and deleting the host means your data can't be restored.

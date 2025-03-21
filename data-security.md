@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2021
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-20"
 
 keywords: securing your data, data security, cephaas, ceph as a service
 
@@ -58,11 +58,11 @@ Sanitizing and deleting the resources means that your data cannot be restored.
 
 When a service instance is no longer needed, you can cancel the subscription by deleting the deployment. The deployment is marked for deletion and becomes inactive. IBM removes all secrets (including the encryption keys for data-at-rest encryption) for the instance from the secrets management, making the data inaccessible.
 
-During the deployment removal process, the resources are removed from the IBM Cloud Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
+During the deployment removal process, the resources are removed from the {{site.data.keyword.cloud_notm}} Resource list and from all connected applications. Your access to all the resources provisioned under the service instance such as volumes, hosts, and buckets from spaces that are using it are also removed. In addition, all of its data is permanently deleted.
 
 After the storage space is reclaimed, the disk is wiped, and data cannot be restored. When drives are decommissioned, IBM destroys them before they can be disposed of. The drives become unusable. Any data that was written to that drive becomes inaccessible.
 
 Customers with special requirements for compliance such as [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final) can perform the data sanitization procedure before they delete their storage.
 
 
-The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cephaas_full_notm}} Terms and Notices](https://www.ibm.com/terms/?id=i126-9923).
+The {{site.data.keyword.cephaas_full_notm}} data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the {{site.data.keyword.cephaas_short}} service description, which you can find in the [{{site.data.keyword.cephaas_full_notm}} Terms and Notices](https://www.ibm.com/support/customer/csol/terms/?id=i126-9923){: external}.

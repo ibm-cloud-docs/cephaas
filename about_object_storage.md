@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-20"
 
-keywords: about, basics, cephaas object storage
+keywords: about, basics, cephaas object storage, ceph as a service
 
 subcollection: cephaas
 
@@ -47,7 +47,7 @@ This section includes the known limitations that might impact your experience.
 
 HMAC credentials consist of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
 
-The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to IBM Cloud.
+The {{site.data.keyword.cephaas_short}} S3 API is a REST-based API for reading and writing objects. It uses HMAC Access Keys for authentication and supports a subset of the S3 API for easy migration of applications to {{site.data.keyword.cloud_notm}}.
 
 You can create a set of HMAC credentials using the console, CLI, and API. For instructions, see [Create HMAC credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds).
 
@@ -57,6 +57,6 @@ You can create a set of HMAC credentials using the console, CLI, and API. For in
 ## Next Steps
 {: #about-obj-storage-next-steps}
 
-After creating the credentials and uploading the S3 SSL certificate, you can proceed with creating buckets and objects using the AWS CLI. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
+After creating the credentials and uploading the S3 SSL certificate, you can proceed with creating buckets and objects by using the AWS CLI. For guidance on creating and managing your buckets and objects, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
 
 Also, see guidance on how to [create S3 HMAC Credentials](/docs/cephaas?topic=cephaas-creating-s3-credential-sds) and [upload the associated S3 SSL Certificate](/docs/cephaas?topic=cephaas-uploading-s3-certificate).

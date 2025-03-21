@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: sds, host, view host details, host summary list
+keywords: ceph as a service, sds, host, view host details, host summary list
 
 subcollection: cephaas
 
@@ -48,14 +48,14 @@ Table describes the kebab menu options.
 | Delete             | Remove the mapping between the volume and host. |
 {: caption="Row actions menu options for Hosts." caption-side="bottom"}
 
-When you select one or more hosts, the `Delete` button is enabled and displayed which enables you to perform multiple delete operations.
+When you select one or more hosts, the **Delete** button is enabled and displayed which enables you to perform multiple delete operations.
 
 
 ## View single host details in the UI
 {: #view-single-host-details-ui}
 {: ui}
 
-To view details of a single host, go to the list of all hosts and click on the hostname link.
+To view details of a single host, go to the list of all hosts and click the hostname link.
 
 The Host details page shows the details of the chosen hostname and all its mapped volumes. The table describes this information.
 
@@ -427,3 +427,30 @@ A successful response provides details of the host, such as the `host ID`, `host
 {: screen}
 
 The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+
+
+## View host details using Terraform
+{: #view-host-tf}
+{: terraform}
+
+To view Terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a host resource, run the following command:
+
+```terraform
+terraform state show ibm_sds_host.<ibm_sds_host_name>
+```
+{: pre}
+
+
+
+## Next steps
+{: #next-step-view-hosts}
+
+Add hosts or manage your existing hosts.

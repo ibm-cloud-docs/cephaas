@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-20"
 
-keywords: how to create cephaas S3 credential for object storage
+keywords: create S3 credential for object storage, ceph as a service, cephaas
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating object storage S3 credential
 {: #creating-s3-credential-sds}
 
-A credential consist of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
+A credential consists of an Access Key and Secret Key pair for use with S3-compatible tools and libraries that require authentication.
 {: shortdesc}
 
 
@@ -26,22 +26,22 @@ Create S3 credentials for object storage by using the UI, CLI, or API.
 To create a credential, you must be granted the Administrator platform role or a custom role. For more information, see the [IAM access documentation](/docs/cephaas?topic=cephaas-managing-iam).
 {: requirement}
 
-The secret key cannot be viewed after you create the credential. So you must save or download the key in a place from where you can retrieve when needed.
+The secret key cannot be viewed after you create the credential. So you must save or download the key in a place from where you can retrieve it when needed.
 {: important}
 
-## Creating S3 credential using the UI
+## Creating S3 credential by using the UI
 {: #creating-s3-credential-using-ui}
 {: ui}
 
 To create s3 credential, complete the following steps.
 
-1. On the IBM Cloud console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
+1. On the {{site.data.keyword.cloud_notm}} console, go to **{{site.data.keyword.cephaas_full_notm}} > Object Storage > Credentials** tab.
 
 2. Click **New credential**.
 
 3. Enter S3 credential **Name** and click **Add**.
 
-    Avoid using special characters when creating access keys with the exception of dashes `-` and underscores `_` symbols. All alphabets and numbers are allowed.
+    Avoid using special characters when creating access keys except for dashes `-` and underscores `_` symbols. All alphabets and numbers are allowed.
     {: important}
 
 4. After the credential is created, **Copy** the credential or click **Download** to save the credential to your local system.
@@ -56,7 +56,7 @@ You will not be able to see the credential again after you close this message. M
 
 Run the `cred-create` command with the `ACCESS-KEY` and API endpoint to create a new object storage S3 credential for the storage deployment.
 
-Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+Avoid using special characters when creating access keys except for dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
 {: important}
 
 ```sh
@@ -87,7 +87,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 
 You can create a S3 credential for object storage by specifying the access key.
 
-Avoid using special characters when creating access keys with the exception of dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
+Avoid using special characters when creating access keys except for dashes `-`, underscores `_`, and the equal sign `=` symbols. All alphabets and numbers are allowed.
 {: important}
 
 ```sh
@@ -95,7 +95,7 @@ curl -X POST $sds_endpoint/s3_credentials/{access_key}  -H "accept: application/
 ```
 {: pre}
 
-Example of a successful response looks like this:
+An example of a successful response looks like this:
 
 ```json
 curl -X POST $sds_endpoint/s3_credentials/dsfdgdf2343435666 -H "accept: application/json" -H "Authorization: Bearer $IAM_TOKEN"  -H "IBM-API-Version: 2025-02-01"
@@ -117,4 +117,4 @@ See [Setting up your CLI and API environment](/docs/cephaas?topic=cephaas-set-up
 ## Next steps
 {: #next-step-creating-s3-cred}
 
-You can start creating and managing buckets and objects using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
+You can start creating and managing buckets and objects by using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).

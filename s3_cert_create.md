@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: cephaas settings, creating S3 Certificate
+keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating S3 certificate
 {: #create-s3-certificate}
 
-S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks. You can create a new S3 SSL certificate by using the CLI or API.
+S3 TLS certificates are required to encrypt the S3 traffic and prevent **Man in the Middle (MITM)** attacks. You can create a new S3 SSL certificate by using the CLI or API.
 {: shortdesc}
 
 You must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint.
@@ -77,7 +77,7 @@ curl -X POST $sds_endpoint/certificates/s3 \
 {: pre}
 
 
-Example of a response when a certificate is created:
+An example of a response when a certificate is created:
 
 ```json
 curl -X POST $sds_endpoint/certificates/s3 --data-binary "@both.pem" -H 'accept: application/json'  -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-01-15'
@@ -102,4 +102,4 @@ See [Setting up your API environment](/docs/cephaas?topic=cephaas-set-up-environ
 ## Next steps
 {: #next-step-creating-s3-certificate}
 
-You can start creating and managing buckets and objects using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).
+You can start creating and managing buckets and objects by using the AWS CLI. For guidance, see [Using AWS CLI](/docs/cephaas?topic=cephaas-aws-cli).

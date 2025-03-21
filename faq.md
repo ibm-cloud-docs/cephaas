@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
+keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
 subcollection: cephaas
 
@@ -28,7 +28,7 @@ Frequently asked questions (FAQs) provide you with helpful answers and insight i
 {: faq}
 {: #faq-usage-cost}
 
-Both block and object storage are charging based on the monthly fee for the plan you choose. If the storage in the burst capacity is used then overage fees are charged on an hourly usage basis.
+Both block and object storage are charged based on the monthly fee for the plan you choose. If the storage in the burst capacity is used, then overage fees are charged on an hourly usage basis.
 
 
 
@@ -51,7 +51,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume by using the UI, CLI, API and Terraform. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
+You can change the name of an existing volume by using the UI, CLI, API, and Terraform. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -152,7 +152,7 @@ To help ensure a throttling of 1000 * 1000 KBps, max IOPS must be 1000000/16 = 6
 ### What does the ‘pending’ status mean for block volumes and hosts?
 {: #faq-pending-status-block-volumes-hosts}
 
-Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long-running API cases, the caller can track the status of a resource using the "status" property in the `GET` API.
+Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long-running API cases, the caller can track the status of a resource by using the "status" property in the `GET` API.
 An ‘available’ status indicates that the process is complete and that the resource is ready for use. The pending statuses indicate that the resource is still being processed.
 
 The Block storage API uses the following pending status:

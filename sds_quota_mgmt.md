@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: cephaas, quota, capacity, manage
+keywords: cephaas, quota, capacity, manage, ceph as a service
 
 subcollection: cephaas
 
@@ -17,7 +17,7 @@ subcollection: cephaas
 
 {{site.data.keyword.cephaas_full_notm}} supports deployment level quotas for both the Performance and Capacity plans. The block and object level quota allocation depends on the committed capacity along with the user opted max burst capacity usage limit.
 
-Since the provisioned capacity and quota is at deployment level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created that also includes the maximum burst capacity usage limit.
+Since the provisioned capacity and quota are at deployment level setting, the quota can be set for block storage as well as object storage. The quota is set initially by default when the deployment instance is created that also includes the maximum burst capacity usage limit.
 
 ## Managing quota from the UI
 {: #managing-quota-ui}
@@ -32,12 +32,12 @@ Since the provisioned capacity and quota is at deployment level setting, the quo
 
 1. Review the capacity limit. Select **Include burst capacity** if you want to include the burst capacity to expand your total available capacity.
 
-    Including burst capacity may incur overage fees for the amount of burst capacity used.
+    Including burst capacity might incur overage fees for the amount of burst capacity used.
     {: note}
 
 1. Click **Next** and review the storage capacity allocations.
 
-1. Use the plus & minus controls to modify the allocated capacity.
+1. Use the plus and minus controls to modify the allocated capacity.
 
     The allocated capacity cannot be reduced or set below the current amount of used or provisioned capacity.
     {: note}

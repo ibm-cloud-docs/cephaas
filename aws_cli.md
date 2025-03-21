@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-13"
+lastupdated: "2025-03-20"
 
-keywords: cephaas, cli, command-line interface, object storage, s3
+keywords: cephaas, cli, command-line interface, object storage, s3, ceph as a service
 
 subcollection: cephaas
 
@@ -102,7 +102,7 @@ aws s3 ls s3://bucket-1
 ### Make a new bucket
 {: #aws-cli-high-level-new-bucket}
 
-**Note**: Personally Identifiable Information (PII): When you are _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
+Personally Identifiable Information (PII): When you are _naming_ buckets or objects, do not use any information that can identify any user (natural person) by name, location, or any other means.
 {: tip}
 
 

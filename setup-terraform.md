@@ -2,7 +2,9 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-02-14"
+lastupdated: "2025-03-20"
+
+keyword: ceph as a service, setting up terraform, installing terraform, configuring resources
 
 subcollection: cephaas
 
@@ -14,7 +16,7 @@ subcollection: cephaas
 # Setting up Terraform
 {: #terraform-setup}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.cephaas_full}} instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent creation of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitier cloud environments according to **Infrastructure as Code (IaC)** principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API, and SDKs, you can automate the creation, update, and deletion of your {{site.data.keyword.cephaas_full}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
 
@@ -24,11 +26,11 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent crea
 
 Before you can create an authorization by using Terraform, make sure that you have completed the following:
 
-* Make sure that you have the [required access](/docs/cephaas?topic=cephaas-managing-iam) to create and work with {{site.data.keyword.cephaas_full_notm}} resources. 
+* Make sure that you have the [required access](/docs/cephaas?topic=cephaas-managing-iam) to create and work with {{site.data.keyword.cephaas_full_notm}} resources.
 
 * Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. For more information, see the tutorial for [Getting started with Terraform on {{site.data.keyword.cloud}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to complete this task.
 
-* Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}.
+* Create a Terraform configuration file that is named `main.tf`. In this file, you define resources by using HashiCorp Configuration Language. For more information, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language){: external}.
 
 ## Creating a sample volume and host instance
 {: #sample-vol-host-instance}
@@ -61,7 +63,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
    ```bash
    export IBMCLOUD_sds_endpoint="<sds_endpoint>"
    ```
-   {: screen}
+   {: pre}
 
    Setting the endpoint can also be accomplished by including the below tag in your terraform resources.
 
@@ -70,14 +72,14 @@ Before you can create an authorization by using Terraform, make sure that you ha
    ```
    {: pre}
 
-3. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://www.terraform.io/cli/init){: external}.
+3. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
 
    ```terraform
    terraform init
    ```
    {: pre}
 
-4. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/run){: external}.
+4. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://developer.hashicorp.com/terraform/cli/run){: external}.
 
    1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
 
@@ -95,14 +97,14 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 5. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_short}} instance that you created and note the instance ID.
 
-6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}
 
 Now that you successfully created your first {{site.data.keyword.cephaas_short}} deployment instance with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks:
 
-* Create new volume or host
+* Create a new volume or host
 * List the available volumes or hosts
 * Retrieve all volumes or hosts
 * Modify volume or host details

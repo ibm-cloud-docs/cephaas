@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas, authorization, iam, basics
+keywords: ceph as a service, sds, cephaas, authorization, iam, basics
 
 subcollection: cephaas
 

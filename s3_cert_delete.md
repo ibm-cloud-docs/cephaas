@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-19"
 
-keywords: cephaas, delete s3 certificate
+keywords: cephaas, delete s3 certificate, ceph as a service
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Deleting S3 certificate
 {: #deleting-s3-cert}
 
-Delete S3 credential using the CLI, or API.
+Delete S3 credential by using the CLI or API.
 {: shortdesc}
 
 

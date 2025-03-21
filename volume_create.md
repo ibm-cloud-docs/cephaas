@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-18"
 
-keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas,
+keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating block volumes
 {: #creating-block-volume}
 
-Create a block storage volume by using the UI, CLI, API or terraform.
+Create a block storage volume by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
 
@@ -137,9 +137,79 @@ A successful response looks like this:
 
 
 
+## Creating block volumes using Terraform
+{: #create-volume-tf}
+{: terraform}
 
 
+1. Create a volume instance by using the `ibm_sds_volume` resource argument in your `main.tf` file. The volume instance in the following example is named `sds_volume_instance` respectively.
 
+   ```terraform
+   resource "ibm_sds_volume" "sds_volume_instance" {
+     capacity = 10
+     name = "demo-volume"
+   }
+   ```
+   {: codeblock}
+
+
+2. After you finish building your configuration file, initialize the Terraform CLI. For more information, see [Initializing Working Directories](https://developer.hashicorp.com/terraform/cli/init){: external}.
+
+   ```terraform
+   terraform init
+   ```
+   {: pre}
+
+3. Provision the resources from the `main.tf` file. For more information, see [Provisioning Infrastructure with Terraform](https://developer.hashicorp.com/terraform/cli/run){: external}.
+
+   1. Run `terraform plan` to generate a Terraform execution plan to preview the proposed actions.
+
+      ```terraform
+      terraform plan
+      ```
+      {: pre}
+
+   1. Run `terraform apply` to create the resources that are defined in the plan.
+
+      ```terraform
+      terraform apply
+      ```
+      {: pre}
+
+4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+
+    See the example output for details.
+
+    ```terraform
+   ibm_sds_volume.sds_volume_instance_1: Creating...
+   ibm_sds_volume.sds_volume_instance_1: Creation complete after 1s [id=r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f]
+
+   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+   Outputs:
+
+   ibm_sds_volume = [
+   {
+      "bandwidth" = 19
+      "capacity" = 10
+      "created_at" = "2025-03-10T14:44:34.000Z"
+      "href" = "$sds_endpoint/volumes/r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
+      "id" = "r134-5f36534a-71a1-4e53-ae72-5770d2f1ad6f"
+      "iops" = 150
+      "name" = "demo-volume-1"
+      "resource_type" = "volume"
+      "status" = "pending"
+      "status_reasons" = tolist([])
+      "volume_mappings" = tolist([])
+   },
+   ]
+    ```
+    {: screen}
+
+
+For more information about the arguments and attributes, see [ibm_sds_volume](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume){: external}.
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`.
 
 ## Next steps
 {: #next-step-creating-volume}

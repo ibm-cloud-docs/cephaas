@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: sds, host, view host details, host summary list
+keywords: ceph as a service, sds, host, view host mapping details, host summary list
 
 subcollection: cephaas
 
@@ -27,7 +27,7 @@ Before you begin, make sure that you have [set up your CLI and API environment](
 {: #view-all-mapped-vols-host-ui}
 {: ui}
 
-To view all mapped hosts to a volume, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link > **Block Storage > Hosts** and click on the single host name link.
+To view all mapped hosts to a volume, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), click **Deployments** > **Name** link > **Block Storage > Hosts** and click the single host name link.
 
 All mapped volumes are displayed for the chosen host on the Mapped volume section of Host details page. In the list, you can see the following information.
 
@@ -291,3 +291,23 @@ A successful response provides details of the host, such as the `host ID`, `host
 }
 ```
 {: screen}
+
+
+
+## View host mapping details using Terraform
+{: #view-host-mapping-details-tf}
+{: terraform}
+
+To view Terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a host resource, run the following command:
+
+```terraform
+terraform state show <volume-instance-based-off-list>
+```
+{: pre}

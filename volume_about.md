@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-30"
+lastupdated: "2025-03-11"
 
-keywords: about block storage volume, volume encryption, IAM permissions for block storage volume
+keywords: about block storage volume, volume encryption, IAM permissions for block storage volume, ceph as a service
 
 subcollection: cephaas
 

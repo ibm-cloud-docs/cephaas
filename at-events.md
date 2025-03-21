@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-07"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, activity tracker events, auditing events
+keywords: cephaas, activity tracker events, auditing events, ceph as a service
 
 subcollection: cephaas
 

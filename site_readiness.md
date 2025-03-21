@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-31"
+lastupdated: "2025-03-11"
 
-keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, on-premises
+keywords: planning, site-readiness, ceph as a service, on-premises
 
 subcollection: cephaas
 

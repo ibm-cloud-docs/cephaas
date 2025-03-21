@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-04"
+lastupdated: "2025-03-11"
 
-keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}}, network requirement
+keywords: planning, site-readiness, ceph as a service, network requirement
 
 subcollection: cephaas
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: cephaas, architecture, workload isolation levels
+keywords: cephaas, architecture, workload isolation levels, ceph as a service
 
 subcollection: cephaas
 

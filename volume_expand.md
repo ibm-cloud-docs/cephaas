@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-18"
 
-keywords: sds, cephaas Block Storage Volume, increase volume size for cephaas, manage volume, expand volume size
+keywords: sds, cephaas, block storage, volume, increase volume size for cephaas, manage volume, expand volume size, ceph as a service
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Increasing block volume capacity
 {: #expand-block-volume}
 
-You can manage your Block Storage volume capacity in the UI, from the CLI, using the API or the terraform.
+You can manage your Block Storage volume capacity from the UI, CLI, or by using the API or Terraform.
 {: shortdesc}
 
 ## Increasing block volume capacity in the UI
@@ -31,7 +31,7 @@ Use the console to expand the volume capacity. In the [{{site.data.keyword.cloud
 
 To increase the block volume-provisioned size from the list view page, complete the following steps.
 
-1. In the **Volume** list view page, locate the volume and click the `options` icon at the end of the volume row to open a list of options.
+1. In the **Volume** list view page, locate the volume and click the **options** icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
 2. Enter a new **size**.
 
@@ -47,7 +47,7 @@ To increase the block volume-provisioned size from the list view page, complete 
 
 To increase the block volume-provisioned size from the Volume details page, complete the following steps.
 
-1. In the **Volume** details page, you can click the `edit` icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
+1. In the **Volume** details page, you can click the **edit** icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
 2. Enter a new **size**.
 
     You can increase the provisioned size. It cannot be reduced.
@@ -135,3 +135,17 @@ A successful response looks like this:
 }
 ```
 {: screen}
+
+
+## Increasing block volume using Terraform
+{: #expand-volume-tf}
+{: terraform}
+
+To expand the capacity of a volume, do the following steps:
+
+1. Open your `main.tf` file and modify the `capacity` value in the `ibm_sds_volume` resource.
+
+2. After editing and saving the file, run `terraform plan` and `terraform apply` to apply your changes.
+
+You can modify only one parameter value at a time.
+{: note}

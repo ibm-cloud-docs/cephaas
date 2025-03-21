@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -20,7 +20,7 @@ subcollection: cephaas
 
 This Quick Start guide provides a code example that demonstrates the following operations:
 
-* Create new volume or host
+* Create a new volume or host
 * List the available volumes or hosts
 * Retrieve all volumes or hosts
 * Modify volume or host details
@@ -41,8 +41,6 @@ You need:
 
 Specific instructions for downloading and installing the SDK are available in [Using Go](/docs/cephaas?topic=cephaas-using-go){: external}{: go}.
 
-The SDK Go github links mentioned in the examples will work only post General Availability (GA).
-{: important}
 
 ## Code Example
 {: #sdk-gs-example}

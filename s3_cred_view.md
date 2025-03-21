@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
-keywords: cephaas service credential view, list
+keywords: cephaas, service credential view, list, ceph as a service, object storage
 
 subcollection: cephaas
 

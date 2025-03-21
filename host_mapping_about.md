@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-11"
 
-keywords: cephaas cephaas about volume host mappings
+keywords: cephaas, ceph as a service, nvme-of, NVME-oF, about volume host mappings, mapping limitations
 
 subcollection: cephaas
 

@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-19"
 
-keywords: list all volumes, view volume details
+keywords: list all volumes, view volume details, ceph as a service
 
 subcollection: cephaas
 
@@ -55,7 +55,7 @@ Table 2 describes the Actions menu options.
 {: #view-vol-details-ui}
 {: ui}
 
-To view details of a single volume, go to the list of all volumes and click on the volume name.
+To view details of a single volume, go to the list of all volumes and click the volume name.
 
 The volumes details page shows the details of the chosen volume and all its mapped hosts. Table 3 describes this information.
 
@@ -68,8 +68,8 @@ The volumes details page shows the details of the chosen volume and all its mapp
 | Created date | System-generated date when the volume was created.|
 | Deployment | Name of the instance in the region.|
 | IOPS | Current IOPS value for a predefined IOPS tier which is based on the default profile. |
-| Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of `IOPS * 16` K block size.|
-| Mapped hosts | Displays a list of all hosts present in the system. You can also create a new host mapping or create a new host to map using the `Map host +` option. See [Creating a host](/docs/cephaas?topic=cephaas-creating-host&interface=ui).|
+| Throughput | The performance a disk can deliver, measured in Gigabytes/second (Gbps). Based on your volume profile, throughput is calculated as the amount of **IOPS * 16** K block size.|
+| Mapped hosts | Displays a list of all hosts present in the system. You can also create a new host mapping or create a new host to map using the **Map host +** option. See [Creating a host](/docs/cephaas?topic=cephaas-creating-host&interface=ui).|
 {: caption="Volume details" caption-side="bottom"}
 
 The Actions menu on the volume details page shows the actions that you can take.
@@ -138,6 +138,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vol` as an alternative to `volume` for the CLI actions.
 {: tip}
 
+For more information about available command options, run `ibmcloud sds volume --help`.
 
 
 ## View list of all volumes from the CLI
@@ -338,6 +339,23 @@ A successful response provides details of the volume, including capacity and IOP
 {: codeblock}
 
 
+## View volume details using Terraform
+{: #view-volume-tf}
+{: terraform}
+
+To view Terraform objects
+
+```terraform
+terraform state list
+```
+{: pre}
+
+To target a volume resource, run the following command:
+
+```terraform
+terraform state show ibm_sds_volume.<ibm_sds_volume_name>
+```
+{: pre}
 
 
 

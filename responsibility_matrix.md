@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-19"
+lastupdated: "2025-03-11"
 
-keywords: sds, cephaas, responsibilities matrix
+keywords: sds, cephaas, responsibilities matrix, ceph as a service
 
 subcollection: cephaas
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cephaas_short}}. For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities){: external}.
 {: shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cephaas_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cephaas_full_notm}} Terms and Notices](https://www.ibm.com/terms/?id=i126-9923){: external}.
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.cephaas_full_notm}}. For the overall terms of use, see [{{site.data.keyword.cephaas_full_notm}} Terms and Notices](https://www.ibm.com/support/customer/csol/terms/?id=i126-9923){: external}.
 
 
 

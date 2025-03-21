@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-11"
 
-keywords: cephaas cephaas about volume host mappings
+keywords: nvme-of initiators, cephaas, about volume host mappings, ceph as a service,
 
 subcollection: cephaas
 

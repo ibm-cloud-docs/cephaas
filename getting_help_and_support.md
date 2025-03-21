@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-11"
 
-keywords: sds getting help, getting cephaas support
+keywords: ceph as a service, sds, getting help, getting cephaas support
 
 subcollection: cephaas
 

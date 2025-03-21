@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-02-26"
+lastupdated: "2025-03-11"
 
-keywords: planning, site-readiness, {{site.data.keyword.cephaas_full_notm}} as a service, private cloud
+keywords: planning, site-readiness, ceph as a service, private cloud
 
 subcollection: cephaas
 

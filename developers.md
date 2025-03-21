@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-18"
 
-keywords: cephaas, developer, getting started, command-line interface, cli
+keywords: cephaas, developer, getting started, command-line interface, cli, developer tools, ceph as a service
 
 subcollection: cephaas
 
@@ -18,10 +18,7 @@ subcollection: cephaas
 The powerful features of {{site.data.keyword.cephaas_full}} are available to a developer directly from the command-line.
 {: shortdesc}
 
-First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli) and the [IBM Developer Tools](/docs/sdk-handbook?topic=sdk-handbook-devtools) installed.
-
-
-
+First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs/cli), [IBM Developer Tools](/docs/sdk-handbook?topic=sdk-handbook-devtools) and [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step) installed.
 
 
 
@@ -41,6 +38,3 @@ For managing the data stored in {{site.data.keyword.cephaas_full_notm}}, you can
 {: #gs-dev-sdk}
 
 {{site.data.keyword.cephaas_short}} SDK is currently available only for [Go](/docs/cephaas?topic=cephaas-using-go). These libraries are forked and modified versions of the AWS S3 SDKs that support [IAM token-based authentication](/docs/cephaas?topic=cephaas-iam-overview).
-
-The SDK Go github links mentioned in the examples will work only post General Availability (GA).
-{: important}

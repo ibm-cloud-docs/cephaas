@@ -2,9 +2,9 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-01-29"
+lastupdated: "2025-03-11"
 
-keywords: planning, site-readiness, on-premises, on premises, on-prem, power requirement, power
+keywords: planning, site-readiness, on-premises, on premises, on-prem, power requirement, power, ceph as a service
 
 subcollection: cephaas
 

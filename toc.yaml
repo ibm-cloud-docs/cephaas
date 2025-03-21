@@ -1,6 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
 ---
 toc:
   properties:
@@ -42,7 +39,7 @@ toc:
       - iam_access.md
       - iam_overview.md
       - setup_cli_api_environment.md
-#      - setup-terraform.md
+      - setup-terraform.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -105,7 +102,7 @@ toc:
           label: VMWare vSphere plug-in
           topics:
             - whats-new-vsphere.md
-            - connect_vmware.md
+            - install_vmware_plugin.md
             - managing-deployments.md
             - managing-vsphere-hosts.md
             - managing-datastores.md
@@ -137,9 +134,10 @@ toc:
           topics:
             - getting-started-sdks.md
             - go.md
-#      - link:
-#          label: Terraform reference
-#          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+      links:
+        - link:
+            label: Terraform reference
+            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
