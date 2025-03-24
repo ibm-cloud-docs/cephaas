@@ -29,7 +29,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ### 20 March 2025
 {: #sds-mar2025}
-{: #release-note}
+{: release-note}
 
 General availability of API, Go SDK and Terraform
 :   Block and Object storage management API reference documentation are now available along with documentation for Go SDK and Terraform.
