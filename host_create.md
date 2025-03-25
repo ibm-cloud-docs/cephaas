@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-24"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -34,7 +34,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 3. Click **Create host**.
 4. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
-    Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error <q>Host name already exists</q> is displayed.
+    Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error "Host name already exists" is displayed.
 
 5. Click **Next**.
 6. [Optional] Select one or more volumes to map them to the host.

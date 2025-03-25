@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-03-25"
 
 keywords: cephaas, activity tracker events, auditing events, ceph as a service
 
@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracker events
+# Activity tracker events for {{site.data.keyword.cephaas_full_notm}}
 {: #at_events}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.

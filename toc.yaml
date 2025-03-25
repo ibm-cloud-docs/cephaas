@@ -32,7 +32,8 @@ toc:
           topics:
             - administrators.md
             - developers.md
-      - release-notes.md
+      - topic: release-notes.md
+        navtitle: Release notes
   - navgroup:
       id: howto
       topics:
@@ -90,14 +91,16 @@ toc:
       - topicgroup:
           label: Enhancing Security
           topics:
-            - architecture-workload-isolation.md
+            - topic: architecture-workload-isolation.md
+              navtitle: Architecture and workload isolation
             - endpoints.md
             - data-security.md
 # include this event notifications file in the future when it becomes part of the scope.
       - topicgroup:
           label: Observability
           topics:
-            - at-events.md
+            - topic: at-events.md
+              navtitle: Activity tracking events
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
