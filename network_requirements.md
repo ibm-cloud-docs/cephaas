@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-22"
 
 keywords: planning, site-readiness, ceph as a service, network requirement
 
@@ -32,3 +32,10 @@ To facilitate the {{site.data.keyword.cephaas_full_notm}} server infrastructure 
 
 {{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
 {: note}
+
+## Network configuration architecture
+{: #network-arch}
+
+The following architecture diagram describes the default components that are part of the required network configuration.
+
+![Network architecture of {{site.data.keyword.cephaas_full_notm}}](images/network-architecture.svg "Network architecture of {{site.data.keyword.cephaas_full_notm}}"){: caption="Network architecture of {{site.data.keyword.cephaas_full_notm}}" caption-side="bottom"}
