@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-04-23"
 
 keywords: cephaas settings, uploading S3 Certificate, ceph as a service
 
@@ -18,7 +18,11 @@ subcollection: cephaas
 S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
 {: shortdesc}
 
-Before you can update or replace the certificate file, you must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint. Upload the server-side certificate along with the Key by using the UI, CLI, or API.
+Before you can update or replace the certificate file, you need to upload the following by using UI, CLI, or API.
+•	Server side certificate (with the site's S3 endpoint FQDN in the SAN)
+•	Private Key
+•	Any intermediate CA Certificates
+•	CA (root) Certificate (for full chain)
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
