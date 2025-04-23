@@ -19,10 +19,10 @@ S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in t
 {: shortdesc}
 
 Before you can update or replace the certificate file, you need to upload the following by using UI, CLI, or API.
-•	Server side certificate (with the site's S3 endpoint FQDN in the SAN)
-•	Private Key
-•	Any intermediate CA Certificates
-•	CA (root) Certificate (for full chain)
+- Server side certificate (with the site's S3 endpoint FQDN in the SAN)
+-  Key
+-  Any intermediate CA Certificates
+- CA (root) Certificate (for full chain)
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
