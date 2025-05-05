@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-03-20"
+lastupdated: "2025-04-16"
 
 keyword: ceph as a service, setting up terraform, installing terraform, configuring resources
 
@@ -40,20 +40,14 @@ Before you can create an authorization by using Terraform, make sure that you ha
    ```terraform
    // Provision sds_volume resource instance
    resource "ibm_sds_volume" "sds_volume_instance" {
-     hostnqnstring = "<hostNQN>"
      capacity = 10
      name = "demo-volume"
    }
 
    // Provision sds_host resource instance
    resource "ibm_sds_host" "sds_host_instance" {
-
      name = "demo-host"
      nqn = "<hostNQN>"
-     volumes {
-       volume_id = ibm_sds_volume.sds_volume_instance.id
-       volume_name = ibm_sds_volume.sds_volume_instance.id
-     }
    }
    ```
    {: codeblock}
@@ -61,14 +55,19 @@ Before you can create an authorization by using Terraform, make sure that you ha
 2. Set your SDS endpoint as an environment variable
 
    ```bash
-   export IBMCLOUD_sds_endpoint="<sds_endpoint>"
+   export IBMCLOUD_SDS_ENDPOINT="<sds_endpoint>"
    ```
    {: pre}
 
    Setting the endpoint can also be accomplished by including the below tag in your terraform resources.
 
    ```terraform
-   sds_endpoint="<sds_endpoint>"
+   // Provision sds_volume resource instance
+   resource "ibm_sds_volume" "sds_volume_instance" {
+      sds_endpoint="<sds_endpoint>"
+      capacity = 10
+      name = "demo-volume"
+   }
    ```
    {: pre}
 
