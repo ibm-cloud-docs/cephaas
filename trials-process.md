@@ -31,7 +31,7 @@ You will not require a password for the VPN connection as the connection is mana
 ## Connecting to VCenter appliance
 {: #connect-vcenter-appliance}
 
-After connecting to the VPN, you can directly visit the VMWare systems prepared at:
+After connecting to the VPN, you can directly visit the VMWare systems prepared at the following servers:
 
 - esx1.cephaastrialsx.com - Your esx server 1. Credentials for the same will be provided via the setup zip file.
 
@@ -44,9 +44,9 @@ After connecting to the VPN, you can directly visit the VMWare systems prepared 
 ## Preparing host for connectivity
 {: #prepare-host-for-connectivity}
 
-The NVMe/TCP networking setup has been done on both the ESXi servers. 
+For host connectivity, you will need hostNQN from the ESXi server. This can be retrieved through either VCenter UI or ESXi CLI. 
 
-### Fetching the hostNQN from the ESX server using the VCenter UI
+### Fetching the hostNQN from the ESXi server using the VCenter UI
 {: #fetch-host-nqn-esxserver-ui}
 
 1. Select the host you want to add. 
@@ -60,7 +60,7 @@ The NVMe/TCP networking setup has been done on both the ESXi servers.
 {: #fetch-host-nqn-esxserver-cli}
 
 1. Ensure that SSH and ESXi shell services are enabled on the host you want to connect.
-2. Login via ssh to the ESX server you wish to connect.
+2. Login via ssh to the ESXi server you wish to connect.
 3. Run the command `esxcli nvme info get`.
 
 ## Performing NVME discovery from the VCenter UI
@@ -112,4 +112,3 @@ The NVMe/TCP networking setup has been done on both the ESXi servers.
 3. Right click the host and click on Storage/New Datastore. 
 4. Select the newly available NVMe disk.
 5. You can now use the VMFS datastore for your VM workloads.
-
