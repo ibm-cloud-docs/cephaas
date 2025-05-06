@@ -17,6 +17,7 @@ toc:
       topics:
       - getting-started.md
       - about-cephaas.md
+      - trials-process.md
       - topicgroup:
           label: Preparing the data center
           topics:
