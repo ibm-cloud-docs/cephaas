@@ -80,7 +80,6 @@ toc:
               topics:
                 - s3_cert_create.md
                 - s3_cert_view.md
-                - s3_cert_update.md
                 - s3_cert_delete.md
           - topicgroup:
               label: Managing authentication
@@ -109,6 +108,10 @@ toc:
             - managing-deployments.md
             - managing-vsphere-hosts.md
             - managing-datastores.md
+      - topicgroup:
+          label: CephaaS trial version
+          topics:
+            - trials-process.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command-line reference docs should be included in the Reference navigation group.
   - navgroup:
