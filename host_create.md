@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-05-12"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -22,7 +22,6 @@ Create a host by using the UI, CLI, API, or Terraform.
 Before creating a host, you must configure the NVME-oF initiator. This NVME-oF initiator is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
 {: requirement}
 
-
 ## Creating host in the UI
 {: #creating-host-ui}
 {: ui}
@@ -36,9 +35,10 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 
     Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error "Host name already exists" is displayed.
 
-5. Click **Next**.
-6. [Optional] Select one or more volumes to map them to the host.
-7. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
+5. You can choose to encrypt the host with a PSK (Pre-shared key) encryption key. This is an optional step. 
+6. Click **Next**.
+7. [Optional] Select one or more volumes to map them to the host.
+8. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
 
 
 
