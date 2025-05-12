@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-05-06"
+lastupdated: "2025-05-12"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -15,11 +15,11 @@ subcollection: cephaas
 # Using trial version
 {: #using-trial-version}
 
-You can use a trial version of {{site.data.keyword.cephaas_full}} to evaluate if the service meets your use cases. Here are the steps to configure the trial version in your infrastructure.
+You can use a trial version of {{site.data.keyword.cephaas_full}} to evaluate if the service meets your use cases. After the trial period, you can reactivate your account by upgrading it to a Pay-as-you-go account. Here are the steps to configure the trial version in your infrastructure.
 
 ## Connecting to IBM Cloud VPN
 {: #connect-ibmcloud-vpn}
-
+For onboarding, creating VPN client certificate is the first step. 
 1. Download the latest version of OpenVPN connect client from **Community Downloads** > **Open Source VPN** > **OpenVPN**.
 2. Download the openvpn zip file shared by the customer support.
 3. Import the trial-x-vpn-client-cert.ovpn file into OpenVPN software.
@@ -106,9 +106,8 @@ For host connectivity, you will need hostNQN from the ESXi server. This can be r
 
 ## Accessing NVME storage
 {: #accessing-nvme-storage}
-
-1. After the NVMe discovery and connect is done, you can see the CephaaS volume reflected as a disk on the ESXi server. This can be viewed in the storage devices section of the ESXi server. 
-2. Create a VMFS datastore on that host using the newly available disk. 
-3. Right click the host and click on Storage/New Datastore. 
-4. Select the newly available NVMe disk.
-5. You can now use the VMFS datastore for your VM workloads.
+After the NVMe discovery and connect is done, you can see the CephaaS volume reflected as a disk on the ESXi server. This can be viewed in the storage devices section of the ESXi server. For accessing your storage, perform the following steps. 
+1. Create a VMFS datastore on that host using the newly available disk. 
+2. Right click the host and click Storage/New Datastore. 
+3. Select the newly available NVMe disk.
+4. You can now use the VMFS datastore for your VM workloads.
