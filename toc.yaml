@@ -95,12 +95,8 @@ toc:
               navtitle: Architecture and workload isolation
             - endpoints.md
             - data-security.md
-# include this event notifications file in the future when it becomes part of the scope.
-      - topicgroup:
-          label: Observability
-          topics:
-            - topic: at-events.md
-              navtitle: Activity tracking events
+      - event_notifications.md
+      - at-events.md
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
