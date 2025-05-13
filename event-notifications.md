@@ -150,34 +150,15 @@ The properties that are sent to {{site.data.keyword.en_short}} vary depending on
 
 ```json
 {
-   "event_sub_type": "in_10_days",
-   "event_type": "secret_about_to_expire",
-   "secret_type": "public_cert",
-   "secrets": [
-      {
-         "domains": "domain1.com",
-         "event_time": "2021-11-04T15:42:25Z",
-         "secret_expiration": "2022-01-20T23:59:00.889852+03:00",
-         "secret_group_id": "default",
-         "secret_id": "crn:v1:bluemix:public:secrets-manager:<region>:a/<account_id>:<instance_id>:secret:<secret_id>",
-         "secret_name": "my-certificate-1",
-         "serial_number": "1:2:3:4"
-      },
-      {
-         "domains": "domain2.com, domain3.com",
-         "event_time": "2021-11-04T15:42:25Z",
-         "secret_expiration": "2022-01-20T23:59:00.889852+03:00",
-         "secret_group_id": "default",
-         "secret_id": "crn:v1:bluemix:public:secrets-manager:<region>:a/<account_id>:<instance_id>:secret:<secret_id>",
-         "secret_name": "my-certificate-2",
-         "serial_number": "1:2:3:4"
-      },
-   ],
-   "secrets_expiration_date": "2022-01-20T00:00:00Z",
-   "source_instance_api_url": "https://<instance_id>.<region>.secrets-manager.appdomain.cloud/api",
-   "source_instance_crn": "crn:v1:bluemix:public:secrets-manager:<region>:a/<account_id>:<instance_id>::",
-   "source_instance_dashboard_url": "https://cloud.ibm.com/services/secrets-manager/crn%3Av1%3Abluemix%3Apublic%3Asecrets-manager%3A<region>%3Aa%2Fa6cc9f5f21f34323a4175c1117638b40%3A<instance_id>%3A%3A",
-   "source_service": "Secrets Manager"
+    "ibmendefaultlong": "S3 certificate will expire in 90 days. Please replace your S3 certificate.",
+    "ibmendefaultshort": "Replace S3 certificate (expires 90 days)",
+    "ibmenseverity": "low",
+    "ibmensourceid": "crn:v1:staging:public:software-defined-storage:satloc_dal_crmid4v20tl6u8usf790:a/3faf73b8d12b47fa6ce87494f8ae7686:0c81f602-5142-4809-9e42-31de8453416a::",
+    "id": "38eb4721-db9b-4ba6-a5e7-cdd9cce66763",
+    "source": "crn:v1:staging:public:software-defined-storage:satloc_dal_crmid4v20tl6u8usf790:a/3faf73b8d12b47fa6ce87494f8ae7686:0c81f602-5142-4809-9e42-31de8453416a::",
+    "specversion": "1.0",
+    "time": "2025-04-23T21:13:44.301Z",
+    "type": "com.ibm.cloud.software-defined-storage.s3-certificate:s3_cert_expire_90_day"
 }
 ```
 {: screen}
