@@ -96,8 +96,8 @@ toc:
             - endpoints.md
             - data-security.md
 # link to event notifications should be included in the event notifications navigation group.
-      - topic: event_notifications.md
-        navtitle: Event notifications
+      - topic: event-notifications.md
+        navtitle: Enabling event notifications
       - topicgroup:
           label: Observability
           topics:
