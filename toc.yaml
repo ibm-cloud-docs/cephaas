@@ -96,8 +96,13 @@ toc:
             - endpoints.md
             - data-security.md
 # link to event notifications should be included in the event notifications navigation group.
-      - event_notifications.md
-      - at-events.md
+      - topic: event_notifications.md
+        navtitle: Event notifications
+      - topicgroup:
+          label: Observability
+          topics:
+            - topic: at-events.md
+              navtitle: Activity tracking events
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
