@@ -95,6 +95,7 @@ toc:
               navtitle: Architecture and workload isolation
             - endpoints.md
             - data-security.md
+# link to event notifications should be included in the event notifications navigation group.
       - event_notifications.md
       - at-events.md
       - topicgroup:
