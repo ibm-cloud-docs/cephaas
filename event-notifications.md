@@ -102,7 +102,7 @@ An email from {{site.data.keyword.cloud_notm}} that contains information about {
 ```plaintext
 Subject: Your S3 certificate expires in 90 days
 
-Body: The S3 certificate will expire in 90 days. Please replace your S3 certificate to maintain authencity of the S3 endpoint. For more information, check out the docs.
+Body: S3 certificate will expire in 90 days. Please replace your S3 certificate.
 ```
 {: screen}
 
