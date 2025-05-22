@@ -57,6 +57,7 @@ toc:
               label: Host operations
               topics:
                 - host_mapping_about.md
+                - host_create.md
                 - host_view.md
                 - host_rename.md
                 - host_delete.md
