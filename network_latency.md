@@ -3,7 +3,7 @@
 copyright:
   years: 2024
 
-lastupdated: "2025-03-20"
+lastupdated: "2025-05-06"
 
 keywords: network latency, ceph as a service, on-premises
 
@@ -22,6 +22,7 @@ The network latency between your data center and the corresponding {{site.data.k
 
 You can note the IP addresses for the {{site.data.keyword.cloud_notm}} region that you want to test from the following table:
 
+| Region           |  IP addresses  |
 | ---------------- | ---------- |
 | Dallas | 52.117.39.146, 169.48.134.66, 169.63.36.210 |
 | Frankfurt | 149.81.188.122, 158.177.88.18, 161.156.38.122 |

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-05-16"
 
 keywords: cephaas, activity tracker events, auditing events, ceph as a service
 
@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracker events for {{site.data.keyword.cephaas_full_notm}}
+# Activity tracker events for {{site.data.keyword.cephaas_short}}
 {: #at_events}
 
 {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.
@@ -26,10 +26,6 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
-
-
-### Locations where activity tracking events are sent by {{site.data.keyword.atracker_full_notm}}
-{: #atracker-locations}
 
 {{site.data.keyword.cephaas_full_notm}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
 

@@ -57,7 +57,6 @@ toc:
               label: Host operations
               topics:
                 - host_mapping_about.md
-                - host_create.md
                 - host_view.md
                 - host_rename.md
                 - host_delete.md
@@ -94,8 +93,10 @@ toc:
             - topic: architecture-workload-isolation.md
               navtitle: Architecture and workload isolation
             - endpoints.md
-            - data-security.md
-# include this event notifications file in the future when it becomes part of the scope.
+            - data-security.md<staging
+# link to event notifications should be included in the event notifications navigation group.
+      - topic: event-notifications.md</staging
+        navtitle: Enabling event notifications
       - topicgroup:
           label: Observability
           topics:

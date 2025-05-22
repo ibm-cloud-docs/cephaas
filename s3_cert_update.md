@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-04-23"
+lastupdated: "2025-05-22"
 
 keywords: cephaas settings, uploading S3 Certificate, ceph as a service
 
