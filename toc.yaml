@@ -94,10 +94,7 @@ toc:
             - topic: architecture-workload-isolation.md
               navtitle: Architecture and workload isolation
             - endpoints.md
-            - data-security.md<staging
-# link to event notifications should be included in the event notifications navigation group.
-      - topic: event-notifications.md</staging
-        navtitle: Enabling event notifications
+            - data-security.md
       - topicgroup:
           label: Observability
           topics:
