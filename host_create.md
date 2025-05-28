@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-05-28"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -37,7 +37,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 
 
 1. Click **Next**.
-1. [Optional] Select one or more volumes to map them to the host.
+1. Select one or more volumes to map them to the host.
 1. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
 
 
