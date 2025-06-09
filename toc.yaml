@@ -108,6 +108,13 @@ toc:
             - managing-deployments.md
             - managing-vsphere-hosts.md
             - managing-datastores.md
+            - view-snapshots-api.md
+            - view-specific-snapshot-api.md
+            - create-snapshot.api.md
+            - update-snapshot-api.md 
+            - delete-single-snapshot-api.md
+            - delete-snapshots-api.md
+            - view-snapshots-ui.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command-line reference docs should be included in the Reference navigation group.
   - navgroup:
