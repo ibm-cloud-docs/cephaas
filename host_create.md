@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-05-28"
+lastupdated: "2025-06-10"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -118,6 +118,7 @@ curl -X POST $sds_endpoint/hosts\
  			}
  		],
  	"name": "host1",
+  "psk": "NVMeTLSkey-1:01:5CBxDU8ejK+PrqIjTau0yDHnBV2CdfvP6hGmqnPdKhJ9tfi2:",
  	"nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149"}'
 ```
 {: pre}
@@ -163,6 +164,7 @@ A successful response looks like this:
         "name": "host1",
         "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
         "id": "r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d"
+        "psk_enabled": true
       }
     }
   ]
