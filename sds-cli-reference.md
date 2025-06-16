@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-06-16"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -239,7 +239,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 ```sh
-ibmcloud sds volumes [--limit LIMIT] [--name NAME] --url string
+ibmcloud sds volumes --help [--limit LIMIT] [--name NAME] --url string
 ```
 {: pre}
 
@@ -248,7 +248,7 @@ Aliases of `volumes`: `vols`
 Example command:
 
 ```sh
-ibmcloud sds volumes \
+ibmcloud sds volumes --help \
     --limit 10 \
     --name my-volume \
     --url $sds_endpoint
@@ -907,7 +907,7 @@ ibmcloud sds config
 Example for setting the url option.
 
 ```sh
-pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
+pc@mac ~ % ibmcloud sds config set [url] url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 OK
 ```
 {: screen}
@@ -916,7 +916,7 @@ OK
 Example that shows how to use the command without the config set.
 
 ```sh
-ibmcloud sds volumes --url $endpoint
+ibmcloud sds volumes --help --url $endpoint
 ```
 {: pre}
 
@@ -924,7 +924,7 @@ ibmcloud sds volumes --url $endpoint
 Example shows how to use the command with the `url` configured.
 
 ```sh
-ibmcloud sds volumes
+ibmcloud sds volumes --help
 ```
 {: pre}
 
@@ -987,7 +987,7 @@ http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 Use `set` option with `config` command to configure new values for a specific option.
 
 ```sh
-ibmcloud sds config set [option]
+ibmcloud sds config set [url]
 ```
 {: pre}
 
@@ -997,7 +997,6 @@ See example with `url` option.
 
 ```sh
 pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
-OK
 ```
 {: screen}
 
@@ -1008,24 +1007,13 @@ OK
 Use `unset` option with `config` command to reset the current configured values for a specific option.
 
 ```sh
-ibmcloud sds config unset [option]
+ibmcloud sds config unset [url]
 ```
 {: pre}
+
 
 When `unset` option is used together with `url` option, the currently configured value for the 'url' option is reset.
 
-See example with `url` option.
-
-```sh
-ibmcloud sds config unset url
-```
-{: pre}
-
-```sh
-pc@mac ~ % ibmcloud sds config unset url
-OK
-```
-{: screen}
 
 
 ## Next steps
