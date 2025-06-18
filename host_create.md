@@ -59,18 +59,10 @@ ic sds host --host-id $HOST_ONE
 
 ### Create host with PSK (Pre-shared key)
 
-
 ```sh
 ic sds host-create --name dchris-host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
 
 HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="dchris-host-2").Host_ID')
-```
-{: pre}
-
-### Update host to inlcude PSK key
-
-```sh
-ic sds host-update --host-id $HOST_ONE --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
 ```
 {: pre}
 
