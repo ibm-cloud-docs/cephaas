@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-18"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -17,7 +17,6 @@ subcollection: cephaas
 
 Create a host by using the UI, CLI, API, or Terraform.
 {: shortdesc}
-
 
 Before creating a host, you must configure the NVME-oF initiator. This NVME-oF initiator is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
 {: requirement}
@@ -47,10 +46,35 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 
 To create hosts by using the command-line interface (CLI) from a host template object, run the following command.
 
+### Create host without PSK (Pre-shared key)
+
 ```sh
-ibmcloud software-defined-storage host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
+ic sds host-create --name dchris-host-1 --nqn nqn.2014-06.org:9345
+
+HOST_ONE=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="dchris-host-1").Host_ID')
+
+ic sds host --host-id $HOST_ONE
 ```
 {: pre}
+
+### Create host with PSK (Pre-shared key)
+
+
+```sh
+ic sds host-create --name dchris-host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
+
+HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="dchris-host-2").Host_ID')
+```
+{: pre}
+
+### Update host to inlcude PSK key
+
+```sh
+ic sds host-update --host-id $HOST_ONE --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
+```
+{: pre}
+
+
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 
