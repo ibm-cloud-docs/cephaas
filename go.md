@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-06-18"
 
 keywords: object storage, go, sdk, ceph as a service
 
@@ -185,6 +185,139 @@ func main() {
 		*volume.ID,
 	)
 	response, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Create a volume snapshot
+{: #go-create-volume-snapshot}
+
+```Go
+	sourceVolumePrototypeModel := &sdsaasv1.SourceVolumePrototype{
+		ID: core.StringPtr(*volume.ID),
+	}
+
+	volumeSnapshotCreateOptions := sdsaasService.NewVolumeSnapshotCreateOptions(
+		sourceVolumePrototypeModel,
+	)
+
+	snapshot, response, err := sdsaasService.VolumeSnapshotCreate(volumeSnapshotCreateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### List all volume snapshots
+{: #go-list-volume-snapshot}
+
+```Go
+	volumeSnapshotsOptions := sdsaasService.NewVolumeSnapshotsOptions()
+
+	pager, err := sdsaasService.NewVolumeSnapshotsPager(volumeSnapshotsOptions)
+	if err != nil {
+		panic(err)
+	}
+
+	var allResults []sdsaasv1.Snapshot
+	for pager.HasNext() {
+		nextPage, err := pager.GetNext()
+		if err != nil {
+			panic(err)
+		}
+		allResults = append(allResults, nextPage...)
+	}
+	b, _ := json.MarshalIndent(allResults, "", "  ")
+	fmt.Println(string(b))
+```
+{: codeblock}
+
+### Update a volume snapshot
+{: #go-update-volume-snapshot}
+
+```Go
+	snapshotPatchModel := &sdsaasv1.SnapshotPatch{
+		Name: core.StringPtr("my-snapshot-updated"),
+	}
+	snapshotPatchModelAsPatch, asPatchErr := snapshotPatchModel.AsPatch()
+	if asPatchErr != nil {
+		panic(asPatchErr)
+	}
+
+	volumeSnapshotUpdateOptions := sdsaasService.NewVolumeSnapshotUpdateOptions(
+		*snapshot.ID,
+		snapshotPatchModelAsPatch,
+	)
+
+	snapshot, response, err := sdsaasService.VolumeSnapshotUpdate(volumeSnapshotUpdateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### List a volume snapshot
+{: #go-list-volume-snapshot}
+
+```Go
+	volumeSnapshotOptions := sdsaasService.NewVolumeSnapshotOptions(
+		*snapshot.ID,
+	)
+
+	snapshot, _, err = sdsaasService.VolumeSnapshot(volumeSnapshotOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Restore a volume from a snapshot
+{: #go-restore-volume-from-snapshot}
+
+```Go
+	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+		int64(10),
+	)
+	volumeCreateOptions.SetName("volume-restored-from-snapshot")
+
+	sourceSnapshot, err := sdsaasService.NewSourceSnapshot(*snapshot.ID)
+	if err != nil {
+		panic(err)
+	}
+	volumeCreateOptions.SetSourceSnapshot(sourceSnapshot)
+
+	volume, response, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Delete a volume snapshot
+{: #go-delete-volume-snapshot}
+
+```Go
+	volumeSnapshotDeleteOptions := sdsaasService.NewVolumeSnapshotDeleteOptions(
+		*snapshot.ID,
+	)
+
+	response, err := sdsaasService.VolumeSnapshotDelete(volumeSnapshotDeleteOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+{: codeblock}
+
+### Delete all snapshots related to a volume
+{: #go-delete-snapshots-related-to-volume}
+
+```Go
+	volumeSnapshotsDeleteOptions := sdsaasService.NewVolumeSnapshotsDeleteOptions()
+	volumeSnapshotsDeleteOptions.SetSourceVolumeID(*volume.ID)
+
+	response, err := sdsaasService.VolumeSnapshotsDelete(volumeSnapshotsDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
