@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-18"
+lastupdated: "2025-06-19"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -113,7 +113,9 @@ You can create hosts by directly calling the Host REST APIs. For more informatio
 Ensure that you have defined the variables for the IAM token and API endpoint. Also, ensure that you have the host `nqn` handy. The host `nqn` can be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
 {: requirement}
 
-Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and an optional `volume_id`.
+
+Make a `POST /hosts` request to create a host. Specify a mandatory `nqn`, an optional `volume_id` and `host }}{{{}name`.
+volume_id and host name are optional. 
 
 ```sh
 curl -X POST $sds_endpoint/hosts\
