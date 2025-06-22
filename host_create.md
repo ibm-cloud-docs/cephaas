@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-19"
+lastupdated: "2025-06-22"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -49,9 +49,9 @@ To create hosts by using the command-line interface (CLI) from a host template o
 ### Create host without PSK (Pre-shared key)
 
 ```sh
-ic sds host-create --name dchris-host-1 --nqn nqn.2014-06.org:9345
+ic sds host-create --name host-1 --nqn nqn.2014-06.org:9345
 
-HOST_ONE=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="dchris-host-1").Host_ID')
+HOST_ONE=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-1").Host_ID')
 
 ic sds host --host-id $HOST_ONE
 ```
@@ -60,9 +60,9 @@ ic sds host --host-id $HOST_ONE
 ### Create host with PSK (Pre-shared key)
 
 ```sh
-ic sds host-create --name dchris-host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
+ic sds host-create --name host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:"
 
-HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="dchris-host-2").Host_ID')
+HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-2").Host_ID')
 ```
 {: pre}
 
@@ -82,6 +82,7 @@ ibmcloud software-defined-storage host-create --url "$sds_endpoint"\
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
 Host_Name         dummy-host
 Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+PSK_Enabled       true
 Created_At        2025-02-28T10:05:30.000Z
 Volume_Mappings
                   Namespace_ID        -

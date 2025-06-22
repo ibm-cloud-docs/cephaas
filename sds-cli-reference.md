@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-16"
+lastupdated: "2025-06-22"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -276,7 +276,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-create-host-from-template}
 
 ```sh
-ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
+ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string --psk string
 ```
 {: pre}
 
