@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-22"
+lastupdated: "2025-06-26"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -306,6 +306,9 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 	If you do not specify a name for the new host, the system generates a name that is a hyphenated list of randomly selected words.
 	{: note}
+
+* PSK for the new host. Transport Layer Security pre-shared key ciphersuites (TLS-PSK) is a set of cryptographic protocols that provide secure communication based on pre-shared keys (PSKs).
+	* Flag: `--psk string`
 
 * The unique identifier of the volume to be mapped to this host. Must be in the form `[{"volume": {"id": "1a6b7274-678d-4dfb-8981-c71dd9d4daa5"}}]`.
 	* Flag: `--volume-mappings VOLUME-MAPPINGS`
@@ -886,6 +889,32 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 
+
+
+
+## Snapshot commands
+{: #ic-snapshot-cmds}
+
+### Create snapshot
+{: #ic-create-snapshot}
+
+### List a single snapshot
+{: #ic-list-snapshot}
+
+### List all snapshots
+{: #ic-list-snapshots}
+
+### Update a snapshot
+{: #ic-update-snapshot}
+
+### Restore a volume from a snapshot
+{: #ic-restore-volume-from-snapshot}
+
+### Delete a snapshot
+{: #ic-delete-snapshot}
+
+### Delete all snapshots
+{: #ic-delete-snapshots}
 
 
 

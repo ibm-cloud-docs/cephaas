@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-06-26"
 
 keywords: ceph as a service, cephaas, block storage, rename host
 
@@ -70,6 +70,7 @@ ibmcloud software-defined-storage host-update \
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
 Host_Name         host-rename
 Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+PSK_Enabled       false
 Created_At        2025-02-28T10:05:30.000Z
 Volume_Mappings
                   Status              mapped

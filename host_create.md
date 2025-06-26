@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-22"
+lastupdated: "2025-06-26"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -82,7 +82,7 @@ ibmcloud software-defined-storage host-create --url "$sds_endpoint"\
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
 Host_Name         dummy-host
 Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
-PSK_Enabled       true
+PSK_Enabled       false
 Created_At        2025-02-28T10:05:30.000Z
 Volume_Mappings
                   Namespace_ID        -
@@ -116,7 +116,7 @@ Ensure that you have defined the variables for the IAM token and API endpoint. A
 
 
 Make a `POST /hosts` request to create a host. Specify a mandatory `nqn`, an optional `volume_id` and `host }}{{{}name`.
-volume_id and host name are optional. 
+volume_id and host name are optional.
 
 ```sh
 curl -X POST $sds_endpoint/hosts\
