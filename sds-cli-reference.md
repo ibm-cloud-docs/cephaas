@@ -932,7 +932,7 @@ Example command:
 ```bash
 ic sds volume-snapshot --snap-id r134-ff7620ed-f0cc-420c-9783-652ced6892f2
 ```
-...
+{: screen}
 
 **Parameters to provide:**
 
@@ -951,7 +951,7 @@ Example command:
 ```bash
 ic sds volume-snapshots
 ```
-...
+{: screen}
 
 **Parameters to provide:**
 
@@ -976,7 +976,7 @@ Example command:
 ```bash
 ic sds volume-snapshot-update --snap-id r134-535b6bdf-d93f-4233-a239-5a2e78ae88af --name snap-2-updated
 ```
-...
+{: screen}
 
 **Parameters to provide:**
 
