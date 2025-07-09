@@ -906,7 +906,6 @@ ibmcloud sds volume-snapshot-create -source-volume-id <volume-id> OR --source-vo
 Example command:
 
 ```sh
-```bash
 ic sds volume-snapshot-create --source-volume-id r134-87a59338-a801-4090-a657-72867fc9ba44
 ```
 {: screen}
@@ -948,7 +947,7 @@ ibmcloud sds volume-snapshots --start <token>, --limit <int>, --name <snap-name>
 
 Example command:
 
-```bash
+```sh
 ic sds volume-snapshots
 ```
 {: screen}
@@ -973,7 +972,7 @@ ibmcloud sds volume-snapshot-update --snap-id <snap-id> --name <snap-name>, --sn
 
 Example command: 
 
-```bash
+```sh
 ic sds volume-snapshot-update --snap-id r134-535b6bdf-d93f-4233-a239-5a2e78ae88af --name snap-2-updated
 ```
 {: screen}
@@ -994,7 +993,7 @@ ibmcloud sds volume-create ---capacity <int> --name <string>, --source-snapshot-
 
 Example command: 
 
-```bash
+```sh
 ic sds volume-create --name test-volume-restored --source-snapshot-id  r134-eda57df4-41f2-48d8-812d-3d81955b6a1a --capacity 3
 ```
 **Parameters to provide:**
@@ -1013,7 +1012,7 @@ ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
 
 Example command: 
 
-```bash
+```sh
 ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
 Are you sure you want to delete? [y/n]> y
 ...
@@ -1033,7 +1032,7 @@ ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
 
 Example command: 
 
-```bash
+```sh
 ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
 Are you sure you want to delete? [y/n]> y
 ...
