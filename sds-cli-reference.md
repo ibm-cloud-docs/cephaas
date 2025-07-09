@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-07-09"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -898,25 +898,154 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ### Create snapshot
 {: #ic-create-snapshot}
 
+```sh
+ibmcloud sds volume-snapshot-create -source-volume-id <volume-id> OR --source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) --name  <snap-name>
+```
+{: pre}
+
+Example command:
+
+```sh
+```bash
+ic sds volume-snapshot-create --source-volume-id r134-87a59338-a801-4090-a657-72867fc9ba44
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+**Parameters to provide:**
+
+* source-volume-id <volume-id>
+
+* Optional: name  <snapshot-name>
+
 ### List a single snapshot
 {: #ic-list-snapshot}
+
+```sh
+ibmcloud sds volume-snapshot --snap-id <snap-id>
+```
+{: pre}
+
+Example command:
+
+```bash
+ic sds volume-snapshot --snap-id r134-ff7620ed-f0cc-420c-9783-652ced6892f2
+```
+...
+
+**Parameters to provide:**
+
+* snap-id <snap-id>
 
 ### List all snapshots
 {: #ic-list-snapshots}
 
+```sh
+ibmcloud sds volume-snapshots --start <token>, --limit <int>, --name <snap-name>, --source-volume-id <string>, --all-pages
+```
+{: pre}
+
+Example command:
+
+```bash
+ic sds volume-snapshots
+```
+...
+
+**Parameters to provide:**
+
+The following parameters are optional.
+
+* start <token>
+* limit <int>
+* name <snap-name>
+* source-volume-id <string>
+* all-pages
+
 ### Update a snapshot
 {: #ic-update-snapshot}
+
+```sh
+ibmcloud sds volume-snapshot-update --snap-id <snap-id> --name <snap-name>, --snapshot-patch <snapshot-patch>
+```
+{: pre}
+
+Example command: 
+
+```bash
+ic sds volume-snapshot-update --snap-id r134-535b6bdf-d93f-4233-a239-5a2e78ae88af --name snap-2-updated
+```
+...
+
+**Parameters to provide:**
+
+* Required: snap-id <snap-id>
+
+* Optional: name <snap-name>, --snapshot-patch <snapshot-patch>
 
 ### Restore a volume from a snapshot
 {: #ic-restore-volume-from-snapshot}
 
+```sh
+ibmcloud sds volume-create ---capacity <int> --name <string>, --source-snapshot-id <string>, --source-snapshot <JSON-string>
+```
+{: pre}
+
+Example command: 
+
+```bash
+ic sds volume-create --name test-volume-restored --source-snapshot-id  r134-eda57df4-41f2-48d8-812d-3d81955b6a1a --capacity 3
+```
+**Parameters to provide:**
+
+* Required: capacity <int>
+
+* Optional: name <string>, source-snapshot-id <string>, source-snapshot <JSON-string>
+
 ### Delete a snapshot
 {: #ic-delete-snapshot}
+
+```sh
+ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
+```
+{: pre}
+
+Example command: 
+
+```bash
+ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
+Are you sure you want to delete? [y/n]> y
+...
+OK
+```
+**Parameters to provide:**
+
+* Required: snap-id <snap-id>
 
 ### Delete all snapshots
 {: #ic-delete-snapshots}
 
+```sh
+ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
+```
+{: pre}
 
+Example command: 
+
+```bash
+ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
+Are you sure you want to delete? [y/n]> y
+...
+OK
+```
+{: screen}
+
+**Parameters to provide:**
+
+* Required: source-volume-id <volume-id>
+
+* Optional: force
 
 ## Config commands
 {: #ic-config-commands}
