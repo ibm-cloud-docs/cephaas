@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-09"
+lastupdated: "2025-07-10"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -914,9 +914,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
-* source-volume-id <volume-id>
+* The block volume id where the new snapshot needs to be created.
+    * Flag: source-volume-id <volume-id>
 
-* Optional: name  <snapshot-name>
+* Optional parameter is the name of the new snapshot. <autogenerate>
+    * Flag: name  <snapshot-name>
 
 ### List a single snapshot
 {: #ic-list-snapshot}
@@ -928,14 +930,15 @@ ibmcloud sds volume-snapshot --snap-id <snap-id>
 
 Example command:
 
-```bash
+```sh
 ic sds volume-snapshot --snap-id r134-ff7620ed-f0cc-420c-9783-652ced6892f2
 ```
 {: screen}
 
 **Parameters to provide:**
 
-* snap-id <snap-id>
+* The block volume id where the new snapshot needs to be created.
+    * Flag: source-volume-id <volume-id>
 
 ### List all snapshots
 {: #ic-list-snapshots}
@@ -956,11 +959,20 @@ ic sds volume-snapshots
 
 The following parameters are optional.
 
-* start <token>
-* limit <int>
-* name <snap-name>
-* source-volume-id <string>
-* all-pages
+* The block volume id where the new snapshot needs to be created.
+    * Flag: source-volume-id <volume-id>
+
+* Pagination limit for displaying the list of snapshots.
+    * Flag: start <token>, limit <int> 
+
+* Name of the snapshot
+    * name <snap-name>
+
+* The block volume id where the new snapshot needs to be created.
+    * Flag: source-volume-id <volume-id>
+
+* Pagination choice of displaying all the snapshot pages.
+    * Flag: all-pages
 
 ### Update a snapshot
 {: #ic-update-snapshot}
@@ -979,9 +991,15 @@ ic sds volume-snapshot-update --snap-id r134-535b6bdf-d93f-4233-a239-5a2e78ae88a
 
 **Parameters to provide:**
 
-* Required: snap-id <snap-id>
+* The snapshot id where the update is needed.
+    * Flag: snap-id <snap-id>
 
-* Optional: name <snap-name>, --snapshot-patch <snapshot-patch>
+* The snapshot name where the update is needed (optional).
+    * Flag: name  <snap-name>
+
+ The snapshot patch where the update is needed (optional).
+    * Flag: snapshot-patch <snapshot-patch>
+
 
 ### Restore a volume from a snapshot
 {: #ic-restore-volume-from-snapshot}
@@ -998,9 +1016,14 @@ ic sds volume-create --name test-volume-restored --source-snapshot-id  r134-eda5
 ```
 **Parameters to provide:**
 
-* Required: capacity <int>
+* Capacity of the new volume which will be restored from the snapshot. While restoring a block volume from a snapshot, the capacity should be same or higher than the original block volume capacity. 
+    * Flag: capacity <int>
 
-* Optional: name <string>, source-snapshot-id <string>, source-snapshot <JSON-string>
+* Name of the snapshot 
+    * Flag: name <string>
+
+* Id of the snapshot 
+    * Flag: source-snapshot-id <string>
 
 ### Delete a snapshot
 {: #ic-delete-snapshot}
@@ -1020,7 +1043,8 @@ OK
 ```
 **Parameters to provide:**
 
-* Required: snap-id <snap-id>
+* The snapshot id where  is needed.
+    * Flag: snap-id <snap-id>
 
 ### Delete all snapshots
 {: #ic-delete-snapshots}
@@ -1042,9 +1066,9 @@ OK
 
 **Parameters to provide:**
 
-* Required: source-volume-id <volume-id>
+* The block volume id where the all the snapshots need to be deleted.
+    * Flag: source-volume-id <source-volume-id>
 
-* Optional: force
 
 ## Config commands
 {: #ic-config-commands}
