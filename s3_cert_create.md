@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-07-15"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -22,6 +22,18 @@ You must create a server-side certificate with Subject Alternative Name (SAN) an
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
+
+The following are the prerequisites for generating S3 TLS certificate.
+
+* The TLS Certificate provided must be formatted as a `pem` file according to the RFC-7468 standard.
+* It must contain at least one CERTIFICATE property for the related certificates, which should be the end-entity certificate at a minimum.
+* It must contain one of the following properties for the respective private key: PRIVATE KEY, RSA PRIVATE KEY, or EC PRIVATE KEY.
+* The private key must be consistent with the main/end-entity certificate.
+
+If the `pem` files are included, the order of items in the `pem` file should be: end-entity certificate, intermediate certificate, root certificate, private key.
+{:important:}
+
+If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with CephaaS.
 
 
 
