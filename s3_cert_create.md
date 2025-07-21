@@ -31,6 +31,7 @@ The following are the prerequisites for generating S3 TLS certificate.
 * The private key must be consistent with the main/end-entity certificate.
 
 If multiple certificate properties are included, the order of items in the `pem` file should be: end-entity certificate, intermediate certificate, root certificate, private key. For example: `cat tls.crt ca.crt tls.key > both.pem` is the correct order for the `pem` file to be used by {{site.data.keyword.cephaas_short}}.
+
 {:important:}
 
 If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with CephaaS.
