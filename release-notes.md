@@ -28,7 +28,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ### 31 July 2025
 
-Version: 1.1
+**Version: 1.1**
 
 Version 1.1 of {{site.data.keyword.cephaas_full_notm}} introduces a range of significant enhancements and new capabilities focused on security, platform integration, snapshot management, and deployment flexibility. Key updates include:
 
