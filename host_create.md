@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-01"
+lastupdated: "2025-07-28"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -47,6 +47,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 To create hosts by using the command-line interface (CLI) from a host template object, run the following command.
 
 ### Create host without PSK (Pre-shared key)
+{: #create-host-without-psk}
 
 ```sh
 ic sds host-create --name host-1 --nqn nqn.2014-06.org:9345 --url $sds_endpoint
@@ -58,6 +59,7 @@ ic sds host --host-id $HOST_ONE
 {: pre}
 
 ### Create host with PSK (Pre-shared key)
+{: #create-host-with-psk}
 
 ```sh
 ic sds host-create --name host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:" --url $sds_endpoint
