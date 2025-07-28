@@ -117,8 +117,7 @@ Ensure that you have defined the variables for the IAM token and API endpoint. A
 {: requirement}
 
 
-Make a `POST /hosts` request to create a host. Specify a mandatory `nqn`, an optional `volume_id` and `host }}{{{}name`.
-volume_id and host name are optional.
+Make a `POST /hosts` request to create a host. Specify a mandatory `nqn`, an optional `volume_id` and `host name`. `volume_id` and `host name` are optional.
 
 ```sh
 curl -X POST $sds_endpoint/hosts\
