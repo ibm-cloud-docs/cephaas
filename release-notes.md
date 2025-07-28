@@ -31,15 +31,17 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 Version: 1.1
-: {{site.data.keyword.cephaas_full_notm}} introduces a range of significant enhancements and new capabilities focused on security, platform integration, snapshot management, and deployment flexibility. Key updates include:
+: {{site.data.keyword.cephaas_full_notm}} introduces a range of significant enhancements and new capabilities focused on security, platform integration, snapshot management, and deployment flexibility.
 
-* Introduced TLS encryption for NVMe/TCP across all interfaces; API, CLI, and UI.
-* Upgrade to Ceph version 8.0.3Z3.
-* Integration with the Acadia Platform 2.0.
-* Full support for Carbon 11.
-* Snapshot functionality across, API, CLI, UI (read-only view). The snapshot functionality currently enables users to manage volume snapshots through API and CLI, with visibility in the UI.
-* Integration with the Service Framework to deliver real-time event notifications.
-* Support for upgrades on single-node (VM) deployments.
+    Key updates include:
+
+    * Introduced TLS encryption for NVMe/TCP across all interfaces; API, CLI, and UI.
+    * Upgrade to Ceph version 8.0.3Z3.
+    * Integration with the Acadia Platform 2.0.
+    * Full support for Carbon 11.
+    * Snapshot functionality across, API, CLI, UI (read-only view). The snapshot functionality currently enables users to manage volume snapshots through API and CLI, with visibility in the UI.
+    * Integration with the Service Framework to deliver real-time event notifications.
+    * Support for upgrades on single-node (VM) deployments.
 
 
 ## March 2025
