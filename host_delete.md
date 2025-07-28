@@ -15,9 +15,10 @@ subcollection: cephaas
 # Deleting hosts
 {: #deleting-hosts}
 
-Delete a host from a deployment by using the UI, CLI, API or Terraform, to remove systems, such as servers or VMs, that no longer need access to block storage volumes in your deployment. This helps maintain security, manage resources efficiently, and prevent unauthorized access to storage. Deleting unused hosts also keeps your environment organized and reduces potential management overhead.
+To remove systems, such as servers or VMs, that no longer need access to block storage volumes in your deployment, you can delete a host from a deployment by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
+This helps maintain security, manage resources efficiently, and prevent unauthorized access to storage. Deleting unused hosts also keeps your environment organized and reduces potential management overhead.
 
 ## Deleting host from the UI
 {: #deleting-single-host-ui}

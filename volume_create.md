@@ -15,8 +15,10 @@ subcollection: cephaas
 # Creating block volumes
 {: #creating-block-volume}
 
-Create a block storage volume by using the UI, CLI, API or Terraform, to store, organize, and manage data independently from compute resources. By creating volumes, you can allocate storage capacity as needed, support data persistence, and enable flexible data management for your workloads
+To store, organize, and manage data independently from compute resources, you can create a block storage volume by using the UI, CLI, API or Terraform.
 {: shortdesc}
+
+By creating volumes, you can allocate storage capacity as needed, support data persistence, and enable flexible data management for your workloads.
 
 
 ## Creating block volumes in the UI
