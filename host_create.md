@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating a host
 {: #creating-host}
 
-Create a host by using the UI, CLI, API, or Terraform.
+Create a host by using the UI, CLI, API, or Terraform, to enable block storage volumes to be mapped and accessed by your servers or applications. A host represents a system, such as a server or Virtual Machine(VM), that connects to storage volumes using the NVMe-oF protocol. By creating a host and mapping volumes to it, you allow your workloads to read and write data on those volumes through secure, managed connections.
 {: shortdesc}
 
 Before creating a host, you must configure the NVME-oF initiator. This NVME-oF initiator is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
