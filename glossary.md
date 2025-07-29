@@ -22,14 +22,6 @@ This glossary provides terms and definitions used in {{site.data.keyword.cephaas
 
 Events that record actions or changes within the system for auditing or monitoring purposes.
 
-## **API (Application Programming Interface)**
-
-A set of protocols and tools for building software and interacting programmatically with the service.
-
-## **Authentication**
-
-The process of verifying the identity of a user, host, or application before granting access to resources.
-
 ## **Bandwidth**
 
 The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
@@ -42,25 +34,9 @@ A type of data storage where data is stored in fixedsized blocks. Each block act
 
 The process of assigning a specific amount of storage space to a volume or other storage resource.
 
-## **Ceph as a Service (CephaaS)**
-
-A managed service offering IBM Storage Ceph, providing scalable and resilient storage for block, file, and object data.
-
-## **CLI (Command Line Interface)**
-
-A textbased interface for managing resources by entering commands.
-
 ## **Create, Delete, Update (CRUD operations)**
 
 The basic operations for managing resources—creating, deleting, and updating them.
-
-## **CRN (Cloud Resource Name)**
-
-A unique identifier for resources in IBM Cloud, used for tracking and management.
-
-## **Data security**
-
-Measures and technologies used to protect data from unauthorized access, corruption, or loss.
 
 ## **Datastore**
 
@@ -86,10 +62,6 @@ A message or alert generated when a specific event occurs, such as a certificate
 
 Increasing the capacity of an existing storage volume to accommodate more data.
 
-## **Force flag**
-
-A commandline option that forces an operation to proceed without prompting for confirmation.
-
 ## **Host**
 
 A server or virtual machine that connects to storage volumes to read or write data.
@@ -98,21 +70,9 @@ A server or virtual machine that connects to storage volumes to read or write da
 
 A unique identifier for a host in NVMe-oF environments, used to establish secure connections between hosts and storage.
 
-## **Href**
+## **href**
 
 A URL or link to the resource in the API.
-
-## **IBM Storage Ceph as a Service**
-
-IBM’s managed Ceph storage solution, offering enterprise-grade storage capabilities in the cloud.
-
-## **ibmcloud CLI**
-
-IBM’s commandline tool for managing IBM Cloud resources and services.
-
-## **ID**
-
-A unique identifier assigned to a resource, such as a volume or host.
 
 ## **Initiator**
 
@@ -121,10 +81,6 @@ The component (usually software or hardware) on a host that initiates a connecti
 ## **IOPS (Input/Output Operations Per Second)**
 
 A performance metric indicating how many read/write operations a storage resource can handle per second.
-
-## **Kebab menu**
-
-A UI element (three vertical dots) that opens a menu with additional options.
 
 ## **Mapping (volume to host mapping)**
 
@@ -142,9 +98,6 @@ A storage architecture that manages data as objects, as opposed to files or bloc
 
 The ability to monitor, measure, and understand the state and behavior of a system.
 
-## **Pending/Available/Failed status**
-
-Possible states for a resource, indicating whether it is being created, ready for use, or has encountered an error.
 
 ## **Provisioned size**
 
@@ -153,14 +106,6 @@ The amount of storage capacity allocated to a volume or resource.
 ## **PSK (PreShared Key) encryption**
 
 A method of securing communications using a shared secret key that is distributed to both parties in advance.
-
-## **Resource type**
-
-The kind of resource being referenced, such as a volume or snapshot.
-
-## **REST API**
-
-An API that uses HTTP requests to perform operations on resources, following REST (Representational State Transfer) principles.
 
 ## **S3 certificate**
 
@@ -190,21 +135,11 @@ The current state of a resource (e.g., pending, available, failed, updating).
 
 An open-source infrastructure-as-code tool for provisioning and managing cloud resources.
 
-## **Terraform plan/apply**
-
-Terraform commands used to preview (`plan`) and execute (`apply`) infrastructure changes.
-
-## **UI (User Interface)**
-
-The graphical interface that allows users to interact with the service through a web browser.
 
 ## **VMWare vSphere plug-in**
 
 A software component that integrates IBM Storage Ceph as a Service with VMware vSphere environments.
 
-## **Volume**
-
-A virtual storage device that can be attached to hosts or servers. Volumes are used to store data and can be managed independently of compute resources.
 
 ## **vSphere host**
 
