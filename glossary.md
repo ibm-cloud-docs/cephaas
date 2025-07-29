@@ -15,32 +15,37 @@ subcollection: cephaas
 # Glossary
 {: #glossary}
 
-**Activity tracking events**
+## **Activity tracking events**
 
-    Events that record actions or changes within the system for auditing or monitoring purposes.
+Events that record actions or changes within the system for auditing or monitoring purposes.
 
-**API (Application Programming Interface)**
+## **API (Application Programming Interface)**
 
-    A set of protocols and tools for building software and interacting programmatically with the service.
+A set of protocols and tools for building software and interacting programmatically with the service.
 
-**Authentication**
+## **Authentication**
 
-    The process of verifying the identity of a user, host, or application before granting access to resources.
+The process of verifying the identity of a user, host, or application before granting access to resources.
 
-**Bandwidth**
-    The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
+## **Bandwidth**
 
-**Block storage**
-    A type of data storage where data is stored in fixedsized blocks. Each block acts as an individual hard drive, and block storage is commonly used for databases and virtual machines.
+The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
 
-**Capacity allocation**
-    The process of assigning a specific amount of storage space to a volume or other storage resource.
+## **Block storage**
 
-**Ceph as a Service (CephaaS)**
-    A managed service offering IBM Storage Ceph, providing scalable and resilient storage for block, file, and object data.
+A type of data storage where data is stored in fixedsized blocks. Each block acts as an individual hard drive, and block storage is commonly used for databases and virtual machines.
 
-**CLI (Command Line Interface)**
-    A textbased interface for managing resources by entering commands.
+## **Capacity allocation**
+
+The process of assigning a specific amount of storage space to a volume or other storage resource.
+
+## **Ceph as a Service (CephaaS)**
+
+A managed service offering IBM Storage Ceph, providing scalable and resilient storage for block, file, and object data.
+
+## **CLI (Command Line Interface)**
+
+A textbased interface for managing resources by entering commands.
 
 **Create, Delete, Update (CRUD operations)**
     The basic operations for managing resources—creating, deleting, and updating them.
