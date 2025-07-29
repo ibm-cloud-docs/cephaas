@@ -15,155 +15,155 @@ subcollection: cephaas
 # Glossary
 {: #glossary}
 
-- **Activity tracking events**
-  Events that record actions or changes within the system for auditing or monitoring purposes.
+**Activity tracking events**
+    Events that record actions or changes within the system for auditing or monitoring purposes.
 
-- **API (Application Programming Interface)**
-  A set of protocols and tools for building software and interacting programmatically with the service.
+**API (Application Programming Interface)**
+    A set of protocols and tools for building software and interacting programmatically with the service.
 
-- **Authentication**
-  The process of verifying the identity of a user, host, or application before granting access to resources.
+**Authentication**
+    The process of verifying the identity of a user, host, or application before granting access to resources.
 
-- **Bandwidth**
-  The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
+**Bandwidth**
+    The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
 
-- **Block storage**
-  A type of data storage where data is stored in fixed-sized blocks. Each block acts as an individual hard drive, and block storage is commonly used for databases and virtual machines.
+**Block storage**
+    A type of data storage where data is stored in fixedsized blocks. Each block acts as an individual hard drive, and block storage is commonly used for databases and virtual machines.
 
-- **Capacity allocation**
-  The process of assigning a specific amount of storage space to a volume or other storage resource.
+**Capacity allocation**
+    The process of assigning a specific amount of storage space to a volume or other storage resource.
 
-- **Ceph as a Service (CephaaS)**
-  A managed service offering IBM Storage Ceph, providing scalable and resilient storage for block, file, and object data.
+**Ceph as a Service (CephaaS)**
+    A managed service offering IBM Storage Ceph, providing scalable and resilient storage for block, file, and object data.
 
-- **CLI (Command Line Interface)**
-  A text-based interface for managing resources by entering commands.
+**CLI (Command Line Interface)**
+    A textbased interface for managing resources by entering commands.
 
-- **Create, Delete, Update (CRUD operations)**
-  The basic operations for managing resources—creating, deleting, and updating them.
+**Create, Delete, Update (CRUD operations)**
+    The basic operations for managing resources—creating, deleting, and updating them.
 
-- **CRN (Cloud Resource Name)**
-  A unique identifier for resources in IBM Cloud, used for tracking and management.
+**CRN (Cloud Resource Name)**
+    A unique identifier for resources in IBM Cloud, used for tracking and management.
 
-- **Data security**
-  Measures and technologies used to protect data from unauthorized access, corruption, or loss.
+**Data security**
+    Measures and technologies used to protect data from unauthorized access, corruption, or loss.
 
-- **Datastore**
-  A storage repository for virtual machine files and other data, often used in virtualization environments.
+**Datastore**
+    A storage repository for virtual machine files and other data, often used in virtualization environments.
 
-- **Deployment**
-  An instance of the CephaaS service, including its configuration, resources, and associated workloads.
+**Deployment**
+    An instance of the CephaaS service, including its configuration, resources, and associated workloads.
 
-- **Endpoints**
-  Network addresses (URLs) used to access APIs or services.
+**Endpoints**
+    Network addresses (URLs) used to access APIs or services.
 
-- **Environment variable**
-  A variable set in the operating system or shell that provides configuration information to commands or scripts.
+**Environment variable**
+    A variable set in the operating system or shell that provides configuration information to commands or scripts.
 
-- **Event notification**
-  A message or alert generated when a specific event occurs, such as a certificate expiring or a volume being deleted.
+**Event notification**
+    A message or alert generated when a specific event occurs, such as a certificate expiring or a volume being deleted.
 
-- **Expand (volume)**
-  Increasing the capacity of an existing storage volume to accommodate more data.
+**Expand (volume)**
+    Increasing the capacity of an existing storage volume to accommodate more data.
 
-- **Force flag**
-  A command-line option that forces an operation to proceed without prompting for confirmation.
+**Force flag**
+    A commandline option that forces an operation to proceed without prompting for confirmation.
 
-- **Host**
-  A server or virtual machine that connects to storage volumes to read or write data.
+**Host**
+    A server or virtual machine that connects to storage volumes to read or write data.
 
-- **Host NQN (NVMe Qualified Name)**
-  A unique identifier for a host in NVMe-oF environments, used to establish secure connections between hosts and storage.
+**Host NQN (NVMe Qualified Name)**
+    A unique identifier for a host in NVMe-oF environments, used to establish secure connections between hosts and storage.
 
-- **Href**
-  A URL or link to the resource in the API.
+**Href**
+    A URL or link to the resource in the API.
 
-- **IBM Storage Ceph as a Service**
-  IBM’s managed Ceph storage solution, offering enterprise-grade storage capabilities in the cloud.
+**IBM Storage Ceph as a Service**
+    IBM’s managed Ceph storage solution, offering enterprise-grade storage capabilities in the cloud.
 
-- **ibmcloud CLI**
-  IBM’s command-line tool for managing IBM Cloud resources and services.
+**ibmcloud CLI**
+    IBM’s commandline tool for managing IBM Cloud resources and services.
 
-- **ID**
-  A unique identifier assigned to a resource, such as a volume or host.
+**ID**
+    A unique identifier assigned to a resource, such as a volume or host.
 
-- **Initiator**
-  The component (usually software or hardware) on a host that initiates a connection to storage resources.
+**Initiator**
+    The component (usually software or hardware) on a host that initiates a connection to storage resources.
 
-- **IOPS (Input/Output Operations Per Second)**
-  A performance metric indicating how many read/write operations a storage resource can handle per second.
+**IOPS (Input/Output Operations Per Second)**
+    A performance metric indicating how many read/write operations a storage resource can handle per second.
 
-- **Kebab menu**
-  A UI element (three vertical dots) that opens a menu with additional options.
+**Kebab menu**
+    A UI element (three vertical dots) that opens a menu with additional options.
 
-- **Mapping (volume to host mapping)**
-  The process of associating a storage volume with a host, allowing the host to access the volume.
+**Mapping (volume to host mapping)**
+    The process of associating a storage volume with a host, allowing the host to access the volume.
 
-- **NVMe-oF (Non-Volatile Memory Express over Fabrics)**
-  A protocol that enables NVMe storage devices to be accessed over network fabrics such as Ethernet or Fibre Channel.
+**NVMe-oF (Non-Volatile Memory Express over Fabrics)**
+    A protocol that enables NVMe storage devices to be accessed over network fabrics such as Ethernet or Fibre Channel.
 
-- **Object storage**
-  A storage architecture that manages data as objects, as opposed to files or blocks. Each object includes the data, metadata, and a unique identifier.
+**Object storage**
+    A storage architecture that manages data as objects, as opposed to files or blocks. Each object includes the data, metadata, and a unique identifier.
 
-- **Observability**
-  The ability to monitor, measure, and understand the state and behavior of a system.
+**Observability**
+    The ability to monitor, measure, and understand the state and behavior of a system.
 
-- **Pending/Available/Failed status**
-  Possible states for a resource, indicating whether it is being created, ready for use, or has encountered an error.
+**Pending/Available/Failed status**
+    Possible states for a resource, indicating whether it is being created, ready for use, or has encountered an error.
 
-- **Provisioned size**
-  The amount of storage capacity allocated to a volume or resource.
+**Provisioned size**
+    The amount of storage capacity allocated to a volume or resource.
 
-- **PSK (Pre-Shared Key) encryption**
-  A method of securing communications using a shared secret key that is distributed to both parties in advance.
+**PSK (PreShared Key) encryption**
+    A method of securing communications using a shared secret key that is distributed to both parties in advance.
 
-- **Resource type**
-  The kind of resource being referenced, such as a volume or snapshot.
+**Resource type**
+    The kind of resource being referenced, such as a volume or snapshot.
 
-- **REST API**
-  An API that uses HTTP requests to perform operations on resources, following REST (Representational State Transfer) principles.
+**REST API**
+    An API that uses HTTP requests to perform operations on resources, following REST (Representational State Transfer) principles.
 
-- **S3 certificate**
-  A digital certificate used to secure communications and authenticate access to S3-compatible object storage.
+**S3 certificate**
+    A digital certificate used to secure communications and authenticate access to S3-compatible object storage.
 
-- **S3 credentials**
-  Authentication information (such as access keys and secrets) used to access S3-compatible object storage.
+**S3 credentials**
+    Authentication information (such as access keys and secrets) used to access S3compatible object storage.
 
-- **Snapshot**
-  A point-in-time copy of data, such as a volume or datastore, used for backup, recovery, or cloning purposes.
+**Snapshot**
+    A point-in-time copy of data, such as a volume or datastore, used for backup, recovery, or cloning purposes.
 
-- **Source**
-  The origin of an event or resource, often specified as a CRN.
+**Source**
+    The origin of an event or resource, often specified as a CRN.
 
-- **Specversion**
-  The version of the event specification (such as CloudEvents) used in event notifications.
+**Specversion**
+    The version of the event specification (such as CloudEvents) used in event notifications.
 
-- **Status**
-  The current state of a resource (e.g., pending, available, failed, updating).
+**Status**
+    The current state of a resource (e.g., pending, available, failed, updating).
 
-- **Terraform**
-  An open-source infrastructure-as-code tool for provisioning and managing cloud resources.
+**Terraform**
+    An open-source infrastructure-as-code tool for provisioning and managing cloud resources.
 
-- **Terraform plan/apply**
-  Terraform commands used to preview (`plan`) and execute (`apply`) infrastructure changes.
+**Terraform plan/apply**
+    Terraform commands used to preview (`plan`) and execute (`apply`) infrastructure changes.
 
-- **UI (User Interface)**
-  The graphical interface that allows users to interact with the service through a web browser.
+**UI (User Interface)**
+    The graphical interface that allows users to interact with the service through a web browser.
 
-- **VMWare vSphere plug-in**
-  A software component that integrates IBM Storage Ceph as a Service with VMware vSphere environments.
+**VMWare vSphere plug-in**
+    A software component that integrates IBM Storage Ceph as a Service with VMware vSphere environments.
 
-- **Volume**
-  A virtual storage device that can be attached to hosts or servers. Volumes are used to store data and can be managed independently of compute resources.
+**Volume**
+    A virtual storage device that can be attached to hosts or servers. Volumes are used to store data and can be managed independently of compute resources.
 
-- **vSphere host**
-  A physical or virtual server managed by VMware vSphere.
+**vSphere host**
+    A physical or virtual server managed by VMware vSphere.
 
-- **vSphere snapshot**
-  A point-in-time copy of a virtual machine or datastore in a VMware environment.
+**vSphere snapshot**
+    A point-in-time copy of a virtual machine or datastore in a VMware environment.
 
-- **Workload isolation**
-  The practice of separating workloads to improve security, performance, or compliance.
+**Workload isolation**
+    The practice of separating workloads to improve security, performance, or compliance.
 
-- **Endpoint URL**
-  The network address used to access a service or API.
+**Endpoint URL**
+    The network address used to access a service or API.
