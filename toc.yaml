@@ -129,6 +129,7 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
+      - glossary.md
       - topicgroup:
           label: API reference
           topics:
@@ -155,9 +156,6 @@ toc:
         - link:
             label: Terraform reference
             href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
-        - link:
-            label: Glossary
-            href: /docs/cephaas/glossary.md
 # links to your support, faqs and troubleshooting information should be included in the help navigation group.
   - navgroup:
       id: help
