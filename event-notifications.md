@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-29"
 
 keywords: cephaas, event notifications, ceph as a service
 
@@ -36,18 +36,18 @@ The following table lists the {{site.data.keyword.cephaas_short}} events.
 
 | Event Name        | Event Type        | Sub Type Name | Sub Type  | Severity  |
 |------------------------------------------|---------|---------|---------|---------|
-| IBM Storage Ceph as a Service Storage Capacity    | com.ibm.cloud.software-defined-storage.capacity   | Allocated block storage at 50% of capacity    | block_capacity_50_percent | low |
-|   |   | Allocated block storage at 80% of capacity    | block_capacity_80_percent | medium  |
-|   |   |	Allocated block storage at 100% of capacity | block_capacity_100_percent    | high    |
-|   |   |	Allocated object storage at 50% of capacity | object_capacity_50_percent    | low |
-|   |   |	Allocated object storage at 80% of capacity | object_capacity_80_percent    | medium  |
-|   |   |	Allocated object storage at 100% of capacity    | object_capacity_100_percent   | high  |
-|IBM Storage Ceph as a Service S3 Certificates  | com.ibm.cloud.software-defined-storage.s3-certificate | S3 certificate has expired    | s3_cert_expired | high    |
-|   |   | S3 certificate will expire in 1 day   | s3_cert_expire_1_day  | high  |
-|   |   | S3 certificate will expire in 10 days	| s3_cert_expire_10_day | high    |
-|   |   | S3 certificate will expire in 30 days	| s3_cert_expire_30_day | medium  |
-|   |	| S3 certificate will expire in 60 days	| s3_cert_expire_60_day | medium  |
-|   |   | S3 certificate will expire in 90 days	| s3_cert_expire_90_day | low |
+| IBM Storage Ceph as a Service Storage Capacity    | `com.ibm.cloud.software-defined-storage.capacity`   | Allocated block storage at 50% of capacity    | `block_capacity_50_percent` | low |
+|   |   | Allocated block storage at 80% of capacity    | `block_capacity_80_percent` | medium  |
+|   |   |	Allocated block storage at 100% of capacity | `block_capacity_100_percent`    | high    |
+|   |   |	Allocated object storage at 50% of capacity | `object_capacity_50_percent`    | low |
+|   |   |	Allocated object storage at 80% of capacity | `object_capacity_80_percent`    | medium  |
+|   |   |	Allocated object storage at 100% of capacity    | `object_capacity_100_percent`   | high  |
+|IBM Storage Ceph as a Service S3 Certificates  | `com.ibm.cloud.software-defined-storage.s3-certificate` | S3 certificate has expired    | `s3_cert_expired` | high    |
+|   |   | S3 certificate will expire in 1 day   | `s3_cert_expire_1_day`  | high  |
+|   |   | S3 certificate will expire in 10 days	| `s3_cert_expire_10_day` | high    |
+|   |   | S3 certificate will expire in 30 days	| `s3_cert_expire_30_day` | medium  |
+|   |	| S3 certificate will expire in 60 days	| `s3_cert_expire_60_day` | medium  |
+|   |   | S3 certificate will expire in 90 days	| `s3_cert_expire_90_day` | low |
 {: caption="Actions that generate event notifications" caption-side="bottom"}
 
 
@@ -124,7 +124,7 @@ Event notifications from {{site.data.keyword.cephaas_short}} contain only metada
 {: note}
 
 
-The properties that are sent to {{site.data.keyword.en_short}} vary depending on the event type. For example, if an `<ExampleEventForYourService` event takes place, {{site.data.keyword.cephaas_short}} sends a notification payload to {{site.data.keyword.en_short}} that is similar to the following example.
+The properties that are sent to {{site.data.keyword.en_short}} vary depending on the event type. For example, if an `ExampleEventForYourService` event takes place, {{site.data.keyword.cephaas_short}} sends a notification payload to {{site.data.keyword.en_short}} that is similar to the following example.
 
 ```json
 {

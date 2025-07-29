@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-10"
+lastupdated: "2025-07-29"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -899,9 +899,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 {: #ic-create-snapshot}
 
 ```sh
-ibmcloud sds volume-snapshot-create -source-volume-id <volume-id> OR --source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) --name  <snap-name>
+ibmcloud sds volume-snapshot-create [--source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) | --source-volume-id SOURCE-VOLUME-ID] [--name NAME]
 ```
 {: pre}
+
+Aliases of `volume-snapshot-create`: `vsnapc`
 
 Example command:
 
@@ -915,159 +917,209 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 **Parameters to provide:**
 
 * The block volume id where the new snapshot needs to be created.
-    * Flag: source-volume-id <volume-id>
+    * Flag: `--source-volume-id`
 
-* Optional parameter is the name of the new snapshot. <autogenerate>
-    * Flag: name  <snapshot-name>
+* Unique name for the snapshot. Optional parameter.
+    * Flag: `--name`
 
 ### List a single snapshot
 {: #ic-list-snapshot}
 
 ```sh
-ibmcloud sds volume-snapshot --snap-id <snap-id>
+ibmcloud sds volume-snapshot --snap-id SNAP-ID
 ```
 {: pre}
+
+Aliases of `volume-snapshot`: `vsnap`
 
 Example command:
 
 ```sh
-ic sds volume-snapshot --snap-id r134-ff7620ed-f0cc-420c-9783-652ced6892f2
+ibmcloud sds volume-snapshot \
+    --snap-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --url $sds_endpoint
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 **Parameters to provide:**
 
-* The block volume id where the new snapshot needs to be created.
-    * Flag: source-volume-id <volume-id>
+* Snapshot identifier for which you want to retrieve the details.
+    * Flag: `--snap-id`
 
 ### List all snapshots
 {: #ic-list-snapshots}
 
 ```sh
-ibmcloud sds volume-snapshots --start <token>, --limit <int>, --name <snap-name>, --source-volume-id <string>, --all-pages
+ibmcloud sds volume-snapshots [--start START] [--limit LIMIT] [--name NAME] [--source-volume-id SOURCE-VOLUME-ID]
 ```
 {: pre}
+
+Aliases of `volume-snapshots`: `vsnaps`
 
 Example command:
 
 ```sh
-ic sds volume-snapshots
+ibmcloud sds volume-snapshots \
+    --start r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --limit 20 \
+    --name my-host \
+    --source-volume-id exampleString \
+    --url $sds_endpoint
 ```
 {: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 **Parameters to provide:**
 
 The following parameters are optional.
 
-* The block volume id where the new snapshot needs to be created.
-    * Flag: source-volume-id <volume-id>
+* Specifies the resource ID to start the page of results from. Useful for paginating through large collections.
+    * Flag: `--start`
 
-* Pagination limit for displaying the list of snapshots.
-    * Flag: start <token>, limit <int> 
+* Sets the maximum number of resources (snapshots) to return per page..
+    * Flag: `--limit`
 
-* Name of the snapshot
-    * name <snap-name>
+* Filters the results to only include snapshots with a name matching the provided string.
+    * Flag: `--name`
 
-* The block volume id where the new snapshot needs to be created.
-    * Flag: source-volume-id <volume-id>
+* Filters the results to only include snapshots that belong to the specified source volume ID.
+    * Flag: `source-volume-id`
 
-* Pagination choice of displaying all the snapshot pages.
-    * Flag: all-pages
+* When listing volume snapshots, this option will automatically make multiple requests to retrieve and display all pages of results, so you see the entire collection without manually paging through results.
+    * Flag: `all-pages`
 
 ### Update a snapshot
 {: #ic-update-snapshot}
 
 ```sh
-ibmcloud sds volume-snapshot-update --snap-id <snap-id> --name <snap-name>, --snapshot-patch <snapshot-patch>
+ibmcloud sds volume-snapshot-update --snap-id SNAP-ID [--snapshot-patch SNAPSHOT-PATCH | @SNAPSHOT-PATCH-FILE]
 ```
 {: pre}
 
-Example command: 
+Aliases of `volume-snapshot-update`: `vsnapu`
+
+Example command:
 
 ```sh
-ic sds volume-snapshot-update --snap-id r134-535b6bdf-d93f-4233-a239-5a2e78ae88af --name snap-2-updated
+ibmcloud sds volume-snapshot-update \
+    --snap-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+    --name snap-2-updated \
+    --url $sds_endpoint
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 **Parameters to provide:**
 
-* The snapshot id where the update is needed.
-    * Flag: snap-id <snap-id>
+* (Required) The unique identifier of the snapshot you want to update.
+    * Flag: `--snap-id`
 
-* The snapshot name where the update is needed (optional).
-    * Flag: name  <snap-name>
+* Specifies the snapshot name which needs to be updated.
+    * Flag: `--name`
 
- The snapshot patch where the update is needed (optional).
-    * Flag: snapshot-patch <snapshot-patch>
+* Provide the JSON Merge-Patch content for updating the snapshot. This can be a JSON string directly in the command or a path to a JSON file containing the patch data. This allows you to update specific fields of the snapshot.
+    * Flag: `--snapshot-patch`
 
 
 ### Restore a volume from a snapshot
 {: #ic-restore-volume-from-snapshot}
 
 ```sh
-ibmcloud sds volume-create ---capacity <int> --name <string>, --source-snapshot-id <string>, --source-snapshot <JSON-string>
+ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID]
 ```
 {: pre}
 
-Example command: 
+Example command:
 
 ```sh
-ic sds volume-create --name test-volume-restored --source-snapshot-id  r134-eda57df4-41f2-48d8-812d-3d81955b6a1a --capacity 3
+ibmcloud sds volume-create \
+    --name test-volume-restored \
+    --source-snapshot-id r134-eda57df4-41f2-48d8-812d-3d81955b6a1a \
+    --capacity 3
+    --url $sds_endpoint
 ```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 **Parameters to provide:**
 
-* Capacity of the new volume which will be restored from the snapshot. While restoring a block volume from a snapshot, the capacity should be same or higher than the original block volume capacity. 
-    * Flag: capacity <int>
+* Capacity of the new volume in gigabytes which will be restored from the snapshot. While restoring a block volume from a snapshot, the capacity should be same or higher than the original block volume capacity.
+    * Flag: `--capacity`
 
-* Name of the snapshot 
-    * Flag: name <string>
+* Name of the new volume that will be created from the snapshot. It must be unique (not used by another volume). If you don’t specify a name, the system generates one automatically.
+    * Flag: `--name`
 
-* Id of the snapshot 
-    * Flag: source-snapshot-id <string>
+* The unique snapshot identifier to restore from.
+    * Flag: `--source-snapshot-id`
 
 ### Delete a snapshot
 {: #ic-delete-snapshot}
 
 ```sh
-ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
+ibmcloud sds volume-snapshot-delete --snap-id SNAP-ID
 ```
 {: pre}
 
-Example command: 
+Aliases of `volume-snapshot-delete`: `vsnapd`
+
+Example command:
 
 ```sh
-ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
-Are you sure you want to delete? [y/n]> y
-...
-OK
-```
-**Parameters to provide:**
-
-* The snapshot id where  is needed.
-    * Flag: snap-id <snap-id>
-
-### Delete all snapshots
-{: #ic-delete-snapshots}
-
-```sh
-ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
-```
-{: pre}
-
-Example command: 
-
-```sh
-ic sds volume-snapshots-delete --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285
+ibmcloud sds volume-snapshot-delete \
+    --snap-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285 \
+    --url $sds_endpoint
 Are you sure you want to delete? [y/n]> y
 ...
 OK
 ```
 {: screen}
 
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
 **Parameters to provide:**
 
-* The block volume id where the all the snapshots need to be deleted.
-    * Flag: source-volume-id <source-volume-id>
+* To force the command to execute
+    * Flag: `-f`, `--force`
+
+* Unique snapshot identifier that you want to delete.
+    * Flag: `--snap-id`
+
+### Delete all snapshots
+{: #ic-delete-snapshots}
+
+```sh
+ibmcloud sds volume-snapshot-delete [--source-volume-id SOURCE-VOLUME-ID]
+```
+{: pre}
+
+Aliases of `volume-snapshots-delete`: `vsnapsd`
+
+Example command:
+
+```sh
+ibmcloud sds volume-snapshots-delete \
+    --source-volume-id r134-76a4e08c-aa22-4fd3-9eb5-5cae0e78a285 \
+    --url $sds_endpoint
+Are you sure you want to delete? [y/n]> y
+...
+OK
+```
+{: screen}
+
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+
+**Parameters to provide:**
+
+* To force the command to execute
+    * Flag: `-f`, `--force`
+
+* Filters the operation to only affect resources (such as snapshots) that have a `source_volume-id` property matching the specified identifier. Used to target all snapshots for a specific volume.
+    * Flag: `--source-volume-id`
 
 
 ## Config commands

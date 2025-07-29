@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-29"
 
 keywords: cephaas, managing snapshots, ceph as a service
 
@@ -46,12 +46,12 @@ A successful response looks like this:
 
 ```json
 
-{   "id": "r134-f5505e26-3f1e-4c30-832f-dfbd2b36f450",  
-    "href": "http://example.com/aeiou",   
-    "name": "my-snap1",   
+{   "id": "r134-f5505e26-3f1e-4c30-832f-dfbd2b36f450",
+    "href": "http://example.com/aeiou",
+    "name": "my-snap1",
     "source_volume": \
-    {     "id": "r134-99c368a1-9595-4c78-9577-ce7980aefe0c",    
-     "name": "my-vol1",     
+    {     "id": "r134-99c368a1-9595-4c78-9577-ce7980aefe0c",
+     "name": "my-vol1",
      "resource_type": "volume"   }
 ,
   "created_at": "2025-06-13T14:39:09Z",
@@ -68,14 +68,22 @@ A successful response looks like this:
 {: #create-new-snapshot-cli}
 {: cli}
 
-To create a new snapshot, run the following command.
+To create a new snapshot of a specific volume, run the following command.
 
 ```sh
-ibmcloud sds volume-snapshot-create -source-volume-id <volume-id> OR --source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) --name  <snap-name>
+ibmcloud sds volume-snapshot-create [--source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) | --source-volume-id SOURCE-VOLUME-ID] [--name NAME]
 ```
 {: pre}
 
-`--source-volume-id <string>` OR `--source-volume <string>` are required.
+In this command,
+* `--source-volume-id SOURCE-VOLUME-ID` represents the ID of the source volume for which you want to create a snapshot. This is required if you are not using `--source-volume`.
+
+* With `--source-volume`, you can alternately use `SOURCE-VOLUME` or `@SOURCE-VOLUME-FILE` where the source volume refers to an object or a file.
+
+* `--name NAME` is an optional parameter that you can use for assigning a name to the snapshot.
+
+You must specify either `--source-volume-id` OR `--source-volume` parameter when creating the snapshot.
+{: requirement}
 
 See the following example.
 
