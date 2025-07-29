@@ -16,12 +16,15 @@ subcollection: cephaas
 {: #glossary}
 
 **Activity tracking events**
+
     Events that record actions or changes within the system for auditing or monitoring purposes.
 
 **API (Application Programming Interface)**
+
     A set of protocols and tools for building software and interacting programmatically with the service.
 
 **Authentication**
+
     The process of verifying the identity of a user, host, or application before granting access to resources.
 
 **Bandwidth**
