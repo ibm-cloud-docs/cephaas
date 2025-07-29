@@ -15,6 +15,9 @@ subcollection: cephaas
 # Glossary
 {: #glossary}
 
+This glossary provides terms and definitions used in {{site.data.keyword.cephaas_full}}, helping you to understand important concepts, features, and terminology related to storage, management, security, and integration.
+
+
 ## **Activity tracking events**
 
 Events that record actions or changes within the system for auditing or monitoring purposes.
