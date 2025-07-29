@@ -26,9 +26,6 @@ Events that record actions or changes within the system for auditing or monitori
 
 The data transfer rate allocated to a volume or resource, typically measured in MB/s or GB/s.
 
-## **Block storage**
-
-A type of data storage where data is stored in fixedsized blocks. Each block acts as an individual hard drive, and block storage is commonly used for databases and virtual machines.
 
 ## **Capacity allocation**
 
@@ -50,9 +47,6 @@ An instance of the CephaaS service, including its configuration, resources, and 
 
 Network addresses (URLs) used to access APIs or services.
 
-## **Environment variable**
-
-A variable set in the operating system or shell that provides configuration information to commands or scripts.
 
 ## **Event notification**
 
@@ -70,9 +64,6 @@ A server or virtual machine that connects to storage volumes to read or write da
 
 A unique identifier for a host in NVMe-oF environments, used to establish secure connections between hosts and storage.
 
-## **href**
-
-A URL or link to the resource in the API.
 
 ## **Initiator**
 
@@ -82,6 +73,11 @@ The component (usually software or hardware) on a host that initiates a connecti
 
 A performance metric indicating how many read/write operations a storage resource can handle per second.
 
+
+## **Link Aggregation Control Protocol (LACP)**
+
+A type of link aggregation that ensures connectivity continues even after one of the connections breaks.
+
 ## **Mapping (volume to host mapping)**
 
 The process of associating a storage volume with a host, allowing the host to access the volume.
@@ -90,14 +86,14 @@ The process of associating a storage volume with a host, allowing the host to ac
 
 A protocol that enables NVMe storage devices to be accessed over network fabrics such as Ethernet or Fibre Channel.
 
-## **Object storage**
-
-A storage architecture that manages data as objects, as opposed to files or blocks. Each object includes the data, metadata, and a unique identifier.
 
 ## **Observability**
 
 The ability to monitor, measure, and understand the state and behavior of a system.
 
+## **OSB**
+
+Open Service Broker Specifications
 
 ## **Provisioned size**
 
@@ -106,6 +102,31 @@ The amount of storage capacity allocated to a volume or resource.
 ## **PSK (PreShared Key) encryption**
 
 A method of securing communications using a shared secret key that is distributed to both parties in advance.
+
+## **Quad Small Form-factor Pluggable (QSFP)+**
+
+A type of transceiver that is used for connecting network equipment in data centers, high-performance computing environments, and telecommunications. QSFP cables are essential for modern network environments and data centers.
+
+## **RC**
+
+Resource Controller in IBM cloud platform used for provisioning service instances
+
+## **RSOS**
+
+Endpoint to provision volumes on-prem
+
+
+## **SDS**
+
+Software Defined Storage
+
+## **Service Instance**
+
+RC manageable resource of SDS in IBM cloud
+
+## **Service Broker**
+
+Provider for service instances, implements OSB spec
 
 ## **S3 certificate**
 
@@ -119,22 +140,15 @@ Authentication information (such as access keys and secrets) used to access S3co
 
 A point-in-time copy of data, such as a volume or datastore, used for backup, recovery, or cloning purposes.
 
-## **Source**
-
-The origin of an event or resource, often specified as a CRN.
 
 ## **Specversion**
 
 The version of the event specification (such as CloudEvents) used in event notifications.
 
-## **Status**
 
-The current state of a resource (e.g., pending, available, failed, updating).
+## **SSR**
 
-## **Terraform**
-
-An open-source infrastructure-as-code tool for provisioning and managing cloud resources.
-
+Systems Service Representative
 
 ## **VMWare vSphere plug-in**
 
