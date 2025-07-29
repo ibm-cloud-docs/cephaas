@@ -47,131 +47,174 @@ A managed service offering IBM Storage Ceph, providing scalable and resilient st
 
 A textbased interface for managing resources by entering commands.
 
-**Create, Delete, Update (CRUD operations)**
+## **Create, Delete, Update (CRUD operations)**
+
     The basic operations for managing resources—creating, deleting, and updating them.
 
-**CRN (Cloud Resource Name)**
+## **CRN (Cloud Resource Name)**
+
     A unique identifier for resources in IBM Cloud, used for tracking and management.
 
-**Data security**
+## **Data security**
+
     Measures and technologies used to protect data from unauthorized access, corruption, or loss.
 
-**Datastore**
+## **Datastore**
+
     A storage repository for virtual machine files and other data, often used in virtualization environments.
 
-**Deployment**
+## **Deployment**
+
     An instance of the CephaaS service, including its configuration, resources, and associated workloads.
 
-**Endpoints**
+## **Endpoints**
+
     Network addresses (URLs) used to access APIs or services.
 
-**Environment variable**
+## **Environment variable**
+
     A variable set in the operating system or shell that provides configuration information to commands or scripts.
 
-**Event notification**
+## **Event notification**
+
     A message or alert generated when a specific event occurs, such as a certificate expiring or a volume being deleted.
 
-**Expand (volume)**
+## **Expand (volume)**
+
     Increasing the capacity of an existing storage volume to accommodate more data.
 
-**Force flag**
+## **Force flag**
+
     A commandline option that forces an operation to proceed without prompting for confirmation.
 
-**Host**
+## **Host**
+
     A server or virtual machine that connects to storage volumes to read or write data.
 
-**Host NQN (NVMe Qualified Name)**
+## **Host NQN (NVMe Qualified Name)**
+
     A unique identifier for a host in NVMe-oF environments, used to establish secure connections between hosts and storage.
 
-**Href**
+## **Href**
+
     A URL or link to the resource in the API.
 
-**IBM Storage Ceph as a Service**
+## **IBM Storage Ceph as a Service**
+
     IBM’s managed Ceph storage solution, offering enterprise-grade storage capabilities in the cloud.
 
-**ibmcloud CLI**
+## **ibmcloud CLI**
+
     IBM’s commandline tool for managing IBM Cloud resources and services.
 
-**ID**
+## **ID**
+
     A unique identifier assigned to a resource, such as a volume or host.
 
-**Initiator**
+## **Initiator**
+
     The component (usually software or hardware) on a host that initiates a connection to storage resources.
 
-**IOPS (Input/Output Operations Per Second)**
+## **IOPS (Input/Output Operations Per Second)**
+
     A performance metric indicating how many read/write operations a storage resource can handle per second.
 
-**Kebab menu**
+## **Kebab menu**
+
     A UI element (three vertical dots) that opens a menu with additional options.
 
-**Mapping (volume to host mapping)**
+## **Mapping (volume to host mapping)**
+
     The process of associating a storage volume with a host, allowing the host to access the volume.
 
-**NVMe-oF (Non-Volatile Memory Express over Fabrics)**
+## **NVMe-oF (Non-Volatile Memory Express over Fabrics)**
+
     A protocol that enables NVMe storage devices to be accessed over network fabrics such as Ethernet or Fibre Channel.
 
-**Object storage**
+## **Object storage**
+
     A storage architecture that manages data as objects, as opposed to files or blocks. Each object includes the data, metadata, and a unique identifier.
 
-**Observability**
+## **Observability**
+
     The ability to monitor, measure, and understand the state and behavior of a system.
 
-**Pending/Available/Failed status**
+## **Pending/Available/Failed status**
+
     Possible states for a resource, indicating whether it is being created, ready for use, or has encountered an error.
 
-**Provisioned size**
+## **Provisioned size**
+
     The amount of storage capacity allocated to a volume or resource.
 
-**PSK (PreShared Key) encryption**
+## **PSK (PreShared Key) encryption**
+
     A method of securing communications using a shared secret key that is distributed to both parties in advance.
 
-**Resource type**
+## **Resource type**
+
     The kind of resource being referenced, such as a volume or snapshot.
 
-**REST API**
+## **REST API**
+
     An API that uses HTTP requests to perform operations on resources, following REST (Representational State Transfer) principles.
 
-**S3 certificate**
+## **S3 certificate**
+
     A digital certificate used to secure communications and authenticate access to S3-compatible object storage.
 
-**S3 credentials**
+## **S3 credentials**
+
     Authentication information (such as access keys and secrets) used to access S3compatible object storage.
 
-**Snapshot**
+## **Snapshot**
+
     A point-in-time copy of data, such as a volume or datastore, used for backup, recovery, or cloning purposes.
 
-**Source**
+## **Source**
+
     The origin of an event or resource, often specified as a CRN.
 
-**Specversion**
+## **Specversion**
+
     The version of the event specification (such as CloudEvents) used in event notifications.
 
-**Status**
+## **Status**
+
     The current state of a resource (e.g., pending, available, failed, updating).
 
-**Terraform**
+## **Terraform**
+
     An open-source infrastructure-as-code tool for provisioning and managing cloud resources.
 
-**Terraform plan/apply**
+## **Terraform plan/apply**
+
     Terraform commands used to preview (`plan`) and execute (`apply`) infrastructure changes.
 
-**UI (User Interface)**
+## **UI (User Interface)**
+
     The graphical interface that allows users to interact with the service through a web browser.
 
-**VMWare vSphere plug-in**
+## **VMWare vSphere plug-in**
+
     A software component that integrates IBM Storage Ceph as a Service with VMware vSphere environments.
 
-**Volume**
+## **Volume**
+
     A virtual storage device that can be attached to hosts or servers. Volumes are used to store data and can be managed independently of compute resources.
 
-**vSphere host**
+## **vSphere host**
+
     A physical or virtual server managed by VMware vSphere.
 
-**vSphere snapshot**
+## **vSphere snapshot**
+
     A point-in-time copy of a virtual machine or datastore in a VMware environment.
 
-**Workload isolation**
+## **Workload isolation**
+
     The practice of separating workloads to improve security, performance, or compliance.
 
-**Endpoint URL**
+## **Endpoint URL**
+
     The network address used to access a service or API.
