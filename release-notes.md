@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-30"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -23,12 +23,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full}} that are grouped by month and year.
 {: shortdesc}
 
-## July 2025
-{: #sds-july25}
-
-### 31 July 2025
-{: #sds-jul3125}
-{: release-note}
+## August 2025
+{: #sds-august25}
 
 Version: 1.1
 : {{site.data.keyword.cephaas_full_notm}} introduces a range of significant enhancements and new capabilities focused on security, platform integration, snapshot management, and deployment flexibility.
