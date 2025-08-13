@@ -129,7 +129,6 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
-      - glossary.md
       - topicgroup:
           label: API reference
           topics:
