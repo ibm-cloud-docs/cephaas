@@ -18,6 +18,21 @@ toc:
       - getting-started.md
       - about-cephaas.md
       - topicgroup:
+          label: CephaaS trials
+          topics:
+          - trials-onboarding.md
+          - connecting-to-trials.md
+          - topicgroup:
+              label: Preparing the VMware environment for trials
+              topics:
+              - configure-vmware-environment.md
+              - configure-VM.md
+          - topicgroup:
+              label: Trials use cases
+              topics:
+              - s3-storage-VM.md
+              - mongo-db.md
+      - topicgroup:
           label: Preparing the data center
           topics:
             - preinstallation_checklist.md
@@ -32,6 +47,8 @@ toc:
           topics:
             - administrators.md
             - developers.md
+      - topic: release-notes.md
+        navtitle: Release notes
   - navgroup:
       id: howto
       topics:
