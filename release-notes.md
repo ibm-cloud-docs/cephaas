@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-31"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -23,22 +23,26 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full}} that are grouped by month and year.
 {: shortdesc}
 
-## August 2025
+## September 2025
 {: #sds-august25}
 
-Version: 1.1
-: {{site.data.keyword.cephaas_full_notm}} introduces a range of significant enhancements and new capabilities focused on security, platform integration, snapshot management, and deployment flexibility.
+### 2 September 2025
+{: #sds-2-sep2025}
+{: release-note}
 
-    Key updates include:
+TLS Encryption for NVMe/TCP
+:   {{site.data.keyword.cephaas_short_notm}} now supports TLS encryption support for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
 
-    * Introduced TLS encryption for NVMe/TCP across all interfaces; API, CLI, and UI.
-    * Upgrade to Ceph version 8.0.3Z3.
-    * Integration with the Acadia Platform 2.0.
-    * Full support for Carbon 11.
-    * Snapshot functionality across, API, CLI, UI (read-only view). The snapshot functionality currently enables users to manage volume snapshots through API and CLI, with visibility in the UI.
-    * Integration with the Service Framework to deliver real-time event notifications.
-    * Support for upgrades on single-node (VM) deployments.
+Upgrade to Ceph version 8.0.3Z3
+:   {{site.data.keyword.cephaas_short_notm}} now leverages an enhanced Acadia Platform (Ceph cluster) on storage nodes, streamlining management through the Matrix pod on OpenShift for improved efficiency and performance.
 
+Full support for Carbon 11
+:   The UI has been upgraded to Carbon 11, bringing improved responsiveness, alignment, colors, fonts, and hover states. Navigation across pages is streamlined, with full validation for inputs, browser compatibility, and performance optimization. Key integrations like Prometheus, Walkme, and Amplitude have been verified, alongside content accuracy checks and regression testing. Event notifications have also been enhanced for better user engagement.
+
+Snapshot functionality
+:   Users can manage block volume snapshots via API and CLI, with read-only UI visibility for enhanced monitoring and management.
+
+   
 
 ## March 2025
 {: #sds-mar25}
