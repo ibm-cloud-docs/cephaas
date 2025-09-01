@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-08-31"
+lastupdated: "2025-09-01"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -26,9 +26,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## September 2025
 {: #sds-august25}
 
-### 2 September 2025
-{: #sds-2-sep2025}
-{: release-note}
 
 TLS Encryption for NVMe/TCP
 :   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption support for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
@@ -42,7 +39,6 @@ Full support for Carbon 11
 Snapshot functionality
 :   Users can manage block volume snapshots via API and CLI, with read-only UI visibility for enhanced monitoring and management.
 
-   
 
 ## March 2025
 {: #sds-mar25}
