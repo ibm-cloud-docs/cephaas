@@ -31,7 +31,7 @@ TLS Encryption for NVMe/TCP
 :   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
 
 Upgrade to Ceph version 8.0.3Z3
-:   The Matrix pod on OpenShift now manages storage nodes via an upgraded Acadia Platform (Ceph cluster), enhancing efficiency and performance.
+:   The Matrix pod on OpenShift now manages storage nodes via an upgraded Ceph cluster, enhancing efficiency and performance.
 
 Full support for Carbon 11
 :   The UI has been upgraded to Carbon 11, bringing improved responsiveness, alignment, colors, fonts, and hover states. Navigation across pages is streamlined, with full validation for inputs, browser compatibility, and performance optimization. Key integrations like Prometheus, Walkme, and Amplitude have been verified, alongside content accuracy checks and regression testing. Event notifications have also been enhanced for better user engagement.
