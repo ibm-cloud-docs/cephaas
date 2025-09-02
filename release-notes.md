@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-02"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -28,7 +28,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 TLS Encryption for NVMe/TCP
-:   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption support for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
+:   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
 
 Upgrade to Ceph version 8.0.3Z3
 :   The Matrix pod on OpenShift now manages storage nodes via an upgraded Acadia Platform (Ceph cluster), enhancing efficiency and performance.
