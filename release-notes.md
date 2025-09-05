@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-02"
+lastupdated: "2025-09-05"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -30,15 +30,14 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 TLS Encryption for NVMe/TCP
 :   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
 
-Upgrade to Ceph version 8.0.3Z3
-:   The Matrix pod on OpenShift now manages storage nodes via an upgraded Ceph cluster, enhancing efficiency and performance.
-
-Full support for Carbon 11
-:   The UI has been upgraded to Carbon 11, bringing improved responsiveness, alignment, colors, fonts, and hover states. Navigation across pages is streamlined, with full validation for inputs, browser compatibility, and performance optimization. Key integrations like Prometheus, Walkme, and Amplitude have been verified, alongside content accuracy checks and regression testing. Event notifications have also been enhanced for better user engagement.
+Carbon 11 UI and navigation upgrade 
+:   This release introduces UI updates aligned with Carbon 11, including improvements to responsiveness, layout alignment, colors, fonts, and hover states. Page navigations have been streamlined, with full validation for input handling, browser compatibility, and performance optimization. 
 
 Snapshot functionality
-:   Users can manage block volume snapshots via API and CLI, with read-only UI visibility for enhanced monitoring and management.
+:   Users can manage block volume snapshots via API and CLI, with read-only UI visibility for enhanced monitoring, management, and resiliency.
 
+Event notifications
+:   {{site.data.keyword.cephaas_full_notm}} now supports sending event alerts via email, SMS, and webhooks through {{site.data.keyword.en_full}}, enabling easier communication and event-driven automation.
 
 ## March 2025
 {: #sds-mar25}
