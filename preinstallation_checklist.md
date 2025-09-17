@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-09-17"
 
 
 keywords: preorder, checklist, preinstallation checklist, site-readiness, ceph as a service, network validation, account activation
@@ -35,8 +35,8 @@ Before you place the order, you must confirm if the following criteria to instal
 {: #sds-sys-req}
 
 Before you connect to the {{site.data.keyword.cloud_notm}}, perform other pre-installation activities, you must complete the following tasks or keep the following information in hand:
-*  You must have an active {{site.data.keyword.cloud_notm}} account ID. To create an {{site.data.keyword.cloud_notm}} account ID, see [Setting up your IBM Cloud account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started){: external}.
-*  Create a Satellite location associated with an {{site.data.keyword.cloud_notm}} region. Select the {{site.data.keyword.cloud_notm}} region that is closest to the physical location of your data center. The network latency between your data center and the selected {{site.data.keyword.cloud_notm}} region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Create a Satellite location overview](https://cloud.ibm.com/docs/satellite?topic=satellite-locations){: external}.
+*  You must have an active {{site.data.keyword.cloud_notm}} account ID. To create an {{site.data.keyword.cloud_notm}} account ID, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started){: external}.
+*  Create a Satellite location associated with an {{site.data.keyword.cloud_notm}} region. Select the {{site.data.keyword.cloud_notm}} region that is closest to the physical location of your data center. The network latency between your data center and the selected {{site.data.keyword.cloud_notm}} region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Create a Satellite location overview](/docs/satellite?topic=satellite-locations){: external}.
 
 ## Site-planning and environmental requirements
 {: #site-plan-env-req}
