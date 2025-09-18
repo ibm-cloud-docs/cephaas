@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-05"
+lastupdated: "2025-09-18"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -26,6 +26,10 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## September 2025
 {: #sds-august25}
 
+
+### 18 September 2025
+{: #sds-18-sep2025}
+{: release-note}
 
 TLS Encryption for NVMe/TCP
 :   {{site.data.keyword.cephaas_full_notm}} now supports TLS encryption for NVMe/TCP via API, CLI, and UI, ensuring secure data transmission and payload encryption.
