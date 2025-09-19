@@ -94,9 +94,8 @@ toc:
             - topic: architecture-workload-isolation.md
               navtitle: Architecture and workload isolation
             - endpoints.md
-            - data-security.md<staging
-# link to event notifications should be included in the event notifications navigation group.
-      - topic: event-notifications.md</staging
+            - data-security.md
+      - topic: event-notifications.md
         navtitle: Enabling event notifications
       - topicgroup:
           label: Observability
@@ -111,6 +110,19 @@ toc:
             - managing-deployments.md
             - managing-vsphere-hosts.md
             - managing-datastores.md
+            - vsphere-snapshots.md
+            - upgrading-vsphere-plugin.md
+      - topicgroup:
+          label: Managing snapshots
+          topics:
+            - snapshots-overview.md
+            - view-snapshots.md
+            - view-specific-snapshot.md
+            - create-snapshot.md
+            - update-snapshot.md
+            - create-volume-from-snapshot.md
+            - delete-single-snapshot.md
+            - delete-snapshots.md
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command-line reference docs should be included in the Reference navigation group.
   - navgroup:
@@ -151,3 +163,4 @@ toc:
         - billing_view.md
         - faq.md
         - troubleshooting.md
+        - known-issues.md

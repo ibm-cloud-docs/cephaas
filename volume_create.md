@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-28"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -15,8 +15,10 @@ subcollection: cephaas
 # Creating block volumes
 {: #creating-block-volume}
 
-Create a block storage volume by using the UI, CLI, API or Terraform.
+To store, organize, and manage data independently from compute resources, you can create a block storage volume by using the UI, CLI, API or Terraform.
 {: shortdesc}
+
+By creating volumes, you can allocate storage capacity as needed, support data persistence, and enable flexible data management for your workloads.
 
 
 ## Creating block volumes in the UI

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-07-29"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -15,9 +15,10 @@ subcollection: cephaas
 # Creating a host
 {: #creating-host}
 
-Create a host by using the UI, CLI, API, or Terraform.
+To enable block storage volumes to be mapped and accessed by your servers or applications, you can create a host by using the UI, CLI, API, or Terraform.
 {: shortdesc}
 
+A host represents a system, such as a server or Virtual Machine(VM), that connects to storage volumes using the NVMe-oF protocol. By creating a host and mapping volumes to it, you allow your workloads to read and write data on those volumes through secure, managed connections.
 
 Before creating a host, you must configure the NVME-oF initiator. This NVME-oF initiator is required for mapping volume to a host. See [Configuring NVMe-oF initiators](/docs/cephaas?topic=cephaas-about-volume-host-mappings#config-nvme-initiators). After configuring the NVME-oF initiator, make a note of the `host nqn`.
 {: requirement}
@@ -37,9 +38,8 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 
 
 1. Click **Next**.
-1. [Optional] Select one or more volumes to map them to the host.
+1. Select one or more volumes to map them to the host.
 1. Click **Create**. The Host page refreshes and the new host appears at the beginning of the list of hosts.
-
 
 
 ## Creating hosts from the CLI
@@ -48,10 +48,29 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 
 To create hosts by using the command-line interface (CLI) from a host template object, run the following command.
 
+### Create host without PSK (Pre-shared key)
+{: #create-host-without-psk}
+
 ```sh
-ibmcloud software-defined-storage host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string
+ic sds host-create --name host-1 --nqn nqn.2014-06.org:9345 --url $sds_endpoint
+
+HOST_ONE=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-1").Host_ID')
+
+ic sds host --host-id $HOST_ONE
 ```
 {: pre}
+
+### Create host with PSK (Pre-shared key)
+{: #create-host-with-psk}
+
+```sh
+ic sds host-create --name host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:" --url $sds_endpoint
+
+HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-2").Host_ID')
+```
+{: pre}
+
+
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 
@@ -67,6 +86,7 @@ ibmcloud software-defined-storage host-create --url "$sds_endpoint"\
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
 Host_Name         dummy-host
 Host_NQN          nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122
+PSK_Enabled       false
 Created_At        2025-02-28T10:05:30.000Z
 Volume_Mappings
                   Namespace_ID        -
@@ -82,7 +102,7 @@ Volume_Mappings
 
 The maximum supported NQN length is 223 bytes.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once, so you don't need to specify it with every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstc` as an alternative to `host-create` for the CLI actions.
@@ -98,7 +118,8 @@ You can create hosts by directly calling the Host REST APIs. For more informatio
 Ensure that you have defined the variables for the IAM token and API endpoint. Also, ensure that you have the host `nqn` handy. The host `nqn` can be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
 {: requirement}
 
-Make a `POST /hosts` request to create a host. Specify a host `name`, `nqn`, and an optional `volume_id`.
+
+Make a `POST /hosts` request to create a host. Specify a mandatory `nqn`, an optional `volume_id` and `host name`. `volume_id` and `host name` are optional.
 
 ```sh
 curl -X POST $sds_endpoint/hosts\
@@ -118,11 +139,12 @@ curl -X POST $sds_endpoint/hosts\
  			}
  		],
  	"name": "host1",
+  "psk": "NVMeTLSkey-1:01:5CBxDU8ejK+PrqIjTau0yDHnBV2CdfvP6hGmqnPdKhJ9tfi2:",
  	"nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149"}'
 ```
 {: pre}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once, so you don't need to specify it with every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 {: tip}
@@ -163,6 +185,7 @@ A successful response looks like this:
         "name": "host1",
         "nqn": "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002149",
         "id": "r134-63b6133f-cb3b-4d0b-a5e8-90821a40d64d"
+        "psk_enabled": true
       }
     }
   ]

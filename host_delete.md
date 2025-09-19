@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-07-28"
 
 keywords: cephaas, delete host, sds host-delete, ceph as a service
 
@@ -15,9 +15,10 @@ subcollection: cephaas
 # Deleting hosts
 {: #deleting-hosts}
 
-Delete a host from a deployment by using the UI, CLI, API or Terraform.
+To remove systems, such as servers or VMs, that no longer need access to block storage volumes in your deployment, you can delete a host from a deployment by using the UI, CLI, API or Terraform.
 {: shortdesc}
 
+This helps maintain security, manage resources efficiently, and prevent unauthorized access to storage. Deleting unused hosts also keeps your environment organized and reduces potential management overhead.
 
 ## Deleting host from the UI
 {: #deleting-single-host-ui}

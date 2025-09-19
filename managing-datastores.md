@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-07-15"
 
 keywords: ceph as a service, managing datastores, vsphere plug-in, plugin, vSphere
 
@@ -52,4 +52,4 @@ For deleting a datastore, perform the following procedure.
 
 1. In the datastore dashboard, select the VMFS datastore that needs to be deleted from the left pane. Datastore summary page is displayed in the right pane.
 2. Navigate to **Actions** > **{{site.data.keyword.cephaas_full_notm}}** submenu, select **Delete VMFS Datastore**.
-3. Review the confirmation pop up and click **Delete**.
+3. Select the acknowledgment checkbox to confirm deletion, then click **Delete** to remove the datastore.

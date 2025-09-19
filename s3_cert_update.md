@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-05-22"
+lastupdated: "2025-07-30"
 
 keywords: cephaas settings, uploading S3 Certificate, ceph as a service
 
@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Updating S3 certificate
+# Uploading S3 certificate
 {: #uploading-s3-certificate}
 
 S3 TLS certificates are required to encrypt the S3 traffic and prevent `Man in the Middle` (MITM) attacks. You can upload a certificate file to add a new S3 SSL certificate or modify the existing certificate by using the UI, CLI or API.
@@ -28,7 +28,7 @@ For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
 
 
-## Updating S3 certificate by using the UI
+## Uploading S3 certificate by using the UI
 {: #updating-s3-certificate-using-ui}
 {: ui}
 
@@ -46,7 +46,7 @@ To upload a S3 certificate, complete the following steps.
 4. Click **Save** to upload the file.
 
 
-## Updating S3 certificate from the CLI
+## Uploading S3 certificate from the CLI
 {: #updating-s3-certificate-cli}
 {: cli}
 
@@ -78,7 +78,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtu` as an alternative to `cert-update` for the CLI actions.
 {: tip}
 
-## Updating S3 certificate with the API
+## Uploading S3 certificate with the API
 {: #uploading-s3-certificate-api}
 {: api}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-07-30"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -46,7 +46,7 @@ Review the following tables that outline what types of tasks each role allows wh
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Manager      | As a manager, you have permissions beyond the editor role to complete privileged actions as defined by the service. You can create, update, delete and view service level resources such as volumes, hosts, and S3 credentials. |
+| Manager      | As a manager, you have permissions beyond the editor role to complete privileged actions as defined by the service. You can create, update, delete and view service level resources such as volumes, hosts, snapshots, and S3 credentials. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
