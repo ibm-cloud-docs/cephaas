@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-09-19"
 
 keywords: vSphere, plug-in, cephaas, release, what's new, ceph as a service
 
@@ -15,6 +15,11 @@ subcollection: cephaas
 {: #whats-new-vsphere}
 
 Learn about the dates and nature of updates to the published information of the {{site.data.keyword.cephaas_full}} plug-in for vSphere.
+
+## September 2025
+{: #sds-sep2025}
+
+Snapshot management is now supported in {{site.data.keyword.cephaas_full_notm}} vSphere 1.1.0.0.
 
 ## February 2025
 {: #sds-feb2025}
