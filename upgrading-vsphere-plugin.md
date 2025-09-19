@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-09-19"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -21,9 +21,9 @@ This topic describes how to upgrade an existing installation of the {{site.data.
 ## About the upgrade process
 {: #about-upgrade-process}
 
-This procedure will upgrade the plug-in from version 1.1.x.x to 1.3.0.0.
+This procedure will upgrade the plug-in from version 1.0.0.0 to 1.1.0.0.
 
-The upgrade package will be in the format e.g. ibm-storage-ceph-as-a-service-plugin-upgrade-2024_06-XX-XXXX.tar.gz.
+The upgrade package will be in the format e.g. ibm-storage-ceph-as-a-service-plugin-upgrade-2025_07_16-0947.tar.gz.
 {: note}
 
 ## Upgrade procedure steps
@@ -35,8 +35,6 @@ The following steps guide you through upgrading the {{site.data.keyword.cephaas_
 2. Securely copy the upgrade package to the plug-in appliance using a tool such as scp to the /tmp directory of the appliance.
 3. Install the package file on the plug-in appliance using ibm-install /tmp/ibm-storage-ceph-as-a-service-plugin-upgrade-2024_06_XX-XXXX.tar.gz
 
-If a storage system configured in an enhanced stretch cluster has been previously added through the 1.2 plug-in with pools only from one site, then you must add pools from other sites as well after upgrading to the 1.3 plug-in to be able to provision new storage (create a datastore). 
-{: note}
 
 ## What to do next
 {: #whatnext-after-upgrade}
@@ -47,4 +45,3 @@ Click **REFRESH BROWSER** on the banner, to complete the plug-in activation.
 
 Refreshing the browser is necessary in order to ensure the plug-in activation.
 {: important}
-
