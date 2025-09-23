@@ -20,7 +20,7 @@ This section provides step-by-step instructions for managing PersistentVolumeCla
 ## Create PVC
 {: #create-pvc}
 
-1. Create a YAML file named pvc.yaml with the following content. 
+* Create a YAML file named pvc.yaml with the following content. 
 
 ```sh
 kind: PersistentVolumeClaim
@@ -39,7 +39,7 @@ spec:
 
 The G in <required-size>G specifies the volume size unit in gigabytes (GB).
 
-2. Apply the PVC configuration. 
+* Apply the PVC configuration. 
 
 ```sh
 oc apply -f pvc.yaml
@@ -62,14 +62,14 @@ oc describe pvc <your-pvc-name>
 
 To increase the size of the PVC:
 
-1. Edit the PVC. 
+* Edit the PVC. 
 
 ```sh
 oc edit pvc <your-pvc-name>
 ```
 {: pre}
 
-2. Edit `spec.resources.requests.storage` field and update the value to the new size.
+* Edit `spec.resources.requests.storage` field and update the value to the new size.
 
 Kubernetes does not support shrinking a volume. During a PVC expansion operation, the new requested size must be greater than the current size. Before attempting to expand a PVC, verify that sufficient block storage quota is available. If the current PVC size exceeds the available quota, the expansion will fail.
 {: note}
@@ -77,7 +77,7 @@ Kubernetes does not support shrinking a volume. During a PVC expansion operation
 ## Create pod referencing the PVC
 {: #create-pod}
 
-1. Create a YAML file named pod.yaml with the following content:
+* Create a YAML file named pod.yaml with the following content:
 
 ```sh
 kind: Pod
@@ -100,7 +100,7 @@ spec:
 ```
 {: pre}
 
-2. Apply the configuration. 
+* Apply the configuration. 
 
 ```sh
 oc apply -f pod.yaml
