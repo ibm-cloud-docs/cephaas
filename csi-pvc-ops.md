@@ -20,7 +20,7 @@ This section provides step-by-step instructions for managing PersistentVolumeCla
 ## Create PVC
 {: #create-pvc}
 
-1. Create a YAML file named pvc.yaml with the following content:
+1. Create a YAML file named pvc.yaml with the following content. 
 
 ```sh
 kind: PersistentVolumeClaim
@@ -119,4 +119,3 @@ To delete a PersistentVolumeClaim (PVC), run the following command:
 oc delete pvc <your-pvc-name>
 ```
 {: pre}
-
