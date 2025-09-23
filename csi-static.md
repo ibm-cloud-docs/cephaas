@@ -87,7 +87,7 @@ Static snapshot provisioning allows you to manually bind existing snapshot resou
 * The VolumeSnapshot must reference the corresponding VolumeSnapshotContent.
 * After setup, snapshot-based restore operations work the same as in dynamic provisioning.
 
-1. Create a file named volumesnapshot.yaml with the following content.
+    1. Create a file named volumesnapshot.yaml with the following content.
 
 ```sh
 apiVersion: snapshot.storage.k8s.io/v1
@@ -103,7 +103,7 @@ spec:
 
 This resource defines the snapshot and links it to the corresponding VolumeSnapshotContent.
 
-2. Create a file named volumesnapshotcontent.yaml with the following content. 
+    2. Create a file named volumesnapshotcontent.yaml with the following content. 
 
 ```sh
 apiVersion: snapshot.storage.k8s.io/v1
