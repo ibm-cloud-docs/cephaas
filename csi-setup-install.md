@@ -23,7 +23,6 @@ Before installing the driver, complete the following preinstallation setup activ
     * Helm CLI
     * IBM Cloud Container Registry
 
-
 2. Login to the IBM Cloud Container Registry via HELM by running the following command:
 
     ```sh
@@ -32,7 +31,6 @@ Before installing the driver, complete the following preinstallation setup activ
     {: pre}
 
     When prompted, enter your IBM Cloud API key as the password.
-
 
 3. Create local copy of values.yaml file and edit the required fields using the following command:
 
@@ -48,7 +46,6 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-
 4. Create a Secret using the following command: 
 
     ```sh
@@ -59,7 +56,6 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-
 5. Edit the following parameters in the values.yaml. 
 
     * Add csiConfig.Deployment details in this format `https://<deployment-url>`
@@ -67,7 +63,6 @@ Before installing the driver, complete the following preinstallation setup activ
     * Update LicenseAccepted as true
     * Add your API Key in csiSecret.Token
     * Secret
-
 
 6. You can optionally view the chart metadata, README file, and values.yaml file using the following commands. 
 
@@ -78,14 +73,12 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-
 7. Before installing the chart, review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
 
     ```sh
     helm template cephaas-csi oci://icr.io/cephaas-dev-container-images/csi-driver-helm-dev/cephaas-csi --version <specify-tag-here> -f values.yaml
     ```
     {: pre}
-
 
 8. Install the CSI driver using the Helm chart and your updated values.yaml file.
 
