@@ -38,33 +38,33 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
     persistentVolumeReclaimPolicy: Delete
     storageClassName: cephaascsi-sc
     csi:
-        controllerExpandSecretRef:
-        name: cephaascsi-secret
-        namespace: default
-        controllerPublishSecretRef:
-        name: cephaascsi-secret
-        namespace: default
-        driver: csi.cephaas.io
-        fsType: ext4
-        volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
+    controllerExpandSecretRef:
+    name: cephaascsi-secret
+    namespace: default
+    controllerPublishSecretRef:
+    name: cephaascsi-secret
+    namespace: default
+    driver: csi.cephaas.io
+    fsType: ext4
+    volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
 ```
 {: pre}
 
 2. Create a PersistentVolumeClaim (PVC) by creating a file named pvc.yaml with the following content.
 
 ```sh
-        apiVersion: v1
-        kind: PersistentVolumeClaim
-        metadata:
-        name: pvc-static
-        spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-            requests:
-            storage: 2G
-        storageClassName: cephaascsi-sc
-        volumeName: pv-static
+ apiVersion: v1
+ kind: PersistentVolumeClaim
+ metadata:
+ name: pvc-static
+ spec:
+ accessModes:
+ - ReadWriteOnce
+ resources:
+ requests:
+ storage: 2G
+ storageClassName: cephaascsi-sc
+ volumeName: pv-static
 ```
 {: pre}
 
