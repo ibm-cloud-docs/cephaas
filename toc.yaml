@@ -118,8 +118,8 @@ toc:
             - csi-overview.md
             - csi-setup-install.md
             - csi-pvc-ops.md
-            - csi-snapshot-ops.md
             - csi-static-ops.md
+            - csi-snapshot-ops.md
       - topicgroup:
           label: Managing snapshots
           topics:
