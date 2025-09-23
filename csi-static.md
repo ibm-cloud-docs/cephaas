@@ -103,7 +103,7 @@ spec:
 
 This resource defines the snapshot and links it to the corresponding VolumeSnapshotContent.
 
-    2. Create a file named volumesnapshotcontent.yaml with the following content. 
+2. Create a file named volumesnapshotcontent.yaml with the following content. 
 
 ```sh
 apiVersion: snapshot.storage.k8s.io/v1
