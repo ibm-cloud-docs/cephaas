@@ -22,7 +22,7 @@ Static provisioning allows you to manually create and manage PersistentVolumes (
 
 In static volume provisioning, both the PV and PVC must be created manually. Ensure that the storage size specified in both resources matches the actual size of the underlying volume.
 
-1. Create a PersistentVolume (PV) by creating a file named pv.yaml with the following content.
+* Create a PersistentVolume (PV) by creating a file named pv.yaml with the following content.
 
 ```sh
     apiVersion: v1
@@ -50,7 +50,7 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
 ```
 {: pre}
 
-2. Create a PersistentVolumeClaim (PVC) by creating a file named pvc.yaml with the following content.
+* Create a PersistentVolumeClaim (PVC) by creating a file named pvc.yaml with the following content.
 
 ```sh
  apiVersion: v1
