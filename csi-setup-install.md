@@ -17,13 +17,14 @@ subcollection: cephaas
 
 Before installing the driver, complete the following preinstallation setup activities:
 
-    1. Make sure the following tools are installed on your system before the CSI driver installation. 
+1. Make sure the following tools are installed on your system before the CSI driver installation. 
 
     * Docker
     * Helm CLI
     * IBM Cloud Container Registry
 
-    2. Login to the IBM Cloud Container Registry via HELM by running the following command:
+
+2. Login to the IBM Cloud Container Registry via HELM by running the following command:
 
     ```sh
     helm registry login icr.io -u iamapikey -p <your-api-key> 
@@ -32,7 +33,8 @@ Before installing the driver, complete the following preinstallation setup activ
 
     When prompted, enter your IBM Cloud API key as the password.
 
-     3. Create local copy of values.yaml file and edit the required fields using the following command:
+
+3. Create local copy of values.yaml file and edit the required fields using the following command:
 
     ```sh
     helm show values oci://icr.io/cephaas-dev-container-images/csi-driver-helm-dev/cephaas-csi --version <specify-tag-here>  > values.yaml
@@ -46,7 +48,8 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-    4. Create a Secret using the following command: 
+
+4. Create a Secret using the following command: 
 
     ```sh
     oc create secret docker-registry <secret-name> \
@@ -56,7 +59,8 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-    5. Edit the following parameters in the values.yaml. 
+
+5. Edit the following parameters in the values.yaml. 
 
     * Add csiConfig.Deployment details in this format `https://<deployment-url>`
     * Update externalSnapshotter.endabled to true
@@ -64,7 +68,8 @@ Before installing the driver, complete the following preinstallation setup activ
     * Add your API Key in csiSecret.Token
     * Secret
 
-    6. You can optionally view the chart metadata, README file, and values.yaml file using the following commands. 
+
+6. You can optionally view the chart metadata, README file, and values.yaml file using the following commands. 
 
     ```sh
     helm show chart oci://icr.io/cephaas-dev-container-images/csi-driver-helm-dev/cephaas-csi --version <specify-tag-here>
@@ -73,7 +78,8 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: pre}
 
-    7. Before installing the chart, review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
+
+7. Before installing the chart, review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
 
     ```sh
     helm template cephaas-csi oci://icr.io/cephaas-dev-container-images/csi-driver-helm-dev/cephaas-csi --version <specify-tag-here> -f values.yaml
@@ -81,7 +87,7 @@ Before installing the driver, complete the following preinstallation setup activ
     {: pre}
 
 
-    8. Install the CSI driver using the Helm chart and your updated values.yaml file.
+8. Install the CSI driver using the Helm chart and your updated values.yaml file.
 
     ```sh
     helm install cephaas-csi oci://icr.io/cephaas-dev-container-images/csi-driver-helm-dev/cephaas-csi --version <specify-tag-here> -f values.yaml
