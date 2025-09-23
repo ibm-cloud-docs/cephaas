@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# CSI driver Overview 
+# CSI driver overview 
 {: #csi-driver-overview}
 
 By using {{site.data.keyword.cephaas_short}} CSI driver, Kubernetes PVs can be dynamically and statically provisioned for block storage to be used with stateful containers. 
