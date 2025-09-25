@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-25"
 
 keywords: cephaas csi
 
@@ -37,7 +37,7 @@ spec:
 ```
 {: pre}
 
-The G in <required-size>G specifies the volume size unit in gigabytes (GB).
+The G in <required-size> specifies the volume size unit in gigabytes (GB).
 
 * Apply the PVC configuration. 
 
@@ -74,7 +74,7 @@ oc edit pvc <your-pvc-name>
 Kubernetes does not support shrinking a volume. During a PVC expansion operation, the new requested size must be greater than the current size. Before attempting to expand a PVC, verify that sufficient block storage quota is available. If the current PVC size exceeds the available quota, the expansion will fail.
 {: note}
 
-## Create pod referencing the PVC
+## Create a pod
 {: #create-pod}
 
 * Create a YAML file named pod.yaml with the following content:
@@ -89,7 +89,7 @@ spec:
   - name: alpine
     image: alpine:3
     imagePullPolicy: "IfNotPresent"
-    command: ["sleep", "365d"]
+    command:["sleep", "365d"]
     volumeMounts:
     - mountPath: "/cephaasvol"
       name: cephaas-volume
