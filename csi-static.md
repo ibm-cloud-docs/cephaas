@@ -127,7 +127,7 @@ spec:
 Once both resources are created and linked, you can restore the snapshot into a PVC using the standard restore procedure. Pod creation and volume mounting work the same as with dynamically provisioned snapshots.
 
 ## Known limitation
-{csi-knownlimitation}
+{: #csi-knownlimitation}
 
 **Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment**
 
