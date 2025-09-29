@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-29"
 
 keywords: cephaas csi
 
@@ -125,3 +125,16 @@ spec:
 {: pre}
 
 Once both resources are created and linked, you can restore the snapshot into a PVC using the standard restore procedure. Pod creation and volume mounting work the same as with dynamically provisioned snapshots.
+
+## Known limitation
+{csi-knownlimitation}
+
+**Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment**
+
+In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume size.
+Since static provisioning bypasses the CSI driver’s CreateVolume gRPC call—which is used in dynamic provisioning to create the volume and ensure the `spec.capacity.storage` matches the actual size on RSOS—there is no built-in validation to confirm that the declared capacity aligns with the real backend volume size.
+If the PV size specified in the manifest differs from the actual volume size on the deployment, pods will only be able to use and see the actual volume size, not the declared size in the manifest.
+
+**Suggestion**
+
+To avoid discrepancies between OpenShift’s metadata and the actual storage behavior, we recommend setting the PV’s `spec.capacity.storage` to match the actual size of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.

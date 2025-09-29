@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-09-29"
 
 keywords: cephaas csi
 
@@ -73,6 +73,21 @@ oc edit pvc <your-pvc-name>
 
 Kubernetes does not support shrinking a volume. During a PVC expansion operation, the new requested size must be greater than the current size. Before attempting to expand a PVC, verify that sufficient block storage quota is available. If the current PVC size exceeds the available quota, the expansion will fail.
 {: note}
+
+### Known limitation
+{: #knownlimitation-expand-pvc}
+
+**Expand PVC operation timeout**
+
+This issue occurs when a small PVC (e.g., 1 GB) is expanded to a very large size (e.g., 32 TB). The operation may fail with a timeout error in the pod event logs, as shown below: 
+
+`Expander.NodeExpand failed to expand the volume: rpc error: code = DeadlineExceeded desc = context deadline exceeded`
+
+The cause is that the resize2fs utility takes longer to expand volumes that are mounted or in use. This process, known as online expansion, is supported by the CSI driver but can take more than 3 minutes for large volumes. Note that on RSOS, the actual volume expansion is instant—it's the resize2fs step that takes extra time.
+
+**Suggestion**
+
+The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested size without requiring user action. Users can monitor progress in the pod description and node plugin logs.
 
 ## Create a pod
 {: #create-pod}
