@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-30"
 
 keywords: ceph as a service, known issues
 
