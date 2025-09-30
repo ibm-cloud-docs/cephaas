@@ -113,6 +113,14 @@ toc:
             - vsphere-snapshots.md
             - upgrading-vsphere-plugin.md
       - topicgroup:
+          label: CephaaS CSI driver
+          topics:
+            - csi-overview.md
+            - csi-setup-install.md
+            - csi-pvc-ops.md
+            - csi-snapshot-ops.md
+            - csi-static.md
+      - topicgroup:
           label: Managing snapshots
           topics:
             - snapshots-overview.md
