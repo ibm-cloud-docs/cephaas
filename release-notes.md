@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-09-30"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -27,8 +27,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #sds-august25}
 
 
-### 18 September 2025
-{: #sds-18-sep2025}
+### 29 September 2025
+{: #sds-29-sep2025}
 {: release-note}
 
 TLS Encryption for NVMe/TCP
