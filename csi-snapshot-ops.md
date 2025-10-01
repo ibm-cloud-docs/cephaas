@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-01"
 
 keywords: cephaas snapshots
 
@@ -21,7 +21,7 @@ This section describes how to create, delete, and restore volume snapshots using
 ## Create a snapshot
 {: #create-pvc-snapshot}
 
-* Create a YAML file named snapshot.yaml with the following content. 
+* Create a YAML file named **snapshot.yaml** with the following content. 
 
 ```
 apiVersion: snapshot.storage.k8s.io/v1
@@ -53,7 +53,7 @@ Replace <snapshot-name> with the name of the snapshot you want to delete.
 ## Restore a snapshot to a PVC
 {: #restore-pvc-snapshot}
 
-* To restore a volume snapshot into a new PVC, create a YAML file named restore.yaml with the following content:
+* To restore a volume snapshot into a new PVC, create a YAML file named **restore.yaml** with the following content:
 
 ```
 apiVersion: v1
@@ -68,7 +68,7 @@ spec:
     requests:
       storage: 2G
   dataSource:
-    name: <snapshot-name >                
+    name: <snapshot-name>                
     kind: VolumeSnapshot
     apiGroup: snapshot.storage.k8s.io
  ```
@@ -77,5 +77,3 @@ spec:
 The requested storage size must be equal to or greater than the size of the original PVC.
 
 * Apply the configuration with the command `oc apply -f restore.yaml`.
-
-

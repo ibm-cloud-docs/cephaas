@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-01"
 
 keywords: cephaas csi
 
@@ -22,7 +22,7 @@ Static provisioning allows you to manually create and manage PersistentVolumes (
 
 In static volume provisioning, both the PV and PVC must be created manually. Ensure that the storage size specified in both resources matches the actual size of the underlying volume.
 
-* Create a PersistentVolume (PV) by creating a file named pv.yaml with the following content.
+* Create a PersistentVolume (PV) by creating a file named **pv.yaml** with the following content.
 
 ```
     apiVersion: v1
@@ -30,47 +30,50 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
     metadata:
     name: pv-static
     spec:
-    capacity:
-    storage: 2G
+        capacity:
+            storage: 2G
     accessModes:
-    - ReadWriteOnce
+        - ReadWriteOnce
     volumeMode: Filesystem
     persistentVolumeReclaimPolicy: Delete
     storageClassName: cephaascsi-sc
     csi:
-    controllerExpandSecretRef:
-    name: cephaascsi-secret
-    namespace: default
-    controllerPublishSecretRef:
-    name: cephaascsi-secret
-    namespace: default
-    driver: csi.cephaas.io
-    fsType: ext4
-    volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
+        controllerExpandSecretRef:
+            name: cephaascsi-secret
+            namespace: default
+        controllerPublishSecretRef:
+            name: cephaascsi-secret
+            namespace: default
+        driver: csi.cephaas.io
+        fsType: ext4
+        volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
  ```
 {: codeblock}
 
 
-* Create a PersistentVolumeClaim (PVC) by creating a file named pvc.yaml with the following content.
+* Create a PersistentVolumeClaim (PVC) by creating a file named **pvc.yaml** with the following content.
 
     ```
     apiVersion: v1
     kind: PersistentVolumeClaim
     metadata:
-    name: pvc-static
+        name: pvc-static
     spec:
-    accessModes:
-    - ReadWriteOnce
-    resources:
-    requests:
-    storage: 2G
-    storageClassName: cephaascsi-sc
-    volumeName: pv-static
+        accessModes:
+            - ReadWriteOnce
+        resources:
+            requests:
+                storage: 2G
+        storageClassName: cephaascsi-sc
+        volumeName: pv-static
     ```
 {: codeblock}
 
 
 A storage class is required for delete and expand operations to work correctly.
+{: note}
+
+The names of PersistentVolumes (PV) and PersistentVolumeClaims (PVC) are editable and can be customized.
 {: note}
 
 Once the PV and PVC are created, you can use them in pod configurations just like dynamically provisioned volumes.
@@ -88,7 +91,7 @@ Static snapshot provisioning allows you to manually bind existing snapshot resou
 * The VolumeSnapshot must refer the corresponding VolumeSnapshotContent.
 * After setup, snapshot-based restore operations work the same as in dynamic provisioning.
 
-Create a file named volumesnapshot.yaml with the following content.
+Create a file named **volumesnapshot.yaml** with the following content.
 
 
 ```
@@ -107,7 +110,7 @@ volumeSnapshotContentName: volume-snapshot-content-static
 This resource defines the snapshot and links it to the corresponding VolumeSnapshotContent.
 
 
-Create a file named volumesnapshotcontent.yaml with the following content. 
+Create a file named **volumesnapshotcontent.yaml** with the following content. 
 
 ```
 apiVersion: snapshot.storage.k8s.io/v1
@@ -129,10 +132,6 @@ spec:
 {: codeblock}
 
 
-
-The names of PersistentVolumes (PV) and PersistentVolumeClaims (PVC) are editable and can be customized.
-{: note}
-
 In the volumesnapshotcontent.yaml file, the value of the snapshotHandle field should be set to the volume ID of an existing volume.
 {: note}
 
@@ -151,6 +150,3 @@ If the PV size specified in the manifest differs from the actual volume size on 
 **Suggestion**
 
 To avoid discrepancies between OpenShift’s metadata and the actual storage behavior, we recommend setting the PV’s `spec.capacity.storage` to match the actual size of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.
-
-
-
