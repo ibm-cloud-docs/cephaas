@@ -90,5 +90,7 @@ Before installing the driver, complete the following preinstallation setup activ
 {: codeblock}
 
 
-    To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
+    
+    
+To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
     {: note}
