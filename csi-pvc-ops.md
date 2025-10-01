@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-01"
 
 keywords: cephaas csi
 
@@ -20,7 +20,7 @@ This section provides step-by-step instructions for managing PersistentVolumeCla
 ## Create PVC
 {: #create-pvc}
 
-* Create a YAML file named pvc.yaml with the following content. 
+* Create a YAML file named **pvc.yaml** with the following content. 
 
 ```
 kind: PersistentVolumeClaim
@@ -31,8 +31,8 @@ spec:
   accessModes:
   - ReadWriteOnce
   resources:
-  requests:
-  storage: <required-size>G
+    requests:
+      storage: <required-size>G
   storageClassName: cephaascsi-sc
  ```
 {: codeblock}
@@ -83,7 +83,8 @@ This issue occurs when a small PVC (e.g., 1 GB) is expanded to a very large si
 
 `Expander.NodeExpand failed to expand the volume: rpc error: code = DeadlineExceeded desc = context deadline exceeded`
 
-The cause is that the resize2fs utility takes longer to expand volumes that are mounted or in use. This process, known as online expansion, is supported by the CSI driver but can take more than 3 minutes for large volumes. Note that on RSOS, the actual volume expansion is instant—it's the resize2fs step that takes extra time.
+Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility takes extra time during online expansion. While supported by the CSI driver, expanding larger volumes may take longer to complete.
+
 
 **Suggestion**
 
@@ -92,7 +93,7 @@ The CSI driver automatically retries the expansion operation after a timeout. Th
 ## Create a pod
 {: #create-pod}
 
-* Create a YAML file named pod.yaml with the following content:
+* Create a YAML file named **pod.yaml** with the following content:
 
 ```
 kind: Pod
@@ -137,6 +138,5 @@ oc delete pvc <your-pvc-name>
  ```
 {: codeblock}
 
-Before deleting a PersistentVolumeClaim (PVC), make sure there are no existing VolumeSnapshots associated with it.If snapshots exist, the PVC deletion will fail, preventing the volume and its snapshots from being removed.
+Before deleting a PersistentVolumeClaim (PVC), make sure there are no existing VolumeSnapshots associated with it. If snapshots exist, the PVC deletion will fail, preventing the volume and its snapshots from being removed.
 {: note}
-

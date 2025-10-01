@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-01"
 
 keywords: cephaas csi set up
 
@@ -21,7 +21,6 @@ Before installing the driver, complete the following preinstallation setup activ
 
     * Docker
     * Helm CLI
-    * IBM Cloud Container Registry
 
 2. Login to the IBM Cloud Container Registry via HELM by running the following command:
 
@@ -32,7 +31,7 @@ Before installing the driver, complete the following preinstallation setup activ
 
     When prompted, enter your IBM Cloud API key as the password.
 
-3. Create local copy of values.yaml file and edit the required fields using the following command:
+3. Create local copy of **values.yaml** file and edit the required fields using the following command:
 
     ```
     helm show values  oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>  > values.yaml
@@ -46,6 +45,8 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
 {: codeblock}
 
+Add secret name created in previous step under imagePullSecrets.name. 
+
 4. Create a Secret using the following command: 
 
     ```
@@ -56,7 +57,7 @@ Before installing the driver, complete the following preinstallation setup activ
      ```
 {: codeblock}
 
-5. Edit the following parameters in the values.yaml. 
+5. Edit the following parameters in the **values.yaml**. 
 
     * Add csiConfig.Deployment details in this format `https://<deployment-url>`
     * Update externalSnapshotter.endabled to true
@@ -64,7 +65,7 @@ Before installing the driver, complete the following preinstallation setup activ
     * Add your API Key in csiSecret.Token
     * Secret name created in the previous step
 
-6. You can optionally view the chart metadata, README file, and values.yaml file using the following commands. 
+6. You can view the license information of a Helm chart by running the command `helm show chart <chart-name>`.
 
     ```
     helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
@@ -73,17 +74,17 @@ Before installing the driver, complete the following preinstallation setup activ
      ```
 {: codeblock}
 
-    You can view the license information of a Helm chart by running the command `helm show chart <chart-name>`.
+    You can view the chart details, including license information, by running the following command: `helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>>`.
     {: note}
 
-7. Before installing the chart, review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
+7. Before installing the chart, you can optionally review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
 
     ```
-    helm template cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi--version <specify-tag-here> -f values.yaml
+    helm template cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> -f values.yaml
      ```
 {: codeblock}
 
-8. Install the CSI driver using the Helm chart and your updated values.yaml file.
+8. Install the CSI driver using the Helm chart and your updated **values.yaml** file.
 
     ```
     
@@ -94,6 +95,3 @@ Before installing the driver, complete the following preinstallation setup activ
 
     To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
     {: note}
-
-
-
