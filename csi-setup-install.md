@@ -45,7 +45,6 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
 {: codeblock}
 
-    Add secret name created in previous step under imagePullSecrets.name. 
 
 4. Create a Secret using the following command: 
 
@@ -63,16 +62,21 @@ Before installing the driver, complete the following preinstallation setup activ
     * Update externalSnapshotter.endabled to true
     * Update LicenseAccepted as true
     * Add your API Key in csiSecret.Token
-    * Secret name created in the previous step
+    * Add secret name created in previous step under imagePullSecrets.name. 
 
-6. To view the license information, README, and values.yaml of a Helm chart, run the following commands:
+6. To view the chart metadata, README, and values.yaml of a Helm chart, run the following commands:
 
     ```
-    helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>>
+    helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
     helm show readme oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
     helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
      ```
 {: codeblock}
+
+ You can view the chart details, including license information, by running the command:
+`helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>`
+{: note}
+
 
 7. Before installing the chart, you can optionally review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
 

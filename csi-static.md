@@ -30,23 +30,23 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
     metadata:
     name: pv-static
     spec:
-    capacity:
-    storage: 2G
+        capacity:
+            storage: 2G
     accessModes:
-    - ReadWriteOnce
+        - ReadWriteOnce
     volumeMode: Filesystem
     persistentVolumeReclaimPolicy: Delete
     storageClassName: cephaascsi-sc
     csi:
-    controllerExpandSecretRef:
-    name: cephaascsi-secret
-    namespace: default
-    controllerPublishSecretRef:
-    name: cephaascsi-secret
-    namespace: default
-    driver: csi.cephaas.io
-    fsType: ext4
-    volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
+        controllerExpandSecretRef:
+            name: cephaascsi-secret
+            namespace: default
+        controllerPublishSecretRef:
+            name: cephaascsi-secret
+            namespace: default
+        driver: csi.cephaas.io
+        fsType: ext4
+        volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
  ```
 {: codeblock}
 
@@ -57,15 +57,15 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
     apiVersion: v1
     kind: PersistentVolumeClaim
     metadata:
-    name: pvc-static
+        name: pvc-static
     spec:
-    accessModes:
-    - ReadWriteOnce
-    resources:
-    requests:
-    storage: 2G
-    storageClassName: cephaascsi-sc
-    volumeName: pv-static
+        accessModes:
+            - ReadWriteOnce
+        resources:
+            requests:
+                storage: 2G
+        storageClassName: cephaascsi-sc
+        volumeName: pv-static
     ```
 {: codeblock}
 
