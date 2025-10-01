@@ -45,7 +45,7 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
 {: codeblock}
 
-Add secret name created in previous step under imagePullSecrets.name. 
+    Add secret name created in previous step under imagePullSecrets.name. 
 
 4. Create a Secret using the following command: 
 
