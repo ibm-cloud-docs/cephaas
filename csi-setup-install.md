@@ -105,11 +105,11 @@ The {{site.data.keyword.cephaas_short}} CSI Driver v1.0.0 uses standard CSI side
 
 **Sidecar containers used by CephaaS CSI Driver:**
 
-- **csi-provisioner**: v3.5.0  
-- **csi-attacher**: v4.8.0  
-- **csi-resizer**: v1.4.0  
-- **node-driver-registrar**: v2.8.0  
-- **csi-snapshotter**: v6.2.2  
-- **external-snapshotter**: v6.2.2  
+- **csiProvisioner**: v3.5.0  
+- **csiAttacher**: v4.8.0  
+- **csiResizer**: v1.4.0  
+- **nodeDriverRegistrar**: v2.8.0  
+- **csiSnapshotter**: v6.2.2  
+- **externalSnapshotter**: v6.2.2  
 
 You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).
