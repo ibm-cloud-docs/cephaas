@@ -1,8 +1,7 @@
----
 toc:
   properties:
     subcollection: cephaas
-    service-name: software-defined-storage #If your subcollection is not for a service, don't include this property.
+    service-name: software-defined-storage
     category: storage
     audience: service
     href: /docs/cephaas
@@ -10,7 +9,6 @@ toc:
     product-page: https://www.ibm.com/products/storage-ceph
     path: cephaas
     label: IBM Storage Ceph as a Service
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation-design for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -20,18 +18,18 @@ toc:
       - topicgroup:
           label: Preparing the data center
           topics:
-            - preinstallation_checklist.md
-            - site_readiness.md
-            - site_access_requirements.md
-            - environ_requirements.md
-            - power_requirements.md
-            - network_requirements.md
-            - network_latency.md
+          - preinstallation_checklist.md
+          - site_readiness.md
+          - site_access_requirements.md
+          - environ_requirements.md
+          - power_requirements.md
+          - network_requirements.md
+          - network_latency.md
       - topicgroup:
           label: Getting organized
           topics:
-            - administrators.md
-            - developers.md
+          - administrators.md
+          - developers.md
       - topic: release-notes.md
         navtitle: Release notes
   - navgroup:
@@ -47,30 +45,30 @@ toc:
           - topicgroup:
               label: Volume operations
               topics:
-                - volume_about.md
-                - volume_create.md
-                - volume_view.md
-                - volume_rename.md
-                - volume_expand.md
-                - volume_delete.md
+              - volume_about.md
+              - volume_create.md
+              - volume_view.md
+              - volume_rename.md
+              - volume_expand.md
+              - volume_delete.md
           - topicgroup:
               label: Host operations
               topics:
-                - host_mapping_about.md
-                - host_create.md
-                - host_view.md
-                - host_rename.md
-                - host_delete.md
-                - host_mapping.md
-                - host_mapping_view.md
-                - host_unmap.md
-                - connect-from-nvme-of-initiators.md
+              - host_mapping_about.md
+              - host_create.md
+              - host_view.md
+              - host_rename.md
+              - host_delete.md
+              - host_mapping.md
+              - host_mapping_view.md
+              - host_unmap.md
+              - connect-from-nvme-of-initiators.md
       - topicgroup:
           label: Managing capacity allocations
           topics:
-            - sds_quota_mgmt.md
-            - sds_capacity_performance.md
-            - capacity_add.md
+          - sds_quota_mgmt.md
+          - sds_capacity_performance.md
+          - capacity_add.md
       - topicgroup:
           label: Managing object storage
           topics:
@@ -78,61 +76,59 @@ toc:
           - topicgroup:
               label: Managing S3 certificates
               topics:
-                - s3_cert_create.md
-                - s3_cert_view.md
-                - s3_cert_update.md
-                - s3_cert_delete.md
+              - s3_cert_create.md
+              - s3_cert_view.md
+              - s3_cert_update.md
+              - s3_cert_delete.md
           - topicgroup:
               label: Managing authentication
               topics:
-                - s3_cred_create.md
-                - s3_cred_view.md
-                - s3_cred_delete.md
+              - s3_cred_create.md
+              - s3_cred_view.md
+              - s3_cred_delete.md
       - topicgroup:
           label: Enhancing Security
           topics:
-            - topic: architecture-workload-isolation.md
-              navtitle: Architecture and workload isolation
-            - endpoints.md
-            - data-security.md
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
+          - endpoints.md
+          - data-security.md
       - topic: event-notifications.md
         navtitle: Enabling event notifications
       - topicgroup:
           label: Observability
           topics:
-            - topic: at-events.md
-              navtitle: Activity tracking events
+          - topic: at-events.md
+            navtitle: Activity tracking events
       - topicgroup:
           label: VMWare vSphere plug-in
           topics:
-            - whats-new-vsphere.md
-            - install_vmware_plugin.md
-            - managing-deployments.md
-            - managing-vsphere-hosts.md
-            - managing-datastores.md
-            - vsphere-snapshots.md
-            - upgrading-vsphere-plugin.md
+          - whats-new-vsphere.md
+          - install_vmware_plugin.md
+          - managing-deployments.md
+          - managing-vsphere-hosts.md
+          - managing-datastores.md
+          - vsphere-snapshots.md
+          - upgrading-vsphere-plugin.md
       - topicgroup:
           label: CephaaS CSI driver
           topics:
-            - csi-overview.md
-            - csi-setup-install.md
-            - csi-pvc-ops.md
-            - csi-snapshot-ops.md
-            - csi-static.md
+          - csi-overview.md
+          - csi-setup-install.md
+          - csi-pvc-ops.md
+          - csi-snapshot-ops.md
+          - csi-static.md
       - topicgroup:
           label: Managing snapshots
           topics:
-            - snapshots-overview.md
-            - view-snapshots.md
-            - view-specific-snapshot.md
-            - create-snapshot.md
-            - update-snapshot.md
-            - create-volume-from-snapshot.md
-            - delete-single-snapshot.md
-            - delete-snapshots.md
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command-line reference docs should be included in the Reference navigation group.
+          - snapshots-overview.md
+          - view-snapshots.md
+          - view-specific-snapshot.md
+          - create-snapshot.md
+          - update-snapshot.md
+          - create-volume-from-snapshot.md
+          - delete-single-snapshot.md
+          - delete-snapshots.md
   - navgroup:
       id: reference
       topics:
@@ -140,35 +136,34 @@ toc:
       - topicgroup:
           label: API reference
           topics:
-            - about_api.md
+          - about_api.md
           links:
-            - link:
-                label: Block storage management API
-                href: https://{DomainName}/apidocs/block-storage
-            - link:
-                label: Object storage management API
-                href: https://{DomainName}/apidocs/object-storage
+          - link:
+              label: Block storage management API
+              href: https://{DomainName}/apidocs/block-storage
+          - link:
+              label: Object storage management API
+              href: https://{DomainName}/apidocs/object-storage
       - topicgroup:
           label: CLI reference
           topics:
-            - sds-cli-reference.md
-            - curl.md
-            - aws_cli.md
+          - sds-cli-reference.md
+          - curl.md
+          - aws_cli.md
       - topicgroup:
           label: SDK reference
           topics:
-            - getting-started-sdks.md
-            - go.md
+          - getting-started-sdks.md
+          - go.md
       links:
-        - link:
-            label: Terraform reference
-            href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
-# links to your support, faqs and troubleshooting information should be included in the help navigation group.
+      - link:
+          label: Terraform reference
+          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
   - navgroup:
       id: help
       topics:
-        - getting_help_and_support.md
-        - billing_view.md
-        - faq.md
-        - troubleshooting.md
-        - known-issues.md
+      - getting_help_and_support.md
+      - billing_view.md
+      - faq.md
+      - troubleshooting.md
+      - known-issues.md

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-06"
 
 keywords: cephaas csi set up
 
@@ -95,6 +95,23 @@ Before installing the driver, complete the following preinstallation setup activ
 
 
     
-    
 To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
     {: note}
+
+
+## Sidecar containers and image Sources
+
+The CephaaS CSI Driver (v1.0.0) uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
+
+### Sidecar containers used in CephaaS CSI Driver v1.0.0
+
+| Sidecar Container         | Version  |
+|---------------------------|----------|
+| `csi-provisioner`         | 3.5.0    |
+| `csi-attacher`            | 4.8.0    |
+| `csi-resizer`             | 1.4.0    |
+| `node-driver-registrar`   | 2.8.0    |
+| `csi-snapshotter`         | 6.2.2    |
+| `external-snapshotter`    | 6.2.2    |
+
+You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).
