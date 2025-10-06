@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-30"
+lastupdated: "2025-10-06"
 
 keywords: ceph as a service, known issues
 
@@ -31,3 +31,8 @@ When a Persistent Volume Claim (PVC) expansion request exceeds the available sto
 
 If a PVC is deleted while snapshots still exist, the associated PV and storage volume are retained to avoid data loss. This makes the volume unusable but still consumes space.
 To fix this, either delete all related VolumeSnapshots to trigger automatic cleanup, or reuse the PV by removing its claimRef and creating a new PVC that binds to it.
+
+## Snapshot deletion timeout in CLI
+{: #snapshotdeletiontimeoutissue}
+
+Snapshot deletion via CLI may fail with a 504 Gateway Time-out error, even though the operation completes successfully. This is caused by a short client timeout in the SDK. 
