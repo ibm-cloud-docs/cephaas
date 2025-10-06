@@ -73,9 +73,9 @@ Before installing the driver, complete the following preinstallation setup activ
      ```
 {: codeblock}
 
- You can view the chart details, including license information, by running the command:
-`helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>`
-{: note}
+     You can view the chart details, including license information, by running the command:
+    `helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>`
+    {: note}
 
 
 7. Before installing the chart, you can optionally review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
