@@ -99,9 +99,9 @@ To verify that the CSI driver was installed successfully, run the command `helm 
     {: note}
 
 
-## Sidecar containers and image Sources
+## Sidecar containers and image sources
 
-The {{site.data.keyword.cephaas_short}} CSI Driver (v1.0.0) uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
+The {{site.data.keyword.cephaas_short}} CSI Driver uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
 
 ### Table 1: Sidecar container versions used in v1.0.0
 
