@@ -101,18 +101,15 @@ To verify that the CSI driver was installed successfully, run the command `helm 
 
 ## Sidecar containers and image sources
 
-The {{site.data.keyword.cephaas_short}} CSI Driver uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
+The {{site.data.keyword.cephaas_short}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
 
-### Table 1: Sidecar container versions used in v1.0.0
+**Sidecar containers used by CephaaS CSI Driver:**
 
-
-| Sidecar Container         | Version  |
-|---------------------------|----------|
-| `csi-provisioner`         | 3.5.0    |
-| `csi-attacher`            | 4.8.0    |
-| `csi-resizer`             | 1.4.0    |
-| `node-driver-registrar`   | 2.8.0    |
-| `csi-snapshotter`         | 6.2.2    |
-| `external-snapshotter`    | 6.2.2    |
+- **csi-provisioner**: v3.5.0  
+- **csi-attacher**: v4.8.0  
+- **csi-resizer**: v1.4.0  
+- **node-driver-registrar**: v2.8.0  
+- **csi-snapshotter**: v6.2.2  
+- **external-snapshotter**: v6.2.2  
 
 You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).
