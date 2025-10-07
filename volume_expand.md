@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-10-07"
 
 keywords: sds, cephaas, block storage, volume, increase volume size for cephaas, manage volume, expand volume size, ceph as a service
 
@@ -72,7 +72,7 @@ See the following example.
 
 ```bash
 
-ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --capacity 20 --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --capacity 20
 ...
 
 Volume_ID     r134-601e431b-22ab-47a1-b0c1-411049b432a0

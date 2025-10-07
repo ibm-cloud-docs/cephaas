@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-10-07"
 
 keywords: cephaas, delete s3 certificate, ceph as a service
 
@@ -35,7 +35,7 @@ ibmcloud software-defined-storage cert-delete --cert CERT --url string
 Example of deleting a certificate.
 
 ```bash
-ibmcloud software-defined-storage cert-delete --url $sds_endpoint --cert s3
+ibmcloud software-defined-storage cert-delete --cert s3
 Are you sure you want to delete?[y/n]> y
 ...
 OK

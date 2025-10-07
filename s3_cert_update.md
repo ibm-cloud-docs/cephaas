@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-10-07"
 
 keywords: cephaas settings, uploading S3 Certificate, ceph as a service
 
@@ -63,7 +63,7 @@ ibmcloud software-defined-storage cert-update --cert CERT --body BODY --url stri
 See the following example.
 
 ```sh
-ibmcloud sds cert-update --cert s3 --url $sds_endpoint --body file-name.pem
+ibmcloud sds cert-update --cert s3 --body file-name.pem
 
 ...
 Name               s3

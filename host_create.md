@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-10-07"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -69,8 +69,6 @@ ic sds host-create --name host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:
 HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-2").Host_ID')
 ```
 {: pre}
-
-
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-10-07"
 
 keywords: ceph as a service, cephaas, block Storage, volume, map volume to host, volume mapping, host mapping
 
@@ -74,7 +74,7 @@ ibmcloud software-defined-storage host-mapping-create --host-id HOST-ID [--volum
 See the following example.
 
 ```bash
-ibmcloud sds hstmc --url "$sds_endpoint"\
+ibmcloud sds hstmc \
  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 \
  --volume-id r134-2ca809e8-3e63-44bc-916e-1eae49302aae
 ...

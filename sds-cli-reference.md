@@ -38,7 +38,7 @@ ibmcloud plugin install software-defined-storage
 ```
 {: pre}
 
-Once the plug-in is installed, you can verify the installation by running the `help` command.
+Once the plug-in is installed, you can verify the installation by running the software-defined-storage plugin which will display the help.
 
 ```sh
 ibmcloud software-defined-storage --help

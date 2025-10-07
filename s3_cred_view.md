@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-10-07"
 
 keywords: cephaas, service credential view, list, ceph as a service, object storage
 
@@ -37,14 +37,14 @@ Run the following command to retreive the credential details for the API endpoin
 
 
 ```sh
-ibmcloud software-defined-storage creds --url string
+ibmcloud software-defined-storage creds
 ```
 {: pre}
 
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage creds --url $sds_endpoint
+ibmcloud software-defined-storage creds
 ...
 
 s3_Credentials   [test-key1, test-key2, test-key3, test-key4]

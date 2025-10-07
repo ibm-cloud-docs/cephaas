@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-10-07"
 
 keywords: ceph as a service, sds, host, view host mapping details, host summary list
 
@@ -62,7 +62,7 @@ Table describes the kebab menu options.
 Run this command to view the list of all volume mappings for a host.
 
 ```sh
-ibmcloud software-defined-storage host-mappings --host-id HOST-ID --url string
+ibmcloud software-defined-storage host-mappings --host-id HOST-ID
 ```
 {: pre}
 
