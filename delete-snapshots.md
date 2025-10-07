@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-10-07"
 
 keywords: cephaas, delete snapshots, ceph as a service
 
@@ -45,7 +45,7 @@ To verify that the snapshot is deleted, list the snapshots by making a `GET /sna
 To delete snapshots that match the specified filter such as all the snapshot of particular volume using the command-line interface (CLI), run the following command.
 
 ```sh
-ibmcloud sds volume-snapshots-delete --source-volume-id <volume-id> --force
+ibmcloud sds volume-snapshots-delete --source-volume-id SOURCE-VOLUME-ID --force
 ```
 {: pre}
 

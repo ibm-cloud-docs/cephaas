@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-10-07"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -41,7 +41,7 @@ ibmcloud plugin install software-defined-storage
 Once the plug-in is installed, you can verify the installation by running the `help` command.
 
 ```sh
-ibmcloud software-defined-storage help
+ibmcloud software-defined-storage --help
 ```
 {: pre}
 
@@ -93,7 +93,7 @@ Aliases of `software-defined-storage`: `sds`
 {: #ic-create-volume}
 
 ```sh
-ibmcloud sds volume-create --capacity CAPACITY [--name NAME] --url string
+ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID]
 ```
 {: pre}
 
@@ -105,6 +105,7 @@ Example
 ibmcloud sds volume-create \
     --capacity 10 \
     --name my-volume \
+    --source-snapshot '{"id": "exampleString"}' \
     --url $sds_endpoint
 ```
 {: screen}
@@ -126,6 +127,17 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
+* The source snapshot this volume was created from.
+    * Flag: `--source-snapshot`
+
+    Use this option if you are creating the volume from a snapshot.
+    {: note}
+
+* Unique snapshot identifier of the resource.
+    * Flag: `--source-snapshot-id`
+
+    Use this option if you are creating the volume from a snapshot.
+    {: note}
 
 
 ### Retrieve a single volume details
