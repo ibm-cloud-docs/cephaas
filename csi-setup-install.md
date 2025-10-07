@@ -59,7 +59,7 @@ Before installing the driver, complete the following preinstallation setup activ
 5. Edit the following parameters in the **values.yaml**. 
 
     * Add csiConfig.Deployment details in this format `https://<deployment-url>`
-    * Update externalSnapshotter.endabled to true
+    * Update externalSnapshotter.enabled to true
     * Update LicenseAccepted as true
     * Add your API Key in csiSecret.Token
     * Add secret name created in previous step under imagePullSecrets.name. 
