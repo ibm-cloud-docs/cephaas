@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-07"
 
 keywords: cephaas csi
 
@@ -15,7 +15,9 @@ subcollection: cephaas
 # Static provisioning
 {: #static-provision}
 
-Static provisioning allows you to manually create and manage PersistentVolumes (PVs), PersistentVolumeClaims (PVCs), and snapshots. This method is useful when you want to bind existing storage resources to Kubernetes workloads. 
+
+Static provisioning is a method where PersistentVolumes (PVs) and VolumeSnapshotContents (VSCs) are manually created to reference existing volumes or snapshots on the storage system managed by the CSI driver. When a user creates a PersistentVolumeClaim (PVC) or VolumeSnapshot (VS) that matches the specifications of a pre-created PV or VSC, Kubernetes binds the claim to that resource.
+This approach is useful when you need to connect existing storage resources to Kubernetes workloads.
 
 ## Static provisioning for volumes
 {: #static-provision-volumes}
@@ -46,10 +48,11 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
             namespace: default
         driver: csi.cephaas.io
         fsType: ext4
-        volumeHandle: r134-e20564d0-2aea-4992-ae07-b4a06e23e139
+        volumeHandle: <Volume_ID>
  ```
 {: codeblock}
 
+Replace the VolumeHandle value with the actual Volume ID of the pre-provisioned volume.
 
 * Create a PersistentVolumeClaim (PVC) by creating a file named **pvc.yaml** with the following content.
 
@@ -69,6 +72,8 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
     ```
 {: codeblock}
 
+In the pvc.yaml file, you can use the volumeName field to explicitly bind the PVC to a specific PersistentVolume (PV).
+Replace the placeholder with the actual PV name if you want to implement this binding. This step is optional. 
 
 A storage class is required for delete and expand operations to work correctly.
 {: note}
@@ -132,7 +137,7 @@ spec:
 {: codeblock}
 
 
-In the volumesnapshotcontent.yaml file, the value of the snapshotHandle field should be set to the volume ID of an existing volume.
+In the volumesnapshotcontent.yaml file, the value of the snapshotHandle field should be set to the snapshot ID of an existing snapshot.
 {: note}
 
 
@@ -143,7 +148,7 @@ Once both resources are created and linked, you can restore the snapshot into a 
 
 **Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment**
 
-In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume size.
+In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage volume. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume size.
 Since static provisioning bypasses the CSI driver’s CreateVolume gRPC call, which is used in dynamic provisioning to create the volume and ensure the `spec.capacity.storage` matches the actual size on RSOS—there is no built-in validation to confirm that the declared capacity aligns with the real backend volume size.
 If the PV size specified in the manifest differs from the actual volume size on the deployment, pods will only be able to use and see the actual volume size, not the declared size in the manifest.
 

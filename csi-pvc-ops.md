@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-07"
 
 keywords: cephaas csi
 
@@ -116,7 +116,7 @@ spec:
  ```
 {: codeblock}
 
-You need to replace this container block with your own application containers. 
+You need to replace this container block with your own application containers. Replace volumes.claimName with the name of the PersistentVolumeClaim (PVC) that the pod is intended to use.
 
 * Apply the configuration. 
 

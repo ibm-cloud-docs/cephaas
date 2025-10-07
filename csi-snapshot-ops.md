@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-07"
 
 keywords: cephaas snapshots
 
@@ -74,6 +74,6 @@ spec:
  ```
 {: codeblock}
 
-The requested storage size must be equal to or greater than the size of the original PVC.
+The requested storage size must be equal to or greater than the size of the original PVC at the point in time when snapshot was taken. 
 
 * Apply the configuration with the command `oc apply -f restore.yaml`.
