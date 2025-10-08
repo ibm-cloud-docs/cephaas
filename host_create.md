@@ -75,7 +75,7 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage host-create --url "$sds_endpoint" \
+ibmcloud software-defined-storage host-create --url $sds_endpoint \
  --nqn "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122" \
  --name "dummy-host" \
  --volume-mappings '[{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}]'
