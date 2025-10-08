@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-10-08"
 
 keywords: ceph as a service, sds, host, view host mapping details, host summary list
 
@@ -70,8 +70,8 @@ ibmcloud software-defined-storage host-mappings --host-id HOST-ID
 The following example shows all volumes mapped to a host in your deployment.
 
 ```sh
-ibmcloud software-defined-storage host-mappings\
-  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66\
+ibmcloud software-defined-storage host-mappings \
+  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 \
   --url $sds_endpoint
 ...
 
