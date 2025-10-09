@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-08"
+lastupdated: "2025-10-09"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -75,10 +75,11 @@ Valid host names can include a combination of lowercase alpha-numeric characters
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage host-create --url $sds_endpoint \
- --nqn "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122" \
- --name "dummy-host" \
- --volume-mappings '[{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}]'
+ibmcloud software-defined-storage host-create \
+  --nqn "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122" \
+  --name "dummy-host" \
+  --volume-mappings '[{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}]' \
+  --url $sds_endpoint
 ...
 
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
