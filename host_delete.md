@@ -77,7 +77,8 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage host-delete \
-  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+  --url SDS_ENDPOINT
 ```
 {: screen}
 

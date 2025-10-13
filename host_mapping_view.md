@@ -71,7 +71,8 @@ The following example shows all volumes mapped to a host in your deployment.
 
 ```sh
 ibmcloud software-defined-storage host-mappings \
-  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66
+  --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 \
+  --url SDSENDPOINT
 ...
 
 Mapped_volumes
