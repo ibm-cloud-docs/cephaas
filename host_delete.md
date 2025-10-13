@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-08"
+lastupdated: "2025-10-13"
 
 keywords: cephaas, delete host, sds host-delete, ceph as a service
 
@@ -77,8 +77,7 @@ See the following example.
 
 ```sh
 ibmcloud software-defined-storage host-delete \
-  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --url $sds_endpoint
+  --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e
 ```
 {: screen}
 
