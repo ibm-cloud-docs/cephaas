@@ -17,9 +17,7 @@ subcollection: cephaas
 
 {{site.data.keyword.cephaas_full_notm}} CSI driver uses standard CSI sidecar containers maintained by the Kubernetes SIG Storage community. These container images are distributed via `registry.k8s.io` and are maintained by the upstream Kubernetes project.
 
-You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://githubCSI driver (v1.0.0)
-
-**Table: About CSI driver**
+You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://githubCSI) driver (v1.0.0)
 
 The following table lists the sidecar containers and related images used in the {{site.data.keyword.cephaas_full_notm}} CSI driver Helm chart, along with their versions and release details.
 
