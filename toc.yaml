@@ -86,6 +86,7 @@ toc:
               - s3_cred_create.md
               - s3_cred_view.md
               - s3_cred_delete.md
+          - object-dr.md
       - topicgroup:
           label: Enhancing Security
           topics:
