@@ -18,7 +18,7 @@ subcollection: cephaas
 S3 TLS certificates are required to encrypt the S3 traffic and prevent **Man in the Middle (MITM)** attacks. You can create a new S3 SSL certificate by using the CLI or API.
 {: shortdesc}
 
-You must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint.
+You must create a server-side certificate with one or more Subject Alternative Name(s) (SAN)(s) which match the configured S3 IP address and/or configured DNS hostname(s).
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
