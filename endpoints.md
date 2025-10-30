@@ -37,7 +37,7 @@ To retrieve your `cephaas-instance-id` from the {{site.data.keyword.cloud_notm}}
     ```
     {: pre}
 
-Example of an {{site.data.keyword.cephaas_short}} endpoint: `a5646acb-bf72-4127-bd4d-71b5ba3ae253.software-defined-storage.appdomain.cloud`
+Example of an  {{site.data.keyword.cephaas_full_notm}} endpoint: `a5646acb-bf72-4127-bd4d-71b5ba3ae253.software-defined-storage.appdomain.cloud`
 
 All {{site.data.keyword.cephaas_full}} endpoints require either TLS 1.2 or TLS 1.3 encryption.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-10-30"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
@@ -34,9 +34,9 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 
 2. Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.
 
-    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_short}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the {{site.data.keyword.cloud_notm}}. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
+    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs.  {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the {{site.data.keyword.cloud_notm}}. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
 
-    {{site.data.keyword.cephaas_short}} can be provisioned with 100 TB to 3200 TB with two storage options:
+     {{site.data.keyword.cephaas_full_notm}} can be provisioned with 100 TB to 3200 TB with two storage options:
 
     - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components that are needed to use this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
 
@@ -83,5 +83,5 @@ After the order is placed and the infrastructure is ready to be installed, IBM w
 
 While IBM owns and operates the infrastructure, you are able to provision your own storage volumes. IBM continues to operate and maintain the respective hardware and software maintenance operations.
 
-To understand and prepare your data center before the rack arrives for installation, read the [prerequisites for installing {{site.data.keyword.cephaas_short}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
+To understand and prepare your data center before the rack arrives for installation, read the [prerequisites for installing  {{site.data.keyword.cephaas_full_notm}}](/docs/cephaas?topic=cephaas-pre_installation_checklist).
 {: note}

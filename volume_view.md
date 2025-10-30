@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-10-30"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -25,7 +25,7 @@ View details about a block storage volume or summary information about all volum
 
 To view the list of all the volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 
-By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen deployment are displayed. In the list of all **Volumes**, you see the following information.
+By default, all {{site.data.keyword.cephaas_full_notm}} volumes for the chosen deployment are displayed. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|

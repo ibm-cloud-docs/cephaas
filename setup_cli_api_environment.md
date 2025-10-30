@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-10-30"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
@@ -40,7 +40,7 @@ Make sure that your environment from which the CLI will be run is connected to t
 {: requirement}
 
 1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
-1. Install the {{site.data.keyword.cephaas_short}} CLI plug-in `software-defined-storage`.
+1. Install the {{site.data.keyword.cephaas_full_notm}} CLI plug-in `software-defined-storage`.
 
    ```sh
    ibmcloud plugin install software-defined-storage
@@ -66,7 +66,7 @@ To set the CLI to use the API endpoint, follow these steps:
 If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated plug-ins, you must be able to access the public repository where they are located.
 {: note}
 
-1. Ensure that the core {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.cephaas_short}} service plug-in are updated to the latest version:
+1. Ensure that the core {{site.data.keyword.cloud_notm}} CLI and {{site.data.keyword.cephaas_full_notm}} plug-in are updated to the latest version:
 
    ```sh
    ibmcloud update
@@ -90,7 +90,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 ### Setup IAM Token
 {: #setup-iam-token}
 
-Before you can use the CLI to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS service.
+Before you can use the CLI to create your {{site.data.keyword.cephaas_full_notm}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS service.
 
 ```sh
 IAM_TOKEN=$(ibmcloud iam oauth-tokens --output json | jq -r '.iam_token)
@@ -100,7 +100,7 @@ IAM_TOKEN=$(ibmcloud iam oauth-tokens --output json | jq -r '.iam_token)
 {: #api-prerequisites-setup}
 {: api}
 
-Before you can use the API to create your {{site.data.keyword.cephaas_short}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
+Before you can use the API to create your {{site.data.keyword.cephaas_full_notm}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS API service.
 
 The following examples use the `us-south` regional endpoint.
 {: note}
@@ -145,7 +145,7 @@ An IAM token is valid for up to 60 minutes, and it is subject to change. When a 
 ### Step 3: Store the API endpoint as a variable
 {: #store-api-endpoint-variable}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}`. Run the following command to store the API endpoint in a variable so it can be reused later in your session.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}`. Run the following command to store the API endpoint in a variable so it can be reused later in your session.
 
 For example:
 

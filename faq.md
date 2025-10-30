@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-10-30"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -185,4 +185,4 @@ For Low-cost Object, new S3 accounts have `STANDARD_IA` as the default storage c
 {: faq}
 {: #faq-access-ic-mon-ui}
 
-The {{site.data.keyword.mon_full_notm}} user interface is not linked from the {{site.data.keyword.cephaas_full_notm}} user interface. Hence it cannot be accessed from the {{site.data.keyword.cephaas_short}} user interface.
+The {{site.data.keyword.mon_full_notm}} user interface is not linked from the {{site.data.keyword.cephaas_full_notm}} user interface. Hence it cannot be accessed from the  {{site.data.keyword.cephaas_full_notm}} user interface.

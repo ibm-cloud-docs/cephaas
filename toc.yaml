@@ -112,7 +112,7 @@ toc:
           - vsphere-snapshots.md
           - upgrading-vsphere-plugin.md
       - topicgroup:
-          label: CSI driver
+          label: IBM Storage Ceph as a Service CSI driver
           topics:
           - csi-overview.md
           - csi-about.md

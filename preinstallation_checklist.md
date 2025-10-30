@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-10-30"
 
 
 keywords: preorder, checklist, preinstallation checklist, site-readiness, ceph as a service, network validation, account activation
@@ -13,7 +13,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites for installing {{site.data.keyword.cephaas_short}}
+# Prerequisites for installing {{site.data.keyword.cephaas_full_notm}}
 {: #pre_installation_checklist}
 
 
@@ -60,13 +60,13 @@ The following network requirements must be completed before the rack is delivere
 
 *  After the order is placed, IBM provides a pre-installation checklist. Complete the pre-installation checklist to provide network-specific information, such as Autonomous system numbers (ASN), Service key, and others. For more information, see [Network requirements](/docs/cephaas?topic=cephaas-network-requirements).
 
-* A part of these requirements, you must have a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_short}}. Some of these IP addresses must be able to connect with other services on the internet. Make sure your network is ready to allow for this communication.
+* A part of these requirements, you must have a list of IP addresses that will be associated with services from {{site.data.keyword.cephaas_full_notm}}. Some of these IP addresses must be able to connect with other services on the internet. Make sure your network is ready to allow for this communication.
 
-{{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
+{{site.data.keyword.cephaas_full_notm}} does not allow deployment in fully disconnected environments.
 {: note}
 
 
 ## Network validation and account activation
 {: #validation-activation}
 
-To validate the network functions and activate the {{site.data.keyword.cephaas_full_notm}} account after delivery, the SSR team will work with you to help ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_short}} account.
+To validate the network functions and activate the {{site.data.keyword.cephaas_full_notm}} account after delivery, the SSR team will work with you to help ensure the visibility of the rack Satellite location in your {{site.data.keyword.cephaas_full_notm}} account.
