@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-10-30"
 
 keywords: cephaas, endpoint, location, region, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Endpoints
 {: #endpoints}
 
-Sending a REST API request, calling the {{site.data.keyword.cephaas_short}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance have a unique endpoint that is named as `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
+Sending a REST API request, calling the {{site.data.keyword.cephaas_full_notm}} CLI, or configuring a storage client requires setting a target endpoint or URL. Each storage appliance have a unique endpoint that is named as `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud`.
 
 To retrieve your `cephaas-instance-id` from the {{site.data.keyword.cloud_notm}} CLI, do the following steps:
 
@@ -23,14 +23,14 @@ To retrieve your `cephaas-instance-id` from the {{site.data.keyword.cloud_notm}}
 
 2. Log in to your {{site.data.keyword.cloud_notm}} account by using the `ibmcloud login` command.
 
-3. Retrieve a list of all {{site.data.keyword.cephaas_short}} deployments in your {{site.data.keyword.cloud_notm}} account by using the `software-defined-storage` service name.
+3. Retrieve a list of all {{site.data.keyword.cephaas_full_notm}} deployments in your {{site.data.keyword.cloud_notm}} account by using the `software-defined-storage` service name.
 
     ```sh
     ibmcloud resource service-instances --service-name software-defined-storage
     ```
     {: pre}
 
-4. Retrieve the {{site.data.keyword.cephaas_short}} instance ID (GUID) of the instance you want.
+4. Retrieve the {{site.data.keyword.cephaas_full_notm}} instance ID (GUID) of the instance you want.
 
     ```sh
     ibm-cloud resource service-instance <cephaas-deployment-name> --guid

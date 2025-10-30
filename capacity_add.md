@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-10-30"
 
 keywords: Add capacity, ceph as a service, cephaas
 
@@ -21,4 +21,4 @@ subcollection: cephaas
 For purchasing additional capacity, contact your IBM sales or business partner.
 {: important}
 
-With {{site.data.keyword.cephaas_short}}, you can create up to 1000 block storage volumes per deployment.
+With {{site.data.keyword.cephaas_full_notm}}, you can create up to 1000 block storage volumes per deployment.

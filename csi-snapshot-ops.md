@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-10-30"
 
 keywords: cephaas snapshots
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # CSI snapshot operations
 {: #csi-snapshot-ops}
 
-This section describes how to create, delete, and restore volume snapshots using the {{site.data.keyword.cephaas_short}} CSI driver. 
+This section describes how to create, delete, and restore volume snapshots using the {{site.data.keyword.cephaas_full_notm}} CSI driver. 
 
 
 ## Create a snapshot

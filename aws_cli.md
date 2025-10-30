@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-10-30"
 
 keywords: cephaas, cli, command-line interface, object storage, s3, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # Using the AWS CLI
 {: #aws-cli}
 
-The official command-line interface for AWS is compatible with the {{site.data.keyword.cephaas_short}} S3 API.
+The official command-line interface for AWS is compatible with the {{site.data.keyword.cephaas_full_notm}} S3 API.
 {: shortdesc}
 
 Written in Python, it can be installed from the Python Package Index by using `pip install awscli`. By default, access keys are sourced from `~/.aws/credentials`, but can also be set as environment variables.
