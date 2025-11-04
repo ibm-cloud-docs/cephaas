@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-04"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
@@ -90,7 +90,7 @@ If you need to download the {{site.data.keyword.cloud_notm}} CLI and associated 
 ### Setup IAM Token
 {: #setup-iam-token}
 
-Before you can use the CLI to create your {{site.data.keyword.cephaas_full_notm}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the CephaaS service.
+Before you can use the CLI to create your {{site.data.keyword.cephaas_full_notm}}, you must get an IAM token, store the endpoint as a variable, and verify that you have access to the {{site.data.keyword.cephaas_full_notm}} service.
 
 ```sh
 IAM_TOKEN=$(ibmcloud iam oauth-tokens --output json | jq -r '.iam_token)

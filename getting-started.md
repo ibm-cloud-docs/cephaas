@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-04"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
@@ -79,7 +79,7 @@ After you receive the email confirmation that your order is placed, the next ste
 {: #setupandmaintenance}
 {: step}
 
-After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your CephaaS deployment in your data center. You are responsible for meeting the physical site requirements; for example, energy, cooling, space, physical network connectivity; where the infrastructure is installed. IBM is responsible for installation, configuration, and operation of the infrastructure.
+After the order is placed and the infrastructure is ready to be installed, IBM will work with you to install your {{site.data.keyword.cephaas_full_notm}} deployment in your data center. You are responsible for meeting the physical site requirements; for example, energy, cooling, space, physical network connectivity; where the infrastructure is installed. IBM is responsible for installation, configuration, and operation of the infrastructure.
 
 While IBM owns and operates the infrastructure, you are able to provision your own storage volumes. IBM continues to operate and maintain the respective hardware and software maintenance operations.
 
