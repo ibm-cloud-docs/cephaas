@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-04"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -33,7 +33,7 @@ The following are the prerequisites for generating S3 TLS certificate.
 If multiple certificate properties are included, the order of items in the `pem` file should be: end-entity certificate, intermediate certificate, root certificate, private key. For example: `cat tls.crt ca.crt tls.key > both.pem` is the correct order for the `pem` file to be used by {{site.data.keyword.cephaas_full_notm}}.
 {:important:}
 
-If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with CephaaS.
+If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with {{site.data.keyword.cephaas_full_notm}}.
 
 
 
