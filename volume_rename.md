@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-10-30"
 
 keywords: sds, cephaas, block storage, volume, remane volume, manage volume, ceph as a service
 
@@ -59,7 +59,7 @@ ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --name NAM
 See the following example.
 
 ```bash
-ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --name new-vol --url $sds_endpoint
+ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --name new-vol
 ...
 
 Volume_ID     r134-601e431b-22ab-47a1-b0c1-411049b432a0
@@ -73,7 +73,7 @@ Hosts         -
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 {: note}
 
 
@@ -102,7 +102,7 @@ curl -X PATCH $sds_endpoint/volumes/r134-601e431b-22ab-47a1-b0c1-411049b432a0\
 ```
 {: pre}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 A successful response looks like this:
 

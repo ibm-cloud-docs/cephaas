@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-10-30"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Getting Started with the SDKs
 {: #getting-started-sdk}
 
-{{site.data.keyword.cephaas_full}} provides an SDK for GO, which can help you to make the most of {{site.data.keyword.cephaas_short}}.
+{{site.data.keyword.cephaas_full}} provides an SDK for GO, which can help you to make the most of  {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
 This Quick Start guide provides a code example that demonstrates the following operations:
@@ -54,7 +54,7 @@ To complete the code example, you need to replace the following values:
 
 |Value|Description|Example|
 |---|---|---|
-|`<service-endpoint>`|Regional endpoint for your {{site.data.keyword.cephaas_short}} instance|`s3.us-south.software-defined-storage.appdomain.cloud`|
+|`<service-endpoint>`|Regional endpoint for your  {{site.data.keyword.cephaas_full_notm}} instance|`s3.us-south.software-defined-storage.appdomain.cloud`|
 |`<apikey>`|IAM API Key with at least `Writer` permissions|`xxxd12V2QHXbjaM99G9tWyYDgF_0gYdlQ8aWALIQxXx4`|
 |`<resource-instance-id>`|Unique ID for the Service Instance|`crn:v1:bluemix:public:software-defined-storage:global:a/xx999cd94a0dda86fd8eff3191349999:9999b05b-x999-4917-xxxx-9d5b326a1111::`|
 {: caption="Code value variable descriptions" caption-side="bottom"}

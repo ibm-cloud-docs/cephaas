@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-10-30"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -66,8 +66,7 @@ See the following example.
 ```bash
 ibmcloud sds volume-create \
    --capacity 10 \
-   --name my-volume \
-   --url $sds_endpoint
+   --name my-volume
 ...
 
 Volume_ID     r134-279863d6-c37b-4601-b586-80f6dac215c2
@@ -84,7 +83,7 @@ Hosts         -
 
 Capacity, indicated in gigabytes, can range from minimum 1 GB to the maximum allocated capacity for block storage.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `volc` as an alternative to `volume-create` for the CLI actions.
 {: tip}
@@ -113,7 +112,7 @@ curl -X POST $sds_endpoint/volumes\
 ```
 {: pre}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when{{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. If you create two volumes with the same name in the same deployment and region, a `volume name duplicate` error is displayed.
@@ -211,7 +210,7 @@ A successful response looks like this:
 
 For more information about the arguments and attributes, see [ibm_sds_volume](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume){: external}.
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`.
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`.
 
 ## Next steps
 {: #next-step-creating-volume}

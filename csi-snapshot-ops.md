@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-01"
+lastupdated: "2025-10-30"
 
 keywords: cephaas snapshots
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # CSI snapshot operations
 {: #csi-snapshot-ops}
 
-This section describes how to create, delete, and restore volume snapshots using the {{site.data.keyword.cephaas_short}} CSI driver. 
+This section describes how to create, delete, and restore volume snapshots using the {{site.data.keyword.cephaas_full_notm}} CSI driver. 
 
 
 ## Create a snapshot
@@ -74,6 +74,6 @@ spec:
  ```
 {: codeblock}
 
-The requested storage size must be equal to or greater than the size of the original PVC.
+The requested storage size must be equal to or greater than the size of the original PVC at the point in time when snapshot was taken. 
 
 * Apply the configuration with the command `oc apply -f restore.yaml`.

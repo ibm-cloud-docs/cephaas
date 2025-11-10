@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-15"
+lastupdated: "2025-10-30"
 
 keywords: ceph as a service, managing datastores, vsphere plug-in, plugin, vSphere
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 {: #managing-datastores-vsphere-plug-in}
 
 ## Adding a datastore
-{: #add-datastore}
+{: #add-datastore-trials}
 
 Use the following procedure to add an {{site.data.keyword.cephaas_full_notm}} datastore to the vSphere plug-in.
 

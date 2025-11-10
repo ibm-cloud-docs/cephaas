@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-10-30"
 
 keywords: ceph as a service, managing deployments in vsphere plug-in
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 {: #managing-deployments-vsphere-plug-in}
 
 ## Adding a deployment
-{: #add-deployment}
+{: #adding-dep-trials}
 
 Use the following procedure to add an {{site.data.keyword.cephaas_full_notm}} deployment to the vSphere plug-in.
 

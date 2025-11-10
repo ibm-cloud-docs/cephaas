@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-10-30"
 
 keywords: cephaas, delete host, sds host-delete, ceph as a service
 
@@ -75,14 +75,14 @@ ibmcloud software-defined-storage host-delete --host-id HOST-ID --url string
 
 See the following example.
 
-```bash
+```sh
 ibmcloud software-defined-storage host-delete \
   --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
-  --url $sds_endpoint
+  --url SDS_ENDPOINT
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `hstd` as an alternative to `host-delete` for the CLI actions.
@@ -106,7 +106,7 @@ curl -X DELETE '$sds_endpoint/hosts/r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e'\
 ```
 {: pre}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 There is no response body for a successful delete operation.
 

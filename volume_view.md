@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-11-04"
 
 keywords: list all volumes, view volume details, ceph as a service
 
@@ -25,7 +25,7 @@ View details about a block storage volume or summary information about all volum
 
 To view the list of all the volumes, in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), go to **{{site.data.keyword.cephaas_full_notm}} > Block Storage > Volumes**.
 
-By default, all {{site.data.keyword.cephaas_short}} volumes for the chosen deployment are displayed. In the list of all **Volumes**, you see the following information.
+By default, all {{site.data.keyword.cephaas_full_notm}} volumes for the chosen deployment are displayed. In the list of all **Volumes**, you see the following information.
 
 | Field | Description |
 |-------|-------------|
@@ -167,7 +167,7 @@ r134-1dee2264-a3c2-415d-bc86-dd05ad4f06dd   magma-agreeably-groovy-hardwood   av
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `vols` as an alternative to `volumes` for the CLI actions.
@@ -194,7 +194,7 @@ curl -X GET $sds_endpoint/volumes\
 ```
 {: pre}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 A successful response looks like the following example. This example shows the first volume mapped to a host.
 

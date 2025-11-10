@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-04-22"
+lastupdated: "2025-10-30"
 
 keywords: planning, site-readiness, ceph as a service, network requirement
 
@@ -30,7 +30,7 @@ To facilitate the {{site.data.keyword.cephaas_full_notm}} server infrastructure 
 
 * Some of these addresses will need to be able to reach the internet.
 
-{{site.data.keyword.cephaas_short}} does not allow deployment in fully disconnected environments.
+{{site.data.keyword.cephaas_full_notm}} does not allow deployment in fully disconnected environments.
 {: note}
 
 ## Network configuration architecture

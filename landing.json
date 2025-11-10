@@ -1,6 +1,6 @@
 {
   "title": "IBM Storage Ceph as a Service",
-  "introduction": "IBM® Storage Ceph® as a Service is a robust software-defined enterprise storage platform that delivers a cloud-like experience in your on-premises environment with the ease, and flexibility of a pay-as-you-go model. Access comprehensive documentation, API & SDK reference, architecture references, and more to support your development needs.",
+  "introduction": "IBM\u00ae Storage Ceph\u00ae as a Service is a robust software-defined enterprise storage platform that delivers a cloud-like experience in your on-premises environment with the ease, and flexibility of a pay-as-you-go model. Access comprehensive documentation, API & SDK reference, architecture references, and more to support your development needs.",
   "version": 2,
   "product_page": "https://www.ibm.com/products/storage-ceph",
   "console_page": "/software-defined-storage/deployments",

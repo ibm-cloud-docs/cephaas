@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-10-30"
 
 keywords: cephaas, ceph as a service, nvme-of, NVME-oF, about volume host mappings, mapping limitations
 
@@ -143,7 +143,7 @@ Use this procedure to configure the NMVe fabrics for VMware ESXi.
 ## Next steps
 {: #nvmeof-initiator-nextsteps}
 
-Once the initiator is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_short}}. See [Creating the host](/docs/cephaas?topic=cephaas-creating-host).
+Once the initiator is configured, a corresponding “host” must be created in {{site.data.keyword.cephaas_full_notm}}. See [Creating the host](/docs/cephaas?topic=cephaas-creating-host).
 
 During host creation, NQN from the initiator must be used.
 {: note}

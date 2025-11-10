@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-11-04"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 S3 TLS certificates are required to encrypt the S3 traffic and prevent **Man in the Middle (MITM)** attacks. You can create a new S3 SSL certificate by using the CLI or API.
 {: shortdesc}
 
-You must create a server-side certificate with Subject Alternative Name (SAN) and the S3 DNS endpoint.
+You must create a server-side certificate with one or more Subject Alternative Name(s) (SAN)(s) which match the configured S3 IP address and/or configured DNS hostname(s).
 
 For secure traffic, S3 Clients must use the associated CA certificate.
 {: note}
@@ -30,10 +30,10 @@ The following are the prerequisites for generating S3 TLS certificate.
 * It must contain one of the following properties for the respective private key: PRIVATE KEY, RSA PRIVATE KEY, or EC PRIVATE KEY.
 * The private key must be consistent with the main/end-entity certificate.
 
-If multiple certificate properties are included, the order of items in the `pem` file should be: end-entity certificate, intermediate certificate, root certificate, private key. For example: `cat tls.crt ca.crt tls.key > both.pem` is the correct order for the `pem` file to be used by {{site.data.keyword.cephaas_short}}.
+If multiple certificate properties are included, the order of items in the `pem` file should be: end-entity certificate, intermediate certificate, root certificate, private key. For example: `cat tls.crt ca.crt tls.key > both.pem` is the correct order for the `pem` file to be used by {{site.data.keyword.cephaas_full_notm}}.
 {:important:}
 
-If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with CephaaS.
+If any of these above prerequisites are not followed, the certificate `pem` file may be considered invalid and will not work with {{site.data.keyword.cephaas_full_notm}}.
 
 
 
@@ -54,7 +54,7 @@ ibmcloud software-defined-storage cert-create --cert CERT --body BODY --url stri
 See the following example.
 
 ```sh
-ibmcloud sds cert-create --cert s3 --url $sds_endpoint --body file-name.pem
+ibmcloud sds cert-create --cert s3 --body file-name.pem
 
 ...
 Name               s3
@@ -64,7 +64,7 @@ Trace              75cacd10-7918-44c0-9914-1723ebf74ee1
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 You can also use the alias `sds` as an alternative to `software-defined-storage` and `crtc` as an alternative to `cert-create` for the CLI actions.
 {: tip}
@@ -105,7 +105,7 @@ curl -X POST $sds_endpoint/certificates/s3 --data-binary "@both.pem" -H 'accept:
 ```
 {: screen}
 
-The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_short}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
+The `$sds_endpoint` is an environment variable that points to the endpoint provided to you when {{site.data.keyword.cephaas_full_notm}} was configured. It is in the URL form. For example, `https://sds-cephaas.<cephaas-instance-id>.software-defined-storage.appdomain.cloud:{port number}/v1`. You can set the URL once and then not have to add it for every command. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
 See [Setting up your API environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api) for instructions on how to set the `$IAM_TOKEN` variables.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-10-07"
 
 keywords: cephaas, deleting single snapshot, ceph as a service
 
@@ -45,11 +45,11 @@ To verify that the snapshot is deleted, list the snapshots by making a `GET /sna
 To delete a single snapshot, run the following command.
 
 ```sh
-ibmcloud sds volume-snapshot-delete --snap-id <snap-id> --force
+ibmcloud sds volume-snapshot-delete --snap-id SNAP-ID --force
 ```
 {: pre}
 
-`--snap-id <snap-id>` is required. `--force` is optional.
+`--snap-id SNAP-ID` is required. `--force` is optional.
 
 See the following example.
 
