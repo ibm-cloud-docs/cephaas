@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-11-12"
 
 keywords: cephaas csi set up
 
@@ -55,6 +55,9 @@ Before installing the driver, complete the following preinstallation setup activ
         --docker-password=<your-password-or-api-key>
      ```
 {: codeblock}
+   
+    Create the secret in the same namespace where the CSI driver will be installed. If you are using a custom namespace (not default), make sure to create the secret in that namespace before proceeding with the installation.
+    {: note}
 
 5. Edit the following parameters in the **values.yaml**. 
 
@@ -104,7 +107,7 @@ Before installing the driver, complete the following preinstallation setup activ
 
 The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
 
-**Sidecar containers used by CephaaS CSI Driver:**
+**Sidecar containers used by {{site.data.keyword.cephaas_full_notm}} CSI Driver:**
 
 - **csi-provisioner:**: v3.5.0  
 - **csi-attacher**: v4.8.0  
