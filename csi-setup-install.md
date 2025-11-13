@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-12"
+lastupdated: "2025-11-13"
 
 keywords: cephaas csi set up
 
@@ -56,7 +56,7 @@ Before installing the driver, complete the following preinstallation setup activ
      ```
 {: codeblock}
    
-    Create the secret in the same namespace where the CSI driver will be installed. If you are using a custom namespace (not default), make sure to create the secret in that namespace before proceeding with the installation.
+    Create the secret in the same namespace where the CSI driver will be installed. 
     {: note}
 
 5. Edit the following parameters in the **values.yaml**. 
