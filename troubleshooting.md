@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-11"
+lastupdated: "2025-11-18"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service, object storage, low cost object, 
 
@@ -60,7 +60,7 @@ This condition might appear in the API or CLI in the following scenarios.
 * In the CLI, when you specify the `ibmcloud is volume-update` command.
 
 You might be renaming the volume with an invalid volume name. In this case, you see a `400 - validation_invalid_name` error.
-You might also be specifying a valid volume name, but one that is already in the CephaaS. For example, if you create two volumes from compute resources that are in the same deployment, and have the same name, you see a `400 - volume_name_duplicate` error.
+You might also be specifying a valid volume name, but one that is already in the {{site.data.keyword.cephaas_full_notm}}. For example, if you create two volumes from compute resources that are in the same deployment, and have the same name, you see a `400 - volume_name_duplicate` error.
 {: tsCauses}
 
 **Note:** The UI prevents you from entering an invalid volume name.
