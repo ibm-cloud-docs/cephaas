@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-11-18"
 
 keywords: cephaas csi
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # PersistentVolumeClaim (PVC) operations
 {: #pvc-ops}
 
-This section provides step-by-step instructions for managing PersistentVolumeClaims (PVCs) using the CephaaS CSI driver. It covers essential operations such as creating, viewing, expanding, and deleting PVCs, as well as verifying PVC functionality by referencing them in pods.
+This section provides step-by-step instructions for managing PersistentVolumeClaims (PVCs) using the {{site.data.keyword.cephaas_full_notm}} CSI driver. It covers essential operations such as creating, viewing, expanding, and deleting PVCs, as well as verifying PVC functionality by referencing them in pods.
 
 ## Create PVC
 {: #create-pvc}
