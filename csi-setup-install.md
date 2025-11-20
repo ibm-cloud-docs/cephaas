@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-13"
+lastupdated: "2025-11-20"
 
 keywords: cephaas csi set up
 
@@ -105,7 +105,7 @@ Before installing the driver, complete the following preinstallation setup activ
 ## Sidecar containers and image sources
 {: #csi-containers}
 
-The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://registry.k8s.io/sig-storage) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
+The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://kubernetes-csi.github.io/docs/sidecar-containers.html) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
 
 **Sidecar containers used by {{site.data.keyword.cephaas_full_notm}} CSI Driver:**
 
