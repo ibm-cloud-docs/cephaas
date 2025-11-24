@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-20"
+lastupdated: "2025-11-24"
 
 keywords: cephaas csi set up
 
@@ -98,8 +98,25 @@ Before installing the driver, complete the following preinstallation setup activ
 
 
     
-    To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
-    {: note}
+To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
+{: note}
+
+When deploying the CSI driver on OpenShift, you may encounter PodSecurity violation warnings, which can cause the CSI driver installation to fail.
+These warnings occur because the CSI driver requires elevated permissions, including:
+
+- privileged: true
+- hostNetwork: true
+- hostPath volumes
+
+To resolve this, you must grant the appropriate Security Context Constraints (SCCs) to the CSI driver service accounts after deploying the driver:
+
+```
+oc adm policy add-scc-to-user privileged -z cephaascsi-node-sa -n <your-namespace>
+oc adm policy add-scc-to-user privileged -z cephaascsi-controller-sa -n <your-namespace>
+```
+{: codeblock}
+
+This ensures the CSI driver pods have the necessary permissions to start successfully on OpenShift.
 
 
 ## Sidecar containers and image sources
