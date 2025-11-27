@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-11-27"
 
 keywords: cephaas, managing snapshots, ceph as a service
 
@@ -22,8 +22,6 @@ In the {{site.data.keyword.cephaas_full_notm}}, snapshots are supported currentl
 
 Before you can access the Snapshot API for performing various tasks, make sure you have defined variables for the IAM token and API endpoint. For instructions, see [Setting up your API and CLI environment](/docs/cephaas?topic=cephaas-set-up-environment&interface=api).
 {: Requirement}
-
-
 
 The following snapshots operations are supported through the API and CLI:
 

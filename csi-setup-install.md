@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-24"
+lastupdated: "2025-11-27"
 
 keywords: cephaas csi set up
 
@@ -24,9 +24,9 @@ Before installing the driver, complete the following preinstallation setup activ
 
 2. Login to the IBM Cloud Container Registry via HELM by running the following command:
 
-    ```
+```sh
     helm registry login icr.io -u iamapikey -p <your-api-key> 
-     ```
+```
 {: codeblock}
 
     When prompted, enter your IBM Cloud API key as the password.
@@ -69,11 +69,11 @@ Before installing the driver, complete the following preinstallation setup activ
 
 6. To view the chart metadata, README, and values.yaml of a Helm chart, run the following commands:
 
-    ```
+```sh
     helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
     helm show readme oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
     helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>
-     ```
+```
 {: codeblock}
 
      You can view the chart details, including license information, by running the command:
@@ -83,20 +83,17 @@ Before installing the driver, complete the following preinstallation setup activ
 
 7. Before installing the chart, you can optionally review the rendered Kubernetes manifest files generated from the values.yaml using the following command. 
 
-    ```
+```sh
     helm template cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> -f values.yaml
-     ```
+```
 {: codeblock}
 
 8. Install the CSI driver using the Helm chart and your updated **values.yaml** file.
 
-    ```
-    
+```sh
    helm install cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>  -f values.yaml  --namespace <your-namespace>
-    ```
+```
 {: codeblock}
-
-
     
 To verify that the CSI driver was installed successfully, run the command `helm status <chart-name> --namespace <your-namespace>`.
 {: note}
@@ -110,11 +107,12 @@ These warnings occur because the CSI driver requires elevated permissions, inclu
 
 To resolve this, you must grant the appropriate Security Context Constraints (SCCs) to the CSI driver service accounts after deploying the driver:
 
-```
+```sh
 oc adm policy add-scc-to-user privileged -z cephaascsi-node-sa -n <your-namespace>
 oc adm policy add-scc-to-user privileged -z cephaascsi-controller-sa -n <your-namespace>
 ```
 {: codeblock}
+
 
 This ensures the CSI driver pods have the necessary permissions to start successfully on OpenShift.
 

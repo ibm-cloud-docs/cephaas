@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-19"
+lastupdated: "2025-11-27"
 
 keywords: cephaas csi
 
@@ -31,6 +31,7 @@ The following table lists the sidecar containers and related images used in the 
 `csi-node-driver-registrar: v2.8.0`  
 `csi-snapshotter: v6.2.2`  
 `snapshot-controller: v6.2.2` |
+{: caption="Helm chart and CSI driver versions" caption-side="bottom"}
 
 - All sidecar containers listed above are sourced from the official Kubernetes SIG Storage registry.
 - These components are essential for enabling dynamic provisioning, attaching, resizing, and snapshotting of volumes in Kubernetes environments.

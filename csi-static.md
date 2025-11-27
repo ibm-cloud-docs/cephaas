@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-11-27"
 
 keywords: cephaas csi
 
@@ -26,7 +26,7 @@ In static volume provisioning, both the PV and PVC must be created manually. Ens
 
 * Create a PersistentVolume (PV) by creating a file named **pv.yaml** with the following content.
 
-```
+```sh
     apiVersion: v1
     kind: PersistentVolume
     metadata:
@@ -56,7 +56,7 @@ Replace the VolumeHandle value with the actual Volume ID of the pre-provisioned 
 
 * Create a PersistentVolumeClaim (PVC) by creating a file named **pvc.yaml** with the following content.
 
-    ```
+```sh
     apiVersion: v1
     kind: PersistentVolumeClaim
     metadata:
@@ -69,7 +69,7 @@ Replace the VolumeHandle value with the actual Volume ID of the pre-provisioned 
                 storage: 2G
         storageClassName: cephaascsi-sc
         volumeName: pv-static
-    ```
+```
 {: codeblock}
 
 In the pvc.yaml file, you can use the volumeName field to explicitly bind the PVC to a specific PersistentVolume (PV).
@@ -99,7 +99,7 @@ Static snapshot provisioning allows you to manually bind existing snapshot resou
 Create a file named **volumesnapshot.yaml** with the following content.
 
 
-```
+```sh
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshot
 metadata:
@@ -117,7 +117,7 @@ This resource defines the snapshot and links it to the corresponding VolumeSnaps
 
 Create a file named **volumesnapshotcontent.yaml** with the following content. 
 
-```
+```sh
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotContent
 metadata:
@@ -146,12 +146,10 @@ Once both resources are created and linked, you can restore the snapshot into a 
 ## Known limitation
 {: #csi-knownlimitation}
 
-**Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment**
+- Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment
 
 In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage volume. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume size.
 Since static provisioning bypasses the CSI driver’s CreateVolume gRPC call, which is used in dynamic provisioning to create the volume and ensure the `spec.capacity.storage` matches the actual size on RSOS—there is no built-in validation to confirm that the declared capacity aligns with the real backend volume size.
 If the PV size specified in the manifest differs from the actual volume size on the deployment, pods will only be able to use and see the actual volume size, not the declared size in the manifest.
 
-**Suggestion**
-
-To avoid discrepancies between OpenShift’s metadata and the actual storage behavior, we recommend setting the PV’s `spec.capacity.storage` to match the actual size of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.
+- Suggestion: To avoid discrepancies between OpenShift’s metadata and the actual storage behavior, we recommend setting the PV’s `spec.capacity.storage` to match the actual size of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.
