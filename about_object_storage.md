@@ -31,7 +31,7 @@ Developers use APIs to interact with their object storage. {{site.data.keyword.c
 
 To outline object storage behavior in Amazon S3, different object types are assigned specific storage classes to balance cost and performance. 
 
-In {{site.data.keyword.cephaas_full_notm}}, Capacity objects use the STANDARD_IA (Infrequent Access) storage class. This class is designed for data that is accessed less frequently but still requires rapid retrieval when needed, offering lower storage costs with retrieval charges. {{site.data.keyword.cephaas_full_notm}} performance objects use the STANDARD storage class. This class is optimized for frequently accessed data, providing low latency and high throughput for performance-critical workloads.
+In {{site.data.keyword.cephaas_full_notm}}, Capacity objects use the STANDARD_IA (Infrequent Access) storage class. This class is designed for data that is accessed less frequently but still requires rapid retrieval when needed, offering lower storage costs with retrieval charges. {{site.data.keyword.cephaas_full_notm}} Performance objects use the STANDARD storage class. This class is optimized for frequently accessed data, providing low latency and high throughput for performance-critical workloads.
 
 This distinction ensures that storage resources are utilized efficiently, delivering cost optimization for capacity workloads and high performance for frequently accessed data.
 
