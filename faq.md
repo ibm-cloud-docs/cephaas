@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-12-09"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -166,14 +166,14 @@ The resource can remain in one of these pending states for as long as the operat
 For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It changes to `available` state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller must implement timeouts if needed for such cases.
 
 
-## FAQ on low-cost objects
+## FAQ on Capacity objects
 {: #faq-low-cost-objects}
 
-### What is the default storage class for low-cost objects?
+### What is the default storage class for Capacity objects?
 {: faq}
 {: #faq-default-sc}
 
-For Low-cost Object, new S3 accounts have `STANDARD_IA` as the default storage class.
+For Capacity objects, new S3 accounts have `STANDARD_IA` as the default storage class.
 
 
 
