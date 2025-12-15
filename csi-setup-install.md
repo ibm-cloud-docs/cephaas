@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-11-27"
+lastupdated: "2025-12-15"
 
 keywords: cephaas csi set up
 
@@ -33,15 +33,15 @@ Before installing the driver, complete the following preinstallation setup activ
 
 3. Create local copy of **values.yaml** file and edit the required fields using the following command:
 
-    ```
-    helm show values  oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>  > values.yaml
+```sh
+    helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> > values.yaml
    ```
 {: codeblock}
 
     Here is an example. 
 
-    ```
-    helm show values  oci://icr.io/cephaas-helm-charts/cephaas-csi --version 1.0.0 > values.yaml
+    ```sh
+    helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version 1.0.0 > values.yaml
     ```
 {: codeblock}
 
@@ -115,20 +115,3 @@ oc adm policy add-scc-to-user privileged -z cephaascsi-controller-sa -n <your-na
 
 
 This ensures the CSI driver pods have the necessary permissions to start successfully on OpenShift.
-
-
-## Sidecar containers and image sources
-{: #csi-containers}
-
-The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://kubernetes-csi.github.io/docs/sidecar-containers.html) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
-
-**Sidecar containers used by {{site.data.keyword.cephaas_full_notm}} CSI Driver:**
-
-- **csi-provisioner:**: v3.5.0  
-- **csi-attacher**: v4.8.0  
-- **csi-resizer**: v1.4.0  
-- **csi-node-driver-registrar**: v2.8.0  
-- **csi-snapshotter**: v6.2.2  
-- **snapshot-controller**: v6.2.2  
-
-You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).
