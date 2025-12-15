@@ -116,6 +116,7 @@ toc:
           - csi-overview.md
           - csi-about.md
           - csi-setup-install.md
+          - csi-pre.md
           - csi-pvc-ops.md
           - csi-snapshot-ops.md
           - csi-static.md
