@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Node prerequisites for NVMe/TCP CSI Driver
+# Node prerequisites for CSI Driver
 {: #node-pre}
 
 All Kubernetes worker nodes running the CSI node plugin must meet these prerequisites to ensure reliable NVMe/TCP volume operations.
@@ -47,7 +47,3 @@ lsmod | grep nvme
 ```
 
 Expected output should include both, nvme and nvme_tcp.
-
-
-
-
