@@ -23,7 +23,7 @@ NVMe/TCP functionality depends on kernel-level support for both NVMe and TCP tra
 {: #supported-os}
 
 - Red Hat Enterprise Linux (RHEL) 9.5 or later  
-- Must use the **nvme-cli** version shipped with the OS (**nvme-cli > 2.11**)
+- Must use the **nvme-cli** version shipped with the OS, which is version 2.11 or later
 
 Older versions of RHEL or nvme-cli may not support certain NVMe/TCP features or could lead to connection failures or an `I/O error`. We recommend using the tested versions (RHEL 9.5 and nvme-cli 2.11) or newer for compatibility and stability. 
 {: note}
