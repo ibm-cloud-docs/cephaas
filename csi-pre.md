@@ -2,7 +2,7 @@
 
 copyright:
  years: 2025, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: cephaas csi
 
@@ -17,15 +17,15 @@ subcollection: cephaas
 
 All Kubernetes worker nodes running the CSI node plugin must meet these prerequisites to ensure reliable NVMe/TCP volume operations.
 
-NVMe/TCP functionality depends on kernel-level support for both NVMe and TCP transport. If the required kernel modules are missing or the operating system version is unsupported, the CSI driver may fail to initialize, leading to issues such as inability to attach or mount NVMe/TCP volumes. Ensuring these prerequisites are met is critical for stable and reliable storage operations in Kubernetes environments.
+NVMe/TCP functionality depends on kernel-level support for both NVMe and TCP transport. If the required kernel modules are missing or the operating system version is unsupported, the CSI driver may fail to perform as expected, leading to issues such as inability to attach or mount NVMe/TCP volumes. Ensuring these prerequisites are met is critical for stable and reliable storage operations in Kubernetes environments.
 
 ## Supported operating system
 {: #supported-os}
 
 - Red Hat Enterprise Linux (RHEL) 9.5 or later  
-- Must use the default **nvme-cli** version shipped with the OS (**nvme-cli ≥ 2.11**)
+- Must use the **nvme-cli** version shipped with the OS (**nvme-cli > 2.11**)
 
-Older versions of RHEL or nvme-cli may not support certain NVMe/TCP features or could lead to connection failures. We recommend using the tested versions (RHEL 9.5 and nvme-cli 2.11) or newer for compatibility and stability.
+Older versions of RHEL or nvme-cli may not support certain NVMe/TCP features or could lead to connection failures or an `I/O error`. We recommend using the tested versions (RHEL 9.5 and nvme-cli 2.11) or newer for compatibility and stability. 
 {: note}
 
 
