@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: cephaas csi set up
 
@@ -48,8 +48,8 @@ Before installing the driver, complete the following preinstallation setup activ
 
 4. Create a Secret using the following command: 
 
-    ```
-    oc create secret docker-registry <secret-name> \
+    ```sh
+        oc create secret docker-registry <secret-name> \
         --docker-server=icr.io \
         --docker-username=<your-username> \
         --docker-password=<your-password-or-api-key>
