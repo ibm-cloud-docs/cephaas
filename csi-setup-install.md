@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-12-18"
+ years: 2024, 2026
+lastupdated: "2026-01-05"
 
 keywords: cephaas csi set up
 
@@ -29,7 +29,8 @@ Before installing the driver, complete the following preinstallation setup activ
 ```
 {: codeblock}
 
-    When prompted, enter your IBM Cloud API key as the password.
+When prompted, enter your IBM Cloud API key as the password.
+
 
 3. Create local copy of **values.yaml** file and edit the required fields using the following command:
 
@@ -38,11 +39,11 @@ Before installing the driver, complete the following preinstallation setup activ
    ```
 {: codeblock}
 
-    Here is an example. 
+Here is an example. 
 
-    ```sh
-    helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version 1.0.0 > values.yaml
-    ```
+```sh
+helm show values oci://icr.io/cephaas-helm-charts/cephaas-csi --version 1.0.0 > values.yaml
+```
 {: codeblock}
 
 
