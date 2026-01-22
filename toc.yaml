@@ -80,12 +80,33 @@ toc:
               - s3_cert_view.md
               - s3_cert_update.md
               - s3_cert_delete.md
+      - topicgroup:
+          label: Managing file storage
+          topics:
+          - about_file_storage.md
+          - topicgroup:
+              label: File share operations
+              topics:
+              - create_file_share.md
+              - get_file_share_details.md
+              - list_file_shares.md
+              - update_file_share.md
+              - delete_file_share.md
+          - topicgroup:
+              label: Mount target operations
+              topics:
+              - create_mount_target.md
+              - get_mount_target_details.md
+              - list_mount_targets.md
+              - update_mount_target.md
+              - delete_mount_target.md
           - topicgroup:
               label: Managing authentication
               topics:
               - s3_cred_create.md
               - s3_cred_view.md
               - s3_cred_delete.md
+          - object-dr.md
       - topicgroup:
           label: Enhancing Security
           topics:
