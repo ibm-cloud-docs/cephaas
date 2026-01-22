@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-18"
+ years: 2024, 2026
+lastupdated: "2026-01-22"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -897,7 +897,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--cert CERT`
 
 * API Endpoint in the URL form.
-	* Flag: `--url string`
+    * Flag: `--url`(string)
 
 
 
