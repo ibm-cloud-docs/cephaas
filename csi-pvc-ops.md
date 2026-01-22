@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-07"
+lastupdated: "2025-11-27"
 
 keywords: cephaas csi
 
@@ -15,14 +15,14 @@ subcollection: cephaas
 # PersistentVolumeClaim (PVC) operations
 {: #pvc-ops}
 
-This section provides step-by-step instructions for managing PersistentVolumeClaims (PVCs) using the CephaaS CSI driver. It covers essential operations such as creating, viewing, expanding, and deleting PVCs, as well as verifying PVC functionality by referencing them in pods.
+This section provides step-by-step instructions for managing PersistentVolumeClaims (PVCs) using the {{site.data.keyword.cephaas_full_notm}} CSI driver. It covers essential operations such as creating, viewing, expanding, and deleting PVCs, as well as verifying PVC functionality by referencing them in pods.
 
 ## Create PVC
 {: #create-pvc}
 
 * Create a YAML file named **pvc.yaml** with the following content. 
 
-```
+```sh
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -41,7 +41,7 @@ The G in storage section specifies the volume size in gigabytes (GB).
 
 * Apply the PVC configuration. 
 
-```
+```sh
 oc apply -f pvc.yaml
  ```
 {: codeblock}
@@ -51,7 +51,7 @@ oc apply -f pvc.yaml
 
 To check the status and details of the PVC:
 
-```
+```sh
 oc get pvc <your-pvc-name>
 oc describe pvc <your-pvc-name>
  ```
@@ -64,7 +64,7 @@ To increase the size of the PVC:
 
 * Edit the PVC. 
 
-```
+```sh
 oc edit pvc <your-pvc-name>
  ```
 {: codeblock}
@@ -77,7 +77,8 @@ Kubernetes does not support shrinking a volume. During a PVC expansion operation
 ### Known limitation
 {: #knownlimitation-expand-pvc}
 
-**Expand PVC operation timeout**
+#### Expand PVC operation timeout
+{: #pvc-operation-timeout}
 
 This issue occurs when a small PVC (e.g., 1 GB) is expanded to a very large size (e.g., 32 TB). The operation may fail with a timeout error in the pod event logs, as shown below: 
 
@@ -85,17 +86,14 @@ This issue occurs when a small PVC (e.g., 1 GB) is expanded to a very large si
 
 Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility takes extra time during online expansion. While supported by the CSI driver, expanding larger volumes may take longer to complete.
 
-
-**Suggestion**
-
-The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested size without requiring user action. Users can monitor progress in the pod description and node plugin logs.
+**Suggestion**: The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested size without requiring user action. Users can monitor progress in the pod description and node plugin logs.
 
 ## Create a pod
 {: #create-pod}
 
 * Create a YAML file named **pod.yaml** with the following content:
 
-```
+```sh
 kind: Pod
 apiVersion: v1
 metadata:
@@ -120,7 +118,7 @@ You need to replace this container block with your own application containers. R
 
 * Apply the configuration. 
 
-```
+```sh
 oc apply -f pod.yaml
  ```
 {: codeblock}
@@ -133,7 +131,7 @@ If needed, you can delete the pod running this command `oc delete pod <pod_name>
 
 To delete a PersistentVolumeClaim (PVC), run the following command:
 
-```
+```sh
 oc delete pvc <your-pvc-name>
  ```
 {: codeblock}

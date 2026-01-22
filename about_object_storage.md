@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-12-09"
 
 keywords: about, basics, cephaas object storage, ceph as a service
 
@@ -25,6 +25,15 @@ All data stored in {{site.data.keyword.cephaas_full_notm}} Object Storage is enc
 All requests and responses are made over `HTTPS`. All `GET` and `HEAD` requests made to objects return an Etag value with the MD5 hash of the object to ensure integrity on the client side.
 
 Developers use APIs to interact with their object storage. {{site.data.keyword.cephaas_full_notm}} Object Storage supports a subset of the S3 API for reading and writing data, as well as for bucket configuration. Software development kits (SDKs) are available for GO framework.
+
+## Storage classes for object types
+{: #storage-class-object-type}
+
+To outline object storage behavior in Amazon S3, different object types are assigned specific storage classes to balance cost and performance. 
+
+In {{site.data.keyword.cephaas_full_notm}}, Capacity objects use the STANDARD_IA (Infrequent Access) storage class. This class is designed for data that is accessed less frequently but still requires rapid retrieval when needed, offering lower storage costs with retrieval charges. {{site.data.keyword.cephaas_full_notm}} Performance objects use the STANDARD storage class. This class is optimized for frequently accessed data, providing low latency and high throughput for performance-critical workloads.
+
+This distinction ensures that storage resources are utilized efficiently, delivering cost optimization for capacity workloads and high performance for frequently accessed data.
 
 
 ## Known limitations

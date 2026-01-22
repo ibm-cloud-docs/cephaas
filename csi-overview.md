@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-13"
+lastupdated: "2025-11-20"
 
 keywords: cephaas csi
 
@@ -22,5 +22,5 @@ Before performing operations, complete the [CSI driver set up](/docs/cephaas?top
 With {{site.data.keyword.cephaas_full_notm}} CSI driver, you can perform the following operations:
 
 * [PersistentVolumeClaim (PVC) operations](/docs/cephaas?topic=cephaas-pvc-ops)
-* [Snapshot operations](//docs/cephaas?topic=cephaas-csi-snapshot-ops)
+* [Snapshot operations](/docs/cephaas?topic=cephaas-csi-snapshot-ops)
 * [Static provisioning](/docs/cephaas?topic=cephaas-static-provision)

@@ -1,7 +1,7 @@
 ---
 copyright:
  years: 2024, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-11-27"
 
 keywords: Connect VMware environment, ceph as a service, cephaas, vsphere, plug-in, vSphere, plugin, installing, register
 
@@ -23,7 +23,8 @@ These instructions are for a quick installation overview of the {{site.data.keyw
 
 The {{site.data.keyword.cephaas_full_notm}} plug-in for vSphere is based on the VMware remote plug-in architecture and is distributed and deployed by using an Open Virtualization Appliance (OVA) bundle.
 
-**Appliance requirements**
+### Appliance requirements
+{: #appl-req}
 
 The virtual machine appliance requires the following resources:
 - 2 vCPUs and 4 GB of memory Red Hat Enterprise Linux 9.2 or higher
@@ -100,5 +101,3 @@ After the installation, you need to get the following from your admin.
 
 - Service ID with a manager role for {{site.data.keyword.cephaas_full_notm}}
 - API Key
-
-

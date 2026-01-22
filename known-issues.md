@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2025
-lastupdated: "2025-10-10"
+lastupdated: "2025-11-27"
 
 keywords: ceph as a service, known issues
 
@@ -39,15 +39,18 @@ Snapshot deletion via CLI may fail with a 504 Gateway Time-out error, even thoug
 
 
 ## Placeholder values for datastore and snapshot sizes
+{: #placeholder-values-ds}
 
 There are known inconsistencies in how size values are displayed and validated in the vSphere plug-in UI when working with datastores and snapshots.
 
 ### Datastore size placeholder
+{: #ds-size-placeholder}
 
 On the **Create New Datastore From Snapshot** page, the **Size** field in the **Define Datastore** step displays a placeholder value representing the minimum required size for the new datastore. However, if the size exceeds 1024 GB, the value is converted to terabytes (TB) using a binary conversion (divided by 1024 and rounded to two decimal places). 
 
 **Workaround**: If the entered size is below the actual minimum required size, the UI may allow the input to pass validation. However, the datastore restore operation will fail. To avoid this, ensure that the entered size is equal to or greater than the minimum required size.
 
 ### Snapshot size display
+{: #snapshot-size}
 
 On the **Snapshots List Dashboard**, the **Size** column reflects the snapshot size. Similar to the datastore size, values greater than 1024 GB are converted to TB using binary conversion (divided by 1024), which may result in a slightly lower displayed value compared to the actual snapshot size. There is no workaround for this discrepancy. 

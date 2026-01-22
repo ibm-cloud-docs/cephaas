@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-09-30"
+ years: 2024, 2026
+lastupdated: "2026-01-22"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -19,9 +19,26 @@ content-type: release-note
 # Release notes for {{site.data.keyword.cephaas_full_notm}}
 {: #relnotes}
 
-
 Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full}} that are grouped by month and year.
 {: shortdesc}
+
+## January 2026
+{: #sds-jan26}
+
+### 23 January 2026
+{: #sds-12-jan26}
+{: release-note}
+
+This {{site.data.keyword.cephaas_full_notm}} release supports the Asynchronous disaster recovery feature, extending to both, low-cost disaster recovery (brownfield) and greenfield environments.
+
+Ceph upgrade
+:   {{site.data.keyword.cephaas_full_notm}} now supports upgraded Ceph version from 8.0 to 8.1 for improved performance and compatibility.
+
+Async Disaster Recovery (DR) Enhancements
+:   This release includes comprehensive checks for synchronization, failover, and replication consistency across environments. See [Object asynchronous disaster recovery](/docs/cephaas?topic=cephaas-object-async-dr)
+
+High Availability Improvements
+:   Increased replica counts for critical platform and storage pods to enhance resilience.
 
 ## September 2025
 {: #sds-august25}
