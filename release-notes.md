@@ -25,8 +25,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## January 2026
 {: #sds-jan26}
 
-### 23 January 2026
-{: #sds-12-jan26}
+### 22 January 2026
+{: #sds-22-jan26}
 {: release-note}
 
 This {{site.data.keyword.cephaas_full_notm}} release supports the Asynchronous disaster recovery feature, extending to both, low-cost disaster recovery (brownfield) and greenfield environments.
