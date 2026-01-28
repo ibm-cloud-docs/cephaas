@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-05"
+lastupdated: "2026-01-28"
 
 keywords: cephaas csi set up
 
@@ -96,8 +96,6 @@ Before installing the driver, complete the following preinstallation setup activ
     To verify that the CSI driver was installed successfully, run:
     `helm status <chart-name> --namespace <your-namespace>`
     {: note}
-
----
 
 ## Important information for OpenShift
 {: #openshift-info}
