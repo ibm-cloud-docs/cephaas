@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-06-18"
+ years: 2024, 2026
+lastupdated: "2026-01-29"
 
 keywords: object storage, go, sdk, ceph as a service
 
@@ -28,14 +28,14 @@ The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with ma
 Use `go get` to retrieve the SDK and add it to your GOPATH workspace, or project's GO module dependencies. The SDK requires a minimum version of GO 1.21 or above. Future versions of GO will be supported once our quality control process has been completed. For more information, see the GO API documentation for [Block Storage](/apidocs/block-storage?code=go){: external} and [Object Storage](/apidocs/object-storage?code=go){: external}.
 
 ```sh
-go get github.com/IBM/sds-go-sdk/sdsaasv1
+go get github.com/IBM/sds-go-sdk/v2/sdsaasv2
 ```
 {: pre}
 
 To update the SDK use `go get -u` to retrieve the latest version of the SDK.
 
 ```sh
-go get -u github.com/IBM/sds-go-sdk/sdsaasv1
+go get -u github.com/IBM/sds-go-sdk/v2/sdsaasv2
 ```
 {: pre}
 
@@ -50,7 +50,7 @@ After installing the SDK, import the packages that are required for the GO appli
 
 ```sh
 import (
-	"github.com/IBM/sds-go-sdk/sdsaasv1"
+	"github.com/IBM/sds-go-sdk/v2/sdsaasv2"
 )
 ```
 {: codeblock}
@@ -77,7 +77,7 @@ The following items are necessary to create or modify volume or host details:
 
 ```Go
 var (
-	sdsaasService *sdsaasv1.SdsaasV1
+	sdsaasService *sdsaasv2.SdsaasV2
 )
 
 func main() {
@@ -86,12 +86,12 @@ func main() {
 		ApiKey: <apiKey>,
 	}
 
-	sdsaasServiceOptions := &sdsaasv1.SdsaasV1Options{
+	sdsaasServiceOptions := &sdsaasv2.SdsaasV2Options{
 		URL:           <serviceEndpoint>,
 		Authenticator: authenticator,
 	}
 
-	sdsaasService, err := sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
+	sdsaasService, err := sdsaasv2.NewSdsaasV2(sdsaasServiceOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -105,12 +105,12 @@ func main() {
 
 
 ```Go
-	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+	createVolumeOptions := sdsaasService.NewCreateVolumeOptions(
 		int64(5),
 	)
-	volumeCreateOptions.SetName("my-volume")
+	createVolumeOptions.SetName("my-volume")
 
-	volume, response, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	volumeSummary, response, err := sdsaasService.CreateVolume(createVolumeOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -121,10 +121,10 @@ func main() {
 {: #go-list-volumes}
 
 ```Go
-	volumesOptions := sdsaasService.NewVolumesOptions()
-	volumesOptions.SetLimit(int64(10))
+	listVolumesOptions := sdsaasService.NewListVolumesOptions()
+	listVolumesOptions.SetLimit(int64(10))
 
-	volumeCollection, response, err := sdsaasService.Volumes(volumesOptions)
+	volumeCollection, response, err := sdsaasService.ListVolumes(listVolumesOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -139,19 +139,16 @@ func main() {
 ### Updating a volume
 {: #go-update-volume}
 
-
 ```Go
-	volumeUpdateOptions := sdsaasService.NewVolumeUpdateOptions(
-		*volume.ID,
-	)
-
 	volumePatch := map[string]interface{}{
 		"name": "my-volume-updated",
 	}
 
-	volumeUpdateOptions.SetVolumePatch(volumePatch)
+	updateVolumeOptions := sdsaasService.NewUpdateVolumeOptions(
+		*volume.ID,
+	)
 
-	volume, response, err := sdsaasService.VolumeUpdate(volumeUpdateOptions)
+	volume, response, err := sdsaasService.UpdateVolume(updateVolumeOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -162,11 +159,11 @@ func main() {
 {: #go-get-object}
 
 ```Go
-	volumeOptions := sdsaasService.NewVolumeOptions(
-		*volume.ID,
+	volumeOptions := sdsaasService.NewGetVolumeOptions(
+		*volumeSummary.ID,
 	)
 
-	volume, response, err := sdsaasService.Volume(volumeOptions)
+	volume, response, err := sdsaasService.GetVolume(volumeOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -181,10 +178,10 @@ func main() {
 {: #go-delete-volume}
 
 ```Go
-	volumeDeleteOptions := sdsaasService.NewVolumeDeleteOptions(
+	volumeDeleteOptions := sdsaasService.NewDeleteVolumeOptions(
 		*volume.ID,
 	)
-	response, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	response, err = sdsaasService.DeleteVolume(volumeDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -195,15 +192,15 @@ func main() {
 {: #go-create-volume-snapshot}
 
 ```Go
-	sourceVolumePrototypeModel := &sdsaasv1.SourceVolumePrototype{
+	sourceVolumeModel := &sdsaasv2.SourceVolume{
 		ID: core.StringPtr(*volume.ID),
 	}
 
-	volumeSnapshotCreateOptions := sdsaasService.NewVolumeSnapshotCreateOptions(
-		sourceVolumePrototypeModel,
+	volumeSnapshotCreateOptions := sdsaasService.NewCreateSnapshotOptions(
+		sourceVolumeModel,
 	)
 
-	snapshot, response, err := sdsaasService.VolumeSnapshotCreate(volumeSnapshotCreateOptions)
+	snapshot, response, err := sdsaasService.CreateSnapshot(volumeSnapshotCreateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -214,14 +211,14 @@ func main() {
 {: #go-list-volume-snapshot}
 
 ```Go
-	volumeSnapshotsOptions := sdsaasService.NewVolumeSnapshotsOptions()
+	listSnapshotsOptions := sdsaasService.NewListSnapshotsOptions()
 
-	pager, err := sdsaasService.NewVolumeSnapshotsPager(volumeSnapshotsOptions)
+	pager, err := sdsaasService.NewSnapshotsPager(listSnapshotsOptions)
 	if err != nil {
 		panic(err)
 	}
 
-	var allResults []sdsaasv1.Snapshot
+	var allResults []sdsaasv2.Snapshot
 	for pager.HasNext() {
 		nextPage, err := pager.GetNext()
 		if err != nil {
@@ -238,7 +235,7 @@ func main() {
 {: #go-update-volume-snapshot}
 
 ```Go
-	snapshotPatchModel := &sdsaasv1.SnapshotPatch{
+	snapshotPatchModel := &sdsaasv2.SnapshotPatch{
 		Name: core.StringPtr("my-snapshot-updated"),
 	}
 	snapshotPatchModelAsPatch, asPatchErr := snapshotPatchModel.AsPatch()
@@ -246,12 +243,12 @@ func main() {
 		panic(asPatchErr)
 	}
 
-	volumeSnapshotUpdateOptions := sdsaasService.NewVolumeSnapshotUpdateOptions(
+	updateSnapshotOptions := sdsaasService.NewUpdateSnapshotOptions(
 		*snapshot.ID,
 		snapshotPatchModelAsPatch,
 	)
 
-	snapshot, response, err := sdsaasService.VolumeSnapshotUpdate(volumeSnapshotUpdateOptions)
+	snapshot, response, err := sdsaasService.UpdateSnapshot(updateSnapshotOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -262,11 +259,11 @@ func main() {
 {: #go-list-volume-snapshot}
 
 ```Go
-	volumeSnapshotOptions := sdsaasService.NewVolumeSnapshotOptions(
+	getSnapshotOptions := sdsaasService.NewGetSnapshotOptions(
 		*snapshot.ID,
 	)
 
-	snapshot, _, err = sdsaasService.VolumeSnapshot(volumeSnapshotOptions)
+	snapshot, _, err = sdsaasService.GetSnapshot(getSnapshotOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -277,7 +274,7 @@ func main() {
 {: #go-restore-volume-from-snapshot}
 
 ```Go
-	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+	volumeCreateOptions := sdsaasService.NewCreateVolumeOptions(
 		int64(10),
 	)
 	volumeCreateOptions.SetName("volume-restored-from-snapshot")
@@ -288,7 +285,7 @@ func main() {
 	}
 	volumeCreateOptions.SetSourceSnapshot(sourceSnapshot)
 
-	volume, response, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	volumeSummary, response, err := sdsaasService.CreateVolume(volumeCreateOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -299,11 +296,11 @@ func main() {
 {: #go-delete-volume-snapshot}
 
 ```Go
-	volumeSnapshotDeleteOptions := sdsaasService.NewVolumeSnapshotDeleteOptions(
+	deleteSnapshotOptions := sdsaasService.NewDeleteSnapshotOptions(
 		*snapshot.ID,
 	)
 
-	response, err := sdsaasService.VolumeSnapshotDelete(volumeSnapshotDeleteOptions)
+	response, err := sdsaasService.DeleteSnapshot(deleteSnapshotOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -314,10 +311,12 @@ func main() {
 {: #go-delete-snapshots-related-to-volume}
 
 ```Go
-	volumeSnapshotsDeleteOptions := sdsaasService.NewVolumeSnapshotsDeleteOptions()
-	volumeSnapshotsDeleteOptions.SetSourceVolumeID(*volume.ID)
+	volumeSnapshotsDeleteOptions := sdsaasService.NewDeleteSnapshotsOptions(
+		<snap-id-1>,
+		<snap-id-2>,
+	)
 
-	response, err := sdsaasService.VolumeSnapshotsDelete(volumeSnapshotsDeleteOptions)
+	response, err := sdsaasService.DeleteSnapshots(volumeSnapshotsDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -328,13 +327,13 @@ func main() {
 {: #go-create-host}
 
 ```Go
-	hostCreateOptions := sdsaasService.NewHostCreateOptions(
+	createHostOptions := sdsaasService.NewCreateHostOptions(
 		<hostNQN>,
 	)
 
-	hostCreateOptions.SetName("my-host")
+	createHostOptions.SetName("my-host")
 
-	host, response, err := sdsaasService.HostCreate(hostCreateOptions)
+	hostSummary, response, err := sdsaasService.CreateHost(createHostOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -345,10 +344,10 @@ func main() {
 {: #go-list-hosts}
 
 ```Go
-	hostsOptions := sdsaasService.NewHostsOptions()
+	hostsOptions := sdsaasService.NewListHostsOptions()
 	hostsOptions.SetLimit(int64(10))
 
-	hostCollection, response, err := sdsaasService.Hosts(hostsOptions)
+	hostCollection, response, err := sdsaasService.ListHosts(hostsOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -364,17 +363,16 @@ func main() {
 {: #go-update-host}
 
 ```Go
-	hostUpdateOptions := sdsaasService.NewHostUpdateOptions(
-		*host.ID,
-	)
-
 	hostPatch := map[string]interface{}{
 		"name": "my-host-updated",
 	}
 
-	hostUpdateOptions.SetHostPatch(hostPatch)
+	updateHostOptions := sdsaasService.NewUpdateHostOptions(
+		*hostSummary.ID,
+		hostPatch,
+	)
 
-	host, response, err := sdsaasService.HostUpdate(hostUpdateOptions)
+	host, response, err := sdsaasService.UpdateHost(updateHostOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -385,11 +383,11 @@ func main() {
 {: #go-host-details}
 
 ```Go
-	hostOptions := sdsaasService.NewHostOptions(
+	hostOptions := sdsaasService.NewGetHostOptions(
 		*host.ID,
 	)
 
-	host, response, err := sdsaasService.Host(hostOptions)
+	host, response, err := sdsaasService.GetHost(hostOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -403,17 +401,16 @@ func main() {
 {: #go-host-map}
 
 ```Go
-
-	volumeIdentityModel := &sdsaasv1.VolumeIdentity{
+	volumeIdentityModel := &sdsaasv2.VolumeIdentity{
 		ID: volume.ID,
 	}
 
-	hostMappingCreateOptions := sdsaasService.NewHostMappingCreateOptions(
+	createVolumeMappingOptions := sdsaasService.NewCreateVolumeMappingOptions(
 		*host.ID,
 		volumeIdentityModel,
 	)
 
-	volumeMapping, response, err := sdsaasService.HostMappingCreate(hostMappingCreateOptions)
+	volumeMappingReference, response, err := sdsaasService.CreateVolumeMapping(createVolumeMappingOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -429,11 +426,10 @@ func main() {
 {: #go-host-mappings}
 
 ```Go
-	hostMappingsOptions := sdsaasService.NewHostMappingsOptions(
+	volumeMappingOptions := sdsaasService.NewListVolumeMappingsOptions(
 		*host.ID,
 	)
-
-	volumeMappingCollection, response, err := sdsaasService.HostMappings(hostMappingsOptions)
+	volumeMappingCollection, response, err := sdsaasService.ListVolumeMappings(volumeMappingOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -452,12 +448,12 @@ func main() {
 {: #go-host-mapping}
 
 ```Go
-	hostMappingOptions := sdsaasService.NewHostMappingOptions(
+	getVolumeMappingOptions := sdsaasService.NewGetVolumeMappingOptions(
 		*host.ID,
 		<VOLUME-MAPPING-ID>,
 	)
 
-	volumeMapping, response, err := sdsaasService.HostMapping(hostMappingOptions)
+	volumeMapping, response, err := sdsaasService.HostMapping(getVolumeMappingOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -506,11 +502,10 @@ func main() {
 
 
 ```Go
-	hostMappingDeleteAllOptions := sdsaasService.NewHostMappingDeleteAllOptions(
+	hostDeleteOptions := sdsaasService.NewDeleteHostOptions(
 		*host.ID,
 	)
-
-	response, err := sdsaasService.HostMappingDeleteAll(hostMappingDeleteAllOptions)
+	_, err = sdsaasService.DeleteHost(hostDeleteOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -522,11 +517,11 @@ func main() {
 
 
 ```Go
-	credCreateOptions := sdsaasService.NewCredCreateOptions(
+	createHmacCredentialsOptions := sdsaasService.NewCreateHmacCredentialsOptions(
 		"test-key",
 	)
 
-	credentialsUpdated, _, err := sdsaasService.CredCreate(credCreateOptions)
+	accessKeyResponse, response, err := sdsaasService.CreateHmacCredentials(createHmacCredentialsOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -538,9 +533,9 @@ func main() {
 
 
 ```Go
-	credsOptions := sdsaasService.NewCredsOptions()
+	listHmacCredentialsOptions := sdsaasService.NewListHmacCredentialsOptions()
 
-	credentialsFound, _, err := sdsaasService.Creds(credsOptions)
+	storageCredResponse, response, err := sdsaasService.ListHmacCredentials(listHmacCredentialsOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -552,26 +547,25 @@ func main() {
 
 
 ```Go
-	credDeleteOptions := sdsaasService.NewCredDeleteOptions(
+	deleteHmacCredentialsOptions := sdsaasService.NewDeleteHmacCredentialsOptions(
 		"test-key",
 	)
 
-	response, err := sdsaasService.CredDelete(credDeleteOptions)
+	response, err := sdsaasService.DeleteHmacCredentials(deleteHmacCredentialsOptions)
 	if err != nil {
 		panic(err)
 	}
 ```
 {: codeblock}
 
-### Certificate types list
+### Certificates list
 {: #go-cert-list}
 
 
 ```Go
+	listCertificatesOptions := sdsaasService.NewListCertificatesOptions()
 
-	certTypesOptions := sdsaasService.NewCertTypesOptions()
-
-	certificateList, response, err := sdsaasService.CertTypes(certTypesOptions)
+	certListResponse, response, err := sdsaasService.ListCertificates(listCertificatesOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -583,12 +577,11 @@ func main() {
 
 
 ```Go
-	certCreateOptions := sdsaasService.NewCertCreateOptions(
+	createSslCertOptions := sdsaasService.NewCreateSslCertOptions(
 		"s3",
-		CreateMockReader("This is a mock file."),
 	)
 
-	certificateUpdated, response, err := sdsaasService.CertCreate(certCreateOptions)
+	certResponse, response, err := sdsaasService.CreateSslCert(createSslCertOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -600,26 +593,27 @@ func main() {
 
 
 ```Go
-	certOptions := sdsaasService.NewCertOptions()
+	getS3SslCertStatusOptions := sdsaasService.NewGetS3SslCertStatusOptions(
+		"s3",
+	)
 
-	certificateFound, response, err := sdsaasService.Cert(certOptions)
+	statusResponse, response, err := sdsaasService.GetS3SslCertStatus(getS3SslCertStatusOptions)
 	if err != nil {
 		panic(err)
 	}
 ```
 {: codeblock}
 
-### Certificate update
+### Certificate update/replace
 {: #go-cert-update}
 
 
 ```Go
-	certUpdateOptions := sdsaasService.NewCertUpdateOptions(
+	replaceSslCertOptions := sdsaasService.NewReplaceSslCertOptions(
 		"s3",
-		CreateMockReader("This is a mock file."),
 	)
 
-	certificateUpdated, response, err := sdsaasService.CertUpdate(certUpdateOptions)
+	certResponse, response, err := sdsaasService.ReplaceSslCert(replaceSslCertOptions)
 	if err != nil {
 		panic(err)
 	}
@@ -631,11 +625,11 @@ func main() {
 
 
 ```Go
-	certDeleteOptions := sdsaasService.NewCertDeleteOptions(
+	deleteSslCertOptions := sdsaasService.NewDeleteSslCertOptions(
 		"s3",
 	)
 
-	response, err := sdsaasService.CertDelete(certDeleteOptions)
+	response, err := sdsaasService.DeleteSslCert(deleteSslCertOptions)
 	if err != nil {
 		panic(err)
 	}

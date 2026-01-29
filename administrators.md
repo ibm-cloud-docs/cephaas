@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-03-20"
+ years: 2024, 2026
+lastupdated: "2026-01-29"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -66,7 +66,7 @@ You can start creating a deployment after cost estimation and the order processi
     This Satellite location is required to be present on {{site.data.keyword.cloud_notm}} without a host for your on-premises deployment, since the location is not dependent on the host and other setup in your infrastructure. To create a new on-premises type of location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem).
     {: important}
 
-    While creating the {{site.data.keyword.satellitelong_notm}}location, choose Object storage standard plan and make sure to select the **Managed for** region as **Dallas** or **Frankfurt**. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and {{site.data.keyword.cloud_notm}}.
+    While creating the {{site.data.keyword.satellitelong_notm}} location, choose Object storage standard plan and make sure to select the **Managed for** region as **Dallas** or **Frankfurt**. The region selected must be closest to where your data center physically reside to ensure low network latency between your Satellite location and {{site.data.keyword.cloud_notm}}.
     {: tip}
 
 3. Enter your **Deployment name** and click **Create**.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-04"
+ years: 2024, 2026
+lastupdated: "2026-01-29"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
@@ -51,8 +51,8 @@ Make sure that your environment from which the CLI will be run is connected to t
 
    ```sh
    ibmcloud sds --help
-   ibmcloud sds --help volume-create
-   ibmcloud sds --help host-create
+   ibmcloud sds volume-create --help
+   ibmcloud sds host-create --help
    ```
    {: pre}
 

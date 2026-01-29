@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-01-29"
 
 keywords: ceph as a storage, sdk, guide
 
@@ -63,6 +63,7 @@ For more information about endpoints, see [Endpoints and storage locations](/doc
 
 
 ``` Go
+
 package main
 
 import (
@@ -71,11 +72,11 @@ import (
 	"time"
 
 	"github.com/IBM/go-sdk-core/core"
-	"github.com/IBM/sds-go-sdk/sdsaasv1"
+	"github.com/IBM/sds-go-sdk/v2/sdsaasv2"
 )
 
 var (
-	sdsaasService *sdsaasv1.SdsaasV1
+	sdsaasService *sdsaasv2.SdsaasV2
 )
 
 const (
@@ -97,26 +98,26 @@ func main() {
 		ApiKey: apiKey,
 	}
 
-	sdsaasServiceOptions := &sdsaasv1.SdsaasV1Options{
+	sdsaasServiceOptions := &sdsaasv2.SdsaasV2Options{
 		URL:           serviceEndpoint,
 		Authenticator: authenticator,
 	}
 
-	sdsaasService, err = sdsaasv1.NewSdsaasV1(sdsaasServiceOptions)
+	sdsaasService, err = sdsaasv2.NewSdsaasV2(sdsaasServiceOptions)
 	if err != nil {
 		exitErrorf("Unable to create sds service %v", err)
 	}
 
 	// Volume create
 
-	volumeCreateOptions := sdsaasService.NewVolumeCreateOptions(
+	createVolumeOptions := sdsaasService.NewCreateVolumeOptions(
 		int64(5),
 	)
-	volumeCreateOptions.SetName(newVolume)
+	createVolumeOptions.SetName(newVolume)
 
 	fmt.Printf("Creating new volume %q...\n", newVolume)
 
-	volume, _, err := sdsaasService.VolumeCreate(volumeCreateOptions)
+	volumeSummary, _, err := sdsaasService.CreateVolume(createVolumeOptions)
 	if err != nil {
 		exitErrorf("Unable to create sds volume %q, %v", newVolume, err)
 	}
@@ -125,15 +126,15 @@ func main() {
 
 	// Host create
 
-	hostCreateOptions := sdsaasService.NewHostCreateOptions(
+	createHostOptions := sdsaasService.NewCreateHostOptions(
 		hostNQN,
 	)
 
-	hostCreateOptions.SetName("my-host")
+	createHostOptions.SetName("my-host")
 
 	fmt.Printf("Creating new host %q...\n", newHost)
 
-	host, _, err := sdsaasService.HostCreate(hostCreateOptions)
+	hostSummary, _, err := sdsaasService.CreateHost(createHostOptions)
 	if err != nil {
 		exitErrorf("Unable to create sds host %q, %v", newHost, err)
 	}
@@ -142,18 +143,18 @@ func main() {
 
 	// Assign volume to host
 
-	volumeIdentityModel := &sdsaasv1.VolumeIdentity{
-		ID: volume.ID,
+	volumeIdentityModel := &sdsaasv2.VolumeIdentity{
+		ID: volumeSummary.ID,
 	}
 
-	hostMappingCreateOptions := sdsaasService.NewHostMappingCreateOptions(
-		*host.ID,
+	hostMappingCreateOptions := sdsaasService.NewCreateVolumeMappingOptions(
+		*hostSummary.ID,
 		volumeIdentityModel,
 	)
 
 	fmt.Printf("Assigning volume %q to host %q...\n", newVolume, newHost)
 
-	_, _, err = sdsaasService.HostMappingCreate(hostMappingCreateOptions)
+	_, _, err = sdsaasService.CreateVolumeMapping(hostMappingCreateOptions)
 	if err != nil {
 		exitErrorf("Unable to assign sds host %q to sds volume %q, %v", newHost, newVolume, err)
 	}
@@ -162,12 +163,11 @@ func main() {
 
 	// Display host and volume
 
-	volumeOptions := sdsaasService.NewVolumeOptions(
-		*volume.ID,
-	)
-	volume, _, err = sdsaasService.Volume(volumeOptions)
+	volumeOptions := sdsaasService.NewGetVolumeOptions(*volumeSummary.ID)
+
+	volume, _, err := sdsaasService.GetVolume(volumeOptions)
 	if err != nil {
-		panic(err)
+		exitErrorf("Unable to get sds volume %q, %v", newVolume, err)
 	}
 
 	fmt.Printf("\nGetting volume %q\n", newVolume)
@@ -178,10 +178,10 @@ func main() {
 	fmt.Printf("Volume mapping Host ID: %q\n", *volume.VolumeMappings[0].Host.ID)
 	fmt.Printf("Volume mapping Name: %q\n", *volume.VolumeMappings[0].Host.Name)
 
-	hostOptions := sdsaasService.NewHostOptions(
-		*host.ID,
+	hostOptions := sdsaasService.NewGetHostOptions(
+		*hostSummary.ID,
 	)
-	host, _, err = sdsaasService.Host(hostOptions)
+	host, _, err := sdsaasService.GetHost(hostOptions)
 	if err != nil {
 		exitErrorf("Unable to get sds host %q, %v", newHost, err)
 	}
@@ -195,12 +195,12 @@ func main() {
 
 	fmt.Printf("Removing assignment from volume %q...\n", newVolume)
 
-	hostMappingDeleteOptions := sdsaasService.NewHostMappingDeleteOptions(
+	hostMappingDeleteOptions := sdsaasService.NewDeleteHostMappingOptions(
 		*host.ID,
 		*host.VolumeMappings[0].ID,
 	)
 
-	_, err = sdsaasService.HostMappingDelete(hostMappingDeleteOptions)
+	_, err = sdsaasService.DeleteHostMapping(hostMappingDeleteOptions)
 	if err != nil {
 		exitErrorf("Unable to delete host %q assigment between volume %q, %v", newHost, newVolume, err)
 	}
@@ -210,11 +210,11 @@ func main() {
 	// Volume Delete
 	fmt.Printf("Deleting volume %q...\n", newVolume)
 
-	volumeDeleteOptions := sdsaasService.NewVolumeDeleteOptions(
+	deleteVolumeOptions := sdsaasService.NewDeleteVolumeOptions(
 		*volume.ID,
 	)
 
-	_, err = sdsaasService.VolumeDelete(volumeDeleteOptions)
+	_, err = sdsaasService.DeleteVolume(deleteVolumeOptions)
 	if err != nil {
 		exitErrorf("Unable to create sds volume %q, %v", newVolume, err)
 	}
@@ -222,11 +222,11 @@ func main() {
 	// Host Delete
 	fmt.Printf("Deleting host %q...\n", newHost)
 
-	hostDeleteOptions := sdsaasService.NewHostDeleteOptions(
+	deleteHostOptions := sdsaasService.NewDeleteHostOptions(
 		*host.ID,
 	)
 
-	_, err = sdsaasService.HostDelete(hostDeleteOptions)
+	_, err = sdsaasService.DeleteHost(deleteHostOptions)
 	if err != nil {
 		exitErrorf("Unable to delete host %q, %v", newHost, err)
 	}
@@ -257,22 +257,23 @@ go run go_example.go
 The output from the code example resembles:
 
 ```go
+go run main.go
 Creating new volume "volume1"...
 Creating new host "host1"...
 Assigning volume "volume1" to host "host1"...
 
 Getting volume "volume1"
-Volume ID: "r134-221e4eb4-ed0c-4165-957b-8a54e65829f4"
+Volume ID: "r134-deb1ed70-8811-4957-aa4f-53a910e97652"
 Volume Name: "volume1"
 Volume capacity: 5
-Volume mapping ID: "r134-106ff4ca-4564-4f07-abcd-4dc8c819af00"
-Volume mapping Host ID: "r134-d7369321-da97-4998-948c-ddecefa7d39f"
+Volume mapping ID: "r134-037a348b-7f35-4d46-bd18-27613bc8a50e"
+Volume mapping Host ID: "r134-30edff08-01da-41fe-9f06-47156457aa30"
 Volume mapping Name: "my-host"
 
 Getting host "host1"
-Host ID: "r134-d7369321-da97-4998-948c-ddecefa7d39f"
+Host ID: "r134-30edff08-01da-41fe-9f06-47156457aa30"
 Host Name: "my-host"
-Host volume mapping ID "r134-106ff4ca-4564-4f07-abcd-4dc8c819af00" for volume %!q(*string=0x1400018f6b0)
+Host VolumeMapping ID: "r134-037a348b-7f35-4d46-bd18-27613bc8a50e"
 
 Removing assignment from volume "volume1"...
 Deleting volume "volume1"...
