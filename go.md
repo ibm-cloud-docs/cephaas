@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-29"
+lastupdated: "2026-01-30"
 
 keywords: object storage, go, sdk, ceph as a service
 
@@ -323,7 +323,7 @@ func main() {
 ```
 {: codeblock}
 
-### Create a host
+### Create host
 {: #go-create-host}
 
 ```Go
@@ -359,7 +359,7 @@ func main() {
 ```
 {: codeblock}
 
-### Updating a host
+### Update host
 {: #go-update-host}
 
 ```Go
@@ -379,7 +379,7 @@ func main() {
 ```
 {: codeblock}
 
-### Get host details
+### Get host
 {: #go-host-details}
 
 ```Go
@@ -512,9 +512,321 @@ func main() {
 ```
 {: codeblock}
 
+### Share create
+{: #go-share-create}
+
+```Go
+	createShareOptions := sdsaasService.NewCreateShareOptions(
+		int64(10),
+	)
+
+	share, response, err := sdsaasService.CreateShare(createShareOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+
+{: codeblock}
+
+### Shares list
+{: #go-shares-list}
+
+```Go
+	listSharesOptions := &sdsaasv2.ListSharesOptions{
+		Limit: core.Int64Ptr(int64(20)),
+	}
+
+	pager, err := sdsaasService.NewSharesPager(listSharesOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+
+{: codeblock}
+
+### Share list
+{: #go-share-list}
+
+```Go
+	getShareOptions := sdsaasService.NewGetShareOptions(
+		*share.ID,
+	)
+
+	share, response, err := sdsaasService.GetShare(getShareOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+
+{: codeblock}
+
+### Share update
+{: #go-share-update}
+
+```Go
+	sharePatchModel := &sdsaasv2.SharePatch{
+		Name: core.StringPtr("my-share")
+	}
+	sharePatchModelAsPatch, asPatchErr := sharePatchModel.AsPatch()
+
+	updateShareOptions := sdsaasService.NewUpdateShareOptions(
+		*share.ID,
+		sharePatchModelAsPatch,
+	)
+
+	share, response, err := sdsaasService.UpdateShare(updateShareOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+
+{: codeblock}
+
+### Share delete
+{: #go-share-delete}
+
+```Go
+	deleteShareOptions := &sdsaasv2.DeleteShareOptions{
+		ShareID:     *share.ID,
+		ForceDelete: core.BoolPtr(false),
+	}
+
+	response, err := sdsaasService.DeleteShare(deleteShareOptions)
+```
+
+{: codeblock}
+
+### Mount-target create
+{: #go-mt-create}
+
+```Go
+	cidrClientTypeModel := &sdsaasv2.CIDRClientType{
+		CIDR: []string{"192.168.3.0/24"},
+	}
+
+	createMountTargetOptions := sdsaasService.NewCreateMountTargetOptions(
+		*share.ID,
+		"mountTargetName",
+		cidrClientTypeModel,
+	)
+
+	mountTarget, response, err := sdsaasService.CreateMountTarget(createMountTargetOptions)
+	if err != nil {
+		panic(err)
+	}
+```
+
+{: codeblock}
+
+### Mount-targets list
+{: #go-mts-list}
+
+```Go
+	listMountTargetsOptions := &sdsaasv2.ListMountTargetsOptions{
+		ShareID: *share.ID,
+	}
+
+	listMountTargetsOptions.Start = nil
+	listMountTargetsOptions.Limit = core.Int64Ptr(1)
+
+	var allResults []sdsaasv2.MountTarget
+	for {
+		mountTargetCollection, response, err := sdsaasService.ListMountTargets(listMountTargetsOptions)
+		Expect(err).To(BeNil())
+		Expect(response.StatusCode).To(Equal(200))
+		Expect(mountTargetCollection).ToNot(BeNil())
+		allResults = append(allResults, mountTargetCollection.MountTargets...)
+
+		listMountTargetsOptions.Start, err = mountTargetCollection.GetNextStart()
+		Expect(err).To(BeNil())
+
+		if listMountTargetsOptions.Start == nil {
+			break
+		}
+	}
+
+	fmt.Println("All mount-targest: ", allResults)
+```
+
+{: codeblock}
+
+### Mount-target list
+{: #go-mt-list}
+
+```Go
+	getMountTargetOptions := &sdsaasv2.GetMountTargetOptions{
+		ShareID: *share.ID,
+		MountID: *mount.ID,
+	}
+
+	mountTarget, response, err := sdsaasService.GetMountTarget(getMountTargetOptions)
+```
+
+{: codeblock}
+
+### Mount-target update
+{: #go-mt-update}
+
+```Go
+	cidrClientTypeModel := &sdsaasv2.CIDRClientType{
+		CIDR: []string{"192.168.3.0/24"},
+	}
+
+	mountTargetPatchModel := &sdsaasv2.MountTargetPatch{
+		Name:    core.StringPtr("mountTargetNameUpdated"),
+		Clients: cidrClientTypeModel,
+	}
+
+	mountTargetPatchModelAsPatch, asPatchErr := mountTargetPatchModel.AsPatch()
+
+	updateMountTargetOptions := &sdsaasv2.UpdateMountTargetOptions{
+		ShareID: *share.ID,
+		MountID: *mountTarget.ID,
+		MountTargetPatch: mountTargetPatchModelAsPatch,
+	}
+
+	mountTarget, response, err := sdsaasService.UpdateMountTarget(updateMountTargetOptions)
+```
+
+{: codeblock}
+
+### Mount-target delete
+{: #go-mt-delete}
+
+```Go
+	deleteMountTargetOptions := &sdsaasv2.DeleteMountTargetOptions{
+		ShareID: *share.ID,
+		MountID: *mountTarget.ID,
+	}
+
+	response, err := sdsaasService.DeleteMountTarget(deleteMountTargetOptions)
+```
+
+{: codeblock}
+
+### Volume-group create
+{: #go-vg-create}
+
+```Go
+	volume1Model := &sdsaasv2.Volume1{
+		ID: *volume.ID,
+	}
+
+	createVolumeGroupOptions := &sdsaasv2.CreateVolumeGroupOptions{
+		Name:    core.StringPtr("my-volume-group"),
+		Volumes: []sdsaasv2.Volume1{*volume1Model},
+	}
+
+	volumeGroup, response, err := sdsaasService.CreateVolumeGroup(createVolumeGroupOptions)
+```
+
+{: codeblock}
+
+### Volume-groups list
+{: #go-vgs-list}
+
+```Go
+	listVolumeGroupsOptions := &sdsaasv2.ListVolumeGroupsOptions{
+		Start: *volumeGroup.ID,
+	}
+
+	listVolumeGroupsOptions.Start = nil
+	listVolumeGroupsOptions.Limit = core.Int64Ptr(1)
+
+	var allResults []sdsaasv2.VolumeGroup
+	for {
+		volumeGroupCollection, response, err := sdsaasService.ListVolumeGroups(listVolumeGroupsOptions)
+
+		allResults = append(allResults, volumeGroupCollection.VolumeGroups...)
+
+		listVolumeGroupsOptions.Start, err = volumeGroupCollection.GetNextStart()
+
+		if listVolumeGroupsOptions.Start == nil {
+			break
+		}
+	}
+
+	fmt.Println("All volumeGroups: ", allResults)
+```
+
+{: codeblock}
+
+### Volume-group list
+{: #go-vg-list}
+
+```Go
+	getVolumeGroupOptions := &sdsaasv2.GetVolumeGroupOptions{
+		VolumeGroupID: *volumeGroup.ID,
+	}
+
+	volumeGroup, response, err := sdsaasService.GetVolumeGroup(getVolumeGroupOptions)
+
+```
+
+{: codeblock}
+
+### Volume-group update
+{: #go-vg-update}
+
+```Go
+	volumeGroupPatchModel := &sdsaasv2.VolumeGroupPatch{
+		Name: core.StringPtr("my-volume-group"),
+	}
+	volumeGroupPatchModelAsPatch, asPatchErr := volumeGroupPatchModel.AsPatch()
+
+	updateVolumeGroupOptions := &sdsaasv2.UpdateVolumeGroupOptions{
+		VolumeGroupID:    *volumeGroup.ID,
+		VolumeGroupPatch: volumeGroupPatchModelAsPatch,
+	}
+
+	volumeGroup, response, err := sdsaasService.UpdateVolumeGroup(updateVolumeGroupOptions)
+```
+
+{: codeblock}
+
+### Volume-group add volume
+{: #go-vg-add-volume}
+
+```Go
+	createVolumeInVolumeGroupOptions := &sdsaasv2.CreateVolumeInVolumeGroupOptions{
+		VolumeGroupID: *volumeGroup.ID,
+		VolumeID:      *volume.ID,
+	}
+
+	volumeGroup, response, err := sdsaasService.CreateVolumeInVolumeGroup(createVolumeInVolumeGroupOptions)
+```
+
+{: codeblock}
+
+### Volume-group delete volume
+{: #go-vg-delete-volume}
+
+```Go
+	deleteVolumeFromVolumeGroupOptions := &sdsaasv2.DeleteVolumeFromVolumeGroupOptions{
+		VolumeGroupID: *volumeGroup.ID,
+		VolumeID:      *volume.ID,
+	}
+
+	response, err := sdsaasService.DeleteVolumeFromVolumeGroup(deleteVolumeFromVolumeGroupOptions)
+```
+
+{: codeblock}
+
+### Volume-group delete
+{: #go-vg-delete}
+
+```Go
+	deleteVolumeGroupOptions := &sdsaasv2.DeleteVolumeGroupOptions{
+		VolumeGroupID: volumeGroup.ID,
+	}
+
+	response, err := sdsaasService.DeleteVolumeGroup(deleteVolumeGroupOptions)
+```
+
+{: codeblock}
+
 ### Credential create
 {: #go-cred-create}
-
 
 ```Go
 	createHmacCredentialsOptions := sdsaasService.NewCreateHmacCredentialsOptions(
@@ -531,7 +843,6 @@ func main() {
 ### Credentials list
 {: #go-cred-list}
 
-
 ```Go
 	listHmacCredentialsOptions := sdsaasService.NewListHmacCredentialsOptions()
 
@@ -544,7 +855,6 @@ func main() {
 
 ### Credential delete
 {: #go-cred-delete}
-
 
 ```Go
 	deleteHmacCredentialsOptions := sdsaasService.NewDeleteHmacCredentialsOptions(
@@ -561,7 +871,6 @@ func main() {
 ### Certificates list
 {: #go-cert-list}
 
-
 ```Go
 	listCertificatesOptions := sdsaasService.NewListCertificatesOptions()
 
@@ -574,7 +883,6 @@ func main() {
 
 ### Certificate create
 {: #go-cert-create}
-
 
 ```Go
 	createSslCertOptions := sdsaasService.NewCreateSslCertOptions(
@@ -607,7 +915,6 @@ func main() {
 ### Certificate update/replace
 {: #go-cert-update}
 
-
 ```Go
 	replaceSslCertOptions := sdsaasService.NewReplaceSslCertOptions(
 		"s3",
@@ -623,7 +930,6 @@ func main() {
 ### Certificate delete
 {: #go-cert-delete}
 
-
 ```Go
 	deleteSslCertOptions := sdsaasService.NewDeleteSslCertOptions(
 		"s3",
@@ -635,8 +941,6 @@ func main() {
 	}
 ```
 {: codeblock}
-
-
 
 
 ## Next Steps
