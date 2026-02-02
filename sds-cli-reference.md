@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-22"
+lastupdated: "2026-01-29"
 
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
@@ -1152,7 +1152,7 @@ ibmcloud sds config
 Example for setting the url option.
 
 ```sh
-pc@mac ~ % ibmcloud sds config set [url] url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
+pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 OK
 ```
 {: screen}
@@ -1161,7 +1161,7 @@ OK
 Example that shows how to use the command without the config set.
 
 ```sh
-ibmcloud sds volumes --help --url $endpoint
+pc@mac ~ % ibmcloud sds volumes --url $endpoint
 ```
 {: pre}
 
@@ -1169,7 +1169,7 @@ ibmcloud sds volumes --help --url $endpoint
 Example shows how to use the command with the `url` configured.
 
 ```sh
-ibmcloud sds volumes --help
+pc@mac ~ % ibmcloud sds volumes
 ```
 {: pre}
 
