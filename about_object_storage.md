@@ -2,7 +2,7 @@
 
 copyright:
  years: 2025, 2026
-lastupdated: "2026-01-28"
+lastupdated: "2026-02-02"
 
 keywords: about, basics, cephaas object storage, ceph as a service
 
@@ -45,7 +45,7 @@ This section includes the known limitations that might impact your experience.
 
 * Only one object user is supported
 
-* S3 features align with IBM Storage Ceph version 7.1
+* S3 features align with IBM Storage Ceph version 8.1
 
 * Virtual hosted buckets not supported
 
