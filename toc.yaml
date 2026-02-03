@@ -16,6 +16,23 @@ toc:
       - getting-started.md
       - about-cephaas.md
       - topicgroup:
+          label: IBM Storage Ceph as a Service trials
+          topics:
+          - trials-onboarding.md
+          - connecting-to-trials.md
+          - trial-env.md
+          - topicgroup:
+              label: Preparing the VMware environment for trials
+              topics:
+              - configure-vmware-environment.md
+              - trial-connect-storage.md
+              - configure-VM.md
+          - topicgroup:
+              label: Trials use cases
+              topics:
+              - mongo-db.md
+              - s3-storage-VM.md
+      - topicgroup:
           label: Preparing the data center
           topics:
           - preinstallation_checklist.md
