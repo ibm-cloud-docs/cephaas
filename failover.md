@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-02-13"
 
 keywords: cephaas, event notifications, ceph as a service
 
@@ -18,6 +18,8 @@ subcollection: cephaas
 
 In a dual–disaster recovery (DR) site setup of {{site.data.keyword.cephaas_full_notm}}, each site has a defined role - primary or secondary that determines how metadata and object requests are processed. The following section explains how the two sites interact under normal operation and what happens during a failover event.
 
+To perform a failover, you must contact IBM. IBM will initiates the failover on your behalf.
+{: important}
 
 ## Metadata requests
 {: #metadata-requests}
