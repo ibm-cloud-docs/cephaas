@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: sds, cephaas, block storage, volume, delete Block Storage Volume for cephaas, ceph as a service
 
@@ -75,7 +75,7 @@ ibmcloud software-defined-storage volume-delete --volume-id VOLUME-ID --url stri
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage volume-delete --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682
+ibmcloud software-defined-storage volume-delete --volume-id r134-af4273d1-b1a2-4ba8-82aa-2285133e2682 --url $sds_endpoint
 ```
 {: screen}
 

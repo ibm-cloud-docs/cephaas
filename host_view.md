@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: ceph as a service, sds, host, view host details, host summary list
 
@@ -98,7 +98,7 @@ ibmcloud software-defined-storage hosts [--limit LIMIT] [--name NAME] --url stri
 The following example shows all hosts in your availability zone.
 
 ```sh
-ibmcloud software-defined-storage hosts --limit 10
+ibmcloud software-defined-storage hosts --limit 10 --url $sds_enpoint
 ...
 
 Total_Count   4

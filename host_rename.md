@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: ceph as a service, cephaas, block storage, rename host
 
@@ -61,7 +61,7 @@ ibmcloud software-defined-storage host-update --host-id HOST-ID [--host-patch HO
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage host-update --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 --name host-rename
+ibmcloud software-defined-storage host-update --host-id r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66 --name host-rename --url $sds_endpoint
 ...
 
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66

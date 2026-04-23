@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-04"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -51,6 +51,8 @@ To create hosts by using the command-line interface (CLI) from a host template o
 ### Create host without PSK (Pre-shared key)
 {: #create-host-without-psk}
 
+Create a host without PSK encryption when network-level security is already in place. This uses standard NVMe-oF protocol without transport-layer encryption. Provide only the host name and NQN:
+
 ```sh
 ic sds host-create --name host-1 --nqn nqn.2014-06.org:9345 --url $sds_endpoint
 
@@ -63,12 +65,15 @@ ic sds host --host-id $HOST_ONE
 ### Create host with PSK (Pre-shared key)
 {: #create-host-with-psk}
 
+Create a host with PSK encryption to enable TLS for the NVMe-oF connection. This is recommended for production environments requiring enhanced security. The PSK format is `NVMeTLSkey-1:01:<base64-encoded-key>:`, where the key is a 32-byte base64-encoded value:
+
 ```sh
 ic sds host-create --name host-2 --nqn nqn.2014-06.org:9345 --psk "NVMeTLSkey-1:01:YzrPElk4OYy1uUERriPwiiyEJE/+J5ckYpLB+5NHMsR2iBuT:" --url $sds_endpoint
 
 HOST_TWO=$(ibmcloud sds hosts --output json | jq -r '.Hosts[] | select(.Host_Name=="host-2").Host_ID')
 ```
 {: pre}
+
 
 Valid host names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Host names must begin with a lowercase letter. Hyphens cannot be used to start or end the name. Host names must be unique across the entire infrastructure. For example, if you create two hosts with the same name in the same deployment, an error `Host name already exists` is displayed.
 
@@ -79,6 +84,7 @@ ibmcloud software-defined-storage host-create \
   --nqn "nqn.2014-08.org.nvmexpress:uuid:29181642-300c-a1e2-497a-172017002122" \
   --name "dummy-host" \
   --volume-mappings '[{"volume": {"id": "r134-2ca809e8-3e63-44bc-916e-1eae49302aae"}}]'
+  --url $sds_endpoint
 ...
 
 Host_ID           r134-0dcd5d2d-07db-4457-ab0b-1fc3eef28c66

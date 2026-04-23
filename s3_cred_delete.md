@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: cephaas, ceph as a service, delete service credential, object storage
 
@@ -55,7 +55,7 @@ ibmcloud software-defined-storage cred-delete --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```sh
-ibmcloud software-defined-storage cred-delete --access-key test-key1
+ibmcloud software-defined-storage cred-delete --access-key test-key1 --url $sds_endpoint
 
 Are you sure you want to delete?[y/n]> y
 ...
