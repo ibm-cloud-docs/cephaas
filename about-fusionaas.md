@@ -97,6 +97,7 @@ FusionaaS supports GPU-accelerated computing for demanding workloads:
 | **Time to value** | Weeks to months for deployment | Rapid provisioning after installation |
 | **Expertise required** | Deep OpenShift and infrastructure skills | Focus on applications, not infrastructure |
 | **Updates and patches** | Manual planning and execution | Automated by IBM with minimal disruption |
+{: caption="Comparison of traditional on-premises and Fusion as a Service" caption-side="bottom"}
 
 ## Is Fusion as a Service right for you?
 {: #fusionaas-use-cases}

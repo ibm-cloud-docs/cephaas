@@ -826,7 +826,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 **Parameters to provide:**
 
 * The request body that contains the TLS certificate. The CLI accepts certificate file in `.pem` format.
-	* Flag: `--body BODY
+	* Flag: `--body BODY`
 
 * The certificate type that is to be used in the request. Acceptable values include - s3.
 	* Flag: `--cert CERT`

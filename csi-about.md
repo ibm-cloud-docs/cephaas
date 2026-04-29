@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-12-15"
+ years: 2024, 2026
+lastupdated: "2026-04-29"
 
 keywords: cephaas csi
 
@@ -25,12 +25,7 @@ The following table lists the sidecar containers and related images used in the 
 
 | Helm chart version | CSI driver version | Image source                  | Sidecar containers |
 |--------------------|--------------------|-------------------------------|---------------------|
-| 1.0.0              | 1.0.0             | `registry.k8s.io/sig-storage` | `csi-provisioner: v3.5.0`  
-`csi-attacher: v4.8.0`  
-`csi-resizer: v1.4.0`  
-`csi-node-driver-registrar: v2.8.0`  
-`csi-snapshotter: v6.2.2`  
-`snapshot-controller: v6.2.2` |
+| 1.0.0              | 1.0.0             | `registry.k8s.io/sig-storage` | `csi-provisioner: v3.5.0`<br>`csi-attacher: v4.8.0`<br>`csi-resizer: v1.4.0`<br>`csi-node-driver-registrar: v2.8.0`<br>`csi-snapshotter: v6.2.2`<br>`snapshot-controller: v6.2.2` |
 {: caption="Helm chart and CSI driver versions" caption-side="bottom"}
 
 - All sidecar containers listed above are sourced from the official Kubernetes SIG Storage registry.
@@ -44,11 +39,11 @@ The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI 
 
 **Sidecar containers used by {{site.data.keyword.cephaas_full_notm}} CSI Driver:**
 
-- **csi-provisioner:**: v3.5.0  
-- **csi-attacher**: v4.8.0  
-- **csi-resizer**: v1.4.0  
-- **csi-node-driver-registrar**: v2.8.0  
-- **csi-snapshotter**: v6.2.2  
-- **snapshot-controller**: v6.2.2  
+- **csi-provisioner:**: v3.5.0
+- **csi-attacher**: v4.8.0
+- **csi-resizer**: v1.4.0
+- **csi-node-driver-registrar**: v2.8.0
+- **csi-snapshotter**: v6.2.2
+- **snapshot-controller**: v6.2.2
 
 You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).

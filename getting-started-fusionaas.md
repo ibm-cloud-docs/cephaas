@@ -78,16 +78,16 @@ The **Storage** option provides access to IBM Storage Ceph as a Service with two
 **Storage tiers available:**
 
 - **Performance Tier**: Tailored for performance-intensive application workloads
-  - NVMe storage devices for ultra-low latency
-  - High-bandwidth network cards
-  - Optimized CPU and memory components
-  - Capacity range: 100 TB to 800 TB
-  - Best for: Databases, transactional workloads, real-time analytics
+    - NVMe storage devices for ultra-low latency
+    - High-bandwidth network cards
+    - Optimized CPU and memory components
+    - Capacity range: 100 TB to 800 TB
+    - Best for: Databases, transactional workloads, real-time analytics
 
 - **Capacity Tier**: Cost-effective storage for less frequently accessed data
-  - Optimized for capacity and cost efficiency
-  - Capacity range: 800 TB to 3,200 TB
-  - Best for: Backups, archives, secondary storage, large datasets
+    - Optimized for capacity and cost efficiency
+    - Capacity range: 800 TB to 3,200 TB
+    - Best for: Backups, archives, secondary storage, large datasets
 
 **What you get:**
 - Unified storage platform supporting multiple protocols (block, file, object)
@@ -130,7 +130,7 @@ FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. Use the 
    - Select the **Storage Tier**: **Performance** or **Capacity**
    - Enter the **Total storage** capacity in TB
    - Choose **Subscription term**: 3, 4, or 5 years
-   
+
    The cost estimator will display your projected monthly costs based on your selections.
 
 5. Review your estimated costs and save your configuration for reference.
