@@ -18,10 +18,7 @@ subcollection: sdsaas
 Open your Fusion as a Service deployment from the {{site.data.keyword.cloud_notm}} console to review capacity, clusters, storage, and settings. The deployment overview page provides a central location for monitoring resources and navigating to management areas.
 {: shortdesc}
 
-## Before you begin
-{: #deployment-access-prereqs}
-
-Make sure that you meet the following requirements:
+Before you begin, make sure that you meet the following requirements:
 
 - You have permission to view the deployment in the {{site.data.keyword.cloud_notm}} console.
 - The deployment is available and in a state that you can access.

@@ -18,10 +18,7 @@ subcollection: sdsaas
 Create Red Hat OpenShift on IBM Cloud clusters for your Fusion as a Service deployment by using IBM Cloud Satellite.
 {: shortdesc}
 
-## Before you begin
-{: #create-clusters-prereqs}
-
-Make sure that you meet the following prerequisites:
+Make sure that you meet the following prerequisites for cluster creation:
 
 - You have access to a Fusion as a Service deployment in your IBM Cloud account.
 - You have the required IAM permissions to create and manage clusters.

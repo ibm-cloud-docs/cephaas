@@ -212,8 +212,8 @@ For detailed requirements, see [Prerequisites for installing FusionaaS](/docs/fu
 
 After your Satellite location is configured and your data center is ready:
 
-1. Work with your IBM representative to schedule installation
-2. IBM will coordinate the delivery and installation of hardware
+1. Work with your IBM representative to schedule installation.
+2. IBM will coordinate the delivery and installation of hardware.
 3. Once installed, you can begin provisioning resources:
    - **For Compute**: Create OpenShift clusters through the {{site.data.keyword.cloud_notm}} console
    - **For Storage**: Provision storage volumes and configure storage classes
@@ -251,9 +251,9 @@ IBM owns and operates the infrastructure while you provision and manage your wor
 
 Now that you understand FusionaaS and have initiated your deployment:
 
-- **Learn more**: Read [What is Fusion as a Service?](/docs/fusionaas?topic=fusionaas-about-fusionaas) for detailed information
-- **Prepare your environment**: Review [data center prerequisites](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
-- **Plan your deployment**: Understand [deployment management](/docs/fusionaas?topic=fusionaas-administrators)
-- **Explore capabilities**: Learn about [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
+**Learn more**: Read [What is Fusion as a Service?](/docs/fusionaas?topic=fusionaas-about-fusionaas) for detailed information
+**Prepare your environment**: Review [data center prerequisites](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
+**Plan your deployment**: Understand [deployment management](/docs/fusionaas?topic=fusionaas-administrators)
+**Explore capabilities**: Learn about [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
 
 For questions or assistance, contact your IBM representative or open a support case through the {{site.data.keyword.cloud_notm}} console.
