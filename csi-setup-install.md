@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-28"
+lastupdated: "2026-04-29"
 
 keywords: cephaas csi set up
 
@@ -111,3 +111,5 @@ To resolve this, grant the appropriate Security Context Constraints (SCCs) to th
 ```sh
 oc adm policy add-scc-to-user privileged -z cephaascsi-node-sa -n <your-namespace>
 oc adm policy add-scc-to-user privileged -z cephaascsi-controller-sa -n <your-namespace>
+```
+{: codeblock}

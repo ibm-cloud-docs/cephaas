@@ -8,30 +8,13 @@ toc:
     console-page: /catalog/software-defined-storage
     product-page: https://www.ibm.com/products/storage-ceph
     path: cephaas
-    label: IBM Storage Ceph as a Service
+    label: Fusion as a Service
   entries:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
-      - about-cephaas.md
-      - topicgroup:
-          label: IBM Storage Ceph as a Service trials
-          topics:
-          - trials-onboarding.md
-          - connecting-to-trials.md
-          - trial-env.md
-          - topicgroup:
-              label: Preparing the VMware environment for trials
-              topics:
-              - configure-vmware-environment.md
-              - trial-connect-storage.md
-              - configure-VM.md
-          - topicgroup:
-              label: Trials use cases
-              topics:
-              - mongo-db.md
-              - s3-storage-VM.md
+      - getting-started-fusionaas.md
+      - about-fusionaas.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -52,13 +35,42 @@ toc:
   - navgroup:
       id: howto
       topics:
-      - iam_access.md
       - iam_overview.md
+      - iam_access-fusionaas.md
       - setup_cli_api_environment.md
       - setup-terraform.md
       - topicgroup:
-          label: Managing block storage
+          label: FusionaaS Compute setup
           topics:
+          - deployment-access-overview.md
+          - create-clusters.md
+          - view-deployment-capacity.md
+          - manage-cluster-quota.md
+          - admin-permissions.md
+      - topicgroup:
+          label: Managing clusters
+          topics:
+          - view-cluster-list.md
+          - view-cluster-details.md
+          - cluster-health-indicators.md
+          - topicgroup:
+              label: Managing cluster storage
+              topics:
+              - enable-fusion-services.md
+              - update-cluster-quota.md
+              - view-cluster-storage-status.md
+              - storage-quota-validation.md
+          - topicgroup:
+              label: Resolving cluster issues
+              topics:
+              - monitor-cluster-health.md
+              - fix-flow-corrective-action.md
+              - access-openshift-console.md
+          - topicgroup:
+              label: Understanding UI behavior
+              topics:
+              - ui-roles-permissions.md
+              - ui-empty-states.md
           - topicgroup:
               label: Volume operations
               topics:
@@ -80,12 +92,12 @@ toc:
               - host_mapping_view.md
               - host_unmap.md
               - connect-from-nvme-of-initiators.md
-      - topicgroup:
-          label: Managing capacity allocations
-          topics:
-          - sds_quota_mgmt.md
-          - sds_capacity_performance.md
-          - capacity_add.md
+          - topicgroup:
+              label: Managing capacity allocations
+              topics:
+              - sds_quota_mgmt.md
+              - sds_capacity_performance.md
+              - capacity_add.md
       - topicgroup:
           label: Managing object storage
           topics:
@@ -103,7 +115,7 @@ toc:
               - object-dr.md
               - failover.md
       - topicgroup:
-          label: Enhancing Security
+          label: Enhancing security
           topics:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
@@ -133,7 +145,7 @@ toc:
           - vsphere-snapshots.md
           - upgrading-vsphere-plugin.md
       - topicgroup:
-          label: IBM Storage Ceph as a Service CSI driver
+          label: FusionaaS CSI driver
           topics:
           - csi-overview.md
           - csi-about.md
@@ -157,11 +169,11 @@ toc:
       id: reference
       topics:
       - responsibility_matrix.md
+      - glossary.md
       - topicgroup:
           label: API reference
           topics:
           - about_api.md
-          links:
           - link:
               label: Block storage management API
               href: https://{DomainName}/apidocs/block-storage
@@ -179,10 +191,9 @@ toc:
           topics:
           - getting-started-sdks.md
           - go.md
-      links:
-      - link:
-          label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
+          - link:
+              label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
   - navgroup:
       id: help
       topics:
