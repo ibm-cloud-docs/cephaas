@@ -897,7 +897,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--cert CERT`
 
 * API Endpoint in the URL form.
-    * Flag: `--url` (string)
+    * Flag: `--url string`
 
 
 
