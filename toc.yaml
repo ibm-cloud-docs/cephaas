@@ -71,6 +71,9 @@ toc:
               topics:
               - ui-roles-permissions.md
               - ui-empty-states.md
+      - topicgroup:
+          label: Managing Block storage
+          topics:
           - topicgroup:
               label: Volume operations
               topics:
