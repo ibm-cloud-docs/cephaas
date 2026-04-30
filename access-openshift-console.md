@@ -26,7 +26,7 @@ Before you launch the OpenShift console, make sure that you can access the clust
 1. Open your Fusion as a Service deployment.
 2. Click the **Clusters** tab.
 3. In the cluster list, click the cluster name.
-4. On the cluster details page, click the action to open the OpenShift console.
+4. On the cluster details page, click the link to open the OpenShift console.
 
 The OpenShift console opens so that you can continue cluster-level and workload-level tasks.
 
@@ -40,22 +40,19 @@ Fusion as a Service and OpenShift each manage different aspects of your cluster 
 
 Use Fusion as a Service for deployment-level and quota-related tasks, such as the following actions:
 
-- Reviewing deployment capacity.
+- Reviewing and managing deployments.
 - Viewing clusters that are associated with the deployment.
-- Enabling Fusion services for a cluster.
+- Enabling Fusion services for clusters.
 - Reviewing and updating cluster storage quotas.
 - Reviewing cluster warnings, alerts, and storage status.
-- Managing deployment-level settings.
 
 ### What OpenShift manages
 {: #openshift-responsibilities}
 
 Use the OpenShift console for cluster-level and workload-level tasks, such as the following actions:
 
-- Working with applications and workloads in the cluster.
-- Continuing storage-related tasks inside the cluster environment.
-- Managing resources that are handled in OpenShift.
-- Performing cluster-level operations and configurations.
+- Creating clusters.
+- Performing cluster-level compute configurations.
 
 ## When to use the OpenShift console
 {: #console-use-cases}
@@ -87,9 +84,8 @@ Return to Fusion as a Service when you need to review or change deployment-manag
 A typical workflow might involve moving between Fusion as a Service and OpenShift:
 
 1. Start in Fusion as a Service to review capacity and enable services.
-2. Move to OpenShift to deploy applications and configure workloads.
+2. Move to OpenShift to create clusters and configure workloads.
 3. Return to Fusion as a Service to adjust quotas or review storage status.
-4. Continue in OpenShift for ongoing application management.
 
 ## Next steps
 {: #access-console-next}
