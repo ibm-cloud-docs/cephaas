@@ -55,7 +55,7 @@ As an administrator, you can set the default cluster storage quota directly from
 
 After you save the default cluster quota, the welcome modal closes and you can begin using your deployment.
 
-The default cluster quota can be changed later from the Settings page. For more information, see [Managing the default cluster storage quota](/docs/fusionaas?topic=fusionaas-manage-cluster-quota).
+The default cluster quota can be changed later from the Settings page. For more information, see [Editing cluster storage quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota).
 {: tip}
 
 ## Onboarding for non-administrator users
@@ -85,19 +85,16 @@ After you complete the onboarding flow, you can access your deployment directly 
 
 After onboarding, administrators can:
 
-- [View deployment capacity and resource usage](/docs/fusionaas?topic=fusionaas-view-deployment-capacity)
-- [Create clusters](/docs/fusionaas?topic=fusionaas-create-clusters)
-- [Enable Fusion services for a cluster](/docs/fusionaas?topic=fusionaas-enable-fusion-services)
-- [Update the default cluster quota](/docs/fusionaas?topic=fusionaas-manage-cluster-quota) from the Settings page
-- [View cluster storage status](/docs/fusionaas?topic=fusionaas-view-cluster-storage-status)
+- [Create clusters](/docs/sdsaas?topic=sdsaas-create-clusters)
+- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services)
+- [Update the default cluster quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota) from the Settings page
+- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status)
 
 ### Next steps for non-administrator users
 {: #non-admin-next-steps}
 
 After onboarding, non-administrator users can:
 
-- [View the cluster list](/docs/fusionaas?topic=fusionaas-view-clusters)
-- [Access cluster details](/docs/fusionaas?topic=fusionaas-cluster-access)
-- [Monitor cluster health](/docs/fusionaas?topic=fusionaas-monitor-cluster-health)
-- [View cluster storage status](/docs/fusionaas?topic=fusionaas-view-cluster-storage-status)
-
+- [View clusters](/docs/sdsaas?topic=sdsaas-view-cluster-list)
+- [Understand cluster access permissions](/docs/sdsaas?topic=sdsaas-cluster-access)
+- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status)
