@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: fusion as a service, fusionaas, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
@@ -135,5 +135,3 @@ For detailed information on getting started, see [Getting started with Fusion as
 
 - [Getting started with Fusion as a Service](/docs/fusionaas?topic=fusionaas-getting-started)
 - [Preparing your data center](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
-- [Managing deployments](/docs/fusionaas?topic=fusionaas-administrators)
-- [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)

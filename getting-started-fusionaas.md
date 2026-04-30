@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -173,26 +173,38 @@ After discussions and approvals, the IBM representative will place your order. Y
 {: #prepare-deployment}
 {: step}
 
-Once your order is confirmed, prepare for FusionaaS deployment in your data center.
+After your order is processed, you will receive an email with a **Prepare deployment** link from your IBM representative. This link directs you to the deployment dashboard where you can configure your deployment settings.
 
-### Create or select a Satellite location
-{: #satellite-location}
+### Access the deployment dashboard
+{: #access-deployment-dashboard}
 
-FusionaaS requires an {{site.data.keyword.satellitelong_notm}} location to connect your on-premises infrastructure to {{site.data.keyword.cloud_notm}}.
+1. Check your email for the **Prepare deployment** link from your IBM representative.
+2. Click the link to access the deployment dashboard.
+3. The dashboard displays your orders with **In progress** status.
 
-1. **Select an existing location** or **create a new on-premises Satellite location**:
-   - Open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}
-   - Choose an on-premises location type
-   - Name your Satellite location
+### Configure deployment settings
+{: #configure-deployment}
 
-2. **Important configuration requirements**:
-   - The Satellite location must be present on {{site.data.keyword.cloud_notm}} without hosts initially
-   - The location is not dependent on hosts or other infrastructure setup at this stage
-   - Select **Managed from** region as **Dallas** or **Frankfurt** (choose the region closest to your data center for optimal network latency)
-   - For Storage billing option, choose Object Storage standard plan
+1. Click **Prepare deployment** from your in-progress order.
 
-The Satellite location serves as the connection point between your on-premises FusionaaS deployment and {{site.data.keyword.cloud_notm}} management services.
-{: tip}
+2. On the **Prepare deployment** screen, configure the following settings:
+
+   - **IBM Cloud Satellite location**: Select an existing Satellite location or create a new on-premises Satellite location
+     - The Satellite location connects your on-premises infrastructure to {{site.data.keyword.cloud_notm}}
+     - The location must be present on {{site.data.keyword.cloud_notm}} without hosts initially
+     - Choose the region closest to your data center for optimal network latency
+     - To create a new location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}
+
+   - **Resource group**: Select the resource group for organizing your deployment resources
+
+   - **Deployment name**: Enter a descriptive name for your deployment
+
+3. Click **Create** to complete the deployment preparation.
+
+4. Your **Deployment Preparation** status will be reflected as **Completed**.
+
+To understand more about IBM Cloud Satellite locations, see [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
+{: note}
 
 ### Review data center prerequisites
 {: #datacenter-prereqs}
@@ -207,24 +219,23 @@ Before IBM installs the FusionaaS infrastructure, ensure your data center meets 
 
 For detailed requirements, see [Prerequisites for installing FusionaaS](/docs/fusionaas?topic=fusionaas-pre_installation_checklist).
 
-### Create your deployment
-{: #create-deployment}
-
-After your Satellite location is configured and your data center is ready:
-
-1. Work with your IBM representative to schedule installation.
-2. IBM will coordinate the delivery and installation of hardware.
-3. Once installed, you can begin provisioning resources:
-   - **For Compute**: Create OpenShift clusters through the {{site.data.keyword.cloud_notm}} console
-   - **For Storage**: Provision storage volumes and configure storage classes
-
-For detailed instructions on creating deployments, see [Managing deployments](/docs/fusionaas?topic=fusionaas-administrators).
-
 ## Infrastructure setup and maintenance
 {: #setup-maintenance}
 {: step}
 
-After your order is placed and infrastructure is ready for installation, IBM manages the complete lifecycle:
+After you complete the deployment preparation, IBM manages the complete infrastructure lifecycle from installation through ongoing operations.
+
+### Hardware installation
+{: #hardware-installation}
+
+IBM coordinates and performs the physical installation:
+
+1. IBM schedules the delivery and installation of hardware in your data center.
+2. IBM installs and configures all hardware and software components.
+3. After the on-premises hardware setup is complete, your deployment status changes to **Available**.
+4. Once available, you can begin provisioning resources:
+   - **For Compute**: Create OpenShift clusters through the {{site.data.keyword.cloud_notm}} console
+   - **For Storage**: Provision storage volumes and configure storage classes
 
 ### IBM responsibilities
 {: #ibm-responsibilities}
@@ -253,7 +264,4 @@ Now that you understand FusionaaS and have initiated your deployment:
 
 **Learn more**: Read [What is Fusion as a Service?](/docs/fusionaas?topic=fusionaas-about-fusionaas) for detailed information
 **Prepare your environment**: Review [data center prerequisites](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
-**Plan your deployment**: Understand [deployment management](/docs/fusionaas?topic=fusionaas-administrators)
-**Explore capabilities**: Learn about [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started)
-
-For questions or assistance, contact your IBM representative or open a support case through the {{site.data.keyword.cloud_notm}} console.
+**Complete deployment setup**: After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/fusionaas?topic=fusionaas-onboarding-fusionaas)
