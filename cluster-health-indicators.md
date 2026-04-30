@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: cluster indicators, cluster status, cluster warnings, cluster health, capacity indicators, Fusion as a Service alerts
 
@@ -12,7 +12,7 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding cluster health and status indicators
+# Understanding cluster health indicators
 {: #cluster-health-indicators}
 
 Review the indicators in the cluster list and cluster details to understand cluster status, Fusion services state, and whether a cluster needs attention.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: default cluster quota, deployment settings, storage quota, Fusion as a Service admin tasks, edit default cluster quota
 
@@ -12,16 +12,66 @@ subcollection: sdsaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing the default cluster storage quota
+# Editing cluster storage quota
 {: #manage-cluster-quota}
 
-Set and edit the default storage quota that Fusion as a Service applies when you enable Fusion services for a cluster. The default quota provides a consistent starting point for cluster storage allocation.
+Edit the default storage quota that Fusion as a Service applies when you enable Fusion services for a cluster. The Settings page displays storage capacity information and allows administrators to modify the default cluster quota.
 {: shortdesc}
+
+The default cluster quota is initially set during the onboarding process. For information about setting the quota during first-time setup, see [Onboarding to your Fusion as a Service deployment](/docs/fusionaas?topic=fusionaas-onboarding-fusionaas).
+
+To edit the default cluster quota, you must have administrator permissions.
+
+## Opening the Settings page
+{: #open-settings}
+
+1. Open your Fusion as a Service deployment.
+2. In the left navigation, click **Settings**.
+
+The Settings page opens, displaying the Storage tile with deployment storage information.
+
+## Understanding the Settings page
+{: #settings-page-overview}
+
+The Settings page displays storage configuration for your deployment. The information shown depends on your user role.
+
+### Storage tile
+{: #storage-tile}
+
+The Storage tile displays the following information:
+
+Overall capacity limit
+:   The total storage capacity available for the deployment (for example, "100 TB").
+
+Default cluster quota
+:   The default amount of storage capacity that is allocated when Fusion services are enabled for a cluster (for example, "10 TB").
+
+### Admin user view
+{: #admin-user-view}
+
+If you have administrator permissions, the Storage tile includes an **Edit quota** button in the upper right corner. This button allows you to modify the default cluster quota.
+
+The Storage tile displays:
+- Overall capacity limit
+- Default cluster quota
+- **Edit quota** button (enabled)
+
+### Non-admin user view
+{: #non-admin-user-view}
+
+If you do not have administrator permissions, the Storage tile displays the same information but without the **Edit quota** button. You can view the storage settings but cannot modify them.
+
+The Storage tile displays:
+- Overall capacity limit
+- Default cluster quota
+- No Edit quota button
 
 ## About the default cluster quota
 {: #about-default-quota}
 
 The default cluster storage quota is the amount of storage capacity that is automatically allocated when you enable Fusion services for a cluster. This setting provides a consistent baseline for storage allocation across your deployment.
+
+The default quota is initially configured during the onboarding process when you first access your deployment. After onboarding, you can modify this value at any time from the Settings page.
 
 The default quota is used in the following situations:
 
@@ -31,27 +81,18 @@ The default quota is used in the following situations:
 
 The default quota affects only future enablement of Fusion services. It does not change existing cluster quotas or current storage usage.
 
-## Before you begin
-{: #manage-quota-prereqs}
-
-Make sure that you meet the following requirements:
-
-- You have administrator permissions for the deployment.
-- You can open the deployment in the {{site.data.keyword.cloud_notm}} console.
-- You know the quota value that you want to set in TB.
-
-## Setting or editing the default cluster quota
+## Editing the default cluster quota (admin only)
 {: #set-edit-quota-steps}
+
+If you have administrator permissions, you can edit the default cluster quota.
 
 1. Open your Fusion as a Service deployment.
 2. In the left navigation, click **Settings**.
 3. In the **Storage** tile, click **Edit quota**.
-4. In the **Set default cluster quota** side panel, enter or update the storage quota value in TB.
+4. In the side panel, enter or update the storage quota value in TB.
 5. Click **Save**.
 
 The updated default quota is applied to new clusters when Fusion services are enabled. Existing cluster quotas are not changed.
-
-The side panel displays a message that explains: "This cluster quota will be the default amount of storage capacity allocated each time a cluster is created. This setting can be changed at a later time."
 
 ## Understanding the impact of quota changes
 {: #quota-change-impact}

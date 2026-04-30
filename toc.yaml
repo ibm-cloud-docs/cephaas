@@ -40,37 +40,23 @@ toc:
       - setup_cli_api_environment.md
       - setup-terraform.md
       - topicgroup:
-          label: FusionaaS Compute setup
+          label: Compute setup
           topics:
+          - access-openshift-console.md
+          - onboarding-fusionaas.md
           - deployment-access-overview.md
-          - create-clusters.md
-          - view-deployment-capacity.md
-          - manage-cluster-quota.md
-          - admin-permissions.md
       - topicgroup:
           label: Managing clusters
           topics:
-          - view-cluster-list.md
-          - view-cluster-details.md
+          - create-clusters.md
+          - cluster-access.md
+          - view-clusters.md
           - cluster-health-indicators.md
           - topicgroup:
               label: Managing cluster storage
               topics:
               - enable-fusion-services.md
-              - update-cluster-quota.md
-              - view-cluster-storage-status.md
-              - storage-quota-validation.md
-          - topicgroup:
-              label: Resolving cluster issues
-              topics:
-              - monitor-cluster-health.md
-              - fix-flow-corrective-action.md
-              - access-openshift-console.md
-          - topicgroup:
-              label: Understanding UI behavior
-              topics:
-              - ui-roles-permissions.md
-              - ui-empty-states.md
+              - edit-cluster-quota.md
       - topicgroup:
           label: Managing Block storage
           topics:

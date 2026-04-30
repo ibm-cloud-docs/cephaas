@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-04-30"
 
 keywords: OpenShift console, ROKS console, launch console, cluster console access, ROKS handoff, OpenShift operations, Fusion as a Service and OpenShift, cluster operations
 
@@ -17,9 +17,6 @@ subcollection: sdsaas
 
 Open the OpenShift console from your Fusion as a Service deployment when you need to continue cluster and workload tasks in Red Hat OpenShift on IBM Cloud. Understanding when to use Fusion as a Service and when to use the OpenShift console helps you work efficiently across both environments.
 {: shortdesc}
-
-## Before you begin
-{: #access-console-prereqs}
 
 Before you launch the OpenShift console, make sure that you can access the cluster from the {{site.data.keyword.cloud_notm}} console.
 
