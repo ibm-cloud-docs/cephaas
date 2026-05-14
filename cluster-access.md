@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: cluster access, cluster permissions, role-based access, admin access, non-admin access
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -68,7 +68,7 @@ The cluster details panel opens, displaying information about the selected clust
 ## Related information
 {: #cluster-access-next}
 
-- [Understanding admin vs non-admin permissions](/docs/sdsaas?topic=sdsaas-admin-permissions)
-- [Viewing clusters](/docs/sdsaas?topic=sdsaas-view-cluster-list)
-- [Update a cluster's storage quota](/docs/sdsaas?topic=sdsaas-update-cluster-quota) (admin only)
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services) (admin only)
+- [Understanding admin vs non-admin permissions](/docs/cephaas?topic=cephaas-admin-permissions)
+- [Viewing clusters](/docs/cephaas?topic=cephaas-view-cluster-list)
+- [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota) (admin only)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services) (admin only)

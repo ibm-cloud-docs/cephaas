@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: default cluster quota, deployment settings, storage quota, Fusion as a Service admin tasks, edit default cluster quota
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -18,7 +18,7 @@ subcollection: sdsaas
 Edit the default storage quota that Fusion as a Service applies when you enable Fusion services for a cluster. The Settings page displays storage capacity information and allows administrators to modify the default cluster quota.
 {: shortdesc}
 
-The default cluster quota is initially set during the onboarding process. For information about setting the quota during first-time setup, see [Onboarding to your Fusion as a Service deployment](/docs/fusionaas?topic=fusionaas-onboarding-fusionaas).
+The default cluster quota is initially set during the onboarding process. For information about setting the quota during first-time setup, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).
 
 To edit the default cluster quota, you must have administrator permissions.
 
@@ -125,7 +125,7 @@ If validation fails, review the error message and adjust the quota value accordi
 
 After you set or edit the default quota, you can:
 
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services) using the default quota
-- [Update a cluster's storage quota](/docs/sdsaas?topic=sdsaas-update-cluster-quota) to customize individual cluster allocations
-- [View deployment capacity](/docs/sdsaas?topic=sdsaas-view-deployment-capacity) to understand available resources
-- [Understand admin vs non-admin permissions](/docs/sdsaas?topic=sdsaas-admin-permissions)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services) using the default quota
+- [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota) to customize individual cluster allocations
+- [View deployment capacity](/docs/cephaas?topic=cephaas-view-deployment-capacity) to understand available resources
+- [Understand admin vs non-admin permissions](/docs/cephaas?topic=cephaas-admin-permissions)

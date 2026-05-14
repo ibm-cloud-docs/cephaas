@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: fusion as a service, Fusion as a Service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -114,7 +114,7 @@ Use the Dashboard for the following tasks:
 
 After you open the deployment, you can do the following tasks:
 
-- [View deployment capacity and resource usage](/docs/sdsaas?topic=sdsaas-view-deployment-capacity)
-- [View the cluster list](/docs/sdsaas?topic=sdsaas-view-cluster-list)
-- [Set the default cluster storage quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota)
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services)
+- [View deployment capacity and resource usage](/docs/cephaas?topic=cephaas-view-deployment-capacity)
+- [View the cluster list](/docs/cephaas?topic=cephaas-view-cluster-list)
+- [Set the default cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: cluster list, Fusion as a Service clusters, deployment clusters, cluster navigation
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -101,6 +101,6 @@ Use the Clusters page to do the following tasks:
 ## Related tasks
 {: #view-cluster-list-next}
 
-- [Understand cluster list status and capacity indicators](/docs/sdsaas?topic=sdsaas-cluster-list-indicators)
-- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-details)
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services)
+- [Understand cluster list status and capacity indicators](/docs/cephaas?topic=cephaas-cluster-list-indicators)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)

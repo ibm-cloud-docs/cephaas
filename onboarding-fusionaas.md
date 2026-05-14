@@ -1,11 +1,11 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: fusion as a service, onboarding, welcome modal, first time user, cluster quota, set cluster quota, getting started
 
-subcollection: fusionaas
+subcollection: cephaas
 
 ---
 
@@ -55,7 +55,7 @@ As an administrator, you can set the default cluster storage quota directly from
 
 After you save the default cluster quota, the welcome modal closes and you can begin using your deployment.
 
-The default cluster quota can be changed later from the Settings page. For more information, see [Editing cluster storage quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota).
+The default cluster quota can be changed later from the Settings page. For more information, see [Editing cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota).
 {: tip}
 
 ## Onboarding for non-administrator users
@@ -75,7 +75,7 @@ As a non-administrator user, you can proceed directly to view your clusters.
 The **Set cluster quota** button is not available for non-administrator users. Only administrators can set or modify the default cluster storage quota.
 {: note}
 
-## After onboarding
+## After onboardin
 {: #after-onboarding}
 
 After you complete the onboarding flow, you can access your deployment directly from the {{site.data.keyword.cloud_notm}} console.
@@ -85,16 +85,16 @@ After you complete the onboarding flow, you can access your deployment directly 
 
 After onboarding, administrators can:
 
-- [Create clusters](/docs/sdsaas?topic=sdsaas-create-clusters)
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services)
-- [Update the default cluster quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota) from the Settings page
-- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status)
+- [Create clusters](/docs/cephaas?topic=cephaas-create-clusters)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)
+- [Update the default cluster quota](/docs/cephaas?topic=cephaas-manage-cluster-quota) from the Settings page
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 
 ### Next steps for non-administrator users
 {: #non-admin-next-steps}
 
 After onboarding, non-administrator users can:
 
-- [View clusters](/docs/sdsaas?topic=sdsaas-view-cluster-list)
-- [Understand cluster access permissions](/docs/sdsaas?topic=sdsaas-cluster-access)
-- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status)
+- [View clusters](/docs/cephaas?topic=cephaas-view-cluster-list)
+- [Understand cluster access permissions](/docs/cephaas?topic=cephaas-cluster-access)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)

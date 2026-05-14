@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-14"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
-subcollection: fusionaas
+subcollection: cephaas
 
 ---
 

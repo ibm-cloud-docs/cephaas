@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: OpenShift console, ROKS console, launch console, cluster console access, ROKS handoff, OpenShift operations, Fusion as a Service and OpenShift, cluster operations
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -92,7 +92,7 @@ A typical workflow might involve moving between Fusion as a Service and OpenShif
 
 After launching the OpenShift console, you can:
 
-- [View cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-details) in Fusion as a Service
-- [Enable Fusion services for a cluster](/docs/sdsaas?topic=sdsaas-enable-fusion-services)
-- [Update a cluster's storage quota](/docs/sdsaas?topic=sdsaas-update-cluster-quota)
-- [Monitor cluster health](/docs/sdsaas?topic=sdsaas-monitor-cluster-health)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-details) in Fusion as a Service
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)
+- [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
+- [Monitor cluster health](/docs/cephaas?topic=cephaas-monitor-cluster-health)

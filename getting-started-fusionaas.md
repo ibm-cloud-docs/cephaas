@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
-subcollection: fusionaas
+subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
@@ -21,7 +21,7 @@ An IBM representative will contact you to understand your requirements. Post dis
 Fusion as a Service (FusionaaS) is IBM's fully managed OpenShift platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
 {: shortdesc}
 
-This tutorial guides you through understanding FusionaaS capabilities, estimating costs, and getting started with your deployment. Estimated completion time: **10 minutes**.
+This topic guides you through understanding FusionaaS capabilities, estimating costs, and getting started with your deployment.
 
 ## What is Fusion as a Service?
 {: #what-is-fusionaas}
@@ -42,10 +42,10 @@ FusionaaS combines the power of Red Hat OpenShift with IBM's enterprise-grade in
 
 With FusionaaS, IBM delivers, installs, and operates infrastructure in your data center:
 
-1. **IBM-owned infrastructure**: IBM provides optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}.
-2. **Fully managed operations**: IBM handles all operational complexity while you retain physical control of your data.
-3. **Self-service provisioning**: Provision OpenShift clusters and storage through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
-4. **Flexible scaling**: Scale resources on-demand without procurement delays.
+- **IBM-owned infrastructure**: IBM provides optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}.
+- **Fully managed operations**: IBM handles all operational complexity while you retain physical control of your data.
+- **Self-service provisioning**: Provision OpenShift clusters and storage through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
+- **Flexible scaling**: Scale resources on-demand without procurement delays.
 
 ## Understanding billing options
 {: #billing-options}
@@ -120,13 +120,13 @@ FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. Use the 
 
 2. Click **Estimate Cost** to access the cost estimation tool.
 
-3. **For Compute billing**:
+3. For Compute billing:
    - Select the number of OpenShift clusters you plan to deploy
    - Choose cluster size (number of worker nodes)
    - Specify GPU requirements if needed
    - Select subscription term (monthly commitment options available)
 
-4. **For Storage billing**:
+4. For Storage billing:
    - Select the **Storage Tier**: **Performance** or **Capacity**
    - Enter the **Total storage** capacity in TB
    - Choose **Subscription term**: 3, 4, or 5 years
@@ -217,7 +217,7 @@ Before IBM installs the FusionaaS infrastructure, ensure your data center meets 
 - **Network connectivity**: Physical network connections to {{site.data.keyword.cloud_notm}}
 - **Physical security**: Secure facility access controls
 
-For detailed requirements, see [Prerequisites for installing FusionaaS](/docs/fusionaas?topic=fusionaas-pre_installation_checklist).
+For detailed requirements, see [Prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist).
 
 ## Infrastructure setup and maintenance
 {: #setup-maintenance}
@@ -262,6 +262,6 @@ IBM owns and operates the infrastructure while you provision and manage your wor
 
 Now that you understand FusionaaS and have initiated your deployment:
 
-**Learn more**: Read [What is Fusion as a Service?](/docs/fusionaas?topic=fusionaas-about-fusionaas) for detailed information
-**Prepare your environment**: Review [data center prerequisites](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
-**Complete deployment setup**: After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/fusionaas?topic=fusionaas-onboarding-fusionaas)
+**Learn more**: Read [What is Fusion as a Service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information
+**Prepare your environment**: Review [data center prerequisites](/docs/cephaas?topic=cephaas-pre_installation_checklist)
+**Complete deployment setup**: After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas)

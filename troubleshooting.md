@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service, object storage, low cost object, 
 
@@ -153,10 +153,10 @@ If validation fails, follow these steps to resolve the issue:
 5. Save the change again after adjusting the quota value.
 
 For more information, see:
-- [Onboarding to your Fusion as a Service deployment](/docs/fusionaas?topic=fusionaas-onboarding-fusionaas)
-- [Editing the default cluster storage quota](/docs/fusionaas?topic=fusionaas-manage-cluster-quota)
-- [Updating a cluster's storage quota](/docs/fusionaas?topic=fusionaas-update-cluster-quota)
-- [Viewing storage status for a cluster](/docs/fusionaas?topic=fusionaas-view-cluster-storage-status)
+- [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas)
+- [Editing the default cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
+- [Updating a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
+- [Viewing storage status for a cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 
 ## Resolving cluster issues
 {: #troubleshoot-cluster-issues}
@@ -183,15 +183,15 @@ Use the following actions to investigate and resolve the issue:
 2. Open the cluster details page to review warnings, alerts, and storage information.
 
 3. Determine the appropriate next action based on the current condition:
-   - If storage capacity is the issue, [update the cluster's storage quota](/docs/sdsaas?topic=sdsaas-update-cluster-quota).
-   - If the UI provides guided remediation, [use the Fix flow](/docs/sdsaas?topic=sdsaas-fix-flow-corrective-action).
-   - If you need to investigate cluster-level details, [open the OpenShift console](/docs/sdsaas?topic=sdsaas-access-openshift-console).
-   - If you need more detail about storage consumption, [view storage status for the cluster](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status).
+   - If storage capacity is the issue, [update the cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota).
+   - If the UI provides guided remediation, [use the Fix flow](/docs/cephaas?topic=cephaas-fix-flow-corrective-action).
+   - If you need to investigate cluster-level details, [open the OpenShift console](/docs/cephaas?topic=cephaas-access-openshift-console).
+   - If you need more detail about storage consumption, [view storage status for the cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status).
 
 4. Review the cluster again after you complete the action to confirm that the warning or alert is resolved.
 
 For more information, see:
-- [Monitoring cluster health and responding to alerts](/docs/sdsaas?topic=sdsaas-monitor-cluster-health)
-- [Taking corrective action using the Fix flow](/docs/sdsaas?topic=sdsaas-fix-flow-corrective-action)
-- [Understanding cluster health indicators](/docs/sdsaas?topic=sdsaas-cluster-health-indicators)
-- [Viewing storage status for a cluster](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status)
+- [Monitoring cluster health and responding to alerts](/docs/cephaas?topic=cephaas-monitor-cluster-health)
+- [Taking corrective action using the Fix flow](/docs/cephaas?topic=cephaas-fix-flow-corrective-action)
+- [Understanding cluster health indicators](/docs/cephaas?topic=cephaas-cluster-health-indicators)
+- [Viewing storage status for a cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status)

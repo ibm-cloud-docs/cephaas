@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: enable Fusion services, cluster storage, cluster quota, Fusion as a Service storage
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -68,8 +68,8 @@ After Fusion services are enabled, you can do the following tasks:
 
 After you enable Fusion services for a cluster, you can:
 
-- [Update the cluster's storage quota](/docs/sdsaas?topic=sdsaas-update-cluster-quota) to adjust the allocated storage capacity
-- [View storage status for the cluster](/docs/sdsaas?topic=sdsaas-view-cluster-storage-status) to monitor storage usage
-- [Access the OpenShift console](/docs/sdsaas?topic=sdsaas-access-openshift-console) to manage workload-level storage tasks
+- [Update the cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota) to adjust the allocated storage capacity
+- [View storage status for the cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status) to monitor storage usage
+- [Access the OpenShift console](/docs/cephaas?topic=cephaas-access-openshift-console) to manage workload-level storage tasks
 
-If you encounter quota validation errors, see [Troubleshooting](/docs/sdsaas?topic=sdsaas-troubleshooting#troubleshoot-quota-validation).
+If you encounter quota validation errors, see [Troubleshooting](/docs/cephaas?topic=cephaas-troubleshooting#troubleshoot-quota-validation).

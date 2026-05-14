@@ -2,11 +2,11 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-14"
 
 keywords: fusion as a service, fusionaas, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
-subcollection: fusionaas
+subcollection: cephaas
 
 ---
 {{site.data.keyword.attribute-definition-list}}
@@ -125,13 +125,13 @@ To begin your FusionaaS journey:
 
 1. **Estimate costs**: Use the cost estimation tool in the {{site.data.keyword.cloud_notm}} catalog to understand pricing for your requirements.
 2. **Request consultation**: Submit a consultation request to discuss your specific needs with IBM experts.
-3. **Prepare your data center**: Review the [prerequisites for installing FusionaaS](/docs/fusionaas?topic=fusionaas-pre_installation_checklist) to ensure your facility meets requirements.
+3. **Prepare your data center**: Review the [prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist) to ensure your facility meets requirements.
 4. **Deploy**: Work with IBM to install and configure FusionaaS in your data center.
 
-For detailed information on getting started, see [Getting started with Fusion as a Service](/docs/fusionaas?topic=fusionaas-getting-started).
+For detailed information on getting started, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
 
 ## Related information
 {: #fusionaas-related}
 
-- [Getting started with Fusion as a Service](/docs/fusionaas?topic=fusionaas-getting-started)
-- [Preparing your data center](/docs/fusionaas?topic=fusionaas-pre_installation_checklist)
+- [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started)
+- [Preparing your data center](/docs/cephaas?topic=cephaas-pre_installation_checklist)

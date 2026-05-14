@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-14"
 
 keywords: cluster creation, Fusion as a Service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -106,7 +106,7 @@ After the cluster becomes available, you can complete the following tasks:
 ## Related tasks
 {: #create-clusters-related}
 
-- [Viewing the cluster list](/docs/sdsaas?topic=sdsaas-view-cluster-list)
-- [Viewing cluster details](/docs/sdsaas?topic=sdsaas-view-cluster-details)
-- [Managing the default cluster storage quota](/docs/sdsaas?topic=sdsaas-manage-cluster-quota)
-- [Monitoring cluster health](/docs/sdsaas?topic=sdsaas-monitor-cluster-health)
+- [Viewing the cluster list](/docs/cephaas?topic=cephaas-view-cluster-list)
+- [Viewing cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [Managing the default cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
+- [Monitoring cluster health](/docs/cephaas?topic=cephaas-monitor-cluster-health)

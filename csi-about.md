@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-14"
 
 keywords: cephaas csi
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 
 {{site.data.keyword.cephaas_full_notm}} CSI driver uses standard CSI sidecar containers maintained by the Kubernetes SIG Storage community. These container images are distributed via `registry.k8s.io` and are maintained by the upstream Kubernetes project.
 
-You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://kubernetes-csi.github.io/docs/drivers.html) driver (v1.0.0)
+You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://kubernetes-csi.github.io/docs/drivers.html){: external} driver (v1.0.0)
 
 The following table lists the sidecar containers and related images used in the {{site.data.keyword.cephaas_full_notm}} CSI driver Helm chart, along with their versions and release details.
 
@@ -35,7 +35,7 @@ The following table lists the sidecar containers and related images used in the 
 ## Sidecar containers and image sources
 {: #csi-containers}
 
-The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://kubernetes-csi.github.io/docs/sidecar-containers.html) and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
+The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI sidecar containers maintained by the **Kubernetes SIG Storage community**. These containers are distributed via the public registry at [registry.k8s.io/sig-storage](https://kubernetes-csi.github.io/docs/sidecar-containers.html){: external} and are aligned with upstream Kubernetes releases, ensuring timely updates and bug fixes.
 
 **Sidecar containers used by {{site.data.keyword.cephaas_full_notm}} CSI Driver:**
 
@@ -46,4 +46,4 @@ The {{site.data.keyword.cephaas_full_notm}} CSI Driver v1.0.0 uses standard CSI 
 - **csi-snapshotter**: v6.2.2
 - **snapshot-controller**: v6.2.2
 
-You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi).
+You can find the source code and release information in the [Kubernetes CSI GitHub organization](https://github.com/kubernetes-csi){: external}.
