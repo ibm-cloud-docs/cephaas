@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: cluster creation, Fusion as a Service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
@@ -65,7 +65,7 @@ The **Clusters** page shows your current usage of vCPUs, memory, storage, and GP
 
 4. Click **Create cluster**.
 5. When prompted, choose the option to create the cluster through the Red Hat OpenShift on IBM Cloud Satellite portal.
-6. In the Red Hat OpenShift on IBM Cloud Satellite workflow, follow the detailed steps in [Creating Red Hat OpenShift on IBM Cloud clusters in Satellite](https://cloud.ibm.com/docs/openshift?topic=openshift-satellite-clusters&interface=ui){: external}.
+6. In the Red Hat OpenShift on IBM Cloud Satellite workflow, follow the detailed steps in [Creating Red Hat OpenShift on IBM Cloud clusters in Satellite](/docs/openshift?topic=openshift-satellite-clusters&interface=ui).
 
 The service redirects you to the standard IBM Cloud workflow for creating Satellite clusters.
 
@@ -107,6 +107,6 @@ After the cluster becomes available, you can complete the following tasks:
 {: #create-clusters-related}
 
 - [Viewing the cluster list](/docs/cephaas?topic=cephaas-view-cluster-list)
-- [Viewing cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [Viewing cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 - [Managing the default cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
 - [Monitoring cluster health](/docs/cephaas?topic=cephaas-monitor-cluster-health)

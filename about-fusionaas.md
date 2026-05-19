@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: fusion as a service, fusionaas, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
@@ -30,93 +30,53 @@ With FusionaaS, IBM delivers, installs, and operates OpenShift infrastructure in
 - **Self-service provisioning**: You provision OpenShift clusters, deploy workloads, and manage applications through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
 - **Cloud consumption model**: Pay only for the resources you consume with metered usage and flexible monthly commitments, eliminating large upfront capital expenditures.
 
-## Key capabilities
-{: #fusionaas-capabilities}
+## Architecture
+{: #fusionaas-architecture}
 
-### Fully managed OpenShift on-premises
-{: #managed-openshift}
+FusionaaS delivers a fully managed OpenShift platform with an architecture designed for enterprise-grade performance, security, and operational efficiency. The architecture consists of several key layers that work together to provide a seamless on-premises cloud experience.
 
-FusionaaS delivers a complete Red Hat OpenShift Container Platform experience in your data center, fully managed by IBM. This includes:
+![FusionaaS architecture diagram](images/architecture-fusionaas.svg "Architecture diagram showing FusionaaS components including IBM Cloud control plane with SRE VPC and FusionaaS MZR VPC, connected via Satellite Link to on-premises Control Plane ROKS, Fusion Base Cluster, and Fusion HCI Hardware Layer in the customer datacenter"){: caption="FusionaaS architecture overview" caption-side="bottom"}
 
-- **Automated lifecycle management**: IBM SRE teams handle cluster provisioning, upgrades, patching, and maintenance with minimal disruption to your workloads.
-- **High availability**: Built-in redundancy and failover capabilities ensure your applications remain available.
-- **Integrated monitoring**: Comprehensive observability with built-in monitoring, logging, and alerting managed by IBM.
-- **Security hardening**: Enterprise-grade security configurations and compliance controls applied and maintained by IBM security experts.
+### Architecture components
+{: #architecture-components}
 
-### Cloud consumption pricing
-{: #cloud-pricing}
+The FusionaaS architecture includes the following key components:
 
-FusionaaS eliminates traditional infrastructure procurement cycles with flexible, consumption-based pricing:
+IBM Cloud control plane
+:   Provides centralized management, monitoring, and orchestration capabilities through the FusionaaS MZR VPC. The control plane includes the IBM Cloud Console with the FusionaaS Dashboard and Catalog, along with service components for endpoint resolution, usage metering, job processing, and notifications. The SRE VPC contains observability tools, Secrets Manager, Prometheus Thanos, and alerting systems that enable IBM SRE teams to manage the platform while you maintain data sovereignty.
 
-- **Pay-as-you-grow**: Start with the capacity you need today and scale as your requirements evolve.
-- **Metered usage**: Transparent metering tracks your actual resource consumption (compute, storage, network).
-- **Monthly commitments**: Flexible commitment terms that align with your business planning cycles.
-- **No over-provisioning**: Right-size your infrastructure and avoid the waste of traditional capacity planning.
-- **Predictable costs**: Clear pricing models help you forecast and manage infrastructure spending.
+Satellite Link
+:   Establishes secure, encrypted connectivity between the IBM Cloud control plane and your on-premises infrastructure. This connection enables remote management and monitoring while keeping your application data within your datacenter.
 
-### IBM SRE-led lifecycle management
-{: #sre-management}
+Control Plane ROKS
+:   The on-premises Red Hat OpenShift Kubernetes Service (ROKS) control plane that manages your OpenShift clusters. It includes ROKS Manager APIs for cluster lifecycle management, Fusion Manager APIs for infrastructure operations, and Prometheus for local monitoring and metrics collection.
 
-IBM's Site Reliability Engineering teams bring deep expertise in managing mission-critical infrastructure:
+Fusion Base Cluster
+:   The foundational OpenShift cluster that provides core platform services and serves as the management layer for your workload clusters. This cluster hosts essential services and operators required for the FusionaaS platform.
 
-- **24x7 monitoring**: Continuous monitoring of infrastructure health, performance, and security.
-- **Proactive maintenance**: Scheduled maintenance windows with advance notification and minimal impact.
-- **Incident response**: Rapid response to issues with defined service level objectives (SLOs).
-- **Capacity planning**: IBM monitors usage trends and works with you to plan capacity expansions.
-- **Platform updates**: Coordinated upgrades to OpenShift, Kubernetes, and underlying infrastructure components.
+Fusion HCI Hardware Layer
+:   IBM-owned and managed hyperconverged infrastructure deployed in your datacenter. This layer includes optimized compute servers, integrated storage systems, and networking equipment that provide the physical resources for your OpenShift clusters and workloads.
 
-### Enterprise-grade security, resiliency, and observability
-{: #enterprise-features}
+External integrations
+:   FusionaaS integrates with IBM Cloud services including BSS for billing and usage tracking, Activity Tracker for audit events, Cloudant Broker DB for service broker data, IAM for identity and access management, and Resource Controller for resource lifecycle management.
 
-FusionaaS is built on IBM's decades of experience delivering enterprise infrastructure:
+### Data flow and connectivity
+{: #data-flow}
 
-- **Security**: Multi-layered security controls including network isolation, encryption at rest and in transit, identity and access management integration, and compliance with industry standards.
-- **Resiliency**: Redundant components, automated failover, backup and disaster recovery capabilities, and business continuity planning.
-- **Observability**: Comprehensive monitoring and logging with integration to {{site.data.keyword.cloud_notm}} observability services, custom dashboards, and alerting.
+FusionaaS maintains a clear separation between the control plane and data plane:
 
-### GPU-enabled workloads for AI and data-intensive use cases
-{: #gpu-workloads}
+Control plane traffic
+:   Management and monitoring data flows securely between your on-premises infrastructure and IBM Cloud through the Satellite Link encrypted channel. This traffic includes metrics, logs, configuration updates, health checks, and API calls for resource provisioning. The connection enables IBM SRE teams to manage the platform remotely while maintaining security and compliance.
 
-FusionaaS supports GPU-accelerated computing for demanding workloads:
+Data plane traffic
+:   Application data and workload traffic remain entirely within your datacenter, ensuring data sovereignty and meeting regulatory requirements. Your applications communicate with storage, databases, and other services without traversing the public internet or the Satellite Link connection.
 
-- **AI and machine learning**: Train and deploy machine learning models with GPU acceleration.
-- **Data analytics**: Process large datasets with GPU-accelerated analytics frameworks.
-- **High-performance computing**: Run compute-intensive simulations and modeling workloads.
-- **Flexible GPU options**: Choose from various GPU configurations to match your workload requirements.
+User access
+:   You access the platform through the IBM Cloud Console, CLI, and APIs, which communicate with the control plane to provision clusters, deploy workloads, and manage resources. The FusionaaS Dashboard provides a unified interface for monitoring cluster health, viewing capacity, and managing your on-premises infrastructure.
 
-## Comparing FusionaaS to traditional on-premises deployments
-{: #fusionaas-comparison}
+Observability and monitoring
+:   Metrics and logs are collected by Prometheus in the Control Plane ROKS and forwarded to the SRE VPC for centralized monitoring. IBM SRE teams use these observability tools to proactively monitor platform health, identify issues, and perform maintenance activities.
 
-| Aspect | Traditional On-Premises | Fusion as a Service |
-|--------|------------------------|---------------------|
-| **Capital investment** | Large upfront hardware purchase | No upfront capital expenditure |
-| **Operational model** | Self-managed infrastructure | Fully IBM-managed |
-| **Scaling** | Requires procurement cycles | Scale on-demand with cloud-like flexibility |
-| **Lifecycle management** | Internal IT team responsibility | IBM SRE-led management |
-| **Pricing** | Fixed capacity costs | Pay-for-what-you-use metering |
-| **Time to value** | Weeks to months for deployment | Rapid provisioning after installation |
-| **Expertise required** | Deep OpenShift and infrastructure skills | Focus on applications, not infrastructure |
-| **Updates and patches** | Manual planning and execution | Automated by IBM with minimal disruption |
-{: caption="Comparison of traditional on-premises and Fusion as a Service" caption-side="bottom"}
-
-## Is Fusion as a Service right for you?
-{: #fusionaas-use-cases}
-
-FusionaaS is ideal for organizations that need:
-
-- **Data sovereignty**: Keep data on-premises to meet regulatory, compliance, or data residency requirements while gaining cloud operational benefits.
-- **Hybrid cloud strategy**: Extend your {{site.data.keyword.cloud_notm}} footprint into your data center with consistent management and APIs.
-- **Reduced operational burden**: Offload infrastructure management to IBM while maintaining control over applications and data.
-- **Predictable performance**: Dedicated infrastructure in your data center with guaranteed resources and low-latency access.
-- **AI and GPU workloads**: Run GPU-accelerated workloads on-premises with enterprise support and management.
-- **Cost optimization**: Eliminate over-provisioning and align infrastructure costs with actual usage.
-
-Consider FusionaaS if you:
-- Need OpenShift on-premises but lack the expertise or resources to manage it
-- Want to modernize applications with containers while keeping data on-premises
-- Require enterprise-grade SLAs and support for mission-critical workloads
-- Seek to reduce capital expenditures and move to an operational expense model
-- Need to scale infrastructure dynamically without procurement delays
 
 ## Getting started with Fusion as a Service
 {: #fusionaas-next-steps}

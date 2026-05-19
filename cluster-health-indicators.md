@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: cluster indicators, cluster status, cluster warnings, cluster health, capacity indicators, Fusion as a Service alerts
 
@@ -87,7 +87,7 @@ In cluster details, you can:
 
 After reviewing cluster health indicators, you can:
 
-- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 - [Identify clusters that need attention](/docs/cephaas?topic=cephaas-monitor-cluster-health)
 - [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
 - [Take corrective action using the Fix flow](/docs/cephaas?topic=cephaas-fix-flow-corrective-action)

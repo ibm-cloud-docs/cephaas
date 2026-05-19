@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -65,11 +65,6 @@ The **Compute** option enables you to provision and manage Red Hat OpenShift on 
 - GPU support for AI and data-intensive workloads
 - Pay-per-use pricing based on compute resources consumed
 
-**Ideal for:**
-- Organizations modernizing applications with containers
-- Teams running AI/ML workloads requiring GPU acceleration
-- Businesses needing OpenShift expertise without in-house management overhead
-
 ### Storage billing option
 {: #storage-billing}
 
@@ -95,11 +90,6 @@ The **Storage** option provides access to IBM Storage Ceph as a Service with two
 - Single point of management
 - Pay-per-use pricing based on storage consumed
 - IBM-managed infrastructure and operations
-
-**Ideal for:**
-- Organizations needing flexible, scalable storage
-- Businesses eliminating over-provisioning and right-sizing infrastructure
-- Teams requiring unified storage across multiple protocols
 
 ### Combining Compute and Storage
 {: #combined-billing}
@@ -160,12 +150,7 @@ After reviewing your cost estimation, the next step is to connect with IBM exper
    - Email confirmation with your cost estimation details
    - Notification sent to IBM sales team
 
-5. An IBM representative will contact you within 1-2 business days to:
-   - Understand your detailed requirements
-   - Discuss technical specifications
-   - Review data center prerequisites
-   - Answer questions about the service
-   - Provide a customized proposal
+5. An IBM representative will contact you within 1-2 business days. 
 
 After discussions and approvals, the IBM representative will place your order. You will receive order details and a tracking link via email. Track your order status from your {{site.data.keyword.cloud_notm}} account dashboard.
 
@@ -203,59 +188,6 @@ After your order is processed, you will receive an email with a **Prepare deploy
 
 4. Your **Deployment Preparation** status will be reflected as **Completed**.
 
-To understand more about IBM Cloud Satellite locations, see [IBM Cloud Satellite](/docs/satellite?topic=satellite-getting-started).
-{: note}
-
-### Review data center prerequisites
-{: #datacenter-prereqs}
-
-Before IBM installs the FusionaaS infrastructure, ensure your data center meets the physical requirements:
-
-- **Power requirements**: Adequate electrical capacity and redundancy
-- **Cooling**: Sufficient HVAC capacity for rack-mounted equipment
-- **Space**: Floor space for rack installation with proper clearances
-- **Network connectivity**: Physical network connections to {{site.data.keyword.cloud_notm}}
-- **Physical security**: Secure facility access controls
-
-For detailed requirements, see [Prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist).
-
-## Infrastructure setup and maintenance
-{: #setup-maintenance}
-{: step}
-
-After you complete the deployment preparation, IBM manages the complete infrastructure lifecycle from installation through ongoing operations.
-
-### Hardware installation
-{: #hardware-installation}
-
-IBM coordinates and performs the physical installation:
-
-1. IBM schedules the delivery and installation of hardware in your data center.
-2. IBM installs and configures all hardware and software components.
-3. After the on-premises hardware setup is complete, your deployment status changes to **Available**.
-4. Once available, you can begin provisioning resources:
-   - **For Compute**: Create OpenShift clusters through the {{site.data.keyword.cloud_notm}} console
-   - **For Storage**: Provision storage volumes and configure storage classes
-
-### IBM responsibilities
-{: #ibm-responsibilities}
-
-- **Installation**: IBM installs and configures all hardware and software in your data center
-- **Configuration**: Initial setup of OpenShift clusters and storage infrastructure
-- **Operations**: 24x7 monitoring, incident response, and performance management
-- **Maintenance**: Hardware and software updates, security patches, and upgrades
-- **Support**: Enterprise-grade support with defined SLAs
-
-### Your responsibilities
-{: #customer-responsibilities}
-
-- **Physical site requirements**: Provide adequate power, cooling, space, and network connectivity
-- **Facility access**: Grant IBM personnel access for installation and maintenance
-- **Application management**: Deploy, configure, and manage your applications and workloads
-- **Data management**: Manage your data, backups, and disaster recovery strategies
-
-IBM owns and operates the infrastructure while you provision and manage your workloads. This shared responsibility model allows you to focus on applications while IBM handles infrastructure complexity.
-{: note}
 
 ## Next steps
 {: #next-steps}

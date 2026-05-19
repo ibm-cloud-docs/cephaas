@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: cluster list, Fusion as a Service clusters, deployment clusters, cluster navigation
 
@@ -101,6 +101,6 @@ Use the Clusters page to do the following tasks:
 ## Related tasks
 {: #view-cluster-list-next}
 
-- [Understand cluster list status and capacity indicators](/docs/cephaas?topic=cephaas-cluster-list-indicators)
-- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [Understand cluster list status and capacity indicators](/docs/cephaas?topic=cephaas-cluster-health-indicators)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 - [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)

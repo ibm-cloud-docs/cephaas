@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-03-11"
+ years: 2024, 2026
+lastupdated: "2026-05-19"
 
 keywords: about block storage volume, volume encryption, IAM permissions for block storage volume, ceph as a service
 
@@ -29,7 +29,7 @@ When you create, view, or update a volume, the volume state is reported in the U
 
 Block Storage requires IAM permissions for role-based access control. Depending on your assigned role, you can create and manage volumes. For more information, see [IAM roles and actions](/docs/cephaas?topic=cephaas-managing-iam).
 
-For more information, see the [best practices for assigning access](/docs/account?topic=account-account_setup#account_setup). For the complete IAM process, which includes inviting users to your account and assigning Cloud IAM access, see the [IAM getting started tutorial](/docs/account?topic=account-iamoverview).
+For more information, see the [best practices for assigning access](/docs/account?topic=account-account_setup). For the complete IAM process, which includes inviting users to your account and assigning Cloud IAM access, see the [IAM getting started tutorial](/docs/account?topic=account-iamoverview).
 {: tip}
 
 
