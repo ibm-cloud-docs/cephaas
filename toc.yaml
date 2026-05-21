@@ -25,6 +25,7 @@ toc:
           - power_requirements.md
           - network_requirements.md
           - network_latency.md
+          - gpu-availability.md
       - topicgroup:
           label: Getting organized
           topics:

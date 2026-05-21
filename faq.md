@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-12-09"
+ years: 2024, 2026
+lastupdated: "2026-05-21"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -17,9 +17,106 @@ subcollection: cephaas
 
 Frequently asked questions (FAQs) provide you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
 
+* [Compute](/docs/cephaas?topic=cephaas-faq#compute-faq)
 * [Block and Object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
 * [Low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
 * [Monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
+
+## FAQ about Compute
+{: #compute-faq}
+
+### What is FusionaaS Compute?
+{: faq}
+{: #faq-what-is-fusionaas-compute}
+
+FusionaaS Compute is part of IBM's Fusion as a Service offering that provides fully managed Red Hat OpenShift on IBM Cloud clusters delivered on-premises. It combines the power of OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
+
+### How does FusionaaS Compute differ from traditional on-premises OpenShift?
+{: faq}
+{: #faq-fusionaas-vs-traditional}
+
+FusionaaS Compute eliminates the need for large upfront capital investments and self-managed infrastructure. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications. You benefit from pay-as-you-grow pricing, automated lifecycle management by IBM SRE teams, and 24x7 monitoring without requiring deep OpenShift and infrastructure expertise in-house.
+
+### How do I get started with FusionaaS Compute?
+{: faq}
+{: #faq-how-to-get-started-compute}
+
+To get started:
+1. Use the cost estimation tool in the IBM Cloud catalog to understand pricing
+2. Submit a consultation request to discuss your requirements with IBM experts
+3. Create or select an IBM Cloud Satellite location for your deployment
+4. Review data center prerequisites to ensure your facility meets requirements
+5. Work with IBM to install and configure FusionaaS in your data center
+6. Begin provisioning OpenShift clusters through the IBM Cloud console
+
+For detailed instructions, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
+
+### How do I create a cluster in FusionaaS Compute?
+{: faq}
+{: #faq-how-to-create-cluster}
+
+To create a cluster:
+1. Log in to the IBM Cloud console and open your Fusion as a Service deployment
+2. Navigate to **Compute** > **Clusters**
+3. Click **Create cluster**
+4. Follow the Red Hat OpenShift on IBM Cloud Satellite workflow to configure cluster details including name, OpenShift version, number of worker nodes, vCPU and memory per node, and optional GPU-enabled worker nodes
+5. Review and create the cluster
+
+The cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite and appears in your IBM Cloud account.
+
+### What are Fusion services?
+{: faq}
+{: #faq-what-are-fusion-services}
+
+Fusion services enable clusters to use storage capacity from your Fusion as a Service deployment. When you enable Fusion services for a cluster, you assign a storage quota that determines how much storage capacity the cluster can consume from the deployment.
+
+### What is the default cluster storage quota?
+{: faq}
+{: #faq-what-is-default-cluster-quota}
+
+The default cluster storage quota is the amount of storage capacity automatically allocated when you enable Fusion services for a cluster. This setting provides a consistent baseline for storage allocation across your deployment. The default quota is used when an administrator enables Fusion services and accepts the default value, or when a new cluster needs an initial storage allocation.
+
+### Can I update the storage quota for an individual cluster?
+{: faq}
+{: #faq-update-individual-cluster-quota}
+
+Yes, administrators can update a cluster's storage quota independently of the default quota. This allows you to customize storage allocations based on specific cluster requirements. The quota must fit within the available deployment storage capacity.
+
+### What permissions do I need to create and manage clusters?
+{: faq}
+{: #faq-required-permissions-compute}
+
+You need appropriate IAM permissions in your IBM Cloud account to create and manage clusters. Administrator users have full access to deployment settings, cluster management, and storage operations. Non-administrator users can view deployment and cluster information but cannot change storage settings or perform management actions.
+
+### How do I monitor cluster health?
+{: faq}
+{: #faq-monitor-cluster-health}
+
+Monitor cluster health by:
+- Reviewing health indicators in the cluster list
+- Opening cluster details to see detailed status information
+- Checking for warnings or alerts that require action
+- Reviewing storage quota and usage metrics
+- Accessing the OpenShift console for cluster-level operations
+
+IBM SRE teams provide 24x7 monitoring of infrastructure health, performance, and security.
+
+### What should I do if I see a warning indicator on a cluster?
+{: faq}
+{: #faq-handle-cluster-warning}
+
+When you see a warning indicator:
+1. Review the message or indicator shown in the UI
+2. Open cluster details for more context
+3. Check if storage usage is approaching the quota limit
+4. Determine if you need administrator help, a quota change, or further investigation
+5. Take corrective action as needed or contact support
+
+### Can I add more capacity to my deployment?
+{: faq}
+{: #faq-add-capacity-deployment}
+
+Yes, IBM monitors usage trends and works with you to plan capacity expansions. Contact your IBM representative to discuss adding compute, storage, or GPU capacity to your deployment.
 
 ## FAQ about block and object storage
 {: #block-storage-faq}

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-05-21"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -56,7 +56,7 @@ FusionaaS offers flexible billing options based on your workload requirements. Y
 ### Compute billing option
 {: #compute-billing}
 
-The **Compute** option enables you to provision and manage Red Hat OpenShift on IBM Cloud (ROKS) clusters in your on-premises environment.
+The **Compute** option enables you to provision and manage Red Hat OpenShift on IBM Cloud clusters in your on-premises environment.
 
 **What you get:**
 - Fully managed OpenShift clusters with IBM SRE support
@@ -114,7 +114,7 @@ FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. Use the 
    - Select the number of OpenShift clusters you plan to deploy
    - Choose cluster size (number of worker nodes)
    - Specify GPU requirements if needed
-   - Select subscription term (monthly commitment options available)
+   - Select subscription term
 
 4. For Storage billing:
    - Select the **Storage Tier**: **Performance** or **Capacity**
@@ -194,6 +194,11 @@ After your order is processed, you will receive an email with a **Prepare deploy
 
 Now that you understand FusionaaS and have initiated your deployment:
 
-**Learn more**: Read [What is Fusion as a Service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information
-**Prepare your environment**: Review [data center prerequisites](/docs/cephaas?topic=cephaas-pre_installation_checklist)
-**Complete deployment setup**: After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas)
+Learn more
+:   Read [What is Fusion as a Service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.
+
+Prepare your environment
+:   Review [data center prerequisites](/docs/cephaas?topic=cephaas-pre_installation_checklist).
+
+Complete deployment setup
+:   After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).

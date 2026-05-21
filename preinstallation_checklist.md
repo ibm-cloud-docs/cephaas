@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-05-21"
 
 
 keywords: preorder, checklist, preinstallation checklist, site-readiness, ceph as a service, network validation, account activation
@@ -13,7 +13,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites for installing {{site.data.keyword.cephaas_full_notm}}
+# Prerequisites for installing Fusion as a Service
 {: #pre_installation_checklist}
 
 
