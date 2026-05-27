@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-05-27"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
@@ -30,10 +30,10 @@ IAM access policies enable access to be granted at different levels. Some of the
 
 After defining the scope of the access policy, assign a role.
 
-## Service-to-Service (S2S) authorization policy
+## Service-to-Service (S2S) authorization policy for Compute
 {: #s2s-authorization}
 
-Fusion as a Service requires authorization to interact with {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.satellitelong_notm}} services. To enable this interaction, you must create a service-to-service (S2S) authorization policy in IAM that grants Fusion as a Service Administrator-level access to these services.
+Fusion as a Service compute resources requires authorization to interact with {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.satellitelong_notm}} services. To enable this interaction, you must create a service-to-service (S2S) authorization policy in IAM that grants Fusion as a Service Administrator-level access to these services.
 
 ### Prerequisites
 {: #s2s-prerequisites}
@@ -57,10 +57,7 @@ To create the required S2S authorization policies:
 
 These authorization policies enable Fusion as a Service to provision and manage compute infrastructure on your behalf.
 
-### Context tokens
-{: #context-tokens}
 
-Fusion as a Service uses context tokens to securely access {{site.data.keyword.openshiftlong_notm}} clusters on your behalf. When you access the Fusion as a Service GUI, it calls the control plane APIs with your access token, which is validated for the proper role and action for your Fusion as a Service instance. The service then uses context tokens to retrieve the list of {{site.data.keyword.openshiftlong_notm}} clusters from the containers-kubernetes service that you are authorized to view. This orchestration using context tokens enforces Context-Based Restrictions (CBR) as described in the [IAM documentation](/docs/account?topic=account-context-restrictions-whatis).
 
 ## IAM roles and actions
 {: #iam-roles-actions}
@@ -79,6 +76,10 @@ Review the following tables that outline what types of tasks each role allows wh
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
+## Service access roles for compute resources
+{: #service-access-roles}
+
+In addition to platform and storage roles, Fusion as a Service uses service access roles to control operations on compute clusters within your deployments. These roles determine what actions users can perform on clusters. 
 
 | Service role |  Description of actions |
 |--------------|------------------------|
