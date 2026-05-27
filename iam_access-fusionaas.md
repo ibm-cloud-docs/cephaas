@@ -30,7 +30,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 
 After defining the scope of the access policy, assign a role.
 
-## Service-to-Service (S2S) authorization policy for Compute
+## Service-to-Service (S2S) authorization policy for compute
 {: #s2s-authorization}
 
 Fusion as a Service compute resources requires authorization to interact with {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.satellitelong_notm}} services. To enable this interaction, you must create a service-to-service (S2S) authorization policy in IAM that grants Fusion as a Service Administrator-level access to these services.
@@ -76,7 +76,7 @@ Review the following tables that outline what types of tasks each role allows wh
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
-## Service access roles for compute resources
+## Service access roles for compute
 {: #service-access-roles}
 
 In addition to platform and storage roles, Fusion as a Service uses service access roles to control operations on compute clusters within your deployments. These roles determine what actions users can perform on clusters. 
