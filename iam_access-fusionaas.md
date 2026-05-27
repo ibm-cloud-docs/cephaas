@@ -83,8 +83,8 @@ In addition to the above roles, Fusion as a Service uses service access roles to
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Reader       | As a reader, you can view service level resources such as clusters and storage. |
-| Manager      | As a manager, you can create, update, delete and view service level resources such as volumes, hosts, S3 credentials, and clusters. |
+| Reader       | As a reader, you can view service level compute resources such as clusters. |
+| Manager      | As a manager, you can create, update, delete and view service level compute and storage resources such as volumes, hosts, S3 credentials, and clusters. |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
