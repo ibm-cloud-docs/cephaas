@@ -76,14 +76,14 @@ Review the following tables that outline what types of tasks each role allows wh
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
-## Service access roles for compute
+## Service access roles 
 {: #service-access-roles}
 
-In addition to platform and storage roles, Fusion as a Service uses service access roles to control operations on compute clusters within your deployments. These roles determine what actions users can perform on clusters. 
+In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform. 
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Reader       | As a reader, you can view service level resources such as clusters. |
+| Reader       | As a reader, you can view service level resources such as clusters and storage. |
 | Manager      | As a manager, you can create, update, delete and view service level resources such as volumes, hosts, S3 credentials, and clusters. |
 {: row-headers}
 {: class="simple-tab-table"}
