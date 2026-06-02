@@ -21,12 +21,7 @@ GPU resources in your Fusion as a Service deployment determine how GPU-enabled w
 ## Available GPU types
 {: #gpu-types}
 
-Fusion as a Service supports the following GPU types for your workloads:
-
-NVIDIA H100
-:   High-performance GPUs designed for AI, machine learning, and data analytics workloads. These GPUs provide exceptional compute power for demanding applications.
-
-The specific GPU models and quantities available depend on your deployment configuration. GPU availability must be determined at order time as part of your initial deployment planning.
+The GPU types and quantities available in your Fusion as a Service deployment depend on your specific deployment configuration. GPU availability must be determined at order time as part of your initial deployment planning. Contact your IBM representative to discuss the GPU options available for your deployment.
 
 ## GPU ordering and configuration
 {: #gpu-ordering}
