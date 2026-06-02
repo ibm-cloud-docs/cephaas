@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-02"
 
 keywords: fusion as a service, onboarding, welcome modal, first time user, cluster quota, set cluster quota, getting started
 
@@ -75,7 +75,7 @@ As a non-administrator user, you can proceed directly to view your clusters.
 The **Set cluster quota** button is not available for non-administrator users. Only administrators can set or modify the default cluster storage quota.
 {: note}
 
-## After onboardin
+## After onboarding
 {: #after-onboarding}
 
 After you complete the onboarding flow, you can access your deployment directly from the {{site.data.keyword.cloud_notm}} console.
