@@ -53,7 +53,7 @@ toc:
           - cluster-access.md
           - view-clusters.md
           - cluster-health-indicators.md
-          - gpu-operators-setup.md
+          - gpu-setup.md
           - topicgroup:
               label: Managing cluster storage
               topics:
