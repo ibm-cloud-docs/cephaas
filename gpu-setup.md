@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-03"
 
 keywords: gpu operators, nfd operator, nvidia gpu operator, node feature discovery, gpu setup, satellite roks, openshift gpu configuration
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Using GPUs in your clusters
 {: #fusionaas-using-gpus}
 
-Fusion as a Service (FusionaaS) supports running GPU-enabled workloads on Red Hat OpenShift on IBM Cloud (ROKS) clusters that are created in your deployment. GPU-enabled clusters allow you to accelerate compute-intensive workloads such as AI, machine learning, and data processing.
+Fusion as a Service (FusionaaS) supports running GPU-enabled workloads on Red Hat OpenShift on IBM Cloud Satellite (ROKS) clusters that are created in your deployment. GPU-enabled clusters allow you to accelerate compute-intensive workloads such as AI, machine learning, and data processing.
 {: shortdesc}
 
 ## About GPU workloads in FusionaaS
@@ -23,9 +23,9 @@ Fusion as a Service (FusionaaS) supports running GPU-enabled workloads on Red Ha
 
 In FusionaaS:
 
-- GPU support is available through **GPU-enabled worker nodes** in your ROKS clusters.
+- GPU support is available through **GPU-enabled worker nodes** in your Red Hat OpenShift clusters.
 - GPU capacity is limited by the resources available in your deployment.
-- Clusters are created in the **IBM Cloud console** and managed through the **OpenShift web console**.
+- Clusters are created in the **IBM Cloud console** and managed through the **Red Hat OpenShift web console**.
 - You are responsible for enabling GPU support within the cluster and deploying GPU workloads.
 
 ## Before you begin
@@ -53,7 +53,7 @@ In the preceding topic:
 - Follow the "Deploying an app on an NVIDIA GPU machine" section
 - Use the link to install the Node Feature Discovery (NFD) and NVIDIA GPU operators for your cluster version
 
-Operator installation and configuration depend on the OpenShift version of your cluster. Always follow the documentation that matches your cluster version.
+Operator installation and configuration depend on the Red Hat OpenShift version of your cluster. Always follow the documentation that matches your cluster version.
 {: important}
 
 ## Deploy GPU workloads

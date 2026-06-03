@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-06-03"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -18,7 +18,7 @@ An IBM representative will contact you to understand your requirements. Post dis
 # Getting started with Fusion as a Service
 {: #getting-started}
 
-Fusion as a Service (FusionaaS) is IBM's fully managed OpenShift platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
+Fusion as a Service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision Red Hat OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
 {: shortdesc}
 
 This topic guides you through understanding FusionaaS capabilities, estimating costs, and getting started with your deployment.
@@ -31,7 +31,7 @@ FusionaaS combines the power of Red Hat OpenShift with IBM's enterprise-grade in
 ### Key benefits
 {: #key-benefits}
 
-- **Fully managed OpenShift on-premises**: IBM Site Reliability Engineering (SRE) teams handle installation, configuration, monitoring, patching, upgrades, and day-to-day operations.
+- **Fully managed Red Hat OpenShift on-premises**: IBM Site Reliability Engineering (SRE) teams handle installation, configuration, monitoring, patching, upgrades, and day-to-day operations.
 - **Cloud consumption pricing**: Pay only for what you use with metered usage and flexible monthly commitments—no large upfront capital expenditures.
 - **IBM SRE-led lifecycle management**: 24x7 monitoring, proactive maintenance, rapid incident response, and coordinated platform updates.
 - **Enterprise-grade security, resiliency, and observability**: Multi-layered security controls, redundant components, automated failover, and comprehensive monitoring.
@@ -44,7 +44,7 @@ With FusionaaS, IBM delivers, installs, and operates infrastructure in your data
 
 - **IBM-owned infrastructure**: IBM provides optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}.
 - **Fully managed operations**: IBM handles all operational complexity while you retain physical control of your data.
-- **Self-service provisioning**: Provision OpenShift clusters and storage through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
+- **Self-service provisioning**: Provision Red Hat OpenShift clusters and storage through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
 - **Flexible scaling**: Scale resources on-demand without procurement delays.
 
 ## Understanding billing options
@@ -56,10 +56,10 @@ FusionaaS offers flexible billing options based on your workload requirements. Y
 ### Compute billing option
 {: #compute-billing}
 
-The **Compute** option enables you to provision and manage Red Hat OpenShift on IBM Cloud clusters in your on-premises environment.
+The **Compute** option enables you to provision and manage Red Hat OpenShift on IBM Cloud Satellite clusters in your on-premises environment.
 
 **What you get:**
-- Fully managed OpenShift clusters with IBM SRE support
+- Fully managed Red Hat OpenShift clusters with IBM SRE support
 - Self-service cluster provisioning through {{site.data.keyword.cloud_notm}} console
 - Automated lifecycle management (upgrades, patching, monitoring)
 - GPU support for AI and data-intensive workloads
@@ -95,7 +95,7 @@ The **Storage** option provides access to IBM Storage Ceph as a Service with two
 {: #combined-billing}
 
 You can select both Compute and Storage options to create a complete on-premises cloud platform:
-- Deploy containerized applications on managed OpenShift clusters
+- Deploy containerized applications on managed Red Hat OpenShift clusters
 - Consume high-performance or capacity storage as needed
 - Benefit from integrated management and unified billing
 - Scale compute and storage independently based on workload demands
@@ -111,7 +111,7 @@ FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. Use the 
 2. Click **Estimate Cost** to access the cost estimation tool.
 
 3. For Compute billing:
-   - Select the number of OpenShift clusters you plan to deploy
+   - Select the number of Red Hat OpenShift clusters you plan to deploy
    - Choose cluster size (number of worker nodes)
    - Specify GPU requirements if needed
    - Select subscription term

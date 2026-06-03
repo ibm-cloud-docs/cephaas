@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-06-03"
 
 keywords: cluster creation, Fusion as a Service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
@@ -75,7 +75,7 @@ The service redirects you to the standard IBM Cloud workflow for creating Satell
 In the Satellite cluster wizard, specify the required configuration for your cluster, such as the following details:
 
 - Cluster name
-- OpenShift version
+- Red Hat OpenShift version
 - Number of worker nodes
 - vCPU and memory per node
 - Optional GPU-enabled worker nodes

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-21"
+lastupdated: "2026-06-03"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -29,13 +29,13 @@ Frequently asked questions (FAQs) provide you with helpful answers and insight i
 {: faq}
 {: #faq-what-is-fusionaas-compute}
 
-FusionaaS Compute is part of IBM's Fusion as a Service offering that provides fully managed Red Hat OpenShift on IBM Cloud clusters delivered on-premises. It combines the power of OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
+FusionaaS Compute is part of IBM's Fusion as a Service offering that provides fully managed Red Hat OpenShift on IBM Cloud Satellite clusters delivered on-premises. It combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
 
-### How does FusionaaS Compute differ from traditional on-premises OpenShift?
+### How does FusionaaS Compute differ from traditional on-premises Red Hat OpenShift?
 {: faq}
 {: #faq-fusionaas-vs-traditional}
 
-FusionaaS Compute eliminates the need for large upfront capital investments and self-managed infrastructure. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications. You benefit from pay-as-you-grow pricing, automated lifecycle management by IBM SRE teams, and 24x7 monitoring without requiring deep OpenShift and infrastructure expertise in-house.
+FusionaaS Compute eliminates the need for large upfront capital investments and self-managed infrastructure. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications. You benefit from pay-as-you-grow pricing, automated lifecycle management by IBM SRE teams, and 24x7 monitoring without requiring deep Red Hat OpenShift and infrastructure expertise in-house.
 
 ### How do I get started with FusionaaS Compute?
 {: faq}
@@ -47,7 +47,7 @@ To get started:
 3. Create or select an IBM Cloud Satellite location for your deployment
 4. Review data center prerequisites to ensure your facility meets requirements
 5. Work with IBM to install and configure FusionaaS in your data center
-6. Begin provisioning OpenShift clusters through the IBM Cloud console
+6. Begin provisioning Red Hat OpenShift clusters through the IBM Cloud console
 
 For detailed instructions, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
 
@@ -59,7 +59,7 @@ To create a cluster:
 1. Log in to the IBM Cloud console and open your Fusion as a Service deployment
 2. Navigate to **Compute** > **Clusters**
 3. Click **Create cluster**
-4. Follow the Red Hat OpenShift on IBM Cloud Satellite workflow to configure cluster details including name, OpenShift version, number of worker nodes, vCPU and memory per node, and optional GPU-enabled worker nodes
+4. Follow the Red Hat OpenShift on IBM Cloud Satellite workflow to configure cluster details including name, Red Hat OpenShift version, number of worker nodes, vCPU and memory per node, and optional GPU-enabled worker nodes
 5. Review and create the cluster
 
 The cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite and appears in your IBM Cloud account.
