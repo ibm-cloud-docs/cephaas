@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-04"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
@@ -62,7 +62,9 @@ These authorization policies enable Fusion as a Service to provision and manage 
 ## IAM roles and actions
 {: #iam-roles-actions}
 
-Review the following tables that outline what types of tasks each role allows when you're working with the Fusion as a Service service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to Fusion as a Service and the ability to call the Fusion as a Service API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
+Review the following tables that outline what types of tasks each role allows when you're working with the Fusion as a Service service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to Fusion as a Service and the ability to call the Fusion as a Service API.
+
+Fusion as a Service includes both compute resources (OpenShift clusters) and storage resources (volumes, hosts, S3 credentials). The roles apply to both resource types, but specific actions are categorized by resource type. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -76,15 +78,15 @@ Review the following tables that outline what types of tasks each role allows wh
 {: #iamrolesplatform}
 {: tab-title="Platform roles"}
 
-## Service access roles 
+## Service access roles
 {: #service-access-roles}
 
-In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform. 
+In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform on both compute resources (clusters) and storage resources (volumes, hosts, S3 credentials).
 
 | Service role |  Description of actions |
 |--------------|------------------------|
-| Reader       | As a reader, you can view service level compute resources such as clusters. |
-| Manager      | As a manager, you can create, update, delete and view service level compute and storage resources such as volumes, hosts, S3 credentials, and clusters. |
+| Reader       | As a reader, you can view service level compute resources such as clusters. This role does not provide access to storage resources. |
+| Manager      | As a manager, you can create, update, delete and view service level resources for both compute (clusters) and storage (volumes, hosts, S3 credentials). |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
@@ -96,32 +98,56 @@ In addition to the above roles, Fusion as a Service uses service access roles to
 ## Identity and access management actions mapped to roles
 {: #iam-actions}
 
+The following tables outline the IAM actions for Fusion as a Service, organized by resource type. Actions are categorized into deployment-level operations that apply to both compute and storage, storage-specific operations, and compute-specific operations.
+
+### Deployment-level actions
+{: #deployment-actions}
+
+These actions apply to the overall Fusion as a Service deployment and affect both compute and storage resources.
 
 | Action ID                                       | Roles                                     | Descriptions                      |
 | ------------------------------------------------|-------------------------------------------|-----------------------------------|
 | `resource-controller.instance.retrieve`         | Administrator, Editor, Operator, Viewer   | View and list FusionaaS deployments (compute and storage) but cannot modify the instance properties. |
 | `resource-controller.instance.create`           | Administrator, Editor                     | Create a FusionaaS deployment from the Fusion as a Service Deployments page, including provisioning OpenShift clusters and storage resources.  |
 | `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update a Fusion as a Service deployment. Allowed to modify deployment parameters such as name, quota settings, cluster configurations, and S3 certificates for object storage. |
-| `software-defined-storage.certificate.update`   |	Administrator, Editor, Operator           | Update S3 certificate for storage component |
-| `software-defined-storage.certificate.inspect`  |	Administrator, Editor, Operator, Viewer   | Inspect S3 certificate for storage component |
-| `software-defined-storage.certificate.delete`   |	Administrator, Editor, Operator           | Delete S3 certificates for storage component |
-| `software-defined-storage.certificate.create`   |	Administrator, Editor, Operator           | Create S3 certificate for storage component  |
-| `software-defined-storage.s3-credential.create` |	Manager                                   | Create S3 credentials for object storage |
-| `software-defined-storage.s3-credential.get`    |	Manager                                   | Get S3 credentials for object storage  |
-| `software-defined-storage.s3-credential.delete` |	Manager                                   | Delete S3 credentials for object storage |
-| `software-defined-storage.volume.create`        |	Manager                                   | Create a storage volume |
-| `software-defined-storage.volume.read`          |	Manager                                   | Read storage volumes  |
-| `software-defined-storage.volume.update`        |	Manager                                   | Update storage volumes  |
-| `software-defined-storage.volume.delete`        |	Manager                                   | Delete storage volumes  |
-| `software-defined-storage.host.create`          |	Manager                                   | Create storage hosts  |
-| `software-defined-storage.host.read`            |	Manager                                   | Read storage hosts  |
-| `software-defined-storage.host.update`          |	Manager                                   | Update storage hosts  |
-| `software-defined-storage.host.delete`          |	Manager                                   | Delete storage hosts  |
-| `software-defined-storage.host.unmap`           |	Manager                                   | Unmap storage hosts |
-| `software-defined-storage.host.map`             |	Manager                                   | Map storage hosts |
-| `software-defined-storage.cluster.view`         |	Reader                                    | View cluster properties and details |
-| `software-defined-storage.cluster.update`       |	Manager                                   | Update cluster quota and properties |
-{: caption="IAM action descriptions for FusionaaS" caption-side="bottom"}
+{: caption="Deployment-level IAM actions for FusionaaS" caption-side="bottom"}
+
+### Storage actions
+{: #storage-actions}
+
+These actions are specific to storage resources, including volumes, hosts, S3 credentials, and certificates.
+
+| Action ID                                       | Roles                                     | Descriptions                      |
+| ------------------------------------------------|-------------------------------------------|-----------------------------------|
+| `software-defined-storage.certificate.create`   | Administrator, Editor, Operator           | Create S3 certificate for storage component  |
+| `software-defined-storage.certificate.inspect`  | Administrator, Editor, Operator, Viewer   | Inspect S3 certificate for storage component |
+| `software-defined-storage.certificate.update`   | Administrator, Editor, Operator           | Update S3 certificate for storage component |
+| `software-defined-storage.certificate.delete`   | Administrator, Editor, Operator           | Delete S3 certificates for storage component |
+| `software-defined-storage.s3-credential.create` | Manager                                   | Create S3 credentials for object storage |
+| `software-defined-storage.s3-credential.get`    | Manager                                   | Get S3 credentials for object storage  |
+| `software-defined-storage.s3-credential.delete` | Manager                                   | Delete S3 credentials for object storage |
+| `software-defined-storage.volume.create`        | Manager                                   | Create a storage volume |
+| `software-defined-storage.volume.read`          | Manager                                   | Read storage volumes  |
+| `software-defined-storage.volume.update`        | Manager                                   | Update storage volumes  |
+| `software-defined-storage.volume.delete`        | Manager                                   | Delete storage volumes  |
+| `software-defined-storage.host.create`          | Manager                                   | Create storage hosts  |
+| `software-defined-storage.host.read`            | Manager                                   | Read storage hosts  |
+| `software-defined-storage.host.update`          | Manager                                   | Update storage hosts  |
+| `software-defined-storage.host.delete`          | Manager                                   | Delete storage hosts  |
+| `software-defined-storage.host.map`             | Manager                                   | Map storage hosts |
+| `software-defined-storage.host.unmap`           | Manager                                   | Unmap storage hosts |
+{: caption="Storage-specific IAM actions for FusionaaS" caption-side="bottom"}
+
+### Compute actions
+{: #compute-actions}
+
+These actions are specific to compute resources, including OpenShift clusters.
+
+| Action ID                                       | Roles                                     | Descriptions                      |
+| ------------------------------------------------|-------------------------------------------|-----------------------------------|
+| `software-defined-storage.cluster.view`         | Reader                                    | View cluster properties and details |
+| `software-defined-storage.cluster.update`       | Manager                                   | Update cluster quota and properties |
+{: caption="Compute-specific IAM actions for FusionaaS" caption-side="bottom"}
 
 
 ## Assigning access to Fusion as a Service in the console
