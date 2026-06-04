@@ -64,7 +64,7 @@ These authorization policies enable Fusion as a Service to provision and manage 
 
 Review the following tables that outline what types of tasks each role allows when you're working with the Fusion as a Service service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to Fusion as a Service and the ability to call the Fusion as a Service API.
 
-Fusion as a Service includes both compute resources (OpenShift clusters) and storage resources (volumes, hosts, S3 credentials). The roles apply to both resource types, but specific actions are categorized by resource type. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
+Fusion as a Service includes both compute resources (OpenShift clusters) and storage resources (volumes, hosts, S3 credentials, certificates). The roles apply to both resource types, but specific actions are categorized by resource type. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -81,12 +81,12 @@ Fusion as a Service includes both compute resources (OpenShift clusters) and sto
 ## Service access roles
 {: #service-access-roles}
 
-In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform on both compute resources (clusters) and storage resources (volumes, hosts, S3 credentials).
+In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform on both compute resources (clusters) and storage resources (volumes, hosts, S3 credentials, certificates).
 
 | Service role |  Description of actions |
 |--------------|------------------------|
 | Reader       | As a reader, you can view service level compute resources such as clusters. This role does not provide access to storage resources. |
-| Manager      | As a manager, you can create, update, delete and view service level resources for both compute (clusters) and storage (volumes, hosts, S3 credentials). |
+| Manager      | As a manager, you can create, update, delete and view service level resources for both compute (clusters) and storage (volumes, hosts, S3 credentials, certificates). |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM service access roles" caption-side="bottom"}
