@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-06-08"
 
 keywords: sds, cephaas, cephaas, set up environment, api, cli, ceph as a service
 
@@ -108,7 +108,7 @@ The following examples use the `us-south` regional endpoint.
 ### Step 1: Store your API key as a variable
 {: #store-api-key-variable}
 
-Run the following command to store the API key for your account in an environment variable. If you don't have an API key, see [Creating an API key](/docs/account?topic=account-userapikey#create_user_key).
+Run the following command to store the API key for your account in an environment variable. If you don't have an API key, see [Creating an API key](/docs/account?topic=account-userapikey).
 
 ```bash
 apikey="<YOUR_API_KEY>"

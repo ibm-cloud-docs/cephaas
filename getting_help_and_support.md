@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-06-08"
 
 keywords: ceph as a service, sds, getting help, getting cephaas support
 
@@ -37,4 +37,4 @@ If you experience an issue or have questions when using the {{site.data.keyword.
 
 
 
-If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/account?topic=account-open-case#creating-support-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
+If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).

@@ -52,7 +52,9 @@ toc:
           - create-clusters.md
           - cluster-access.md
           - view-clusters.md
+          - view-cluster-storage-status.md
           - cluster-health-indicators.md
+          - monitor-cluster-health.md
           - gpu-setup.md
           - topicgroup:
               label: Managing cluster storage

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-08"
 
 keywords: gpu operators, nfd operator, nvidia gpu operator, node feature discovery, gpu setup, satellite roks, openshift gpu configuration
 
@@ -47,7 +47,7 @@ To run GPU workloads, you must install and configure the required operators in y
 
 FusionaaS does not manage these operators. You must install them in your cluster by following the Red Hat OpenShift and IBM Cloud documentation.
 
-For instructions, see [Deploying an app on a GPU machine](https://cloud.ibm.com/docs/openshift?topic=openshift-deploy_app&interface=ui#gpu_app){: external}.
+For instructions, see [Deploying an app on a GPU machine](/docs/openshift?topic=openshift-deploy_app&interface=ui#gpu_app).
 
 In the preceding topic:
 - Follow the "Deploying an app on an NVIDIA GPU machine" section
