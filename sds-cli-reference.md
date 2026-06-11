@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-05-01"
+lastupdated: "2026-06-11"
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 
@@ -20,26 +20,21 @@ The {{site.data.keyword.cephaas_full_notm}} plug-in extends the {{site.data.keyw
 {: shortdesc}
 
 
-## Before you begin
-{: #before-you-begin-using-cli}
+## Prerequisites
+{: #ic-sds-cli-prereq}
 
-Before you can use the {{site.data.keyword.cephaas_full_notm}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the `software-defined-storage` CLI plug-in. For instruction on how to install the {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started)
-
-
-
-## Installation and configuration
-{: #ic-sds-installation}
+Before you can use the {{site.data.keyword.cephaas_full_notm}} CLI plug-in, you must first install the {{site.data.keyword.cloud_notm}} CLI, login to the CLI and then install the `software-defined-storage` CLI plug-in. For instruction on how to install the {{site.data.keyword.cloud_notm}} CLI, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
 
 The plug-in is compatible with linux64, Windows&reg;, and macOS&reg; platforms that run on 64-bit processors.
 
-Install the plug-in by using the `plugin install` command.
+Install the plug-in by using the `plugin install` command:
 
 ```sh
 ibmcloud plugin install software-defined-storage
 ```
 {: pre}
 
-Once the plug-in is installed, you can verify the installation by running the software-defined-storage plugin which will display the help.
+Once the plug-in is installed, you can verify the installation by running the software-defined-storage plugin which will display the help:
 
 ```sh
 ibmcloud software-defined-storage --help
@@ -90,8 +85,10 @@ Aliases of `software-defined-storage`: `sds`
 ## Block storage
 {: #block-storage-cmds}
 
-### Create volume
+### `ibmcloud sds volume-create`
 {: #ic-create-volume}
+
+Use this command to create a new volume with the specified capacity.
 
 ```sh
 ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID]
@@ -141,8 +138,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
     {: note}
 
 
-### Retrieve a single volume details
+### `ibmcloud sds volume`
 {: #ic-retrieve-volume-details}
+
+Use this command to retrieve details for a single volume.
 
 ```sh
 ibmcloud sds volume --volume-id VOLUME-ID --url string
@@ -170,10 +169,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Update a volume
+### `ibmcloud sds volume-update`
 {: #ic-update-volume}
 
-Use `volume-update` command along with the new information provided in volume patch parameter to update the volume capacity or the volume name.
+Use this command along with the new information provided in volume patch parameter to update the volume capacity or the volume name.
 
 You can change only one parameter value at a time in the command. More than one change in the same command is not supported.
 {: note}
@@ -217,8 +216,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Delete a single volume
+### `ibmcloud sds volume-delete`
 {: #ic-delete-volume}
+
+Use this command to delete a single volume.
 
 ```sh
 ibmcloud sds volume-delete --volume-id VOLUME-ID --url string
@@ -247,8 +248,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### List all volumes
+### `ibmcloud sds volumes`
 {: #ic-list-volumes}
+
+Use this command to list all volumes.
 
 
 ```sh
@@ -285,8 +288,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ## Hosts
 {: #ic-sds-hosts}
 
-### Create a new host
+### `ibmcloud sds host-create`
 {: #ic-create-host-from-template}
+
+Use this command to create a new host.
 
 ```sh
 ibmcloud sds host-create --name NAME --nqn NQN [--volume-mappings VOLUME-MAPPINGS | @VOLUME-MAPPINGS-FILE] --url string --psk string
@@ -330,8 +335,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Retrieve a single host
+### `ibmcloud sds host`
 {: #ic-retrieve-host-profile}
+
+Use this command to retrieve details for a single host.
 
 ```sh
 ibmcloud sds host --host-id HOST-ID --url string
@@ -358,8 +365,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### List all hosts
+### `ibmcloud sds hosts`
 {: #ic-sds-list-all-hosts}
+
+Use this command to list all hosts.
 
 ```sh
 ibmcloud sds hosts [--limit LIMIT] --url string
@@ -390,8 +399,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### Update a host
+### `ibmcloud sds host-update`
 {: #ic-sds-update-host}
+
+Use this command to update a host.
 
 ```sh
 ibmcloud sds host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATCH-FILE] --url string
@@ -430,8 +441,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Map volume to a host
+### `ibmcloud sds host-mapping-create`
 {: #ic-map-volume-to-host}
+
+Use this command to map a volume to a host.
 
 
 ```sh
@@ -479,8 +492,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### View all host-mappings for a host
+### `ibmcloud sds host-mappings`
 {: #ic-view-all-host-mappings}
+
+Use this command to view all host-mappings for a host.
 
 ```sh
 ibmcloud sds host-mappings --host-id HOST-ID
@@ -509,8 +524,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### View a single host mapping for a host
+### `ibmcloud sds host-mapping`
 {: #ic-view-host-mapping}
+
+Use this command to view a single host mapping for a host.
 
 ```sh
 ibmcloud sds host-mapping --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
@@ -543,8 +560,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Delete a host
+### `ibmcloud sds host-delete`
 {: #ic-delete-host}
+
+Use this command to delete a host.
 
 ```sh
 ibmcloud sds host-delete --host-id HOST-ID --url string
@@ -573,8 +592,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Delete a single volume mapping from a host
+### `ibmcloud sds host-mapping-delete`
 {: #ic-delete-single-volume-from-host}
+
+Use this command to delete a single volume mapping from a host.
 
 ```sh
 ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
@@ -606,8 +627,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### Delete all volume mappings associated with a host
+### `ibmcloud sds host-mapping-delete-all`
 {: #ic-delete-all-volume-mapped-to-host}
+
+Use this command to delete all volume mappings associated with a host.
 
 ```sh
 ibmcloud sds host-mapping-delete-all --host-id HOST-ID
@@ -642,10 +665,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ## Object storage
 {: #object-storage-cmds}
 
-### Create a service credential
+### `ibmcloud sds cred-create`
 {: #ic-create-service-cred}
 
-Updates credentials for a storage account or creates them if they do not exist.
+Use this command to update credentials for a storage account or create them if they do not exist.
 
 ```sh
 ibmcloud sds cred-create --access-key ACCESS-KEY --url string
@@ -674,8 +697,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Delete a service credential
+### `ibmcloud sds cred-delete`
 {: #ic-delete-service-cred}
+
+Use this command to delete a service credential.
 
 ```sh
 ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
@@ -704,10 +729,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### List service credential
+### `ibmcloud sds creds`
 {: #ic-list-service-cred}
 
-Retrieves credentials for a specific storage account.
+Use this command to retrieve credentials for a specific storage account.
 
 ```sh
 ibmcloud sds creds --url string
@@ -734,10 +759,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 
-### View certificate types
+### `ibmcloud sds cert-types`
 {: #ic-cert-types}
 
-Retrieves the list of configured SSL Certificates.
+Use this command to retrieve the list of configured SSL certificate types.
 
 ```sh
 ibmcloud sds cert-types --url string
@@ -763,10 +788,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Create a certificate
+### `ibmcloud sds cert-create`
 {: #ic-create-cert}
 
-Creates a new SSL Certificates if one does not exist.
+Use this command to create a new SSL certificate if one does not exist.
 
 ```sh
 ibmcloud sds cert-create --cert CERT --body BODY --url string
@@ -800,10 +825,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Update a certificate
+### `ibmcloud sds cert-update`
 {: #ic-update-cert}
 
-Updates the existing SSL Certificate.
+Use this command to update an existing SSL certificate.
 
 ```sh
 ibmcloud sds cert-update --cert CERT --body BODY --url string
@@ -836,10 +861,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-### Retrieve certificate details
+### `ibmcloud sds cert`
 {: #ic-retrieve-cert-details}
 
-Retrieves the SSL certificate expiration date and status.
+Use this command to retrieve the SSL certificate expiration date and status.
 
 ```sh
 ibmcloud sds cert --cert CERT --url string
@@ -869,10 +894,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 
-### Delete certificate
+### `ibmcloud sds cert-delete`
 {: #ic-delete-cert}
 
-Deletes the SSL certificate.
+Use this command to delete an SSL certificate.
 
 ```sh
 ibmcloud sds cert-delete --cert CERT --url string
@@ -908,8 +933,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 ## Snapshot commands
 {: #ic-snapshot-cmds}
 
-### Create snapshot
+### `ibmcloud sds volume-snapshot-create`
 {: #ic-create-snapshot}
+
+Use this command to create a snapshot of a volume.
 
 ```sh
 ibmcloud sds volume-snapshot-create [--source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) | --source-volume-id SOURCE-VOLUME-ID] [--name NAME]
@@ -935,8 +962,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Unique name for the snapshot. Optional parameter.
     * Flag: `--name`
 
-### List a single snapshot
+### `ibmcloud sds volume-snapshot`
 {: #ic-list-snapshot}
+
+Use this command to retrieve details for a single snapshot.
 
 ```sh
 ibmcloud sds volume-snapshot --snap-id SNAP-ID
@@ -961,8 +990,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Snapshot identifier for which you want to retrieve the details.
     * Flag: `--snap-id`
 
-### List all snapshots
+### `ibmcloud sds volume-snapshots`
 {: #ic-list-snapshots}
+
+Use this command to list all snapshots.
 
 ```sh
 ibmcloud sds volume-snapshots [--start START] [--limit LIMIT] [--name NAME] [--source-volume-id SOURCE-VOLUME-ID]
@@ -1004,8 +1035,10 @@ The following parameters are optional.
 * When listing volume snapshots, this option will automatically make multiple requests to retrieve and display all pages of results, so you see the entire collection without manually paging through results.
     * Flag: `all-pages`
 
-### Update a snapshot
+### `ibmcloud sds volume-snapshot-update`
 {: #ic-update-snapshot}
+
+Use this command to update a snapshot.
 
 ```sh
 ibmcloud sds volume-snapshot-update --snap-id SNAP-ID [--snapshot-patch SNAPSHOT-PATCH | @SNAPSHOT-PATCH-FILE]
@@ -1038,8 +1071,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
     * Flag: `--snapshot-patch`
 
 
-### Restore a volume from a snapshot
+### `ibmcloud sds volume-create` (restore from snapshot)
 {: #ic-restore-volume-from-snapshot}
+
+Use this command to restore a volume from a snapshot.
 
 ```sh
 ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID]
@@ -1070,8 +1105,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * The unique snapshot identifier to restore from.
     * Flag: `--source-snapshot-id`
 
-### Delete a snapshot
+### `ibmcloud sds volume-snapshot-delete`
 {: #ic-delete-snapshot}
+
+Use this command to delete a single snapshot.
 
 ```sh
 ibmcloud sds volume-snapshot-delete --snap-id SNAP-ID
@@ -1102,8 +1139,10 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * Unique snapshot identifier that you want to delete.
     * Flag: `--snap-id`
 
-### Delete all snapshots
+### `ibmcloud sds volume-snapshots-delete`
 {: #ic-delete-snapshots}
+
+Use this command to delete all snapshots for a volume.
 
 ```sh
 ibmcloud sds volume-snapshot-delete [--source-volume-id SOURCE-VOLUME-ID]
@@ -1187,10 +1226,10 @@ pc@mac ~ % ibmcloud sds volumes
 
 
 
-### Retrieve configuration values
+### `ibmcloud sds config get`
 {: #ic-get-config-values}
 
-Use `get` option with `config` command to retrieve the currently set value for a specific option.
+Use this command to retrieve the currently set value for a specific option.
 
 When `Get` option is used together with `url` option, the currently set value for the 'url' option is retrieved.
 
@@ -1207,10 +1246,10 @@ http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 ```
 {: screen}
 
-### List all configuration values
+### `ibmcloud sds config list`
 {: #ic-list-config-values}
 
-Use `List` option with `config` command to retrieve and view all of the currently set configured values.
+Use this command to retrieve and view all of the currently set configured values.
 
 ```sh
 ibmcloud sds config list
@@ -1227,10 +1266,10 @@ http://sds-endpoint.satellite.cloud.ibm.com:33189/v1
 {: screen}
 
 
-### Set new config values
+### `ibmcloud sds config set`
 {: #ic-set-config-values}
 
-Use `set` option with `config` command to configure new values for a specific option.
+Use this command to configure new values for a specific option.
 
 ```sh
 ibmcloud sds config set [url]
@@ -1247,10 +1286,10 @@ pc@mac ~ % ibmcloud sds config set url http://sds-endpoint.satellite.cloud.ibm.c
 {: screen}
 
 
-### Unset config values
+### `ibmcloud sds config unset`
 {: #ic-unset-config-values}
 
-Use `unset` option with `config` command to reset the current configured values for a specific option.
+Use this command to reset the current configured values for a specific option.
 
 ```sh
 ibmcloud sds config unset [url]
