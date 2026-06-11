@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-06-11"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
@@ -156,15 +156,15 @@ These actions are specific to compute resources, including OpenShift clusters.
 
 There are two common ways to assign access in the console:
 
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources in the console](/docs/account?topic=account-assign-access-resources).
-* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups).
+* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources in the console](/docs/iam?topic=iam-assign-access-resources).
+* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/iam?topic=iam-groups).
 
 
 ## Assigning access to Fusion as a Service in the CLI
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources). The following example shows a command for assigning the `<Manager>` role for `<Fusion as a Service>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/iam?topic=iam-assign-access-resources). The following example shows a command for assigning the `<Manager>` role for `<Fusion as a Service>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -179,7 +179,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 {: #assign-access-api}
 {: api}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources) or the [Create a policy API doc](/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/iam?topic=iam-assign-access-resources) or the [Create a policy API doc](/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
 
 | Role name | Role CRN |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-06-11"
 
 keywords: cluster storage status, storage usage, cluster quota, Fusion as a Service storage
 
@@ -106,4 +106,4 @@ Review cluster storage status in the following situations:
 
 - [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
 - [Understand storage quota validation and error states](/docs/cephaas?topic=cephaas-storage-quota-validation)
-- [Identify clusters that need attention](/docs/cephaas?topic=cephaas-clusters-need-attention)
+- [Identify clusters that need attention](/docs/cephaas?topic=cephaas-monitor-cluster-health)

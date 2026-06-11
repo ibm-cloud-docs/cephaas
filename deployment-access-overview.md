@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-11"
 
 keywords: fusion as a service, Fusion as a Service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
 
@@ -131,7 +131,7 @@ Use the Clusters page for the following tasks:
 
 After you open the deployment, you can do the following tasks:
 
-- [View cluster details and status](/docs/cephaas?topic=cephaas-view-clusters)
+- [View cluster details and status](/docs/cephaas?topic=cephaas-view-cluster-list)
 - [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)
-- [Update cluster storage quota](/docs/cephaas?topic=cephaas-edit-cluster-quota)
+- [Update cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
 - [Monitor cluster health](/docs/cephaas?topic=cephaas-monitor-cluster-health)

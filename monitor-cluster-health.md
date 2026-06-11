@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-06-11"
 
 keywords: clusters need attention, cluster alerts, cluster issues, Fusion as a Service monitoring, alerts, metrics, cluster monitoring, usage metrics
 
@@ -93,7 +93,7 @@ After identifying a cluster that needs attention, you can take the following act
 
 After monitoring cluster health and responding to alerts, you can:
 
-- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-details)
+- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 - [Understand cluster health indicators](/docs/cephaas?topic=cephaas-cluster-health-indicators)
 - [Take corrective action using the Fix flow](/docs/cephaas?topic=cephaas-fix-flow-corrective-action)
 - [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
