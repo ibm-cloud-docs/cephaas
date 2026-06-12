@@ -51,108 +51,100 @@ With FusionaaS, IBM delivers, installs, and operates infrastructure in your data
 {: #billing-options}
 {: step}
 
-FusionaaS offers flexible billing options based on your workload requirements. You can select either **Compute** or **Storage** services, or both, depending on your needs.
+FusionaaS offers flexible billing options based on your workload requirements. You can select either **Compute** or **Storage** infrastructure, or both, depending on your needs.
 
-### Compute billing option
-{: #compute-billing}
+### Infrastructure options
+{: #infrastructure-options}
 
-The **Compute** option enables you to provision and manage Red Hat OpenShift on IBM Cloud Satellite clusters in your on-premises environment.
+Select the type of infrastructure you want to include in your deployment:
 
-**What you get:**
-- Fully managed Red Hat OpenShift clusters with IBM SRE support
-- Self-service cluster provisioning through {{site.data.keyword.cloud_notm}} console
-- Automated lifecycle management (upgrades, patching, monitoring)
-- GPU support for AI and data-intensive workloads
-- Pay-per-use pricing based on compute resources consumed
+Compute
+:   For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments. Enables you to provision and manage Red Hat OpenShift on IBM Cloud Satellite clusters in your on-premises environment with fully managed IBM SRE support, self-service cluster provisioning, automated lifecycle management, and GPU support for AI and data-intensive workloads.
 
-### Storage billing option
-{: #storage-billing}
+Storage
+:   For managing block, file, and object storage capacity across your workloads. Provides access to IBM Storage Ceph as a Service with performance tiers optimized for your specific requirements, supporting multiple protocols and self-provisioning capabilities.
 
-The **Storage** option provides access to IBM Storage Ceph as a Service with two performance tiers to match your workload requirements.
+You can select both Compute and Storage options to create a complete on-premises cloud platform with integrated management and unified billing.
 
-**Storage tiers available:**
+### Subscription term
+{: #subscription-term}
 
-- **Performance Tier**: Tailored for performance-intensive application workloads
-    - NVMe storage devices for ultra-low latency
-    - High-bandwidth network cards
-    - Optimized CPU and memory components
-    - Capacity range: 100 TB to 800 TB
-    - Best for: Databases, transactional workloads, real-time analytics
+You can save more with a longer subscription term. FusionaaS offers the following subscription term options:
 
-- **Capacity Tier**: Cost-effective storage for less frequently accessed data
-    - Optimized for capacity and cost efficiency
-    - Capacity range: 800 TB to 3,200 TB
-    - Best for: Backups, archives, secondary storage, large datasets
+- **3 years**: Standard subscription term
+- **4 years**: Extended subscription with cost savings
+- **5 years**: Maximum subscription term with optimal cost savings
 
-**What you get:**
-- Unified storage platform supporting multiple protocols (block, file, object)
-- Self-provisioning of storage volumes
-- Single point of management
-- Pay-per-use pricing based on storage consumed
-- IBM-managed infrastructure and operations
-
-### Combining Compute and Storage
-{: #combined-billing}
-
-You can select both Compute and Storage options to create a complete on-premises cloud platform:
-- Deploy containerized applications on managed Red Hat OpenShift clusters
-- Consume high-performance or capacity storage as needed
-- Benefit from integrated management and unified billing
-- Scale compute and storage independently based on workload demands
-
-## Estimating service cost
-{: #estimatecost}
-{: step}
-
-FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. Use the cost estimation tool to understand pricing for your specific requirements.
-
-1. Navigate to the {{site.data.keyword.cloud_notm}} catalog and locate the **Fusion as a Service** tile.
-
-2. Click **Estimate Cost** to access the cost estimation tool.
-
-3. For Compute billing:
-   - Select the number of Red Hat OpenShift clusters you plan to deploy
-   - Choose cluster size (number of worker nodes)
-   - Specify GPU requirements if needed
-   - Select subscription term
-
-4. For Storage billing:
-   - Select the **Storage Tier**: **Performance** or **Capacity**
-   - Enter the **Total storage** capacity in TB
-   - Choose **Subscription term**: 3, 4, or 5 years
-
-   The cost estimator will display your projected monthly costs based on your selections.
-
-5. Review your estimated costs and save your configuration for reference.
-
-The hardware includes optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}. IBM owns and maintains the hardware, and the service infrastructure is installed in your designated data center.
-{: note}
+Longer subscription terms provide better pricing and help you plan your infrastructure costs over an extended period.
 
 ## Requesting consultation
 {: #consultation-request}
 {: step}
 
-After reviewing your cost estimation, the next step is to connect with IBM experts to discuss your specific requirements.
+FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. To get started, you need to request a consultation with IBM experts to discuss your specific requirements and receive customized pricing.
 
-1. Click **Start order process** in the cost estimation tool.
+1. Navigate to the {{site.data.keyword.cloud_notm}} catalog and locate the **IBM Fusion** tile.
 
-2. Complete the consultation request form with your contact details and requirements:
+2. Click the tile to access the configuration page.
+
+3. Configure your deployment requirements:
+
+   **Location**
+   
+   Select where you want to install Fusion hardware in your data center:
+   - **Geography**: Select your geographic region (for example, North America)
+   - **Country**: Select your country (for example, United States)
+   - **State**: Select your state or region (for example, New York)
+
+   **Infrastructure**
+   
+   Select the type of infrastructure you want to include:
+   - **Compute**: For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments
+   - **Storage**: For managing block, file, and object storage capacity across your workloads
+   
+   You can select one or both options depending on your requirements.
+
+   **Subscription term**
+   
+   Choose your subscription term to optimize costs:
+   - **3 years**: Standard subscription term
+   - **4 years**: Extended subscription with cost savings
+   - **5 years**: Maximum subscription term with optimal cost savings
+
+4. For Compute infrastructure:
+   - Select from recommended configurations or customize your deployment
+   - Choose AI solutions (Integrated AI, Data Lakehouse) or Application platform options
+   - Specify vCPUs, memory, GPUs, and usable storage capacity
+   - Configure availability zones based on your requirements
+
+5. For Storage infrastructure:
+   - Select the storage tier: **Performance** or **Capacity**
+   - Enter the total storage capacity in TB
+   - Performance tier: 100 TB to 800 TB
+   - Capacity tier: 800 TB to 3,200 TB
+
+6. Click **Get consultation** to submit your configuration and request a consultation.
+
+7. Complete the consultation request form with your contact details and requirements:
    - Organization information
    - Desired billing options (Compute, Storage, or both)
    - Estimated capacity needs
    - Timeline for deployment
    - Any specific compliance or regulatory requirements
 
-3. Submit the form to generate a **Confirmation ID**.
+8. Submit the form to generate a **Confirmation ID**.
 
-4. You will receive:
+9. You will receive:
    - On-screen confirmation with your consultation ID
-   - Email confirmation with your cost estimation details
+   - Email confirmation with your configuration details
    - Notification sent to IBM sales team
 
-5. An IBM representative will contact you within 1-2 business days. 
+10. An IBM representative will contact you within 1-2 business days to discuss pricing and next steps.
 
-After discussions and approvals, the IBM representative will place your order. You will receive order details and a tracking link via email. Track your order status from your {{site.data.keyword.cloud_notm}} account dashboard.
+After discussions and approvals, the IBM representative will provide detailed pricing and place your order. You will receive order details and a tracking link via email. Track your order status from your {{site.data.keyword.cloud_notm}} account dashboard.
+
+The hardware includes optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}. IBM owns and maintains the hardware, and the service infrastructure is installed in your designated data center.
+{: note}
 
 ## Preparing your deployment
 {: #prepare-deployment}

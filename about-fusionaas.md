@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-12"
 
 keywords: fusion as a service, fusionaas, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
@@ -28,7 +28,7 @@ With FusionaaS, IBM delivers, installs, and operates Red Hat OpenShift infrastru
 - **IBM-owned infrastructure**: IBM provides and maintains the hardware, including optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}.
 - **Fully managed operations**: IBM SRE teams handle installation, configuration, monitoring, patching, upgrades, and day-to-day operations of the platform.
 - **Self-service provisioning**: You provision OpenShift clusters, deploy workloads, and manage applications through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
-- **Cloud consumption model**: Pay only for the resources you consume with metered usage and flexible monthly commitments, eliminating large upfront capital expenditures.
+- **Flexible subscription terms**: Choose from 3-year, 4-year, or 5-year subscription terms with cost savings for longer commitments, eliminating large upfront capital expenditures while providing predictable operational expenses.
 
 ## Architecture
 {: #fusionaas-architecture}
@@ -83,10 +83,9 @@ Observability and monitoring
 
 To begin your FusionaaS journey:
 
-1. **Estimate costs**: Use the cost estimation tool in the {{site.data.keyword.cloud_notm}} catalog to understand pricing for your requirements.
-2. **Request consultation**: Submit a consultation request to discuss your specific needs with IBM experts.
-3. **Prepare your data center**: Review the [prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist) to ensure your facility meets requirements.
-4. **Deploy**: Work with IBM to install and configure FusionaaS in your data center.
+1. **Request consultation**: Configure your requirements in the {{site.data.keyword.cloud_notm}} catalog and submit a consultation request to discuss your specific needs with IBM experts who will provide customized pricing.
+2. **Prepare your data center**: Review the [prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist) to ensure your facility meets requirements.
+3. **Deploy**: Work with IBM to install and configure FusionaaS in your data center.
 
 For detailed information on getting started, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
 
