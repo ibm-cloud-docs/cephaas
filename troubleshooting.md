@@ -196,6 +196,74 @@ For more information, see:
 - [Understanding cluster health indicators](/docs/cephaas?topic=cephaas-cluster-health-indicators)
 - [Viewing storage status for a cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
 
+## Storage not reclaimed after cluster deletion
+{: #storage-not-reclaimed}
+{: troubleshoot}
+{: support}
+
+When you delete a cluster in Fusion as a Service, the associated storage resources are expected to be released and returned to the available capacity of your deployment. However, in some cases, storage might not be fully reclaimed immediately.
+{: tsSymptoms}
+
+This issue can occur if storage resources are still in use, not properly detached, or if cleanup operations are delayed or incomplete. As a result, you might continue to see consumed storage capacity even after the cluster is deleted.
+{: tsCauses}
+
+Follow these troubleshooting steps to identify why storage is not reclaimed and how to resolve the issue.
+{: tsResolve}
+
+- Ensure that you have access to your Fusion as a Service deployment and IBM Cloud console.
+- Make sure that the cluster you deleted is no longer required.
+
+### Verify cluster deletion status
+{: #verify-cluster-deletion}
+
+1. Go to the IBM Cloud console.
+2. Confirm that the cluster is fully deleted.
+
+Check that the cluster is not in an intermediate state such as:
+- Deleting
+- Cleanup in progress
+
+Storage reclamation starts only after the cluster is completely deleted.
+
+### Check storage usage in your deployment
+{: #check-storage-usage}
+
+1. Open your Fusion as a Service deployment dashboard.
+2. Review the storage usage and allocation.
+
+Look for:
+- Storage still marked as in use
+- Resources that are not released
+
+If storage is still allocated, it might not have been deleted or detached correctly.
+
+### Verify persistent volumes and claims
+{: #verify-persistent-volumes}
+
+If you have access to cluster logs or resources, check for remaining PersistentVolumeClaims (PVCs) and PersistentVolumes (PVs).
+
+Using the CLI:
+
+```sh
+oc get pvc --all-namespaces
+oc get pv
+```
+{: pre}
+
+If PVCs or PVs still exist, they might be preventing storage from being reclaimed. You might need to manually delete these resources.
+
+### Contact IBM Support
+{: #contact-support-storage}
+
+If storage is not reclaimed after following these steps, contact IBM Support for assistance. Provide the following information:
+
+- Deployment ID
+- Cluster name or ID
+- Time when the cluster was deleted
+- Current storage usage details
+
+For more information, see [Getting help and support](/docs/cephaas?topic=cephaas-getting-help-and-support).
+
 ## Understanding empty states
 {: #ui-empty-states}
 
