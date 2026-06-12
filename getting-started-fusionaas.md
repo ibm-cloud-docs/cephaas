@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-12"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -165,28 +165,33 @@ After your order is processed, you will receive an email with a **Prepare deploy
 
 1. Check your email for the **Prepare deployment** link from your IBM representative.
 2. Click the link to access the deployment dashboard.
-3. The dashboard displays your orders with **In progress** status.
+3. The dashboard displays your orders with deployment preparation status.
 
 ### Configure deployment settings
 {: #configure-deployment}
 
-1. Click **Prepare deployment** from your in-progress order.
+1. Click **Prepare deployment** from your order.
 
-2. On the **Prepare deployment** screen, configure the following settings:
+2. The **Prepare deployment** side panel opens. Configure the following settings:
 
-   - **IBM Cloud Satellite location**: Select an existing Satellite location or create a new on-premises Satellite location
+   **Satellite location**
+   
+   To begin configuring your deployment, select an IBM Cloud Satellite location and name your deployment. You can create and manage your satellite locations in IBM Cloud Satellite.
+   
+   - **Satellite location**: Select an existing Satellite location from the dropdown
      - The Satellite location connects your on-premises infrastructure to {{site.data.keyword.cloud_notm}}
-     - The location must be present on {{site.data.keyword.cloud_notm}} without hosts initially
-     - Choose the region closest to your data center for optimal network latency
-     - To create a new location, open the [Satellite console](https://cloud.ibm.com/satellite/locations/create/onPrem){: external}
+     - To create a new location, you must first create it in [IBM Cloud Satellite](https://cloud.ibm.com/satellite/locations){: external}
 
+   **Deployment details**
+   
+   - **Name**: Enter a descriptive name for your deployment
+   
    - **Resource group**: Select the resource group for organizing your deployment resources
+     - You can view all resource groups or create a new resource group
 
-   - **Deployment name**: Enter a descriptive name for your deployment
+3. Click **Create** to complete the deployment preparation, or click **Cancel** to close the panel without saving.
 
-3. Click **Create** to complete the deployment preparation.
-
-4. Your **Deployment Preparation** status will be reflected as **Completed**.
+4. After you create the deployment, your **Deployment preparation** status changes to **Completed**.
 
 
 ## Next steps

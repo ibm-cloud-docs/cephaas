@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-12"
 
 keywords: gpu, graphics processing unit, gpu availability, nvidia h100, worker node, openshift virtualization, gpu workloads, high availability
 
@@ -51,8 +51,9 @@ GPU-backed OpenShift Virtualization VMs are scheduled only on nodes with availab
 Additional GPU requests remain in a pending state until capacity becomes available
 :   When GPU resources are fully allocated, any new workloads that request GPU access will remain unscheduled until existing workloads are terminated or GPU capacity is freed.
 
-GPU workloads are temporarily unavailable during node maintenance or failures
-:   During node maintenance, upgrades, or failures, GPU workloads hosted on the affected node become temporarily unavailable until the node returns to service. This can impact workload availability and business continuity.
+GPU workloads may become unavailable temporarily  during node maintenance or failures.
+
+:   During node maintenance, upgrades, or failures, GPU workloads hosted on the affected node may become temporarily unavailable until the node returns to service. This can impact workload availability and business continuity. To avoid this, follow the high availability best practices
 
 To minimize the impact of node maintenance or failures, deploy your GPU workloads following high availability best practices. Containerized GPU workloads should be deployed in a highly available manner with multiple replicas distributed across available GPU nodes. This ensures that your applications remain available even when individual nodes are unavailable.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-12"
 
 keywords: cluster storage status, storage usage, cluster quota, Fusion as a Service storage
 
@@ -71,7 +71,7 @@ Memory
 The Storage section shows storage information for the cluster:
 
 Storage consumed
-:   Displays the amount of storage currently in use compared to the total allocated storage quota (for example, "20 TB consumed of 100 TB").
+:   Displays the amount of storage currently in use compared to the total allocated storage quota (for example, "20 TB consumed of 100 TB"). A progress bar indicates the percentage of storage quota in use.
 
 If Fusion services are not enabled for the cluster, a warning message appears in this section:
 
@@ -79,6 +79,14 @@ If Fusion services are not enabled for the cluster, a warning message appears in
 :   "The admin for this cluster needs to enable Fusion services for this cluster begin utilizing storage."
 
 This message indicates that an administrator must enable Fusion services before the cluster can use storage resources.
+
+### Cluster health alerts
+{: #cluster-health-alerts}
+
+At the bottom of the cluster details panel, you might see health alerts or warnings that require attention:
+
+Cluster health needs attention
+:   When this warning appears, it indicates potential issues with the cluster. The message states: "Check the alerts and usage metrics to identify potential issues, or select Fix to begin resolving them." A **Learn more** link provides additional information about addressing cluster health issues.
 
 ## Role-based views
 {: #role-based-views}

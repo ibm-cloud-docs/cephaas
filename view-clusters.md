@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-06-12"
 
 keywords: cluster list, Fusion as a Service clusters, deployment clusters, cluster navigation
 
@@ -39,8 +39,8 @@ vCPUs
 Memory
 :   Shows the total memory allocated across all clusters, displaying both used capacity and total available capacity (for example, "6 TB of 12 TB"). A progress bar indicates the percentage of memory in use.
 
-Storage
-:   Shows the total storage allocated across all clusters, displaying both used capacity and total available capacity (for example, "120 TB of 200 TB"). A progress bar indicates the percentage of storage in use.
+Storage used
+:   Shows the total storage used across all clusters, displaying both used capacity and total available capacity (for example, "120 TB of 200 TB"). A progress bar indicates the percentage of storage in use.
 
 GPUs
 :   Displays the number of GPUs attached across all clusters (for example, "3 of 8 cards attached"). This card appears only when GPU resources are configured for your deployment.
@@ -66,8 +66,11 @@ vCPU
 Memory
 :   The amount of memory allocated to the cluster, displayed in TB (terabytes).
 
-Storage
-:   The amount of storage allocated to the cluster, displayed in TB (terabytes).
+Quota used
+:   The amount of storage quota used by the cluster, displayed in TB (terabytes).
+
+Cluster Quota
+:   The total storage quota allocated to the cluster, displayed in TB (terabytes).
 
 Worker count
 :   The number of worker nodes in the cluster.

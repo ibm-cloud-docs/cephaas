@@ -27,7 +27,7 @@ toc:
           - network_latency.md
           - gpu-availability.md
       - topicgroup:
-          label: Getting organized
+          label: Storage Setup
           topics:
           - administrators.md
           - developers.md
@@ -113,6 +113,7 @@ toc:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
           - endpoints.md
+          - cbr.md
           - data-security.md
       - topic: event-notifications.md
         navtitle: Enabling event notifications
