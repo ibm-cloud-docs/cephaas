@@ -169,10 +169,10 @@ toc:
           - about_api.md
           - link:
               label: Block storage management API
-              href: https://{DomainName}/apidocs/block-storage
+              href: https://{DomainName}/docs/apis/block-storage
           - link:
               label: Object storage management API
-              href: https://{DomainName}/apidocs/object-storage
+              href: https://{DomainName}/docs/apis/object-storage
       - topicgroup:
           label: CLI reference
           topics:
