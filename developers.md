@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-06-12"
 
 keywords: cephaas, developer, getting started, command-line interface, cli, developer tools, ceph as a service
 
@@ -27,9 +27,9 @@ First, ensure that you have the [{{site.data.keyword.cloud}} Platform CLI](/docs
 
 For managing the data stored in {{site.data.keyword.cephaas_full_notm}}, you can use the following S3 API compatible tools:
 
-* [Block storage management API](/apidocs/block-storage)
+* [Block storage management API](/docs/apis/block-storage)
 
-* [Object storage administration API](/apidocs/object-storage)
+* [Object storage administration API](/docs/apis/object-storage)
 
 * For Object storage S3 API, see [AWS CLI](/docs/cephaas?topic=cephaas-aws-cli) with HMAC credentials for compatibility
 

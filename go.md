@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-02-16"
+lastupdated: "2026-06-12"
 
 keywords: object storage, go, sdk, ceph as a service
 
@@ -18,14 +18,14 @@ subcollection: cephaas
 The {{site.data.keyword.cephaas_full}} SDK for GO provides features to make the most of {{site.data.keyword.cephaas_full_notm}}.
 {: shortdesc}
 
-The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, see the GO API documentation for [Block Storage](/apidocs/block-storage?code=go){: external} and [Object Storage](/apidocs/object-storage?code=go){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
+The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with many features and capabilities that exceed the scope and space of the guide. For detailed class and method documentation, see the GO API documentation for [Block Storage](/docs/apis/block-storage?code=go){: external} and [Object Storage](/docs/apis/object-storage?code=go){: external}. Source code can be found in the [GitHub repository](https://github.com/IBM/sds-go-sdk){: external}.
 
 
 
 ## Getting the SDK
 {: #go-get-sdk}
 
-Use `go get` to retrieve the SDK and add it to your GOPATH workspace, or project's GO module dependencies. The SDK requires a minimum version of GO 1.21 or above. Future versions of GO will be supported once our quality control process has been completed. For more information, see the GO API documentation for [Block Storage](/apidocs/block-storage?code=go){: external} and [Object Storage](/apidocs/object-storage?code=go){: external}.
+Use `go get` to retrieve the SDK and add it to your GOPATH workspace, or project's GO module dependencies. The SDK requires a minimum version of GO 1.21 or above. Future versions of GO will be supported once our quality control process has been completed. For more information, see the GO API documentation for [Block Storage](/docs/apis/block-storage?code=go){: external} and [Object Storage](/docs/apis/object-storage?code=go){: external}.
 
 ```sh
 go get github.com/IBM/sds-go-sdk/v2/sdsaasv2
@@ -633,4 +633,4 @@ func main() {
 ## Next Steps
 {: #go-next-steps}
 
-If you haven't already, see the detailed class and method documentation available at the GO API documentation for [Block Storage](/apidocs/block-storage?code=go){: external} and [Object Storage](/apidocs/object-storage?code=go){: external}.
+If you haven't already, see the detailed class and method documentation available at the GO API documentation for [Block Storage](/docs/apis/block-storage?code=go){: external} and [Object Storage](/docs/apis/object-storage?code=go){: external}.

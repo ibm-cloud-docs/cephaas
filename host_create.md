@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-06-12"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -117,7 +117,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #creating-host-with-api}
 {: api}
 
-You can create hosts by directly calling the Host REST APIs. For more information, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/apidocs/block-storage){: external}.
+You can create hosts by directly calling the Host REST APIs. For more information, see the [{{site.data.keyword.cephaas_full_notm}} API reference](/docs/apis/block-storage){: external}.
 
 Ensure that you have defined the variables for the IAM token and API endpoint. Also, ensure that you have the host `nqn` handy. The host `nqn` can be fetched from the NVMe initiator as described in [About volume host mappings](/docs/cephaas?topic=cephaas-about-volume-host-mappings).
 {: requirement}

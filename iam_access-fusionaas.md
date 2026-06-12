@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-12"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
@@ -179,7 +179,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 {: #assign-access-api}
 {: api}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/iam?topic=iam-assign-access-resources) or the [Create a policy API doc](/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/iam?topic=iam-assign-access-resources) or the [Create a policy API doc](/docs/apis/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
 
 | Role name | Role CRN |
