@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-15"
 
 keywords: cluster creation, Fusion as a Service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Creating clusters
 {: #create-clusters}
 
-Create Red Hat OpenShift on IBM Cloud clusters for your Fusion as a Service deployment by using IBM Cloud Satellite.
+Create Red Hat OpenShift clusters on IBM Cloud for your Fusion as a Service deployment by using IBM Cloud Satellite.
 {: shortdesc}
 
 Make sure that you meet the following prerequisites for cluster creation:
@@ -59,9 +59,9 @@ Use the IBM Cloud console to start cluster creation from your Fusion as a Servic
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
 2. Open your Fusion as a Service deployment from the **Resource list**.
-3. From the deployment dashboard, click **Compute** > **Clusters**.
+3. From the deployment dashboard, click **Cluster management** > **Clusters**.
 
-The **Clusters** page shows your current usage of vCPUs, memory, storage, and GPUs so that you can size the new cluster appropriately.
+The **Clusters** page shows Name, State, Location, Worker count, Created date, Version, and Infrastructure. 
 
 4. Click **Create cluster**.
 5. When prompted, choose the option to create the cluster through the Red Hat OpenShift on IBM Cloud Satellite portal.
@@ -89,8 +89,6 @@ Fusion as a Service validates your selections against the available deployment c
 1. Review the cluster configuration.
 2. Click **Create** to start provisioning.
 
-Cluster creation runs asynchronously. You can monitor progress from the Red Hat OpenShift on IBM Cloud console and the Fusion as a Service **Clusters** view.
-
 After the cluster is created, it appears alongside your other Red Hat OpenShift on IBM Cloud clusters in IBM Cloud.
 
 ## After the cluster is created
@@ -101,7 +99,7 @@ After the cluster becomes available, you can complete the following tasks:
 - Access the cluster from the OpenShift web console.
 - Deploy applications and services as you would for any Red Hat OpenShift on IBM Cloud cluster.
 - View health, capacity, and alerts from the Fusion as a Service dashboard.
-- Enable and use Fusion services, such as storage-backed workloads, if needed.
+- Enable and use Fusion services, if needed.
 
 ## Related tasks
 {: #create-clusters-related}
