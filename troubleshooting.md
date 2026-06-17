@@ -201,68 +201,68 @@ For more information, see:
 {: troubleshoot}
 {: support}
 
-When you delete a cluster in IBM Fusion as a service, the associated storage resources are expected to be released and returned to the available capacity of your deployment. However, in some cases, storage might not be fully reclaimed immediately.
+When you delete a cluster in IBM Fusion as a service, the associated storage resources are typically released and returned to the available capacity of your deployment. In most cases, this cleanup happens automatically after the cluster is deleted. However, in rare situations, storage might not be fully reclaimed, and you might continue to see consumed storage capacity.
 {: tsSymptoms}
 
-This issue can occur if storage resources are still in use, not properly detached, or if cleanup operations are delayed or incomplete. As a result, you might continue to see consumed storage capacity even after the cluster is deleted.
+This issue is uncommon and usually occurs due to a backend cleanup failure. In rare cases, the cluster deletion event might not be fully processed, which prevents storage resources from being released.
 {: tsCauses}
 
-Follow these troubleshooting steps to identify why storage is not reclaimed and how to resolve the issue.
-{: tsResolve}
+As a result:
+- The cluster might still appear in the Fusion as a service UI
+- The cluster state might be marked as **Critical**
+- Storage associated with the cluster remains allocated
 
-- Ensure that you have access to your IBM Fusion as a service deployment and IBM Cloud console.
-- Make sure that the cluster you deleted is no longer required.
+Follow these steps to identify the issue and determine the next action.
+{: tsResolve}
 
 ### Verify cluster deletion status
 {: #verify-cluster-deletion}
 
-1. Go to the IBM Cloud console.
+1. Go to the **IBM Cloud console**.
 2. Confirm that the cluster is fully deleted.
-
-Check that the cluster is not in an intermediate state such as:
-- Deleting
-- Cleanup in progress
+3. Ensure that the cluster is not in an intermediate state such as:
+   - Deleting
+   - Cleanup in progress
 
 Storage reclamation starts only after the cluster is completely deleted.
 
-### Check storage usage in your deployment
-{: #check-storage-usage}
+### Check the Fusion as a service dashboard
+{: #check-fusion-ui}
 
-1. Open your IBM Fusion as a service deployment dashboard.
-2. Review the storage usage and allocation.
+1. Open your **IBM Fusion as a service** deployment dashboard.
+2. Look for the deleted cluster in the cluster list.
 
-Look for:
-- Storage still marked as in use
-- Resources that are not released
+Check for the following:
+- The cluster is still listed after deletion
+- The cluster shows a **Critical** state
+- An error message or tooltip (hover text) is displayed for the cluster
 
-If storage is still allocated, it might not have been deleted or detached correctly.
+If the cluster appears in a Critical state, it indicates that the cleanup process did not complete successfully.
 
-### Verify persistent volumes and claims
-{: #verify-persistent-volumes}
+### Resolution
+{: #storage-reclaim-resolution}
 
-If you have access to cluster logs or resources, check for remaining PersistentVolumeClaims (PVCs) and PersistentVolumes (PVs).
+This issue cannot be resolved through user actions.
 
-Using the CLI:
+If you observe that:
+- The cluster is still visible in the Fusion as a service UI in a **Critical** state
+- Storage is not reclaimed after deletion
 
-```sh
-oc get pvc --all-namespaces
-oc get pv
-```
-{: pre}
+Contact **IBM Support** for assistance.
 
-If PVCs or PVs still exist, they might be preventing storage from being reclaimed. You might need to manually delete these resources.
-
-### Contact IBM Support
+### What to provide to IBM Support
 {: #contact-support-storage}
 
-If storage is not reclaimed after following these steps, contact IBM Support for assistance. Provide the following information:
+When contacting support, include the following details:
 
 - Deployment ID
 - Cluster name or ID
-- Time when the cluster was deleted
+- Approximate time when the cluster was deleted
 - Current storage usage details
+- Screenshot of the cluster state (if available)
 
-For more information, see [Getting help and support](/docs/cephaas?topic=cephaas-getting-help-and-support).
+For more information, see [Getting help and support](/docs/cephaas?topic=cephaas-getting-help-support).
+
 
 ## Understanding empty states
 {: #ui-empty-states}
@@ -302,10 +302,3 @@ Depending on your role and the current page, the empty state might help you do o
 Some empty states are informational only. Others reflect that a setup task is still required.
 
 If you do not have permission to complete the next action, the UI can indicate that the page is read-only or that an administrator must complete the task.
-
-### Related tasks
-{: #transition-from-empty}
-
-- [Viewing the cluster list](/docs/cephaas?topic=cephaas-view-cluster-list)
-- [Enabling Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services)
-- [Understanding warning and read-only states](/docs/cephaas?topic=cephaas-ui-warning-readonly-states)
