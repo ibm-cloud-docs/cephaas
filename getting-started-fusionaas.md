@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2026
 lastupdated: "2026-06-17"
 
-keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
+keywords: fusion as a service, getting started, fusion, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
 subcollection: cephaas
 
@@ -18,15 +18,15 @@ An IBM representative will contact you to understand your requirements. Post dis
 # Getting started with IBM Fusion as a service
 {: #getting-started}
 
-IBM Fusion as a service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision Red Hat OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
+IBM Fusion as a service (Fusion) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision Red Hat OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
 {: shortdesc}
 
-This topic guides you through understanding FusionaaS capabilities, estimating costs, and getting started with your deployment.
+This topic guides you through understanding Fusion capabilities, estimating costs, and getting started with your deployment.
 
 ## What is IBM Fusion as a service?
 {: #what-is-fusionaas}
 
-FusionaaS combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, delivered as a fully managed service in your data center. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications.
+Fusion combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, delivered as a fully managed service in your data center. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications.
 
 ### Key benefits
 {: #key-benefits}
@@ -40,7 +40,7 @@ FusionaaS combines the power of Red Hat OpenShift with IBM's enterprise-grade in
 ### How it works
 {: #how-it-works}
 
-With FusionaaS, IBM delivers, installs, and operates infrastructure in your data center:
+With Fusion, IBM delivers, installs, and operates infrastructure in your data center:
 
 - **IBM-owned infrastructure**: IBM provides optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}.
 - **Fully managed operations**: IBM handles all operational complexity while you retain physical control of your data.
@@ -51,7 +51,7 @@ With FusionaaS, IBM delivers, installs, and operates infrastructure in your data
 {: #billing-options}
 {: step}
 
-FusionaaS offers flexible billing options based on your workload requirements. You can select either **Compute** or **Storage** infrastructure, or both, depending on your needs.
+Fusion offers flexible billing options based on your workload requirements. You can select either **Compute** or **Storage** infrastructure, or both, depending on your needs.
 
 ### Infrastructure options
 {: #infrastructure-options}
@@ -69,7 +69,7 @@ You can select both Compute and Storage options to create a complete on-premises
 ### Subscription term
 {: #subscription-term}
 
-You can save more with a longer subscription term. FusionaaS offers the following subscription term options:
+You can save more with a longer subscription term. Fusion offers the following subscription term options:
 
 - **3 years**: Standard subscription term
 - **4 years**: Extended subscription with cost savings
@@ -81,7 +81,7 @@ Longer subscription terms provide better pricing and help you plan your infrastr
 {: #consultation-request}
 {: step}
 
-FusionaaS is available in the {{site.data.keyword.cloud_notm}} catalog. To get started, you need to request a consultation with IBM experts to discuss your specific requirements and receive customized pricing.
+Fusion is available in the {{site.data.keyword.cloud_notm}} catalog. To get started, you need to request a consultation with IBM experts to discuss your specific requirements and receive customized pricing.
 
 1. Navigate to the {{site.data.keyword.cloud_notm}} catalog and locate the **IBM Fusion** tile.
 
@@ -189,7 +189,7 @@ After your order is processed, you will receive an email with a **Prepare deploy
 ## Next steps
 {: #next-steps}
 
-Now that you understand FusionaaS and have initiated your deployment:
+Now that you understand Fusion and have initiated your deployment:
 
 Learn more
 :   Read [What is IBM Fusion as a service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.

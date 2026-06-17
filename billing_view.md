@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2026
 lastupdated: "2026-06-17"
 
-keywords: administration, billing, platform, ceph as a service, cephaas, fusion as a service, fusionaas, invoices, storage tiers, performance tier, capacity tier, compute billing, subscription terms
+keywords: administration, billing, platform, ceph as a service, cephaas, fusion as a service, fusion, invoices, storage tiers, performance tier, capacity tier, compute billing, subscription terms
 
 subcollection: cephaas
 
@@ -100,18 +100,18 @@ Your overall available capacity consists of the committed capacity that is combi
 ## Compute billing
 {: #compute-billing}
 
-IBM Fusion as a service (FusionaaS) offers flexible billing options for compute resources. You can select either Compute or Storage infrastructure, or both, depending on your needs.
+IBM Fusion as a service (Fusion) offers flexible billing options for compute resources. You can select either Compute or Storage infrastructure, or both, depending on your needs.
 
 
 ### Compute pricing model
 {: #compute-pricing-model}
 
-FusionaaS Compute provides cloud consumption pricing with a pay-for-what-you-use model. You provision Red Hat OpenShift clusters through the {{site.data.keyword.cloud_notm}} console and pay only for the resources you consume, with flexible monthly commitments and no large upfront capital expenditures.
+Fusion Compute provides cloud consumption pricing with a pay-for-what-you-use model. You provision Red Hat OpenShift clusters through the {{site.data.keyword.cloud_notm}} console and pay only for the resources you consume, with flexible monthly commitments and no large upfront capital expenditures.
 
 ### Compute billing components
 {: #compute-billing-components}
 
-FusionaaS Compute billing is based on the following resource types:
+Fusion Compute billing is based on the following resource types:
 
 vCPUs
 :   Virtual CPU resources allocated to your Red Hat OpenShift clusters. Billing is based on the number of vCPUs provisioned across all your clusters.
@@ -128,7 +128,7 @@ Storage quota
 ### How Compute billing works
 {: #how-compute-billing-works}
 
-When you create a Red Hat OpenShift cluster in your FusionaaS deployment:
+When you create a Red Hat OpenShift cluster in your Fusion deployment:
 
 1. You specify the cluster configuration including number of worker nodes, vCPUs per node, memory per node, and optional GPU resources.
 2. The system allocates the requested resources from your deployment's available capacity.
@@ -139,7 +139,7 @@ When you create a Red Hat OpenShift cluster in your FusionaaS deployment:
 ### Viewing Compute usage
 {: #viewing-compute-usage}
 
-You can view your Compute resource usage in the FusionaaS deployment dashboard:
+You can view your Compute resource usage in the Fusion deployment dashboard:
 
 - **vCPUs**: Number of virtual CPUs currently in use across all clusters
 - **Memory**: Memory usage in TB format (used capacity of total available)
@@ -151,7 +151,7 @@ These capacity tiles help you understand resource consumption and plan for futur
 ### Compute capacity management
 {: #compute-capacity-management}
 
-FusionaaS provides flexible capacity management:
+Fusion provides flexible capacity management:
 
 - **Self-service provisioning**: Create and delete clusters on-demand through the {{site.data.keyword.cloud_notm}} console
 - **Elastic scaling**: Scale cluster resources up or down based on workload requirements

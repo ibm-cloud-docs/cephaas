@@ -18,9 +18,9 @@ subcollection: cephaas
 You can use context-based restrictions (CBR) in {{site.data.keyword.cloud_notm}} to control access to your resources based on factors such as network location, IP address, or service endpoints.
 {: shortdesc}
 
-In IBM Fusion as a service (FusionaaS), CBR helps you secure access to your Red Hat OpenShift on {{site.data.keyword.cloud_notm}} (ROKS) clusters and related resources.
+In IBM Fusion as a service (Fusion), CBR helps you secure access to your Red Hat OpenShift on {{site.data.keyword.cloud_notm}} (ROKS) clusters and related resources.
 
-## About CBR in FusionaaS
+## About CBR in Fusion
 {: #cbr-about}
 
 Context-based restrictions (CBR) allow you to define rules that restrict access to resources by evaluating request context, such as:
@@ -33,15 +33,15 @@ CBR rules can be used to enhance the security posture of your clusters by limiti
 
 For more information about how CBR works in {{site.data.keyword.cloud_notm}}, see [Protecting cluster resources with context-based restrictions](https://cloud.ibm.com/docs/containers?topic=containers-cbr&interface=ui){: external}.
 
-## CBR support in FusionaaS
+## CBR support in Fusion
 {: #cbr-support}
 
-In FusionaaS version 1, CBR support is available with the following scope:
+In Fusion version 1, CBR support is available with the following scope:
 
 - You can configure CBR rules for your ROKS cluster masters
 - You cannot configure CBR rules for {{site.data.keyword.cloud_notm}} API endpoints used by IKS or ROKS
 
-In FusionaaS version 1, configuring context-based restriction (CBR) rules for {{site.data.keyword.cloud_notm}} API endpoints is not supported. You can apply CBR rules only to cluster masters.
+In Fusion version 1, configuring context-based restriction (CBR) rules for {{site.data.keyword.cloud_notm}} API endpoints is not supported. You can apply CBR rules only to cluster masters.
 {: important}
 
 ## Protecting cluster access
@@ -54,11 +54,11 @@ For guidance on protecting cluster endpoints, see [Protecting cluster resources 
 ## Unsupported scenarios
 {: #cbr-unsupported}
 
-The following scenario is not supported in FusionaaS version 1:
+The following scenario is not supported in Fusion version 1:
 
 - Configuring CBR rules for {{site.data.keyword.cloud_notm}} API endpoints that are used to manage or interact with IKS or ROKS services
 
-If you attempt to apply CBR rules to these endpoints, the configuration is not enforced in FusionaaS.
+If you attempt to apply CBR rules to these endpoints, the configuration is not enforced in Fusion.
 
 ## Best practices
 {: #cbr-best-practices}

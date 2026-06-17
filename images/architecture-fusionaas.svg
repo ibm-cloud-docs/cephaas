@@ -46,9 +46,9 @@
   <text class="text" x="235" y="225">Prometheus</text>
   <text class="text" x="250" y="245">Thanos</text>
   
-  <!-- FusionaaS MZR VPC -->
+  <!-- Fusion MZR VPC -->
   <rect class="vpc-box" x="420" y="80" width="480" height="450" rx="10"/>
-  <text class="text-bold" x="620" y="105">FusionaaS MZR VPC</text>
+  <text class="text-bold" x="620" y="105">Fusion MZR VPC</text>
   
   <!-- IBM Cloud Console -->
   <rect class="console-box" x="550" y="120" width="230" height="90" rx="5"/>
@@ -57,7 +57,7 @@
   <text class="text" x="580" y="175">IBM Cloud</text>
   <text class="text" x="590" y="190">Catalog</text>
   <rect class="component-box" x="680" y="160" width="80" height="40" rx="3"/>
-  <text class="text" x="685" y="175">FusionaaS</text>
+  <text class="text" x="685" y="175">Fusion</text>
   <text class="text" x="685" y="190">Dashboard</text>
   
   <!-- MZR ROKS -->

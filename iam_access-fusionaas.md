@@ -4,7 +4,7 @@ copyright:
  years: 2024, 2026
 lastupdated: "2026-06-17"
 
-keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
+keywords: IBM Fusion, IAM access, fusion, fusion as a service, identity, access management, openshift, compute, storage
 
 subcollection: cephaas
 
@@ -68,10 +68,10 @@ IBM Fusion as a service includes both compute resources (OpenShift clusters) and
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
-| Viewer        |  As a viewer, you can view FusionaaS deployments, OpenShift clusters, and storage resources, but you can't modify them. In addition, you can also inspect S3 certificates and view quota settings. |
-| Operator      |  As an operator, you can perform platform actions that are required to configure and operate FusionaaS deployments, including managing OpenShift clusters and storage. In addition, you can also inspect, upload, update and delete S3 certificates, and update quota settings.           |
+| Viewer        |  As a viewer, you can view Fusion deployments, OpenShift clusters, and storage resources, but you can't modify them. In addition, you can also inspect S3 certificates and view quota settings. |
+| Operator      |  As an operator, you can perform platform actions that are required to configure and operate Fusion deployments, including managing OpenShift clusters and storage. In addition, you can also inspect, upload, update and delete S3 certificates, and update quota settings.           |
 | Editor        |  As an editor, you can perform all platform actions except for managing the account and assigning access policies. This includes creating and managing OpenShift clusters, provisioning storage, and managing certificates and quotas.           |
-| Administrator |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. You have full control over FusionaaS deployments, compute resources, storage, certificates, and quota management.          |
+| Administrator |  As an administrator, you can perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users. You have full control over Fusion deployments, compute resources, storage, certificates, and quota management.          |
 {: row-headers}
 {: class="simple-tab-table"}
 {: caption="IAM platform roles" caption-side="bottom"}
@@ -107,10 +107,10 @@ These actions apply to the overall IBM Fusion as a service deployment and affect
 
 | Action ID                                       | Roles                                     | Descriptions                      |
 | ------------------------------------------------|-------------------------------------------|-----------------------------------|
-| `resource-controller.instance.retrieve`         | Administrator, Editor, Operator, Viewer   | View and list FusionaaS deployments (compute and storage) but cannot modify the instance properties. |
-| `resource-controller.instance.create`           | Administrator, Editor                     | Create a FusionaaS deployment from the IBM Fusion as a service Deployments page, including provisioning OpenShift clusters and storage resources.  |
+| `resource-controller.instance.retrieve`         | Administrator, Editor, Operator, Viewer   | View and list Fusion deployments (compute and storage) but cannot modify the instance properties. |
+| `resource-controller.instance.create`           | Administrator, Editor                     | Create a Fusion deployment from the IBM Fusion as a service Deployments page, including provisioning OpenShift clusters and storage resources.  |
 | `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update a IBM Fusion as a service deployment. Allowed to modify deployment parameters such as name, quota settings, cluster configurations, and S3 certificates for object storage. |
-{: caption="Deployment-level IAM actions for FusionaaS" caption-side="bottom"}
+{: caption="Deployment-level IAM actions for Fusion" caption-side="bottom"}
 
 ### Storage actions
 {: #storage-actions}
@@ -136,7 +136,7 @@ These actions are specific to storage resources, including volumes, hosts, S3 cr
 | `software-defined-storage.host.delete`          | Manager                                   | Delete storage hosts  |
 | `software-defined-storage.host.map`             | Manager                                   | Map storage hosts |
 | `software-defined-storage.host.unmap`           | Manager                                   | Unmap storage hosts |
-{: caption="Storage-specific IAM actions for FusionaaS" caption-side="bottom"}
+{: caption="Storage-specific IAM actions for Fusion" caption-side="bottom"}
 
 ### Compute actions
 {: #compute-actions}
@@ -147,7 +147,7 @@ These actions are specific to compute resources, including OpenShift clusters.
 | ------------------------------------------------|-------------------------------------------|-----------------------------------|
 | `software-defined-storage.cluster.view`         | Reader                                    | View cluster properties and details |
 | `software-defined-storage.cluster.update`       | Manager                                   | Update cluster quota and properties |
-{: caption="Compute-specific IAM actions for FusionaaS" caption-side="bottom"}
+{: caption="Compute-specific IAM actions for Fusion" caption-side="bottom"}
 
 
 ## Assigning access to IBM Fusion as a service in the console
@@ -287,7 +287,7 @@ fmt.Println(string(b))
 {: #assign-access-terraform}
 {: terraform}
 
-The following example is for assigning the `<Manager>` role for `<software-defined-storage>` (used by FusionaaS):
+The following example is for assigning the `<Manager>` role for `<software-defined-storage>` (used by Fusion):
 
 Use `software-defined-storage` for the service name.
 {: tip}

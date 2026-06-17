@@ -139,7 +139,7 @@ toc:
           - vsphere-snapshots.md
           - upgrading-vsphere-plugin.md
       - topicgroup:
-          label: FusionaaS CSI driver
+          label: Fusion CSI driver
           topics:
           - csi-overview.md
           - csi-about.md
