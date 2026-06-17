@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: fusion as a service, onboarding, welcome modal, first time user, cluster quota, set cluster quota, getting started
 
@@ -11,10 +11,10 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Onboarding to your Fusion as a Service deployment
+# Onboarding to your IBM Fusion as a service deployment
 {: #onboarding-fusionaas}
 
-When you log in to your Fusion as a Service deployment for the first time, a welcome banner guides you through the initial setup process. This onboarding flow helps you configure your deployment and understand the next steps for provisioning clusters.
+When you log in to your IBM Fusion as a service deployment for the first time, a welcome banner guides you through the initial setup process. This onboarding flow helps you configure your deployment and understand the next steps for provisioning clusters.
 {: shortdesc}
 
 ## Understanding the onboarding flow

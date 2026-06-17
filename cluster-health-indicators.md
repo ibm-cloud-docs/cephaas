@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-06-17"
 
-keywords: cluster indicators, cluster status, cluster warnings, cluster health, capacity indicators, Fusion as a Service alerts
+keywords: cluster indicators, cluster status, cluster warnings, cluster health, capacity indicators, IBM Fusion as a service alerts
 
 subcollection: cephaas
 

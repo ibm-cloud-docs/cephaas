@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-17"
 
-keywords: fusion as a service, Fusion as a Service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
+keywords: fusion as a service, IBM Fusion as a service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # About your deployment
 {: #deployment-access-overview}
 
-Open your Fusion as a Service deployment from the {{site.data.keyword.cloud_notm}} console to review capacity, clusters, storage, and settings. The deployment overview page provides a central location for monitoring resources and navigating to management areas.
+Open your IBM Fusion as a service deployment from the {{site.data.keyword.cloud_notm}} console to review capacity, clusters, storage, and settings. The deployment overview page provides a central location for monitoring resources and navigating to management areas.
 {: shortdesc}
 
 Before you begin, make sure that you meet the following requirements:
@@ -27,9 +27,9 @@ Before you begin, make sure that you meet the following requirements:
 {: #open-deployment}
 
 1. Log in to [IBM Cloud](https://cloud.ibm.com){: external}.
-2. In the navigation menu, click **Resource list** > **Storage** > **Fusion as a Service**.
+2. In the navigation menu, click **Resource list** > **Storage** > **IBM Fusion as a service**.
 3. Click **Deployments**.
-4. In the deployment list, locate your Fusion as a Service deployment.
+4. In the deployment list, locate your IBM Fusion as a service deployment.
 5. Click the deployment name to open it.
 
 The deployment opens to the **Clusters** page, displaying resource summary cards and a list of all clusters in your deployment.

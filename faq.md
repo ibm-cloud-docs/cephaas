@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-03"
+lastupdated: "2026-06-17"
 
 keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
 
@@ -29,7 +29,7 @@ Frequently asked questions (FAQs) provide you with helpful answers and insight i
 {: faq}
 {: #faq-what-is-fusionaas-compute}
 
-FusionaaS Compute is part of IBM's Fusion as a Service offering that provides fully managed Red Hat OpenShift on IBM Cloud Satellite clusters delivered on-premises. It combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
+FusionaaS Compute is part of IBM's IBM Fusion as a service offering that provides fully managed Red Hat OpenShift on IBM Cloud Satellite clusters delivered on-premises. It combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
 
 ### How does FusionaaS Compute differ from traditional on-premises Red Hat OpenShift?
 {: faq}
@@ -49,14 +49,14 @@ To get started:
 5. Work with IBM to install and configure FusionaaS in your data center
 6. Begin provisioning Red Hat OpenShift clusters through the IBM Cloud console
 
-For detailed instructions, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
+For detailed instructions, see [Getting started with IBM Fusion as a service](/docs/cephaas?topic=cephaas-getting-started).
 
 ### How do I create a cluster in FusionaaS Compute?
 {: faq}
 {: #faq-how-to-create-cluster}
 
 To create a cluster:
-1. Log in to the IBM Cloud console and open your Fusion as a Service deployment
+1. Log in to the IBM Cloud console and open your IBM Fusion as a service deployment
 2. Navigate to **Compute** > **Clusters**
 3. Click **Create cluster**
 4. Follow the Red Hat OpenShift on IBM Cloud Satellite workflow to configure cluster details including name, Red Hat OpenShift version, number of worker nodes, vCPU and memory per node, and optional GPU-enabled worker nodes
@@ -68,7 +68,7 @@ The cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite 
 {: faq}
 {: #faq-what-are-fusion-services}
 
-Fusion services enable clusters to use storage capacity from your Fusion as a Service deployment. When you enable Fusion services for a cluster, you assign a storage quota that determines how much storage capacity the cluster can consume from the deployment.
+Fusion services enable clusters to use storage capacity from your IBM Fusion as a service deployment. When you enable Fusion services for a cluster, you assign a storage quota that determines how much storage capacity the cluster can consume from the deployment.
 
 ### What is the default cluster storage quota?
 {: faq}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
-keywords: cluster storage status, storage usage, cluster quota, Fusion as a Service storage
+keywords: cluster storage status, storage usage, cluster quota, IBM Fusion as a service storage
 
 subcollection: cephaas
 
@@ -26,7 +26,7 @@ Before you view cluster details, make sure that you can open the deployment in t
 ## Opening cluster details
 {: #access-storage-status}
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. Click the **Clusters** page in the left navigation.
 3. In the cluster list, click the cluster name or select **View details** from the overflow menu (⋮).
 

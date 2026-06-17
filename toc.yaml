@@ -8,7 +8,7 @@ toc:
     console-page: /catalog/software-defined-storage
     product-page: https://www.ibm.com/products/storage-ceph
     path: cephaas
-    label: Fusion as a Service
+    label: IBM Fusion as a service
   entries:
   - navgroup:
       id: learn

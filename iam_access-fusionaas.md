@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: IBM FusionaaS, IAM access, fusionaas, fusion as a service, identity, access management, openshift, compute, storage
 
@@ -16,10 +16,10 @@ subcollection: cephaas
 # Managing IAM access
 {: #managing-iam}
 
-Access to Fusion as a Service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the Fusion as a Service service must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to Fusion as a Service.
+Access to IBM Fusion as a service instances for users in your account is controlled by {{site.data.keyword.cloud}} Identity and Access Management (IAM). Every user that accesses the IBM Fusion as a service service must be assigned an access policy with an IAM role. Review the following roles, actions, and more to help determine the best way to assign access to IBM Fusion as a service.
 {: shortdesc}
 
-The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by Fusion as a Service as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
+The access policy that you assign users in your account determines what actions a user can perform within the context of the service or specific instance that you select. The allowable actions are customized and defined by IBM Fusion as a service as operations that are allowed to be performed on the service. Each action is mapped to an IAM platform or service role that you can assign to a user.
 
 
 IAM access policies enable access to be granted at different levels. Some of the options include the following:
@@ -33,12 +33,12 @@ After defining the scope of the access policy, assign a role.
 ## Service-to-Service (S2S) authorization policy for compute
 {: #s2s-authorization}
 
-Fusion as a Service compute resources requires authorization to interact with {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.satellitelong_notm}} services. To enable this interaction, you must create a service-to-service (S2S) authorization policy in IAM that grants Fusion as a Service Administrator-level access to these services.
+IBM Fusion as a service compute resources requires authorization to interact with {{site.data.keyword.openshiftlong_notm}} and {{site.data.keyword.satellitelong_notm}} services. To enable this interaction, you must create a service-to-service (S2S) authorization policy in IAM that grants IBM Fusion as a service Administrator-level access to these services.
 
 ### Prerequisites
 {: #s2s-prerequisites}
 
-Before you can use Fusion as a Service, you must create S2S authorization policies to allow Fusion as a Service to:
+Before you can use IBM Fusion as a service, you must create S2S authorization policies to allow IBM Fusion as a service to:
 - Create and modify {{site.data.keyword.openshiftlong_notm}} cluster instances in your account
 - Create and modify {{site.data.keyword.satellitelong_notm}} location instances in your account
 
@@ -49,22 +49,22 @@ To create the required S2S authorization policies:
 
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **Authorizations**.
 2. Click **Create**.
-3. For the source service, select **Fusion as a Service** (software-defined-storage).
+3. For the source service, select **IBM Fusion as a service** (software-defined-storage).
 4. For the target service, select **{{site.data.keyword.openshiftlong_notm}}** (containers-kubernetes).
 5. Assign the **Administrator** role.
 6. Click **Authorize**.
 7. Repeat steps 2-6 for **{{site.data.keyword.satellitelong_notm}}** as the target service.
 
-These authorization policies enable Fusion as a Service to provision and manage compute infrastructure on your behalf.
+These authorization policies enable IBM Fusion as a service to provision and manage compute infrastructure on your behalf.
 
 
 
 ## IAM roles and actions
 {: #iam-roles-actions}
 
-Review the following tables that outline what types of tasks each role allows when you're working with the Fusion as a Service service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to Fusion as a Service and the ability to call the Fusion as a Service API.
+Review the following tables that outline what types of tasks each role allows when you're working with the IBM Fusion as a service service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to IBM Fusion as a service and the ability to call the IBM Fusion as a service API.
 
-Fusion as a Service includes both compute resources (OpenShift clusters) and storage resources (volumes, hosts, S3 credentials, certificates). The roles apply to both resource types, but specific actions are categorized by resource type. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
+IBM Fusion as a service includes both compute resources (OpenShift clusters) and storage resources (volumes, hosts, S3 credentials, certificates). The roles apply to both resource types, but specific actions are categorized by resource type. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -81,7 +81,7 @@ Fusion as a Service includes both compute resources (OpenShift clusters) and sto
 ## Service access roles
 {: #service-access-roles}
 
-In addition to the above roles, Fusion as a Service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform on both compute resources (clusters) and storage resources (volumes, hosts, S3 credentials, certificates).
+In addition to the above roles, IBM Fusion as a service uses service access roles to control operations on resource level such as clusters and storage within your deployments. The following roles determine what actions users can perform on both compute resources (clusters) and storage resources (volumes, hosts, S3 credentials, certificates).
 
 | Service role |  Description of actions |
 |--------------|------------------------|
@@ -98,18 +98,18 @@ In addition to the above roles, Fusion as a Service uses service access roles to
 ## Identity and access management actions mapped to roles
 {: #iam-actions}
 
-The following tables outline the IAM actions for Fusion as a Service, organized by resource type. Actions are categorized into deployment-level operations that apply to both compute and storage, storage-specific operations, and compute-specific operations.
+The following tables outline the IAM actions for IBM Fusion as a service, organized by resource type. Actions are categorized into deployment-level operations that apply to both compute and storage, storage-specific operations, and compute-specific operations.
 
 ### Deployment-level actions
 {: #deployment-actions}
 
-These actions apply to the overall Fusion as a Service deployment and affect both compute and storage resources.
+These actions apply to the overall IBM Fusion as a service deployment and affect both compute and storage resources.
 
 | Action ID                                       | Roles                                     | Descriptions                      |
 | ------------------------------------------------|-------------------------------------------|-----------------------------------|
 | `resource-controller.instance.retrieve`         | Administrator, Editor, Operator, Viewer   | View and list FusionaaS deployments (compute and storage) but cannot modify the instance properties. |
-| `resource-controller.instance.create`           | Administrator, Editor                     | Create a FusionaaS deployment from the Fusion as a Service Deployments page, including provisioning OpenShift clusters and storage resources.  |
-| `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update a Fusion as a Service deployment. Allowed to modify deployment parameters such as name, quota settings, cluster configurations, and S3 certificates for object storage. |
+| `resource-controller.instance.create`           | Administrator, Editor                     | Create a FusionaaS deployment from the IBM Fusion as a service Deployments page, including provisioning OpenShift clusters and storage resources.  |
+| `resource-controller.instance.update`           | Administrator, Editor, Operator           | Update a IBM Fusion as a service deployment. Allowed to modify deployment parameters such as name, quota settings, cluster configurations, and S3 certificates for object storage. |
 {: caption="Deployment-level IAM actions for FusionaaS" caption-side="bottom"}
 
 ### Storage actions
@@ -150,7 +150,7 @@ These actions are specific to compute resources, including OpenShift clusters.
 {: caption="Compute-specific IAM actions for FusionaaS" caption-side="bottom"}
 
 
-## Assigning access to Fusion as a Service in the console
+## Assigning access to IBM Fusion as a service in the console
 {: #assign-access-console}
 {: ui}
 
@@ -160,11 +160,11 @@ There are two common ways to assign access in the console:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/iam?topic=iam-groups).
 
 
-## Assigning access to Fusion as a Service in the CLI
+## Assigning access to IBM Fusion as a service in the CLI
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/iam?topic=iam-assign-access-resources). The following example shows a command for assigning the `<Manager>` role for `<Fusion as a Service>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/iam?topic=iam-assign-access-resources). The following example shows a command for assigning the `<Manager>` role for `<IBM Fusion as a service>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -175,7 +175,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 ```
 {: pre}
 
-## Assigning access to Fusion as a Service by using the API
+## Assigning access to IBM Fusion as a service by using the API
 {: #assign-access-api}
 {: api}
 
@@ -193,7 +193,7 @@ For step-by-step instructions for assigning, removing, and reviewing access, see
 
 
 
-The following example is for assigning the `<Manager>` role for `<Fusion as a Service>`:
+The following example is for assigning the `<Manager>` role for `<IBM Fusion as a service>`:
 
 Use `<programmatic_service_name>` for the service name, and refer to the Role ID values table to ensure that you're using the correct value for the CRN.
 {: tip}
@@ -202,7 +202,7 @@ Use `<programmatic_service_name>` for the service name, and refer to the Role ID
 ```curl
 curl -X POST 'https://iam.cloud.ibm.com/v1/policies' -H "Authorization: Bearer $IAM_TOKEN" -H 'IBM-API-Version: 2025-02-01' -H 'accept: application/json' -d '{
   "type": "access",
-  "description": "Manager role for IBM Fusion as a Service",
+  "description": "Manager role for IBM Fusion as a service",
   "subjects": [
     {
       "attributes": [
@@ -283,7 +283,7 @@ fmt.Println(string(b))
 {: codeblock}
 
 
-## Assigning access to Fusion as a Service by using Terraform
+## Assigning access to IBM Fusion as a service by using Terraform
 {: #assign-access-terraform}
 {: terraform}
 

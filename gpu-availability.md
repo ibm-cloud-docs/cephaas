@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: gpu, graphics processing unit, gpu availability, nvidia h100, worker node, openshift virtualization, gpu workloads, high availability
 
@@ -15,18 +15,18 @@ subcollection: cephaas
 # GPU availability and distribution
 {: #gpu-availability}
 
-GPU resources in your Fusion as a Service deployment determine how GPU-enabled workloads are scheduled and managed. Understanding GPU availability patterns and distribution options helps you design workloads that can handle maintenance windows and potential hardware events.
+GPU resources in your IBM Fusion as a service deployment determine how GPU-enabled workloads are scheduled and managed. Understanding GPU availability patterns and distribution options helps you design workloads that can handle maintenance windows and potential hardware events.
 {: shortdesc}
 
 ## Available GPU types
 {: #gpu-types}
 
-The GPU types and quantities available in your Fusion as a Service deployment depend on your specific deployment configuration. GPU availability must be determined at order time as part of your initial deployment planning. Contact your IBM representative to discuss the GPU options available for your deployment.
+The GPU types and quantities available in your IBM Fusion as a service deployment depend on your specific deployment configuration. GPU availability must be determined at order time as part of your initial deployment planning. Contact your IBM representative to discuss the GPU options available for your deployment.
 
 ## GPU ordering and configuration
 {: #gpu-ordering}
 
-GPU resources must be specified at order time when you initially configure your Fusion as a Service deployment. You cannot add GPU resources to an existing deployment after it has been provisioned. When planning your deployment, consider the following:
+GPU resources must be specified at order time when you initially configure your IBM Fusion as a service deployment. You cannot add GPU resources to an existing deployment after it has been provisioned. When planning your deployment, consider the following:
 
 - The number of GPUs required for your workloads
 - Whether you need GPUs distributed across multiple worker nodes for high availability

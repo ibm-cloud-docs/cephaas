@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-17"
 
 keywords: cluster access, cluster permissions, role-based access, admin access, non-admin access
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Cluster access permissions
 {: #cluster-access}
 
-Understand how your user role determines what cluster information you can view and what actions you can perform in Fusion as a Service.
+Understand how your user role determines what cluster information you can view and what actions you can perform in IBM Fusion as a service.
 {: shortdesc}
 
 ## Access based on user role
@@ -59,7 +59,7 @@ Non-administrators cannot:
 
 To view cluster information:
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. Click the **Clusters** page in the left navigation.
 3. In the cluster list, click the cluster name or select **View details** from the overflow menu (⋮).
 

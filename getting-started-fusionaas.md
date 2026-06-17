@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: fusion as a service, getting started, fusionaas, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -15,15 +15,15 @@ subcollection: cephaas
 An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
 {: important}
 
-# Getting started with Fusion as a Service
+# Getting started with IBM Fusion as a service
 {: #getting-started}
 
-Fusion as a Service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision Red Hat OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
+IBM Fusion as a service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It allows you to self-service provision Red Hat OpenShift clusters, deploy applications, and consume storage services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty in your own data center.
 {: shortdesc}
 
 This topic guides you through understanding FusionaaS capabilities, estimating costs, and getting started with your deployment.
 
-## What is Fusion as a Service?
+## What is IBM Fusion as a service?
 {: #what-is-fusionaas}
 
 FusionaaS combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, delivered as a fully managed service in your data center. IBM owns, operates, and maintains the hardware while you focus on deploying and managing your applications.
@@ -192,10 +192,10 @@ After your order is processed, you will receive an email with a **Prepare deploy
 Now that you understand FusionaaS and have initiated your deployment:
 
 Learn more
-:   Read [What is Fusion as a Service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.
+:   Read [What is IBM Fusion as a service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.
 
 Prepare your environment
 :   Review [data center prerequisites](/docs/cephaas?topic=cephaas-pre_installation_checklist).
 
 Complete deployment setup
-:   After hardware installation, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).
+:   After hardware installation, see [Onboarding to your IBM Fusion as a service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).

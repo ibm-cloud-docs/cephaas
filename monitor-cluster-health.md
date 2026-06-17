@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-06-17"
 
-keywords: clusters need attention, cluster alerts, cluster issues, Fusion as a Service monitoring, alerts, metrics, cluster monitoring, usage metrics
+keywords: clusters need attention, cluster alerts, cluster issues, IBM Fusion as a service monitoring, alerts, metrics, cluster monitoring, usage metrics
 
 subcollection: cephaas
 

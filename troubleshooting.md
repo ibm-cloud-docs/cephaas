@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service, object storage, low cost object, 
 
@@ -118,7 +118,7 @@ Follow these guidelines to replace the existing certificate with the new one:
 You receive an error message when you attempt to set a default cluster quota, enable Fusion services for a cluster, or update a cluster's storage quota.
 {: tsSymptoms}
 
-Fusion as a Service validates quota values during the following tasks:
+IBM Fusion as a service validates quota values during the following tasks:
 {: tsCauses}
 
 - Setting the default cluster quota during onboarding or from the Settings page
@@ -153,7 +153,7 @@ If validation fails, follow these steps to resolve the issue:
 5. Save the change again after adjusting the quota value.
 
 For more information, see:
-- [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas)
+- [Onboarding to your IBM Fusion as a service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas)
 - [Editing the default cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota)
 - [Updating a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
 - [Viewing storage status for a cluster](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
@@ -201,7 +201,7 @@ For more information, see:
 {: troubleshoot}
 {: support}
 
-When you delete a cluster in Fusion as a Service, the associated storage resources are expected to be released and returned to the available capacity of your deployment. However, in some cases, storage might not be fully reclaimed immediately.
+When you delete a cluster in IBM Fusion as a service, the associated storage resources are expected to be released and returned to the available capacity of your deployment. However, in some cases, storage might not be fully reclaimed immediately.
 {: tsSymptoms}
 
 This issue can occur if storage resources are still in use, not properly detached, or if cleanup operations are delayed or incomplete. As a result, you might continue to see consumed storage capacity even after the cluster is deleted.
@@ -210,7 +210,7 @@ This issue can occur if storage resources are still in use, not properly detache
 Follow these troubleshooting steps to identify why storage is not reclaimed and how to resolve the issue.
 {: tsResolve}
 
-- Ensure that you have access to your Fusion as a Service deployment and IBM Cloud console.
+- Ensure that you have access to your IBM Fusion as a service deployment and IBM Cloud console.
 - Make sure that the cluster you deleted is no longer required.
 
 ### Verify cluster deletion status
@@ -228,7 +228,7 @@ Storage reclamation starts only after the cluster is completely deleted.
 ### Check storage usage in your deployment
 {: #check-storage-usage}
 
-1. Open your Fusion as a Service deployment dashboard.
+1. Open your IBM Fusion as a service deployment dashboard.
 2. Review the storage usage and allocation.
 
 Look for:
@@ -267,7 +267,7 @@ For more information, see [Getting help and support](/docs/cephaas?topic=cephaas
 ## Understanding empty states
 {: #ui-empty-states}
 
-Review the empty states in Fusion as a Service so that you understand why a page has no items to show and what you can do next.
+Review the empty states in IBM Fusion as a service so that you understand why a page has no items to show and what you can do next.
 
 ### Empty states in the deployment UI
 {: #empty-states-overview}

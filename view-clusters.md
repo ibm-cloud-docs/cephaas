@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
-keywords: cluster list, Fusion as a Service clusters, deployment clusters, cluster navigation
+keywords: cluster list, IBM Fusion as a service clusters, deployment clusters, cluster navigation
 
 subcollection: cephaas
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Viewing clusters
 {: #view-cluster-list}
 
-Open the **Clusters** page in your Fusion as a Service deployment to view resource summaries and a detailed list of all associated clusters.
+Open the **Clusters** page in your IBM Fusion as a service deployment to view resource summaries and a detailed list of all associated clusters.
 {: shortdesc}
 
 Before you view the cluster list, make sure that you can open the deployment in the {{site.data.keyword.cloud_notm}} console.
@@ -23,7 +23,7 @@ Before you view the cluster list, make sure that you can open the deployment in 
 ## Clusters page
 {: #access-cluster-list}
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. In the left navigation, click **Clusters**.
 
 The **Clusters** page opens, displaying resource summary cards at the top and a table showing all clusters associated with the deployment.

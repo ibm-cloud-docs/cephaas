@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-06-17"
 
-keywords: default cluster quota, deployment settings, storage quota, Fusion as a Service admin tasks, edit default cluster quota
+keywords: default cluster quota, deployment settings, storage quota, IBM Fusion as a service admin tasks, edit default cluster quota
 
 subcollection: cephaas
 
@@ -15,17 +15,17 @@ subcollection: cephaas
 # Editing cluster storage quota
 {: #manage-cluster-quota}
 
-Edit the default storage quota that Fusion as a Service applies when you enable Fusion services for a cluster. The Settings page displays storage capacity information and allows administrators to modify the default cluster quota.
+Edit the default storage quota that IBM Fusion as a service applies when you enable Fusion services for a cluster. The Settings page displays storage capacity information and allows administrators to modify the default cluster quota.
 {: shortdesc}
 
-The default cluster quota is initially set during the onboarding process. For information about setting the quota during first-time setup, see [Onboarding to your Fusion as a Service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).
+The default cluster quota is initially set during the onboarding process. For information about setting the quota during first-time setup, see [Onboarding to your IBM Fusion as a service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).
 
 To edit the default cluster quota, you must have administrator permissions.
 
 ## Opening the Settings page
 {: #open-settings}
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. In the left navigation, click **Settings**.
 
 The Settings page opens, displaying the Storage tile with deployment storage information.
@@ -86,7 +86,7 @@ The default quota affects only future enablement of Fusion services. It does not
 
 If you have administrator permissions, you can edit the default cluster quota.
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. In the left navigation, click **Settings**.
 3. In the **Storage** tile, click **Edit quota**.
 4. In the side panel, enter or update the storage quota value in TB.

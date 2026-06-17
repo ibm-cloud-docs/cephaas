@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: administration, billing, platform, ceph as a service, cephaas, fusion as a service, fusionaas, invoices, storage tiers, performance tier, capacity tier, compute billing, subscription terms
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # Billing
 {: #billing}
 
-In Fusion as a Service, you can select the type of infrastructure you want to include in your deployment:
+In IBM Fusion as a service, you can select the type of infrastructure you want to include in your deployment:
 
 Compute
 :   For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments. Enables you to provision and manage Red Hat OpenShift on IBM Cloud Satellite clusters in your on-premises environment with fully managed IBM SRE support, self-service cluster provisioning, automated lifecycle management, and GPU support for AI and data-intensive workloads.
@@ -29,7 +29,7 @@ You can select both Compute and Storage options to create a complete on-premises
 ### Subscription terms
 {: #subscription-terms}
 
-Both {{site.data.keyword.cephaas_full_notm}} and Fusion as a Service offer flexible subscription terms:
+Both {{site.data.keyword.cephaas_full_notm}} and IBM Fusion as a service offer flexible subscription terms:
 
 - **3 years**: Standard subscription term
 - **4 years**: Extended subscription with cost savings
@@ -45,7 +45,7 @@ To find your invoices, on the {{site.data.keyword.cloud_notm}} console, from the
 ## Storage billing
 {: #storage-billing}
 
-Storage billing applies to the Storage component of Fusion as a Service. IBM offers two storage tiers optimized for different workload requirements.
+Storage billing applies to the Storage component of IBM Fusion as a service. IBM offers two storage tiers optimized for different workload requirements.
 
 ### Storage tiers
 {: #billing-request-classes}
@@ -100,7 +100,7 @@ Your overall available capacity consists of the committed capacity that is combi
 ## Compute billing
 {: #compute-billing}
 
-Fusion as a Service (FusionaaS) offers flexible billing options for compute resources. You can select either Compute or Storage infrastructure, or both, depending on your needs.
+IBM Fusion as a service (FusionaaS) offers flexible billing options for compute resources. You can select either Compute or Storage infrastructure, or both, depending on your needs.
 
 
 ### Compute pricing model

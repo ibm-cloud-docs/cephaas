@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
 keywords: fusion as a service, fusionaas, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
@@ -12,15 +12,15 @@ subcollection: cephaas
 {{site.data.keyword.attribute-definition-list}}
 
 
-# What is Fusion as a Service?
+# What is IBM Fusion as a service?
 {: #about-fusionaas}
 
-Fusion as a Service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
+IBM Fusion as a service (FusionaaS) is IBM's fully managed Red Hat OpenShift on IBM Cloud Satellite platform delivered on-premises with cloud-like consumption and operational models. It combines the power of Red Hat OpenShift with IBM's enterprise-grade infrastructure management, allowing you to run containerized workloads in your own data center while benefiting from cloud economics and IBM Site Reliability Engineering (SRE) expertise.
 {: shortdesc}
 
 FusionaaS extends the IBM Fusion experience to a fully IBM-managed service that allows you to self-service provision OpenShift clusters, deploy applications, and consume storage and data services with cloud-like elasticity and a pay-for-what-you-use model—all while maintaining data sovereignty and meeting regulatory requirements for on-premises deployment.
 
-## How Fusion as a Service works
+## How IBM Fusion as a service works
 {: #how-fusionaas-works}
 
 With FusionaaS, IBM delivers, installs, and operates Red Hat OpenShift infrastructure in your data center. You retain physical control of your data and infrastructure while IBM handles the operational complexity:
@@ -78,7 +78,7 @@ Observability and monitoring
 :   Metrics and logs are collected by Prometheus in the Control Plane ROKS and forwarded to the SRE VPC for centralized monitoring. IBM SRE teams use these observability tools to proactively monitor platform health, identify issues, and perform maintenance activities.
 
 
-## Getting started with Fusion as a Service
+## Getting started with IBM Fusion as a service
 {: #fusionaas-next-steps}
 
 To begin your FusionaaS journey:
@@ -87,10 +87,10 @@ To begin your FusionaaS journey:
 2. **Prepare your data center**: Review the [prerequisites for installing FusionaaS](/docs/cephaas?topic=cephaas-pre_installation_checklist) to ensure your facility meets requirements.
 3. **Deploy**: Work with IBM to install and configure FusionaaS in your data center.
 
-For detailed information on getting started, see [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started).
+For detailed information on getting started, see [Getting started with IBM Fusion as a service](/docs/cephaas?topic=cephaas-getting-started).
 
 ## Related information
 {: #fusionaas-related}
 
-- [Getting started with Fusion as a Service](/docs/cephaas?topic=cephaas-getting-started)
+- [Getting started with IBM Fusion as a service](/docs/cephaas?topic=cephaas-getting-started)
 - [Preparing your data center](/docs/cephaas?topic=cephaas-pre_installation_checklist)

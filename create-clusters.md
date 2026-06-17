@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-15"
+lastupdated: "2026-06-17"
 
-keywords: cluster creation, Fusion as a Service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
+keywords: cluster creation, IBM Fusion as a service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
 subcollection: cephaas
 
@@ -15,22 +15,22 @@ subcollection: cephaas
 # Creating clusters
 {: #create-clusters}
 
-Create Red Hat OpenShift clusters on IBM Cloud for your Fusion as a Service deployment by using IBM Cloud Satellite.
+Create Red Hat OpenShift clusters on IBM Cloud for your IBM Fusion as a service deployment by using IBM Cloud Satellite.
 {: shortdesc}
 
 Make sure that you meet the following prerequisites for cluster creation:
 
-- You have access to a Fusion as a Service deployment in your IBM Cloud account.
+- You have access to a IBM Fusion as a service deployment in your IBM Cloud account.
 - You have the required IAM permissions to create and manage clusters.
 - Your deployment shows available compute, storage, and optional GPU capacity.
-- Your Satellite location and Fusion as a Service control plane are already set up.
+- Your Satellite location and IBM Fusion as a service control plane are already set up.
 
 ## How cluster creation works
 {: #how-cluster-creation-works}
 
-When you create a cluster in Fusion as a Service, the cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite in your IBM Cloud account.
+When you create a cluster in IBM Fusion as a service, the cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite in your IBM Cloud account.
 
-Fusion as a Service and IBM Cloud manage the following components:
+IBM Fusion as a service and IBM Cloud manage the following components:
 
 Satellite control plane
 :   IBM manages the Satellite control plane.
@@ -55,10 +55,10 @@ Resource consumption
 ## Create a cluster
 {: #create-a-cluster}
 
-Use the IBM Cloud console to start cluster creation from your Fusion as a Service deployment. The deployment dashboard surfaces capacity, quotas, and status information, while cluster creation is completed in the Red Hat OpenShift on IBM Cloud Satellite workflow.
+Use the IBM Cloud console to start cluster creation from your IBM Fusion as a service deployment. The deployment dashboard surfaces capacity, quotas, and status information, while cluster creation is completed in the Red Hat OpenShift on IBM Cloud Satellite workflow.
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
-2. Open your Fusion as a Service deployment from the **Resource list**.
+2. Open your IBM Fusion as a service deployment from the **Resource list**.
 3. From the deployment dashboard, click **Cluster management** > **Clusters**.
 
 The **Clusters** page shows Name, State, Location, Worker count, Created date, Version, and Infrastructure. 
@@ -81,7 +81,7 @@ In the Satellite cluster wizard, specify the required configuration for your clu
 - Optional GPU-enabled worker nodes
 - Storage quota for the cluster, based on available Fusion Data Foundation capacity
 
-Fusion as a Service validates your selections against the available deployment capacity.
+IBM Fusion as a service validates your selections against the available deployment capacity.
 
 ## Review and create the cluster
 {: #review-and-create-cluster}
@@ -98,7 +98,7 @@ After the cluster becomes available, you can complete the following tasks:
 
 - Access the cluster from the OpenShift web console.
 - Deploy applications and services as you would for any Red Hat OpenShift on IBM Cloud cluster.
-- View health, capacity, and alerts from the Fusion as a Service dashboard.
+- View health, capacity, and alerts from the IBM Fusion as a service dashboard.
 - Enable and use Fusion services, if needed.
 
 ## Related tasks

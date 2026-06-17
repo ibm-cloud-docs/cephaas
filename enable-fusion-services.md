@@ -2,9 +2,9 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-06-17"
 
-keywords: enable Fusion services, cluster storage, cluster quota, Fusion as a Service storage
+keywords: enable Fusion services, cluster storage, cluster quota, IBM Fusion as a service storage
 
 subcollection: cephaas
 
@@ -29,7 +29,7 @@ When you enable Fusion services for a cluster, you grant the cluster permission 
 ## Enabling Fusion services
 {: #enable-fusion-steps}
 
-1. Open your Fusion as a Service deployment.
+1. Open your IBM Fusion as a service deployment.
 2. In the left navigation, click **Clusters**.
 3. In the cluster list, locate the cluster for which you want to enable Fusion services.
 4. Click the cluster name to open the cluster details page.

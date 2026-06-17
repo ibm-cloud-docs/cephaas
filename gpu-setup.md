@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-08"
+lastupdated: "2026-06-17"
 
 keywords: gpu operators, nfd operator, nvidia gpu operator, node feature discovery, gpu setup, satellite roks, openshift gpu configuration
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Using GPUs in your clusters
 {: #fusionaas-using-gpus}
 
-Fusion as a Service (FusionaaS) supports running GPU-enabled workloads on Red Hat OpenShift on IBM Cloud Satellite (ROKS) clusters that are created in your deployment. GPU-enabled clusters allow you to accelerate compute-intensive workloads such as AI, machine learning, and data processing.
+IBM Fusion as a service (FusionaaS) supports running GPU-enabled workloads on Red Hat OpenShift on IBM Cloud Satellite (ROKS) clusters that are created in your deployment. GPU-enabled clusters allow you to accelerate compute-intensive workloads such as AI, machine learning, and data processing.
 {: shortdesc}
 
 ## About GPU workloads in FusionaaS
