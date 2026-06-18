@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-18"
 
 keywords: gpu operators, nfd operator, nvidia gpu operator, node feature discovery, gpu setup, satellite roks, openshift gpu configuration
 
@@ -43,7 +43,7 @@ Ensure that:
 To run GPU workloads, you must install and configure the required operators in your cluster, such as:
 
 - **Node Feature Discovery (NFD) Operator**
-- **NVIDIA GPU Operator** (or equivalent operators for your GPU hardware)
+- **NVIDIA GPU Operator**
 
 Fusion does not manage these operators. You must install them in your cluster by following the Red Hat OpenShift and IBM Cloud documentation.
 

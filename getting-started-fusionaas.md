@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-18"
 
 keywords: fusion as a service, getting started, fusion, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -47,41 +47,11 @@ With Fusion, IBM delivers, installs, and operates infrastructure in your data ce
 - **Self-service provisioning**: Provision Red Hat OpenShift clusters and storage through familiar {{site.data.keyword.cloud_notm}} interfaces and APIs.
 - **Flexible scaling**: Scale resources on-demand without procurement delays.
 
-## Understanding billing options
-{: #billing-options}
+## Ordering IBM Fusion as a service
+{: #ordering-fusion}
 {: step}
 
-Fusion offers flexible billing options based on your workload requirements. You can select either **Compute** or **Storage** infrastructure, or both, depending on your needs.
-
-### Infrastructure options
-{: #infrastructure-options}
-
-Select the type of infrastructure you want to include in your deployment:
-
-Compute
-:   For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments. Enables you to provision and manage Red Hat OpenShift on IBM Cloud Satellite clusters in your on-premises environment with fully managed IBM SRE support, self-service cluster provisioning, automated lifecycle management, and GPU support for AI and data-intensive workloads.
-
-Storage
-:   For managing block, file, and object storage capacity across your workloads. Provides access to IBM Storage Ceph as a Service with performance tiers optimized for your specific requirements, supporting multiple protocols and self-provisioning capabilities.
-
-You can select both Compute and Storage options to create a complete on-premises cloud platform with integrated management and unified billing.
-
-### Subscription term
-{: #subscription-term}
-
-You can save more with a longer subscription term. Fusion offers the following subscription term options:
-
-- **3 years**: Standard subscription term
-- **4 years**: Extended subscription with cost savings
-- **5 years**: Maximum subscription term with optimal cost savings
-
-Longer subscription terms provide better pricing and help you plan your infrastructure costs over an extended period.
-
-## Requesting consultation
-{: #consultation-request}
-{: step}
-
-Fusion is available in the {{site.data.keyword.cloud_notm}} catalog. To get started, you need to request a consultation with IBM experts to discuss your specific requirements and receive customized pricing.
+Fusion as a service is available in the {{site.data.keyword.cloud_notm}} catalog. To get started, configure your deployment requirements and place your order.
 
 1. Navigate to the {{site.data.keyword.cloud_notm}} catalog and locate the **IBM Fusion** tile.
 
@@ -107,64 +77,78 @@ Fusion is available in the {{site.data.keyword.cloud_notm}} catalog. To get star
    **Subscription term**
    
    Choose your subscription term to optimize costs:
-   - **3 years**: Standard subscription term
-   - **4 years**: Extended subscription with cost savings
-   - **5 years**: Maximum subscription term with optimal cost savings
+   - **3 years**: Standard subscription term with flexible monthly commitments
 
-4. For Compute infrastructure:
-   - Select from recommended configurations or customize your deployment
-   - Choose AI solutions (Integrated AI, Data Lakehouse) or Application platform options
-   - Specify vCPUs, memory, GPUs, and usable storage capacity
-   - Configure availability zones based on your requirements
+4. For Compute infrastructure, select from the following AI solutions:
 
-5. For Storage infrastructure:
-   - Select the storage tier: **Performance** or **Capacity**
-   - Enter the total storage capacity in TB
-   - Performance tier: 100 TB to 800 TB
-   - Capacity tier: 800 TB to 3,200 TB
+   **Integrated AI**
+   - 256 vCPUs
+   - 2304 GB memory
+   - 4 GPUs
+   - 22.3 TiB usable storage capacity
 
-6. Click **Get consultation** to submit your configuration and request a consultation.
+   **Data Lakehouse (Small)**
+   - 640 vCPUs
+   - 4352 GB memory
+   - 8 GPUs
+   - 74.5 TiB usable storage capacity
 
-7. Complete the consultation request form with your contact details and requirements:
-   - Organization information
-   - Desired billing options (Compute, Storage, or both)
-   - Estimated capacity needs
-   - Timeline for deployment
-   - Any specific compliance or regulatory requirements
+   **Application platform**
+   
+   Choose from availability zone configurations:
+   - **1 Availability Zone (XSmall)**: 128 vCPUs, 1280 GB memory, 0 GPUs, 18.6 TB usable storage capacity
+   - **1 Availability Zone (Small)**: 256 vCPUs, 1024 GB memory, 0 GPUs, 37.2 usable storage capacity
+   - **1 Availability Zone (Medium)**: 512 vCPUs, 2816 GB memory, 0 GPUs, 52.1 TiB usable storage capacity
+   - **1 Availability Zone (Large)**: 1024 vCPUs, 4096 GB memory, 0 GPUs, 81.9 TiB usable storage capacity
+   - **1 Availability Zone (XLarge)**: 1920 vCPUs, 7424 GB memory, 0 GPUs, 119.1 TiB usable storage capacity
 
-8. Submit the form to generate a **Confirmation ID**.
+5. Review the total estimated cost in the summary panel.
 
-9. You will receive:
-   - On-screen confirmation with your consultation ID
-   - Email confirmation with your configuration details
-   - Notification sent to IBM sales team
+6. Click **Get consultation** to submit your configuration and request a consultation with IBM experts.
 
-10. An IBM representative will contact you within 1-2 business days to discuss pricing and next steps.
-
-After discussions and approvals, the IBM representative will provide detailed pricing and place your order. You will receive order details and a tracking link via email. Track your order status from your {{site.data.keyword.cloud_notm}} account dashboard.
+After your consultation and approval, your IBM representative will place your order. You will receive order confirmation and tracking information via email.
 
 The hardware includes optimized racks, servers, storage, networking switches, and integrated software that connects to {{site.data.keyword.cloud_notm}}. IBM owns and maintains the hardware, and the service infrastructure is installed in your designated data center.
 {: note}
+
+## Tracking your order
+{: #track-order}
+{: step}
+
+After your order is placed, you can track its status from the {{site.data.keyword.cloud_notm}} console.
+
+1. Log in to the {{site.data.keyword.cloud_notm}} console.
+
+2. Navigate to **Fusion as a Service** > **Deployments**.
+
+3. The Deployments page displays a welcome message: "Welcome! Your order is on its way."
+
+4. Your IBM representative will soon contact you to assist with the setup. Meanwhile, explore the responsibilities for your deployment by clicking **Review responsibilities**.
+
+5. The page displays your orders with the following information:
+   - **Order ID**: Unique identifier for your order
+   - **Subscription term**: Duration of your subscription (for example, 3 years)
+   - **Tier**: Infrastructure type (Compute or Storage)
+   - **Deployment preparation**: Status indicator showing preparation progress
+
+6. For Compute orders, the deployment preparation status shows as **Not started** until you begin the preparation process.
+
+7. For Storage orders, the deployment preparation status shows as **Completed** after the order is processed.
 
 ## Preparing your deployment
 {: #prepare-deployment}
 {: step}
 
-After your order is processed, you will receive an email with a **Prepare deployment** link from your IBM representative. This link directs you to the deployment dashboard where you can configure your deployment settings.
-
-### Access the deployment dashboard
-{: #access-deployment-dashboard}
-
-1. Check your email for the **Prepare deployment** link from your IBM representative.
-2. Click the link to access the deployment dashboard.
-3. The dashboard displays your orders with deployment preparation status.
+After your order is confirmed, you need to prepare your deployment by configuring the satellite location and deployment details.
 
 ### Configure deployment settings
 {: #configure-deployment}
 
-1. Click **Prepare deployment** from your order.
+1. From the Deployments page, locate your Compute order.
 
-2. The **Prepare deployment** side panel opens. Configure the following settings:
+2. Click **Prepare deployment** next to your order.
+
+3. The **Prepare deployment** side panel opens. Configure the following settings:
 
    **Satellite location**
    
@@ -179,23 +163,82 @@ After your order is processed, you will receive an email with a **Prepare deploy
    - **Name**: Enter a descriptive name for your deployment
    
    - **Resource group**: Select the resource group for organizing your deployment resources
-     - You can view all resource groups or create a new resource group
+     - You can view all resource groups by clicking **View all resource groups**
+     - You can create a new resource group by clicking **Create resource group**
 
-3. Click **Create** to complete the deployment preparation, or click **Cancel** to close the panel without saving.
+4. Click **Create** to complete the deployment preparation, or click **Cancel** to close the panel without saving.
 
-4. After you create the deployment, your **Deployment preparation** status changes to **Completed**.
+5. After you create the deployment, your **Deployment preparation** status changes to **Completed**.
+
+## Setting up your deployment
+{: #setup-deployment}
+{: step}
+
+After you complete the deployment preparation, IBM manages the infrastructure installation and setup. Once the setup is complete, you can begin using your Fusion deployment.
+
+### Welcome to IBM Fusion
+{: #welcome-fusion}
+
+When your deployment is ready, you'll see a welcome screen with the following message:
+
+"Your deployment is now set up and ready to use. You can now view the resources available to you, such as clusters and storage, and take the next appropriate action based on your access."
+
+Alternatively, for IBM-managed deployments:
+
+"Your deployment is now set up and ready to use. You can focus on provisioning clusters and IBM will make sure things are running properly — just like your favorite cloud service."
+
+### Set cluster quota
+{: #set-cluster-quota}
+
+Before you can start provisioning clusters, you need to set your default cluster quota:
+
+1. Click **Set cluster quota** from the welcome screen.
+
+2. The **Set default cluster quota** side panel opens.
+
+3. Configure the storage quota:
+   - **Storage quota (TB)**: Enter the default amount of storage capacity allocated each time a cluster is created
+   - Use the **-** and **+** buttons to adjust the quota value
+   - The default value is 10 TB
+
+4. Review the note: "This quota will be applied to all new clusters created."
+
+5. Click **Save** to set the quota, or click **Cancel** to close the panel without saving.
+
+For more information about managing cluster quotas, see [Managing cluster quotas](/docs/cephaas?topic=cephaas-update-cluster-quota).
+{: tip}
+
+### View your clusters
+{: #view-clusters}
+
+After setting your cluster quota, you can view your available clusters:
+
+1. Click **View your clusters** from the welcome screen.
+
+2. The Clusters page displays your cluster resources, including:
+   - **vCPUs**: Total virtual CPUs available
+   - **Memory**: Total memory available
+   - **Storage**: Total storage capacity available
+
+3. If no clusters are available yet, you'll see the message: "There are no clusters available. Create clusters through the Red Hat OpenShift on IBM Cloud Satellite portal."
 
 
 ## Next steps
 {: #next-steps}
 
-Now that you understand Fusion and have initiated your deployment:
+Now that your deployment is set up and ready:
+
+Create clusters
+:   Provision Red Hat OpenShift clusters through the IBM Cloud Satellite portal. See [Creating clusters](/docs/cephaas?topic=cephaas-create-clusters).
+
+Manage cluster quotas
+:   Update your default cluster quota or set quotas for specific clusters. See [Managing cluster quotas](/docs/cephaas?topic=cephaas-update-cluster-quota).
+
+View deployment capacity
+:   Monitor your deployment's resource usage and capacity. See [Viewing deployment capacity](/docs/cephaas?topic=cephaas-view-deployment-capacity).
+
+Access management
+:   Configure user access and permissions for your deployment. See [Managing access to Fusion as a Service](/docs/cephaas?topic=cephaas-iam_access-fusionaas).
 
 Learn more
 :   Read [What is IBM Fusion as a service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.
-
-Prepare your environment
-:   Review [data center prerequisites](/docs/cephaas?topic=cephaas-pre_installation_checklist).
-
-Complete deployment setup
-:   After hardware installation, see [Onboarding to your IBM Fusion as a service deployment](/docs/cephaas?topic=cephaas-onboarding-fusionaas).

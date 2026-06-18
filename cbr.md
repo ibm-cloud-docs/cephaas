@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-18"
 
 keywords: context-based restrictions, CBR, network security, cluster security, ROKS, access control
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 You can use context-based restrictions (CBR) in {{site.data.keyword.cloud_notm}} to control access to your resources based on factors such as network location, IP address, or service endpoints.
 {: shortdesc}
 
-In IBM Fusion as a service (Fusion), CBR helps you secure access to your Red Hat OpenShift on {{site.data.keyword.cloud_notm}} (ROKS) clusters and related resources.
+In IBM Fusion as a service (Fusion), CBR helps you secure access to your Red Hat OpenShift on {{site.data.keyword.cloud_notm}} clusters and related resources.
 
 ## About CBR in Fusion
 {: #cbr-about}
@@ -58,7 +58,9 @@ The following scenario is not supported in Fusion version 1:
 
 - Configuring CBR rules for {{site.data.keyword.cloud_notm}} API endpoints that are used to manage or interact with IKS or ROKS services
 
-If you attempt to apply CBR rules to these endpoints, the configuration is not enforced in Fusion.
+If you attempt to apply CBR rules to these endpoints, unexpected behavior can occur.
+
+the configuration is not enforced in Fusion.
 
 ## Best practices
 {: #cbr-best-practices}
