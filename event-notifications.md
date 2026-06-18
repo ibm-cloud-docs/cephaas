@@ -35,28 +35,21 @@ The following tables list the IBM Fusion as a service events.
 ### Storage notifications
 {: #storage-notifications}
 
+
 | Event Name        | Event Type        | Sub Type Name | Sub Type  | Severity  |
 |------------------------------------------|---------|---------|---------|---------|
-| IBM Fusion as a service Storage Capacity    | `com.ibm.cloud.software-defined-storage.capacity`   | Allocated block storage at 50% of capacity    | `block_capacity_50_percent` | low |
+| IBM Fusion as a service Storage capacity    | `com.ibm.cloud.software-defined-storage.capacity`   | Allocated block storage at 50% of capacity    | `block_capacity_50_percent` | low |
 |   |   | Allocated block storage at 80% of capacity    | `block_capacity_80_percent` | medium  |
 |   |   |	Allocated block storage at 100% of capacity | `block_capacity_100_percent`    | high    |
-|   |   |	Allocated object storage at 50% of capacity | `object_capacity_50_percent`    | low |
-|   |   |	Allocated object storage at 80% of capacity | `object_capacity_80_percent`    | medium  |
-|   |   |	Allocated object storage at 100% of capacity    | `object_capacity_100_percent`   | high  |
-|IBM Fusion as a service S3 Certificates  | `com.ibm.cloud.software-defined-storage.s3-certificate` | S3 certificate has expired    | `s3_cert_expired` | high    |
-|   |   | S3 certificate will expire in 1 day   | `s3_cert_expire_1_day`  | high  |
-|   |   | S3 certificate will expire in 10 days	| `s3_cert_expire_10_day` | high    |
-|   |   | S3 certificate will expire in 30 days	| `s3_cert_expire_30_day` | medium  |
-|   |	| S3 certificate will expire in 60 days	| `s3_cert_expire_60_day` | medium  |
-|   |   | S3 certificate will expire in 90 days	| `s3_cert_expire_90_day` | low |
 {: caption="Storage event notifications" caption-side="bottom"}
 
 ### Compute notifications
 {: #compute-notifications}
 
+
 | Event Name        | Event Type        | Sub Type Name | Sub Type  | Severity  |
 |------------------------------------------|---------|---------|---------|---------|
-| IBM Fusion as a service Compute Storage Capacity    | `com.ibm.cloud.software-defined-storage.compute-capacity`   | Consumption storage capacity has reached 50% of allocated capacity    | `compute_capacity_50_percent` | low |
+| IBM Fusion as a service Compute storage Capacity    | `com.ibm.cloud.software-defined-storage.compute-capacity`   | Consumption storage capacity has reached 50% of allocated capacity    | `compute_capacity_50_percent` | low |
 |   |   | Consumption storage capacity has reached 80% of allocated capacity    | `compute_capacity_80_percent` | medium  |
 |   |   |	Consumption storage capacity has reached 100% of allocated capacity | `compute_capacity_100_percent`    | high    |
 {: caption="Compute event notifications" caption-side="bottom"}
@@ -135,23 +128,6 @@ Event notifications from IBM Fusion as a service contain only metadata propertie
 {: note}
 
 
-The properties that are sent to {{site.data.keyword.en_short}} vary depending on the event type. For example, if an `ExampleEventForYourService` event takes place, IBM Fusion as a service sends a notification payload to {{site.data.keyword.en_short}} that is similar to the following example.
-
-```json
-{
-    "ibmendefaultlong": "S3 certificate will expire in 90 days. Please replace your S3 certificate.",
-    "ibmendefaultshort": "Replace S3 certificate (expires 90 days)",
-    "ibmenseverity": "low",
-    "ibmensourceid": "crn:v1:staging:public:software-defined-storage:satloc_dal_crmid4v20tl6u8usf790:a/3faf73b8d12b47fa6ce87494f8ae7686:0c81f602-5142-4809-9e42-31de8453416a::",
-    "id": "38eb4721-db9b-4ba6-a5e7-cdd9cce66763",
-    "source": "crn:v1:staging:public:software-defined-storage:satloc_dal_crmid4v20tl6u8usf790:a/3faf73b8d12b47fa6ce87494f8ae7686:0c81f602-5142-4809-9e42-31de8453416a::",
-    "specversion": "1.0",
-    "time": "2025-04-23T21:13:44.301Z",
-    "type": "com.ibm.cloud.software-defined-storage.s3-certificate:s3_cert_expire_90_day"
-}
-```
-{: screen}
-
 Review following table for more information about event notification properties.
 
 | Property | Description |
@@ -165,4 +141,4 @@ Review following table for more information about event notification properties.
 | `specversion` | It is the version of the Cloud Events specification that Event Notifications currently supports. This value must be set to "1.0". |
 | `time`    | UTC timestamp when the event occurred. Must be in the RFC 3339 format.    |
 | `type`    | This describes the type of event. It is of the form _`<event-type-name>:<sub-type>`_   |
-{: caption="Properties in an event notification payload" caption-side="bottom"}
+{: caption="Properties in an event notification payload" caption-side="bottom"} 
