@@ -27,7 +27,7 @@ toc:
           - network_latency.md
           - gpu-availability.md
       - topicgroup:
-          label: Storage Setup
+          label: Storage setup
           topics:
           - administrators.md
           - developers.md

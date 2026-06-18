@@ -179,13 +179,7 @@ After you complete the deployment preparation, IBM manages the infrastructure in
 ### Welcome to IBM Fusion
 {: #welcome-fusion}
 
-When your deployment is ready, you'll see a welcome screen with the following message:
-
-"Your deployment is now set up and ready to use. You can now view the resources available to you, such as clusters and storage, and take the next appropriate action based on your access."
-
-Alternatively, for IBM-managed deployments:
-
-"Your deployment is now set up and ready to use. You can focus on provisioning clusters and IBM will make sure things are running properly — just like your favorite cloud service."
+When your deployment is ready, a welcome screen is displayed. Depending on your access rights, you can either **Set cluster quota** or **View your clusters**. Only Admin users can set the cluster quota.
 
 ### Set cluster quota
 {: #set-cluster-quota}
