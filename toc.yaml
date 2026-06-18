@@ -110,8 +110,6 @@ toc:
       - topicgroup:
           label: Enhancing security
           topics:
-          - topic: architecture-workload-isolation.md
-            navtitle: Architecture and workload isolation
           - endpoints.md
           - cbr.md
           - data-security.md
