@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-06-19"
 
 keywords: cephaas, event notifications, ceph as a service
 
@@ -49,7 +49,7 @@ The following tables list the IBM Fusion as a service events.
 
 | Event Name        | Event Type        | Sub Type Name | Sub Type  | Severity  |
 |------------------------------------------|---------|---------|---------|---------|
-| IBM Fusion as a service Compute storage Capacity    | `com.ibm.cloud.software-defined-storage.compute-capacity`   | Consumption storage capacity has reached 50% of allocated capacity    | `compute_capacity_50_percent` | low |
+| IBM Fusion as a service Compute capacity    | `com.ibm.cloud.software-defined-storage.compute-capacity`   | Consumption storage capacity has reached 50% of allocated capacity    | `compute_capacity_50_percent` | low |
 |   |   | Consumption storage capacity has reached 80% of allocated capacity    | `compute_capacity_80_percent` | medium  |
 |   |   |	Consumption storage capacity has reached 100% of allocated capacity | `compute_capacity_100_percent`    | high    |
 {: caption="Compute event notifications" caption-side="bottom"}

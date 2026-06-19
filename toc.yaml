@@ -105,6 +105,7 @@ toc:
           - topicgroup:
               label: Disaster recovery
               topics:
+              - backup-restore.md
               - object-dr.md
               - failover.md
       - topicgroup:
