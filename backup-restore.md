@@ -60,26 +60,26 @@ Before you use the CR-based backup and restore workflow, enable Fusion services 
    ```
    {: pre}
 
-3. Confirm that the BNR pods are in `Running` or `Completed` status. The following example shows the expected pod types after installation:
+3. Confirm that the BNR pods are in `Running` or `Completed` status. The following table shows the expected pod types after installation:
 
-   ```text
-   ibm-backup-restore                                 5531d81ef75328ec4c863d6b38c60668479a0be44d8b007ede366c53f1hz854   0/1     Completed   0               6m28s
-   ibm-backup-restore                                 913043d495569b683138873c165fa34c5e3adedfc74a5dec7cce76fb3fqzwq4   0/1     Completed   0               6m30s
-   ibm-backup-restore                                 b04fc6523bd46f414e8463cd10dce8ce62ad97dd4224a269ffc9553eeejp86h   0/1     Completed   0               6m29s
-   ibm-backup-restore                                 dbr-controller-649bb968b6-wmqpv                                   1/1     Running     2 (4m48s ago)   5m8s
-   ibm-backup-restore                                 guardian-dm-controller-manager-85fb656bd5-6rptg                   2/2     Running     0               5m56s
-   ibm-backup-restore                                 guardian-dp-operator-controller-manager-7595665775-5hkjf          2/2     Running     0               6m1s
-   ibm-backup-restore                                 guardian-minio-0                                                  1/1     Running     0               5m12s
-   ibm-backup-restore                                 ibm-dataprotectionagent-controller-manager-7759f7cd8-mxbrj        2/2     Running     0               6m3s
-   ibm-backup-restore                                 ibm-fusion-backup-restore-catalog-cskvb                           1/1     Running     0               7m15s
-   ibm-backup-restore                                 node-agent-4s6vh                                                  1/1     Running     0               4m37s
-   ibm-backup-restore                                 node-agent-k4lrg                                                  1/1     Running     0               4m41s
-   ibm-backup-restore                                 node-agent-xrt7z                                                  1/1     Running     0               4m46s
-   ibm-backup-restore                                 openshift-adp-controller-manager-645ff5b555-cj5fk                 1/1     Running     0               5m58s
-   ibm-backup-restore                                 transaction-manager-75f6f85cd7-xppb4                              1/1     Running     2 (4m57s ago)   5m15s
-   ibm-backup-restore                                 velero-7c49df784b-nv5fw                                           1/1     Running     0               4m47s
-   ```
-   {: pre}
+   | Pod name | Ready | Status | Restarts | Age |
+   | -------- | ----- | ------ | -------- | --- |
+   | 5531d81ef75328ec4c863d6b38c60668479a0be44d8b007ede366c53f1hz854 | 0/1 | Completed | 0 | 6m28s |
+   | 913043d495569b683138873c165fa34c5e3adedfc74a5dec7cce76fb3fqzwq4 | 0/1 | Completed | 0 | 6m30s |
+   | b04fc6523bd46f414e8463cd10dce8ce62ad97dd4224a269ffc9553eeejp86h | 0/1 | Completed | 0 | 6m29s |
+   | dbr-controller-649bb968b6-wmqpv | 1/1 | Running | 2 (4m48s ago) | 5m8s |
+   | guardian-dm-controller-manager-85fb656bd5-6rptg | 2/2 | Running | 0 | 5m56s |
+   | guardian-dp-operator-controller-manager-7595665775-5hkjf | 2/2 | Running | 0 | 6m1s |
+   | guardian-minio-0 | 1/1 | Running | 0 | 5m12s |
+   | ibm-dataprotectionagent-controller-manager-7759f7cd8-mxbrj | 2/2 | Running | 0 | 6m3s |
+   | ibm-fusion-backup-restore-catalog-cskvb | 1/1 | Running | 0 | 7m15s |
+   | node-agent-4s6vh | 1/1 | Running | 0 | 4m37s |
+   | node-agent-k4lrg | 1/1 | Running | 0 | 4m41s |
+   | node-agent-xrt7z | 1/1 | Running | 0 | 4m46s |
+   | openshift-adp-controller-manager-645ff5b555-cj5fk | 1/1 | Running | 0 | 5m58s |
+   | transaction-manager-75f6f85cd7-xppb4 | 1/1 | Running | 2 (4m57s ago) | 5m15s |
+   | velero-7c49df784b-nv5fw | 1/1 | Running | 0 | 4m47s |
+   {: caption="Expected BNR pods after installation" caption-side="bottom"}
 
 ## Configuring backup storage
 {: #configure-storage}
