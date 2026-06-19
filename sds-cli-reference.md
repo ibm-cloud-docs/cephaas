@@ -9,6 +9,8 @@ keywords: cli, command-line reference, unified storage, sds, software-defined-st
 
 subcollection: cephaas
 
+content-type: cli-docs
+
 ---
 {{site.data.keyword.attribute-definition-list}}
 
