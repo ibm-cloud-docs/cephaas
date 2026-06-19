@@ -322,3 +322,12 @@ These instructions show how to back up and restore an application namespace. The
 Use namespace-specific values for your environment, such as the namespace name, cluster URL, backup name, PVC name, secret name, and COS bucket name.
 
 Avoid restoring an entire namespace on top of itself unless you fully understand the impact. Doing so can remove the backup and restore configuration from that namespace.
+
+## Self-service backup and restore for application owners
+{: #backup-restore-self-service}
+
+If you are an application owner (a user who manages applications within a specific namespace), you can create IBM Fusion Backup & Restore Custom Resource (CRs) within your application's namespace to self-manage your application's backup and restore needs. This self-service capability allows you to protect your namespace application without requiring cluster-level permissions or IBM Fusion Backup & Restore administrator rights.
+
+This approach is ideal for development teams or application users who need to manage their own backups independently, without involving cluster administrators.
+
+For more information about self-service backup and restore, see see [IBM Fusion Backup & Restore documentation](https://www.ibm.com/docs/en/storage-fusion/2.8?topic=fusion-backup-restore){: external}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-06-19"
 
 keywords: cephaas, activity tracker events, auditing events, ceph as a service
 
@@ -12,10 +12,10 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracker events for {{site.data.keyword.cephaas_full_notm}}
+# Activity tracker events for IBM Fusion as a service
 {: #at_events}
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.
+{{site.data.keyword.cloud_notm}} services, such as IBM Fusion as a service, generate activity tracking events.
 {: shortdesc}
 
 Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
@@ -23,6 +23,7 @@ Activity tracking events report on activities that change the state of a service
 You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
 
 For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
@@ -60,7 +61,6 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 {: row-headers}
 
 
-
 ## Viewing activity tracking events
 {: #at-viewing}
 
@@ -72,24 +72,20 @@ You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on event
 For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
 
 
-
 ## List of management events
 {: #at_actions}
 
-The following table lists the {{site.data.keyword.cephaas_full_notm}} actions that generate an event.
+The following table lists the IBM Fusion as a service actions that generate an event.
 
 | Action             | Description      |
 |--------------------|------------------|
 | software-defined-storage.instance.create       | The service instance was created.   |
-| software-defined-storage.instance.update       | The Service instance was updated. |
-| software-defined-storage.instance.delete       | The Service instance was deleted.  |
+| software-defined-storage.instance.update       | The service instance was updated. |
+| software-defined-storage.instance.delete       | The service instance was deleted.  |
 | software-defined-storage.certificate.inspect   | The certificate status was retrieved. |
 | software-defined-storage.certificate.update    | The certificate was updated. |
 | software-defined-storage.certificate.create    | The certificate was created. |
 | software-defined-storage.certificate.delete    | The certificate was deleted. |
-| software-defined-storage.s3-credential.create  | The S3 credential was created. |
-| software-defined-storage.s3-credential.delete  | The S3 credential was deleted. |
-| software-defined-storage.s3-credential.get     | One or more S3 credentials were retrieved. |
 | software-defined-storage.volume.create         | The volume was created. |
 | software-defined-storage.volume.read           | One or more volumes were retrieved. |
 | software-defined-storage.volume.update         | The volume was updated. |
@@ -100,4 +96,13 @@ The following table lists the {{site.data.keyword.cephaas_full_notm}} actions th
 | software-defined-storage.host.delete           | The host was deleted. |
 | software-defined-storage.host.unmap            | The host was unmapped. |
 | software-defined-storage.host.map              | The host was mapped. |
+| software-defined-storage.cluster.create        | Cluster management was enabled, or cluster storage was created. |
+| software-defined-storage.cluster.get           | One or more clusters were retrieved. |
+| software-defined-storage.cluster.delete        | The cluster was deleted. |
+| software-defined-storage.cluster.enable        | Cluster backup and recovery was enabled. |
+| software-defined-storage.appliance.get         | Appliance metrics were retrieved. |
+| software-defined-storage.quota.list            | Instance quotas were listed. |
+| software-defined-storage.quota.get             | Instance quota or cluster quota was retrieved. |
+| software-defined-storage.quota.update          | Instance quota was updated. |
+| software-defined-storage.quota.create          | Cluster-specific quota was created or updated. |
 {: caption="Actions that generate management events" caption-side="bottom"}
