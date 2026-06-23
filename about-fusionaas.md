@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-23"
 
 keywords: fusion as a service, fusion, fully managed openshift, on-premises, cloud consumption pricing, ibm sre, gpu workloads, ai workloads
 
@@ -48,8 +48,8 @@ IBM Cloud control plane
 Satellite Link
 :   Establishes secure, encrypted connectivity between the IBM Cloud control plane and your on-premises infrastructure. This connection enables remote management and monitoring while keeping your application data within your datacenter.
 
-Control Plane ROKS
-:   The on-premises Red Hat OpenShift Kubernetes Service (ROKS) control plane that manages your Red Hat OpenShift clusters. It includes ROKS Manager APIs for cluster lifecycle management, Fusion Manager APIs for infrastructure operations, and Prometheus for local monitoring and metrics collection.
+Control Plane 
+:   The on-premises Red Hat OpenShift on IBM Cloud Satellite control plane that manages your Red Hat OpenShift clusters. It includes ROKS Manager APIs for cluster lifecycle management, Fusion Manager APIs for infrastructure operations, and Prometheus for local monitoring and metrics collection.
 
 Fusion Base Cluster
 :   The foundational Red Hat OpenShift cluster that provides core platform services and serves as the management layer for your workload clusters. This cluster hosts essential services and operators required for the Fusion platform.
@@ -59,23 +59,6 @@ Fusion HCI Hardware Layer
 
 External integrations
 :   Fusion integrates with IBM Cloud services including BSS for billing and usage tracking, Activity Tracker for audit events, Cloudant Broker DB for service broker data, IAM for identity and access management, and Resource Controller for resource lifecycle management.
-
-### Data flow and connectivity
-{: #data-flow}
-
-Fusion maintains a clear separation between the control plane and data plane:
-
-Control plane traffic
-:   Management and monitoring data flows securely between your on-premises infrastructure and IBM Cloud through the Satellite Link encrypted channel. This traffic includes metrics, logs, configuration updates, health checks, and API calls for resource provisioning. The connection enables IBM SRE teams to manage the platform remotely while maintaining security and compliance.
-
-Data plane traffic
-:   Application data and workload traffic remain entirely within your datacenter, ensuring data sovereignty and meeting regulatory requirements. Your applications communicate with storage, databases, and other services without traversing the public internet or the Satellite Link connection.
-
-User access
-:   You access the platform through the IBM Cloud Console, CLI, and APIs, which communicate with the control plane to provision clusters, deploy workloads, and manage resources. The Fusion Dashboard provides a unified interface for monitoring cluster health, viewing capacity, and managing your on-premises infrastructure.
-
-Observability and monitoring
-:   Metrics and logs are collected by Prometheus in the Control Plane ROKS and forwarded to the SRE VPC for centralized monitoring. IBM SRE teams use these observability tools to proactively monitor platform health, identify issues, and perform maintenance activities.
 
 
 ## Getting started with IBM Fusion as a service
