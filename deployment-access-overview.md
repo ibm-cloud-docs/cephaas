@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-23"
 
 keywords: fusion as a service, IBM Fusion as a service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
 
@@ -12,7 +12,7 @@ subcollection: cephaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About your deployment
+# Deployment UI overview
 {: #deployment-access-overview}
 
 Open your IBM Fusion as a service deployment from the {{site.data.keyword.cloud_notm}} console to review capacity, clusters, storage, and settings. The deployment overview page provides a central location for monitoring resources and navigating to management areas.
@@ -68,6 +68,9 @@ GPUs
 :   Displays the number of GPU cards currently attached compared to the total available (for example, "3 of 8 cards attached"). This card appears only when GPU resources are configured for your deployment.
 
 These summary cards help you quickly assess resource availability before you enable Fusion services for a cluster or update a quota.
+
+The GPU card appears only when your deployment has workloads configured. If no workloads are present, the GPU resource summary card is not displayed.
+{: note}
 
 ### Clusters table
 {: #clusters-table}

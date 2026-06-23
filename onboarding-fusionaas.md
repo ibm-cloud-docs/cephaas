@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-23"
 
 keywords: fusion as a service, onboarding, welcome modal, first time user, cluster quota, set cluster quota, getting started
 
@@ -14,7 +14,9 @@ subcollection: cephaas
 # Onboarding to your IBM Fusion as a service deployment
 {: #onboarding-fusionaas}
 
-When you log in to your IBM Fusion as a service deployment for the first time, a welcome banner guides you through the initial setup process. This onboarding flow helps you configure your deployment and understand the next steps for provisioning clusters.
+After you finish setting up your deployment and the hardware setup is done in your data center, you can onboard to your IBM Fusion as a service deployment.
+
+When you log in to your IBM Fusion as a service deployment after the activation for the first time, a welcome banner guides you through the initial setup process. This onboarding flow helps you configure your deployment and understand the next steps for provisioning clusters.
 {: shortdesc}
 
 ## Understanding the onboarding flow
@@ -23,9 +25,7 @@ When you log in to your IBM Fusion as a service deployment for the first time, a
 The onboarding experience varies based on your user role:
 
 - **Administrator users**: Can set the default cluster storage quota during onboarding
-- **Non-administrator users**: Can view deployment information and proceed to cluster provisioning
-
-The welcome banner appears automatically when you access your deployment for the first time. It displays the message "Your order is on its way." and provides an overview of your deployment status, guiding you to the appropriate next steps.
+- **Non-administrator users**: Can view deployment information 
 
 ## Onboarding for administrator users
 {: #admin-onboarding}
@@ -41,22 +41,14 @@ As an administrator, you can set the default cluster storage quota directly from
 
    The **Set default cluster quota** side panel opens.
 
-2. Review the information in the side panel:
+2. In the **Storage quota (TB)** field, enter the default storage quota value in terabytes.
 
-   **This cluster quota will be the default amount of storage capacity allocated each time a cluster is created. This setting can be changed at a later time.**
+   The default value that you set for the cluster quota is applied to all new clusters. You can increase the cluster quota from the default value, but you cannot decrease it. The default cluster quota can be changed later from the Settings page. For more information, see [Editing cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota).
+   {: note}
 
-3. In the **Storage quota (TB)** field, enter the default storage quota value in terabytes.
+3. Click **Save** to set the default cluster quota, or click **Cancel** to close the side panel without making changes.
 
-   The default value is 10 TB. You can increase or decrease this value based on your deployment capacity and requirements.
-
-4. Review the note: **This quota will be applied to all new clusters created.**
-
-5. Click **Save** to set the default cluster quota, or click **Cancel** to close the side panel without making changes.
-
-After you save the default cluster quota, the welcome banner closes and you can begin using your deployment.
-
-The default cluster quota can be changed later from the Settings page. For more information, see [Editing cluster storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota).
-{: tip}
+After you save the default cluster quota, you can begin using your deployment.
 
 ## Onboarding for non-administrator users
 {: #non-admin-onboarding}
@@ -97,4 +89,3 @@ After onboarding, non-administrator users can:
 
 - [View clusters](/docs/cephaas?topic=cephaas-view-cluster-list)
 - [Understand cluster access permissions](/docs/cephaas?topic=cephaas-cluster-access)
-- [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
