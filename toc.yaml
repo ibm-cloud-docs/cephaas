@@ -13,8 +13,8 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started-fusionaas.md
-      - about-fusionaas.md
+      - getting-started.md
+      - about-cephaas.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -56,11 +56,11 @@ toc:
           - cluster-health-indicators.md
           - monitor-cluster-health.md
           - gpu-setup.md
-          - topicgroup:
-              label: Managing cluster storage
-              topics:
-              - enable-fusion-services.md
-              - edit-cluster-quota.md
+      - topicgroup:
+          label: Managing cluster storage
+          topics:
+          - enable-fusion-services.md
+          - edit-cluster-quota.md
       - topicgroup:
           label: Managing block storage
           topics:
