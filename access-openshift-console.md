@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-23"
 
 keywords: OpenShift console, ROKS console, launch console, cluster console access, ROKS handoff, OpenShift operations, IBM Fusion as a service and OpenShift, cluster operations
 
@@ -63,10 +63,8 @@ You typically move to the Red Hat OpenShift console after you finish the IBM Fus
 
 For example, you might do the following tasks in order:
 
-1. Open the deployment in IBM Fusion as a service.
-2. Enable Fusion services for the cluster, if needed.
-3. Review the cluster quota and storage status.
-4. Open the Red Hat OpenShift console to continue cluster-managed tasks.
+1. Create and delete clusters
+2. Add/remove worker nodes
 
 ## When to return to IBM Fusion as a service
 {: #return-to-fusionaas}
@@ -77,6 +75,7 @@ Return to IBM Fusion as a service when you need to review or change deployment-m
 - Cluster storage quotas.
 - Deployment-level settings.
 - Cluster warnings and alerts related to storage.
+- Enable Fusion services for the clusters, if needed.
 
 ## Working across both environments
 {: #cross-environment-workflow}
