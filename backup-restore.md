@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-24"
 
 keywords: backup, restore, disaster recovery, data protection, snapshots, replication, block storage, backup, ROKS, velero
 
@@ -41,45 +41,6 @@ Before you configure backup and restore, ensure that you have the following prer
 - COS credentials that you can base64 encode for use in a Kubernetes secret
 - The namespace that contains the application that you want to protect
 
-## Enabling backup and restore
-{: #enable-bnr}
-
-Before you use the CR-based backup and restore workflow, enable Fusion services on the cluster. After Fusion services are enabled, you can enable and use Backup and Restore (BNR) by labeling the [`managedcluster`](backup-restore.md:47) custom resource or by calling the internal API.
-
-1. Enable BNR on your cluster by running the following command:
-
-   ```sh
-   oc label managedcluster <cluster-name> isf.ibm.com/fusion-backup=true
-   ```
-   {: pre}
-
-2. Verify that the installation completed by checking the pods in the [`ibm-backup-restore`](backup-restore.md:52) namespace:
-
-   ```sh
-   oc get pods -n ibm-backup-restore
-   ```
-   {: pre}
-
-3. Confirm that the BNR pods are in `Running` or `Completed` status. The following table shows the expected pod types after installation:
-
-   | Pod name | Ready | Status | Restarts | Age |
-   | -------- | ----- | ------ | -------- | --- |
-   | 5531d81ef75328ec4c863d6b38c60668479a0be44d8b007ede366c53f1hz854 | 0/1 | Completed | 0 | 6m28s |
-   | 913043d495569b683138873c165fa34c5e3adedfc74a5dec7cce76fb3fqzwq4 | 0/1 | Completed | 0 | 6m30s |
-   | b04fc6523bd46f414e8463cd10dce8ce62ad97dd4224a269ffc9553eeejp86h | 0/1 | Completed | 0 | 6m29s |
-   | dbr-controller-649bb968b6-wmqpv | 1/1 | Running | 2 (4m48s ago) | 5m8s |
-   | guardian-dm-controller-manager-85fb656bd5-6rptg | 2/2 | Running | 0 | 5m56s |
-   | guardian-dp-operator-controller-manager-7595665775-5hkjf | 2/2 | Running | 0 | 6m1s |
-   | guardian-minio-0 | 1/1 | Running | 0 | 5m12s |
-   | ibm-dataprotectionagent-controller-manager-7759f7cd8-mxbrj | 2/2 | Running | 0 | 6m3s |
-   | ibm-fusion-backup-restore-catalog-cskvb | 1/1 | Running | 0 | 7m15s |
-   | node-agent-4s6vh | 1/1 | Running | 0 | 4m37s |
-   | node-agent-k4lrg | 1/1 | Running | 0 | 4m41s |
-   | node-agent-xrt7z | 1/1 | Running | 0 | 4m46s |
-   | openshift-adp-controller-manager-645ff5b555-cj5fk | 1/1 | Running | 0 | 5m58s |
-   | transaction-manager-75f6f85cd7-xppb4 | 1/1 | Running | 2 (4m57s ago) | 5m15s |
-   | velero-7c49df784b-nv5fw | 1/1 | Running | 0 | 4m47s |
-   {: caption="Expected BNR pods after installation" caption-side="bottom"}
 
 ## Configuring backup storage
 {: #configure-storage}
@@ -289,31 +250,6 @@ You can restore specific resources from a backup, such as persistent volume clai
    ```
    {: pre}
 
-## Enabling backup and restore by using the API
-{: #enable-bnr-api}
-
-As an alternative to labeling the [`managedcluster`](backup-restore.md:43) custom resource, you can enable backup and restore by calling the internal API.
-
-```sh
-curl -X POST \
-  $CERT_FLAG \
-  --header "Authorization: Bearer $TOKEN" \
-  --header "Content-Type: application/json" \
-  "${URL}" \
-  -d '{"enabled": "true"}' \
-  -v
-```
-{: pre}
-
-After you enable the feature, verify the deployment by checking the pod status:
-
-```sh
-oc get pods -n ibm-backup-restore
-```
-{: pre}
-
-Ensure that all pods are in `Running` or `Completed` status.
-
 ## Important considerations
 {: #backup-restore-considerations}
 
@@ -326,8 +262,5 @@ Avoid restoring an entire namespace on top of itself unless you fully understand
 ## Self-service backup and restore for application owners
 {: #backup-restore-self-service}
 
-If you are an application owner (a user who manages applications within a specific namespace), you can create IBM Fusion Backup & Restore Custom Resource (CRs) within your application's namespace to self-manage your application's backup and restore needs. This self-service capability allows you to protect your namespace application without requiring cluster-level permissions or IBM Fusion Backup & Restore administrator rights.
-
-This approach is ideal for development teams or application users who need to manage their own backups independently, without involving cluster administrators.
 
 For more information about self-service backup and restore, see see [IBM Fusion Backup & Restore documentation](https://www.ibm.com/docs/en/storage-fusion/2.8?topic=fusion-backup-restore){: external}.

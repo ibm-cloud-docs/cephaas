@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-19"
+lastupdated: "2026-06-24"
 
 keywords: cephaas, event notifications, ceph as a service
 
@@ -104,9 +104,9 @@ An email from {{site.data.keyword.cloud_notm}} that contains information about I
 
 
 ```plaintext
-Subject: Replace S3 certificate (expires in 90 days)
+Subject: Consumption storage at 50%
 
-Body: S3 certificate will expire in 90 days. Please replace your S3 certificate.
+Body: Consumption storage capacity has reached 50% of allocated capacity
 ```
 {: screen}
 
