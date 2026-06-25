@@ -30,7 +30,7 @@ Fusion Data Foundation
 :   Provides software-defined storage for the cluster.
 
 Backup and restore
-:   Enables ACM-based (Advanced Cluster Management) backup and restore capabilities for cluster data protection.
+:   Enables backup and restore capabilities for cluster data protection.
 
 Enabling Fusion services activates both FDF and BNR together. This action cannot be undone.
 
@@ -67,8 +67,6 @@ While Fusion services are being enabled for your cluster:
 - You may see temporary errors in the UI during this time.
 - Quota update operations may fail temporarily.
 - These conditions are expected and should resolve automatically once enablement completes.
-
-If errors persist after 10 minutes, wait a few minutes and retry your operation. For persistent issues, see [Getting help and support](/docs/cephaas?topic=cephaas-getting-help-and-support).
 
 ## Next steps
 {: #enable-fusion-services-next}

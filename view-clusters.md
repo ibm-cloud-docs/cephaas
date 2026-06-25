@@ -98,13 +98,13 @@ Use the Clusters page to do the following tasks:
 
 - Review total resource allocation across all clusters using the summary cards.
 - Identify which clusters are associated with the deployment.
-- Review the current status of each cluster (status comes from ROKS cluster health).
+- Review the current status of each cluster.
 - Find clusters that need attention based on status indicators.
 - Search for specific clusters by name.
 - Open a cluster to review more detailed information.
 - Access cluster management actions through the overflow menu.
 
-Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud (ROKS). For detailed cluster diagnostics and troubleshooting, refer to the [ROKS documentation](/docs/openshift).
+Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud. For detailed cluster diagnostics and troubleshooting, refer to the [Red Hat OpenShift on IBM Cloud documentation](/docs/openshift).
 {: note}
 
 ## Related tasks

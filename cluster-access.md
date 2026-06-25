@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: cluster access, cluster permissions, role-based access, admin access, non-admin access
 
@@ -26,8 +26,6 @@ Both administrators and non-administrators can access and view cluster informati
 ### Administrator access
 {: #admin-access}
 
-Administrators have full access to view cluster information and perform management actions.
-
 Administrators can:
 
 - View all cluster details including status, compute resources, storage, warnings, and alerts.
@@ -46,13 +44,6 @@ Non-administrators can:
 - View all cluster details including status, compute resources, storage, warnings, and alerts.
 - Access the **View details** option from the overflow menu (⋮) in the cluster list to open the cluster details panel.
 - See any issues or warnings with their clusters, helping them understand the cluster state and identify when administrator action is needed.
-
-Non-administrators cannot:
-
-- Enable or disable Fusion services for clusters.
-- Update cluster storage quotas.
-- Access the **Manage storage** option in the overflow menu.
-- Configure storage settings for clusters.
 
 ## How to access cluster information
 {: #accessing-cluster-info}

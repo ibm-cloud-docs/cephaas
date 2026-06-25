@@ -28,10 +28,10 @@ Make sure that you meet the following prerequisites for cluster creation:
 - Your deployment shows available compute, storage, and optional GPU capacity.
 - Your Satellite location and IBM Fusion as a service control plane are already set up.
 
-## Understanding Fusion vs ROKS responsibilities
+## Understanding Fusion vs Red Hat OpenShift responsibilities
 {: #fusion-vs-roks}
 
-IBM Fusion as a service and Red Hat OpenShift on IBM Cloud (ROKS) have distinct responsibilities for cluster management:
+IBM Fusion as a service and Red Hat OpenShift on IBM Cloud have distinct responsibilities for cluster management:
 
 ### IBM Fusion as a service UI capabilities
 {: #fusion-capabilities}
@@ -43,17 +43,17 @@ The IBM Fusion as a service UI provides the following capabilities:
 - Manage storage quotas (default and per-cluster)
 - Monitor cluster health and status
 
-### ROKS capabilities
+### Red Hat OpenShift capabilities
 {: #roks-capabilities}
 
-Red Hat OpenShift on IBM Cloud (ROKS) provides the following capabilities:
+Red Hat OpenShift on IBM Cloud provides the following capabilities:
 
 - Create, update, and delete clusters
 - Configure compute resources (worker nodes, workloads)
 - Manage cluster-level operations
 - Configure cluster settings and policies
 
-Only users with Administrator or Editor roles in IBM Cloud IAM can create clusters through ROKS.
+Only users with Administrator or Editor roles in IBM Cloud IAM can create clusters.
 {: note}
 
 ### Managed components
@@ -84,10 +84,10 @@ Namespaces and access control
 Resource consumption
 :   You manage how your applications use compute, storage, and GPU resources within your allocated quotas.
 
-## Create a cluster through ROKS
+## Create a cluster through Red Hat OpenShift console
 {: #create-a-cluster}
 
-Cluster creation must be performed through Red Hat OpenShift on IBM Cloud (ROKS). The IBM Fusion as a service UI provides visibility into cluster status and resource usage but does not support cluster creation operations.
+Cluster creation must be performed through Red Hat OpenShift on IBM Cloud. The IBM Fusion as a service UI provides visibility into cluster status and resource usage but does not support cluster creation operations.
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
 2. Navigate to **Kubernetes** > **Clusters** in the IBM Cloud console.

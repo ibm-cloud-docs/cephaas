@@ -41,7 +41,7 @@ Memory
 :   Shows the amount of memory allocated to the cluster.
 
 Storage
-:   Displays the storage quota and current usage when Fusion services are enabled for the cluster. This column shows values in TB format (for example, "5 TB of 10 TB").
+:   Displays the storage quota and current usage when Fusion services are enabled for the cluster. This column shows values in TB format (for example, "5 TB of 10 TB"). If Fusion services are not enabled, this column displays "Cluster storage not enabled".
 
 Warning and health indicators
 :   Visual indicators such as warning icons or status badges that appear when a cluster has conditions that might require attention.
@@ -49,13 +49,14 @@ Warning and health indicators
 ## Understanding warnings and health states
 {: #cluster-health-states}
 
-Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud (ROKS). Warnings and health indicators help you identify the following conditions:
+Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud. Warnings and health indicators help you identify the following conditions:
 
 - A cluster that is operating normally (Available status).
 - A cluster that has a warning condition (Warning status).
 - A cluster that has an error or another condition that might require action (Error status).
 - A cluster that should be reviewed in more detail.
-- Clusters that already have Fusion services enabled (shown in the Storage column).
+- Clusters that already have Fusion services enabled (shown in the Storage column with quota and usage values).
+- Clusters that do not have Fusion services enabled (shown as "Cluster storage not enabled" in the Storage column).
 - Clusters that might be approaching their storage quota limit.
 - Clusters with specific resource allocations (vCPU and memory values).
 
@@ -69,6 +70,7 @@ Open cluster details when the cluster list shows one of the following conditions
 
 - A warning or health indicator.
 - A status that does not match the expected cluster condition.
+- "Cluster storage not enabled" in the Storage column when you need to enable Fusion services.
 - A storage usage value that looks close to the assigned quota.
 - A Fusion services status that is not the expected state.
 - A cluster that you want to review in more detail.
@@ -81,7 +83,8 @@ When you open cluster details, review the available alert, warning, or storage i
 In cluster details, you can:
 
 - View detailed status information (status comes from ROKS cluster health).
-- Review storage quota and usage metrics.
+- Review storage quota and usage metrics (if Fusion services are enabled).
+- Enable Fusion services if the cluster shows "Cluster storage not enabled".
 - Check for alerts or warnings that require action.
 - Access the OpenShift console for cluster-level operations.
 
@@ -94,6 +97,7 @@ For cluster-level diagnostics, health checks, and troubleshooting that go beyond
 After reviewing cluster health indicators, you can:
 
 - [View cluster details](/docs/cephaas?topic=cephaas-view-cluster-storage-status)
+- [Enable Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services) if storage is not enabled
 - [Identify clusters that need attention](/docs/cephaas?topic=cephaas-monitor-cluster-health)
 - [Update a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota)
 - [Take corrective action using the Fix flow](/docs/cephaas?topic=cephaas-fix-flow-corrective-action)
