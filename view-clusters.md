@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: cluster list, IBM Fusion as a service clusters, deployment clusters, cluster navigation
 
@@ -43,9 +43,12 @@ Storage used
 :   Shows the total storage used across all clusters, displaying both used capacity and total available capacity (for example, "120 TB of 200 TB"). A progress bar indicates the percentage of storage in use.
 
 GPUs
-:   Displays the number of GPUs attached across all clusters (for example, "3 of 8 cards attached"). This card appears only when GPU resources are configured for your deployment.
+:   Displays the number of GPUs attached across all clusters (for example, "3 of 8 cards attached"). This card appears only when GPU workloads are present in your deployment (workloads > 0).
 
 These summary cards help you quickly understand the total resource allocation across your deployment.
+
+The GPU resource summary card is visible only when your deployment has GPU workloads configured. If no GPU workloads are present (workloads = 0), the GPU tile is hidden.
+{: note}
 
 ## Cluster table
 {: #cluster-table}
@@ -58,7 +61,7 @@ Name
 :   The cluster name. Click the name to open the cluster details page.
 
 Status
-:   The current operational status of the cluster. Possible values include Available, Warning, and other status indicators with corresponding icons.
+:   The current operational status of the cluster. Status values are derived from Red Hat OpenShift on IBM Cloud (ROKS) cluster health. Possible values include Available, Warning, and Error with corresponding icons.
 
 vCPU
 :   The number of virtual CPUs allocated to the cluster.
@@ -95,11 +98,14 @@ Use the Clusters page to do the following tasks:
 
 - Review total resource allocation across all clusters using the summary cards.
 - Identify which clusters are associated with the deployment.
-- Review the current status of each cluster.
+- Review the current status of each cluster (status comes from ROKS cluster health).
 - Find clusters that need attention based on status indicators.
 - Search for specific clusters by name.
 - Open a cluster to review more detailed information.
 - Access cluster management actions through the overflow menu.
+
+Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud (ROKS). For detailed cluster diagnostics and troubleshooting, refer to the [ROKS documentation](/docs/openshift).
+{: note}
 
 ## Related tasks
 {: #view-cluster-list-next}

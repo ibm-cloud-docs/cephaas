@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: enable Fusion services, cluster storage, cluster quota, IBM Fusion as a service storage
 
@@ -24,7 +24,18 @@ Before you enable Fusion services, make sure that you meet the following require
 ## Understanding Fusion services
 {: #about-fusion-services}
 
-When you enable Fusion services for a cluster, you grant the cluster permission to use storage, backup, and restore capabilities in a cluster. This action cannot be undone.
+When you enable Fusion services for a cluster, you activate the following capabilities:
+
+Fusion Data Foundation
+:   Provides software-defined storage for the cluster.
+
+Backup and restore
+:   Enables ACM-based (Advanced Cluster Management) backup and restore capabilities for cluster data protection.
+
+Enabling Fusion services activates both FDF and BNR together. This action cannot be undone.
+
+The enablement process typically takes a few minutes to complete. During this time, you may see temporary errors or experience issues with quota updates. These are expected and should resolve automatically once the enablement process completes.
+{: note}
 
 ## Enabling Fusion services
 {: #enable-fusion-steps}
@@ -45,7 +56,19 @@ When you enable Fusion services for a cluster, you grant the cluster permission 
 
 8. Click **Save** to enable Fusion services, or click **Cancel** to close the side panel without making changes.
 
-After you save, Fusion services are enabled for the cluster. 
+After you save, the enablement process begins. This process typically takes 5 to 10 minutes to complete.
+
+## What to expect during enablement
+{: #enablement-process}
+
+While Fusion services are being enabled for your cluster:
+
+- The process runs in the background and may take 5 to 10 minutes.
+- You may see temporary errors in the UI during this time.
+- Quota update operations may fail temporarily.
+- These conditions are expected and should resolve automatically once enablement completes.
+
+If errors persist after 10 minutes, wait a few minutes and retry your operation. For persistent issues, see [Getting help and support](/docs/cephaas?topic=cephaas-getting-help-and-support).
 
 ## Next steps
 {: #enable-fusion-services-next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: cluster indicators, cluster status, cluster warnings, cluster health, capacity indicators, IBM Fusion as a service alerts
 
@@ -32,7 +32,7 @@ You can review cluster health and status indicators in the following places:
 The cluster list table displays several types of information that help you understand the current cluster state.
 
 Status
-:   Shows the operational status of the cluster, such as "Normal", "Warning", or other states that indicate the cluster's health.
+:   Shows the operational status of the cluster, such as "Available", "Warning", or "Error". Status values are derived from Red Hat OpenShift on IBM Cloud cluster health.
 
 vCPU
 :   Displays the number of virtual CPUs allocated to the cluster.
@@ -49,15 +49,18 @@ Warning and health indicators
 ## Understanding warnings and health states
 {: #cluster-health-states}
 
-Warnings and health indicators help you identify the following conditions:
+Cluster status values reflect the health status from Red Hat OpenShift on IBM Cloud (ROKS). Warnings and health indicators help you identify the following conditions:
 
-- A cluster that is operating normally.
-- A cluster that has a warning condition.
-- A cluster that has an error or another condition that might require action.
+- A cluster that is operating normally (Available status).
+- A cluster that has a warning condition (Warning status).
+- A cluster that has an error or another condition that might require action (Error status).
 - A cluster that should be reviewed in more detail.
 - Clusters that already have Fusion services enabled (shown in the Storage column).
 - Clusters that might be approaching their storage quota limit.
 - Clusters with specific resource allocations (vCPU and memory values).
+
+For detailed cluster diagnostics and troubleshooting beyond what is shown in the IBM Fusion as a service UI, refer to the [Red Hat OpenShift on IBM Cloud documentation](/docs/openshift).
+{: note}
 
 ## When to open cluster details
 {: #when-to-review-details}
@@ -77,10 +80,13 @@ When you open cluster details, review the available alert, warning, or storage i
 
 In cluster details, you can:
 
-- View detailed status information.
+- View detailed status information (status comes from ROKS cluster health).
 - Review storage quota and usage metrics.
 - Check for alerts or warnings that require action.
 - Access the OpenShift console for cluster-level operations.
+
+For cluster-level diagnostics, health checks, and troubleshooting that go beyond storage and quota management, use the Red Hat OpenShift on IBM Cloud console and documentation.
+{: tip}
 
 ## Next steps
 {: #cluster-health-next}

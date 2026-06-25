@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: cluster creation, IBM Fusion as a service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
@@ -15,8 +15,11 @@ subcollection: cephaas
 # Creating clusters
 {: #create-clusters}
 
-Create Red Hat OpenShift clusters on IBM Cloud for your IBM Fusion as a service deployment by using IBM Cloud Satellite.
+Create Red Hat OpenShift clusters on IBM Cloud for your IBM Fusion as a service deployment by using IBM Cloud Satellite. Cluster creation, deletion, and compute configuration are performed through Red Hat OpenShift on IBM Cloud, not through the IBM Fusion as a service UI.
 {: shortdesc}
+
+Cluster creation is not supported in the IBM Fusion as a service UI. You must use Red Hat OpenShift on IBM Cloud (ROKS) to create, update, and delete clusters.
+{: important}
 
 Make sure that you meet the following prerequisites for cluster creation:
 
@@ -25,10 +28,36 @@ Make sure that you meet the following prerequisites for cluster creation:
 - Your deployment shows available compute, storage, and optional GPU capacity.
 - Your Satellite location and IBM Fusion as a service control plane are already set up.
 
-## How cluster creation works
-{: #how-cluster-creation-works}
+## Understanding Fusion vs ROKS responsibilities
+{: #fusion-vs-roks}
 
-When you create a cluster in IBM Fusion as a service, the cluster is created as a Red Hat OpenShift on IBM Cloud cluster on Satellite in your IBM Cloud account.
+IBM Fusion as a service and Red Hat OpenShift on IBM Cloud (ROKS) have distinct responsibilities for cluster management:
+
+### IBM Fusion as a service UI capabilities
+{: #fusion-capabilities}
+
+The IBM Fusion as a service UI provides the following capabilities:
+
+- View clusters and monitor resource usage (CPU, GPU, storage)
+- Enable Fusion services for clusters (storage, backup, and restore)
+- Manage storage quotas (default and per-cluster)
+- Monitor cluster health and status
+
+### ROKS capabilities
+{: #roks-capabilities}
+
+Red Hat OpenShift on IBM Cloud (ROKS) provides the following capabilities:
+
+- Create, update, and delete clusters
+- Configure compute resources (worker nodes, workloads)
+- Manage cluster-level operations
+- Configure cluster settings and policies
+
+Only users with Administrator or Editor roles in IBM Cloud IAM can create clusters through ROKS.
+{: note}
+
+### Managed components
+{: #managed-components}
 
 IBM Fusion as a service and IBM Cloud manage the following components:
 
@@ -41,7 +70,10 @@ Red Hat OpenShift on IBM Cloud control plane
 Fusion HCI infrastructure
 :   Worker nodes run on the underlying Fusion HCI infrastructure that supports your deployment.
 
-You need to manage the following components in the cluster:
+### Your responsibilities
+{: #your-responsibilities}
+
+You need to manage the following components:
 
 Applications and workloads
 :   You deploy and manage the applications and services that run in the cluster.
@@ -52,22 +84,20 @@ Namespaces and access control
 Resource consumption
 :   You manage how your applications use compute, storage, and GPU resources within your allocated quotas.
 
-## Create a cluster
+## Create a cluster through ROKS
 {: #create-a-cluster}
 
-Use the IBM Cloud console to start cluster creation from your IBM Fusion as a service deployment. The deployment dashboard surfaces capacity, quotas, and status information, while cluster creation is completed in the Red Hat OpenShift on IBM Cloud Satellite workflow.
+Cluster creation must be performed through Red Hat OpenShift on IBM Cloud (ROKS). The IBM Fusion as a service UI provides visibility into cluster status and resource usage but does not support cluster creation operations.
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
-2. Open your IBM Fusion as a service deployment from the **Resource list**.
-3. From the deployment dashboard, click **Cluster management** > **Clusters**.
+2. Navigate to **Kubernetes** > **Clusters** in the IBM Cloud console.
+3. Click **Create cluster**.
+4. Select **Red Hat OpenShift** as the cluster type.
+5. Select **Satellite** as the infrastructure.
+6. Follow the detailed steps in [Creating Red Hat OpenShift on IBM Cloud clusters in Satellite](/docs/openshift?topic=openshift-satellite-clusters&interface=ui).
 
-The **Clusters** page shows Name, State, Location, Worker count, Created date, Version, and Infrastructure. 
-
-4. Click **Create cluster**.
-5. When prompted, choose the option to create the cluster through the Red Hat OpenShift on IBM Cloud Satellite portal.
-6. In the Red Hat OpenShift on IBM Cloud Satellite workflow, follow the detailed steps in [Creating Red Hat OpenShift on IBM Cloud clusters in Satellite](/docs/openshift?topic=openshift-satellite-clusters&interface=ui).
-
-The service redirects you to the standard IBM Cloud workflow for creating Satellite clusters.
+During cluster configuration, ensure you select the Satellite location associated with your IBM Fusion as a service deployment.
+{: tip}
 
 ## Configure cluster details
 {: #configure-cluster-details}
@@ -94,12 +124,23 @@ After the cluster is created, it appears alongside your other Red Hat OpenShift 
 ## After the cluster is created
 {: #after-cluster-creation}
 
-After the cluster becomes available, you can complete the following tasks:
+After the cluster becomes available in ROKS, it appears in your IBM Fusion as a service deployment. You can then complete the following tasks:
 
-- Access the cluster from the OpenShift web console.
-- Deploy applications and services as you would for any Red Hat OpenShift on IBM Cloud cluster.
-- View health, capacity, and alerts from the IBM Fusion as a service dashboard.
-- Enable and use Fusion services, if needed.
+In the IBM Fusion as a service UI
+:   - View the cluster in your deployment's cluster list
+    - Monitor cluster health and resource usage
+    - Enable Fusion services for the cluster
+    - Manage storage quotas
+
+In Red Hat OpenShift on IBM Cloud
+:   - Configure cluster settings and policies
+    - Manage worker nodes and compute resources
+    - Update or delete the cluster
+
+In the OpenShift console
+:   - Deploy applications and services
+    - Manage workloads and namespaces
+    - Configure application-level settings
 
 ## Related tasks
 {: #create-clusters-related}

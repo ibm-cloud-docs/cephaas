@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: default cluster quota, deployment settings, storage quota, IBM Fusion as a service admin tasks, edit default cluster quota
 
@@ -73,13 +73,25 @@ The default cluster storage quota is the amount of storage capacity that is auto
 
 The default quota is initially configured during the onboarding process when you first access your deployment. After onboarding, you can modify this value at any time from the Settings page.
 
-The default quota is used in the following situations:
+### How default and cluster quotas work together
+{: #quota-relationship}
 
-- When an administrator enables Fusion services for a cluster and uses the default value.
-- When a new cluster needs an initial storage allocation from the deployment.
-- When administrators want a consistent starting quota across clusters.
+The default cluster quota and individual cluster quotas have the following relationship:
 
-The default quota affects only future enablement of Fusion services. It does not change existing cluster quotas or current storage usage.
+Default quota as baseline
+:   The default quota serves as the minimum baseline for all cluster quotas. No cluster quota can be set below this value.
+
+Cluster quota constraints
+:   Individual cluster quotas must be equal to or greater than the default quota. You can increase a cluster quota above the default, but you cannot decrease it below the default.
+
+Future clusters only
+:   Changing the default quota affects only new clusters when Fusion services are enabled. It does not change existing cluster quotas.
+
+Example
+:   If the default quota is 10 TB, all cluster quotas must be at least 10 TB. If you later change the default to 15 TB, existing clusters with 10 TB quotas remain unchanged, but new clusters will start with 15 TB.
+
+Storage quota cannot be configured from Red Hat OpenShift on IBM Cloud. All quota management must be done through the IBM Fusion as a service UI.
+{: important}
 
 ## Editing the default cluster quota (admin only)
 {: #set-edit-quota-steps}
@@ -102,12 +114,27 @@ When you set or edit the default quota, keep the following considerations in min
 - The value must fit within the available deployment storage capacity.
 - A larger default quota reserves more storage capacity for future cluster use.
 - The change affects only future cluster setup that uses the default value.
+- The new default becomes the minimum baseline for all future cluster quotas.
 
 The change does not affect the following resources:
 
 - Clusters that already have Fusion services enabled.
-- Clusters that already use a custom quota.
+- Existing cluster quotas (even if they are below the new default).
 - Current storage usage on existing clusters.
+
+### Quota constraint examples
+{: #quota-examples}
+
+The following examples illustrate how quota constraints work:
+
+Scenario 1: Increasing the default quota
+:   Current default: 10 TB. You change it to 15 TB. Existing clusters with 10 TB quotas remain at 10 TB. New clusters will have a minimum quota of 15 TB.
+
+Scenario 2: Cluster quota below default
+:   Default quota: 20 TB. You try to set a cluster quota to 15 TB. This operation fails because cluster quotas cannot be below the default.
+
+Scenario 3: Increasing a cluster quota
+:   Default quota: 10 TB. Cluster quota: 10 TB. You can increase the cluster quota to any value above 10 TB (for example, 25 TB), but you cannot decrease it below 10 TB.
 
 ## Quota validation
 {: #quota-validation}

@@ -13,8 +13,8 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
-      - about-cephaas.md
+      - getting-started-fusionaas.md
+      - about-fusionaas.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -191,7 +191,7 @@ toc:
       id: help
       topics:
       - getting_help_and_support.md
-      - billing_view.md
-      - faq.md
-      - troubleshooting.md
+      - billing-cephaas.md
+      - faq-cephaas.md
+      - troubleshooting-cephaas.md
       - known-issues.md

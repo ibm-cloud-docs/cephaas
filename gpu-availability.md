@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-17"
+lastupdated: "2026-06-25"
 
 keywords: gpu, graphics processing unit, gpu availability, nvidia h100, worker node, openshift virtualization, gpu workloads, high availability
 
@@ -15,8 +15,22 @@ subcollection: cephaas
 # GPU availability and distribution
 {: #gpu-availability}
 
-GPU resources in your IBM Fusion as a service deployment determine how GPU-enabled workloads are scheduled and managed. Understanding GPU availability patterns and distribution options helps you design workloads that can handle maintenance windows and potential hardware events.
+GPU resources in your IBM Fusion as a service deployment determine how GPU-enabled workloads are scheduled and managed. Understanding GPU availability patterns, distribution options, and how GPU resources are displayed helps you design workloads that can handle maintenance windows and potential hardware events.
 {: shortdesc}
+
+## GPU resource visibility in the UI
+{: #gpu-visibility}
+
+The GPU resource summary card in the IBM Fusion as a service UI displays dynamically based on workload configuration:
+
+GPU tile visible
+:   The GPU resource summary card appears in the deployment dashboard when your deployment has GPU workloads configured (workloads > 0).
+
+GPU tile hidden
+:   If no GPU workloads are present (workloads = 0), the GPU resource summary card is not displayed in the dashboard.
+
+This behavior applies to both the deployment overview page and the cluster dashboard resource summary cards.
+{: note}
 
 ## Available GPU types
 {: #gpu-types}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-25"
 
 keywords: fusion as a service, IBM Fusion as a service deployment, access deployment, deployment navigation, deployment overview, deployment capacity
 
@@ -65,11 +65,11 @@ Storage used
 :   Shows the amount of storage currently in use compared to the total available storage (for example, "120 TB of 200 TB"). This represents storage allocated to clusters that use Fusion services. A progress bar indicates storage utilization.
 
 GPUs
-:   Displays the number of GPU cards currently attached compared to the total available (for example, "3 of 8 cards attached"). This card appears only when GPU resources are configured for your deployment.
+:   Displays the number of GPU cards currently attached compared to the total available (for example, "3 of 8 cards attached"). This card appears only when GPU workloads are present in your deployment.
 
 These summary cards help you quickly assess resource availability before you enable Fusion services for a cluster or update a quota.
 
-The GPU card appears only when your deployment has workloads configured. If no workloads are present, the GPU resource summary card is not displayed.
+The GPU resource summary card is visible only when your deployment has GPU workloads configured (workloads > 0). If no GPU workloads are present, the GPU tile is hidden.
 {: note}
 
 ### Clusters table
