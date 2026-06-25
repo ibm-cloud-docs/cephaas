@@ -1,9 +1,16 @@
 ---
-name: cephaas-faq
-title: FAQ
-description: Frequently asked questions (FAQs) provide you with helpful answers and insight into best practices for working with cephaas.
-last-updated: 2025-12-09
+
+copyright:
+  years: 2024, 2025
+lastupdated: "2025-01-09"
+
+keywords: cephaas faq, frequently asked questions, block storage, object storage, capacity objects, monitoring
+
+subcollection: cephaas
+
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQ
 {: #faq}
@@ -174,7 +181,7 @@ For Capacity objects, new S3 accounts have `STANDARD_IA` as the default storage 
 {: #faq-monitoring}
 
 
-### How can i access the IBM Cloud monitoring user interface from the {{site.data.keyword.cephaas_short}} user interface?
+### How can I access the IBM Cloud monitoring user interface from the {{site.data.keyword.cephaas_short}} user interface?
 {: faq}
 {: #faq-access-ic-mon-ui}
 

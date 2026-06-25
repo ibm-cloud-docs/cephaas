@@ -38,6 +38,7 @@ Fusion combines the power of Red Hat OpenShift with IBM's enterprise-grade infra
 - **GPU-enabled workloads**: Support for AI, machine learning, data analytics, and high-performance computing with GPU acceleration.
 
 
+
 ## Ordering IBM Fusion as a service
 {: #ordering-fusion}
 {: step}
@@ -57,7 +58,7 @@ Fusion as a service is available in the {{site.data.keyword.cloud_notm}} catalog
    - **Country**: Select your country (for example, United States)
    - **State**: Select your state or region (for example, New York)
 
-   **Infrastructure**
+   ### Infrastructure
    
    Select the type of infrastructure you want to include:
    - **Compute**: For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments
@@ -65,26 +66,26 @@ Fusion as a service is available in the {{site.data.keyword.cloud_notm}} catalog
    
    You can select one or both options depending on your requirements.
 
-   **Subscription term**
+   ### Subscription term
    
    Choose your subscription term to optimize costs:
    - **3 years**: Standard subscription term with flexible monthly commitments
 
 4. For Compute infrastructure, select from the following AI solutions:
 
-   **Integrated AI**
+   ### Integrated AI
    - 256 vCPUs
    - 2304 GB memory
    - 4 GPUs
    - 22.3 TiB usable storage capacity
 
-   **Data Lakehouse (Small)**
+   ### Data Lakehouse (Small)
    - 640 vCPUs
    - 4352 GB memory
    - 8 GPUs
    - 74.5 TiB usable storage capacity
 
-   **Application platform**
+   ### Application platform
    
    Choose from availability zone configurations:
    - **1 Availability Zone (XSmall)**: 128 vCPUs, 1280 GB memory, 0 GPUs, 18.6 TB usable storage capacity
@@ -147,7 +148,7 @@ After your order is confirmed, you need to prepare your deployment by configurin
      - The Satellite location connects your on-premises infrastructure to {{site.data.keyword.cloud_notm}}
      - To create a new location, you must first create it in [IBM Cloud Satellite](https://cloud.ibm.com/satellite/locations){: external}
 
-   **Deployment details**
+  ### Deployment details
    
    - **Name**: Enter a descriptive name for your deployment
    
@@ -183,5 +184,3 @@ Access management
 
 Learn more
 :   Read [What is IBM Fusion as a service?](/docs/cephaas?topic=cephaas-about-fusionaas) for detailed information.
-
-

@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-06-25"
 
 keywords: backup, restore, disaster recovery, data protection, snapshots, replication, block storage, backup, ROKS, velero
 
@@ -40,6 +40,7 @@ Before you configure backup and restore, ensure that you have the following prer
 - A COS bucket for storing backups
 - COS credentials that you can base64 encode for use in a Kubernetes secret
 - The namespace that contains the application that you want to protect
+
 
 
 ## Configuring backup storage
@@ -249,6 +250,7 @@ You can restore specific resources from a backup, such as persistent volume clai
    oc get frestore -n <namespace>
    ```
    {: pre}
+
 
 ## Important considerations
 {: #backup-restore-considerations}
