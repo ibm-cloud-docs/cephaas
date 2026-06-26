@@ -62,7 +62,7 @@ Fusion as a service is available in the {{site.data.keyword.cloud_notm}} catalog
    
    Select the type of infrastructure you want to include:
    - **Compute**: For managing compute resources such as vCPUs, memory, GPUs, and cluster deployments
-   - **Storage**: For managing block, file, and object storage capacity across your workloads
+   - **Storage**: For managing block storage capacity across your workloads
    
    You can select one or both options depending on your requirements.
 
