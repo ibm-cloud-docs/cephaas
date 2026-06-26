@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-25"
+lastupdated: "2026-06-26"
 
 keywords: backup, restore, disaster recovery, data protection, snapshots, replication, block storage, backup, ROKS, velero
 
@@ -33,9 +33,8 @@ With Backup and Restore, you can:
 
 Before you configure backup and restore, ensure that you have the following prerequisites:
 
-- Access to a Red Hat OpenShift on IBM Cloud cluster with the [`oc`](backup-restore.md:36) CLI configured
+- Access to the Red Hat OpenShift on IBM Cloud cluster with the CLI configured
 - Fusion services enabled on the cluster. For more information, see [Enabling Fusion services for a cluster](/docs/cephaas?topic=cephaas-enable-fusion-services).
-- Permission to label the [`managedcluster`](backup-restore.md:47) custom resource or call the internal enablement API
 - An IBM Cloud account with an IBM Cloud Object Storage instance
 - A COS bucket for storing backups
 - COS credentials that you can base64 encode for use in a Kubernetes secret
@@ -265,4 +264,4 @@ Avoid restoring an entire namespace on top of itself unless you fully understand
 {: #backup-restore-self-service}
 
 
-For more information about self-service backup and restore, see see [IBM Fusion Backup & Restore documentation](https://www.ibm.com/docs/en/storage-fusion/2.8?topic=fusion-backup-restore){: external}.
+For more information about self-service backup and restore, see see [IBM Fusion Backup & Restore documentation](https://www.ibm.com/docs/en/fusion-software/2.12.x?topic=workloads-self-service-backup-restore){: external}.
