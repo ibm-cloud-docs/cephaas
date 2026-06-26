@@ -174,7 +174,7 @@ Create clusters
 :   Provision Red Hat OpenShift clusters through the IBM Cloud Satellite portal. See [Creating clusters](/docs/cephaas?topic=cephaas-create-clusters).
 
 Manage cluster quotas
-:   Update your cluster storage quota. See [Updating a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota).
+:   Update your cluster storage quota. See [Updating a cluster's storage quota](/docs/cephaas?topic=cephaas-manage-cluster-quota).
 
 View deployment capacity
 :   Monitor your deployment's resource usage and capacity. See [Viewing deployment capacity and resource usage](/docs/cephaas?topic=cephaas-deployment-access-overview).
