@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-25"
+lastupdated: "2026-06-26"
 
 keywords: fusion as a service, getting started, fusion, openshift, compute, storage, billing options, roks clusters, ceph storage, performance tier, capacity tier
 
@@ -174,10 +174,10 @@ Create clusters
 :   Provision Red Hat OpenShift clusters through the IBM Cloud Satellite portal. See [Creating clusters](/docs/cephaas?topic=cephaas-create-clusters).
 
 Manage cluster quotas
-:   Update your default cluster quota or set quotas for specific clusters. See [Managing cluster quotas](/docs/cephaas?topic=cephaas-update-cluster-quota).
+:   Update your cluster storage quota. See [Updating a cluster's storage quota](/docs/cephaas?topic=cephaas-update-cluster-quota).
 
 View deployment capacity
-:   Monitor your deployment's resource usage and capacity. See [Viewing deployment capacity](/docs/cephaas?topic=cephaas-view-deployment-capacity).
+:   Monitor your deployment's resource usage and capacity. See [Viewing deployment capacity and resource usage](/docs/cephaas?topic=cephaas-deployment-access-overview).
 
 Access management
 :   Configure user access and permissions for your deployment. See [Managing access to Fusion as a Service](/docs/cephaas?topic=cephaas-iam_access-fusionaas).
