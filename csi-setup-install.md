@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-26"
+lastupdated: "2026-06-29"
 
 keywords: cephaas csi set up
 
@@ -88,7 +88,14 @@ Before installing the driver, complete the following preinstallation setup activ
 8. Install the CSI driver using the Helm chart and your updated **values.yaml** file:
 
     ```sh
-    helm upgrade cephaas-csi oci://<image_path>/cephaas-csi --version <image_tag> -f values.yaml
+    helm install cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> -f values.yaml --namespace <your-namespace>
+    ```
+    {: codeblock}
+
+    To upgrade an existing CSI driver installation, run the following command:
+
+    ```sh
+    helm upgrade cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> -f values.yaml --namespace <your-namespace>
     ```
     {: codeblock}
 
