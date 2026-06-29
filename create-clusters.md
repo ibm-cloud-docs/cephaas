@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-25"
+lastupdated: "2026-06-29"
 
 keywords: cluster creation, IBM Fusion as a service, Red Hat OpenShift on IBM Cloud, IBM Cloud Satellite, GPU workloads
 
@@ -90,7 +90,7 @@ Resource consumption
 Cluster creation must be performed through Red Hat OpenShift on IBM Cloud. The IBM Fusion as a service UI provides visibility into cluster status and resource usage but does not support cluster creation operations.
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
-2. Navigate to **Kubernetes** > **Clusters** in the IBM Cloud console.
+2. Navigate to **Containers** > **Clusters** in the IBM Cloud console.
 3. Click **Create cluster**.
 4. Select **Red Hat OpenShift** as the cluster type.
 5. Select **Satellite** as the infrastructure.
@@ -112,6 +112,17 @@ In the Satellite cluster wizard, specify the required configuration for your clu
 - Storage quota for the cluster, based on available Fusion Data Foundation capacity
 
 IBM Fusion as a service validates your selections against the available deployment capacity.
+
+### Specify GPU-enabled worker nodes
+{: $specify-gpu-enabled-worker-nodes}
+
+Add GPU-enabled worker nodes to your default worker pool by using host labels:
+
+- In the **Default Worker Pool** section specify ibm-gpu and the number of GPU nodes per region in the **Default worker pool host label** field. For example, "ibm-gpu:1"
+
+The specified value for ibm-gpu represents the number of GPU nodes per zone.
+{: tip}
+
 
 ## Review and create the cluster
 {: #review-and-create-cluster}
