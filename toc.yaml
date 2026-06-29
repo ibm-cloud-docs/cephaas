@@ -8,13 +8,13 @@ toc:
     console-page: /catalog/software-defined-storage
     product-page: https://www.ibm.com/products/storage-ceph
     path: cephaas
-    label: IBM Fusion as a service
+    label: IBM Storage Ceph as a Service
   entries:
   - navgroup:
       id: learn
       topics:
-      - getting-started-fusionaas.md
-      - about-fusionaas.md
+      - getting-started.md
+      - about-cephaas.md
       - topicgroup:
           label: Preparing the data center
           topics:
@@ -25,9 +25,8 @@ toc:
           - power_requirements.md
           - network_requirements.md
           - network_latency.md
-          - gpu-availability.md
       - topicgroup:
-          label: Storage setup
+          label: Getting organized
           topics:
           - administrators.md
           - developers.md
@@ -37,28 +36,9 @@ toc:
       id: howto
       topics:
       - iam_overview.md
-      - iam_access-fusionaas.md
+      - iam_access.md
       - setup_cli_api_environment.md
       - setup-terraform.md
-      - topicgroup:
-          label: Compute setup
-          topics:
-          - access-openshift-console.md
-          - onboarding-fusionaas.md
-          - deployment-access-overview.md
-      - topicgroup:
-          label: Managing clusters
-          topics:
-          - create-clusters.md
-          - cluster-access.md
-          - view-clusters.md
-          - cluster-health-indicators.md
-          - gpu-setup.md
-      - topicgroup:
-          label: Managing cluster storage
-          topics:
-          - enable-fusion-services.md
-          - edit-cluster-quota.md
       - topicgroup:
           label: Managing block storage
           topics:
@@ -110,7 +90,6 @@ toc:
           label: Enhancing security
           topics:
           - endpoints.md
-          - cbr.md
           - data-security.md
       - topic: event-notifications.md
         navtitle: Enabling event notifications
