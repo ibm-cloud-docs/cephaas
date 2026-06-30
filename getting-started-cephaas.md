@@ -1,54 +1,48 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-04"
+ years: 2024, 2026
+lastupdated: "2026-06-30"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
 subcollection: cephaas
 
 ---
-{{site.data.keyword.attribute-definition-list}}
-{: ui-linked}
 
-An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
-{: important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with {{site.data.keyword.cephaas_full_notm}}
-{: #getting-started}
+{: #getting-started-cephaas}
 
 {{site.data.keyword.cephaas_full}} is a powerful software-defined enterprise storage platform that delivers a cloud-like experience on-premises with the convenience and flexibility of a pay-as-you-go model. Designed to provision storage in minutes, it enables self-provisioning of storage resources, allowing enterprises to quickly adapt to rapidly changing demands, breaking down the barriers of managing multiple dedicated Storage Systems.
 {: shortdesc}
 
+An IBM representative will contact you to understand your requirements. Post discussions and approvals, your IBM representative will place your order. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
+{: important}
+
 By eliminating over-provisioning and right-sizing your infrastructure, you can ensure optimal resource utilization and cost-efficiency. Based on the benefits of IBM Storage Ceph, it breaks down the silos of dedicated, proprietary storage infrastructure and software, offering unified support for multiple protocols across a single platform. With a seamless, single point of management, it simplifies operations, giving you control over your entire storage environment from one interface.
-
-
-## Estimating service cost
-{: #estimatecost}
-{: step}
-
-{{site.data.keyword.cephaas_full_notm}} is available in {{site.data.keyword.cloud_notm}} catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the service cost estimation tool.
-
-1. To estimate your monthly storage cost, use the **Estimate Cost** option in the product overview page.
-
-2. Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.
-
-    You can select **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs.  {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to the {{site.data.keyword.cloud_notm}}. The Service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated datacenter.
-
-     {{site.data.keyword.cephaas_full_notm}} can be provisioned with 100 TB to 3200 TB with two storage options:
-
-    - **Performance Tier** which is tailored to performance intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components that are needed to use this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
-
-    - **Capacity Tier** offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB - 3200 TB in this tier.
 
 
 
 ## Requesting for consultation
 {: #consultation-request}
 {: step}
+{{site.data.keyword.cephaas_full_notm}} is available in {{site.data.keyword.cloud_notm}} catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the request for consultation.
 
-After saving your cost estimation, click **Start order process** and share your contact details. On submitting the contact form, a Confirmation ID is generated. A notification with the consultation confirmation ID and your service cost estimation is displayed, and an email is sent to IBM.
+Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.
+
+You can select a **Subscription term** for 3, 4, or 5 years with performance or capacity tier, which best matches your needs. {{site.data.keyword.cephaas_full_notm}} hardware contains optimized racks, servers, storage, networking switches, and integrated software, which connect to {{site.data.keyword.cloud_notm}}. The service is an infrastructure as a service (IaaS) offering where the operating system, middleware, and application software is licensed and managed by IBM. The hardware is owned and maintained by IBM and the service infrastructure is installed in your designated data center.
+
+{{site.data.keyword.cephaas_full_notm}} can be provisioned with 100 TB to 3200 TB with two storage options:
+
+Performance Tier
+:   Tailored to performance-intensive application workloads. To serve these workloads, the hardware consists of NVMe storage devices and high-bandwidth network cards as well as the CPU and memory components that are needed to use this equipment. You can provision the capacity starting from 100 TB to 800 TB in this tier.
+
+Capacity Tier
+:   Offers cost-effective online storage of less frequently used data. You can provision the capacity from 800 TB to 3200 TB in this tier.
+
+After selecting your performance tier, click **Get Consultation**. When you submit the contact form, a confirmation ID is generated. A notification with the consultation ID and your service cost estimation is displayed, and an email is sent to IBM.
 
 Soon thereafter, an IBM representative will contact you to understand your requirements. Post discussions and approvals, the IBM representative places your order. The details of your order and order tracking link is email to you. While the order is processing, you can track the status from your {{site.data.keyword.cloud_notm}} account dashboard.
 

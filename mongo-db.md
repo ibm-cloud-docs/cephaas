@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-06-30"
 
 keywords: cephaas settings, trial version, ceph as a service
 

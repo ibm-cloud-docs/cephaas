@@ -1,10 +1,9 @@
 ---
-
 copyright:
- years: 2024, 2025
+  years: 2025
 lastupdated: "2025-11-18"
 
-keywords: Block volume, data storage, troubleshooting, troubleshoot, cephaas, ceph as a service, object storage, low cost object, 
+keywords: troubleshooting, cephaas, block storage, object storage, volume, s3 certificate
 
 subcollection: cephaas
 
@@ -17,7 +16,7 @@ content-type: troubleshoot
 # Troubleshooting
 {: #troubleshooting}
 
-When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_full_notm}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
+When you create or manage Block and Object Storage for {{site.data.keyword.cephaas_full}}, you might encounter issues. Often, you can recover by following a few steps. Issues, symptoms, likely causes, and resolutions are described in the following sections.
 {: shortdesc}
 
 ## Cannot retrieve a volume in a specified deployment
@@ -38,13 +37,13 @@ Any of the following causes might apply:
 Verify that the volume was not deleted from a deployment. Search for the deployment where you last accessed the volume from the list of all deployments:
 {: tsResolve}
 
-1. In the [{{site.data.keyword.cloud_notm}} console](/login){: external}, click the **Navigation menu** icon ![menu icon](../icons/icon_hamburger.svg) **> Resource List > Storage**.
+1. In the [IBM Cloud console](https://cloud.ibm.com/login){: external}, click the **Navigation menu** icon ![menu icon](../icons/icon_hamburger.svg) **> Resource List > Storage**.
 
 1. Select a deployment from the list of all deployments.
 
 If the volume does not appear in the list of volumes, it was probably deleted. Because deleting a volume completely removes its data, it cannot be restored.
 
-If you use the CLI, verify that you entered the correct command syntax for viewing volumes. See [Viewing all Block Storage volumes from the CLI](/docs/cephaas?topic=cephaas-view-volume&interface=cli#viewall-vol-cli).
+If you use the CLI, verify that you entered the correct command syntax for viewing volumes. See [Viewing all Block Storage volumes from the CLI](https://cloud.ibm.com/docs/cephaas?topic=cephaas-view-volume&interface=cli#viewall-vol-cli).
 
 ## Cannot update a volume name by using the API or CLI
 {: #troubleshoot-topic-2}
@@ -60,7 +59,7 @@ This condition might appear in the API or CLI in the following scenarios.
 * In the CLI, when you specify the `ibmcloud is volume-update` command.
 
 You might be renaming the volume with an invalid volume name. In this case, you see a `400 - validation_invalid_name` error.
-You might also be specifying a valid volume name, but one that is already in the {{site.data.keyword.cephaas_full_notm}}. For example, if you create two volumes from compute resources that are in the same deployment, and have the same name, you see a `400 - volume_name_duplicate` error.
+You might also be specifying a valid volume name, but one that is already in {{site.data.keyword.cephaas_short}}. For example, if you create two volumes from compute resources that are in the same deployment, and have the same name, you see a `400 - volume_name_duplicate` error.
 {: tsCauses}
 
 **Note:** The UI prevents you from entering an invalid volume name.
@@ -106,6 +105,6 @@ Trying to create a s3 certificate when one already exists.
 Follow these guidelines to replace the existing certificate with the new one:
 {: tsResolve}
 
-* In API: Make a `PUT /certificates/{cert_type}` request to upload the new s3 certificate. See [Updating S3 certificate with the API](/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=api#uploading-s3-certificate-api).
+* In API: Make a `PUT /certificates/{cert_type}` request to upload the new s3 certificate. See [Updating S3 certificate with the API](https://cloud.ibm.com/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=api#uploading-s3-certificate-api).
 
-* In CLI: Use the command `cert-update` to upload the new s3 certificate. See [Updating S3 certificate with the CLI](/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=cli#updating-s3-certificate-cli).
+* In CLI: Use the command `cert-update` to upload the new s3 certificate. See [Updating S3 certificate with the CLI](https://cloud.ibm.com/docs/cephaas?topic=cephaas-uploading-s3-certificate&interface=cli#updating-s3-certificate-cli).

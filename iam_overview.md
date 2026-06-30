@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-03-11"
+ years: 2024, 2026
+lastupdated: "2026-06-11"
 
 keywords: ceph as a service, sds, cephaas, authorization, iam, basics
 
@@ -27,7 +27,7 @@ Identity  Management includes the interaction of users, services, and resources.
 
 The {{site.data.keyword.cloud_notm}} IAM Token Service is used to create, update, delete, and use API keys for users and services. Those API keys are created either with API calls or the Identity & Access section of the {{site.data.keyword.cloud}} Platform Console. The same key can be used across services. Each user has any number of API keys to support key rotation scenarios, as well as scenarios by using different keys for different purposes to limit the exposure of a single key.
 
-For more information, see [the {{site.data.keyword.cloud_notm}} IAM documentation](/docs/account?topic=account-iamoverview#iamoverview){: external}.
+For more information, see [the {{site.data.keyword.cloud_notm}} IAM documentation](/docs/iam?topic=iam-iamoverview).
 
 ### Users and API keys
 {: #iam-overview-user-api-keys}

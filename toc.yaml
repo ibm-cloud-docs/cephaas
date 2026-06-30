@@ -13,7 +13,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
+      - getting-started-cephaas.md
       - about-cephaas.md
       - topicgroup:
           label: IBM Storage Ceph as a Service trials
@@ -96,26 +96,29 @@ toc:
               - s3_cert_create.md
               - s3_cert_view.md
               - s3_cert_update.md
-              - s3_cert_delete.md<
-          - object-dr.md
+              - s3_cert_delete.md
+          - topicgroup:
+              label: Disaster recovery
+              topics:
+              - object-dr.md
       - topicgroup:
-          label: Enhancing Security
+          label: Enhancing security
           topics:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
           - endpoints.md
           - data-security.md
-      - topic: event-notifications.md
+      - topic: event-notification-cephaas.md
         navtitle: Enabling event notifications
       - topicgroup:
           label: Observability
           topics:
-          - topic: at-events.md
+          - topic: at-events-cephaas.md
             navtitle: Activity tracking events
       - topicgroup:
           label: Managing authentication
           topics:
-          - s3_cred_create.mdf
+          - s3_cred_create.md
           - s3_cred_view.md
           - s3_cred_delete.md
       - topicgroup:
@@ -157,13 +160,12 @@ toc:
           label: API reference
           topics:
           - about_api.md
-          links:
           - link:
               label: Block storage management API
-              href: https://{DomainName}/apidocs/block-storage
+              href: https://{DomainName}/docs/apis/block-storage
           - link:
               label: Object storage management API
-              href: https://{DomainName}/apidocs/object-storage
+              href: https://{DomainName}/docs/apis/object-storage
       - topicgroup:
           label: CLI reference
           topics:
@@ -175,15 +177,14 @@ toc:
           topics:
           - getting-started-sdks.md
           - go.md
-      links:
-      - link:
-          label: Terraform reference
-          href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
+          - link:
+              label: Terraform reference
+              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/sds_volume
   - navgroup:
       id: help
       topics:
       - getting_help_and_support.md
-      - billing_view.md
-      - faq.md
-      - troubleshooting.md
+      - billing-cephaas.md
+      - faq-cephaas.md
+      - troubleshooting-cephaas.md
       - known-issues.md

@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-03-19"
+ years: 2025, 2026
+lastupdated: "2026-05-14"
 
 keywords: about block storage api, about object storage api, rest, s3, compatibility, api, error, ceph as a service
 
@@ -135,4 +135,4 @@ These operations create, delete, get information about, and control the behavior
 
 
 
-More information about {{site.data.keyword.cephaas_full_notm}} features and use-cases can be found at [ibm.com](https://www.ibm.com/products/storage-ceph).
+More information about {{site.data.keyword.cephaas_full_notm}} features and use-cases can be found at [ibm.com](https://www.ibm.com/products/storage-ceph){: external}.

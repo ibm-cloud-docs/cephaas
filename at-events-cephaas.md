@@ -1,36 +1,36 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+  years: 2024, 2026
+lastupdated: "2026-06-30"
 
-keywords: cephaas, activity tracker events, auditing events, ceph as a service
+keywords: activity tracker for IBM Storage Ceph, LogDNA for IBM Storage Ceph, IBM Storage Ceph events, IBM Storage Ceph security, audit logs for IBM Storage Ceph, viewing IBM Storage Ceph events, IBM Storage Ceph events
 
-subcollection: cephaas
+subcollection: sdsaas
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Activity tracker events for {{site.data.keyword.cephaas_full_notm}}
-{: #at_events}
+# Activity tracker events for IBM Storage Ceph as a Service
+{: #at_events_cephaas}
 
-{{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.
+IBM Cloud services, such as {{site.data.keyword.cephaas_full}}, generate activity tracking events.
 {: shortdesc}
 
-Activity tracking events report on activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
+Activity tracking events report on activities that change the state of a service in IBM Cloud. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use {{site.data.keyword.atracker_full_notm}}, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
+You can use IBM Cloud Activity Tracker Event Routing, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](https://cloud.ibm.com/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
 
-For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs/atracker?topic=atracker-about).
+For more information, see [About IBM Cloud Activity Tracker Event Routing](https://cloud.ibm.com/docs/atracker?topic=atracker-about){: external}.
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
 
-{{site.data.keyword.cephaas_full_notm}} sends activity tracking events by {{site.data.keyword.atracker_full_notm}} in the regions that are indicated in the following table.
+{{site.data.keyword.cephaas_full}} sends activity tracking events by IBM Cloud Activity Tracker Event Routing in the regions that are indicated in the following table.
 
-| Dallas (`us-south`) | Washington (`us-east`)  | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
-|---------------------|-------------------------|-------------------|----------------------|
+| Dallas (`us-south`) | Washington (`us-east`) | Toronto (`ca-tor`) | Sao Paulo (`br-sao`) |
+|---------------------|------------------------|--------------------|-----------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Americas locations" caption-side="top"}
 {: #atracker-table-1}
@@ -39,8 +39,8 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Tokyo (`jp-tok`)    | Sydney (`au-syd`) |  Osaka (`jp-osa`) | Chennai (`in-che`) |
-|---------------------|------------------|------------------|--------------------|
+| Tokyo (`jp-tok`) | Sydney (`au-syd`) | Osaka (`jp-osa`) | Chennai (`in-che`) |
+|------------------|-------------------|------------------|---------------------|
 | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Asia Pacific locations" caption-side="top"}
 {: #atracker-table-2}
@@ -49,8 +49,8 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 {: class="simple-tab-table"}
 {: row-headers}
 
-| Frankfurt (`eu-de`)  | London (`eu-gb`) | Madrid (`eu-es`) |
-|---------------------------------------------------------------|---------------------|------------------|
+| Frankfurt (`eu-de`) | London (`eu-gb`) | Madrid (`eu-es`) |
+|---------------------|------------------|------------------|
 | [Yes]{: tag-green} | [No]{: tag-red} | [No]{: tag-red} |
 {: caption="Regions where activity tracking events are sent in Europe locations" caption-side="top"}
 {: #atracker-table-3}
@@ -64,19 +64,18 @@ For more information, see [About {{site.data.keyword.atracker_full_notm}}](/docs
 ## Viewing activity tracking events
 {: #at-viewing}
 
-You can use {{site.data.keyword.logs_full_notm}} to visualize and alert on events that are generated in your account and routed by {{site.data.keyword.atracker_full_notm}} to an {{site.data.keyword.logs_full_notm}} instance.
+You can use IBM Cloud Logs to visualize and alert on events that are generated in your account and routed by IBM Cloud Activity Tracker Event Routing to an IBM Cloud Logs instance.
 
-### Launching {{site.data.keyword.logs_full_notm}} from the Observability page
+### Launching IBM Cloud Logs from the Observability page
 {: #at-events-log-launch-standalone}
 
-For information on launching the {{site.data.keyword.logs_full_notm}} UI, see [Launching the UI in the {{site.data.keyword.logs_full_notm}} documentation.](/docs/cloud-logs?topic=cloud-logs-instance-launch)
-
+For information on launching the IBM Cloud Logs UI, see [Launching the UI in the IBM Cloud Logs documentation](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-instance-launch){: external}.
 
 
 ## List of management events
 {: #at_actions}
 
-The following table lists the {{site.data.keyword.cephaas_full_notm}} actions that generate an event.
+The following table lists the IBM Storage Ceph as a Service actions that generate an event.
 
 | Action             | Description      |
 |--------------------|------------------|

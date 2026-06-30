@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -66,7 +66,8 @@ See the following example.
 ```bash
 ibmcloud sds volume-create \
    --capacity 10 \
-   --name my-volume
+   --name my-volume \
+   --url $sds_endpoint
 ...
 
 Volume_ID     r134-279863d6-c37b-4601-b586-80f6dac215c2

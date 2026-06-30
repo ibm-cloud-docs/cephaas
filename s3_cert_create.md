@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-04"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: cephaas settings, creating S3 Certificate, ceph as a service
 
@@ -47,14 +47,14 @@ Use the `cert-create` command to create new SSL Certificates if they do not exis
 Run the following command to upload the certificate.
 
 ```sh
-ibmcloud software-defined-storage cert-create --cert CERT --body BODY --url string
+ibmcloud software-defined-storage cert-create --cert-type CERT-TYPE --body BODY --url string
 ```
 {: pre}
 
 See the following example.
 
 ```sh
-ibmcloud sds cert-create --cert s3 --body file-name.pem
+ibmcloud sds cert-create --cert-type s3 --body file-name.pem --url $sds_endpoint
 
 ...
 Name               s3

@@ -1,10 +1,10 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-12-09"
+  years: 2024, 2025
+lastupdated: "2025-01-09"
 
-keywords: ceph as a service, frequently asked questions, faq, faqs, block storage, object storage, low cost object, storage units, usage charges, quota limits, capacity
+keywords: cephaas faq, frequently asked questions, block storage, object storage, capacity objects, monitoring
 
 subcollection: cephaas
 
@@ -17,9 +17,9 @@ subcollection: cephaas
 
 Frequently asked questions (FAQs) provide you with helpful answers and insight into best practices for working with {{site.data.keyword.cephaas_full}}.
 
-* [Block and Object storage](/docs/cephaas?topic=cephaas-faq#block-storage-faq)
-* [Low-cost objects](/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
-* [Monitoring](/docs/cephaas?topic=cephaas-faq#faq-monitoring)
+* [Block and Object storage](https://cloud.ibm.com/docs/cephaas?topic=cephaas-faq#block-storage-faq)
+* [Low-cost objects](https://cloud.ibm.com/docs/cephaas?topic=cephaas-faq#faq-low-cost-objects)
+* [Monitoring](https://cloud.ibm.com/docs/cephaas?topic=cephaas-faq#faq-monitoring)
 
 ## FAQ about block and object storage
 {: #block-storage-faq}
@@ -36,14 +36,14 @@ Both block and object storage are charged based on the monthly fee for the plan 
 {: faq}
 {: #faq-quota-limit}
 
-The capacity-based quota limits for your block and object storage are based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_full_notm}} and the resources available within it, see [storage quotas](/docs/cephaas?topic=cephaas-quota-capacity-mgmt&interface=ui).
+The capacity-based quota limits for your block and object storage are based on the quotas set on the instance. For more information about quotas and limits for your {{site.data.keyword.cephaas_short}} and the resources available within it, see [storage quotas](https://cloud.ibm.com/docs/cephaas?topic=cephaas-quota-capacity-mgmt&interface=ui).
 
 
 ### After creating a volume with specific capacity, can the capacity later be increased?
 {: faq}
 {: #faq-increase-capacity}
 
-Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Adding capacity to existing deployment](/docs/cephaas?topic=cephaas-add-capacity-to-deployment).
+Yes, you can increase the capacity of a block volume after it is provisioned as long as the total provisioned capacity of all volumes does not exceed the block quota limit. For more information, see [Adding capacity to existing deployment](https://cloud.ibm.com/docs/cephaas?topic=cephaas-add-capacity-to-deployment).
 
 ### What rules apply to volume names and can I rename a volume later on?
 {: faq}
@@ -51,7 +51,7 @@ Yes, you can increase the capacity of a block volume after it is provisioned as 
 
 Valid volume names can include a combination of lowercase alphanumeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters.  Volume names must begin with a lowercase letter and be unique across the entire deployment.
 
-You can change the name of an existing volume by using the UI, CLI, API, and Terraform. See [this information](/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
+You can change the name of an existing volume by using the UI, CLI, API, and Terraform. See [this information](https://cloud.ibm.com/docs/cephaas?topic=cephaas-renaming-block-volume&interface=ui) for details.
 
 ### How many volumes can be provisioned per deployment?
 {: faq}
@@ -66,7 +66,7 @@ You can provision up to 1000 block storage volumes per deployment.
 {: faq}
 {: #faq-how-del-vol}
 
-You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](/docs/cephaas?topic=cephaas-unmap-hosts) before deleting it.
+You can delete a block storage volume only when it is not mapped to a host. [Unmap the volume](https://cloud.ibm.com/docs/cephaas?topic=cephaas-unmap-hosts) before deleting it.
 
 
 ### What happens to the data when I delete a block storage volume?
@@ -149,21 +149,21 @@ To help ensure a throttling of 10000 IOPS, the volume capacity must be at least 
 
 To help ensure a throttling of 1000 * 1000 KBps, max IOPS must be 1000000/16 = 62500. So, you must create volumes with total capacity 62500/3 = ~21 TB.
 
-### What does the ‘pending’ status mean for block volumes and hosts?
+### What does the 'pending' status mean for block volumes and hosts?
 {: #faq-pending-status-block-volumes-hosts}
 
 Block storage POST and DELETE APIs for volumes and host are asynchronous APIs. They accept the request and return after successful validations indicating that the request has been accepted for further processing. In such long-running API cases, the caller can track the status of a resource by using the "status" property in the `GET` API.
-An ‘available’ status indicates that the process is complete and that the resource is ready for use. The pending statuses indicate that the resource is still being processed.
+An 'available' status indicates that the process is complete and that the resource is ready for use. The pending statuses indicate that the resource is still being processed.
 
 The Block storage API uses the following pending status:
 
-- ‘pending’: Used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after `POST /volumes`, `POST /hosts`, or `PUT /hosts/{id}/volumes/{id}` request if the operation is still in progress.
-- ‘pending-deletion’: Used when a volume deletion is in progress. `GET /volumes` API will return this status after `DELETE /volumes/{id}` request if delete operation is still in progress.
+- 'pending': Used when a volume is being created or a volume mapping is in progress. GET APIs on hosts and volumes will return this status after `POST /volumes`, `POST /hosts`, or `PUT /hosts/{id}/volumes/{id}` request if the operation is still in progress.
+- 'pending-deletion': Used when a volume deletion is in progress. `GET /volumes` API will return this status after `DELETE /volumes/{id}` request if delete operation is still in progress.
 - "pending-unmapping": Used when a volume unmapping from a host operation is in progress. `GET /hosts` API will return this status for a volume mapping after unmap single volume from a host `DELETE /hosts/{id}/volumes/{id}` or unmap all volumes from a host `DELETE /hosts/{id}/volumes` request if the unmapping operation is still in progress.
 
 The resource can remain in one of these pending states for as long as the operation does not complete. The backend keeps on trying the operation until it succeeds.
 
-For example, the volume status will continue to show as ‘pending’ after the POST request if the backend cluster is down. It changes to `available` state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller must implement timeouts if needed for such cases.
+For example, the volume status will continue to show as 'pending' after the POST request if the backend cluster is down. It changes to `available` state when the backend cluster is restored. The API does not treat this as permanent failure but a condition that can be fixed. The caller must implement timeouts if needed for such cases.
 
 
 ## FAQ on Capacity objects
@@ -181,8 +181,8 @@ For Capacity objects, new S3 accounts have `STANDARD_IA` as the default storage 
 {: #faq-monitoring}
 
 
-### How can i access the IBM Cloud monitoring user interface from the {{site.data.keyword.cephaas_full_notm}} user interface?
+### How can I access the IBM Cloud monitoring user interface from the {{site.data.keyword.cephaas_short}} user interface?
 {: faq}
 {: #faq-access-ic-mon-ui}
 
-The {{site.data.keyword.mon_full_notm}} user interface is not linked from the {{site.data.keyword.cephaas_full_notm}} user interface. Hence it cannot be accessed from the  {{site.data.keyword.cephaas_full_notm}} user interface.
+The IBM Cloud Monitoring user interface is not linked from the {{site.data.keyword.cephaas_short}} user interface. Hence it cannot be accessed from the {{site.data.keyword.cephaas_short}} user interface.

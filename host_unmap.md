@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: ceph as a service, sds, cephaas host unmap, delete all host volume mapping, delete volume mapping for a host,
 
@@ -51,7 +51,7 @@ The `Volume-Mapping-ID` can be found in the output of a get host or a get volume
 Run the following command to delete a single volume mapping from a host.
 
 ```sh
-ibmcloud software-defined-storage host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
+ibmcloud software-defined-storage host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID --url string
 ```
 {: pre}
 
@@ -81,7 +81,7 @@ Use the `host-mapping-delete-all` command and specify the `HOST-ID` along with t
 Run the following command to delete all volume mappings from a host.
 
 ```sh
-ibmcloud software-defined-storage host-mapping-delete-all --host-id HOST-ID
+ibmcloud software-defined-storage host-mapping-delete-all --host-id HOST-ID --url string
 ```
 {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-28"
+lastupdated: "2026-06-29"
 
 keywords: cephaas csi set up
 
@@ -75,8 +75,7 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: codeblock}
 
-    You can view the chart details, including license information, by running:
-    `helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>`
+    You can view the chart details, including license information, by running `helm show chart oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here>`.
     {: note}
 
 7. Before installing the chart, you can optionally review the rendered Kubernetes manifest files generated from the values.yaml using the following command:
@@ -93,8 +92,14 @@ Before installing the driver, complete the following preinstallation setup activ
     ```
     {: codeblock}
 
-    To verify that the CSI driver was installed successfully, run:
-    `helm status <chart-name> --namespace <your-namespace>`
+    To upgrade an existing CSI driver installation, run the following command:
+
+    ```sh
+    helm upgrade cephaas-csi oci://icr.io/cephaas-helm-charts/cephaas-csi --version <specify-tag-here> -f values.yaml --namespace <your-namespace>
+    ```
+    {: codeblock}
+
+    To verify that the CSI driver was installed successfully, run `helm status <chart-name> --namespace <your-namespace>`.
     {: note}
 
 ## Important information for OpenShift
@@ -111,3 +116,5 @@ To resolve this, grant the appropriate Security Context Constraints (SCCs) to th
 ```sh
 oc adm policy add-scc-to-user privileged -z cephaascsi-node-sa -n <your-namespace>
 oc adm policy add-scc-to-user privileged -z cephaascsi-controller-sa -n <your-namespace>
+```
+{: codeblock}

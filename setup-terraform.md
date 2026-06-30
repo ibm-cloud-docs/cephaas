@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2025-10-30"
+lastupdated: "2026-06-11"
 
 keyword: ceph as a service, setting up terraform, installing terraform, configuring resources
 
@@ -96,7 +96,7 @@ Before you can create an authorization by using Terraform, make sure that you ha
 
 5. From the [{{site.data.keyword.cloud_notm}} resource list](/resources){: external}, expand **Storage** and select the {{site.data.keyword.cephaas_full_notm}} instance that you created and note the instance ID.
 
-6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
+6. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/iam?topic=iam-assign-access-resources).
 
 ## What's next?
 {: #terraform-setup-next}

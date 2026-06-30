@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-06-30"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -18,7 +18,7 @@ subcollection: cephaas
 
 After completing the onboarding process in IBM Cloud, follow these steps to access your{{site.data.keyword.cephaas_full_notm}} trial deployment:
 
-1. Log in to the [IBM Cloud Dashboard](https://cloud.ibm.com). 
+1. Log in to the [IBM Cloud Dashboard](https://cloud.ibm.com){: external}.
 2. If you are associated with multiple IBM Cloud accounts, ensure you are in the{{site.data.keyword.cephaas_full_notm}} trial account name mentioned in your email invitation. You can switch between the different cloud accounts using the by clicking on the account name in the menu bar at the top. 
 
     ![IBM Cloud Dashboard](images/dashboard.png "IBM Cloud Dashboard"){: caption="IBM Cloud Dashboard" caption-side="bottom"}

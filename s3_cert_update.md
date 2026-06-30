@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: cephaas settings, uploading S3 Certificate, ceph as a service
 
@@ -55,7 +55,7 @@ Use the `cert-update` command to update or replace existing SSL Certificates. Yo
 Run the following command to upload the certificate.
 
 ```sh
-ibmcloud software-defined-storage cert-update --cert CERT --body BODY --url string
+ibmcloud software-defined-storage cert-update --cert-type CERT-TYPE --body BODY --url string
 ```
 {: pre}
 
@@ -63,7 +63,7 @@ ibmcloud software-defined-storage cert-update --cert CERT --body BODY --url stri
 See the following example.
 
 ```sh
-ibmcloud sds cert-update --cert s3 --body file-name.pem
+ibmcloud sds cert-update --cert-type s3 --body file-name.pem --url $sds_endpoint
 
 ...
 Name               s3

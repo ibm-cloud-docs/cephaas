@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: create S3 credential for object storage, ceph as a service, cephaas
 
@@ -67,7 +67,7 @@ ibmcloud software-defined-storage cred-create --access-key ACCESS-KEY --url stri
 See the following example.
 
 ```bash
-ibmcloud software-defined-storage cred-create --access-key test-key1
+ibmcloud software-defined-storage cred-create --access-key test-key1 --url $sds_endpoint
 ...
 
 Access_Key   test-key1

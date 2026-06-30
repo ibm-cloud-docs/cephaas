@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-02-03"
+lastupdated: "2026-06-30"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -47,7 +47,7 @@ Follow these steps to configure and access S3-compatible object storage from you
 
 
 
-You can now perform additional [S3 operations](https://docs.aws.amazon.com/cli/v1/userguide/cli-services-s3-commands.html).
+You can now perform additional [S3 operations](https://docs.aws.amazon.com/cli/v1/userguide/cli-services-s3-commands.html){: external}.
 
 Here are a few examples of the S3 operation. 
 

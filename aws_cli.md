@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-06-12"
 
 keywords: cephaas, cli, command-line interface, object storage, s3, ceph as a service
 
@@ -246,4 +246,4 @@ aws s3api list-objects --bucket bucket-1
 ## Next Steps
 {: #aws-cli-next-steps}
 
-The detailed description of the RESTful API for {{site.data.keyword.cephaas_full_notm}} can be found in the [API Documentation](https://cloud.ibm.com/apidocs/object-storage){: external}.
+The detailed description of the RESTful API for {{site.data.keyword.cephaas_full_notm}} can be found in the [API Documentation](https://cloud.ibm.com/docs/apis/object-storage){: external}.

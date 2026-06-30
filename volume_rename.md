@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-10-30"
+ years: 2024, 2026
+lastupdated: "2026-04-23"
 
 keywords: sds, cephaas, block storage, volume, remane volume, manage volume, ceph as a service
 
@@ -59,7 +59,7 @@ ibmcloud software-defined-storage volume-update --volume-id VOLUME-ID --name NAM
 See the following example.
 
 ```bash
-ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --name new-vol
+ibmcloud sds volume-update --volume-id r134-601e431b-22ab-47a1-b0c1-411049b432a0 --name new-vol --url $sds_endpoint
 ...
 
 Volume_ID     r134-601e431b-22ab-47a1-b0c1-411049b432a0
