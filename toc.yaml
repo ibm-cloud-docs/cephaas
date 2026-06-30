@@ -16,6 +16,23 @@ toc:
       - getting-started-cephaas.md
       - about-cephaas.md
       - topicgroup:
+          label: IBM Storage Ceph as a Service trials
+          topics:
+          - trials-onboarding.md
+          - connecting-to-trials.md
+          - trial-env.md
+          - topicgroup:
+              label: Preparing the VMware environment for trials
+              topics:
+              - configure-vmware-environment.md
+              - trial-connect-storage.md
+              - configure-VM.md
+          - topicgroup:
+              label: Trials use cases
+              topics:
+              - mongo-db.md
+              - s3-storage-VM.md
+      - topicgroup:
           label: Preparing the data center
           topics:
           - preinstallation_checklist.md
@@ -30,15 +47,13 @@ toc:
           topics:
           - administrators.md
           - developers.md
-      - topicgroup:
-          label: Release notes
-          topics:
-          - release-notes.md
+      - topic: release-notes.md
+        navtitle: Release notes
   - navgroup:
       id: howto
       topics:
-      - iam_overview.md
       - iam_access.md
+      - iam_overview.md
       - setup_cli_api_environment.md
       - setup-terraform.md
       - topicgroup:
@@ -65,12 +80,12 @@ toc:
               - host_mapping_view.md
               - host_unmap.md
               - connect-from-nvme-of-initiators.md
-          - topicgroup:
-              label: Managing capacity allocations
-              topics:
-              - sds_quota_mgmt.md
-              - sds_capacity_performance.md
-              - capacity_add.md
+      - topicgroup:
+          label: Managing capacity allocations
+          topics:
+          - sds_quota_mgmt.md
+          - sds_capacity_performance.md
+          - capacity_add.md
       - topicgroup:
           label: Managing object storage
           topics:
@@ -87,18 +102,19 @@ toc:
               topics:
               - object-dr.md
       - topicgroup:
-          label: Enhancing security
+          label: Enhancing Security
           topics:
+          - topic: architecture-workload-isolation.md
+            navtitle: Architecture and workload isolation
           - endpoints.md
           - data-security.md
+      - topic: event-notification-cephaas.md
+        navtitle: Enabling event notifications
       - topicgroup:
-          label: Enabling event notifications
+          label: Observability
           topics:
-          - event-notification-cephaas.md
-      - topicgroup:
-          label: Activity tracking events
-          topics:
-          - at-events-cephaas.md
+          - topic: at-events-cephaas.md
+            navtitle: Activity tracking events
       - topicgroup:
           label: Managing authentication
           topics:
@@ -116,7 +132,7 @@ toc:
           - vsphere-snapshots.md
           - upgrading-vsphere-plugin.md
       - topicgroup:
-          label: Fusion CSI driver
+          label: IBM Storage Ceph as a Service CSI driver
           topics:
           - csi-overview.md
           - csi-about.md
