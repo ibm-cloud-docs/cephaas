@@ -102,7 +102,7 @@ toc:
               topics:
               - object-dr.md
       - topicgroup:
-          label: Enhancing Security
+          label: Enhancing security
           topics:
           - topic: architecture-workload-isolation.md
             navtitle: Architecture and workload isolation
