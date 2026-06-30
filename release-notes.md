@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-22"
+lastupdated: "2026-06-30"
 
 keywords: ceph as a service, cephaas, release notes
 
@@ -21,6 +21,19 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.cephaas_full}} that are grouped by month and year.
 {: shortdesc}
+
+## June 2026
+{: #sds-jun26}
+
+### 30 June 2026
+{: #sds-30-jun26}
+{: release-note}
+
+CSI driver upgrade command
+:   {{site.data.keyword.cephaas_full_notm}} CSI driver installation documentation now includes the upgrade command for existing CSI driver installations. See [CSI driver setup and installation](/docs/cephaas?topic=cephaas-csi-setup).
+
+Consultation request process
+:   The cost estimation tool for {{site.data.keyword.cephaas_full_notm}} has been replaced with a streamlined consultation request process. See [Getting started with {{site.data.keyword.cephaas_full_notm}}](/docs/cephaas?topic=cephaas-getting-started-cephaas).
 
 ## January 2026
 {: #sds-jan26}
