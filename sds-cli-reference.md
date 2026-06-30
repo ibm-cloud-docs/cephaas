@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2026
-lastupdated: "2026-06-11"
+years: 2024, 2026
+lastupdated: "[{LAST_UPDATED_DATE}]"
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 
@@ -296,7 +296,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--name string`
 
 
-
+<!-- Block storage - host mapping commands index begins here -->
 
 ## Hosts
 {: #ic-sds-hosts}
@@ -673,7 +673,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 	* Flag: `--url string`
 
 
-
+<!-- Object storage: credentials and certificate commands starts -->
 
 ## Object storage
 {: #object-storage-cmds}
@@ -940,7 +940,15 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 
 
+<!--
+* **Global options:**
 
+	* **-h, --help** Show help
+	* **-j, --jmes-query** Provide a JMESPath query as a string to customize output.
+	* **--output** Choose an output format - can be 'json', 'yaml', 'tui', or 'table'. (default "table")
+	* **-q, --quiet** Suppresses verbose messages.
+	* **--url** API Endpoint
+-->
 
 
 ## Snapshot commands
@@ -1277,7 +1285,20 @@ ibmcloud sds config unset [url]
 
 When `unset` option is used together with `url` option, the currently configured value for the 'url' option is reset.
 
+<!---
+See example with `url` option.
 
+```sh
+ibmcloud sds config unset url
+```
+{: pre}
+
+```sh
+pc@mac ~ % ibmcloud sds config unset url
+OK
+```
+{: screen}
+-->
 
 ## Next steps
 {: #cli-ref-next-steps}
