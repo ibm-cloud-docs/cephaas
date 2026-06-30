@@ -13,7 +13,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
+      - getting-started-cephaas.md
       - about-cephaas.md
       - topicgroup:
           label: Preparing the data center
@@ -30,8 +30,10 @@ toc:
           topics:
           - administrators.md
           - developers.md
-      - topic: release-notes.md
-        navtitle: Release notes
+      - topicgroup:
+          label: Release notes
+          topics:
+          - release-notes.md
   - navgroup:
       id: howto
       topics:
@@ -84,20 +86,19 @@ toc:
               label: Disaster recovery
               topics:
               - object-dr.md
-              - failover.md
-      - backup-restore.md
       - topicgroup:
           label: Enhancing security
           topics:
           - endpoints.md
           - data-security.md
-      - topic: event-notifications.md
-        navtitle: Enabling event notifications
       - topicgroup:
-          label: Observability
+          label: Enabling event notifications
           topics:
-          - topic: at-events.md
-            navtitle: Activity tracking events
+          - event-notification-cephaas.md
+      - topicgroup:
+          label: Activity tracking events
+          topics:
+          - at-events-cephaas.md
       - topicgroup:
           label: Managing authentication
           topics:

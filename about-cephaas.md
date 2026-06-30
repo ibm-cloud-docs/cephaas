@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: cephaas, ceph as a service, about
 
@@ -28,4 +28,4 @@ The [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/){: externa
 
 
 
-Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started) provides support for provisioning unified storage to create volumes and objects referencing common operations through CLI and API interactions.
+Documentation on the best way to [get started](/docs/cephaas?topic=cephaas-getting-started-cephaas) provides support for provisioning unified storage to create volumes and objects referencing common operations through CLI and API interactions.
