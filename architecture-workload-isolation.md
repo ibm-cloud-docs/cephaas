@@ -28,13 +28,17 @@ The following diagram describes the default components that are set up in an {{s
 
 ![Architecture of {{site.data.keyword.cephaas_full_notm}}](images/architecture-cephaas.svg "Architecture of {{site.data.keyword.cephaas_full_notm}}"){: caption="Architecture of {{site.data.keyword.cephaas_full_notm}}" caption-side="bottom"}
 
+The architecture consists of the following key layers:
+
+```text
 ┌──────────────────────────────────────────────────────────────┐
-│                IBM Fusion as a Service                       │
+│                    Fusion as a Service                       │
 │                                                              │
 │  Manage and consume OpenShift infrastructure, storage,       │
 │  and AI-ready resources through a unified experience.        │
 └──────────────────────────────────────────────────────────────┘
-
+                           │
+                           ▼
         ┌───────────────────────────────────────┐
         │       Management & Operations         │
         │                                       │
@@ -53,8 +57,23 @@ The following diagram describes the default components that are set up in an {{s
   │ OpenShift    │ │ OpenShift    │ │ OpenShift    │
   │ Workloads    │ │ AI Apps      │ │ GPU Workloads│
   └──────────────┘ └──────────────┘ └──────────────┘
+```
+{: screen}
 
+### Architecture layers
+{: #architecture-layers}
 
+Fusion as a Service
+:   The top-level service layer that provides a unified experience for managing and consuming OpenShift infrastructure, storage, and AI-ready resources.
+
+Management & Operations
+:   Handles cluster management, Identity and Access Management (IAM), monitoring, quotas, metering, and automation capabilities.
+
+Fusion Data Foundation
+:   The managed storage layer that provides persistent storage services for the platform.
+
+Workload Layer
+:   Supports various types of workloads including standard OpenShift workloads, AI applications, and GPU-accelerated workloads.
 
 ## {{site.data.keyword.cephaas_full_notm}} workload isolation
 {: #workload-isolation}
