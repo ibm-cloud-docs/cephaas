@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-03-19"
+ years: 2024, 2026
+lastupdated: "2026-07-23"
 
 keywords: cephaas, quota, capacity, manage, ceph as a service
 
@@ -52,7 +52,7 @@ Since the provisioned capacity and quota are at deployment level setting, the qu
 Use the following command to modify the block and object storage capacity quota.
 
 ```sh
-ibmcloud resource service-instance-update <Service_Instance_name>  --parameters '{"quota": {"block": <n>, "object": <n>}, "allocate_burst_capacity": <bool>}'
+ibmcloud resource service-instance-update <SERVICE_INSTANCE_NAME>  --parameters '{"quota": {"block": <N>, "object": <N>}, "allocate_burst_capacity": <BOOL>}'
 ```
 {: pre}
 
