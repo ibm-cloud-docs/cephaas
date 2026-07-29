@@ -35,16 +35,13 @@ toc:
       - topicgroup:
           label: Preparing the data center
           topics:
-          - topicgroup:
-              label: Storage
-              topics:
-              - preinstallation_checklist.md
-              - site_readiness.md
-              - site_access_requirements.md
-              - environ_requirements.md
-              - power_requirements.md
-              - network_requirements.md
-              - network_latency.md
+          - preinstallation_checklist.md
+          - site_readiness.md
+          - site_access_requirements.md
+          - environ_requirements.md
+          - power_requirements.md
+          - network_requirements.md
+          - network_latency.md
       - topicgroup:
           label: Getting organized
           topics:
