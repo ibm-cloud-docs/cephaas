@@ -2,7 +2,7 @@
 
 copyright:
 years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-17"
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 
@@ -640,23 +640,23 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### `ibmcloud sds host-mapping-delete-all`
+### `ibmcloud sds host-mappings-delete`
 {: #ic-delete-all-volume-mapped-to-host}
 
-Use this command to delete all volume mappings associated with a host.
+Use this command to delete all volume mappings for a host.
 
 ```sh
-ibmcloud sds host-mapping-delete-all --host-id HOST-ID
+ibmcloud sds host-mappings-delete --host-id HOST-ID --url string
 ```
 {: pre}
 
-Aliases of `host-vol-delete-all`: `hstmda`
+Aliases of `host-mappings-delete`: `hstmsd`
 
 Example command:
 
 ```sh
-ibmcloud sds host-mapping-delete-all \
-    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+ibmcloud sds host-mappings-delete \
+    --host-id r134-b274-678d-4dfb-8981-c71dd9d4daa5 \
     --url $sds_endpoint
 ```
 {: screen}
@@ -666,8 +666,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
-* Host ID whose details you want to view
+* The Host identifier. The maximum length is 64 characters. The minimum length is 1 character.
 	* Flag: `--host-id HOST-ID`
+
+* To force the command to execute without confirmation.
+	* Flag: `-f`, `--force`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
