@@ -121,7 +121,7 @@ Yes, a volume can be mapped to up to 32 hosts.
 {: faq}
 {: #faq-vol-increase-performance}
 
-Volumes are created with fixed IOPS setting of 3 IOPS/GB. The IOPS and bandwidth depend on the capacity of volume. Hence to achieve higher performance, a volume with bigger size must be created.
+Volumes are created with a fixed IOPS setting of 3 IOPS/GB. The IOPS and bandwidth depend on the capacity of the volume. To achieve higher performance, create a volume with a greater capacity.
 
 | Setting name                          |   Values                              |
 |---------------------------------------|---------------------------------------|

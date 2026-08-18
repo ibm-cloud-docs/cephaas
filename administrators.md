@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-18"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # For administrators
 {: #administrators}
 
-Storage and system administrators familiar with {{site.data.keyword.cephaas_full}} can easily manage users, create API keys, and grant roles to users and services.
+Storage and system administrators who are familiar with {{site.data.keyword.cephaas_full}} can manage users, create API keys, and grant roles to users and services.
 {: shortdesc}
 
 ## Setting up your storage

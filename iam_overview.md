@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-08-18"
 
 keywords: ceph as a service, sds, cephaas, authorization, iam, basics
 
@@ -54,7 +54,7 @@ IAM Access Control provides a common way to assign user roles for {{site.data.ke
 ### Users, roles, resources, and policies
 {: #iam-overview-access-policies}
 
-IAM Access Control enables the assignment of policies per service or service instance to allow levels of access for managing resources and users within the assigned context. A policy grants a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources. When you assign a policy to a user, you first specify the service then a role or roles to assign. Extra configuration options might be available depending on the service you select.
+IAM Access Control enables the assignment of policies per service or service instance to allow levels of access for managing resources and users within the assigned context. A policy grants a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources. When you assign a policy to a user, you first specify the service, then a role or roles to assign. Additional configuration options might be available depending on the service you select.
 
 While roles are a collection of actions, the actions that are mapped to these roles are service specific. Each service determines this role to action mapping during the onboarding process and this mapping effects all users of the service. Roles and access policies are configured through the Policy Administration Point (PAP) and enforced through the Policy Enforcement Point (PEP) and Policy Decision Point (PDP).
 

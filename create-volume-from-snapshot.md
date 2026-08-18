@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-07-28"
+ years: 2024, 2026
+lastupdated: "2026-08-18"
 
 keywords: cephaas, managing snapshots, ceph as a service
 
@@ -21,7 +21,7 @@ You can restore block volumes from the snapshots with the API and CLI.
 {: #create-volume-from-snapshot-api}
 {: api}
 
-You can create block volumes by making a `POST /volumes` request to retrieve a volume from a snapshot. Specify the source snapshot id. Note that the capacity should be the size of volume from which the snapshot is created & not the snapshot size.
+You can create block volumes by making a `POST /volumes` request to retrieve a volume from a snapshot. Specify the source snapshot ID. The capacity must match the capacity of the volume from which the snapshot was created, not the snapshot capacity.
 
 ```sh
 curl -X POST $sds_endpoint/volumes    

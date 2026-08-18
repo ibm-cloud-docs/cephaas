@@ -40,7 +40,7 @@ The Performance Tier of {{site.data.keyword.cephaas_full}} is tailored to perfor
 
 Typical workloads for this tier includes support for VM infrastructure with storage or services for high-performance object storage.
 
-When committing to a certain capacity, the delivered hardware includes at least 30% extra capacity for optional excess usage.
+When committing to a certain capacity, the delivered hardware includes at least 30% additional capacity for optional excess usage.
 
 This tier is offered in the following capacity options for the terms 3, 4, or 5 years:
 
@@ -60,7 +60,7 @@ The Capacity tier of {{site.data.keyword.cephaas_full}} offers cost-effective on
 
 Typical workloads for this tier are backup workloads. The storage capacity can grow easily over time as more backups are written. The client pays only for what they need, while their data stays on-premises and IBM Site Reliability Engineering (SRE) team keeps the data available.
 
-When committing to a certain capacity, the delivered hardware includes at least 30% extra capacity for optional excess usage.
+When committing to a certain capacity, the delivered hardware includes at least 30% additional capacity for optional excess usage.
 
 This tier is offered in the following capacity options for the terms 3, 4, or 5 years:
 
@@ -72,9 +72,9 @@ This tier is offered in the following capacity options for the terms 3, 4, or 5 
 ## Understanding your overall capacity and overage charges
 {: #overall-capacity}
 
-For each deployment, the hardware setup includes the committed monthly capacity along with an extra 30% burst capacity. Burst capacity allows you to temporarily expand your overall available capacity, if needed.
+For each deployment, the hardware setup includes the committed monthly capacity along with an additional 30% burst capacity. Burst capacity allows you to temporarily expand your overall available capacity, if needed.
 
-If you exceed your committed capacity and start using the burst capacity, overage fees are applied based on the extra capacity used.
+If you exceed your committed capacity and start using the burst capacity, overage fees are applied based on the additional capacity used.
 
 Burst capacity is included by default in the deployment. However, you have the option to opt out.
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-11"
+lastupdated: "2026-08-18"
 
 keywords: about block storage volume, volume encryption, IAM permissions for block storage volume, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # About Block storage volume
 {: #block-storage-volume-about}
 
-Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, extra security, and performance.
+Block storage volume provides hypervisor-mounted, high-performance data storage for your instances. The infrastructure provides rapid scaling across zones, enhanced security, and performance.
 {: shortdesc}
 
 {{site.data.keyword.cephaas_full}} volume data is stored redundantly across multiple physical disks in an Availability Zone to prevent data loss due to failure of any single component.
@@ -50,7 +50,7 @@ Data volumes are encrypted by default with IBM-managed encryption. When you crea
 ## Deleting your block storage volume
 {: #delete-storage-volume}
 
-If you no longer need a volume, you can delete it at any time. IBM wipes all data before the storage is reused. If you have more compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final){: external}.
+If you no longer need a volume, you can delete it at any time. IBM wipes all data before the storage is reused. If you have additional compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final){: external}.
 
 ## Next steps
 {: #block-storage-about-nextsteps}

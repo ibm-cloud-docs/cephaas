@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-08-18"
 
 keywords: sds, cephaas, block storage, volume, increase volume size for cephaas, manage volume, expand volume size, ceph as a service
 
@@ -25,32 +25,32 @@ You can manage your Block Storage volume capacity from the UI, CLI, or by using 
 Use the console to expand the volume capacity. In the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/software-defined-storage), you can complete the following actions.
 
 
-### Increasing block volume size from list view page
+### Increasing block volume capacity from the list view
 {: #expand-block-volume-size-from-list-view-page}
 {: ui}
 
-To increase the block volume-provisioned size from the list view page, complete the following steps.
+To increase the block volume provisioned capacity from the list view, complete the following steps.
 
-1. In the **Volume** list view page, locate the volume and click the **options** icon at the end of the volume row to open a list of options.
+1. In the **Volume** list view, locate the volume and click the **options** icon at the end of the volume row to open a list of options.
 3. Click **Expand volume**.
-2. Enter a new **size**.
+2. Enter a new capacity value in the **Size** field.
 
-    You can increase the provisioned size. It cannot be reduced.
+    You can increase the provisioned capacity. It cannot be reduced.
     {: note}
 
 3. Click **Expand**.
 
 
-### Increasing block volume size from details page
+### Increasing block volume capacity from the details page
 {: #expand-block-volume-size-from-details-page}
 {: ui}
 
-To increase the block volume-provisioned size from the Volume details page, complete the following steps.
+To increase the block volume provisioned capacity from the Volume details page, complete the following steps.
 
-1. In the **Volume** details page, you can click the **edit** icon next to the **Provisioned size** OR click **Actions** > **Expand volume**.
-2. Enter a new **size**.
+1. In the **Volume** details page, click the **edit** icon next to the **Provisioned size** or click **Actions** > **Expand volume**.
+2. Enter a new capacity value in the **Size** field.
 
-    You can increase the provisioned size. It cannot be reduced.
+    You can increase the provisioned capacity. It cannot be reduced.
     {: note}
 
 3. Click **Expand**.

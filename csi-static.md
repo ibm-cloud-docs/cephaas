@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-27"
+ years: 2024, 2026
+lastupdated: "2026-08-18"
 
 keywords: cephaas csi
 
@@ -22,7 +22,7 @@ This approach is useful when you need to connect existing storage resources to K
 ## Static provisioning for volumes
 {: #static-provision-volumes}
 
-In static volume provisioning, both the PV and PVC must be created manually. Ensure that the storage size specified in both resources matches the actual size of the underlying volume.
+In static volume provisioning, both the PV and PVC must be created manually. Ensure that the storage capacity specified in both resources matches the actual capacity of the underlying volume.
 
 * Create a PersistentVolume (PV) by creating a file named **pv.yaml** with the following content.
 
@@ -146,10 +146,10 @@ Once both resources are created and linked, you can restore the snapshot into a 
 ## Known limitation
 {: #csi-knownlimitation}
 
-- Volume size in statically provisioned Persistent Volumes (PVs) may differ from the actual volume size on the storage or deployment
+- Volume capacity in statically provisioned Persistent Volumes (PVs) may differ from the actual volume capacity on the storage or deployment.
 
-In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage volume. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume size.
-Since static provisioning bypasses the CSI driver’s CreateVolume gRPC call, which is used in dynamic provisioning to create the volume and ensure the `spec.capacity.storage` matches the actual size on RSOS—there is no built-in validation to confirm that the declared capacity aligns with the real backend volume size.
-If the PV size specified in the manifest differs from the actual volume size on the deployment, pods will only be able to use and see the actual volume size, not the declared size in the manifest.
+In static provisioning, the administrator manually provisions storage and creates a PV manifest that references this storage volume. OpenShift uses the `spec.capacity.storage` field in the PV manifest as metadata to represent the volume capacity.
+Since static provisioning bypasses the CSI driver's CreateVolume gRPC call, which is used in dynamic provisioning to create the volume and ensure the `spec.capacity.storage` matches the actual capacity on RSOS—there is no built-in validation to confirm that the declared capacity aligns with the real backend volume capacity.
+If the PV capacity specified in the manifest differs from the actual volume capacity on the deployment, pods can only use and see the actual volume capacity, not the declared capacity in the manifest.
 
-- Suggestion: To avoid discrepancies between OpenShift’s metadata and the actual storage behavior, we recommend setting the PV’s `spec.capacity.storage` to match the actual size of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.
+- Suggestion: To avoid discrepancies between OpenShift's metadata and the actual storage behavior, we recommend setting the PV's `spec.capacity.storage` to match the actual capacity of the underlying storage. This ensures consistency, accurate scheduling, and prevents OpenShift from under-reporting or over-reporting capacity relative to what pods can actually consume.

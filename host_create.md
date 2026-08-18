@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-12"
+lastupdated: "2026-08-18"
 
 keywords: sds, cephaas, creating host, host nqn, ceph as a service
 
@@ -34,7 +34,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a host for a deployme
 1. Click **Create host**.
 1. Enter a unique **Host name** and enter the host identifier **Host NQN**.
 
-    Host name must be unique in the entire deployment. For example, if you create two hosts that are in the same deployment, and have the same name, an error "Host name already exists" is displayed.
+    The host name must be unique in the entire deployment. For example, if you create two hosts in the same deployment that have the same name, an error "Host name already exists" is displayed.
 
 
 1. Click **Next**.
@@ -239,7 +239,7 @@ To create host using Terraform, you must have the `host nqn` handy. For guidance
       ```
       {: pre}
 
-4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+4. When prompted with "Do you want to perform these actions?", enter `Yes` to proceed with creating the host.
 
     See the example output for details.
 
