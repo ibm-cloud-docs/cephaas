@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2024, 2026
-lastupdated: "2026-08-17"
+ years: 2024, 2026
+lastupdated: "2026-08-18"
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 

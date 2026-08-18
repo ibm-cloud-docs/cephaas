@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: ceph as a service, getting started, cephaas, unified storage, cost estimation, software defined storage, on-premises, consultation request
 
@@ -28,6 +28,7 @@ By eliminating over-provisioning and right-sizing your infrastructure, you can e
 ## Requesting for consultation
 {: #consultation-request}
 {: step}
+
 {{site.data.keyword.cephaas_full_notm}} is available in {{site.data.keyword.cloud_notm}} catalog as a tile. You can click the **Storage Ceph as a Service** tile to start the request for consultation.
 
 Select the required **Subscription term**, choose the **Storage Tier** from **Performance** and **Capacity**, and enter the **Total storage** (TB) value to view your estimated costs.

@@ -52,7 +52,7 @@ Since the provisioned capacity and quota are at deployment level setting, the qu
 Use the following command to modify the block and object storage capacity quota.
 
 ```sh
-ibmcloud resource service-instance-update <SERVICE_INSTANCE_NAME>  --parameters '{"quota": {"block": <N>, "object": <N>}, "allocate_burst_capacity": <BOOL>}'
+ibmcloud resource service-instance-update SERVICE_INSTANCE_NAME  --parameters '{"quota": {"block": N, "object": N}, "allocate_burst_capacity": BOOL}'
 ```
 {: pre}
 

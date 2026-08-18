@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: IBM CephaaS, IAM access, cephaas, ceph as a service, identity, access management
 
@@ -29,7 +29,7 @@ IAM access policies enable access to be granted at different levels. Some of the
 
 After defining the scope of the access policy, assign a role.
 
-Review the following tables that outline what types of tasks each role allows when you're working with the {{site.data.keyword.cephaas_full_notm}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to {{site.data.keyword.cephaas_full_notm}} and the ability to call the {{site.data.keyword.cephaas_full_notm}} API. For information about the exact actions that are mapped to each role, see table [Identity and access management actions mapped to roles](/docs/cephaas?topic=cephaas-managing-iam&interface=ui#iam-actions).
+Review the following tables that outline what types of tasks each role allows when you're working with the {{site.data.keyword.cephaas_full_notm}} service. Platform management roles enable users to perform tasks on service resources at the platform level, for example, assign user access to the service and create deployments. Service access roles enable users access to {{site.data.keyword.cephaas_full_notm}} and the ability to call the {{site.data.keyword.cephaas_full_notm}} API. For information about the exact actions that are mapped to each role, see [Identity and access management actions mapped to roles](#iam-actions).
 
 | Platform role |  Description of actions |
 |---------------|-------------------------|
@@ -90,15 +90,15 @@ Review the following tables that outline what types of tasks each role allows wh
 
 There are two common ways to assign access in the console:
 
-* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources in the console](/docs/account?topic=account-assign-access-resources&interface=ui#access-resources-console){: external}.
-* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups&interface=ui#access_ag){: external}.
+* Access policies per user. You can manage access policies per user from the **Manage** > **Access (IAM)** > **Users** page in the console. For information about the steps to assign IAM access, see [Managing access to resources in the console](/docs/account?topic=account-assign-access-resources){: external}.
+* Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the console. For more information, see [Assigning access to a group in the console](/docs/account?topic=account-groups){: external}.
 
 
 ## Assigning access to {{site.data.keyword.cephaas_full_notm}} in the CLI
 {: #assign-access-cli}
 {: cli}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli#access-resources-cli){: external}. The following example shows a command for assigning the `<Manager>` role for `<{{site.data.keyword.cephaas_full_notm}} Storage>`:
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the CLI](/docs/account?topic=account-assign-access-resources&interface=cli){: external}. The following example shows a command for assigning the `<Manager>` role for `<{{site.data.keyword.cephaas_full_notm}} Storage>`:
 
 Use `<programmatic_service_name>` for the service name. Also, use quotations around role names that are more than one word like the example here.
 {: tip}
@@ -113,7 +113,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name software-defined
 {: #assign-access-api}
 {: api}
 
-For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api){: external} or the [Create a policy API doc](/docs/apis/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
+For step-by-step instructions for assigning, removing, and reviewing access, see [Assigning access to resources by using the API](/docs/account?topic=account-assign-access-resources&interface=api){: external} or the [Create a policy API doc](https://cloud.ibm.com/apidocs/iam-policy-management#create-policy){: external}. Role cloud resource names (CRN) in the following table are used to assign access with the API.
 
 
 | Role name | Role CRN |

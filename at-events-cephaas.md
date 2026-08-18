@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: activity tracker for IBM Storage Ceph, LogDNA for IBM Storage Ceph, IBM Storage Ceph events, IBM Storage Ceph security, audit logs for IBM Storage Ceph, viewing IBM Storage Ceph events, IBM Storage Ceph events
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -69,7 +69,7 @@ You can use IBM Cloud Logs to visualize and alert on events that are generated i
 ### Launching IBM Cloud Logs from the Observability page
 {: #at-events-log-launch-standalone}
 
-For information on launching the IBM Cloud Logs UI, see [Launching the UI in the IBM Cloud Logs documentation](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-instance-launch){: external}.
+For information on launching the IBM Cloud Logs UI, see [Launching the UI in the IBM Cloud Logs documentation](/docs/cloud-logs?topic=cloud-logs-instance-launch){: external}.
 
 
 ## List of management events
