@@ -72,14 +72,14 @@ Example output:
 ```
 {: codeblock}
 
-To check the size and number of parts:
+To check the capacity and number of parts:
 
 ```sh
 aws s3api list-parts --endpoint-url <endpoint> --bucket <bucket-name> --key <object-key> --upload-id <upload-id>
 ```
 {: codeblock}
 
-Multiply the size of each part by the number of parts to estimate the capacity consumed by failed uploads.
+Multiply the capacity of each part by the number of parts to estimate the total capacity consumed by failed uploads.
 
 ### Preventing capacity mismatches
 {: #preventing-mismatches}

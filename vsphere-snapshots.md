@@ -32,7 +32,7 @@ To monitor and manage your datastore snapshots effectively, you can access snaps
 ## Taking snapshot of a datastore
 {: #taking-snapshots-vsphere}
 
-You can create snapshots of your existing datastore to capture a point-in-time backup of your data. This is useful for preserving the current state of your datastore before making changes or performing maintenance. Follow the steps below to take a snapshot using the vSphere client interface.
+You can create snapshots of your existing datastore to capture a point-in-time backup of your data. This is useful for preserving the current state of your datastore before making changes or performing maintenance. Use the following steps to take a snapshot by using the vSphere client interface.
 
 1. In the vSphere client dashboard, select vSphere Cluster.
 2. Click the main breadcrumb of the dashboard and select **IBM Storage Ceph as a Service**. 
@@ -45,7 +45,7 @@ You can create snapshots of your existing datastore to capture a point-in-time b
 ## Editing a snapshot
 {: #renaming-snapshots-vsphere}
 
-You can rename an existing snapshot of your datastore to better reflect its purpose or context. Renaming helps maintain clarity in snapshot management, especially when dealing with multiple restore points. Follow the steps below to update the name of a snapshot using the vSphere client interface.
+You can rename an existing snapshot of your datastore to better reflect its purpose or context. Renaming helps maintain clarity in snapshot management, especially when dealing with multiple restore points. Use the following steps to update the name of a snapshot by using the vSphere client interface.
 
 1. In the vSphere client dashboard, select vSphere Cluster.
 2. Click the main breadcrumb of the dashboard and select **IBM Storage Ceph as a Service**. 

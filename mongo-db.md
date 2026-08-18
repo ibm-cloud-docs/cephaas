@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -71,6 +71,6 @@ You have now successfully used a block volume from {{site.data.keyword.cephaas_f
 
 
 
-In the steps above, we successfully demonstrated running a MongoDB workload using {{site.data.keyword.cephaas_full_notm}} block storage as the storage backend. This trial use case gives you a preview of how {{site.data.keyword.cephaas_full_notm}} can be used to leverage block storage for a database application like MongoDB.
+In the preceding steps, we successfully demonstrated running a MongoDB workload using {{site.data.keyword.cephaas_full_notm}} block storage as the storage backend. This trial use case gives you a preview of how {{site.data.keyword.cephaas_full_notm}} can be used to leverage block storage for a database application like MongoDB.
 
 When you deploy {{site.data.keyword.cephaas_full_notm}} in your data center, you can integrate your own applications and software to take advantage of block storage. This allows you to focus on consuming and utilizing storage resources, while we handle the provisioning and management of the storage infrastructure.

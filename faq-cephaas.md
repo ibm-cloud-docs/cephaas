@@ -84,7 +84,7 @@ One confusing aspect of storage is the units that storage capacity and usage are
 
 Humans usually think and calculate numbers in the decimal (base-10) system. In our documentation, we refer to storage capacity by using the unit GB (Gigabytes) to align with the industry standard terminology. In the UI, CLI, API, and Terraform, you see the unit GB used and displayed when you query the capacity. When you want to order a 4-TB volume, you enter 4,000 GB in your provisioning request.
 
-However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer file systems show sizes in base-2 to go along with the memory. Back then, available storage devices were smaller, and the size difference between the binary and decimal units was negligible. Now that the available Storage Systems are considerably larger this unit difference is causing confusion.
+However, computers operate in binary, so it makes more sense to represent some resources like memory address spaces in base-2. Since 1984, computer file systems show capacities in base-2 to go along with the memory. Back then, available storage devices had limited capacity, and the difference between the binary and decimal units was negligible. Now that the available Storage Systems have considerably greater capacity, this unit difference is causing confusion.
 
 The difference between GB and GiB lies in their numerical representation:
 - GB (Gigabyte) is a decimal unit, where 1 GB equals 1,000,000,000 bytes. When you convert GB to TB, you use 1000 as the multiplier.
@@ -101,7 +101,7 @@ The following table shows the same number of bytes expressed in decimal and bina
 |                 2 TB |              1.81 TiB |
 {: caption="Decimal vs Binary units" caption-side="bottom"}
 
-The storage system uses base-2 units for volume allocation. So if your volume is provisioned as 4,000 GB, that's really 4,000 GiB or 4,294,967,296,000 bytes of storage space. The provisioned volume size is larger than 4 TB. However, your operating system might display the storage size as 3.9 T because it uses base-2 conversion and the T stands for TiB, not TB.
+The storage system uses base-2 units for volume allocation. So if your volume is provisioned as 4,000 GB, that's really 4,000 GiB or 4,294,967,296,000 bytes of storage space. The provisioned volume capacity exceeds 4 TB. However, your operating system might display the storage capacity as 3.9 T because it uses base-2 conversion and the T stands for TiB, not TB.
 
 
 

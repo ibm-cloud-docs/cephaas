@@ -25,7 +25,7 @@ The {{site.data.keyword.cephaas_full_notm}} SDK for GO is comprehensive, with ma
 ## Getting the SDK
 {: #go-get-sdk}
 
-Use `go get` to retrieve the SDK and add it to your GOPATH workspace, or project's GO module dependencies. The SDK requires a minimum version of GO 1.21 or above. Future versions of GO will be supported once our quality control process has been completed. For more information, see the GO API documentation for [Block Storage](/docs/apis/block-storage?code=go){: external} and [Object Storage](/docs/apis/object-storage?code=go){: external}.
+Use `go get` to retrieve the SDK and add it to your GOPATH workspace, or project's GO module dependencies. The SDK requires a minimum version of GO 1.21 or later. Future versions of GO will be supported once our quality control process has been completed. For more information, see the GO API documentation for [Block Storage](/docs/apis/block-storage?code=go){: external} and [Object Storage](/docs/apis/object-storage?code=go){: external}.
 
 ```sh
 go get github.com/IBM/sds-go-sdk/v2/sdsaasv2

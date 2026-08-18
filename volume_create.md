@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-08-18"
 
 keywords: sds, cephaas Block Storage Volume, provision Block Storage Volume for cephaas, ceph as a service
 
@@ -32,7 +32,7 @@ Use the {{site.data.keyword.cloud_notm}} console to create a volume for a deploy
 1. Select **Deployment** where the volume will be created.
 1. Specify a unique, meaningful **Name** for your volume. The volume names can include a combination of lowercase alpha-numeric characters (a-z, 0-9) and the hyphen (-), up to 63 characters. Volume names must begin with a lowercase letter. It must not begin with a hypen or a number nor end with a hyphen. You can later edit the name if you want.
 
-    Volume names must be unique in the entire deployment. If you create two volumes that are in the same deployment, and have the same name, a "volume name duplicate" error is displayed.
+    Volume names must be unique in the entire deployment. If you create two volumes that are in the same deployment, and have the same name, a `volume name duplicate` error is displayed.
     {: note}
 
 1. Enter the **Storage size** for the volume in GBs. Volume sizes can be between 1 GB and 32 TBs.
@@ -178,7 +178,7 @@ A successful response looks like this:
       ```
       {: pre}
 
-4. Respond to "Do you want to perform these actions?" with "Yes" to proceed with creating the volume.
+4. When prompted, enter `yes` to confirm and proceed with creating the volume.
 
     See the example output for details.
 

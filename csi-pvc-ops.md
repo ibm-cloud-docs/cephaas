@@ -80,13 +80,13 @@ Kubernetes does not support shrinking a volume. During a PVC expansion operation
 #### Expand PVC operation timeout
 {: #pvc-operation-timeout}
 
-This issue occurs when a PVC with a small capacity (for example, 1 GB) is expanded to a much larger capacity (for example, 32 TB). The operation may fail with a timeout error in the pod event logs, as shown in the following example:
+This issue occurs when a PVC with a minimal capacity (for example, 1 GB) is expanded to a much greater capacity (for example, 32 TB). The operation may fail with a timeout error in the pod event logs, as shown in the following example:
 
 `Expander.NodeExpand failed to expand the volume: rpc error: code = DeadlineExceeded desc = context deadline exceeded`
 
-Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility requires additional time during online expansion. While supported by the CSI driver, expanding volumes to a significantly larger capacity may take longer to complete.
+Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility requires additional time during online expansion. While supported by the CSI driver, expanding volumes to a significantly greater capacity may take longer to complete.
 
-**Suggestion**: The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested size without requiring user action. Users can monitor progress in the pod description and node plugin logs.
+**Suggestion**: The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested capacity without requiring user action. Users can monitor progress in the pod description and node plugin logs.
 
 ## Create a pod
 {: #create-pod}

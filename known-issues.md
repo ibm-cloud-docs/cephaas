@@ -15,7 +15,7 @@ subcollection: cephaas
 # Known issues
 {: #knownissues}
 
-## Snapshot display limitation for sets larger than 100
+## Snapshot display limitation for sets exceeding 100
 {: #snapshotlimitation}
 
 When the number of snapshots exceeds 100, the total snapshot capacity shown in the **Volume Details** view may be inaccurate.
@@ -24,7 +24,7 @@ When the number of snapshots exceeds 100, the total snapshot capacity shown in t
 ## PVC expansion failure scenario - CSI Driver
 {: #pvclimitation}
 
-When a Persistent Volume Claim (PVC) expansion request exceeds the available storage capacity, such as going beyond 32TB or exceeding the assigned block storage quota, OpenShift does not allow the PVC to be resized to a valid, smaller capacity. To recover and use the available space, you need to create a snapshot of the existing PVC. After that, restore the snapshot into a new PVC and specify a capacity that fits within the current storage limits.
+When a Persistent Volume Claim (PVC) expansion request exceeds the available storage capacity, such as going beyond 32TB or exceeding the assigned block storage quota, OpenShift does not allow the PVC to be resized to a valid, reduced capacity. To recover and use the available space, you need to create a snapshot of the existing PVC. After that, restore the snapshot into a new PVC and specify a capacity that fits within the current storage limits.
 
 ## PVC deletion with existing snapshots - CSI Driver
 {: #pvcdeletionlimitation}
@@ -46,11 +46,11 @@ There are known inconsistencies in how capacity values are displayed and validat
 ### Datastore capacity placeholder
 {: #ds-size-placeholder}
 
-On the **Create New Datastore From Snapshot** page, the **Size** field in the **Define Datastore** step displays a placeholder value representing the minimum required capacity for the new datastore. However, if the capacity exceeds 1024 GB, the value is converted to terabytes (TB) using a binary conversion (divided by 1024 and rounded to two decimal places).
+On the **Create New Datastore From Snapshot** page, the **Capacity** field in the **Define Datastore** step displays a placeholder value representing the minimum required capacity for the new datastore. However, if the capacity exceeds 1024 GB, the value is converted to terabytes (TB) using a binary conversion (divided by 1024 and rounded to two decimal places).
 
-**Workaround**: If the entered capacity is below the actual minimum required capacity, the UI may allow the input to pass validation. However, the datastore restore operation will fail. To avoid this, ensure that the entered capacity is equal to or greater than the minimum required capacity.
+**Workaround**: If the entered capacity is less than the actual minimum required capacity, the UI may allow the input to pass validation. However, the datastore restore operation will fail. To avoid this, ensure that the entered capacity is equal to or greater than the minimum required capacity.
 
 ### Snapshot capacity display
 {: #snapshot-size}
 
-On the **Snapshots List Dashboard**, the **Size** column reflects the snapshot capacity. Similar to the datastore capacity, values greater than 1024 GB are converted to TB using binary conversion (divided by 1024), which may result in a slightly lower displayed value compared to the actual snapshot capacity. There is no workaround for this discrepancy.
+On the **Snapshots List Dashboard**, the **Capacity** column reflects the snapshot capacity. Similar to the datastore capacity, values greater than 1024 GB are converted to TB using binary conversion (divided by 1024), which may result in a reduced displayed value compared to the actual snapshot capacity. There is no workaround for this discrepancy.

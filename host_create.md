@@ -239,7 +239,7 @@ To create host using Terraform, you must have the `host nqn` handy. For guidance
       ```
       {: pre}
 
-4. When prompted with "Do you want to perform these actions?", enter `Yes` to proceed with creating the host.
+4. When prompted, enter `yes` to confirm and proceed with creating the host.
 
     See the example output for details.
 

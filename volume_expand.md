@@ -47,8 +47,8 @@ To increase the block volume provisioned capacity from the list view, complete t
 
 To increase the block volume provisioned capacity from the Volume details page, complete the following steps.
 
-1. In the **Volume** details page, click the **edit** icon next to the **Provisioned size** or click **Actions** > **Expand volume**.
-2. Enter a new capacity value in the **Size** field.
+1. In the **Volume** details page, click the **edit** icon next to the **Provisioned capacity** or click **Actions** > **Expand volume**.
+2. Enter a new capacity value in the **Capacity** field.
 
     You can increase the provisioned capacity. It cannot be reduced.
     {: note}
@@ -97,7 +97,7 @@ You can also use the alias `sds` as an alternative to `software-defined-storage`
 {: #expanding-volume-capacity-api}
 {: api}
 
-Make a `PATCH /volumes/{id}` request to update or expand the volume size to increase the current capacity.
+Make a `PATCH /volumes/{id}` request to update or expand the volume capacity.
 
 Specify the capacity parameter with the new value that you want to modify for the existing volume in the request to update the volume details.
 

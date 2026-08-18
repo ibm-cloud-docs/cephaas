@@ -26,7 +26,7 @@ Clipboard operations (copy and paste) are not supported in the vCenter UI. Make 
 ## Adding a deployment
 {: #cephaas-add-dep-trial}
 
-Before proceeding, ensure that you have the **Block endpoint FQDN** from the instructions file included in the ZIP archive shared by your IBM representative. You will also need to create an [IBM Cloud API key](/docs/account?topic=account-userapikey) by following the provided instructions. Copy or securely store your API key when it is generated as it is not saved in the system. If the API key is lost, you will need to generate a new key.
+Before proceeding, ensure that you have the **Block endpoint FQDN** from the instructions file included in the ZIP archive shared by your IBM representative. You will also need to create an [IBM Cloud API key](/docs/iam?topic=iam-userapikey) by following the provided instructions. Copy or securely store your API key when it is generated as it is not saved in the system. If the API key is lost, you will need to generate a new key.
 {: note}
 
 1. Log in to the **vSphere Web Client**.
