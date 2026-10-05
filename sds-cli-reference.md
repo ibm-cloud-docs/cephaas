@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2024, 2026
-lastupdated: "2026-06-30"
+ years: 2024, 2026
+lastupdated: "2026-08-19"
 
 keywords: cli, command-line reference, unified storage, sds, software-defined-storage, ceph as a service
 
@@ -91,7 +91,7 @@ Aliases of `software-defined-storage`: `sds`
 Use this command to create a new volume with the specified capacity.
 
 ```sh
-ibmcloud sds volume-create --capacity CAPACITY [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID]
+ibmcloud sds volume-create --capacity CAPACITY --url URL [--name NAME] [--source-snapshot (SOURCE-SNAPSHOT | @SOURCE-SNAPSHOT-FILE) | --source-snapshot-id SOURCE-SNAPSHOT-ID] [--source-volume-group-snapshot (SOURCE-VOLUME-GROUP-SNAPSHOT | @SOURCE-VOLUME-GROUP-SNAPSHOT-FILE) | --source-volume-group-snapshot-id SOURCE-VOLUME-GROUP-SNAPSHOT-ID (--source-volume-group-snapshot-volume SOURCE-VOLUME-GROUP-SNAPSHOT-VOLUME | @SOURCE-VOLUME-GROUP-SNAPSHOT-VOLUME-FILE)] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -157,7 +157,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to retrieve details for a single volume.
 
 ```sh
-ibmcloud sds volume --volume-id VOLUME-ID --url string
+ibmcloud sds volume --volume-id VOLUME-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -235,7 +235,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete a single volume.
 
 ```sh
-ibmcloud sds volume-delete --volume-id VOLUME-ID --url string
+ibmcloud sds volume-delete --volume-id VOLUME-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -268,7 +268,7 @@ Use this command to list all volumes.
 
 
 ```sh
-ibmcloud sds volumes --help [--limit LIMIT] [--name NAME] --url string
+ibmcloud sds volumes --url URL [--start START | --all-pages] [--limit LIMIT] [--name NAME] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -277,7 +277,7 @@ Aliases of `volumes`: `vols`
 Example command:
 
 ```sh
-ibmcloud sds volumes --help \
+ibmcloud sds volumes \
     --limit 10 \
     --name my-volume \
     --url $sds_endpoint
@@ -354,7 +354,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to retrieve details for a single host.
 
 ```sh
-ibmcloud sds host --host-id HOST-ID --url string
+ibmcloud sds host --host-id HOST-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -384,7 +384,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to list all hosts.
 
 ```sh
-ibmcloud sds hosts [--limit LIMIT] --url string
+ibmcloud sds hosts --url URL [--start START | --all-pages] [--limit LIMIT] [--name NAME] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -418,7 +418,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to update a host.
 
 ```sh
-ibmcloud sds host-update --host-id HOST-ID [--host-patch HOST-PATCH | @HOST-PATCH-FILE] --url string
+ibmcloud sds host-update --host-id HOST-ID --url URL {--host-patch (HOST-PATCH | @HOST-PATCH-FILE) | --name NAME} [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -511,7 +511,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to view all host-mappings for a host.
 
 ```sh
-ibmcloud sds host-mappings --host-id HOST-ID
+ibmcloud sds host-mappings --host-id HOST-ID --url URL [--start START | --all-pages] [--limit LIMIT] [--name NAME] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -579,7 +579,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete a host.
 
 ```sh
-ibmcloud sds host-delete --host-id HOST-ID --url string
+ibmcloud sds host-delete --host-id HOST-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -611,7 +611,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete a single volume mapping from a host.
 
 ```sh
-ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID
+ibmcloud sds host-mapping-delete --host-id HOST-ID --volume-mapping-id VOLUME-MAPPING-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -640,23 +640,23 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 * API Endpoint in the URL form.
 	* Flag: `--url string`
 
-### `ibmcloud sds host-mapping-delete-all`
+### `ibmcloud sds host-mappings-delete`
 {: #ic-delete-all-volume-mapped-to-host}
 
-Use this command to delete all volume mappings associated with a host.
+Use this command to delete all volume mappings for a host.
 
 ```sh
-ibmcloud sds host-mapping-delete-all --host-id HOST-ID
+ibmcloud sds host-mappings-delete --host-id HOST-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
-Aliases of `host-vol-delete-all`: `hstmda`
+Aliases of `host-mappings-delete`: `hstmsd`
 
 Example command:
 
 ```sh
-ibmcloud sds host-mapping-delete-all \
-    --host-id r134-69d5c3e2-8229-45f1-89c8-e4dXXb2e126e \
+ibmcloud sds host-mappings-delete \
+    --host-id r134-b274-678d-4dfb-8981-c71dd9d4daa5 \
     --url $sds_endpoint
 ```
 {: screen}
@@ -666,8 +666,11 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 
 **Parameters to provide:**
 
-* Host ID whose details you want to view
+* The Host identifier. The maximum length is 64 characters. The minimum length is 1 character.
 	* Flag: `--host-id HOST-ID`
+
+* To force the command to execute without confirmation.
+	* Flag: `-f`, `--force`
 
 * API Endpoint in the URL form.
 	* Flag: `--url string`
@@ -684,7 +687,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to update credentials for a storage account or create them if they do not exist.
 
 ```sh
-ibmcloud sds cred-create --access-key ACCESS-KEY --url string
+ibmcloud sds cred-create --access-key ACCESS-KEY --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -716,7 +719,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete a service credential.
 
 ```sh
-ibmcloud sds cred-delete --access-key ACCESS-KEY --url string
+ibmcloud sds cred-delete --access-key ACCESS-KEY --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -748,7 +751,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to retrieve credentials for a specific storage account.
 
 ```sh
-ibmcloud sds creds --url string
+ibmcloud sds creds --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -778,7 +781,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to retrieve the list of configured SSL certificate types.
 
 ```sh
-ibmcloud sds cert-types --url string
+ibmcloud sds cert-types --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -807,7 +810,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to create a new SSL certificate if one does not exist.
 
 ```sh
-ibmcloud sds cert-create --cert CERT --body BODY --url string
+ibmcloud sds cert-create --cert-type CERT-TYPE --url URL [--body BODY] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -817,7 +820,7 @@ Example command:
 
 ```sh
 ibmcloud sds cert-create \
-    --cert s3 \
+    --cert-type s3 \
     --body tempdir/test-file.txt \
     --url $sds_endpoint
 ```
@@ -889,7 +892,7 @@ Example command:
 
 ```sh
 ibmcloud sds cert \
-    --cert s3
+    --cert s3 \
     --url $sds_endpoint
 ```
 {: screen}
@@ -913,7 +916,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete an SSL certificate.
 
 ```sh
-ibmcloud sds cert-delete --cert CERT --url string
+ibmcloud sds cert-delete --cert-type CERT-TYPE --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -923,7 +926,7 @@ Example command:
 
 ```sh
 ibmcloud sds cert-delete \
-    --cert s3
+    --cert-type s3 \
     --url $sds_endpoint
 ```
 {: screen}
@@ -952,7 +955,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to create a snapshot of a volume.
 
 ```sh
-ibmcloud sds volume-snapshot-create [--source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) | --source-volume-id SOURCE-VOLUME-ID] [--name NAME]
+ibmcloud sds volume-snapshot-create --url URL [--name NAME] [--source-volume (SOURCE-VOLUME | @SOURCE-VOLUME-FILE) | --source-volume-id SOURCE-VOLUME-ID] [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -961,7 +964,9 @@ Aliases of `volume-snapshot-create`: `vsnapc`
 Example command:
 
 ```sh
-ic sds volume-snapshot-create --source-volume-id r134-87a59338-a801-4090-a657-72867fc9ba44
+ibmcloud sds volume-snapshot-create \
+    --source-volume-id r134-87a59338-a801-4090-a657-72867fc9ba44 \
+    --url $sds_endpoint
 ```
 {: screen}
 
@@ -981,7 +986,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to retrieve details for a single snapshot.
 
 ```sh
-ibmcloud sds volume-snapshot --snap-id SNAP-ID
+ibmcloud sds volume-snapshot --snap-id SNAP-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -1054,7 +1059,7 @@ The following parameters are optional.
 Use this command to update a snapshot.
 
 ```sh
-ibmcloud sds volume-snapshot-update --snap-id SNAP-ID [--snapshot-patch SNAPSHOT-PATCH | @SNAPSHOT-PATCH-FILE]
+ibmcloud sds volume-snapshot-update --snap-id SNAP-ID --url URL {--snapshot-patch (SNAPSHOT-PATCH | @SNAPSHOT-PATCH-FILE) | --name NAME} [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -1089,7 +1094,7 @@ The `$sds_endpoint` is an environment variable that points to the endpoint provi
 Use this command to delete a single snapshot.
 
 ```sh
-ibmcloud sds volume-snapshot-delete --snap-id SNAP-ID
+ibmcloud sds volume-snapshot-delete --snap-id SNAP-ID --url URL [-j,--jmes-query JMES-QUERY] [--output OUTPUT] [-q,--quiet]
 ```
 {: pre}
 
@@ -1233,6 +1238,13 @@ Use this command to retrieve and view all of the currently set configured values
 ibmcloud sds config list
 ```
 {: pre}
+
+Example command:
+
+```sh
+ibmcloud sds config list
+```
+{: screen}
 
 See example output.
 

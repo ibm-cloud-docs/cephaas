@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-08-18"
 
 keywords: create S3 credential for object storage, ceph as a service, cephaas
 
@@ -23,7 +23,7 @@ A credential consists of an Access Key and Secret Key pair for use with S3-compa
 
 Create S3 credentials for object storage by using the UI, CLI, or API.
 
-To create a credential, you must be granted the Administrator platform role or a custom role. For more information, see the [IAM access documentation](/docs/cephaas?topic=cephaas-managing-iam).
+To create a credential, you must be granted the Administrator platform role or a custom role. For more information, see the [IAM access documentation](/docs/cephaas?topic=cephaas-managing-iam-cephaas).
 {: requirement}
 
 The secret key cannot be viewed after you create the credential. So you must save or download the key in a place from where you can retrieve it when needed.

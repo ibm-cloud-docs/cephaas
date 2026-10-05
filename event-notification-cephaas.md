@@ -3,11 +3,11 @@
 copyright:
   years: 2024, 2026
 
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: event notifications, cephaas, alerts, monitoring, storage capacity, s3 certificates
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 

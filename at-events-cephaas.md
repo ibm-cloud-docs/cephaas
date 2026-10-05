@@ -2,11 +2,11 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: activity tracker for IBM Storage Ceph, LogDNA for IBM Storage Ceph, IBM Storage Ceph events, IBM Storage Ceph security, audit logs for IBM Storage Ceph, viewing IBM Storage Ceph events, IBM Storage Ceph events
 
-subcollection: sdsaas
+subcollection: cephaas
 
 ---
 
@@ -20,9 +20,9 @@ IBM Cloud services, such as {{site.data.keyword.cephaas_full}}, generate activit
 
 Activity tracking events report on activities that change the state of a service in IBM Cloud. You can use the events to investigate abnormal activity and critical actions and to comply with regulatory audit requirements.
 
-You can use IBM Cloud Activity Tracker Event Routing, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](https://cloud.ibm.com/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
+You can use IBM Cloud Activity Tracker Event Routing, a platform service to route auditing events from your account to destinations of your choice, by configuring targets and routes, that define where activity tracking events are sent. For instructions, see [Configuring an IBM Cloud Logs target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs){: external}.
 
-For more information, see [About IBM Cloud Activity Tracker Event Routing](https://cloud.ibm.com/docs/atracker?topic=atracker-about){: external}.
+For more information, see [About IBM Cloud Activity Tracker Event Routing](/docs/atracker?topic=atracker-about){: external}.
 
 ## Locations where activity tracking events are generated
 {: #at-locations}
@@ -69,7 +69,7 @@ You can use IBM Cloud Logs to visualize and alert on events that are generated i
 ### Launching IBM Cloud Logs from the Observability page
 {: #at-events-log-launch-standalone}
 
-For information on launching the IBM Cloud Logs UI, see [Launching the UI in the IBM Cloud Logs documentation](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-instance-launch){: external}.
+For information on launching the IBM Cloud Logs UI, see [Launching the UI in the IBM Cloud Logs documentation](/docs/cloud-logs?topic=cloud-logs-instance-launch){: external}.
 
 
 ## List of management events

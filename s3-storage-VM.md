@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -15,7 +15,7 @@ subcollection: cephaas
 # Using {{site.data.keyword.cephaas_full_notm}} object Storage for unstructured data
 {: #using-cephaas-object-storage}
 
-Object storage is ideal for managing large volumes of unstructured data such as images, videos, backups, and logs. {{site.data.keyword.cephaas_full_notm}} provides S3-compatible object storage, allowing you to use tools like the AWS CLI to interact with your storage resources.
+Object storage is ideal for managing high volumes of unstructured data such as images, videos, backups, and logs. {{site.data.keyword.cephaas_full_notm}} provides S3-compatible object storage, allowing you to use tools like the AWS CLI to interact with your storage resources.
 
 In this section, you will learn how to:
 - Connect to your virtual machine using SSH
@@ -59,6 +59,6 @@ Here are a few examples of the S3 operation.
 
 `aws s3 --endpoint-url https://<s3-api> --no-verify-ssl cp awscliv2.zip s3://test-bucket/awscli`
 
-In the steps above, we successfully connected to the {{site.data.keyword.cephaas_full_notm}} object storage, created a bucket, and uploaded a sample file. This trial use case gives you a glimpse of how IBM Storage Ceph as a Service can help you harness the power of object storage.
+In the preceding steps, we successfully connected to the {{site.data.keyword.cephaas_full_notm}} object storage, created a bucket, and uploaded a sample file. This trial use case gives you a glimpse of how IBM Storage Ceph as a Service can help you harness the power of object storage.
 
 When you deploy {{site.data.keyword.cephaas_full_notm}} in your data center, you can integrate your own applications and software with S3-compatible object storage. This allows you to focus on consuming and utilizing storage resources, while we take care of providing and managing the underlying object storage infrastructure. 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -37,8 +37,10 @@ This section provides step-by-step instructions to deploy a virtual machine (VM)
 ![Select Template](images/template.png "Deploy From Template"){: caption="Deploy From Template" caption-side="bottom"}
 
 
-5. On the **Select A Name And Folder** screen, enter a name for the virtual machine and click **Next**.  
-   > Do not modify the default location for the virtual machine.
+5. On the **Select A Name And Folder** screen, enter a name for the virtual machine and click **Next**.
+
+   Do not modify the default location for the virtual machine.
+   {: note}
 
 ![Select Name](images/select-name.png "Select Name"){: caption="Select Name" caption-side="bottom"}
 
@@ -67,14 +69,14 @@ When selecting a database option, choose DS1 or DS2 as the location where the vi
 
 ![Ready to complete](images/ready.png "Ready to complete"){: caption="Ready to complete" caption-side="bottom"}
 
-The deployment process may take a few minutes. You can monitor progress in the **Recent Tasks** panel at the bottom of the screen.
+The deployment process may take a few minutes. You can monitor progress in the **Recent Tasks** panel.
 
 ![Deployment Process](images/deployment-process.png "Deployment Process"){: caption="Deployment Process" caption-side="bottom"}
 
 ## Power on and network settings
 {: #power-settings} 
 
-1. Once the VM is deployed, select it from the left navigation pane and click **Power On**.
+1. After the VM is deployed, select it from the navigation pane and click **Power On**.
 
 ![Power on](images/power-on.png "Power on"){: caption="Power on" caption-side="bottom"}
 
@@ -83,7 +85,7 @@ The deployment process may take a few minutes. You can monitor progress in the *
     You may see a **System Not Registered** warning.This is expected and can be safely ignored.
     {: note}
 
-3. After logging in, click the **Configuration** button at the top right and navigate to **Wired Settings**.
+3. After logging in, click the **Configuration** button and navigate to **Wired Settings**.
 
 ![Wired Settings](images/wired-settings.png "Wired Settings"){: caption="Wired Settings" caption-side="bottom"}
 

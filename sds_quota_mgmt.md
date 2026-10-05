@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-18"
 
 keywords: cephaas, quota, capacity, manage, ceph as a service
 
@@ -52,7 +52,7 @@ Since the provisioned capacity and quota are at deployment level setting, the qu
 Use the following command to modify the block and object storage capacity quota.
 
 ```sh
-ibmcloud resource service-instance-update <SERVICE_INSTANCE_NAME>  --parameters '{"quota": {"block": <N>, "object": <N>}, "allocate_burst_capacity": <BOOL>}'
+ibmcloud resource service-instance-update SERVICE_INSTANCE_NAME  --parameters '{"quota": {"block": N, "object": N}, "allocate_burst_capacity": BOOL}'
 ```
 {: pre}
 
@@ -97,6 +97,6 @@ In the example, `$rc_endpoint` is the resource controller endpoint. Make sure th
 
 You can configure and set the default endpoint for resource controller `$rc_endpoint` to `https://resource-controller.cloud.ibm.com/v2/resource_instances`. For guidance on how to set the URL, see [Config commands](/docs/cephaas?topic=cephaas-ic-sds-cli-reference&interface=cli#ic-config-commands).
 
-When `allocate burst capacity` is set to `true` then 30% extra quota is set which is the total of block and object quota where the burst capacity is also included in this total quota leading to increase in the overages and pricing fees.
+When `allocate burst capacity` is set to `true`, an additional 30% quota is added to the combined total of the block and object quota. Burst capacity is included in this total quota, which may lead to increased overage fees.
 
 When the `allocate burst capacity` value is set to `false`, the burst capacity is disabled and the quota does not exceed the total of the current set value.

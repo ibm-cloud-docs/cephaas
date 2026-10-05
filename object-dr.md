@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-01-22"
+lastupdated: "2026-08-18"
 
 keywords: ceph as a service, known issues
 
@@ -18,7 +18,7 @@ The **Object async DR** feature in {{site.data.keyword.cephaas_full_notm}} enabl
 ## Secure communication between sites
 {: #secure-com-bet-sites}
 
-To facilitate secure communication between the primary and secondary sites, the following features are implemented:
+To enable secure communication between the primary and secondary sites, the following features are implemented:
 
 - **TLS Encryption**: TLS certificates secure the replication connections between the sites. These certificates are issued for the domain `software-defined-storage.appdomain.cloud` and are rotated periodically to maintain security.
 
@@ -45,7 +45,7 @@ The {{site.data.keyword.cephaas_full_notm}} UI includes monitoring capabilities 
 
 You may notice a mismatch between the used capacity reported on the primary and secondary sites in the asynchronous disaster recovery setup.
 
-This issue occurs due to failed multipart uploads. Multipart uploads allow large objects to be uploaded in parts, but if the upload fails, each uploaded part still contributes to the object count and used capacity on the primary site. These failed uploads are not replicated to the secondary site because replication only occurs after a successful upload. As a result, the primary site may report higher used capacity compared to the secondary site.
+This issue occurs because of failed multipart uploads. Multipart uploads allow objects to be uploaded in parts, but if the upload fails, each uploaded part still contributes to the object count and used capacity on the primary site. These failed uploads are not replicated to the secondary site because replication only occurs after a successful upload. As a result, the primary site may report higher used capacity compared to the secondary site.
 
 ### Identifying failed multipart uploads
 {: #identifying-failed-multipart}
@@ -72,14 +72,14 @@ Example output:
 ```
 {: codeblock}
 
-To check the size and number of parts:
+To check the capacity and number of parts:
 
 ```sh
 aws s3api list-parts --endpoint-url <endpoint> --bucket <bucket-name> --key <object-key> --upload-id <upload-id>
 ```
 {: codeblock}
 
-Multiply the size of each part by the number of parts to estimate the capacity consumed by failed uploads.
+Multiply the capacity of each part by the number of parts to estimate the total capacity consumed by failed uploads.
 
 ### Preventing capacity mismatches
 {: #preventing-mismatches}
@@ -126,4 +126,3 @@ When an application distributes requests across both sites (primary and secondar
 - Impact on object state: Even if the application sends updates in the correct sequence, the two sites may process them out of order. This can result in the object ending up in an unwanted or inconsistent state.
 
 Recommendation: Avoid configuring applications to load balance between the two sites.
-

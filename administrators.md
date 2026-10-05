@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-07-23"
+lastupdated: "2026-08-18"
 
 keywords: cephaas, administrator, object storage, access, iam, create service instance, deployment, ceph as a service
 
@@ -16,7 +16,7 @@ subcollection: cephaas
 # For administrators
 {: #administrators}
 
-Storage and system administrators familiar with {{site.data.keyword.cephaas_full}} can easily manage users, create API keys, and grant roles to users and services.
+Storage and system administrators who are familiar with {{site.data.keyword.cephaas_full}} can manage users, create API keys, and grant roles to users and services.
 {: shortdesc}
 
 ## Setting up your storage
@@ -87,14 +87,14 @@ You can start creating a deployment after cost estimation and the order processi
 2. Log in to {{site.data.keyword.cloud_notm}} Platform by using the CLI. It's also possible to store the API key in a file or set it as an environment variable.
 
     ```sh
-    ibmcloud login --apikey <APIKEY>
+    ibmcloud login --apikey APIKEY
     ```
     {: pre}
 
 3. Next, create an {{site.data.keyword.cephaas_full_notm}} deployment by specifying the name for the deployment, the Subscription plan, and Satellite details. Now you have a CRN for the instance.
 
     ```sh
-    ibmcloud resource service-instance-create <SERVICE_INSTANCE_NAME> software-defined-storage <PLAN_ID> satloc_dal_<SATELLITE_GUID> -p '{"satellite_crn":"<SATELLITE_CRN>","order_id":"<ORDER_ID>"}' -g Default
+    ibmcloud resource service-instance-create SERVICE_INSTANCE_NAME software-defined-storage PLAN_ID satloc_dal_SATELLITE_GUID -p '{"satellite_crn":"SATELLITE_CRN","order_id":"ORDER_ID"}' -g Default
     ```
     {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -36,7 +36,7 @@ After completing the onboarding process in IBM Cloud, follow these steps to acce
 
     ![Trials deployment](images/deployment1.png "Trials deployment"){: caption="Trials Deployment" caption-side="bottom"}
 
-The above UI is your {{site.data.keyword.cephaas_full_notm}} dashboard where you can view your storage capacity usage and performance metrics such as IOPS. This interface enables you to perform key storage operations, including:
+The {{site.data.keyword.cephaas_full_notm}} dashboard displays storage capacity usage and performance metrics such as IOPS. This interface enables you to perform key storage operations, including:
 
 - [Block volume operations](/docs/cephaas?topic=cephaas-block-storage-volume-about)  
 - [Object storage operations](/docs/cephaas?topic=cephaas-about-object-storage)
@@ -45,6 +45,3 @@ In your trials, most key tasks are performed in the VMware environment rather th
 
 The trial environment is provisioned with 1 TB of unified storage capacity, which can be used across both block and object storage services.
 {: note}
-
-
-

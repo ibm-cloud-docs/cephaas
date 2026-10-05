@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-08-18"
 
 keywords: cephaas settings, trial version, ceph as a service
 
@@ -42,7 +42,7 @@ During your trial of {{site.data.keyword.cephaas_full_notm}}, you will have the 
 
 After you opt in to the {{site.data.keyword.cephaas_full_notm}} trial, you will receive an email invitation to join IBM Cloud.
 
-1. To proceed, click **Join now** in the trial invitation email with the subject line **"Welcome to IBM Storage Ceph as a Service remote trials."**
+1. To proceed, click **Join now** in the trial invitation email with the subject line: Welcome to IBM Storage Ceph as a Service remote trials.
 
 2. Ensure that you use the same email address that received the invitation. If you are using a Gmail address, you may choose the **Sign up with Google** option on the sign-up page.
 
@@ -51,4 +51,3 @@ After you opt in to the {{site.data.keyword.cephaas_full_notm}} trial, you will 
 You are now successfully enrolled in the {{site.data.keyword.cephaas_full_notm}} trial on IBM Cloud.
 
  
-

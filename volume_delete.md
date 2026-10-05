@@ -2,7 +2,7 @@
 
 copyright:
  years: 2024, 2026
-lastupdated: "2026-04-23"
+lastupdated: "2026-08-18"
 
 keywords: sds, cephaas, block storage, volume, delete Block Storage Volume for cephaas, ceph as a service
 
@@ -133,7 +133,7 @@ If a volume is mapped to a host, you must unmap the volume from host before dele
 ## Sanitizing your data before you delete a volume
 {: #sanitizing-your-data-before-you-delete-a-volume}
 
-When you delete a Block Storage volume, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have extra compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
+When you delete a Block Storage volume, IBM guarantees that your data is inaccessible on the physical disk and is eventually eradicated. If you have additional compliance requirements such as NIST 800-88 Guidelines for Media Sanitization, you must perform data sanitation procedures before you delete your volumes. For more information, see the [NIST 800-88 Guidelines for Media Sanitation](https://csrc.nist.gov/pubs/sp/800/88/r1/final).
 
 Sanitizing and deleting the volume means your data can't be restored.
 

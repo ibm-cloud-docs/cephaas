@@ -1,8 +1,8 @@
 ---
 
 copyright:
- years: 2024, 2025
-lastupdated: "2025-11-27"
+ years: 2024, 2026
+lastupdated: "2026-08-18"
 
 keywords: cephaas csi
 
@@ -37,7 +37,7 @@ spec:
  ```
 {: codeblock}
 
-The G in storage section specifies the volume size in gigabytes (GB). 
+The G in the storage section specifies the volume capacity in gigabytes (GB).
 
 * Apply the PVC configuration. 
 
@@ -60,7 +60,7 @@ oc describe pvc <your-pvc-name>
 ## Expand PVC
 {: #expand-pvc}
 
-To increase the size of the PVC:
+To increase the capacity of the PVC:
 
 * Edit the PVC. 
 
@@ -69,9 +69,9 @@ oc edit pvc <your-pvc-name>
  ```
 {: codeblock}
 
-* Edit `spec.resources.requests.storage` field and update the value to the new size.
+* Edit the `spec.resources.requests.storage` field and update the value to the new capacity.
 
-Kubernetes does not support shrinking a volume. During a PVC expansion operation, the new requested size must be greater than the current size. Before attempting to expand a PVC, verify that sufficient block storage quota is available. If the current PVC size exceeds the available quota, the expansion will fail.
+Kubernetes does not support shrinking a volume. During a PVC expansion operation, the new requested capacity must be greater than the current capacity. Before attempting to expand a PVC, verify that sufficient block storage quota is available. If the current PVC capacity exceeds the available quota, the expansion will fail.
 {: note}
 
 ### Known limitation
@@ -80,13 +80,13 @@ Kubernetes does not support shrinking a volume. During a PVC expansion operation
 #### Expand PVC operation timeout
 {: #pvc-operation-timeout}
 
-This issue occurs when a small PVC (e.g., 1 GB) is expanded to a very large size (e.g., 32 TB). The operation may fail with a timeout error in the pod event logs, as shown below: 
+This issue occurs when a PVC with a minimal capacity (for example, 1 GB) is expanded to a much greater capacity (for example, 32 TB). The operation may fail with a timeout error in the pod event logs, as shown in the following example:
 
 `Expander.NodeExpand failed to expand the volume: rpc error: code = DeadlineExceeded desc = context deadline exceeded`
 
-Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility takes extra time during online expansion. While supported by the CSI driver, expanding larger volumes may take longer to complete.
+Volume expansion can be slower when the volume is mounted or in use because the resize2fs utility requires additional time during online expansion. While supported by the CSI driver, expanding volumes to a significantly greater capacity may take longer to complete.
 
-**Suggestion**: The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested size without requiring user action. Users can monitor progress in the pod description and node plugin logs.
+**Suggestion**: The CSI driver automatically retries the expansion operation after a timeout. The PVC will eventually expand to the requested capacity without requiring user action. Users can monitor progress in the pod description and node plugin logs.
 
 ## Create a pod
 {: #create-pod}
